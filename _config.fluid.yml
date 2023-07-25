@@ -990,10 +990,34 @@ links:
   # Member item of page
   items:
     - {
-      title: "V2EX",
-      intro: "V2EX",
-      link: "https://v2ex.com/",
-      avatar: "https://v2ex.com/favicon.ico"
+      title: "Thoughtworks洞见",
+      intro: "敏捷实践、软件测试、领域驱动设计、微服务、中台、女性、DevOps",
+      link: "https://insights.thoughtworks.cn/",
+      avatar: "https://insights.thoughtworks.cn/wp-content/uploads/2021/07/cropped-tw-insights-new-logo-32x32.png"
+    }
+    - {
+      title: "质量三人行",
+      intro: "一款来自Thoughtworks（思特沃克）的播客节目，关注软件行业测试领域的现状和未来、质量和测试人员的职业发展",
+      link: "https://qapodcast.typlog.io/",
+      avatar: "https://i.typlog.com/qapodcast/8343606880_319296.ico"
+    }
+    - {
+      title: "软件测试与质量沉思",
+      intro: "刘冉的思辨悟，软件测试，软件质量",
+      link: "http://liuranthinking.com/",
+      avatar: "https://liuranthinking.com/usr/themes/default/img/favicon.ico"
+    }
+    - {
+      title: "BY林子",
+      intro: "关注质量，不止测试",
+      link: "https://www.bylinzi.com/",
+      avatar: "https://www.bylinzi.com/wp-content/uploads/2022/04/cropped-4511649315050_.pic_-32x32.jpg"
+    }
+    - {
+      title: "QualityFocus",
+      intro: "关注软件质量",
+      link: "https://qualityfocus.club/",
+      avatar: "https://i.typlog.com/qualityfocus/8385665793_883414.ico"
     }
     - {
       title: "TesterHome",
