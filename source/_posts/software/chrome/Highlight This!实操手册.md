@@ -87,6 +87,6 @@ Highlight This 是 Chrome 浏览器和 Firefox 浏览器的一个浏览器扩展
 
 
 
-[^1]: [Highlight This!](https://highlightthis.net/)
-[^2]:[Highlight This: finds and marks words]([Highlight This: finds and marks words - Chrome Web Store (google.com)](https://chrome.google.com/webstore/detail/highlight-this-finds-and/fgmbnmjmbjenlhbefngfibmjkpbcljaj))
-[^3]:[CRX Downloader]([CRX Downloader - Chrome Extension Downloader | standaloneinstaller.com](https://standaloneinstaller.com/online-tools/crx-downloader))
+[^1]:[Highlight This!](https://highlightthis.net/)
+[^2]:[Highlight This: finds and marks words](https://chrome.google.com/webstore/detail/highlight-this-finds-and/fgmbnmjmbjenlhbefngfibmjkpbcljaj)
+[^3]:[CRX Downloader](https://standaloneinstaller.com/online-tools/crx-downloader)
