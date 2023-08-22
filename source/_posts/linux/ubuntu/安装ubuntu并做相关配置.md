@@ -1,5 +1,6 @@
 ---
 title: 安装 Ubuntu 并做相关配置
+date: 2023/07/30 19:44
 categories:
 - [Linux, Ubuntu]
 - [System, Linux]
