@@ -1,5 +1,5 @@
 ---
-title: 博客迁移到Typecho
+title: 博客迁移到 Typecho
 date: 2020/02/20 00:00
 updated: 2023/08/22 12:48
 categories:
