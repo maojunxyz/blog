@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html</loc>
+    
+    <lastmod>2023-08-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/2023/08/json%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E5%92%8C%E6%B5%8B%E8%AF%95%E6%B3%A8%E6%84%8F%E9%A1%B9.html</loc>
     
     <lastmod>2023-08-26</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://maojun.xyz/blog/about/index.html</loc>
     
     <lastmod>2023-07-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html</loc>
-    
-    <lastmod>2020-02-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -320,6 +320,13 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Cloudflare/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -355,6 +362,13 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/Rime/</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/categories/System/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -369,21 +383,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
-    <lastmod>2023-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/categories/Blog/</loc>
-    <lastmod>2023-08-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/Rime/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
