@@ -7,6 +7,7 @@ https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F
 https://maojun.xyz/blog/2020/02/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0Typecho.html
 https://maojun.xyz/blog/2023/07/hello-world.html
 https://maojun.xyz/blog/about/index.html
+https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html
 https://maojun.xyz/blog
 https://maojun.xyz/blog/tags/Hexo/
 https://maojun.xyz/blog/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/
@@ -16,6 +17,7 @@ https://maojun.xyz/blog/tags/CloudNative/
 https://maojun.xyz/blog/tags/Kubernates/
 https://maojun.xyz/blog/tags/Prometheus/
 https://maojun.xyz/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/
+https://maojun.xyz/blog/tags/Cloudflare/
 https://maojun.xyz/blog/tags/backblaze/
 https://maojun.xyz/blog/tags/Ubuntu/
 https://maojun.xyz/blog/tags/System/
@@ -34,10 +36,11 @@ https://maojun.xyz/blog/categories/Hello-World/
 https://maojun.xyz/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
 https://maojun.xyz/blog/categories/CloudNative/
 https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/
-https://maojun.xyz/blog/categories/Linux/
 https://maojun.xyz/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/
+https://maojun.xyz/blog/categories/Linux/
 https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/
 https://maojun.xyz/blog/categories/CloudNative/Kubernates/
+https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Cloudflare/
 https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/backblaze-B2/
 https://maojun.xyz/blog/categories/Linux/Ubuntu/
 https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/chrome/

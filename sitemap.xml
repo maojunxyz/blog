@@ -82,6 +82,15 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html</loc>
+    
+    <lastmod>2020-02-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   <url>
     <loc>https://maojun.xyz/blog</loc>
@@ -142,6 +151,13 @@
   
   <url>
     <loc>https://maojun.xyz/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/Cloudflare/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -276,14 +292,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/Linux/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/</loc>
+    <loc>https://maojun.xyz/blog/categories/Linux/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -298,6 +314,13 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/CloudNative/Kubernates/</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Cloudflare/</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
