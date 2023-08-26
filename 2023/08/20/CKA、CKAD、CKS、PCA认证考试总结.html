@@ -21,7 +21,7 @@
     <meta name="description" content="计划在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus 的认证考试。从购买后起有为期一年的预约考试以及一次的补考机会（需在一年有效期内完成补考）。 一直拖到今年的 4 月份才开始备考，直到今年的 7 月份才考完 Kubernetes 的三门认证，到 8 月份完成 Promethues 的认证。 我的备考和考试顺序一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CKA、CKAD、CKS、PCA认证考试总结">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/08/20/Study/CloudNative/CKA%E3%80%81CKAD%E3%80%81CKS%E3%80%81PCA%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/08/20/CKA%E3%80%81CKAD%E3%80%81CKS%E3%80%81PCA%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93.html">
 <meta property="og:site_name" content="QA毛俊">
 <meta property="og:description" content="计划在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus 的认证考试。从购买后起有为期一年的预约考试以及一次的补考机会（需在一年有效期内完成补考）。 一直拖到今年的 4 月份才开始备考，直到今年的 7 月份才考完 Kubernetes 的三门认证，到 8 月份完成 Promethues 的认证。 我的备考和考试顺序一">
 <meta property="og:locale" content="zh_CN">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820191248563.png">
 <meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820191302881.png">
 <meta property="article:published_time" content="2023-08-20T18:44:00.000Z">
-<meta property="article:modified_time" content="2023-08-24T20:46:32.060Z">
+<meta property="article:modified_time" content="2023-08-26T05:10:01.579Z">
 <meta property="article:author" content="毛 俊">
 <meta property="article:tag" content="CloudNative">
 <meta property="article:tag" content="Kubernates">
@@ -78,7 +78,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -91,7 +91,8 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/blog/atom.xml" title="QA毛俊" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -294,7 +295,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年8月24日 晚上
+                    本文最后更新于：2023年8月26日 凌晨
                   
                 
               </p>
@@ -396,7 +397,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>CKA、CKAD、CKS、PCA认证考试总结</div>
-      <div>https://maojun.xyz/blog/2023/08/20/Study/CloudNative/CKA、CKAD、CKS、PCA认证考试总结/</div>
+      <div>https://maojun.xyz/blog/2023/08/20/CKA、CKAD、CKS、PCA认证考试总结.html</div>
     </div>
     <div class="license-meta">
       
@@ -411,6 +412,11 @@
           <div>2023年8月20日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年8月26日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -456,7 +462,7 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/08/13/software/chrome/Highlight%20This!%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C/" title="Highlight This!实操手册">
+                      <a href="/blog/2023/08/13/Highlight%20This!%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.html" title="Highlight This!实操手册">
                         <span class="hidden-mobile">Highlight This!实操手册</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
