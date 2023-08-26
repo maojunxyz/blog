@@ -18,23 +18,29 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍在接口调用中，JSON 是主流的数据传输交换格式。 JSON 官方对其的介绍内容是：  JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一">
+    <meta name="description" content="计划在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus 的认证考试。从购买后起有为期一年的预约考试以及一次的补考机会（需在一年有效期内完成补考）。 一直拖到今年的 4 月份才开始备考，直到今年的 7 月份才考完 Kubernetes 的三门认证，到 8 月份完成 Promethues 的认证。 我的备考和考试顺序一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JSON 数据验证和测试注意项">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/08/03/json%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E5%92%8C%E6%B5%8B%E8%AF%95%E6%B3%A8%E6%84%8F%E9%A1%B9.html">
+<meta property="og:title" content="CKA、CKAD、CKS、PCA认证考试总结">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/08/CKA%E3%80%81CKAD%E3%80%81CKS%E3%80%81PCA%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93.html">
 <meta property="og:site_name" content="QA毛俊">
-<meta property="og:description" content="介绍在接口调用中，JSON 是主流的数据传输交换格式。 JSON 官方对其的介绍内容是：  JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一">
+<meta property="og:description" content="计划在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus 的认证考试。从购买后起有为期一年的预约考试以及一次的补考机会（需在一年有效期内完成补考）。 一直拖到今年的 4 月份才开始备考，直到今年的 7 月份才考完 Kubernetes 的三门认证，到 8 月份完成 Promethues 的认证。 我的备考和考试顺序一">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-03T16:02:00.000Z">
-<meta property="article:modified_time" content="2023-08-26T05:10:01.579Z">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820191153877.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820194032195.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820191248563.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230820191302881.png">
+<meta property="article:published_time" content="2023-08-20T18:44:00.000Z">
+<meta property="article:modified_time" content="2023-08-26T05:15:14.577Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="JSON">
-<meta property="article:tag" content="软件测试">
+<meta property="article:tag" content="CloudNative">
+<meta property="article:tag" content="Kubernates">
+<meta property="article:tag" content="Prometheus">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maojun.xyz/blog/assets/image-20230820191153877.png">
   
   
   
-  <title>JSON 数据验证和测试注意项 - QA毛俊</title>
+  <title>CKA、CKAD、CKS、PCA认证考试总结 - QA毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +219,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="JSON 数据验证和测试注意项"></span>
+            <span id="subtitle" data-typed-text="CKA、CKAD、CKS、PCA认证考试总结"></span>
           
         </div>
 
@@ -224,8 +230,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-03 16:02" pubdate>
-          2023年8月3日 下午
+        <time datetime="2023-08-20 18:44" pubdate>
+          2023年8月20日 晚上
         </time>
       </span>
     
@@ -236,7 +242,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.1k 字
         
       </span>
     
@@ -247,7 +253,7 @@
         
         
         
-          14 分钟
+          10 分钟
         
       </span>
     
@@ -284,7 +290,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">JSON 数据验证和测试注意项</h1>
+            <h1 id="seo-header">CKA、CKAD、CKS、PCA认证考试总结</h1>
             
               <p class="note note-info">
                 
@@ -297,34 +303,43 @@
             
               <div class="markdown-body">
                 
-                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>在接口调用中，JSON 是主流的数据传输交换格式。 JSON 官方对其的介绍内容是：</p>
-<blockquote>
-<p>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。 易于人阅读和编写。同时也易于机器解析和生成。 它基于JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999的一个子集。 JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C, C++, C#, Java, JavaScript, Perl, Python等）。 这些特性使JSON成为理想的数据交换语言。</p>
-</blockquote>
-<h2 id="JSON数据测试"><a href="#JSON数据测试" class="headerlink" title="JSON数据测试"></a>JSON数据测试</h2><p>JSON 的数据类型包括以下6类：</p>
+                <h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus 的认证考试。从购买后起有为期一年的预约考试以及一次的补考机会（需在一年有效期内完成补考）。</p>
+<p>一直拖到今年的 4 月份才开始备考，直到今年的 7 月份才考完 Kubernetes 的三门认证，到 8 月份完成 Promethues 的认证。</p>
+<p>我的备考和考试顺序一致，一次专注备考一门认证，目前所有认证都一次性通过。</p>
 <ol>
-<li>对象（Object）：用花括号 <code>&#123;&#125;</code> 表示，表示一组键值对的集合。</li>
-<li>数组（Array）：用方括号 <code>[]</code> 表示，表示一组值的有序集合。</li>
-<li>字符串（String）：用双引号 <code>&quot;&quot;</code> 或单引号 <code>&#39;&#39;</code> 包裹的字符序列。</li>
-<li>数值（Number）：表示数字，可以是整数或浮点数。</li>
-<li>布尔值（Boolean）：表示真或假，只有两个可能的取值：<code>true</code> 或 <code>false</code>。</li>
-<li>空值（null）：表示空值，只有一个取值：<code>null</code>。</li>
+<li>CKA </li>
+<li>CKAD</li>
+<li>CKS</li>
+<li>PCA</li>
 </ol>
-<p>所以，在对 JSON 数据测试时，可以依据 <strong>等价类分析</strong> 和 <strong>边界值分析</strong> 设计测试数据和用例。</p>
-<p>例如,等价类测试数据：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;string_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Hello, World!&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;number_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">42</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;boolean_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;null_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;array_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;nested_object_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;key1&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;value1&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;key2&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">123</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;key3&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;key4&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">null</span></span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
-
-<p>边界值，以 Java 的数据边界值为例：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;empty_string_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;large_string_example&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;abcdefghijklmnopqretuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span><br>  <span class="hljs-attr">&quot;max_long_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">9223372036854775807</span><span class="hljs-punctuation">,</span> <br>  <span class="hljs-attr">&quot;min_long_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">-9223372036854775808</span> <br>  <span class="hljs-attr">&quot;max_double_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1.7976931348623157e+308</span><span class="hljs-punctuation">,</span> <br>  <span class="hljs-attr">&quot;min_double_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">4.9e-324</span><span class="hljs-punctuation">,</span> <br>  <span class="hljs-attr">&quot;large_array_example&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span> <span class="hljs-number">2</span><span class="hljs-punctuation">,</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span> <span class="hljs-number">4</span><span class="hljs-punctuation">,</span> <span class="hljs-number">5</span><span class="hljs-punctuation">,</span> <span class="hljs-number">6</span><span class="hljs-punctuation">,</span> <span class="hljs-number">7</span><span class="hljs-punctuation">,</span> <span class="hljs-number">8</span><span class="hljs-punctuation">,</span> <span class="hljs-number">9</span><span class="hljs-punctuation">,</span> <span class="hljs-number">10</span><span class="hljs-punctuation">,</span> <span class="hljs-number">11</span><span class="hljs-punctuation">,</span> <span class="hljs-number">12</span><span class="hljs-punctuation">,</span> <span class="hljs-number">13</span><span class="hljs-punctuation">,</span> <span class="hljs-number">14</span><span class="hljs-punctuation">,</span> <span class="hljs-number">15</span><span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：Java 基本数据类型不存在越界，只会溢出。它们取值范围的最大值+1的结果都是它们取值范围的最小值，反之相同。</p>
-</blockquote>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在对 JSON 数据类型进行分析设计后，还可以针对业务场景进行测试数据设计。比如需求和技术文档中明确了 <strong>foo</strong> 字段是 <strong>Object</strong> 类型，但如果传了 <strong>String</strong> 类型，会有什么异常或兜底逻辑，反之相同。在测试过程中需不断分析使用场景，以便提高系统的 <strong>鲁棒性</strong> 和用户的 <strong>体验性</strong>。</p>
-<blockquote>
-<p>鲁棒是Robust的音译，也就是健壮和强壮的意思。 它也是在异常和危险情况下系统生存的能力。</p>
-</blockquote>
-<p>（本文完）</p>
+<h2 id="备考"><a href="#备考" class="headerlink" title="备考"></a>备考</h2><p>备考的过程主要是熟悉考试的流程和考试大纲，内容均为实操作类型，通过远程桌面连接并做题。在考试前需要对基础知识和命令有个熟练的操作，因为远程操作不向本地操作那么流利，会受限于网络和远端的环境。同时可以了解一些网上有对应的分享和总结的博客，做到心中有数。</p>
+<p>考试时 CKA、CKAD、CKS可以选择中英文题目，所有题目需在终端上完成。 PCA 目前只有英文题目，所有题目都是选择题。</p>
+<h3 id="CKA"><a href="#CKA" class="headerlink" title="CKA"></a>CKA</h3><p>CKA（系统管理员） 的考试时间为 2 个小时，考试题目在 16 道左右。主要涉及到权限、容器、网络、集群等知识点。考试时是可以查阅 Kubernets 在线文档的。所以需要熟练的查询和使用文档，能使用文档例子的就尽量中从文档中复制过来修改，避免消耗过多的时间。</p>
+<p>总分：100分。</p>
+<p>合格分：66分。</p>
+<p>有效期：3年。</p>
+<p>通过后的证书：</p>
+<p><img src="/blog/./assets/image-20230820191153877.png" srcset="/blog/img/loading.gif" lazyload alt="CKA"></p>
+<h3 id="CKAD"><a href="#CKAD" class="headerlink" title="CKAD"></a>CKAD</h3><p>CKA（应用开发者） 的考试时间为 2 个小时，考试题目在 16 道左右。主要涉及到Cronjob、Dockerfile、Pod、Deployment等知识点。</p>
+<p>总分：100分。</p>
+<p>合格分：66分。</p>
+<p>有效期：3年。</p>
+<p>通过后的证书：</p>
+<p><img src="/blog/./assets/image-20230820194032195.png" srcset="/blog/img/loading.gif" lazyload alt="CKAD"></p>
+<h3 id="CKS"><a href="#CKS" class="headerlink" title="CKS"></a>CKS</h3><p>CKS（安全专家） 的考试时间为 2 个小时，考试题目在 16 道左右。主要涉及到安全策略、漏洞扫描、日志审计等知识点。</p>
+<p>总分：100分。</p>
+<p>合格分：67分。</p>
+<p>有效期：2年。</p>
+<p>通过后的证书：</p>
+<p><img src="/blog/./assets/image-20230820191248563.png" srcset="/blog/img/loading.gif" lazyload alt="CKS"></p>
+<h3 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h3><p>PCA（认证专员） 的考试时间为 90 分钟，考试题目在 60 道左右。主要涉及到安 Prometheus 配置、PromeQL、Exporter等知识点。</p>
+<p>总分：100分。</p>
+<p>合格分：75分。</p>
+<p>有效期：3年。</p>
+<p>通过后的证书：</p>
+<p><img src="/blog/./assets/image-20230820191302881.png" srcset="/blog/img/loading.gif" lazyload alt="PCA"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在上面的认证难度中，PCA 属于初级，CKA、CKAD、CKS属于中级。所以只要认证备考，多练习和学习网上分享的题目和经验。拿到认证的难度不大，但是拿证应该是过程的结果，而不是目标。通过认证考试可以看出，大纲涵盖了需要掌握这项技能的广度，可以在学习和认证的过程中不断的提高自身搜索文档和解决问题的能力，但是毕竟题目是死的，工作中的问题是不断变化的，需要理论结合实践不断巩固这项技能。</p>
+<p>正如认证的有效期一样，知识需不断推陈出新和更新迭代。伴随的版本的迭代，对应的技术和知识也要不断同步，以不至于我们当下通过认证学习到的知识会和证书有效期那样变得过时。</p>
 
                 
               </div>
@@ -343,12 +358,12 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="category-chain-item">数据类型</a>
+  <a href="/blog/categories/CloudNative/" class="category-chain-item">CloudNative</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/" class="category-chain-item">JSON</a>
+  <a href="/blog/categories/CloudNative/Kubernates/" class="category-chain-item">Kubernates</a>
   
   
 
@@ -365,9 +380,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/JSON/" class="print-no-link">#JSON</a>
+        <a href="/blog/tags/CloudNative/" class="print-no-link">#CloudNative</a>
       
-        <a href="/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="print-no-link">#软件测试</a>
+        <a href="/blog/tags/Kubernates/" class="print-no-link">#Kubernates</a>
+      
+        <a href="/blog/tags/Prometheus/" class="print-no-link">#Prometheus</a>
       
     </div>
   
@@ -379,8 +396,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>JSON 数据验证和测试注意项</div>
-      <div>https://maojun.xyz/blog/2023/08/03/json数据验证和测试注意项.html</div>
+      <div>CKA、CKAD、CKS、PCA认证考试总结</div>
+      <div>https://maojun.xyz/blog/2023/08/CKA、CKAD、CKS、PCA认证考试总结.html</div>
     </div>
     <div class="license-meta">
       
@@ -392,7 +409,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月3日</div>
+          <div>2023年8月20日</div>
         </div>
       
       
@@ -441,18 +458,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/08/06/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html" title="Windows 下使用 Rime 和小鹤音形输入法">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows 下使用 Rime 和小鹤音形输入法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/07/30/%E5%AE%89%E8%A3%85ubuntu%E5%B9%B6%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE.html" title="安装 Ubuntu 并做相关配置">
-                        <span class="hidden-mobile">安装 Ubuntu 并做相关配置</span>
+                      <a href="/blog/2023/08/Highlight%20This!%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.html" title="Highlight This!实操手册">
+                        <span class="hidden-mobile">Highlight This!实操手册</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
