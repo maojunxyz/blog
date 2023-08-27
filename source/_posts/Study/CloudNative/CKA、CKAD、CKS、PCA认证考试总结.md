@@ -1,6 +1,7 @@
 ---
 title: CKA、CKAD、CKS、PCA认证考试总结
 date: 2023/08/20 18:44
+updated: 2023/08/20 18:44
 categories:
 - [CloudNative, Kubernates]
 - [CloudNative, Prometheuss]
