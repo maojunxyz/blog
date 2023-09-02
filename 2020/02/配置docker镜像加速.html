@@ -18,23 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="介绍Nextcloud 中文有下一代云盘的意思，在这个私有部署网盘上我们可以做很多事情：资料存储、密码管理、存储、离线下载等。有些功能已经自带集成在 Nextcloud 中了，另一些功能可以通过安装插件实现。 下面使用 docker-compose 来安装配置 nextcloud 网盘。 环境依赖 centos 7.x docker docker-compose    使用docker-compo">
+    <meta name="description" content="配置镜像加速根据官方文档给出的配置步骤进行操作：   针对 Docker 客户端版本大于 1.10.0 版本的，通过修改daemon配置文件 &#x2F;etc&#x2F;docker&#x2F;daemon.json 来加速： 12345678sudo mkdir -p &#x2F;etc&#x2F;dockersudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-&amp;#x27;EOF&amp;#x27;&amp;#123;  &amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 docker 搭建 nextcloud 网盘">
-<meta property="og:url" content="https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html">
+<meta property="og:title" content="配置 docker 镜像加速">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html">
 <meta property="og:site_name" content="QA毛俊">
-<meta property="og:description" content="介绍Nextcloud 中文有下一代云盘的意思，在这个私有部署网盘上我们可以做很多事情：资料存储、密码管理、存储、离线下载等。有些功能已经自带集成在 Nextcloud 中了，另一些功能可以通过安装插件实现。 下面使用 docker-compose 来安装配置 nextcloud 网盘。 环境依赖 centos 7.x docker docker-compose    使用docker-compo">
+<meta property="og:description" content="配置镜像加速根据官方文档给出的配置步骤进行操作：   针对 Docker 客户端版本大于 1.10.0 版本的，通过修改daemon配置文件 &#x2F;etc&#x2F;docker&#x2F;daemon.json 来加速： 12345678sudo mkdir -p &#x2F;etc&#x2F;dockersudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-&amp;#x27;EOF&amp;#x27;&amp;#123;  &amp;q">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-25T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-01T07:02:00.000Z">
+<meta property="article:published_time" content="2020-02-26T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-02T19:29:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="对象存储">
-<meta property="article:tag" content="Nextcloud">
+<meta property="article:tag" content="容器">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>使用 docker 搭建 nextcloud 网盘 - QA毛俊</title>
+  <title>配置 docker 镜像加速 - QA毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="使用 docker 搭建 nextcloud 网盘"></span>
+            <span id="subtitle" data-typed-text="配置 docker 镜像加速"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-02-25 00:00" pubdate>
-          2020年2月25日 凌晨
+        <time datetime="2020-02-26 00:00" pubdate>
+          2020年2月26日 凌晨
         </time>
       </span>
     
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          355 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          26 分钟
+          3 分钟
         
       </span>
     
@@ -284,12 +284,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">使用 docker 搭建 nextcloud 网盘</h1>
+            <h1 id="seo-header">配置 docker 镜像加速</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年9月1日 早上
+                    本文最后更新于：2023年9月2日 晚上
                   
                 
               </p>
@@ -297,86 +297,11 @@
             
               <div class="markdown-body">
                 
-                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Nextcloud 中文有下一代云盘的意思，在这个私有部署网盘上我们可以做很多事情：资料存储、密码管理、存储、离线下载等。有些功能已经自带集成在 Nextcloud 中了，另一些功能可以通过安装插件实现。</p>
-<p>下面使用 docker-compose 来安装配置 nextcloud 网盘。</p>
-<h2 id="环境依赖"><a href="#环境依赖" class="headerlink" title="环境依赖"></a>环境依赖</h2><ul>
-<li>centos 7.x</li>
-<li>docker</li>
-<li>docker-compose</li>
-</ul>
-<blockquote>
-<p> 使用docker-compose可以快速编排<code>docker</code>服务，让容器管理变得简单。</p>
-</blockquote>
-<p>编写 <code>docker-compose.yaml</code> 文件，内容如下:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">version:</span> <span class="hljs-string">&#x27;3&#x27;</span><br><span class="hljs-attr">services:</span><br>  <span class="hljs-attr">nextcloud:</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">nextcloud:apache</span><br>    <span class="hljs-attr">container_name:</span> <span class="hljs-string">nextcloud_web</span><br>    <span class="hljs-attr">depends_on:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">redis</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">uid=1000</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">gid=1000</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">upload_max_size=10g</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">apc_shm_size=128m</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">opcache_mem_size=128</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">cron_period=15m</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">tz=aisa/shanghai</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">domain=http://exmaple.com</span><br><br><br>    <span class="hljs-attr">volumes:</span><br>       <span class="hljs-bullet">-</span> <span class="hljs-string">/app/docker/nextcloud:/var/www/html</span><br>    <span class="hljs-attr">expose:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">7009</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">7009</span><span class="hljs-string">:80/tcp</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br><br>  <span class="hljs-attr">redis:</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">redis:alpine</span><br>    <span class="hljs-attr">container_name:</span> <span class="hljs-string">redis</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attr">expose:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">6379</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br><br>  <span class="hljs-attr">onlyoffice:</span><br>    <span class="hljs-attr">image:</span> <span class="hljs-string">onlyoffice/documentserver</span><br>    <span class="hljs-attr">container_name:</span> <span class="hljs-string">onlyoffice</span><br>    <span class="hljs-attr">hostname:</span> <span class="hljs-string">onlyoffice</span><br>    <span class="hljs-attr">environment:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">redis_server_host=redis</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">redis_server_port=6379</span><br>    <span class="hljs-attr">volumes:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">/app/docker/onlyoffice/data:/var/www/onlyoffice/data</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">/app/docker/onlyoffice/logs:/var/log/onlyoffice</span><br>    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span><br>    <span class="hljs-attr">expose:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">9000</span><br>    <span class="hljs-attr">ports:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-number">9000</span><span class="hljs-string">:80</span><br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意:<code>yaml</code>文件严格区分缩进和空格。</p>
-</blockquote>
-<p><code>docker-compose</code>参数说明:</p>
-<ul>
-<li>image 镜像地址</li>
-<li>container_name 容器名称</li>
-<li>depends_on 依赖服务（关系到启动顺序,先启动依赖）</li>
-<li>enviroment 环境变量参数，对应相应的软件服务</li>
-<li>volumes 将docker里的目录和宿主机目录映射挂载</li>
-<li>expose 需要暴露的端口</li>
-<li>ports 和宿主机端口映射</li>
-<li>restart:always 设置开机自启</li>
-<li>links 设置连接容器（如web服务连接到db)</li>
-</ul>
-<blockquote>
-<p>注意,容器无法保存数据，删除后数据就丢失了，配置volumes有利于数据持久化到硬盘</p>
-</blockquote>
-<p>由于是个人和小团队使用，上述的配置中使用了<code>nextcloud</code>默认的<code>sqlite</code>数据库。如果你的<code>nextcloud</code>需要考虑到一定的并发和一定规模人数使用，建议使用<code>mysql</code>等数据库替换内嵌型数据库。</p>
-<p>配置redis: 上述的配置我们让docker依赖了redis，这个需要配置才能让docker redis缓存生效。编辑配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ vim /app/docker/nextcloud/config/config.php<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>具体路径为<code>docker-compse</code>中volume中映射的宿主机路径</p>
-</blockquote>
-<p>找准位置在【’memcache.local’ &#x3D;&gt; ‘\OC\Memcache\APCu’,】 这行后面</p>
-<p>增加下面的代码：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-string">&#x27;memcache.locking&#x27;</span> =&gt; <span class="hljs-string">&#x27;\OC\Memcache\Redis&#x27;</span>,<br><span class="hljs-string">&#x27;redis&#x27;</span> =&gt; <span class="hljs-keyword">array</span>(<br>     <span class="hljs-string">&#x27;host&#x27;</span> =&gt; <span class="hljs-string">&#x27;redis&#x27;</span>,<br>     <span class="hljs-string">&#x27;port&#x27;</span> =&gt; <span class="hljs-number">6379</span>,<br>      ),<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意修改对应的<code>host</code>和<code>port</code>，<code>redis</code>和<code>nextcloud</code>同<code>docekr</code>网络故可以用<code>container name</code>替代。由于修改的是<strong>php</strong>脚本文件，所以保存后无需重启就可生效。</p>
-</blockquote>
-<p>检查redis配置是否生效: 进入<code>redis</code>容器环境</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ docker <span class="hljs-built_in">exec</span> -it redis /bin/sh<br></code></pre></td></tr></table></figure>
-
-<p>执行redis监控</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">redis-cli monitor<br></code></pre></td></tr></table></figure>
-
-<p>然后去访问<code>nextcloud</code>页面并进行页面操作。查看<code>redis</code>监控日志，如果有日志输出则说明配置成功。</p>
-<p>启动服务: 在docker-compose.yaml文件目录使用<code>docker-compose up -d</code>即可后台启动服务,启动并设置账号密码登入。</p>
-<p>安装插件： 由于服务是安装在内网上，并且是直接通过ip和端口访问的，所以并没有配置https.部门需要https状态才可以使用，故不在这推荐，下面一些插件都是可以在http状态使用的。插件可以在应用里面找到并开启，但是nextcloud插件市场在国内访问是有问题的，无法显示插件信息及下载插件。</p>
-<p>所以我们可以通过离线安装的方式使用插件： <a target="_blank" rel="noopener" href="https://web.archive.org/web/20201019230404/https://apps.nextcloud.com/">all apps - app store - nextcloud</a> 在nextcloud应用市场找到插件包并下载，然后将其上传到nextcloud的apps目录,如果是linux系统可以直接借助scp或rsync上传.以scp上传onlyoffice插件为例：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ scp onlyoffice.tar.gz [email protected]:/app/docker/nextloud/apps<br></code></pre></td></tr></table></figure>
-
-<p>进入apps目录解压并删除压缩包：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$  tar -zxf onlyoffice.tar.gz &amp;&amp; <span class="hljs-built_in">rm</span> -rf onlyoffice.tar.gz<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p>注意：如果不是root账号，可以会上传失败。(docker目录是root用户组)</p>
-</blockquote>
-<p>以下插件安装步骤同上：</p>
-<ul>
-<li><p>onlyoffice office 文档在线编辑，支持团队协作。这个插件需要配置本地服务使用（即docker-compose.yaml中的onlyoffice),然后在设置中配置对应的onlyoffice 服务地址和开启对应的在线预览office格式。</p>
-</li>
-<li><p>drawio 在线画流程图，uml工具。官方可以通过draw.io直接使用，不过要同步数据的话要登入goole或github等，国内用这些服务容易受限于网络环境。用nextcloud 插件可以让数据保存在网盘上。在设置，其他设置下服务地址，主题和默认语言设置等。</p>
-</li>
-</ul>
-<p>新建drawio文件,选择+创建diagam文件会创建一个xml格式的文件并进入drawio工作空间。 选择导入draw.io创建保存的本地文件</p>
-<blockquote>
-<p>注意，在draw.io保存的格式是<code>.drawio</code>格式,不能直接用nextcloud点击打开</p>
-</blockquote>
-<ul>
-<li>javascript xmpp chat 在线即时沟通工具。 安装后进入设置,找到javascript xmpp chat设置即可。</li>
-</ul>
-<p>注意，默认消息是不会持久化保存的，如果需要将聊天记录存档，需要通过右侧聊天窗口右下角点击设置</p>
-<p>Nextcloud 具有高度的可定制性，上面只是 Nextcloud 的一小部分功能，更多功能可以参考 Nextcloud 官方文档。</p>
-<p>(本文完）</p>
+                <h2 id="配置镜像加速"><a href="#配置镜像加速" class="headerlink" title="配置镜像加速"></a>配置镜像加速</h2><p>根据官方文档给出的配置步骤进行操作：  </p>
+<p>针对 Docker 客户端版本大于 1.10.0 版本的，通过修改daemon配置文件 <code>/etc/docker/daemon.json</code> 来加速：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh">sudo <span class="hljs-built_in">mkdir</span> -p /etc/docker<br>sudo <span class="hljs-built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">&#x27;EOF&#x27;</span><br>&#123;<br>  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;https://8jngaj3j.mirror.aliyuncs.com&quot;</span>]<br>&#125;<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure>
+<p>根据以上命令配置并重启 docke r服务后，重新进行镜像拉取。</p>
+<p>（本文完）</p>
 
                 
               </div>
@@ -395,12 +320,12 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="category-chain-item">对象存储</a>
+  <a href="/blog/categories/%E5%AE%B9%E5%99%A8/" class="category-chain-item">容器</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Nextcloud/" class="category-chain-item">Nextcloud</a>
+  <a href="/blog/categories/%E5%AE%B9%E5%99%A8/docker/" class="category-chain-item">docker</a>
   
   
 
@@ -417,9 +342,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="print-no-link">#对象存储</a>
+        <a href="/blog/tags/%E5%AE%B9%E5%99%A8/" class="print-no-link">#容器</a>
       
-        <a href="/blog/tags/Nextcloud/" class="print-no-link">#Nextcloud</a>
+        <a href="/blog/tags/docker/" class="print-no-link">#docker</a>
       
     </div>
   
@@ -431,8 +356,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>使用 docker 搭建 nextcloud 网盘</div>
-      <div>https://maojun.xyz/blog/2020/02/使用docker搭建nextcloud网盘.html</div>
+      <div>配置 docker 镜像加速</div>
+      <div>https://maojun.xyz/blog/2020/02/配置docker镜像加速.html</div>
     </div>
     <div class="license-meta">
       
@@ -444,13 +369,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年2月25日</div>
+          <div>2020年2月26日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年9月1日</div>
+          <div>2023年9月2日</div>
         </div>
       
       
@@ -493,9 +418,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html" title="配置 docker 镜像加速">
+                      <a href="/blog/2023/07/hello-world.html" title="Hello World">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">配置 docker 镜像加速</span>
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -503,8 +428,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html" title="Typecho 默认主题优化">
-                        <span class="hidden-mobile">Typecho 默认主题优化</span>
+                      <a href="/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html" title="使用 docker 搭建 nextcloud 网盘">
+                        <span class="hidden-mobile">使用 docker 搭建 nextcloud 网盘</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

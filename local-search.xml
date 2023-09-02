@@ -227,6 +227,35 @@
   
   
   <entry>
+    <title>配置 docker 镜像加速</title>
+    <link href="/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html"/>
+    <url>/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="配置镜像加速"><a href="#配置镜像加速" class="headerlink" title="配置镜像加速"></a>配置镜像加速</h2><p>根据官方文档给出的配置步骤进行操作：  </p><p>针对 Docker 客户端版本大于 1.10.0 版本的，通过修改daemon配置文件 <code>/etc/docker/daemon.json</code> 来加速：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh">sudo <span class="hljs-built_in">mkdir</span> -p /etc/docker<br>sudo <span class="hljs-built_in">tee</span> /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">&#x27;EOF&#x27;</span><br>&#123;<br>  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;https://8jngaj3j.mirror.aliyuncs.com&quot;</span>]<br>&#125;<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker<br></code></pre></td></tr></table></figure><p>根据以上命令配置并重启 docke r服务后，重新进行镜像拉取。</p><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>容器</category>
+      
+      <category>docker</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>容器</tag>
+      
+      <tag>docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用 docker 搭建 nextcloud 网盘</title>
     <link href="/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html"/>
     <url>/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html</url>
