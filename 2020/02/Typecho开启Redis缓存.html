@@ -18,23 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="延迟问题 在访问博客的时候会稍有等待。但是博客内容以文字为主，配图为辅。页面的延迟会给用户带来不好的体验，所以想着加一个缓存提高页面的响应速度。 为了统计不同地区访问的速度，使用了站长工具的多个地点Ping服务器[1]来进行统计分析。检测完发现除了海外地区访问速度善可，国内大部分地区访问速度都不理想。 配置缓存个人博客是属于读多写少的业务。为了提高服务的响应速度，决定给Typecho增加缓存，选用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/07/hello-world.html">
+<meta property="og:title" content="Typecho 开启Redis缓存">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html">
 <meta property="og:site_name" content="QA毛俊">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="延迟问题 在访问博客的时候会稍有等待。但是博客内容以文字为主，配图为辅。页面的延迟会给用户带来不好的体验，所以想着加一个缓存提高页面的响应速度。 为了统计不同地区访问的速度，使用了站长工具的多个地点Ping服务器[1]来进行统计分析。检测完发现除了海外地区访问速度善可，国内大部分地区访问速度都不理想。 配置缓存个人博客是属于读多写少的业务。为了提高服务的响应速度，决定给Typecho增加缓存，选用">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-23T11:02:41.028Z">
-<meta property="article:modified_time" content="2023-07-23T13:04:58.321Z">
+<meta property="article:published_time" content="2020-02-27T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-03T10:29:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="快速上手">
+<meta property="article:tag" content="博客平台">
+<meta property="article:tag" content="Typecho">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - QA毛俊</title>
+  <title>Typecho 开启Redis缓存 - QA毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Typecho 开启Redis缓存"></span>
           
         </div>
 
@@ -224,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-23 11:02" pubdate>
-          2023年7月23日 上午
+        <time datetime="2020-02-27 00:00" pubdate>
+          2020年2月27日 凌晨
         </time>
       </span>
     
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          1.4k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          4 分钟
+          12 分钟
         
       </span>
     
@@ -284,12 +284,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">Typecho 开启Redis缓存</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年7月23日 下午
+                    本文最后更新于：2023年9月3日 上午
                   
                 
               </p>
@@ -297,20 +297,40 @@
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <h2 id="延迟问题"><a href="#延迟问题" class="headerlink" title="延迟问题"></a>延迟问题</h2><p> 在访问博客的时候会稍有等待。但是博客内容以文字为主，配图为辅。页面的延迟会给用户带来不好的体验，所以想着加一个缓存提高页面的响应速度。</p>
+<p>为了统计不同地区访问的速度，使用了站长工具的多个地点Ping服务器<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[多个地点Ping服务器](http://ping.chinaz.com/)">[1]</span></a></sup>来进行统计分析。检测完发现除了海外地区访问速度善可，国内大部分地区访问速度都不理想。</p>
+<h2 id="配置缓存"><a href="#配置缓存" class="headerlink" title="配置缓存"></a>配置缓存</h2><p>个人博客是属于<strong>读多写少</strong>的业务。为了提高服务的响应速度，决定给<code>Typecho</code>增加缓存，选用目前市场上热门的<code>Redis</code>作为缓存。</p>
+<p>  以<code>Centos 7.xx</code>环境为例，首先安装<code>redis</code>服务和<code>php-redis</code>模块服务:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo yum -y install redis<br>$ sudo yum -y install php-pecl-redis<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<p>  安装完后添加开机自启服务并启动<code>redis</code>:</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo systemctl <span class="hljs-built_in">enable</span> redis<br>$ sudo systemctl start redis<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
+<p>  检查<code>redis</code>服务是否启动成功：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status redis<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
+<p>  检查<code>php-redis</code>模块是否安装成功：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">php -m |grep redis<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<blockquote>
+<p> 有输出内容则说明安装成功。</p>
+</blockquote>
+<p>安装完缓存服务后，需要在<code>Typecho</code>中开启缓存。为了让<code>Typecho</code>可以支持<code>Redis</code>缓存，这里采用安装插件的方式让<code>Typecho</code>集成缓存配置功能。下载TpCache插件<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[TpCache](https://github.com/phpgao/TpCache)">[2]</span></a></sup>，放入到<code>Typecho</code>的<strong>plugins</strong>目录下。然后去后台点击<strong>插件管理</strong>按钮并启用<strong>TpCache</strong>插件。接着点击<strong>设置</strong>按钮进入缓存配置页面，填写相应的配置信息，点击保存设置。</p>
+<p>配置完缓存后，可以去页面刷新查看效果。</p>
+<p>注意配置是否开启了<strong>对登入用户失效</strong>,如果开启则用隐私窗口或者先退出账号再测试。</p>
+<p>验证<code>Redis</code>的缓存是否在工作，可以进入服务器中输入命令<code>redis-cli</code>登入<code>Redis</code>客户端：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ redis-cli<br>127.0.0.1:6379&gt; keys *<br>1) <span class="hljs-string">&quot;43efe54439fbb9c6f647120ec9e02821&quot;</span><br>2) <span class="hljs-string">&quot;fcf92f7cb8f50717bba68d1655b4c9a2&quot;</span><br>3) <span class="hljs-string">&quot;a8356448e7efd93fdc4c068d4bcb91fb&quot;</span><br>4) <span class="hljs-string">&quot;c9db569cb388e160e4b86ca1ddff84d7&quot;</span><br>5) <span class="hljs-string">&quot;04ce4f80d6159435fb9b9362fa19442d&quot;</span><br>6) <span class="hljs-string">&quot;30da41efe7963d8e81fc37eaf8b656b1&quot;</span><br>7) <span class="hljs-string">&quot;45e1dc83b4f004caf1b43bbceccad223&quot;</span><br>8) <span class="hljs-string">&quot;271f8547640193f2e8dcaa8bd6cd4be7&quot;</span><br></code></pre></td></tr></table></figure>
 
+<p>如果输入<code>keys *</code>有输出则说明<code>Redis</code>缓存已经起作用了。或者可以通过<code>redis-cli</code>的<code>info</code>命令查看缓存命中信息：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ redis-cli<br>127.0.0.1:6379&gt; info<br><span class="hljs-comment"># Stats</span><br>...<br>keyspace_hits:26<br>keyspace_misses:9<br>...<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>通过**keyspace_hits&#x2F;(keyspace_hits+keyspace_misses)**计算命令率。</p>
+</blockquote>
+<p>(本文完）</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://ping.chinaz.com/">多个地点Ping服务器</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://github.com/phpgao/TpCache">TpCache</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
                 
               </div>
             
@@ -328,42 +348,15 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E6%96%87%E6%A1%A3%E6%95%99%E7%A8%8B/" class="category-chain-item">文档教程</a>
+  <a href="/blog/categories/Blog/" class="category-chain-item">Blog</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E6%96%87%E6%A1%A3%E6%95%99%E7%A8%8B/Hexo/" class="category-chain-item">Hexo</a>
+  <a href="/blog/categories/Blog/Typecho/" class="category-chain-item">Typecho</a>
   
   
 
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
-  
-  
-    <span>></span>
-    
-  <a href="/blog/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/Hexo/" class="category-chain-item">Hexo</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/Hello-World/" class="category-chain-item">Hello World</a>
-  
   
 
       </span>
@@ -377,9 +370,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/Hexo/" class="print-no-link">#Hexo</a>
+        <a href="/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/" class="print-no-link">#博客平台</a>
       
-        <a href="/blog/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/" class="print-no-link">#快速上手</a>
+        <a href="/blog/tags/Typecho/" class="print-no-link">#Typecho</a>
       
     </div>
   
@@ -391,8 +384,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>https://maojun.xyz/blog/2023/07/hello-world.html</div>
+      <div>Typecho 开启Redis缓存</div>
+      <div>https://maojun.xyz/blog/2020/02/Typecho开启Redis缓存.html</div>
     </div>
     <div class="license-meta">
       
@@ -404,13 +397,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月23日</div>
+          <div>2020年2月27日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月23日</div>
+          <div>2023年9月3日</div>
         </div>
       
       
@@ -453,9 +446,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/07/%E5%AE%89%E8%A3%85ubuntu%E5%B9%B6%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE.html" title="安装 Ubuntu 并做相关配置">
+                      <a href="/blog/2023/07/hello-world.html" title="Hello World">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">安装 Ubuntu 并做相关配置</span>
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -463,8 +456,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html" title="Typecho 开启Redis缓存">
-                        <span class="hidden-mobile">Typecho 开启Redis缓存</span>
+                      <a href="/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html" title="配置 docker 镜像加速">
+                        <span class="hidden-mobile">配置 docker 镜像加速</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -227,6 +227,35 @@
   
   
   <entry>
+    <title>Typecho 开启Redis缓存</title>
+    <link href="/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html"/>
+    <url>/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="延迟问题"><a href="#延迟问题" class="headerlink" title="延迟问题"></a>延迟问题</h2><p> 在访问博客的时候会稍有等待。但是博客内容以文字为主，配图为辅。页面的延迟会给用户带来不好的体验，所以想着加一个缓存提高页面的响应速度。</p><p>为了统计不同地区访问的速度，使用了站长工具的多个地点Ping服务器<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[多个地点Ping服务器](http://ping.chinaz.com/)">[1]</span></a></sup>来进行统计分析。检测完发现除了海外地区访问速度善可，国内大部分地区访问速度都不理想。</p><h2 id="配置缓存"><a href="#配置缓存" class="headerlink" title="配置缓存"></a>配置缓存</h2><p>个人博客是属于<strong>读多写少</strong>的业务。为了提高服务的响应速度，决定给<code>Typecho</code>增加缓存，选用目前市场上热门的<code>Redis</code>作为缓存。</p><p>  以<code>Centos 7.xx</code>环境为例，首先安装<code>redis</code>服务和<code>php-redis</code>模块服务:</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo yum -y install redis<br>$ sudo yum -y install php-pecl-redis<br></code></pre></td></tr></table></figure><p>  安装完后添加开机自启服务并启动<code>redis</code>:</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo systemctl <span class="hljs-built_in">enable</span> redis<br>$ sudo systemctl start redis<br></code></pre></td></tr></table></figure><p>  检查<code>redis</code>服务是否启动成功：</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ systemctl status redis<br></code></pre></td></tr></table></figure><p>  检查<code>php-redis</code>模块是否安装成功：</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">php -m |grep redis<br></code></pre></td></tr></table></figure><blockquote><p> 有输出内容则说明安装成功。</p></blockquote><p>安装完缓存服务后，需要在<code>Typecho</code>中开启缓存。为了让<code>Typecho</code>可以支持<code>Redis</code>缓存，这里采用安装插件的方式让<code>Typecho</code>集成缓存配置功能。下载TpCache插件<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[TpCache](https://github.com/phpgao/TpCache)">[2]</span></a></sup>，放入到<code>Typecho</code>的<strong>plugins</strong>目录下。然后去后台点击<strong>插件管理</strong>按钮并启用<strong>TpCache</strong>插件。接着点击<strong>设置</strong>按钮进入缓存配置页面，填写相应的配置信息，点击保存设置。</p><p>配置完缓存后，可以去页面刷新查看效果。</p><p>注意配置是否开启了<strong>对登入用户失效</strong>,如果开启则用隐私窗口或者先退出账号再测试。</p><p>验证<code>Redis</code>的缓存是否在工作，可以进入服务器中输入命令<code>redis-cli</code>登入<code>Redis</code>客户端：</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ redis-cli<br>127.0.0.1:6379&gt; keys *<br>1) <span class="hljs-string">&quot;43efe54439fbb9c6f647120ec9e02821&quot;</span><br>2) <span class="hljs-string">&quot;fcf92f7cb8f50717bba68d1655b4c9a2&quot;</span><br>3) <span class="hljs-string">&quot;a8356448e7efd93fdc4c068d4bcb91fb&quot;</span><br>4) <span class="hljs-string">&quot;c9db569cb388e160e4b86ca1ddff84d7&quot;</span><br>5) <span class="hljs-string">&quot;04ce4f80d6159435fb9b9362fa19442d&quot;</span><br>6) <span class="hljs-string">&quot;30da41efe7963d8e81fc37eaf8b656b1&quot;</span><br>7) <span class="hljs-string">&quot;45e1dc83b4f004caf1b43bbceccad223&quot;</span><br>8) <span class="hljs-string">&quot;271f8547640193f2e8dcaa8bd6cd4be7&quot;</span><br></code></pre></td></tr></table></figure><p>如果输入<code>keys *</code>有输出则说明<code>Redis</code>缓存已经起作用了。或者可以通过<code>redis-cli</code>的<code>info</code>命令查看缓存命中信息：</p>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ redis-cli<br>127.0.0.1:6379&gt; info<br><span class="hljs-comment"># Stats</span><br>...<br>keyspace_hits:26<br>keyspace_misses:9<br>...<br></code></pre></td></tr></table></figure><blockquote><p>通过**keyspace_hits&#x2F;(keyspace_hits+keyspace_misses)**计算命令率。</p></blockquote><p>(本文完）</p><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="http://ping.chinaz.com/">多个地点Ping服务器</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a href="https://github.com/phpgao/TpCache">TpCache</a><a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>Blog</category>
+      
+      <category>Typecho</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>博客平台</tag>
+      
+      <tag>Typecho</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>配置 docker 镜像加速</title>
     <link href="/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html"/>
     <url>/blog/2020/02/%E9%85%8D%E7%BD%AEdocker%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F.html</url>
