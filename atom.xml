@@ -149,7 +149,7 @@
     <link href="https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html"/>
     <id>https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html</id>
     <published>2023-08-06T18:06:00.000Z</published>
-    <updated>2023-09-03T11:48:00.922Z</updated>
+    <updated>2023-09-04T23:53:25.013Z</updated>
     
     
       
@@ -269,6 +269,35 @@
     <category term="Hexo" scheme="https://maojun.xyz/blog/tags/Hexo/"/>
     
     <category term="快速上手" scheme="https://maojun.xyz/blog/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho 默认主题功能增强</title>
+    <link href="https://maojun.xyz/blog/2020/03/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.html"/>
+    <id>https://maojun.xyz/blog/2020/03/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.html</id>
+    <published>2020-03-01T00:00:00.000Z</published>
+    <updated>2023-09-05T07:36:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;h2 id=&quot;默认项&quot;&gt;&lt;a href=&quot;#默认项&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Blog" scheme="https://maojun.xyz/blog/categories/Blog/"/>
+    
+    <category term="Typecho" scheme="https://maojun.xyz/blog/categories/Blog/Typecho/"/>
+    
+    
+    <category term="博客平台" scheme="https://maojun.xyz/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"/>
+    
+    <category term="Typecho" scheme="https://maojun.xyz/blog/tags/Typecho/"/>
     
   </entry>
   
