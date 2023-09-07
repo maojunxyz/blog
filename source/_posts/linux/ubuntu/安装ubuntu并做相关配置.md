@@ -3,12 +3,10 @@ title: 安装 Ubuntu 并做相关配置
 date: 2023/07/30 19:44
 updated: 2023/07/30 19:44
 categories:
-- [Linux, Ubuntu]
-- [System, Linux]
+- [系统, Linux, Ubuntu]
 tags:
 - Ubuntu
-- System
-- Software
+- 操作系统
 ---
 ##  折腾
 
