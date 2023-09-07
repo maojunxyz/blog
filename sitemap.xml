@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://maojun.xyz/blog/2023/09/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html</loc>
+    <loc>https://maojun.xyz/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html</loc>
     
     <lastmod>2023-09-07</lastmod>
     
@@ -483,35 +483,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/Shell/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/backblaze-B2/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/Blog/</loc>
     <lastmod>2023-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -553,34 +525,6 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/chrome/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/Shell/%E6%97%A5%E5%BF%97/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/Rime/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/Blog/Typecho/</loc>
-    <lastmod>2023-09-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Shell/</loc>
     <lastmod>2023-09-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -602,7 +546,63 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/Shell/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/Blog/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/chrome/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/Shell/%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BE%93%E5%85%A5%E6%B3%95/Rime/</loc>
+    <lastmod>2023-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/Blog/Typecho/</loc>
     <lastmod>2023-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

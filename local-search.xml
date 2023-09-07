@@ -4,37 +4,6 @@
   
   
   <entry>
-    <title>通过跳板机连接 SSH 服务器</title>
-    <link href="/blog/2023/09/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html"/>
-    <url>/blog/2023/09/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html</url>
-    
-    <content type="html"><![CDATA[<h2 id="SSH无法直连"><a href="#SSH无法直连" class="headerlink" title="SSH无法直连"></a>SSH无法直连</h2><p>服务器因为安全原因不能直接通过外网访问，要经过中转连接。</p><p>服务器提供了两种方式连接：</p><ol><li>通过堡垒机调用本地 <code>SSH</code> 客户端登入到服务器。</li><li>通过跳板机端口转发访问</li></ol><p>当：</p><ul><li>本机可以访问–&gt;跳板机</li><li>跳板机可以访问–&gt;服务器</li><li>笔记本不能访问—-x服务器</li></ul><p>可以使用跳板机代理访问服务器。</p><h2 id="跳板机"><a href="#跳板机" class="headerlink" title="跳板机"></a>跳板机</h2><p>跳板机正如它的名字一样，可以在本机和服务器之间提供一个跳板。本地主机 A 可以直接访问 B 主机，但是无法访问 C 主机，但 B 主机可以访问 C 主机。可以通过将 B 主机作为主机 A 的跳板机来间接访问 C 主机。</p><p>服务器提供了跳板机的账号和密码，为了避免每次输入账号密码以及提高登入的安全性。配置生成公钥并上传到跳板机后面就无需输入账号密码了。通过<code>ssh-keygen</code>命令直接一路回车生成的两个文件：</p><ul><li>公钥文件 <code>~/.ssh/id_rsa.pub</code></li><li>私钥文件 <code>~/.ssh/id_rsa</code></li></ul><p>生成的公钥通过以下的命令上传到跳板机:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh-copy-id  -i /etc/.ssh/id_rsa user@server<br></code></pre></td></tr></table></figure><blockquote><p>user@server替换为跳板机实际的用户和地址 如果出现<code>bash: sh-copy-id: command not found</code>，则安装<code>openssh-clients</code>解决</p></blockquote><p>上传公钥后，就可以免密登入了:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh user@server<br></code></pre></td></tr></table></figure><p>完成跳板机的配置后，如果现在直接通过跳板机访问远程服务器的话是需要远程服务器的账号密码的。</p><p>由于远程服务器的密码由于安全原因能不能使用了。这里可以采用<code>2</code>种方法将本地的公钥上传到远程的服务器。</p><ol><li>借助页面堡垒机登入到<code>sftp</code>，然后将本地之前生成的公钥追加到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</li><li>借助跳板机，先将公钥上传到跳板机，再通过跳板机追加到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</li></ol><p>配置完远程服务器的公钥后，就可以实现本机通过跳板机访问服务器免密登入了:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh -J user@jumpserver user@remoteserver<br></code></pre></td></tr></table></figure><blockquote><p><code>jumpserver</code>为跳板机，<code>remoteserver</code>为远程目的服务器 <code>ssh</code>的<code>-J</code>参数用来指定跳板机，后面空格然后再跟上远程服务器</p></blockquote><p>带端口例子:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh -J user@jumpserver:port user@remoteserver:port<br></code></pre></td></tr></table></figure><p>如果有多层跳板机，同单一跳板机使用<code>-J</code>参数，之间用逗号<code>,</code>分隔跳板机。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ ssh -J user@jumpserver1,user@jumpserver2:port user@remoteserver<br></code></pre></td></tr></table></figure><p>通过上面的命令就能通过跳板机访问服务器了。</p><h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><p>可以通过<code>ssh</code>的<code>config</code>文件将以上信息管理起来，编辑<code>~/.ssh/config</code>文件:</p><p>对应的<code>ssh -J user@jumpserver:port  user@remoteserver:port</code>命令的配置如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 跳板机</span><br>Host jump<br>    HostName jumpIP<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br><span class="hljs-comment"># 远程服务器</span><br>Host remote<br>    HostName remoteIP<br>    Port 22<br>    User user<br>    IdentityFile ~/.ssh/id_rsa<br>    ProxyCommand ssh jump -W %h:%p<br></code></pre></td></tr></table></figure><blockquote><ul><li>Host:定义一个名称</li><li>HostName:定义服务器的地址</li><li>User:定义服务器的用户名</li><li>Port:定义服务器的端口</li><li>IdentityFile:定义公钥位置</li><li>proxyCommand:定义代理命令</li><li><code>W</code>参数:通过<code>jump</code>服务器建立隧道连接</li></ul></blockquote><p>如果服务器需要多层跳板机才能访问，可以通过 <code>ssh</code> 的配置文件 <code>config</code> 中的 <code>ProxyJump</code> 来指定跳板机( <code>openssh&gt;=7.3</code> )。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 跳板机1</span><br>Host jump1<br>    HostName jumpIP1<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br><span class="hljs-comment"># 跳板机2</span><br>Host jump2<br>    HostName jumpIP2<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br>Host remote<br>  HostName remoteIP<br>  ProxyJump jump1,jump2<br></code></pre></td></tr></table></figure><p>配置完成后就可以通过 <code>ssh remote</code> 进行登入，会先经过跳板机 <code>jump1</code> ，然后经过跳板机 <code>jump2</code> 并登入到 <code>remote</code> 服务器。</p><p>（本完完）</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>系统</category>
-      
-      <category>Linux</category>
-      
-      <category>Shell</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Linux</tag>
-      
-      <tag>Shell</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>多关键字过滤并多色高亮日志内容脚本</title>
     <link href="/blog/2023/09/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E5%B9%B6%E5%A4%9A%E8%89%B2%E9%AB%98%E4%BA%AE%E6%97%A5%E5%BF%97%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC.html"/>
     <url>/blog/2023/09/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E5%B9%B6%E5%A4%9A%E8%89%B2%E9%AB%98%E4%BA%AE%E6%97%A5%E5%BF%97%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC.html</url>
@@ -283,6 +252,37 @@
       <tag>Hexo</tag>
       
       <tag>快速上手</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>通过跳板机连接 SSH 服务器</title>
+    <link href="/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html"/>
+    <url>/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="SSH无法直连"><a href="#SSH无法直连" class="headerlink" title="SSH无法直连"></a>SSH无法直连</h2><p>服务器因为安全原因不能直接通过外网访问，要经过中转连接。</p><p>服务器提供了两种方式连接：</p><ol><li>通过堡垒机调用本地 <code>SSH</code> 客户端登入到服务器。</li><li>通过跳板机端口转发访问</li></ol><p>当：</p><ul><li>本机可以访问–&gt;跳板机</li><li>跳板机可以访问–&gt;服务器</li><li>笔记本不能访问—-x服务器</li></ul><p>可以使用跳板机代理访问服务器。</p><h2 id="跳板机"><a href="#跳板机" class="headerlink" title="跳板机"></a>跳板机</h2><p>跳板机正如它的名字一样，可以在本机和服务器之间提供一个跳板。本地主机 A 可以直接访问 B 主机，但是无法访问 C 主机，但 B 主机可以访问 C 主机。可以通过将 B 主机作为主机 A 的跳板机来间接访问 C 主机。</p><p>服务器提供了跳板机的账号和密码，为了避免每次输入账号密码以及提高登入的安全性。配置生成公钥并上传到跳板机后面就无需输入账号密码了。通过<code>ssh-keygen</code>命令直接一路回车生成的两个文件：</p><ul><li>公钥文件 <code>~/.ssh/id_rsa.pub</code></li><li>私钥文件 <code>~/.ssh/id_rsa</code></li></ul><p>生成的公钥通过以下的命令上传到跳板机:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh-copy-id  -i /etc/.ssh/id_rsa user@server<br></code></pre></td></tr></table></figure><blockquote><p>user@server替换为跳板机实际的用户和地址 如果出现<code>bash: sh-copy-id: command not found</code>，则安装<code>openssh-clients</code>解决</p></blockquote><p>上传公钥后，就可以免密登入了:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh user@server<br></code></pre></td></tr></table></figure><p>完成跳板机的配置后，如果现在直接通过跳板机访问远程服务器的话是需要远程服务器的账号密码的。</p><p>由于远程服务器的密码由于安全原因能不能使用了。这里可以采用<code>2</code>种方法将本地的公钥上传到远程的服务器。</p><ol><li>借助页面堡垒机登入到<code>sftp</code>，然后将本地之前生成的公钥追加到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</li><li>借助跳板机，先将公钥上传到跳板机，再通过跳板机追加到远程服务器的<code>~/.ssh/authorized_keys</code>文件中。</li></ol><p>配置完远程服务器的公钥后，就可以实现本机通过跳板机访问服务器免密登入了:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh -J user@jumpserver user@remoteserver<br></code></pre></td></tr></table></figure><blockquote><p><code>jumpserver</code>为跳板机，<code>remoteserver</code>为远程目的服务器 <code>ssh</code>的<code>-J</code>参数用来指定跳板机，后面空格然后再跟上远程服务器</p></blockquote><p>带端口例子:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ ssh -J user@jumpserver:port user@remoteserver:port<br></code></pre></td></tr></table></figure><p>如果有多层跳板机，同单一跳板机使用<code>-J</code>参数，之间用逗号<code>,</code>分隔跳板机。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ ssh -J user@jumpserver1,user@jumpserver2:port user@remoteserver<br></code></pre></td></tr></table></figure><p>通过上面的命令就能通过跳板机访问服务器了。</p><h2 id="配置管理"><a href="#配置管理" class="headerlink" title="配置管理"></a>配置管理</h2><p>可以通过<code>ssh</code>的<code>config</code>文件将以上信息管理起来，编辑<code>~/.ssh/config</code>文件:</p><p>对应的<code>ssh -J user@jumpserver:port  user@remoteserver:port</code>命令的配置如下:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 跳板机</span><br>Host jump<br>    HostName jumpIP<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br><span class="hljs-comment"># 远程服务器</span><br>Host remote<br>    HostName remoteIP<br>    Port 22<br>    User user<br>    IdentityFile ~/.ssh/id_rsa<br>    ProxyCommand ssh jump -W %h:%p<br></code></pre></td></tr></table></figure><blockquote><ul><li>Host:定义一个名称</li><li>HostName:定义服务器的地址</li><li>User:定义服务器的用户名</li><li>Port:定义服务器的端口</li><li>IdentityFile:定义公钥位置</li><li>proxyCommand:定义代理命令</li><li><code>W</code>参数:通过<code>jump</code>服务器建立隧道连接</li></ul></blockquote><p>如果服务器需要多层跳板机才能访问，可以通过 <code>ssh</code> 的配置文件 <code>config</code> 中的 <code>ProxyJump</code> 来指定跳板机( <code>openssh&gt;=7.3</code> )。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 跳板机1</span><br>Host jump1<br>    HostName jumpIP1<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br><span class="hljs-comment"># 跳板机2</span><br>Host jump2<br>    HostName jumpIP2<br>    User user<br>    Port 22<br>    IdentityFile ~/.ssh/id_rsa<br><br>Host remote<br>  HostName remoteIP<br>  ProxyJump jump1,jump2<br></code></pre></td></tr></table></figure><p>配置完成后就可以通过 <code>ssh remote</code> 进行登入，会先经过跳板机 <code>jump1</code> ，然后经过跳板机 <code>jump2</code> 并登入到 <code>remote</code> 服务器。</p><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+      <category>Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
       
     </tags>
     
