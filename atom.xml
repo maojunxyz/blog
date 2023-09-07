@@ -149,7 +149,7 @@
     <link href="https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html"/>
     <id>https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html</id>
     <published>2023-08-06T18:06:00.000Z</published>
-    <updated>2023-09-07T00:05:53.347Z</updated>
+    <updated>2023-09-07T22:00:16.568Z</updated>
     
     
       
@@ -220,20 +220,16 @@
     
     
     
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/Linux/"/>
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/Linux/Ubuntu/"/>
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
     
-    <category term="System" scheme="https://maojun.xyz/blog/categories/System/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/System/Linux/"/>
+    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Ubuntu/"/>
     
     
     <category term="Ubuntu" scheme="https://maojun.xyz/blog/tags/Ubuntu/"/>
     
-    <category term="System" scheme="https://maojun.xyz/blog/tags/System/"/>
-    
-    <category term="Software" scheme="https://maojun.xyz/blog/tags/Software/"/>
+    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -269,6 +265,37 @@
     <category term="Hexo" scheme="https://maojun.xyz/blog/tags/Hexo/"/>
     
     <category term="快速上手" scheme="https://maojun.xyz/blog/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSH 使用 lrzsz 进行上传和下载</title>
+    <link href="https://maojun.xyz/blog/2020/03/SSH%E4%BD%BF%E7%94%A8lrzsz%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD.html"/>
+    <id>https://maojun.xyz/blog/2020/03/SSH%E4%BD%BF%E7%94%A8lrzsz%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD.html</id>
+    <published>2020-03-05T00:00:00.000Z</published>
+    <updated>2023-09-08T05:43:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SSH上传下载&quot;&gt;&lt;a href=&quot;#SSH上传下载&quot; class=&quot;headerlink&quot; title=&quot;SSH上传下载&quot;&gt;&lt;/a&gt;SSH上传下载&lt;/h2&gt;&lt;p&gt;通过 &lt;code&gt;SSH&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
     
   </entry>
   
