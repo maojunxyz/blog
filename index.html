@@ -239,6 +239,83 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/blog/2023/09/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html" target="_self">
+          通过跳板机连接 SSH 服务器
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/blog/2023/09/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html" target="_self">
+        <div>
+          SSH无法直连服务器因为安全原因不能直接通过外网访问，要经过中转连接。 服务器提供了两种方式连接：  通过堡垒机调用本地 SSH 客户端登入到服务器。 通过跳板机端口转发访问  当：  本机可以访问–&gt;跳板机 跳板机可以访问–&gt;服务器 笔记本不能访问—-x服务器  可以使用跳板机代理访问服务器。 跳板机跳板机正如它的名字一样，可以在本机和服务器之间提供一个跳板。本地主机 A 可以直接访
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-09-07 00:02" pubdate>
+              2023-09-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/" class="category-chain-item">系统</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/" class="category-chain-item">Linux</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Shell/" class="category-chain-item">Shell</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/blog/tags/Linux/">#Linux</a>
+            
+              <a href="/blog/tags/Shell/">#Shell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/blog/2023/09/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E5%B9%B6%E5%A4%9A%E8%89%B2%E9%AB%98%E4%BA%AE%E6%97%A5%E5%BF%97%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC.html" target="_self">
           多关键字过滤并多色高亮日志内容脚本
         </a>
@@ -840,76 +917,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2020-03-01 00:00" pubdate>
               2020-03-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/Blog/" class="category-chain-item">Blog</a>
-  
-  
-    <span>></span>
-    
-  <a href="/blog/categories/Blog/Typecho/" class="category-chain-item">Typecho</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/">#博客平台</a>
-            
-              <a href="/blog/tags/Typecho/">#Typecho</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html" target="_self">
-          Typecho 开启Redis缓存
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html" target="_self">
-        <div>
-          延迟问题 在访问博客的时候会稍有等待。但是博客内容以文字为主，配图为辅。页面的延迟会给用户带来不好的体验，所以想着加一个缓存提高页面的响应速度。 为了统计不同地区访问的速度，使用了站长工具的多个地点Ping服务器[1]来进行统计分析。检测完发现除了海外地区访问速度善可，国内大部分地区访问速度都不理想。 配置缓存个人博客是属于读多写少的业务。为了提高服务的响应速度，决定给Typecho增加缓存，选用
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-02-27 00:00" pubdate>
-              2020-02-27
             </time>
           </div>
         
