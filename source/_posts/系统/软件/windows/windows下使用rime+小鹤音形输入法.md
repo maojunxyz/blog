@@ -1,11 +1,13 @@
 ---
 title: Windows 下使用 Rime 和小鹤音形输入法
 date: 2023/08/06 18:06
+updated: 2023/08/06 18:06
 categories:
-- [输入法, Rime]
+- [Windows, 输入法, Rime]
 tags:
 - 输入法
 - Rime
+- Windows
 ---
 ##  介绍
 
