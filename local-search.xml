@@ -152,11 +152,11 @@
     
     <tags>
       
+      <tag>Windows</tag>
+      
       <tag>输入法</tag>
       
       <tag>Rime</tag>
-      
-      <tag>Windows</tag>
       
     </tags>
     
@@ -269,18 +269,18 @@
     
     <categories>
       
-      <category>输入法</category>
+      <category>Windows</category>
       
-      <category>Rime</category>
+      <category>SSHFS</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>输入法</tag>
+      <tag>Windows</tag>
       
-      <tag>Rime</tag>
+      <tag>SSHFS</tag>
       
     </tags>
     
