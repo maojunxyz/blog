@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-03T18:57:00.000Z</updated>
+  <updated>2023-09-10T12:18:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vifm命令行文件管理器入门</title>
+    <link href="https://maojun.xyz/blog/2023/09/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html"/>
+    <id>https://maojun.xyz/blog/2023/09/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html</id>
+    <published>2023-09-28T00:00:00.000Z</published>
+    <updated>2023-09-10T12:18:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。&lt;/p&gt;
+&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="软件" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="Vifm" scheme="https://maojun.xyz/blog/tags/Vifm/"/>
+    
+  </entry>
   
   <entry>
     <title>多关键字过滤并多色高亮日志内容脚本</title>
@@ -273,6 +305,156 @@
   </entry>
   
   <entry>
+    <title>Bug报告写作指南</title>
+    <link href="https://maojun.xyz/blog/2021/10/[%E7%BF%BB%E8%AF%91]Bug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html"/>
+    <id>https://maojun.xyz/blog/2021/10/[%E7%BF%BB%E8%AF%91]Bug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html</id>
+    <published>2021-10-15T00:00:00.000Z</published>
+    <updated>2023-09-10T12:23:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;此翻译参考了网络中现有的中文翻译，在此基础上做了些语义调整，同时在原先中文的基础上增加了部分新增的英文内容。&lt;/p&gt;
+&lt;p&gt;原文使用的是</summary>
+        
+      
+    
+    
+    
+    <category term="翻译" scheme="https://maojun.xyz/blog/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E7%BF%BB%E8%AF%91/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="翻译" scheme="https://maojun.xyz/blog/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用户登入测试用例设计</title>
+    <link href="https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html"/>
+    <id>https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html</id>
+    <published>2021-10-12T00:00:00.000Z</published>
+    <updated>2023-09-10T12:29:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;划分维度&quot;&gt;&lt;a href=&quot;#划分维度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试用例" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/"/>
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试用例" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>获取网站的 favicon 的方式</title>
+    <link href="https://maojun.xyz/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html"/>
+    <id>https://maojun.xyz/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html</id>
+    <published>2020-03-28T00:00:00.000Z</published>
+    <updated>2023-09-10T12:10:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="软件" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="网页工具" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="网页工具" scheme="https://maojun.xyz/blog/tags/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux下不解压直接修改压缩包内文件</title>
+    <link href="https://maojun.xyz/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html"/>
+    <id>https://maojun.xyz/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html</id>
+    <published>2020-03-25T00:00:00.000Z</published>
+    <updated>2023-09-10T11:58:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从 Windows 转到 Linux 桌面发行版后，就对在终端上完成一些工作产生痴迷。比如修改，复制，移动，删除文件等等。加上 Linux</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终端下的 Emacs 命令使用</title>
+    <link href="https://maojun.xyz/blog/2020/03/%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%9A%84emacs%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2020/03/%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%9A%84emacs%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8.html</id>
+    <published>2020-03-24T00:00:00.000Z</published>
+    <updated>2023-09-10T11:48:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;默认快捷键&quot;&gt;&lt;a href=&quot;#默认快捷键&quot; class=&quot;headerlink&quot; title=&quot;默认快捷键&quot;&gt;&lt;/a&gt;默认快捷键&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Bash&lt;/code&gt; 默认绑定的是 &lt;code&gt;Emacs&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Shell/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SSHFS 挂载远程服务器目录</title>
     <link href="https://maojun.xyz/blog/2020/03/SSHFS%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%AE%E5%BD%95.html"/>
     <id>https://maojun.xyz/blog/2020/03/SSHFS%E6%8C%82%E8%BD%BD%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%AE%E5%BD%95.html</id>
@@ -448,151 +630,6 @@
     <category term="容器" scheme="https://maojun.xyz/blog/tags/%E5%AE%B9%E5%99%A8/"/>
     
     <category term="docker" scheme="https://maojun.xyz/blog/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 docker 搭建 nextcloud 网盘</title>
-    <link href="https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html"/>
-    <id>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html</id>
-    <published>2020-02-25T00:00:00.000Z</published>
-    <updated>2023-09-01T07:02:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Nextcloud</summary>
-        
-      
-    
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="Nextcloud" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Nextcloud/"/>
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="Nextcloud" scheme="https://maojun.xyz/blog/tags/Nextcloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typecho 默认主题优化</title>
-    <link href="https://maojun.xyz/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html"/>
-    <id>https://maojun.xyz/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html</id>
-    <published>2020-02-24T00:00:00.000Z</published>
-    <updated>2023-08-27T09:47:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;优化需求&quot;&gt;&lt;a href=&quot;#优化需求&quot; class=&quot;headerlink&quot; title=&quot;优化需求&quot;&gt;&lt;/a&gt;优化需求&lt;/h2&gt;&lt;p&gt;在博客迁移到Typecho&lt;sup id=&quot;fnref:1&quot; class=&quot;footnote-ref&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Blog" scheme="https://maojun.xyz/blog/categories/Blog/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/categories/Blog/Typecho/"/>
-    
-    
-    <category term="博客平台" scheme="https://maojun.xyz/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/tags/Typecho/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Cloudflare 服务优化图床</title>
-    <link href="https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html"/>
-    <id>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html</id>
-    <published>2020-02-22T00:00:00.000Z</published>
-    <updated>2023-08-26T13:46:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;图床优化&quot;&gt;&lt;a href=&quot;#图床优化&quot; class=&quot;headerlink&quot; title=&quot;图床优化&quot;&gt;&lt;/a&gt;图床优化&lt;/h2&gt;&lt;p&gt;使用backblaze-B2搭建自己的图床&lt;sup id=&quot;fnref:1&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="Cloudflare" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/Cloudflare/"/>
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="Cloudflare" scheme="https://maojun.xyz/blog/tags/Cloudflare/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 backblaze-B2 搭建自己的图床</title>
-    <link href="https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8backblaze-B2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.html"/>
-    <id>https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8backblaze-B2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.html</id>
-    <published>2020-02-21T00:00:00.000Z</published>
-    <updated>2020-02-21T00:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;图床需求&quot;&gt;&lt;a href=&quot;#图床需求&quot; class=&quot;headerlink&quot; title=&quot;图床需求&quot;&gt;&lt;/a&gt;图床需求&lt;/h2&gt;&lt;p&gt;在搭建完&lt;code&gt;Typecho&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="backblaze-B2" scheme="https://maojun.xyz/blog/categories/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/backblaze-B2/"/>
-    
-    
-    <category term="对象存储" scheme="https://maojun.xyz/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/"/>
-    
-    <category term="backblaze" scheme="https://maojun.xyz/blog/tags/backblaze/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客迁移到 Typecho</title>
-    <link href="https://maojun.xyz/blog/2020/02/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0Typecho.html"/>
-    <id>https://maojun.xyz/blog/2020/02/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0Typecho.html</id>
-    <published>2020-02-20T00:00:00.000Z</published>
-    <updated>2023-08-22T12:48:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;尝试&quot;&gt;&lt;a href=&quot;#尝试&quot; class=&quot;headerlink&quot; title=&quot;尝试&quot;&gt;&lt;/a&gt;尝试&lt;/h2&gt;&lt;p&gt;博客平台历经 &lt;code&gt;HEXO&lt;/code&gt;, &lt;code&gt;HUGO&lt;/code&gt;, &lt;code&gt;Wordpress&lt;/code&gt;,</summary>
-        
-      
-    
-    
-    
-    <category term="Blog" scheme="https://maojun.xyz/blog/categories/Blog/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/categories/Blog/Typecho/"/>
-    
-    
-    <category term="博客平台" scheme="https://maojun.xyz/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/tags/Typecho/"/>
     
   </entry>
   

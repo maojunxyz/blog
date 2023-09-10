@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Vifm命令行文件管理器入门</title>
+    <link href="/blog/2023/09/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html"/>
+    <url>/blog/2023/09/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html</url>
+    
+    <content type="html"><![CDATA[<p>Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table><thead><tr><th align="left">快捷键</th><th align="left">描述</th></tr></thead><tbody><tr><td align="left">ctrl-w hjkl</td><td align="left">切换窗口</td></tr><tr><td align="left">ctrl-w s</td><td align="left">水平分隔</td></tr><tr><td align="left">ctrl-w v</td><td align="left">垂直分隔窗口</td></tr><tr><td align="left">w</td><td align="left">另个窗口预览当前光标文件</td></tr><tr><td align="left">e</td><td align="left">当前窗口预览光标文件</td></tr><tr><td align="left">dd</td><td align="left">删除文件</td></tr><tr><td align="left">:trashes</td><td align="left">查看垃圾箱目录</td></tr><tr><td align="left">lstrash</td><td align="left">查看垃圾桶文件</td></tr><tr><td align="left">:restore</td><td align="left">还原选中的垃圾箱文件</td></tr><tr><td align="left">j,k</td><td align="left">上下移动</td></tr><tr><td align="left">h,l</td><td align="left">在父&#x2F;子目录之间移动</td></tr><tr><td align="left">gg</td><td align="left">移动到文件列表首行</td></tr><tr><td align="left">G</td><td align="left">移动到文件列表末行</td></tr><tr><td align="left">M</td><td align="left">光标移动到窗口中间</td></tr><tr><td align="left">H,L</td><td align="left">光标移动到窗口首末文件</td></tr><tr><td align="left">gh</td><td align="left">返回上级目录</td></tr><tr><td align="left">gl,Enter</td><td align="left">进入目录或打开文件</td></tr><tr><td align="left">dd,d</td><td align="left">删除文件(放入回收站)</td></tr><tr><td align="left">DD,D</td><td align="left">删除文件(不放回收站)</td></tr><tr><td align="left">yy,Y,y</td><td align="left">复制文件</td></tr><tr><td align="left">p</td><td align="left">粘贴文件</td></tr><tr><td align="left">u</td><td align="left">撤销操作</td></tr><tr><td align="left">Space,Tab</td><td align="left">在两个panel之间切换</td></tr><tr><td align="left">&#x2F;</td><td align="left">查找文件</td></tr><tr><td align="left">m[a-zA-Z0-9]</td><td align="left">书签</td></tr><tr><td align="left">‘[a-zA-Z0-9]</td><td align="left">跳转到书签位置</td></tr><tr><td align="left">za</td><td align="left">切换隐藏文件显隐</td></tr><tr><td align="left">zo</td><td align="left">显示隐藏文件</td></tr><tr><td align="left">zm</td><td align="left">不显示隐藏文件</td></tr><tr><td align="left">:fil regex</td><td align="left">隐藏匹配regex的文件</td></tr><tr><td align="left">zO</td><td align="left">显示被:fil命令过滤的文件</td></tr><tr><td align="left">zM</td><td align="left">隐藏被:fil命令过滤的文件</td></tr><tr><td align="left">cp</td><td align="left">更改文件属性权限</td></tr><tr><td align="left">cw</td><td align="left">文件&#x2F;文件夹重命名</td></tr><tr><td align="left">cW</td><td align="left">文件&#x2F;文件夹重命名,不包含扩展名</td></tr><tr><td align="left">ga</td><td align="left">计算文件夹大小</td></tr><tr><td align="left">!prog</td><td align="left">执行系统命令, %f可以用来当前选中文件名</td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>软件</tag>
+      
+      <tag>Vifm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>多关键字过滤并多色高亮日志内容脚本</title>
     <link href="/blog/2023/09/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E5%B9%B6%E5%A4%9A%E8%89%B2%E9%AB%98%E4%BA%AE%E6%97%A5%E5%BF%97%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC.html"/>
     <url>/blog/2023/09/%E5%A4%9A%E5%85%B3%E9%94%AE%E5%AD%97%E8%BF%87%E6%BB%A4%E5%B9%B6%E5%A4%9A%E8%89%B2%E9%AB%98%E4%BA%AE%E6%97%A5%E5%BF%97%E5%86%85%E5%AE%B9%E8%84%9A%E6%9C%AC.html</url>
@@ -252,6 +283,155 @@
       <tag>Hexo</tag>
       
       <tag>快速上手</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Bug报告写作指南</title>
+    <link href="/blog/2021/10/%5B%E7%BF%BB%E8%AF%91%5DBug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html"/>
+    <url>/blog/2021/10/%5B%E7%BF%BB%E8%AF%91%5DBug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此翻译参考了网络中现有的中文翻译，在此基础上做了些语义调整，同时在原先中文的基础上增加了部分新增的英文内容。</p><p>原文使用的是 Bugzilla 这个 Bug 追踪工具，你可以将其代替成你所使用的缺陷管理软件或系统。</p><h2 id="为什么你要读这份指南"><a href="#为什么你要读这份指南" class="headerlink" title="为什么你要读这份指南"></a>为什么你要读这份指南</h2><p>简单地说，如果你报告 Bug 越有效, 工程师完全修复它的可能性就越大。<br>这份 Bug 写作指南是针对新手在书写有效的 Bug 报告方面进行指导的常规指南，并非每个建议都正好适用于你的软件项目。</p><h2 id="如何写一份有用的-Bug-报告"><a href="#如何写一份有用的-Bug-报告" class="headerlink" title="如何写一份有用的 Bug 报告"></a>如何写一份有用的 Bug 报告</h2><p>有用的 Bug 报告是用于正确修复 Bug 的。因此一份有用的 Bug 报告通常的有两个特征：</p><ol><li><strong>可复现</strong>：如果工程师不能复现或最终证明这一 Bug 存在,工程师或许会将它标记为 “我这没问题（WORKSFORME）”或 ”无效反馈（INVALID ）“，并且继续进行下一个 Bug 的修复工作。任何你能提供的详尽描述将为工程师修复 Bug 提供帮助。</li><li><strong>详细精确</strong>：如果工程师能越早隔离、定位问题，就越可能方便地修复。（如果程序员或测试人员不得不像破译密码一般去寻找跟踪分析 Bug，那么他们将花费比修复或测试问题更多的时间去诅咒 Bug 提交人。）</li></ol><p>让我们举一个例子：你正在测试的应用程序是一个网络浏览器，在访问 foo.com 网站时崩溃了，因此你想写一个 Bug 报告:</p><ul><li><strong>糟糕的 Bug 报告</strong>：“我的浏览器崩溃了。我正在访问 foo.com。我和比尔-盖茨打高尔夫，所以你最好解决这个问题，否则我就向他报告你。顺便说一下,你的 “返回 “图标看起来像一只被压扁的啮齿动物。丑陋极了。还有我的祖母的主页看上去外观也不正确，或者，它们全被搞乱了。祝好运。”</li><li><strong>有用的 Bug 报告</strong>：“我每次进入<a href="http://www.foo.com,在windows/">www.foo.com，在Windows</a> 2000系统上使用2002-02-25的版本时都会崩溃。我还重启了Linux，并使用2002-02-24的Linux版本再现了这个问题。我发现每次崩溃都发生在绘制这个页面位于上端的 Foo 横幅的时候。我分析了页面，发现除非你删除 ” border &#x3D;0″属性，否则下列图片链接将导致应用程序崩溃 ：<IMG SRC="http://www.foo.com/images/topics/topicfoos.gif" width="34" height="44" border="0" alt="News">”</li></ul><h2 id="如何在-Bugzilla-中输入你有用的-Bug-报告"><a href="#如何在-Bugzilla-中输入你有用的-Bug-报告" class="headerlink" title="如何在 Bugzilla 中输入你有用的 Bug 报告"></a>如何在 Bugzilla 中输入你有用的 Bug 报告</h2><p>在你输入你发现的 Bug 前，应使用 Bugzilla 查询页检查是否你发现的是已知并被报告的 Bug。（如果你发现的 Bug 同第 37 条已经知道的结果相同，你报告的话，就可能骚扰工程师，从而影响工程师修复 Bug 的效率。）</p><p>下一步,确认你发现的 Bug 是在最新的版本中所发生的。（工程师更倾向于对那些他们正在编写的代码中的严重问题感兴趣，而不是对以前那些废弃代码中数以百计的 Bug 进行修复。）</p><p>如果你已经在当前版本中发现了一个新的 Bug，请在 Bugzilla 中报告：</p><ol><li>从你的 Bugzilla 主页中,选择“Enter a new bug”。</li><li>选择你发现 Bug 的产品。</li><li>输入你的电子邮件地址、密码，然后按“Login”按钮。（如果你遗忘或还没有得到密码,让密码正文框空白，并且按 ” E-mail me a password “按钮，不久你将收到包含你的密码的电子邮件。）</li></ol><p>现在，填写那张出现的表格。以下说明表格中的所有含义：</p><h3 id="你在哪儿发现了-Bug？"><a href="#你在哪儿发现了-Bug？" class="headerlink" title="你在哪儿发现了 Bug？"></a>你在哪儿发现了 Bug？</h3><ul><li><strong>产品：在哪一个产品中你发现了 Bug？</strong><br>你在上一页已选择，所以你不能在这编辑</li><li><strong>版本：在产品的哪一个版本中你找到了 Bug？</strong><br>（如果有的话）</li><li><strong>产品单元：在产品的哪一个单元中存在 Bug？</strong><br>Bugzilla 在你输入一个 Bug 时，要求你必须选择一个产品单元。（如果你无法确定所列产品单元的意思，单击产品单元链接，那将链接到对每个产品单元的详细描述，这会帮助你作出最好选择。）</li><li><strong>OS：在哪一个操作系统（OS）中你找到了这个 Bug？（例如 Linux、Windows 2000、Mac OS 9。）</strong><br>如果你知道这个 Bug 会发生在所有 OS 中，请选择“All”，否则请选择相应的你发现 Bug 的 OS，如果列表中没有出现你的 OS，请选择“Other”。</li></ul><h3 id="这个-Bug-有多重要？"><a href="#这个-Bug-有多重要？" class="headerlink" title="这个 Bug 有多重要？"></a>这个 Bug 有多重要？</h3><ul><li><strong>严重性：这个 Bug 的破坏性有多大？</strong><br>这项值默认为“普通（normal）”。（要为一个特定的 Bug 界定最适当的严重性，单击严重性链接，你会看到每个严重程度的描述。）</li></ul><h3 id="谁将跟踪解决-Bug？"><a href="#谁将跟踪解决-Bug？" class="headerlink" title="谁将跟踪解决 Bug？"></a>谁将跟踪解决 Bug？</h3><ul><li><strong>指定给：哪一个工程师将负责修复这个 Bug？</strong><br>在你提交 Bug 报告后，Bugzilla 将自动把 Bug 分配给默认工程师；填写正文框将允许你用手工方式把它分配给其他工程师。（要查看每个产品单元的默认工程师列表,请单击产品单元链接。）</li><li><strong>Cc：还有哪些人将收到这个 Bug 修复更新的电子邮件?</strong><br>列出其他需要通过电子邮件收到这个 Bug 修复更新的人的完整的电子邮件地址。您可以输入任意多的电子邮件地址，用空格或逗号隔开，只要这些人有Bugzilla帐户。</li></ul><h3 id="关于这个Bug你还能告诉工程师什么？"><a href="#关于这个Bug你还能告诉工程师什么？" class="headerlink" title="关于这个Bug你还能告诉工程师什么？"></a>关于这个Bug你还能告诉工程师什么？</h3><ul><li><strong>摘要：你如何用大约60个或更少的字符来描述这个错误？</strong><br>一个好的摘要应该能快速而独特地识别一个错误报告。否则，工程师无法通过摘要来有意义地识别你的bug，而且在浏览10页的bug列表时，往往不会注意到你的bug报告。</li></ul><p>一个有用的摘要可能是 “PCMCIA安装在Tosh Tecra 780DVD w&#x2F; 3c589C上失败”。”软件失败 “或 “安装问题 “将是不好的摘要的例子。</p><ul><li><strong>描述：</strong></li></ul><p>请在这个领域提供一个详细的问题报告。你的错误的接收者很可能希望得到以下信息：<br><strong>概括描述：</strong>更详细地扩展总结。<br>在NSGetFactory中拖动选择任何页面都会使Mac的构建崩溃<br><strong>Bug复现的步骤</strong>：最小化的、易于操作的、会触发错误的步骤。包括任何特殊的设置步骤。</p><ol><li>查看任何网页。(我使用了默认的样本页。 resource:&#x2F;res&#x2F;samples&#x2F;test0.html)</li><li>拖动选择该页面。(具体来说，在按住鼠标按钮的同时，将鼠标指针从浏览器内容区域的任何一点向下拖动到浏览器内容区域的底部)</li></ol><p><strong>目前的结果</strong>：执行上述步骤后，应用程序做了什么。<br>该应用程序崩溃了。下面是MacsBug的堆栈爬行。<br><strong>期望的结果</strong>：如果不存在这个错误，应用程序应该做什么。</p><p>窗口应向下滚动。滚动的内容应该被选中。<br>(或者，至少，应用程序不应该崩溃）。<br><strong>时间及硬件平台</strong>：第一次出现这个Bug的时间及硬件平台。<br>在Mac OS 9.0上构建2002-03-15<br><strong>其它环境及硬件平台</strong>：Bug是否出现在其他硬件平台或浏览器上。</p><ul><li>也出现在<br>Mozilla (2002-03-15 build on Windows NT 4.0)</li><li>不出现在<br>Mozilla (2002-03-15 build on Red Hat Linux; feature not supported)<br>Internet Explorer 5.0 (在Windows NT 4.0上运行的版本)<br>Netscape Communicator 4.5 (在Mac OS 9.0上发布)</li></ul><p><strong>其它信息</strong>：任何其他调试信息。对应崩溃的错误：</p><ul><li><strong>Win32</strong>: 如果你收到华生医生的错误( Dr. Watson error), 请注意崩溃的类型，以及应用程序崩溃的模块。(例如：apprunner.exe中的访问违规)</li><li><strong>Mac OS</strong>: 如果你运行的是MacsBug，请提供一个how和一个sc的结果:</li></ul><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs maxima">*** MACSBUG STACK CRAWL OF CRASH (Mac OS)<br>Calling chain using A6/R1 links <br>Back chain  ISA  Caller <br><span class="hljs-number">00000000</span>    PPC  <span class="hljs-number">0BA85E74</span>   <br><span class="hljs-number">03AEFD80</span>    PPC  <span class="hljs-number">0B742248</span>   <br><span class="hljs-number">03AEFD30</span>    PPC  <span class="hljs-number">0B50FDDC</span>  NSGetFactory+<span class="hljs-number">027FC</span><br>PowerPC unmapped memory exception <span class="hljs-built_in">at</span> <span class="hljs-number">0B512BD0</span> NSGetFactory+<span class="hljs-number">055F0</span><br></code></pre></td></tr></table></figure><p>你已经完成了一篇不错的bug报告！</p><p>在确认你的输入无误后，请按“t提交（Commit）”按钮，现在你的Bug报告已经存入Bugzilla数据库。</p><h2 id="关于写好-Bug-报告的更多信息"><a href="#关于写好-Bug-报告的更多信息" class="headerlink" title="关于写好 Bug 报告的更多信息"></a>关于写好 Bug 报告的更多信息</h2><ol><li><strong>有用的Bug报告的一般提示</strong></li></ol><p><strong>使用一个明确的结构，这样你的错误报告就很容易被浏览。</strong>错误报告的用户通常需要立即访问您的错误的特定部分。如果您安装的Bugzilla支持Bugzilla帮助器，请使用它。</p><p><strong>避免可爱，如果它需要清晰度</strong>。没有人会在凌晨3点时因为你那有趣的错误标题而发笑，因为他们不记得如何找到你的错误。</p><p><strong>每个报告只有一个bug</strong>。完全不同的人通常会修复、验证和优先处理不同的bug。如果你在一份报告中混入了大量的bug，正确的人可能不会及时发现你的bug，或者根本不会发现。某些bug也比其他的更重要。当一个错误报告包含四个不同的问题时，不可能对其进行优先排序，这些问题的重要性各不相同。</p><p><strong>没有一个错误是不值得报告的</strong>。除非你正在阅读源代码，否则你无法看到实际的软件错误，如空指针 – 你会看到它们的可见表现，如应用程序最终崩溃时的故障。严重的软件问题可以通过表面上微不足道的方式表现出来。无论如何要把它们归档。</p><ol start="2"><li><strong>如何以及为什么要写好Bug总结？</strong></li></ol><p><strong>你想给错误接收者留下一个好的第一印象。</strong>就像《纽约时报》的标题引导读者从几十种选择中找到相关的文章一样，你的bug摘要是否会暗示你的bug报告值得从几十种或几百种选择中阅读？</p><p>相反，像安装问题这样的模糊的bug摘要会迫使审查安装bug的人浪费时间打开你的bug来确定它是否重要。</p><p><strong>你的bug经常会被它的摘要所搜索到</strong>。就像你用Google通过直觉搜索关键词来找到网页一样，其他人也会找到你的bug。描述性的bug摘要自然是富含关键词的，而且更容易找到。</p><p>例如，如果你搜索 “列表”、”终端 “或 “路径”，你会发现一个题为 “将图标从列表视图拖到gnome终端（gnome-terminal）不会粘贴路径 “的错误。这些搜索关键词不会发现一个题为 “拖动图标不能粘贴 “的错误。</p><p>问问自己，”有人会从这个摘要中理解我的错误吗？” 如果是这样，你已经写了一个很好的摘要。</p><p><strong>不要写像这样的标题:</strong></p><ol><li>“无法安装” - 为什么无法安装？当你尝试安装时会发生什么？</li><li>“严重的性能问题” - ……当你做什么的时候会出现这些问题？</li><li>“返回按钮不生效” - 生效过吗？还是根本没有？</li></ol><p><strong>好的错误标题：</strong></p><ol><li>“如果存在Mozilla M18包，1.0升级安装失败” - 解释了问题和背景。</li><li>“如果在Red Hat 6.2（RPM 3）系统上启动RPM 4安装程序会崩溃” - 解释了发生的情况和背景。</li></ol><p>（本文完）</p><p><strong>参考链接</strong></p><ul><li><a href="http://wallace.westminster.lib.co.us/bugzilla-custom/default-ticket-writing.html">Bug Writing Guidelines</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>翻译</category>
+      
+      <category>软件测试</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件测试</tag>
+      
+      <tag>翻译</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>用户登入测试用例设计</title>
+    <link href="/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html"/>
+    <url>/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="划分维度"><a href="#划分维度" class="headerlink" title="划分维度"></a>划分维度</h2><p>软件测试根据维度划分为两大需求：</p><ol><li>显式功能性需求</li><li>隐式功能性需求</li></ol><blockquote><p>显式功能性需求（Functional requirement）指的是软件本身需要实现的具体功能，对应的是隐式功能性需求(Non-functional requirement）</p></blockquote><p>隐式功能性需求主要涉三大方面:</p><ol><li>安全性</li><li>性能</li><li>兼容性</li></ol><p>因此，设计测试用例的时候可以根据上述划分来设计。</p><h2 id="显式功能性需求测试用例设计"><a href="#显式功能性需求测试用例设计" class="headerlink" title="显式功能性需求测试用例设计"></a>显式功能性需求测试用例设计</h2><ul><li>输入已注册的用户名和正确的密码，验证是否登录成功</li><li>输入已注册的用户名和不正确的密码，验证是否登录失败，并且提示信息正确</li><li>输入未注册的用户名和任意密码，验证是否登录失败，并且提示信息正确</li><li>用户名和密码两者都为空，验证是否登录失败，并且提示信息正确</li><li>用户名和密码两者之一为空，验证是否登录失败，并且提示信息正确</li><li>如果登录功能启用了验证码功能，在用户名和密码正确的前提下，输入正确的验证码，验证是否登录成功</li><li>如果登录功能启用了验证码功能，在用户名和密码正确的前提下，输入错误的验证码，验证是否登录失败，并且提示信息正确</li><li>用户名和密码是否大小写敏感</li><li>页面上的密码框是否加密显示</li><li>后台系统创建的用户第一次登录成功时，是否提示修改密码</li><li>忘记用户名和忘记密码的功能是否可用</li><li>前端页面是否根据设计要求限制用户名和密码长度</li><li>如果登录功能需要验证码，点击验证码图片是否可以更换验证码，更换后的验证码是否可用</li><li>刷新页面是否会刷新验证码</li><li>如果验证码具有时效性，需要分别验证时效内和时效外验证码的有效性</li><li>用户登录成功但是会话超时后，继续操作是否会重定向到用户登录界面</li><li>不同级别的用户，比如管理员用户和普通用户，登录系统后的权限是否正确</li><li>页面默认焦点是否定位在用户名的输入框中</li><li>快捷键 Tab 和 Enter 等，是否可以正常使用</li><li>网络延迟或者弱网或者切换网络或者断网时正常登录是否正常</li><li>是否支持第三方登录</li><li>用户名密码是否支持特殊字符和中文等</li><li>登录用户限制，比如同时支持10个用户登录，同时9个或者11个用户登录是否正常或者提示信息正确</li><li>未激活的用户是否可以登录</li><li>被停用的用户是否可以登录</li><li>登录的操作日志记录是否准确</li><li>登录有实效性是否控制正确</li><li>为空和输入空字符串时的校验是否一致</li><li>使用中文键盘输入字母时和使用英文键盘输入字母时传给后端的字符长度是否一致</li><li>输入账号密码时对键盘格式是否有要求比如数字键盘</li><li>密码一栏是否需要设置明暗码切换按钮</li><li>输入账号密码格式不规范时是否将按钮设置为不可点击</li><li>输入栏是否设置快速删除按钮</li><li>是否用到缓存</li><li>用户名和密码是否对空格敏感</li><li>密码是否有明文和暗文显示两种模式</li><li>更改密码后是否还能用之前的密码登录</li><li>一个用户是否具备多种登录方式(用户名，手机号，邮箱…)</li></ul><h2 id="隐式功能性需求测试用例设计（三大方面）"><a href="#隐式功能性需求测试用例设计（三大方面）" class="headerlink" title="隐式功能性需求测试用例设计（三大方面）"></a>隐式功能性需求测试用例设计（三大方面）</h2><h3 id="安全性测试用例设计"><a href="#安全性测试用例设计" class="headerlink" title="安全性测试用例设计"></a>安全性测试用例设计</h3><ul><li>用户密码后台存储是否加密</li><li>用户密码在网络传输过程中是否加密</li><li>密码是否具有有效期，密码有效期到期后，是否提示需要修改密码</li><li>不登录的情况下，在浏览器中直接输入登录后的 URL 地址，验证是否会重新定向到用户登录界面</li><li>密码输入框是否不支持复制和粘贴</li><li>密码输入框内输入的密码是否都可以在页面源码模式下被查看</li><li>用户名和密码的输入框中分别输入典型的“SQL 注入攻击”字符串，验证系统的返回页面</li><li>用户名和密码的输入框中分别输入典型的“XSS 跨站脚本攻击”字符串，验证系统行为是否被篡改</li><li>连续多次登录失败情况下，系统是否会阻止后续的尝试以应对暴力破解</li><li>同一用户在同一终端的多种浏览器上登录，验证登录功能的互斥性是否符合设计预期</li><li>同一用户先后在多台终端的浏览器上登录，验证登录是否具有互斥性</li><li>是否可以使用登录的API发送登录请求，并绕开验证码校验</li><li>是否可以用抓包工具抓到的请求包直接登录</li><li>截取到的token等信息，是否可以在其他终端上直接使用，绕开登录，token过期时间</li><li>是否可记住密码，记住的密码保存是否加密</li><li>记住密码是否有有效期，有有效期，过期之后是否会清空密码</li><li>GDPR相关的测试，用户登录过程中log中是否有个人信息明文打印</li><li>密码强弱性校验</li><li>登录成功后的session时效设置</li><li>安全性方面异地登录校验、更换设备登录校验、登录信息异常是否考虑账号冻结停用</li></ul><h3 id="性能压力测试用例设计"><a href="#性能压力测试用例设计" class="headerlink" title="性能压力测试用例设计"></a>性能压力测试用例设计</h3><ul><li>单用户登录的响应时间是否小于 3 秒</li><li>单用户登录时，后台请求数量是否过多</li><li>高并发场景下用户登录的响应时间是否小于 5 秒</li><li>高并发场景下服务端的监控指标是否符合预期</li><li>高集合点并发场景下，是否存在资源死锁和不合理的资源等待</li><li>长时间大量用户连续登录和登出，服务器端是否存在内存泄漏</li></ul><h3 id="兼容性测试用例设计"><a href="#兼容性测试用例设计" class="headerlink" title="兼容性测试用例设计"></a>兼容性测试用例设计</h3><ul><li>不同浏览器下，验证登录页面的显示以及功能正确性；</li><li>相同浏览器的不同版本下，验证登录页面的显示以及功能正确性；</li><li>不同移动设备终端的不同浏览器下，验证登录页面的显示以及功能正确性；</li><li>不同分辨率的界面下，验证登录页面的显示以及功能正确性。</li></ul><p>当然，除了上面罗列的测试用例外，还会存在一些遗漏的测试点没有覆盖到。大多数情况下，是不可能进行穷尽测试的。一般采用基于风险驱动的模式，有所侧重地选择测试范围和设计测试用例，以寻求缺陷风险和研发成本之间的平衡。</p><blockquote><p><strong>穷尽测试</strong>是指包含了软件输入值和前提条件所有可能组合的测试方法，完成穷尽测试的系统里应该不残留任何未知的软件缺陷。</p></blockquote><h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>每一个解决方案都是下一个问题的来源，要真正理解问题，那至少对自己的解决方案提出三个可能出错的地方。<br>                                                                             –《你的灯亮着吗》Donald C. Gaus</p><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件测试</category>
+      
+      <category>测试用例</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件测试</tag>
+      
+      <tag>测试用例</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>获取网站的 favicon 的方式</title>
+    <link href="/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html"/>
+    <url>/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>搭建网址导航时，需要获取网站的favicon.ico来增加辨识度和美观度。可以通过以下几种方式获取到网站的favicon.ico.</p><h2 id="域名拼接"><a href="#域名拼接" class="headerlink" title="域名拼接"></a>域名拼接</h2><p>找到网站的的默认路径，然后在地址后面拼接favicon.ico，就是favicon图标的地址了。 </p><p>例如:<a href="https://maojun.xyz/favicon.ico">https://maojun.xyz/favicon.ico</a></p><blockquote><p>注意：如果网站没有配置favicon.ico则会返回404错误</p></blockquote><h2 id="head元素定位"><a href="#head元素定位" class="headerlink" title="head元素定位"></a>head元素定位</h2><p>当域名后面拼接favicon.ico无法获取图标的，可以尝试通过通过首页的<code>head</code>标签中的<code>rel=&quot;shortcut icon&quot;</code>来找到对应的favicon.ico位置。</p><h2 id="在线获取ico工具"><a href="#在线获取ico工具" class="headerlink" title="在线获取ico工具"></a>在线获取ico工具</h2><p>通过Google的链接工具来找到favicon.ico</p><p><a href="https://www.google.com/s2/favicons?domain=maojun.xyz">https://www.google.com/s2/favicons?domain=maojun.xyz</a></p><blockquote><p>把domain后的域名修改成需要查找favicon.ico的网站</p></blockquote><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件</category>
+      
+      <category>网页工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件</tag>
+      
+      <tag>网页工具</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux下不解压直接修改压缩包内文件</title>
+    <link href="/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html"/>
+    <url>/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从 Windows 转到 Linux 桌面发行版后，就对在终端上完成一些工作产生痴迷。比如修改，复制，移动，删除文件等等。加上 Linux 服务器都不带 GUI 工具，能够直接使用命令行可以提高工作效率。</p><h2 id="修改压缩包文件"><a href="#修改压缩包文件" class="headerlink" title="修改压缩包文件"></a>修改压缩包文件</h2><p>VIM 可以直接打开压缩包，然后对想要的压缩文件进行编辑保存，一切都是vim的命令完成。修改后｀wp&#96;就保存退出了。</p><blockquote><p>注意，viｍ 要依赖zip工具来完成打开压缩包。</p></blockquote><h2 id="添加压缩包文件"><a href="#添加压缩包文件" class="headerlink" title="添加压缩包文件"></a>添加压缩包文件</h2><p>如果用图形工具则直接鼠标双击打开压缩包，把想要添加的内容拖拽到压缩包里即可。</p><p> 但是生产上的服务器没有图形工具，若下载本地再上传服务器会显得非常麻烦。可以针对不同的文件使用不同的命令。</p><ul><li><p>tar类型</p><p>添加新文件到压缩包：</p></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ tar rvf  /path/to/archive.tar  /path/to/newfile.txt<br></code></pre></td></tr></table></figure><p>​更新文件到压缩包：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ tar uvf /path/to/archive.tar  /path/to/newfile.txt<br></code></pre></td></tr></table></figure><ul><li>zip类型</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ zip -rv zipfile.zip newfile.txt newfile1.txt<br></code></pre></td></tr></table></figure><ul><li>jar类型</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ jar -uvf jarfile.jar newfile.txt<br></code></pre></td></tr></table></figure><h2 id="从压缩包删除文件"><a href="#从压缩包删除文件" class="headerlink" title="从压缩包删除文件"></a>从压缩包删除文件</h2><ul><li>tar类型</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">1$ tar -dvf archive.tar filename.txt<br></code></pre></td></tr></table></figure><ul><li>zip类型</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">1$ zip -d zipfile.zip filename.doc \*.txt<br></code></pre></td></tr></table></figure><ul><li>jar类型</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">1$ zip -d jarfile.jar file1.txt file2.txt<br></code></pre></td></tr></table></figure><p>（本文完）</p><p><strong>参考链接：</strong></p><ul><li><a href="http://www.lostsaloon.com/technology/how-to-add-files-to-archive-file-in-linux-also-delete-files">how to add new files into an archive file (tar, gz, zip) in linux (also delete files)</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+      <category>Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>终端下的 Emacs 命令使用</title>
+    <link href="/blog/2020/03/%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%9A%84emacs%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8.html"/>
+    <url>/blog/2020/03/%E7%BB%88%E7%AB%AF%E4%B8%8B%E7%9A%84emacs%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="默认快捷键"><a href="#默认快捷键" class="headerlink" title="默认快捷键"></a>默认快捷键</h2><p><code>Bash</code> 默认绑定的是 <code>Emacs</code> 的快捷键，可以修改成Vi(<code>set - o vi</code>)的操作方式。 学会使用<code>Bash</code>默认的快捷键来操作命令行可以提高效率。</p><p>更多信息可以查看帮助手册：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">$ man bash<br></code></pre></td></tr></table></figure><h2 id="启动编辑器"><a href="#启动编辑器" class="headerlink" title="启动编辑器"></a>启动编辑器</h2><p><code>Ctrl+x-Ctrl+x</code>打开一个编辑器</p><blockquote><p>根据 $FCEDIT 或 $EDITOR 环境变量打开对应的编辑器,若这两个变量都为空，则运行emacs</p></blockquote><h2 id="控制屏幕"><a href="#控制屏幕" class="headerlink" title="控制屏幕"></a>控制屏幕</h2><ul><li><code>Ctrl+l</code>清屏（同<code>clear</code>命令）</li><li><code>Ctrl+s</code>暂停屏幕输出</li><li><code>Ctrl+q</code>恢复<code>Ctrl+s</code>后的屏幕输出</li></ul><h2 id="控制光标"><a href="#控制光标" class="headerlink" title="控制光标"></a>控制光标</h2><ul><li><p><code>Ctrl+a</code>&#x2F;<code>Home</code>移动光标到行首</p></li><li><p><code>Ctrl+e</code>&#x2F;<code>End</code>移动光标到行尾</p></li><li><p><code>Ctrl+b</code>&#x2F;<code>左箭头&lt;-</code>向左移动一个字符</p></li><li><p><code>Ctrl+f</code>&#x2F;<code>右箭头-&gt;</code>向右移动一个字符</p></li><li><p><code>Ctrl+左箭头&lt;-</code>&#x2F;<code>Alt+b</code>&#x2F;<code>ESC-b</code>向左移动一个单词（以空格分隔)</p></li><li><p><code>Ctrl+右箭头-&gt;</code>&#x2F;<code>Alt+c</code>&#x2F;<code>ESC-f</code>向右移动一个单词（以空格分隔)</p></li></ul><blockquote><p><code>Alt+c</code>向右移动一个单词时会将单词首字母变大写</p></blockquote><h2 id="搜索历史"><a href="#搜索历史" class="headerlink" title="搜索历史"></a>搜索历史</h2><ul><li><code>上箭头</code>&#x2F;<code>下箭头</code>上箭头搜索上一条历史，下箭头相反</li><li><code>Ctrl+p</code>&#x2F;<code>Ctp+n</code>同上下箭头</li><li><code>Ctrl+r</code>搜索匹配的历史关键字</li><li><code>Ctrl+s</code>反向搜索</li><li><code>Ctrl+g</code>取消反向搜索</li></ul><h2 id="删除文本"><a href="#删除文本" class="headerlink" title="删除文本"></a>删除文本</h2><ul><li><code>Ctrl+d</code>&#x2F;<code>Delete</code> 删除光标所在的字符</li><li><code>Ctrl+k</code> 删除光标到行尾的的文本</li><li><code>Ctrl+x-Backspace</code> 删除光标到行首的文本</li></ul><h2 id="修改文本"><a href="#修改文本" class="headerlink" title="修改文本"></a>修改文本</h2><ul><li><code>Ctrl+t</code> 光标处字符和前一个字符交换位置</li><li><code>ESC+t</code>与光标前一各单词交换位置（以空格分隔）</li><li><code>ESC+u</code> 将光标所在处单词字符到词尾转大写</li><li><code>ESC+l</code> 将光标所在单词字符到词尾写</li><li><code>Esc+c</code> 将光标所在单词字符转大写，单词光标后字符到词尾转小写</li></ul><h2 id="控制进程"><a href="#控制进程" class="headerlink" title="控制进程"></a>控制进程</h2><ul><li><code>Ctrl+z</code> 挂起当前进程</li><li><code>Ctrl+c</code> 结束当前进程</li><li><code>Ctrl+d</code> 退出Bash（同<code>exit</code>命令）</li></ul><h2 id="Bang-命令"><a href="#Bang-命令" class="headerlink" title="Bang(!)命令"></a>Bang(!)命令</h2><ul><li><code>!!</code> 执行上一条命令</li><li><code>!top</code> 执行最近以top开头的命令</li><li><code>!top:p</code> 只显示但不执行最近以top开头的命令</li><li><code>!$</code> 将上个命令中最后一个单词作为新命令执行（同<code>Alt+.</code>但要回车执行)</li><li><code>!$:p</code> 显示<code>!$</code>要执行的命令</li><li><code>!*</code> 执行上个命令中首单词除外的命令</li><li><code>!*:p</code> 显示<code>!*</code>要执行的命令</li></ul><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+      <category>Shell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
       
     </tags>
     
