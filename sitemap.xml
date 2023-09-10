@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://maojun.xyz/blog/2018/10/%E5%8C%97%E4%BA%AC%E9%98%B3%E5%8F%B0%E5%B1%B1%E6%B8%B8%E8%AE%B0.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/2018/11/%E3%80%8A%E5%A5%87%E8%BF%B9%E7%94%B7%E5%AD%A9%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html</loc>
+    
+    <lastmod>2023-09-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html</loc>
     
     <lastmod>2023-09-10</lastmod>
@@ -350,6 +368,41 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E8%A7%82%E5%90%8E%E6%84%9F/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E6%B8%B8%E8%AE%B0/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -597,7 +650,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/Blog/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -611,14 +671,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
-    <lastmod>2023-09-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://maojun.xyz/blog/categories/Blog/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -632,14 +685,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%AE%B9%E5%99%A8/docker/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E5%AE%B9%E5%99%A8/docker/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -653,7 +706,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/Shell/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -661,6 +714,13 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/%E7%BF%BB%E8%AF%91/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/Shell/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -675,6 +735,20 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E5%BD%B1/</loc>
+    <lastmod>2023-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E6%B8%B8%E8%AE%B0/</loc>
     <lastmod>2023-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
