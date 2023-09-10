@@ -1,6 +1,6 @@
 ---
 title: Vifm命令行文件管理器入门
-date: 2023/09/28 00:00
+date: 2020/03/28 00:00
 updated: 2023/09/10 12:18
 categories:
 - [软件, Linux]
