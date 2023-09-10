@@ -18,23 +18,24 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="需求搭建网址导航时，需要获取网站的favicon.ico来增加辨识度和美观度。可以通过以下几种方式获取到网站的favicon.ico. 域名拼接找到网站的的默认路径，然后在地址后面拼接favicon.ico，就是favicon图标的地址了。  例如:https:&#x2F;&#x2F;maojun.xyz&#x2F;favicon.ico  注意：如果网站没有配置favicon.ico则会返回404错误  head元素定位当域">
+    <meta name="description" content="Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。 快捷键   快捷键 描述    ctrl-w hjkl 切换窗口   ctrl-w s 水平分隔   ctrl-w v 垂直分隔窗口   w 另个窗口预览当前光标文件   e 当前窗口预览光标文件   dd 删除文件   :trashes 查看垃圾箱目录   lstrash 查看垃圾桶文件   :restore 还">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取网站的 favicon 的方式">
-<meta property="og:url" content="https://maojun.xyz/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html">
+<meta property="og:title" content="Vifm命令行文件管理器入门">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html">
 <meta property="og:site_name" content="QA毛俊">
-<meta property="og:description" content="需求搭建网址导航时，需要获取网站的favicon.ico来增加辨识度和美观度。可以通过以下几种方式获取到网站的favicon.ico. 域名拼接找到网站的的默认路径，然后在地址后面拼接favicon.ico，就是favicon图标的地址了。  例如:https:&#x2F;&#x2F;maojun.xyz&#x2F;favicon.ico  注意：如果网站没有配置favicon.ico则会返回404错误  head元素定位当域">
+<meta property="og:description" content="Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。 快捷键   快捷键 描述    ctrl-w hjkl 切换窗口   ctrl-w s 水平分隔   ctrl-w v 垂直分隔窗口   w 另个窗口预览当前光标文件   e 当前窗口预览光标文件   dd 删除文件   :trashes 查看垃圾箱目录   lstrash 查看垃圾桶文件   :restore 还">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-28T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-09-10T12:10:00.000Z">
+<meta property="article:modified_time" content="2023-09-10T12:18:00.000Z">
 <meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="Linux">
 <meta property="article:tag" content="软件">
-<meta property="article:tag" content="网页工具">
+<meta property="article:tag" content="Vifm">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>获取网站的 favicon 的方式 - QA毛俊</title>
+  <title>Vifm命令行文件管理器入门 - QA毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="获取网站的 favicon 的方式"></span>
+            <span id="subtitle" data-typed-text="Vifm命令行文件管理器入门"></span>
           
         </div>
 
@@ -236,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          409 字
+          534 字
         
       </span>
     
@@ -247,7 +248,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -284,7 +285,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">获取网站的 favicon 的方式</h1>
+            <h1 id="seo-header">Vifm命令行文件管理器入门</h1>
             
               <p class="note note-info">
                 
@@ -297,19 +298,163 @@
             
               <div class="markdown-body">
                 
-                <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>搭建网址导航时，需要获取网站的favicon.ico来增加辨识度和美观度。可以通过以下几种方式获取到网站的favicon.ico.</p>
-<h2 id="域名拼接"><a href="#域名拼接" class="headerlink" title="域名拼接"></a>域名拼接</h2><p>找到网站的的默认路径，然后在地址后面拼接favicon.ico，就是favicon图标的地址了。 </p>
-<p>例如:<a href="https://maojun.xyz/favicon.ico">https://maojun.xyz/favicon.ico</a></p>
-<blockquote>
-<p>注意：如果网站没有配置favicon.ico则会返回404错误</p>
-</blockquote>
-<h2 id="head元素定位"><a href="#head元素定位" class="headerlink" title="head元素定位"></a>head元素定位</h2><p>当域名后面拼接favicon.ico无法获取图标的，可以尝试通过通过首页的<code>head</code>标签中的<code>rel=&quot;shortcut icon&quot;</code>来找到对应的favicon.ico位置。</p>
-<h2 id="在线获取ico工具"><a href="#在线获取ico工具" class="headerlink" title="在线获取ico工具"></a>在线获取ico工具</h2><p>通过Google的链接工具来找到favicon.ico</p>
-<p><a target="_blank" rel="noopener" href="https://www.google.com/s2/favicons?domain=maojun.xyz">https://www.google.com/s2/favicons?domain=maojun.xyz</a></p>
-<blockquote>
-<p>把domain后的域名修改成需要查找favicon.ico的网站</p>
-</blockquote>
-<p>（本文完）</p>
+                <p>Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<thead>
+<tr>
+<th align="left">快捷键</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ctrl-w hjkl</td>
+<td align="left">切换窗口</td>
+</tr>
+<tr>
+<td align="left">ctrl-w s</td>
+<td align="left">水平分隔</td>
+</tr>
+<tr>
+<td align="left">ctrl-w v</td>
+<td align="left">垂直分隔窗口</td>
+</tr>
+<tr>
+<td align="left">w</td>
+<td align="left">另个窗口预览当前光标文件</td>
+</tr>
+<tr>
+<td align="left">e</td>
+<td align="left">当前窗口预览光标文件</td>
+</tr>
+<tr>
+<td align="left">dd</td>
+<td align="left">删除文件</td>
+</tr>
+<tr>
+<td align="left">:trashes</td>
+<td align="left">查看垃圾箱目录</td>
+</tr>
+<tr>
+<td align="left">lstrash</td>
+<td align="left">查看垃圾桶文件</td>
+</tr>
+<tr>
+<td align="left">:restore</td>
+<td align="left">还原选中的垃圾箱文件</td>
+</tr>
+<tr>
+<td align="left">j,k</td>
+<td align="left">上下移动</td>
+</tr>
+<tr>
+<td align="left">h,l</td>
+<td align="left">在父&#x2F;子目录之间移动</td>
+</tr>
+<tr>
+<td align="left">gg</td>
+<td align="left">移动到文件列表首行</td>
+</tr>
+<tr>
+<td align="left">G</td>
+<td align="left">移动到文件列表末行</td>
+</tr>
+<tr>
+<td align="left">M</td>
+<td align="left">光标移动到窗口中间</td>
+</tr>
+<tr>
+<td align="left">H,L</td>
+<td align="left">光标移动到窗口首末文件</td>
+</tr>
+<tr>
+<td align="left">gh</td>
+<td align="left">返回上级目录</td>
+</tr>
+<tr>
+<td align="left">gl,Enter</td>
+<td align="left">进入目录或打开文件</td>
+</tr>
+<tr>
+<td align="left">dd,d</td>
+<td align="left">删除文件(放入回收站)</td>
+</tr>
+<tr>
+<td align="left">DD,D</td>
+<td align="left">删除文件(不放回收站)</td>
+</tr>
+<tr>
+<td align="left">yy,Y,y</td>
+<td align="left">复制文件</td>
+</tr>
+<tr>
+<td align="left">p</td>
+<td align="left">粘贴文件</td>
+</tr>
+<tr>
+<td align="left">u</td>
+<td align="left">撤销操作</td>
+</tr>
+<tr>
+<td align="left">Space,Tab</td>
+<td align="left">在两个panel之间切换</td>
+</tr>
+<tr>
+<td align="left">&#x2F;</td>
+<td align="left">查找文件</td>
+</tr>
+<tr>
+<td align="left">m[a-zA-Z0-9]</td>
+<td align="left">书签</td>
+</tr>
+<tr>
+<td align="left">‘[a-zA-Z0-9]</td>
+<td align="left">跳转到书签位置</td>
+</tr>
+<tr>
+<td align="left">za</td>
+<td align="left">切换隐藏文件显隐</td>
+</tr>
+<tr>
+<td align="left">zo</td>
+<td align="left">显示隐藏文件</td>
+</tr>
+<tr>
+<td align="left">zm</td>
+<td align="left">不显示隐藏文件</td>
+</tr>
+<tr>
+<td align="left">:fil regex</td>
+<td align="left">隐藏匹配regex的文件</td>
+</tr>
+<tr>
+<td align="left">zO</td>
+<td align="left">显示被:fil命令过滤的文件</td>
+</tr>
+<tr>
+<td align="left">zM</td>
+<td align="left">隐藏被:fil命令过滤的文件</td>
+</tr>
+<tr>
+<td align="left">cp</td>
+<td align="left">更改文件属性权限</td>
+</tr>
+<tr>
+<td align="left">cw</td>
+<td align="left">文件&#x2F;文件夹重命名</td>
+</tr>
+<tr>
+<td align="left">cW</td>
+<td align="left">文件&#x2F;文件夹重命名,不包含扩展名</td>
+</tr>
+<tr>
+<td align="left">ga</td>
+<td align="left">计算文件夹大小</td>
+</tr>
+<tr>
+<td align="left">!prog</td>
+<td align="left">执行系统命令, %f可以用来当前选中文件名</td>
+</tr>
+</tbody></table>
 
                 
               </div>
@@ -333,7 +478,7 @@
   
     <span>></span>
     
-  <a href="/blog/categories/%E8%BD%AF%E4%BB%B6/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/" class="category-chain-item">网页工具</a>
+  <a href="/blog/categories/%E8%BD%AF%E4%BB%B6/Linux/" class="category-chain-item">Linux</a>
   
   
 
@@ -350,9 +495,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/blog/tags/Linux/" class="print-no-link">#Linux</a>
+      
         <a href="/blog/tags/%E8%BD%AF%E4%BB%B6/" class="print-no-link">#软件</a>
       
-        <a href="/blog/tags/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/" class="print-no-link">#网页工具</a>
+        <a href="/blog/tags/Vifm/" class="print-no-link">#Vifm</a>
       
     </div>
   
@@ -364,8 +511,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>获取网站的 favicon 的方式</div>
-      <div>https://maojun.xyz/blog/2020/03/获取网站的favicon的方式.html</div>
+      <div>Vifm命令行文件管理器入门</div>
+      <div>https://maojun.xyz/blog/2020/03/vifm命令行文件管理器入门.html</div>
     </div>
     <div class="license-meta">
       
@@ -426,9 +573,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html" title="Vifm命令行文件管理器入门">
+                      <a href="/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html" title="用户登入测试用例设计">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Vifm命令行文件管理器入门</span>
+                        <span class="hidden-mobile">用户登入测试用例设计</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -436,8 +583,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html" title="Linux下不解压直接修改压缩包内文件">
-                        <span class="hidden-mobile">Linux下不解压直接修改压缩包内文件</span>
+                      <a href="/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html" title="获取网站的 favicon 的方式">
+                        <span class="hidden-mobile">获取网站的 favicon 的方式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
