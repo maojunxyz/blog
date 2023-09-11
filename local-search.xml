@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>修复 Ubuntu 下 “门” 或 “复” 字显示错误</title>
+    <link href="/blog/2023/09/%E4%BF%AE%E5%A4%8D%20Ubuntu%20%E4%B8%8B%E9%97%A8%E5%92%8C%E5%A4%8D%E5%AD%97%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF.html"/>
+    <url>/blog/2023/09/%E4%BF%AE%E5%A4%8D%20Ubuntu%20%E4%B8%8B%E9%97%A8%E5%92%8C%E5%A4%8D%E5%AD%97%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在使用 Ubuntu 系统时，当输入  “门”或“复”字时，显示的文字有些别扭。认为是 Linux 字体原因显示的不正常，后来才发现这是日文汉字，可以通过修改配置文件显示为中文汉字。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Ubuntu 在当前所使用的字体中不包含某个字符时，会按照顺序从一系列候选字体中选择包含字符的字体。候选列表配置文件 ：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">/etc/fonts/conf.d/64-language-selector-prefer.conf<br></code></pre></td></tr></table></figure><p> 分为：</p><ul><li>衬线字体</li><li>非衬线字体</li><li>等宽字体</li></ul><p>Ubuntu 在安装了中文语言的情况下将 <a href="https://www.google.com/get/noto">Noto</a> 系列字体添加到字体候选</p><p>例如衬线字体优先度如下：</p><ol><li>Noto Sans CJK JP</li><li>Noto Sans CJK KR</li><li>Noto Sans CJK SC</li><li>Noto Sans CJK TC</li><li>Noto Sans CJK HK</li></ol><p>这样的配置导致日文字体包含的字符以日文字体显示。例如 “门”或“复”字，日文中存在这个汉字所以就会用日文字体显示。</p><p>其他在日文中不存在的汉字，或在 <code>Noto Sanas CJK JP</code> 和 <code>Noto Sans CJK SC</code> 字型相同的汉字则显示正常。</p><h2 id="修复"><a href="#修复" class="headerlink" title="修复"></a>修复</h2><p>修改配置文件 :</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">vim /etc/fonts/conf.d/64-language-selector-prefer.conf<br></code></pre></td></tr></table></figure><p>将中文字体的优先度提高( 带有<code>SC</code>的提到第一位 )：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">fontconfig</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;fonts.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">fontconfig</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>sans-serif<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK TC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK HK<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK JP<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK KR<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Lohit Devanagari<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>serif<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK TC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK JP<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK KR<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Lohit Devanagari<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>monospace<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans Mono CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans Mono CJK TC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans Mono CJK HK<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans Mono CJK JP<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans Mono CJK KR<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">prefer</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">alias</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">fontconfig</span>&gt;</span><br></code></pre></td></tr></table></figure><p>更新字体缓存：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">fc-cache -fv<br></code></pre></td></tr></table></figure><p>执行以下命令检查，如果出现 <code>NotoSansCJK-Regular.ttc: &quot;Noto Sans CJK SC&quot; &quot;Regular&quot;</code> 则表示设置成功：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">fc-match -s | grep <span class="hljs-string">&#x27;Noto Sans CJK&#x27;</span><br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>参考链接：</strong></p><ul><li><a href="https://bediverezero.github.io/ubuntu/2021/06/04/ubunt-fonts.html">Ubuntu 下 “门” 和 “复” 显示错误</a></li><li><a href="https://blog.csdn.net/yi0322/article/details/113699524">Ubuntu Linux ‘门’ ‘复’ 显示不标准</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+      <category>Ubuntu</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>操作系统</tag>
+      
+      <tag>Ubuntu</tag>
+      
+      <tag>字体</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《我的家里空无一物》观后感</title>
     <link href="/blog/2023/09/%E3%80%8A%E6%88%91%E7%9A%84%E5%AE%B6%E9%87%8C%E7%A9%BA%E6%97%A0%E4%B8%80%E7%89%A9%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html"/>
     <url>/blog/2023/09/%E3%80%8A%E6%88%91%E7%9A%84%E5%AE%B6%E9%87%8C%E7%A9%BA%E6%97%A0%E4%B8%80%E7%89%A9%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html</url>
@@ -245,9 +278,9 @@
     
     <tags>
       
-      <tag>Ubuntu</tag>
-      
       <tag>操作系统</tag>
+      
+      <tag>Ubuntu</tag>
       
     </tags>
     
