@@ -407,9 +407,12 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener"><span>网址导航</span></a>
+	<a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i></a>
+	<i class="iconfont icon-copyright"></i>
+	<a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojunxyz</span></a>
+	引擎：<a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+    主题：<a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -976,61 +979,6 @@ page404:
   # Delay in redirecting to home page (milliseconds)
   redirect_delay: 5000
 
-
-#---------------------------
-# 友链页
-# Links Page
-#---------------------------
-links:
-  enable: true
-  banner_img: /img/default.png
-  banner_img_height: 60
-  banner_mask_alpha: 0.3
-  # 友链的成员项
-  # Member item of page
-  items:
-    - {
-      title: "Thoughtworks洞见",
-      intro: "敏捷实践、软件测试、领域驱动设计、微服务、中台、女性、DevOps",
-      link: "https://insights.thoughtworks.cn/",
-      avatar: "https://insights.thoughtworks.cn/wp-content/uploads/2021/07/cropped-tw-insights-new-logo-32x32.png"
-    }
-    - {
-      title: "质量三人行",
-      intro: "一款来自Thoughtworks（思特沃克）的播客节目，关注软件行业测试领域的现状和未来、质量和测试人员的职业发展",
-      link: "https://qapodcast.typlog.io/",
-      avatar: "https://i.typlog.com/qapodcast/8343606880_319296.ico"
-    }
-    - {
-      title: "软件测试与质量沉思",
-      intro: "刘冉的思辨悟，软件测试，软件质量",
-      link: "http://liuranthinking.com/",
-      avatar: "https://liuranthinking.com/usr/themes/default/img/favicon.ico"
-    }
-    - {
-      title: "BY林子",
-      intro: "关注质量，不止测试",
-      link: "https://www.bylinzi.com/",
-      avatar: "https://www.bylinzi.com/wp-content/uploads/2022/04/cropped-4511649315050_.pic_-32x32.jpg"
-    }
-    - {
-      title: "QualityFocus",
-      intro: "关注软件质量",
-      link: "https://qualityfocus.club/",
-      avatar: "https://i.typlog.com/qualityfocus/8385665793_883414.ico"
-    }
-    - {
-      title: "TesterHome",
-      intro: "测试之家",
-      link: "https://testerhome.com/",
-      avatar: "https://testerhome.com/favicon.ico"
-    }
-    - {
-      title: "Hacker News",
-      intro: "Hacker News",
-      link: "https://news.ycombinator.com/",
-      avatar: "https://news.ycombinator.com/favicon.ico"
-    }
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
