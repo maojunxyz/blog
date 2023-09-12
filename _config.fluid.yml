@@ -397,7 +397,13 @@ open_graph:
   google_plus:
   fb_admins:
   fb_app_id:
-
+  
+#---------------------------
+# 友链页
+# Links Page
+#---------------------------
+links:
+  enable: false
 
 #---------------------------
 # 页脚
