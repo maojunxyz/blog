@@ -873,6 +873,13 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2023-09-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E8%A7%86%E5%89%A7/%E5%9B%BD%E4%BA%A7%E5%89%A7/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -902,13 +909,6 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/Windows/%E8%BE%93%E5%85%A5%E6%B3%95/Rime/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2023-09-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
