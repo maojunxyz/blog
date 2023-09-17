@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-11T12:19:00.000Z</updated>
+  <updated>2023-09-17T19:22:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《雀刀门传奇》观后感</title>
+    <link href="https://maojun.xyz/blog/2023/09/%E3%80%8A%E9%9B%80%E5%88%80%E9%97%A8%E4%BC%A0%E5%A5%87%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html"/>
+    <id>https://maojun.xyz/blog/2023/09/%E3%80%8A%E9%9B%80%E5%88%80%E9%97%A8%E4%BC%A0%E5%A5%87%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html</id>
+    <published>2023-09-17T19:22:00.000Z</published>
+    <updated>2023-09-17T19:22:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;导演: &lt;a href=&quot;https://movie.douban.com/celebrity/1450668/&quot;&gt;唐铁军&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="影视剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/"/>
+    
+    <category term="电视剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+    <category term="国产剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E8%A7%86%E5%89%A7/%E5%9B%BD%E4%BA%A7%E5%89%A7/"/>
+    
+    
+    <category term="影视剧" scheme="https://maojun.xyz/blog/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/"/>
+    
+    <category term="观后感" scheme="https://maojun.xyz/blog/tags/%E8%A7%82%E5%90%8E%E6%84%9F/"/>
+    
+    <category term="电视剧" scheme="https://maojun.xyz/blog/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
+    
+    <category term="国产剧" scheme="https://maojun.xyz/blog/tags/%E5%9B%BD%E4%BA%A7%E5%89%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>修复 Ubuntu 下 “门” 或 “复” 字显示错误</title>
@@ -606,35 +641,6 @@
     <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
     
     <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Typecho 默认主题功能增强</title>
-    <link href="https://maojun.xyz/blog/2020/03/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.html"/>
-    <id>https://maojun.xyz/blog/2020/03/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.html</id>
-    <published>2020-03-01T00:00:00.000Z</published>
-    <updated>2023-09-05T07:36:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;p&gt;在Typecho默认主题优化&lt;sup id=&quot;fnref:1&quot; class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn:1&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Blog" scheme="https://maojun.xyz/blog/categories/Blog/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/categories/Blog/Typecho/"/>
-    
-    
-    <category term="博客平台" scheme="https://maojun.xyz/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="Typecho" scheme="https://maojun.xyz/blog/tags/Typecho/"/>
     
   </entry>
   
