@@ -3,7 +3,7 @@ title: Typecho 默认主题优化
 date: 2020/02/24 00:00
 updated: 2023/08/27 09:47
 categories:
-- [Blog, Typecho]
+- [系统, 自托管, 博客]
 tags:
 - 博客平台
 - Typecho

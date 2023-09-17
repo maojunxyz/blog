@@ -3,7 +3,7 @@ title: Highlight This!实操手册
 date: 2023/08/13 15:09
 updated: 2023/08/13 15:09
 categories:
-- [软件, chrome]
+- [系统, 浏览器, 扩展插件]
 tags:
 - Chrome
 - Extension

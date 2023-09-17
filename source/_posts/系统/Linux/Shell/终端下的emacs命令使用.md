@@ -3,7 +3,7 @@ title: 终端下的 Emacs 命令使用
 date: 2020/03/24 00:00
 updated: 2023/09/10 11:48
 categories:
-- [系统, Linux, Shell]
+- [系统, Linux, 快捷jmj]
 tags:
 - Linux
 - Shell

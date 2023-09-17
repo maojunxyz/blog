@@ -3,7 +3,7 @@ title: 配置 docker 镜像加速
 date: 2020/02/26 00:00
 updated: 2023/09/02 19:29
 categories:
-- [容器, docker]
+- [系统, 自托管, 云原生]
 tags:
 - 容器
 - docker

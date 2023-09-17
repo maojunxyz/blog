@@ -3,7 +3,7 @@ title: 使用 docker 搭建 nextcloud 网盘
 date: 2020/02/25 00:00
 updated: 2023/09/01 07:02
 categories:
-- [对象存储, Nextcloud]
+- [系统, 自托管, 网盘]
 tags:
 - 对象存储
 - Nextcloud

@@ -3,7 +3,7 @@ title: 使用 backblaze-B2 搭建自己的图床
 date: 2020/02/21 00:00
 updated: 2020/02/21 00:00
 categories:
-- [对象存储, backblaze-B2]
+- [系统, 自托管, 对象存储]
 tags:
 - 对象存储
 - backblaze

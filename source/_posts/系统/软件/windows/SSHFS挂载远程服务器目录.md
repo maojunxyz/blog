@@ -3,7 +3,7 @@ title: SSHFS 挂载远程服务器目录
 date: 2020/03/06 18:06
 updated: 2023/09/09 14:54
 categories:
-- [Windows, SSHFS]
+- [系统, Windows, 网盘]
 tags:
 - Windows
 - SSHFS

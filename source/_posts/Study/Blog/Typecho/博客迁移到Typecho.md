@@ -3,7 +3,7 @@ title: 博客迁移到 Typecho
 date: 2020/02/20 00:00
 updated: 2023/08/22 12:48
 categories:
-- [Blog, Typecho]
+- [系统, 自托管, 博客]
 tags:
 - 博客平台
 - Typecho

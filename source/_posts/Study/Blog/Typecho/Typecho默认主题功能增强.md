@@ -3,7 +3,7 @@ title: Typecho 默认主题功能增强
 date: 2020/03/01 00:00
 updated: 2023/09/05 7:36
 categories:
-- [Blog, Typecho]
+- [系统, 自托管, 博客]
 tags:
 - 博客平台
 - Typecho

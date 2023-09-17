@@ -3,7 +3,7 @@ title: 通过跳板机连接 SSH 服务器
 date: 2020/03/04 00:00
 updated: 2023/09/07 7:40
 categories:
-- [系统, Linux, Shell]
+- [系统, Linux, SSH工具]
 tags:
 - Linux
 - Shell

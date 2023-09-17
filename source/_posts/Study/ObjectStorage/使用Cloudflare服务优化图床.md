@@ -3,7 +3,7 @@ title: 使用 Cloudflare 服务优化图床
 date: 2020/02/22 00:00
 updated: 2023/08/26 13:46
 categories:
-- [对象存储, Cloudflare]
+- [系统, 自托管, 对象存储]
 tags:
 - 对象存储
 - Cloudflare

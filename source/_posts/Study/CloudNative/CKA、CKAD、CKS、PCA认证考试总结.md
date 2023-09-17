@@ -3,10 +3,9 @@ title: CKA、CKAD、CKS、PCA认证考试总结
 date: 2023/08/20 18:44
 updated: 2023/08/20 18:44
 categories:
-- [CloudNative, Kubernates]
-- [CloudNative, Prometheuss]
+- [系统, 自托管, 云原生]
 tags:
-- CloudNative
+- 云原生
 - Kubernates
 - Prometheus 
 ---
