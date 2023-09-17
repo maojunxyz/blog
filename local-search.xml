@@ -83,6 +83,8 @@
       
       <category>影视剧</category>
       
+      <category>电视剧</category>
+      
       <category>日剧</category>
       
     </categories>
@@ -112,7 +114,9 @@
     
     <categories>
       
-      <category>Shell</category>
+      <category>系统</category>
+      
+      <category>Linux</category>
       
       <category>日志</category>
       
@@ -178,18 +182,18 @@
     
     <categories>
       
-      <category>CloudNative</category>
+      <category>系统</category>
       
-      <category>Kubernates</category>
+      <category>自托管</category>
       
-      <category>Prometheuss</category>
+      <category>云原生</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>CloudNative</tag>
+      <tag>云原生</tag>
       
       <tag>Kubernates</tag>
       
@@ -211,9 +215,11 @@
     
     <categories>
       
-      <category>软件</category>
+      <category>系统</category>
       
-      <category>chrome</category>
+      <category>浏览器</category>
+      
+      <category>扩展插件</category>
       
     </categories>
     
@@ -240,11 +246,13 @@
     
     <categories>
       
+      <category>系统</category>
+      
       <category>Windows</category>
       
-      <category>输入法</category>
+      <category>软件</category>
       
-      <category>Rime</category>
+      <category>输入法</category>
       
     </categories>
     
@@ -272,6 +280,8 @@
     
     
     <categories>
+      
+      <category>系统</category>
       
       <category>数据类型</category>
       
@@ -368,9 +378,9 @@
     
     <categories>
       
-      <category>翻译</category>
-      
       <category>软件测试</category>
+      
+      <category>翻译</category>
       
     </categories>
     
@@ -426,9 +436,11 @@
     
     <categories>
       
-      <category>软件</category>
+      <category>系统</category>
       
       <category>Linux</category>
+      
+      <category>文件管理器</category>
       
     </categories>
     
@@ -457,9 +469,11 @@
     
     <categories>
       
-      <category>软件</category>
+      <category>系统</category>
       
-      <category>网页工具</category>
+      <category>浏览器</category>
+      
+      <category>在线工具</category>
       
     </categories>
     
@@ -490,7 +504,7 @@
       
       <category>Linux</category>
       
-      <category>Shell</category>
+      <category>压缩工具</category>
       
     </categories>
     
@@ -521,7 +535,7 @@
       
       <category>Linux</category>
       
-      <category>Shell</category>
+      <category>快捷jmj</category>
       
     </categories>
     
@@ -548,9 +562,11 @@
     
     <categories>
       
+      <category>系统</category>
+      
       <category>Windows</category>
       
-      <category>SSHFS</category>
+      <category>网盘</category>
       
     </categories>
     
@@ -581,7 +597,7 @@
       
       <category>Linux</category>
       
-      <category>Shell</category>
+      <category>SSH工具</category>
       
     </categories>
     
@@ -612,7 +628,7 @@
       
       <category>Linux</category>
       
-      <category>Shell</category>
+      <category>SSH工具</category>
       
     </categories>
     
@@ -639,9 +655,11 @@
     
     <categories>
       
-      <category>Blog</category>
+      <category>系统</category>
       
-      <category>Typecho</category>
+      <category>自托管</category>
+      
+      <category>博客</category>
       
     </categories>
     
@@ -668,9 +686,11 @@
     
     <categories>
       
-      <category>Blog</category>
+      <category>系统</category>
       
-      <category>Typecho</category>
+      <category>自托管</category>
+      
+      <category>博客</category>
       
     </categories>
     
@@ -697,9 +717,11 @@
     
     <categories>
       
-      <category>容器</category>
+      <category>系统</category>
       
-      <category>docker</category>
+      <category>自托管</category>
+      
+      <category>云原生</category>
       
     </categories>
     
@@ -726,9 +748,11 @@
     
     <categories>
       
-      <category>对象存储</category>
+      <category>系统</category>
       
-      <category>Nextcloud</category>
+      <category>自托管</category>
+      
+      <category>网盘</category>
       
     </categories>
     
@@ -755,9 +779,11 @@
     
     <categories>
       
-      <category>Blog</category>
+      <category>系统</category>
       
-      <category>Typecho</category>
+      <category>自托管</category>
+      
+      <category>博客</category>
       
     </categories>
     
@@ -784,9 +810,11 @@
     
     <categories>
       
-      <category>对象存储</category>
+      <category>系统</category>
       
-      <category>Cloudflare</category>
+      <category>自托管</category>
+      
+      <category>对象存储</category>
       
     </categories>
     
@@ -813,9 +841,11 @@
     
     <categories>
       
-      <category>对象存储</category>
+      <category>系统</category>
       
-      <category>backblaze-B2</category>
+      <category>自托管</category>
+      
+      <category>对象存储</category>
       
     </categories>
     
@@ -842,9 +872,11 @@
     
     <categories>
       
-      <category>Blog</category>
+      <category>系统</category>
       
-      <category>Typecho</category>
+      <category>自托管</category>
+      
+      <category>博客</category>
       
     </categories>
     
