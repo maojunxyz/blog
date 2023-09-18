@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-17T19:22:00.000Z</updated>
+  <updated>2023-09-19T06:45:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>京东营销类电话和短信关闭通道</title>
+    <link href="https://maojun.xyz/blog/2023/09/%E4%BA%AC%E4%B8%9C%E8%90%A5%E9%94%80%E7%B1%BB%E7%94%B5%E8%AF%9D%E5%92%8C%E7%9F%AD%E4%BF%A1%E5%85%B3%E9%97%AD%E9%80%9A%E9%81%93.html"/>
+    <id>https://maojun.xyz/blog/2023/09/%E4%BA%AC%E4%B8%9C%E8%90%A5%E9%94%80%E7%B1%BB%E7%94%B5%E8%AF%9D%E5%92%8C%E7%9F%AD%E4%BF%A1%E5%85%B3%E9%97%AD%E9%80%9A%E9%81%93.html</id>
+    <published>2023-09-19T06:45:00.000Z</published>
+    <updated>2023-09-19T06:45:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;关闭通道&quot;&gt;&lt;a href=&quot;#关闭通道&quot; class=&quot;headerlink&quot; title=&quot;关闭通道&quot;&gt;&lt;/a&gt;关闭通道&lt;/h2&gt;&lt;p&gt;打开京东 - 我的 - 设置 &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;营销类电话管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;隐私设置 -</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="技巧" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="技巧" scheme="https://maojun.xyz/blog/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>《雀刀门传奇》观后感</title>
@@ -611,37 +642,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;SSH上传下载&quot;&gt;&lt;a href=&quot;#SSH上传下载&quot; class=&quot;headerlink&quot; title=&quot;SSH上传下载&quot;&gt;&lt;/a&gt;SSH上传下载&lt;/h2&gt;&lt;p&gt;通过 &lt;code&gt;SSH&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
-    
-    <category term="SSH工具" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/SSH%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过跳板机连接 SSH 服务器</title>
-    <link href="https://maojun.xyz/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html"/>
-    <id>https://maojun.xyz/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html</id>
-    <published>2020-03-04T00:00:00.000Z</published>
-    <updated>2023-09-07T07:40:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SSH无法直连&quot;&gt;&lt;a href=&quot;#SSH无法直连&quot; class=&quot;headerlink&quot;</summary>
         
       
     
