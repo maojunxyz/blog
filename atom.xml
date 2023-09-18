@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-19T06:45:00.000Z</updated>
+  <updated>2023-09-19T06:52:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在线查询打印个人社会保险缴费证明</title>
+    <link href="https://maojun.xyz/blog/2023/09/%E5%9C%A8%E7%BA%BF%E6%9F%A5%E8%AF%A2%E6%89%93%E5%8D%B0%E4%B8%AA%E4%BA%BA%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%A9%E7%BC%B4%E8%B4%B9%E8%AF%81%E6%98%8E.html"/>
+    <id>https://maojun.xyz/blog/2023/09/%E5%9C%A8%E7%BA%BF%E6%9F%A5%E8%AF%A2%E6%89%93%E5%8D%B0%E4%B8%AA%E4%BA%BA%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%A9%E7%BC%B4%E8%B4%B9%E8%AF%81%E6%98%8E.html</id>
+    <published>2023-09-19T06:52:00.000Z</published>
+    <updated>2023-09-19T06:52:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;办理步骤&quot;&gt;&lt;a href=&quot;#办理步骤&quot; class=&quot;headerlink&quot; title=&quot;办理步骤&quot;&gt;&lt;/a&gt;办理步骤&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;登录“北京市人力资源和社会保障局”网站（&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="技巧" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="技巧" scheme="https://maojun.xyz/blog/tags/%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>京东营销类电话和短信关闭通道</title>
@@ -626,37 +654,6 @@
     <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
     
     <category term="SSHFS" scheme="https://maojun.xyz/blog/tags/SSHFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSH 使用 lrzsz 进行上传和下载</title>
-    <link href="https://maojun.xyz/blog/2020/03/SSH%E4%BD%BF%E7%94%A8lrzsz%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD.html"/>
-    <id>https://maojun.xyz/blog/2020/03/SSH%E4%BD%BF%E7%94%A8lrzsz%E8%BF%9B%E8%A1%8C%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD.html</id>
-    <published>2020-03-05T00:00:00.000Z</published>
-    <updated>2023-09-08T05:43:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SSH上传下载&quot;&gt;&lt;a href=&quot;#SSH上传下载&quot; class=&quot;headerlink&quot; title=&quot;SSH上传下载&quot;&gt;&lt;/a&gt;SSH上传下载&lt;/h2&gt;&lt;p&gt;通过 &lt;code&gt;SSH&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
-    
-    <category term="SSH工具" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/SSH%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
     
   </entry>
   
