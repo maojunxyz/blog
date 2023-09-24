@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Jmeter安装和介绍</title>
+    <link href="/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html"/>
+    <url>/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Apache JMeter是一个Apache项目，可以用作负载测试工具，用于分析和测量各种服务的性能，可用于 Web 应用程序的接口测试、自动化测试、性能测试。</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Jmeter 依赖 Java运行时，所以需要在本机安装 JRE 或 JDK。</p><h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p>首先下载 Jmeter，然后解压zip包。</p><ul><li>Windows<ul><li>进入解压后文件夹 \bin 文件夹中，双击  jmeter.ba t，启动图形界面GUI。</li></ul></li></ul><ul><li>Unix&#x2F;Linux<ul><li>进入解压后文件夹 \bin 的命令行，执行.&#x2F;jmeter.sh 命令启动图形界面GUI。</li></ul></li></ul><blockquote><p> 注意：不需要配置<strong>JMETER_HOME环境变量</strong>，如果配置了，那么你的电脑就有且仅能运行一个Jmeter。其他版本的 Jmeter可能直接闪退，因为不配置时会读取 Jmeter当前目录下的环境变量，不同 Jmeter 版本下的环境变量会有所不同。</p></blockquote><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><ul><li>bin  启动 配置文件</li><li>lib   jar包  工具自身jar， 以及第三方jar<ul><li>ext   第三方插件管理</li></ul></li><li>docs   文档  用于jmeter进行二次开发调用的api  接口文档</li><li>printable_docs   离线帮助文档</li><li>extras  扩展   CICD 性能测试持续集成</li></ul><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul><li>设置语言：<ul><li>以.properties结尾的文件，都是jmeter的<strong>属性</strong>配置文件</li><li>属性配置文件   jmeter.properties</li></ul></li></ul><blockquote><p>注意：修改<strong>属性配置文件</strong>中的信息，一定要重启才能生效</p></blockquote><p>在图形界面的options  &gt; choose language 修改语言后会临时切换gui界面语言，一旦关闭gui，就会被还原。如果要永久生效，需要修改properties文件。</p><h3 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h3><ul><li>测试计划<ul><li>元件<ul><li>线程组： 接口、自动化测试时，基本不会去改动<ul><li>性能测试，这个是用于<strong>进行性能场景设计</strong>的</li><li>线程组：进行性能场景设计 </li><li>setup线程组<ul><li>前置</li></ul></li><li>teardown线程组<ul><li>后置</li></ul></li></ul></li><li>配置元件<ul><li>优先级是最高的</li><li><strong>用户定义变量</strong></li></ul></li><li>监听器<ul><li>性能结果进行监控，展示结果数据</li><li>不同的元件，是从不同的角度，展示结果数据</li></ul></li><li>取样器： 根据不同的协议，使用不同的取样器<strong>编写脚本</strong></li><li>逻辑控制</li><li>前置<ul><li><strong>用户参数</strong></li></ul></li><li>后置<ul><li>对 取样器进行控制</li></ul></li><li>定时器</li></ul></li></ul></li></ul><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件测试</category>
+      
+      <category>测试工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件测试</tag>
+      
+      <tag>测试工具</tag>
+      
+      <tag>Jmeter</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>浅谈性能测试</title>
     <link href="/blog/2023/09/%E6%B5%85%E8%B0%88%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.html"/>
     <url>/blog/2023/09/%E6%B5%85%E8%B0%88%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95.html</url>
