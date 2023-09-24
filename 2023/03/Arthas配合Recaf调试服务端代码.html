@@ -21,7 +21,7 @@
     <meta name="description" content="安装Arthas从官方网站下载Arthas压缩包，上传到要对应的服务部署服务器上并解压。 123456# 新建arthas目录mkdir &#x2F;opt&#x2F;arthas# 进入目录cd &#x2F;opt&#x2F;arthas# 上传arthas压缩包后，进行解压unzip arthas*.zip  解压后的目录文件：  到此，  arthas就安装和部署完成了。 RecafRecaf是一个Jar包字节码查看工具，下载地址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Arthas配合Recaf调试服务端代码">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/09/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/03/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html">
 <meta property="og:site_name" content="QA毛俊">
 <meta property="og:description" content="安装Arthas从官方网站下载Arthas压缩包，上传到要对应的服务部署服务器上并解压。 123456# 新建arthas目录mkdir &#x2F;opt&#x2F;arthas# 进入目录cd &#x2F;opt&#x2F;arthas# 上传arthas压缩包后，进行解压unzip arthas*.zip  解压后的目录文件：  到此，  arthas就安装和部署完成了。 RecafRecaf是一个Jar包字节码查看工具，下载地址">
 <meta property="og:locale" content="zh_CN">
@@ -44,7 +44,7 @@
 <meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230924230252745.png">
 <meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230924230327452.png">
 <meta property="og:image" content="https://maojun.xyz/blog/assets/image-20230924230355671.png">
-<meta property="article:published_time" content="2023-09-24T21:56:00.000Z">
+<meta property="article:published_time" content="2023-03-10T00:00:00.000Z">
 <meta property="article:modified_time" content="2023-09-24T21:56:00.000Z">
 <meta property="article:author" content="毛 俊">
 <meta property="article:tag" content="软件测试">
@@ -261,8 +261,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-24 21:56" pubdate>
-          2023年9月24日 晚上
+        <time datetime="2023-03-10 00:00" pubdate>
+          2023年3月10日 凌晨
         </time>
       </span>
     
@@ -323,6 +323,14 @@
           <article class="post-content mx-auto">
             <h1 id="seo-header">Arthas配合Recaf调试服务端代码</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2023年9月24日 晚上
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -338,7 +346,7 @@
 <ul>
 <li>双击打开Recaf，或在命令行执行：</li>
 </ul>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">java jar -jar recaf<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">java jar -jar recaf<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>在启动的图形界面中，点击菜单栏的 <code>File - Load</code> ，加载需要反编译的 SDK Jar包。</li>
@@ -495,7 +503,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Arthas配合Recaf调试服务端代码</div>
-      <div>https://maojun.xyz/blog/2023/09/Arthas配合Recaf调试服务端代码.html</div>
+      <div>https://maojun.xyz/blog/2023/03/Arthas配合Recaf调试服务端代码.html</div>
     </div>
     <div class="license-meta">
       
@@ -507,9 +515,14 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月24日</div>
+          <div>2023年3月10日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年9月24日</div>
+        </div>
       
       
         <div class="license-meta-item">
@@ -551,12 +564,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/blog/2023/07/hello-world.html" title="Hello World">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html" title="Jmeter安装和介绍">
-                        <span class="hidden-mobile">Jmeter安装和介绍</span>
+                      <a href="/blog/2021/10/%5B%E7%BF%BB%E8%AF%91%5DBug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html" title="Bug报告写作指南">
+                        <span class="hidden-mobile">Bug报告写作指南</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
