@@ -17,6 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Arthas配合Recaf调试服务端代码.md</title>
+    <link href="https://maojun.xyz/blog/2023/09/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html"/>
+    <id>https://maojun.xyz/blog/2023/09/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html</id>
+    <published>2023-09-24T21:56:00.000Z</published>
+    <updated>2023-09-24T21:56:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;h3 id=&quot;Arthas&quot;&gt;&lt;a href=&quot;#Arthas&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试工具" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Arthas" scheme="https://maojun.xyz/blog/tags/Arthas/"/>
+    
+    <category term="Recaf" scheme="https://maojun.xyz/blog/tags/Recaf/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Jmeter安装和介绍</title>
     <link href="https://maojun.xyz/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html"/>
     <id>https://maojun.xyz/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html</id>
@@ -625,37 +658,6 @@
     <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="网页工具" scheme="https://maojun.xyz/blog/tags/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux下不解压直接修改压缩包内文件</title>
-    <link href="https://maojun.xyz/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html"/>
-    <id>https://maojun.xyz/blog/2020/03/Linux%E4%B8%8B%E4%B8%8D%E8%A7%A3%E5%8E%8B%E7%9B%B4%E6%8E%A5%E4%BF%AE%E6%94%B9%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E6%96%87%E4%BB%B6.html</id>
-    <published>2020-03-25T00:00:00.000Z</published>
-    <updated>2023-09-10T11:58:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;从 Windows 转到 Linux 桌面发行版后，就对在终端上完成一些工作产生痴迷。比如修改，复制，移动，删除文件等等。加上 Linux</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
-    
-    <category term="压缩工具" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
     
   </entry>
   
