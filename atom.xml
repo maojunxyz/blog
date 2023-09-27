@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-24T21:56:00.000Z</updated>
+  <updated>2023-09-27T22:22:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>接口测试工具Insomnia入门使用</title>
+    <link href="https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html</id>
+    <published>2023-09-27T22:22:00.000Z</published>
+    <updated>2023-09-27T22:22:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;打开官网的下载地址：&lt;a href=&quot;https://insomnia.rest/download&quot;&gt;Download -</summary>
+        
+      
+    
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试工具" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
+    
+  </entry>
   
   <entry>
     <title>Jmeter安装和介绍</title>
@@ -627,37 +658,6 @@
     <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
     
     <category term="Vifm" scheme="https://maojun.xyz/blog/tags/Vifm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>获取网站的 favicon 的方式</title>
-    <link href="https://maojun.xyz/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html"/>
-    <id>https://maojun.xyz/blog/2020/03/%E8%8E%B7%E5%8F%96%E7%BD%91%E7%AB%99%E7%9A%84favicon%E7%9A%84%E6%96%B9%E5%BC%8F.html</id>
-    <published>2020-03-28T00:00:00.000Z</published>
-    <updated>2023-09-10T12:10:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="浏览器" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-    <category term="在线工具" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="网页工具" scheme="https://maojun.xyz/blog/tags/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
