@@ -46,6 +46,35 @@
   </entry>
   
   <entry>
+    <title>Linux命令每日练习</title>
+    <link href="https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html"/>
+    <id>https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html</id>
+    <published>2023-10-20T22:22:00.000Z</published>
+    <updated>2023-10-22T21:59:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件备份&quot;&gt;&lt;a href=&quot;#文件备份&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>接口测试工具Insomnia入门使用</title>
     <link href="https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html"/>
     <id>https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html</id>
@@ -624,35 +653,6 @@
     <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
     
     <category term="翻译" scheme="https://maojun.xyz/blog/tags/%E7%BF%BB%E8%AF%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用户登入测试用例设计</title>
-    <link href="https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html"/>
-    <id>https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html</id>
-    <published>2021-10-12T00:00:00.000Z</published>
-    <updated>2023-09-10T12:29:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;划分维度&quot;&gt;&lt;a href=&quot;#划分维度&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试用例" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/"/>
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试用例" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/"/>
     
   </entry>
   
