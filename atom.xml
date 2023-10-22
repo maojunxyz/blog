@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-09-27T22:22:00.000Z</updated>
+  <updated>2023-10-22T21:32:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二分查找法</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95.html</id>
+    <published>2023-10-22T21:32:00.000Z</published>
+    <updated>2023-10-22T21:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java实现&quot;&gt;&lt;a href=&quot;#Java实现&quot; class=&quot;headerlink&quot; title=&quot;Java实现&quot;&gt;&lt;/a&gt;Java实现&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="算法" scheme="https://maojun.xyz/blog/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>接口测试工具Insomnia入门使用</title>
@@ -624,40 +653,6 @@
     <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
     
     <category term="测试用例" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vifm命令行文件管理器入门</title>
-    <link href="https://maojun.xyz/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html"/>
-    <id>https://maojun.xyz/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html</id>
-    <published>2020-03-28T00:00:00.000Z</published>
-    <updated>2023-09-10T12:18:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Vifm是一个实用的类 Vim 快捷键终端文件管理器，可以用来替代图形文件管理器。&lt;/p&gt;
-&lt;h2 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
-    
-    <category term="文件管理器" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="Vifm" scheme="https://maojun.xyz/blog/tags/Vifm/"/>
     
   </entry>
   
