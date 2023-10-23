@@ -18,23 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Java实现1234567891011121314151617181920class Solution &amp;#123;    public int search(int[] nums, int target) &amp;#123;      int min &#x3D; 0;      int max &#x3D; nums.length - 1;            while(min &lt;&#x3D; max)&amp;#123;">
+    <meta name="description" content="窗口与屏幕1、拖动窗口并轻轻晃动可以最小化其他窗口。 2、按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。 3、按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。 4、按 Win + L 锁定计算机。 5、按 Win + P 可以快速切换多屏显示方式。 6、按 Alt + Esc 将当前活动窗口移动到最后面。 7、按 A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="二分查找法">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95.html">
+<meta property="og:title" content="Windows 11 使用技巧">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/09/32423.html">
 <meta property="og:site_name" content="QA毛俊">
-<meta property="og:description" content="Java实现1234567891011121314151617181920class Solution &amp;#123;    public int search(int[] nums, int target) &amp;#123;      int min &#x3D; 0;      int max &#x3D; nums.length - 1;            while(min &lt;&#x3D; max)&amp;#123;">
+<meta property="og:description" content="窗口与屏幕1、拖动窗口并轻轻晃动可以最小化其他窗口。 2、按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。 3、按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。 4、按 Win + L 锁定计算机。 5、按 Win + P 可以快速切换多屏显示方式。 6、按 Alt + Esc 将当前活动窗口移动到最后面。 7、按 A">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-22T21:32:00.000Z">
-<meta property="article:modified_time" content="2023-10-22T21:32:00.000Z">
+<meta property="article:published_time" content="2023-09-27T19:44:00.000Z">
+<meta property="article:modified_time" content="2023-09-27T19:44:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="数据结构">
-<meta property="article:tag" content="算法">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>二分查找法 - QA毛俊</title>
+  <title>Windows 11 使用技巧 - QA毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="二分查找法"></span>
+            <span id="subtitle" data-typed-text="Windows 11 使用技巧"></span>
           
         </div>
 
@@ -239,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-22 21:32" pubdate>
-          2023年10月22日 晚上
+        <time datetime="2023-09-27 19:44" pubdate>
+          2023年9月27日 晚上
         </time>
       </span>
     
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          2.3k 字
         
       </span>
     
@@ -262,7 +262,7 @@
         
         
         
-          15 分钟
+          20 分钟
         
       </span>
     
@@ -299,36 +299,57 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">二分查找法</h1>
+            <h1 id="seo-header">Windows 11 使用技巧</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">search</span><span class="hljs-params">(<span class="hljs-type">int</span>[] nums, <span class="hljs-type">int</span> target)</span> &#123;<br>      <span class="hljs-type">int</span> <span class="hljs-variable">min</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>      <span class="hljs-type">int</span> <span class="hljs-variable">max</span> <span class="hljs-operator">=</span> nums.length - <span class="hljs-number">1</span>;<br>      <br>      <span class="hljs-keyword">while</span>(min &lt;= max)&#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> min + (max - min) / <span class="hljs-number">2</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">midVal</span> <span class="hljs-operator">=</span> nums[mid];<br>        <span class="hljs-keyword">if</span>(midVal &lt; target)&#123;<br>          min = mid + <span class="hljs-number">1</span>;<br>        &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(midVal &gt; target)&#123;<br>          max = mid -<span class="hljs-number">1</span>;<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>          <span class="hljs-keyword">return</span> mid;<br>        &#125;<br>      &#125;<br><br>      <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h2 id="窗口与屏幕"><a href="#窗口与屏幕" class="headerlink" title="窗口与屏幕"></a>窗口与屏幕</h2><p>1、拖动窗口并轻轻晃动可以最小化其他窗口。</p>
+<p>2、按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。</p>
+<p>3、按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。</p>
+<p>4、按 Win + L 锁定计算机。</p>
+<p>5、按 Win + P 可以快速切换多屏显示方式。</p>
+<p>6、按 Alt + Esc 将当前活动窗口移动到最后面。</p>
+<p>7、按 Alt + 空格键 可以打开窗口系统菜单，再按 M 可以移动窗口。</p>
+<p>8、按 Ctrl + W 或 ALT + F4，或 ALT + 空格 + C 都可以快速关闭窗口。</p>
+<p>9、在弹出的错误对话框上按 Ctrl + C 可以复制内容。</p>
+<p>10、连续按 Win + → 或 ← 窗口可以切换屏幕左、屏幕右、屏幕中间。</p>
+<p>11、连续按 Win + ↑ 或 ↓ 当前窗口可以切换最大化、屏幕中间、最小化状态。</p>
+<p>12、按 Win + 数字键可以切换到任务栏的第 n 个程序。</p>
+<h2 id="控制台-命令行程序"><a href="#控制台-命令行程序" class="headerlink" title="控制台 &#x2F; 命令行程序"></a>控制台 &#x2F; 命令行程序</h2><p>1、Windows 10 &#x2F; 11 系统控制台程序可按 Alt + Enter 切换全屏。</p>
+<p>2、在命令行窗口可以按 tab 键自动完成输入，按 F7 可以显示历史记录</p>
+<p>3、在资源管理器地址栏直接输入 cmd 回车，可在当前目录打开命令行。</p>
+<p>4、命令行与批处理也可以隐藏黑窗口并用于开发桌面软件，参考：《aardio  + bat 批处理混合编程开发桌面软件》</p>
+<h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>1、按 Win + R 打开运行对话框。在运行对话框中可直接输入系统可搜索到的路径( 可在 %Path% 环境变量添加搜索目录 )。例如输入 cmd 并回车可打开命令行，输入 control 并回车可以打开控制面板。输入 drivers 后回车，可以快速打开 hosts 文件所在的 etc 目录。</p>
+<p>2、按 Win + R 打开运行对话框，可输入 shell 命令打开一些特殊目录。例如输入 shell:Downloads 再回车就可以打开系统下载目录。参考：aardio 范例 &gt; 文件操作 &gt; 特殊路径 &gt; 打开隐藏目录</p>
+<p>3、按 Win 弹出开始菜单后直接打字可打开搜索窗口（ 或按 Win + S ），这里也可以输入系统能搜索到的程序文件名。支持在注册表路径</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure>
 
-<blockquote>
-<p>注意：第4行使用 int mid &#x3D; min + (max - min) &#x2F; 2;避免数值溢出（min+max)&#x2F;2 问题。</p>
-</blockquote>
-<h2 id="源码实现"><a href="#源码实现" class="headerlink" title="源码实现"></a>源码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch0</span><span class="hljs-params">(<span class="hljs-type">int</span>[] a, <span class="hljs-type">int</span> fromIndex, <span class="hljs-type">int</span> toIndex,</span><br><span class="hljs-params">                                 <span class="hljs-type">int</span> key)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> fromIndex;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">high</span> <span class="hljs-operator">=</span> toIndex - <span class="hljs-number">1</span>;<br><br>    <span class="hljs-keyword">while</span> (low &lt;= high) &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> (low + high) &gt;&gt;&gt; <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">midVal</span> <span class="hljs-operator">=</span> a[mid];<br><br>        <span class="hljs-keyword">if</span> (midVal &lt; key)<br>            low = mid + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (midVal &gt; key)<br>            high = mid - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span><br>            <span class="hljs-keyword">return</span> mid; <span class="hljs-comment">// key found</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> -(low + <span class="hljs-number">1</span>);  <span class="hljs-comment">// key not found.</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>下添加的应用程序文件名。</p>
+<p>4、按 Ctrl + Shift + Esc 可直接打开任务管理器。</p>
+<p>5、按 Win + V 可以查看剪贴板历史</p>
+<p>按 Win + I 打开 设置 &gt; 系统 &gt; 剪贴板 可以关闭此功能 。</p>
+<p>6、按 Win + Pause 可查看系统属性。</p>
+<h2 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h2><p>1、按 Win + E 打开文件资源管理器。</p>
+<p>2、资源管理器(或网页浏览器) 按 Ctrl + L 或 Alt+ D 或 F4&#x2F;F6 可快速切换到地址栏。</p>
+<p>3、在资源管理器按住 Shift 键点右键可以显示隐藏菜单项，例如：“复制为路径”。注意这样复制的路径首尾是带双引号的，所以桌面软件开发者要注意自动去除这类双引号。<br>系统文件对话框里可以直接粘贴这种带双引号的路径。另外在系统文件对话框里 —— 选中文件然后按 Ctrl + C 也可以直接复制带双引号的完整路径。</p>
+<p>4、资源管理器右键点选一个或多个图片，可在弹出菜单中直接旋转图片。</p>
+<p>5、连续重命名文件：在资源管理器按 F2 命名文件，修改名称后不要按回车 —— 直接按 tab 键可以跳到下一个文件并切换到重命名输入。</p>
+<p>6、按住 Ctrl 拖动文件 —— 复制文件，按住 Shift 拖动文件 —— 移动文件，按住 Alt 拖动文件 —— 创建快捷方式。</p>
+<p>7、资源管理器地址栏（按 Win + S 打开搜索栏也可以 ）输入 cmd&#x2F;control 等系统命令后回车，可在当前目录运行目标程序。如果想要将其他程序添加到系统搜索路径，个人认为最好不要随意改 %Path% 环境变量或将程序放到系统目录，更简单的方法是将程序路径写入注册表：</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure>
 
-<p><code>Arrays.binarySearch</code> 是 Java 中用于在有序数组中执行二分查找的方法。它接受一个有序数组和要查找的元素作为参数，并返回元素在数组中的索引（如果找到）或应该插入的索引位置（如果未找到）。</p>
-<p>以下是 <code>Arrays.binarySearch</code> 方法的签名：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(Object[] a, Object key)</span><br></code></pre></td></tr></table></figure>
-
-<p><code>Arrays.binarySearch</code> 方法有以下几个重要特点：</p>
-<ol>
-<li><p><strong>有序数组要求</strong>：传递给 <code>binarySearch</code> 方法的数组必须是有序的。如果数组无序，结果是不确定的。</p>
-</li>
-<li><p><strong>返回值说明</strong>：如果找到元素 <code>key</code>，它将返回元素的索引。如果未找到元素 <code>key</code>，则返回一个负数值，该值是应该插入元素 <code>key</code> 以维持数组的有序性的位置。负数值的计算方式为：- (插入点索引 + 1)。这是一个将元素插入到有序数组的标准方式。</p>
-</li>
-</ol>
-<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>下面是一个示例，演示如何使用 <code>Arrays.binarySearch</code> 方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BinarySearchExample</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">int</span>[] numbers = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>&#125;;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">target</span> <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br>        <br>        <span class="hljs-comment">// 使用binarySearch查找元素</span><br>        <span class="hljs-type">int</span> <span class="hljs-variable">index</span> <span class="hljs-operator">=</span> Arrays.binarySearch(numbers, target);<br>        <br>        <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) &#123;<br>            System.out.println(target + <span class="hljs-string">&quot; found at index &quot;</span> + index);<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            System.out.println(target + <span class="hljs-string">&quot; not found. It should be inserted at index &quot;</span> + (-index - <span class="hljs-number">1</span>));<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>在这个示例中，我们将 <code>target</code>（要查找的元素）设为6，并使用 <code>Arrays.binarySearch</code> 在有序数组 <code>numbers</code> 中查找它。如果找到，它将返回该元素的索引；如果未找到，它将返回应该插入该元素的位置。</p>
-<p>要注意的是，如果数组中有多个相同的元素，<code>binarySearch</code> 方法只返回最前面匹配的索引。</p>
-<h2 id="在线题库"><a href="#在线题库" class="headerlink" title="在线题库"></a>在线题库</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-search/description/">Binary Search - LeetCode</a></p>
-<p>（本文完）</p>
+<p>就可以了。在 aardio 自带范例里我写过一个小工具专门做这事（ 范例 &gt; 操作系统 &gt; 注册表 &gt; 系统搜索路径 ）。</p>
+<p>8、在资源管理器地址栏（按 Win + R 打开运行对话框也可以）可输入系统目录环境变量回车可直接打开对应目录，例如输入 %temp% 可以打开临时目录，输入 %localappdata% 可以打开 AppData 目录。</p>
+<h2 id="图像、截屏、录屏"><a href="#图像、截屏、录屏" class="headerlink" title="图像、截屏、录屏"></a>图像、截屏、录屏</h2><p>1、按 Win + Shift + S 可以打开系统自带截图工具。系统自带截图有一个好处，截图时不会导致右键菜单关闭。其他截图工具对右键菜单截图不太方便。</p>
+<p>2、按 Win + G 可以打开系统自带录屏工具。</p>
+<p>3、如果我们在网上发文章，有时候插入可以直接播放的 GIF 小动画是非常必要的。但一些录屏工具操作步骤太多，最麻烦的是 Windows 剪贴板默认并没有专门的 GIF 格式。这就导致我们复制本地 GIF 再粘贴到其他程序会出问题 —— 要么是变为无效图像，要不是动画变成了静止图像，要么就是一切正常点网络发送 GIF 时报错。</p>
+<p>要解决这个问题可以下载开源的极简 GIF 录屏工具 Gif123，这个软件录屏非常简单，录好 GIF 以后可以一键复制，Gif123 复制的 GIF 比较特别 —— 可以完美粘贴到其他程序中。</p>
+<p>例如我在头条写文章，用 Gif123 录好的 GIF，只要在头条编辑器里 Ctrl + V 一下就可以搞定，方便太多了。</p>
+<h2 id="文本-输入法"><a href="#文本-输入法" class="headerlink" title="文本 &#x2F; 输入法"></a>文本 &#x2F; 输入法</h2><p>1、按 Win + . 可打开系统自带表情符号面板。</p>
+<p>2、Ctrl + C &#x2F; Ctrl + Insert 都可以复制。Ctrl + V &#x2F; Shift + Insert 都可以粘贴。Ctrl + Z &#x2F; Alt + Backspace 都可以撤消。</p>
+<p>3、大多数输入法都支持的常用快键键：</p>
+<p>「Shift」切换中&#x2F;英输入；<br>「Ctrl + . 」切换中&#x2F;英标点；<br>「Shift + 空格 」切换全&#x2F;半角；</p>
 
                 
               </div>
@@ -347,13 +368,20 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/" class="category-chain-item">系统</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构和算法</a>
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/" class="category-chain-item">Windows</a>
   
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" class="category-chain-item">使用技巧</a>
+  
+  
+
   
 
   
@@ -369,9 +397,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="print-no-link">#数据结构</a>
+        <a href="/blog/tags/Windows/" class="print-no-link">#Windows</a>
       
-        <a href="/blog/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
+        <a href="/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="print-no-link">#操作系统</a>
       
     </div>
   
@@ -383,8 +411,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>二分查找法</div>
-      <div>https://maojun.xyz/blog/2023/10/二分查找法.html</div>
+      <div>Windows 11 使用技巧</div>
+      <div>https://maojun.xyz/blog/2023/09/32423.html</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +424,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月22日</div>
+          <div>2023年9月27日</div>
         </div>
       
       
@@ -440,9 +468,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" title="冒泡排序算法">
+                      <a href="/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html" title="接口测试工具Insomnia入门使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">冒泡排序算法</span>
+                        <span class="hidden-mobile">接口测试工具Insomnia入门使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -450,8 +478,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/10/Untitled.html" title="垃圾回收器理论和实践">
-                        <span class="hidden-mobile">垃圾回收器理论和实践</span>
+                      <a href="/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html" title="Jmeter安装和介绍">
+                        <span class="hidden-mobile">Jmeter安装和介绍</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -93,6 +93,35 @@
   
   
   <entry>
+    <title>垃圾回收器理论和实践</title>
+    <link href="/blog/2023/10/Untitled.html"/>
+    <url>/blog/2023/10/Untitled.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="文件备份"><a href="#文件备份" class="headerlink" title="文件备份"></a>文件备份</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程语言</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>JVM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux命令每日练习</title>
     <link href="/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html"/>
     <url>/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html</url>
@@ -145,6 +174,37 @@
       <tag>测试工具</tag>
       
       <tag>Insomnia</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Windows 11 使用技巧</title>
+    <link href="/blog/2023/09/32423.html"/>
+    <url>/blog/2023/09/32423.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="窗口与屏幕"><a href="#窗口与屏幕" class="headerlink" title="窗口与屏幕"></a>窗口与屏幕</h2><p>1、拖动窗口并轻轻晃动可以最小化其他窗口。</p><p>2、按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。</p><p>3、按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。</p><p>4、按 Win + L 锁定计算机。</p><p>5、按 Win + P 可以快速切换多屏显示方式。</p><p>6、按 Alt + Esc 将当前活动窗口移动到最后面。</p><p>7、按 Alt + 空格键 可以打开窗口系统菜单，再按 M 可以移动窗口。</p><p>8、按 Ctrl + W 或 ALT + F4，或 ALT + 空格 + C 都可以快速关闭窗口。</p><p>9、在弹出的错误对话框上按 Ctrl + C 可以复制内容。</p><p>10、连续按 Win + → 或 ← 窗口可以切换屏幕左、屏幕右、屏幕中间。</p><p>11、连续按 Win + ↑ 或 ↓ 当前窗口可以切换最大化、屏幕中间、最小化状态。</p><p>12、按 Win + 数字键可以切换到任务栏的第 n 个程序。</p><h2 id="控制台-命令行程序"><a href="#控制台-命令行程序" class="headerlink" title="控制台 &#x2F; 命令行程序"></a>控制台 &#x2F; 命令行程序</h2><p>1、Windows 10 &#x2F; 11 系统控制台程序可按 Alt + Enter 切换全屏。</p><p>2、在命令行窗口可以按 tab 键自动完成输入，按 F7 可以显示历史记录</p><p>3、在资源管理器地址栏直接输入 cmd 回车，可在当前目录打开命令行。</p><p>4、命令行与批处理也可以隐藏黑窗口并用于开发桌面软件，参考：《aardio  + bat 批处理混合编程开发桌面软件》</p><h2 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h2><p>1、按 Win + R 打开运行对话框。在运行对话框中可直接输入系统可搜索到的路径( 可在 %Path% 环境变量添加搜索目录 )。例如输入 cmd 并回车可打开命令行，输入 control 并回车可以打开控制面板。输入 drivers 后回车，可以快速打开 hosts 文件所在的 etc 目录。</p><p>2、按 Win + R 打开运行对话框，可输入 shell 命令打开一些特殊目录。例如输入 shell:Downloads 再回车就可以打开系统下载目录。参考：aardio 范例 &gt; 文件操作 &gt; 特殊路径 &gt; 打开隐藏目录</p><p>3、按 Win 弹出开始菜单后直接打字可打开搜索窗口（ 或按 Win + S ），这里也可以输入系统能搜索到的程序文件名。支持在注册表路径</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure><p>下添加的应用程序文件名。</p><p>4、按 Ctrl + Shift + Esc 可直接打开任务管理器。</p><p>5、按 Win + V 可以查看剪贴板历史</p><p>按 Win + I 打开 设置 &gt; 系统 &gt; 剪贴板 可以关闭此功能 。</p><p>6、按 Win + Pause 可查看系统属性。</p><h2 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h2><p>1、按 Win + E 打开文件资源管理器。</p><p>2、资源管理器(或网页浏览器) 按 Ctrl + L 或 Alt+ D 或 F4&#x2F;F6 可快速切换到地址栏。</p><p>3、在资源管理器按住 Shift 键点右键可以显示隐藏菜单项，例如：“复制为路径”。注意这样复制的路径首尾是带双引号的，所以桌面软件开发者要注意自动去除这类双引号。<br>系统文件对话框里可以直接粘贴这种带双引号的路径。另外在系统文件对话框里 —— 选中文件然后按 Ctrl + C 也可以直接复制带双引号的完整路径。</p><p>4、资源管理器右键点选一个或多个图片，可在弹出菜单中直接旋转图片。</p><p>5、连续重命名文件：在资源管理器按 F2 命名文件，修改名称后不要按回车 —— 直接按 tab 键可以跳到下一个文件并切换到重命名输入。</p><p>6、按住 Ctrl 拖动文件 —— 复制文件，按住 Shift 拖动文件 —— 移动文件，按住 Alt 拖动文件 —— 创建快捷方式。</p><p>7、资源管理器地址栏（按 Win + S 打开搜索栏也可以 ）输入 cmd&#x2F;control 等系统命令后回车，可在当前目录运行目标程序。如果想要将其他程序添加到系统搜索路径，个人认为最好不要随意改 %Path% 环境变量或将程序放到系统目录，更简单的方法是将程序路径写入注册表：</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure><p>就可以了。在 aardio 自带范例里我写过一个小工具专门做这事（ 范例 &gt; 操作系统 &gt; 注册表 &gt; 系统搜索路径 ）。</p><p>8、在资源管理器地址栏（按 Win + R 打开运行对话框也可以）可输入系统目录环境变量回车可直接打开对应目录，例如输入 %temp% 可以打开临时目录，输入 %localappdata% 可以打开 AppData 目录。</p><h2 id="图像、截屏、录屏"><a href="#图像、截屏、录屏" class="headerlink" title="图像、截屏、录屏"></a>图像、截屏、录屏</h2><p>1、按 Win + Shift + S 可以打开系统自带截图工具。系统自带截图有一个好处，截图时不会导致右键菜单关闭。其他截图工具对右键菜单截图不太方便。</p><p>2、按 Win + G 可以打开系统自带录屏工具。</p><p>3、如果我们在网上发文章，有时候插入可以直接播放的 GIF 小动画是非常必要的。但一些录屏工具操作步骤太多，最麻烦的是 Windows 剪贴板默认并没有专门的 GIF 格式。这就导致我们复制本地 GIF 再粘贴到其他程序会出问题 —— 要么是变为无效图像，要不是动画变成了静止图像，要么就是一切正常点网络发送 GIF 时报错。</p><p>要解决这个问题可以下载开源的极简 GIF 录屏工具 Gif123，这个软件录屏非常简单，录好 GIF 以后可以一键复制，Gif123 复制的 GIF 比较特别 —— 可以完美粘贴到其他程序中。</p><p>例如我在头条写文章，用 Gif123 录好的 GIF，只要在头条编辑器里 Ctrl + V 一下就可以搞定，方便太多了。</p><h2 id="文本-输入法"><a href="#文本-输入法" class="headerlink" title="文本 &#x2F; 输入法"></a>文本 &#x2F; 输入法</h2><p>1、按 Win + . 可打开系统自带表情符号面板。</p><p>2、Ctrl + C &#x2F; Ctrl + Insert 都可以复制。Ctrl + V &#x2F; Shift + Insert 都可以粘贴。Ctrl + Z &#x2F; Alt + Backspace 都可以撤消。</p><p>3、大多数输入法都支持的常用快键键：</p><p>「Shift」切换中&#x2F;英输入；<br>「Ctrl + . 」切换中&#x2F;英标点；<br>「Shift + 空格 」切换全&#x2F;半角；</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Windows</category>
+      
+      <category>使用技巧</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Windows</tag>
+      
+      <tag>操作系统</tag>
       
     </tags>
     
@@ -601,24 +661,18 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/blog/2023/07/hello-world.html"/>
-    <url>/blog/2023/07/hello-world.html</url>
+    <title>使用GitHub Pages 部署 Hexo</title>
+    <link href="/blog/2023/07/%E4%BD%BF%E7%94%A8GitHub%20Pages%20%E9%83%A8%E7%BD%B2%20Hexo.html"/>
+    <url>/blog/2023/07/%E4%BD%BF%E7%94%A8GitHub%20Pages%20%E9%83%A8%E7%BD%B2%20Hexo.html</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="部署-Hexo-静态博客"><a href="#部署-Hexo-静态博客" class="headerlink" title="部署 Hexo 静态博客"></a>部署 Hexo 静态博客</h2><ol><li>建立名为 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的储存库。</li><li>将 Hexo 文件夹中的文件 push 到储存库的默认分支，默认分支通常名为 <code>main</code>。</li></ol><ul><li><p>将 <code>main</code> 分支 push 到 GitHub：</p><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs maxima">$ git <span class="hljs-built_in">push</span> -u <span class="hljs-built_in">origin</span> main<br></code></pre></td></tr></table></figure></li><li><p>默认情况下 <code>public/</code> 不会被上传(也不该被上传)，确保 <code>.gitignore</code> 文件中包含一行 <code>public/</code>。</p></li></ul><ol start="3"><li>使用 <code>node --version</code> 指令检查你电脑上的 Node.js 版本，并记下该版本 (例如：<code>v16.y.z</code>)</li><li>在储存库中前往 <code>Settings &gt; Pages &gt; Source</code>，并将 <code>Source</code> 改为 <code>GitHub Actions</code>。</li><li>在储存库中建立 <code>.github/workflows/pages.yml</code>，并填入以下内容 (将 20行的版本<code>16</code> 替换为上个步骤中记下的版本)：</li></ol><figure class="highlight nestedtext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs nestedtext"><span class="hljs-attribute">.github/workflows/pages.ymlname</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Pages</span><br><br><span class="hljs-attribute">on</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">push</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">branches</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">main # default branch</span><br><br><span class="hljs-attribute">jobs</span><span class="hljs-punctuation">:</span><br>  <span class="hljs-attribute">build</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">runs-on</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attribute">steps</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">uses: actions/checkout@v3</span><br>        <span class="hljs-attribute">with</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-attribute">token</span><span class="hljs-punctuation">:</span> <span class="hljs-string">$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</span><br>          <span class="hljs-comment"># If your repository depends on submodule, please see: https://github.com/actions/checkout</span><br>          <span class="hljs-attribute">submodules</span><span class="hljs-punctuation">:</span> <span class="hljs-string">recursive</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: Use Node.js 16.x</span><br>        <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">actions/setup-node@v2</span><br>        <span class="hljs-attribute">with</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-attribute">node-version</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&#x27;16&#x27;</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: Cache NPM dependencies</span><br>        <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">actions/cache@v2</span><br>        <span class="hljs-attribute">with</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span> <span class="hljs-string">node_modules</span><br>          <span class="hljs-attribute">key</span><span class="hljs-punctuation">:</span> <span class="hljs-string">$&#123;&#123; runner.OS &#125;&#125;-npm-cache</span><br>          <span class="hljs-attribute">restore-keys</span><span class="hljs-punctuation">:</span> <span class="hljs-string">|</span><br>            <span class="hljs-attribute">$&#123;&#123; runner.OS &#125;&#125;-npm-cache</span><br><span class="hljs-attribute">      - name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">Install Dependencies</span><br>        <span class="hljs-attribute">run</span><span class="hljs-punctuation">:</span> <span class="hljs-string">npm install</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: Build</span><br>        <span class="hljs-attribute">run</span><span class="hljs-punctuation">:</span> <span class="hljs-string">npm run build</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: Upload Pages artifact</span><br>        <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">actions/upload-pages-artifact@v2</span><br>        <span class="hljs-attribute">with</span><span class="hljs-punctuation">:</span><br>          <span class="hljs-attribute">path</span><span class="hljs-punctuation">:</span> <span class="hljs-string">./public</span><br>  <span class="hljs-attribute">deploy</span><span class="hljs-punctuation">:</span><br>    <span class="hljs-attribute">needs</span><span class="hljs-punctuation">:</span> <span class="hljs-string">build</span><br>    <span class="hljs-attribute">permissions</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-attribute">pages</span><span class="hljs-punctuation">:</span> <span class="hljs-string">write</span><br>      <span class="hljs-attribute">id-token</span><span class="hljs-punctuation">:</span> <span class="hljs-string">write</span><br>    <span class="hljs-attribute">environment</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-attribute">name</span><span class="hljs-punctuation">:</span> <span class="hljs-string">github-pages</span><br>      <span class="hljs-attribute">url</span><span class="hljs-punctuation">:</span> <span class="hljs-string">$&#123;&#123; steps.deployment.outputs.page_url &#125;&#125;</span><br>    <span class="hljs-attribute">runs-on</span><span class="hljs-punctuation">:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attribute">steps</span><span class="hljs-punctuation">:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-string">name: Deploy to GitHub Pages</span><br>        <span class="hljs-attribute">id</span><span class="hljs-punctuation">:</span> <span class="hljs-string">deployment</span><br>        <span class="hljs-attribute">uses</span><span class="hljs-punctuation">:</span> <span class="hljs-string">actions/deploy-pages@v2</span><br></code></pre></td></tr></table></figure><ol start="6"><li>部署完成后，前往 <code>https://&lt;你的 GitHub 用户名&gt;.github.io</code> 查看网站。</li></ol><blockquote><p>CNAME：若你使用了一个带有 <code>CNAME</code> 的自定义域名，你需要在 <code>source/</code> 文件夹中新增 <code>CNAME</code> 文件。</p></blockquote><h2 id="项目页面"><a href="#项目页面" class="headerlink" title="项目页面"></a>项目页面</h2><p>如果你希望网站部署在 <code>&lt;你的 GitHub 用户名&gt;.github.io</code> 的子目录中：</p><ol><li>建立名为 <code>&lt;repository 的名字&gt;</code> 的储存库，这样你的博客网址为 <code>&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code>，repository 的名字可以任意，例如 blog 或 hexo。</li><li>编辑你的 <code>_config.yml</code>，将 <code>url:</code> 更改为 <code>&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code>。</li><li>在储存库中前往 <code>Settings &gt; Pages &gt; Source</code>，并将 <code>Source</code> 改为 <code>GitHub Actions</code>。</li><li>Commit 并 push 到默认分支上。</li><li>部署完成后，前往 <code>https://&lt;你的 GitHub 用户名&gt;.github.io/&lt;repository 的名字&gt;</code> 查看网站。</li></ol><h2 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h2><h3 id="创建一个新的文章"><a href="#创建一个新的文章" class="headerlink" title="创建一个新的文章"></a>创建一个新的文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>更新信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>更新信息: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>更新信息: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="部署远程站点"><a href="#部署远程站点" class="headerlink" title="部署远程站点"></a>部署远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>更新信息: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><p>（本文完）</p>]]></content>
     
     
     <categories>
       
-      <category>文档教程</category>
-      
-      <category>知识笔记</category>
+      <category>软件</category>
       
       <category>Hexo</category>
-      
-      <category>Hexo</category>
-      
-      <category>Hello World</category>
       
     </categories>
     
@@ -627,7 +681,7 @@
       
       <tag>Hexo</tag>
       
-      <tag>快速上手</tag>
+      <tag>GitHub</tag>
       
     </tags>
     

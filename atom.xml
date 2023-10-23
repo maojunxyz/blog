@@ -106,6 +106,35 @@
   </entry>
   
   <entry>
+    <title>垃圾回收器理论和实践</title>
+    <link href="https://maojun.xyz/blog/2023/10/Untitled.html"/>
+    <id>https://maojun.xyz/blog/2023/10/Untitled.html</id>
+    <published>2023-10-21T12:37:00.000Z</published>
+    <updated>2023-10-21T12:37:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件备份&quot;&gt;&lt;a href=&quot;#文件备份&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程语言" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
+    
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+    <category term="JVM" scheme="https://maojun.xyz/blog/tags/JVM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux命令每日练习</title>
     <link href="https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html"/>
     <id>https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html</id>
@@ -162,6 +191,38 @@
     <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
     
     <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 11 使用技巧</title>
+    <link href="https://maojun.xyz/blog/2023/09/32423.html"/>
+    <id>https://maojun.xyz/blog/2023/09/32423.html</id>
+    <published>2023-09-27T19:44:00.000Z</published>
+    <updated>2023-09-27T19:44:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;窗口与屏幕&quot;&gt;&lt;a href=&quot;#窗口与屏幕&quot; class=&quot;headerlink&quot; title=&quot;窗口与屏幕&quot;&gt;&lt;/a&gt;窗口与屏幕&lt;/h2&gt;&lt;p&gt;1、拖动窗口并轻轻晃动可以最小化其他窗口。&lt;/p&gt;
+&lt;p&gt;2、按 Win + D</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Windows" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/"/>
+    
+    <category term="使用技巧" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
+    
+    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -584,72 +645,6 @@
     <category term="JSON" scheme="https://maojun.xyz/blog/tags/JSON/"/>
     
     <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装 Ubuntu 并做相关配置</title>
-    <link href="https://maojun.xyz/blog/2023/07/%E5%AE%89%E8%A3%85ubuntu%E5%B9%B6%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE.html"/>
-    <id>https://maojun.xyz/blog/2023/07/%E5%AE%89%E8%A3%85ubuntu%E5%B9%B6%E5%81%9A%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE.html</id>
-    <published>2023-07-30T19:44:00.000Z</published>
-    <updated>2023-07-30T19:44:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;折腾&quot;&gt;&lt;a href=&quot;#折腾&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
-    
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Ubuntu/"/>
-    
-    
-    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://maojun.xyz/blog/2023/07/hello-world.html"/>
-    <id>https://maojun.xyz/blog/2023/07/hello-world.html</id>
-    <published>2023-07-23T11:02:41.028Z</published>
-    <updated>2023-07-23T13:04:58.321Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="文档教程" scheme="https://maojun.xyz/blog/categories/%E6%96%87%E6%A1%A3%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="知识笔记" scheme="https://maojun.xyz/blog/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="Hexo" scheme="https://maojun.xyz/blog/categories/%E6%96%87%E6%A1%A3%E6%95%99%E7%A8%8B/Hexo/"/>
-    
-    <category term="Hexo" scheme="https://maojun.xyz/blog/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/Hexo/"/>
-    
-    <category term="Hello World" scheme="https://maojun.xyz/blog/categories/Hello-World/"/>
-    
-    
-    <category term="Hexo" scheme="https://maojun.xyz/blog/tags/Hexo/"/>
-    
-    <category term="快速上手" scheme="https://maojun.xyz/blog/tags/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"/>
     
   </entry>
   
