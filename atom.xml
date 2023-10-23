@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>QA毛俊</title>
+  <title>程序员毛俊</title>
   <icon>https://maojun.xyz/blog/icon.png</icon>
-  <subtitle>一个关注软件质量、断舍离和极简生活的博客</subtitle>
+  <subtitle>一个关注软件架构、断舍离和极简生活的博客</subtitle>
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
