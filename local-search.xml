@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Linux判断磁盘分区读写是否正常</title>
+    <link href="/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
+    <url>/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="Linux判断磁盘分区读写是否正常"><a href="#Linux判断磁盘分区读写是否正常" class="headerlink" title="Linux判断磁盘分区读写是否正常"></a>Linux判断磁盘分区读写是否正常</h2><ol><li>判断磁盘分区读写是否正常，并打印信息</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-23</span><br><br><span class="hljs-keyword">for</span> mount_p <span class="hljs-keyword">in</span> `<span class="hljs-built_in">df</span> -h | sed <span class="hljs-string">&#x27;1d&#x27;</span> | grep -v <span class="hljs-string">&#x27;tmpfs&#x27;</span>  |awk <span class="hljs-string">&#x27;&#123;print $NF&#125;&#x27;</span>`;<span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">touch</span> <span class="hljs-variable">$mount_p</span>/testfile &amp;&amp; <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$mount_p</span>/testfile<br>  <span class="hljs-keyword">if</span> [ $? -ne 0 ];<span class="hljs-keyword">then</span><br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$mount_p</span> 读写有问题&quot;</span> <br>  <span class="hljs-keyword">else</span> <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$mount_p</span> 读写正常&quot;</span> <br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+      <tag>每日练习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>冒泡排序算法</title>
     <link href="/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html"/>
     <url>/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html</url>
