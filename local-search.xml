@@ -4,6 +4,93 @@
   
   
   <entry>
+    <title>修改目录下的文件权限和属组</title>
+    <link href="/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html"/>
+    <url>/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="修改目录下的文件权限和属组"><a href="#修改目录下的文件权限和属组" class="headerlink" title="修改目录下的文件权限和属组"></a>修改目录下的文件权限和属组</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-24</span><br><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> `find <span class="hljs-built_in">test</span>`<br><span class="hljs-keyword">do</span><br><span class="hljs-comment"># 查看文件权限</span><br>f_p=`<span class="hljs-built_in">stat</span> -c %a <span class="hljs-variable">$f</span>`<br><span class="hljs-comment"># 查看文件所有者</span><br>f_u=`<span class="hljs-built_in">stat</span> -c %U <span class="hljs-variable">$f</span>`<br><span class="hljs-comment"># 查看文件所属组</span><br>f_g=`<span class="hljs-built_in">stat</span> -c %G <span class="hljs-variable">$f</span>`<br><br>  <span class="hljs-comment"># 判断是否为目o</span><br>  <span class="hljs-keyword">if</span> [ -d <span class="hljs-variable">$f</span> ];<span class="hljs-keyword">then</span><br>    [ <span class="hljs-variable">$f_p</span> != <span class="hljs-string">&#x27;755&#x27;</span> ] &amp;&amp; <span class="hljs-built_in">chmod</span> 755 <span class="hljs-variable">$f</span><br>  <span class="hljs-keyword">else</span><br>    [ <span class="hljs-variable">$f_p</span> != <span class="hljs-string">&#x27;644&#x27;</span> ] &amp;&amp; <span class="hljs-built_in">chmod</span> 644 <span class="hljs-variable">$f</span><br>  <span class="hljs-keyword">fi</span><br>  <br>  <span class="hljs-comment"># 修改文件的属主和属组</span><br>  [ <span class="hljs-variable">$f_u</span> != <span class="hljs-string">&#x27;www&#x27;</span> ] &amp;&amp; <span class="hljs-built_in">chown</span>  www <span class="hljs-variable">$f</span><br>  [ <span class="hljs-variable">$f_g</span> != <span class="hljs-string">&#x27;root&#x27;</span> ] &amp;&amp; <span class="hljs-built_in">chown</span> :root <span class="hljs-variable">$f</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>基于顺序存储（数组）实现List集合</title>
+    <link href="/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html"/>
+    <url>/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>使用顺序存储来实现线性表。</p><h3 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Iterator;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 线性表（列表）的接口定义</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyList</span>&lt;T&gt; <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Iterator</span>&lt;T&gt; &#123;<br>  <span class="hljs-comment">/**新增一个元素*/</span><br>  <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(T element)</span>;<br><br>  <span class="hljs-comment">/**删除相同元素*/</span><br>  <span class="hljs-keyword">void</span> <span class="hljs-title function_">delete</span><span class="hljs-params">(T element)</span>;<br><br>  <span class="hljs-comment">/**根据索引删除元素*/</span><br>  <span class="hljs-keyword">void</span> <span class="hljs-title function_">delete</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span>;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 将指定索引位置的元素替换成新元素</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@param</span> index</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@param</span> newElement</span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(<span class="hljs-type">int</span> index, T newElement)</span>;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 当前列表中是否含有target这个元素</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@param</span> target</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-type">boolean</span> <span class="hljs-title function_">contains</span><span class="hljs-params">(T target)</span>;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 返回指定索引处的元素</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@param</span> index</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">   */</span><br>  T <span class="hljs-title function_">at</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span>;<br><br>  <span class="hljs-comment">/**</span><br><span class="hljs-comment">   * 查找element的索引，如果没有返回-1</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@param</span> element</span><br><span class="hljs-comment">   * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">   */</span><br>  <span class="hljs-type">int</span> <span class="hljs-title function_">indexOf</span><span class="hljs-params">(T element)</span>;<br><br>&#125;<br></code></pre></td></tr></table></figure><h3 id="实现类"><a href="#实现类" class="headerlink" title="实现类"></a>实现类</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 用顺序存储（数组）方式来实现列表</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyArrayList</span>&lt;T&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">MyList</span>&lt;T&gt; &#123;<br>  <span class="hljs-keyword">private</span> T[] elements;<span class="hljs-comment">//真正存储元素的底层结构</span><br><br>  <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> <span class="hljs-variable">size</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<span class="hljs-comment">//元素个数</span><br><br>  <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> <span class="hljs-variable">capacity</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<span class="hljs-comment">//容量</span><br><br>  <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyArrayList</span><span class="hljs-params">(<span class="hljs-type">int</span> capacity)</span> &#123;<br>    <span class="hljs-built_in">this</span>.capacity = capacity;<br><br>    elements = (T[]) <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>[capacity];<br>  &#125;<br><br>  <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyArrayList</span><span class="hljs-params">()</span> &#123;<br>    elements = (T[]) <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>[capacity];<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(T element)</span> &#123;<br>    <span class="hljs-keyword">if</span> (size == capacity) &#123;<span class="hljs-comment">//扩容</span><br>      capacity *= <span class="hljs-number">2</span>;<span class="hljs-comment">//增加一倍的容量</span><br>      T[] newArr = (T[]) <span class="hljs-keyword">new</span> <span class="hljs-title class_">Object</span>[capacity];<span class="hljs-comment">//新建一个数组</span><br>      <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; size; i++) &#123;<br>        newArr[i] = elements[i];<br>      &#125;<br>      elements = newArr;<span class="hljs-comment">//把旧的那个柜子扔掉</span><br>    &#125;<br>    elements[size++] = element;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">delete</span><span class="hljs-params">(T element)</span> &#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">index</span> <span class="hljs-operator">=</span> indexOf(element);<br>    <span class="hljs-keyword">if</span> (index &gt;= <span class="hljs-number">0</span>) &#123;<br>      delete(index);<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">delete</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> index; i &lt; size - <span class="hljs-number">1</span>; i++) &#123;<br>      elements[i] = elements[i + <span class="hljs-number">1</span>];<br>    &#125;<br>    elements[size - <span class="hljs-number">1</span>] = <span class="hljs-literal">null</span>;<br>    size--;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">update</span><span class="hljs-params">(<span class="hljs-type">int</span> index, T newElement)</span> &#123;<br>    elements[index] = newElement;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">contains</span><span class="hljs-params">(T target)</span> &#123;<br>    <span class="hljs-keyword">return</span> indexOf(target) &gt;= <span class="hljs-number">0</span>;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> T <span class="hljs-title function_">at</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> &#123;<br>    <span class="hljs-keyword">return</span> elements[index];<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">indexOf</span><span class="hljs-params">(T element)</span> &#123;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; size; i++) &#123;<br>      <span class="hljs-keyword">if</span> (elements[i].equals(element)) &#123;<br>        <span class="hljs-keyword">return</span> i;<br>      &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(<span class="hljs-string">&quot;[&quot;</span>);<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; size; i++) &#123;<br>      sb.append(elements[i] + (i == size - <span class="hljs-number">1</span> ? <span class="hljs-string">&quot;&quot;</span> : <span class="hljs-string">&quot; , &quot;</span>));<br>    &#125;<br>    sb.append(<span class="hljs-string">&quot;]&quot;</span>);<br>    <span class="hljs-keyword">return</span> sb.toString();<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">hasNext</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>  &#125;<br><br>  <span class="hljs-meta">@Override</span><br>  <span class="hljs-keyword">public</span> T <span class="hljs-title function_">next</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>数据结构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数据结构</tag>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数据结构入门</title>
+    <link href="/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"/>
+    <url>/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h2><ul><li><p>集合</p><ul><li>元素罗列在一起</li></ul></li><li><p>线性结构</p><ul><li>元素前后相继（一一对应）</li></ul></li><li><p>树形结构</p><ul><li>元素存在一对多的关系</li></ul></li><li><p>图结构或网状结构</p><ul><li>元素之间存在多对多关系</li></ul></li></ul><h2 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h2><ul><li>顺序存储<ul><li>地址连续，用数组</li></ul></li><li>链式存储<ul><li>地址不连续，用指针（引用，面向对象）</li></ul></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>数据结构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>数据结构</tag>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>机器存活状态检测</title>
     <link href="/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html"/>
     <url>/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html</url>
@@ -13,7 +100,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -42,7 +129,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -160,7 +247,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -404,7 +491,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -668,7 +755,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -883,7 +970,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -914,7 +1001,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -976,7 +1063,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       
@@ -1007,7 +1094,7 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
       <category>Linux</category>
       

@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-10-24T13:22:00.000Z</updated>
+  <updated>2023-10-24T19:30:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,94 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修改目录下的文件权限和属组</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html</id>
+    <published>2023-10-24T19:30:00.000Z</published>
+    <updated>2023-10-24T19:30:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;修改目录下的文件权限和属组&quot;&gt;&lt;a href=&quot;#修改目录下的文件权限和属组&quot; class=&quot;headerlink&quot; title=&quot;修改目录下的文件权限和属组&quot;&gt;&lt;/a&gt;修改目录下的文件权限和属组&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于顺序存储（数组）实现List集合</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html</id>
+    <published>2023-10-24T18:00:00.000Z</published>
+    <updated>2023-10-24T18:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;使用顺序存储来实现线性表。&lt;/p&gt;
+&lt;h3 id=&quot;接口定义&quot;&gt;&lt;a href=&quot;#接口定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构入门</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</id>
+    <published>2023-10-24T14:52:00.000Z</published>
+    <updated>2023-10-24T14:52:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;逻辑结构&quot;&gt;&lt;a href=&quot;#逻辑结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>机器存活状态检测</title>
@@ -35,9 +123,9 @@
     
     
     
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
     <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
@@ -64,9 +152,9 @@
     
     
     
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
     <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
@@ -182,9 +270,9 @@
     
     
     
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
     
     <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
@@ -432,11 +520,11 @@
     
     
     
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
     
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
     
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/Ubuntu/"/>
+    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/Ubuntu/"/>
     
     
     <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
@@ -545,105 +633,6 @@
     <category term="风骚律师" scheme="https://maojun.xyz/blog/tags/%E9%A3%8E%E9%AA%9A%E5%BE%8B%E5%B8%88/"/>
     
     <category term="美剧" scheme="https://maojun.xyz/blog/tags/%E7%BE%8E%E5%89%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CKA、CKAD、CKS、PCA认证考试总结</title>
-    <link href="https://maojun.xyz/blog/2023/08/CKA%E3%80%81CKAD%E3%80%81CKS%E3%80%81PCA%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93.html"/>
-    <id>https://maojun.xyz/blog/2023/08/CKA%E3%80%81CKAD%E3%80%81CKS%E3%80%81PCA%E8%AE%A4%E8%AF%81%E8%80%83%E8%AF%95%E6%80%BB%E7%BB%93.html</id>
-    <published>2023-08-20T18:44:00.000Z</published>
-    <updated>2023-08-20T18:44:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;计划&quot;&gt;&lt;a href=&quot;#计划&quot; class=&quot;headerlink&quot; title=&quot;计划&quot;&gt;&lt;/a&gt;计划&lt;/h2&gt;&lt;p&gt;在去年的 7 月份购买了 Kubernetes 的 CKA、CKAD、CKS 认证考试套餐，在今年 4 月份购买了 Promethus</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="自托管" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E8%87%AA%E6%89%98%E7%AE%A1/"/>
-    
-    <category term="云原生" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E8%87%AA%E6%89%98%E7%AE%A1/%E4%BA%91%E5%8E%9F%E7%94%9F/"/>
-    
-    
-    <category term="云原生" scheme="https://maojun.xyz/blog/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/"/>
-    
-    <category term="Kubernates" scheme="https://maojun.xyz/blog/tags/Kubernates/"/>
-    
-    <category term="Prometheus" scheme="https://maojun.xyz/blog/tags/Prometheus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Highlight This!实操手册</title>
-    <link href="https://maojun.xyz/blog/2023/08/Highlight%20This!%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.html"/>
-    <id>https://maojun.xyz/blog/2023/08/Highlight%20This!%E5%AE%9E%E6%93%8D%E6%89%8B%E5%86%8C.html</id>
-    <published>2023-08-13T15:09:00.000Z</published>
-    <updated>2023-08-13T15:09:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Highlight This！, 在其官网&lt;sup id=&quot;fnref:1&quot; class=&quot;footnote-ref&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="浏览器" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
-    
-    <category term="扩展插件" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
-    
-    
-    <category term="Chrome" scheme="https://maojun.xyz/blog/tags/Chrome/"/>
-    
-    <category term="Extension" scheme="https://maojun.xyz/blog/tags/Extension/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 下使用 Rime 和小鹤音形输入法</title>
-    <link href="https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html"/>
-    <id>https://maojun.xyz/blog/2023/08/windows%E4%B8%8B%E4%BD%BF%E7%94%A8rime+%E5%B0%8F%E9%B9%A4%E9%9F%B3%E5%BD%A2%E8%BE%93%E5%85%A5%E6%B3%95.html</id>
-    <published>2023-08-06T18:06:00.000Z</published>
-    <updated>2023-08-06T18:06:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Rime, 官网&lt;sup id=&quot;fnref:1&quot; class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn:1&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Windows" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/"/>
-    
-    <category term="软件" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E8%BD%AF%E4%BB%B6/"/>
-    
-    <category term="输入法" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E8%BD%AF%E4%BB%B6/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-    
-    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
-    
-    <category term="输入法" scheme="https://maojun.xyz/blog/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-    <category term="Rime" scheme="https://maojun.xyz/blog/tags/Rime/"/>
     
   </entry>
   
