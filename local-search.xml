@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>机器存活状态检测</title>
+    <link href="/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html"/>
+    <url>/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="机器存活状态检测"><a href="#机器存活状态检测" class="headerlink" title="机器存活状态检测"></a>机器存活状态检测</h2><p>给定一批服务器IP，判断机器是否存活。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-24</span><br> <br><span class="hljs-comment"># 服务器IP列表</span><br>IPS=(baidu.com qq.com)<br><span class="hljs-keyword">for</span> IP <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;IPS[@]&#125;</span><br><span class="hljs-keyword">do</span><br>n=`ping -c5 <span class="hljs-variable">$IP</span> | grep <span class="hljs-string">&quot;packet&quot;</span> |awk -F <span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> |awk <span class="hljs-string">&#x27;&#123;print $NF&#125;&#x27;</span>`<br><span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> ];<span class="hljs-keyword">then</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;执行失败&quot;</span><br><span class="hljs-built_in">exit</span> <br><span class="hljs-keyword">else</span><br>  n1=`<span class="hljs-built_in">echo</span> <span class="hljs-variable">$n</span>|sed <span class="hljs-string">&#x27;s/[0-9]//g&#x27;</span>`<br>  <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$n1</span>&quot;</span> ];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;执行失败了&quot;</span><br>    <span class="hljs-built_in">exit</span> 1<br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">fi</span><br><br><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$n</span> -ge 20 ];<span class="hljs-keyword">then</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;机器<span class="hljs-variable">$&#123;IP&#125;</span>宕机，丢包率是<span class="hljs-variable">$&#123;n&#125;</span>%&quot;</span><br><span class="hljs-keyword">else</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;机器<span class="hljs-variable">$&#123;IP&#125;</span>正常，丢包率是<span class="hljs-variable">$&#123;n&#125;</span>%&quot;</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>系统</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux判断磁盘分区读写是否正常</title>
     <link href="/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
     <url>/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</url>

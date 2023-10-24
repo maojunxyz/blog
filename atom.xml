@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-10-23T17:25:00.000Z</updated>
+  <updated>2023-10-24T13:22:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器存活状态检测</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html</id>
+    <published>2023-10-24T13:22:00.000Z</published>
+    <updated>2023-10-24T13:22:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;机器存活状态检测&quot;&gt;&lt;a href=&quot;#机器存活状态检测&quot; class=&quot;headerlink&quot; title=&quot;机器存活状态检测&quot;&gt;&lt;/a&gt;机器存活状态检测&lt;/h2&gt;&lt;p&gt;给定一批服务器IP，判断机器是否存活。&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux判断磁盘分区读写是否正常</title>
@@ -614,37 +644,6 @@
     <category term="输入法" scheme="https://maojun.xyz/blog/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
     
     <category term="Rime" scheme="https://maojun.xyz/blog/tags/Rime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JSON 数据验证和测试注意项</title>
-    <link href="https://maojun.xyz/blog/2023/08/json%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E5%92%8C%E6%B5%8B%E8%AF%95%E6%B3%A8%E6%84%8F%E9%A1%B9.html"/>
-    <id>https://maojun.xyz/blog/2023/08/json%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%E5%92%8C%E6%B5%8B%E8%AF%95%E6%B3%A8%E6%84%8F%E9%A1%B9.html</id>
-    <published>2023-08-03T16:02:00.000Z</published>
-    <updated>2023-08-03T16:02:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;在接口调用中，JSON 是主流的数据传输交换格式。 JSON</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="数据类型" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-    <category term="JSON" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/"/>
-    
-    
-    <category term="JSON" scheme="https://maojun.xyz/blog/tags/JSON/"/>
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   

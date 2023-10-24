@@ -18,24 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Linux判断磁盘分区读写是否正常 判断磁盘分区读写是否正常，并打印信息  12345678910111213#!&#x2F;bin&#x2F;sh# author: maojunxyz# version: 1.0# date: 2023-10-23for mount_p in &#96;df -h | sed &amp;#x27;1d&amp;#x27; | grep -v &amp;#x27;tmpfs&amp;#x27;  |awk &amp;#x27;&amp;#">
+    <meta name="description" content="机器存活状态检测给定一批服务器IP，判断机器是否存活。 123456789101112131415161718192021222324252627#!&#x2F;bin&#x2F;sh# author: maojunxyz# version: 1.0# date: 2023-10-24 # 服务器IP列表IPS&#x3D;(baidu.com qq.com)for IP in $&amp;#123;IPS[@]&amp;#125;don&#x3D;&#96;p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux判断磁盘分区读写是否正常">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html">
+<meta property="og:title" content="机器存活状态检测">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html">
 <meta property="og:site_name" content="程序员毛俊">
-<meta property="og:description" content="Linux判断磁盘分区读写是否正常 判断磁盘分区读写是否正常，并打印信息  12345678910111213#!&#x2F;bin&#x2F;sh# author: maojunxyz# version: 1.0# date: 2023-10-23for mount_p in &#96;df -h | sed &amp;#x27;1d&amp;#x27; | grep -v &amp;#x27;tmpfs&amp;#x27;  |awk &amp;#x27;&amp;#">
+<meta property="og:description" content="机器存活状态检测给定一批服务器IP，判断机器是否存活。 123456789101112131415161718192021222324252627#!&#x2F;bin&#x2F;sh# author: maojunxyz# version: 1.0# date: 2023-10-24 # 服务器IP列表IPS&#x3D;(baidu.com qq.com)for IP in $&amp;#123;IPS[@]&amp;#125;don&#x3D;&#96;p">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-23T17:25:00.000Z">
-<meta property="article:modified_time" content="2023-10-23T17:25:00.000Z">
+<meta property="article:published_time" content="2023-10-24T13:22:00.000Z">
+<meta property="article:modified_time" content="2023-10-24T13:22:00.000Z">
 <meta property="article:author" content="毛 俊">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Shell">
-<meta property="article:tag" content="每日练习">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Linux判断磁盘分区读写是否正常 - 程序员毛俊</title>
+  <title>机器存活状态检测 - 程序员毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -229,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Linux判断磁盘分区读写是否正常"></span>
+            <span id="subtitle" data-typed-text="机器存活状态检测"></span>
           
         </div>
 
@@ -240,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-23 17:25" pubdate>
-          2023年10月23日 下午
+        <time datetime="2023-10-24 13:22" pubdate>
+          2023年10月24日 下午
         </time>
       </span>
     
@@ -252,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          346 字
+          593 字
         
       </span>
     
@@ -263,7 +262,7 @@
         
         
         
-          3 分钟
+          5 分钟
         
       </span>
     
@@ -300,15 +299,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux判断磁盘分区读写是否正常</h1>
+            <h1 id="seo-header">机器存活状态检测</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Linux判断磁盘分区读写是否正常"><a href="#Linux判断磁盘分区读写是否正常" class="headerlink" title="Linux判断磁盘分区读写是否正常"></a>Linux判断磁盘分区读写是否正常</h2><ol>
-<li>判断磁盘分区读写是否正常，并打印信息</li>
-</ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-23</span><br><br><span class="hljs-keyword">for</span> mount_p <span class="hljs-keyword">in</span> `<span class="hljs-built_in">df</span> -h | sed <span class="hljs-string">&#x27;1d&#x27;</span> | grep -v <span class="hljs-string">&#x27;tmpfs&#x27;</span>  |awk <span class="hljs-string">&#x27;&#123;print $NF&#125;&#x27;</span>`;<span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">touch</span> <span class="hljs-variable">$mount_p</span>/testfile &amp;&amp; <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$mount_p</span>/testfile<br>  <span class="hljs-keyword">if</span> [ $? -ne 0 ];<span class="hljs-keyword">then</span><br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$mount_p</span> 读写有问题&quot;</span> <br>  <span class="hljs-keyword">else</span> <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$mount_p</span> 读写正常&quot;</span> <br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+                <h2 id="机器存活状态检测"><a href="#机器存活状态检测" class="headerlink" title="机器存活状态检测"></a>机器存活状态检测</h2><p>给定一批服务器IP，判断机器是否存活。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-24</span><br> <br><span class="hljs-comment"># 服务器IP列表</span><br>IPS=(baidu.com qq.com)<br><span class="hljs-keyword">for</span> IP <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;IPS[@]&#125;</span><br><span class="hljs-keyword">do</span><br>n=`ping -c5 <span class="hljs-variable">$IP</span> | grep <span class="hljs-string">&quot;packet&quot;</span> |awk -F <span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> |awk <span class="hljs-string">&#x27;&#123;print $NF&#125;&#x27;</span>`<br><span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> ];<span class="hljs-keyword">then</span><br>	<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;执行失败&quot;</span><br>	<span class="hljs-built_in">exit</span> <br><span class="hljs-keyword">else</span><br>  n1=`<span class="hljs-built_in">echo</span> <span class="hljs-variable">$n</span>|sed <span class="hljs-string">&#x27;s/[0-9]//g&#x27;</span>`<br>  <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$n1</span>&quot;</span> ];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;执行失败了&quot;</span><br>    <span class="hljs-built_in">exit</span> 1<br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">fi</span><br><br><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$n</span> -ge 20 ];<span class="hljs-keyword">then</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;机器<span class="hljs-variable">$&#123;IP&#125;</span>宕机，丢包率是<span class="hljs-variable">$&#123;n&#125;</span>%&quot;</span><br><span class="hljs-keyword">else</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;机器<span class="hljs-variable">$&#123;IP&#125;</span>正常，丢包率是<span class="hljs-variable">$&#123;n&#125;</span>%&quot;</span><br><span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
 
 <p>（本文完）</p>
 
@@ -355,8 +352,6 @@
       
         <a href="/blog/tags/Shell/" class="print-no-link">#Shell</a>
       
-        <a href="/blog/tags/%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0/" class="print-no-link">#每日练习</a>
-      
     </div>
   
 </div>
@@ -367,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux判断磁盘分区读写是否正常</div>
-      <div>https://maojun.xyz/blog/2023/10/Linux判断磁盘分区读写是否正常.html</div>
+      <div>机器存活状态检测</div>
+      <div>https://maojun.xyz/blog/2023/10/机器存活状态检测.html</div>
     </div>
     <div class="license-meta">
       
@@ -380,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月23日</div>
+          <div>2023年10月24日</div>
         </div>
       
       
@@ -424,18 +419,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/10/%E6%9C%BA%E5%99%A8%E5%AD%98%E6%B4%BB%E7%8A%B6%E6%80%81%E6%A3%80%E6%B5%8B.html" title="机器存活状态检测">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">机器存活状态检测</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html" title="冒泡排序算法">
-                        <span class="hidden-mobile">冒泡排序算法</span>
+                      <a href="/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html" title="Linux判断磁盘分区读写是否正常">
+                        <span class="hidden-mobile">Linux判断磁盘分区读写是否正常</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
