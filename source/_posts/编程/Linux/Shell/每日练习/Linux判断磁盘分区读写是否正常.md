@@ -3,7 +3,7 @@ title: Linux判断磁盘分区读写是否正常
 date: 2023/10/23 17:25
 updated: 2023/10/23 17:25
 categories:
-- [系统, Linux]
+- [编程, Linux]
 tags:
 - Linux
 - Shell

@@ -3,7 +3,7 @@ title: 修复 Ubuntu 下 “门” 或 “复” 字显示错误
 date: 2023/09/11 12:19
 updated: 2023/09/11 12:19
 categories:
-- [系统, Linux, Ubuntu]
+- [编程, Linux, Ubuntu]
 tags:
 - 操作系统
 - Ubuntu

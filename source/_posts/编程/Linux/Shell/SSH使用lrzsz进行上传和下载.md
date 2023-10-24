@@ -3,7 +3,7 @@ title: SSH 使用 lrzsz 进行上传和下载
 date: 2020/03/05 00:00
 updated: 2023/09/08 5:43
 categories:
-- [系统, Linux, SSH工具]
+- [编程, Linux, SSH工具]
 tags:
 - Linux
 - Shell

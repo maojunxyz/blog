@@ -3,7 +3,7 @@ title: Linux命令每日练习
 date: 2023/10/20 22:22
 updated: 2023/10/22 21:59
 categories:
-- [系统, Linux]
+- [编程, Linux]
 tags:
 - Linux
 - Shell

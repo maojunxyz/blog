@@ -3,7 +3,7 @@ title: Linux下不解压直接修改压缩包内文件
 date: 2020/03/25 00:00
 updated: 2023/09/10 11:58
 categories:
-- [系统, Linux, 压缩工具]
+- [编程, Linux, 压缩工具]
 tags:
 - Linux
 - Shell
