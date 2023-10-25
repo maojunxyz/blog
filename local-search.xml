@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>备份目录并创建软链接</title>
+    <link href="/blog/2023/10/%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5.html"/>
+    <url>/blog/2023/10/%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="备份目录并创建软链接"><a href="#备份目录并创建软链接" class="headerlink" title="备份目录并创建软链接"></a>备份目录并创建软链接</h2><ol><li>有一个目录&#x2F;tmp&#x2F;data&#x2F;,该目录下有数百个子目录。</li><li>需要将老文件（365天前的）挪到另外一个目录&#x2F;tmp&#x2F;data1下，还需要做软链接。</li><li>要确保老文件成功挪到&#x2F;tmp&#x2F;data1下之后才能做软链接，需要有日志。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-25</span><br><br><span class="hljs-function"><span class="hljs-title">main</span></span>()&#123;<br><span class="hljs-built_in">cd</span> /tmp/data<br><span class="hljs-keyword">for</span> <span class="hljs-built_in">dir</span> <span class="hljs-keyword">in</span> `<span class="hljs-built_in">ls</span>`<br><span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-variable">$dir</span><br>  <span class="hljs-keyword">for</span> old_data <span class="hljs-keyword">in</span> `find <span class="hljs-variable">$dir</span> -maxdepth 1 -<span class="hljs-built_in">type</span> d -mtime +365`<br>  <span class="hljs-keyword">do</span><br>     rsync -aR <span class="hljs-variable">$old_data</span>  /tmp/data1/<br>     <span class="hljs-keyword">if</span> [ $? -eq 0 ];<span class="hljs-keyword">then</span><br>       <span class="hljs-built_in">rm</span> -rf <span class="hljs-variable">$old_data</span> &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;/tmp/<span class="hljs-variable">$old_data</span> 移动成功&quot;</span><br>       <span class="hljs-built_in">ln</span> -s /tmp/data1/<span class="hljs-variable">$old_data</span> /tmp/data/<span class="hljs-variable">$old_data</span> &amp;&amp; \<br>       <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;/tmp/data/<span class="hljs-variable">$old_data</span> 创建软链成功&quot;</span><br>     <span class="hljs-keyword">else</span><br>       <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;/tmp/<span class="hljs-variable">$old_data</span> 未移动成功&quot;</span><br>     <span class="hljs-keyword">fi</span><br>  <span class="hljs-keyword">done</span><br><span class="hljs-keyword">done</span><br>&#125;<br><br>main &amp;&gt; /tmp/move_old_data_`<span class="hljs-built_in">date</span> +%F`.<span class="hljs-built_in">log</span><br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>修改目录下的文件权限和属组</title>
     <link href="/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html"/>
     <url>/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html</url>
