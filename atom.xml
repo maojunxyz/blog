@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-10-25T19:37:00.000Z</updated>
+  <updated>2023-10-26T15:05:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>菜单脚本根据输入指令来执行命令</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html</id>
+    <published>2023-10-26T15:05:00.000Z</published>
+    <updated>2023-10-26T15:05:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;菜单脚本根据输入指令来执行命令&quot;&gt;&lt;a href=&quot;#菜单脚本根据输入指令来执行命令&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查找指定目录5分钟内有修改的文件</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E6%9F%A5%E6%89%BE%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%955%E5%88%86%E9%92%9F%E5%86%85%E6%9C%89%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%87%E4%BB%B6.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E6%9F%A5%E6%89%BE%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%955%E5%88%86%E9%92%9F%E5%86%85%E6%9C%89%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%87%E4%BB%B6.html</id>
+    <published>2023-10-26T14:38:00.000Z</published>
+    <updated>2023-10-26T14:38:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;查找指定目录5分钟内有修改的文件&quot;&gt;&lt;a href=&quot;#查找指定目录5分钟内有修改的文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>监控系统负载并定时记录状态信息</title>
@@ -557,72 +615,6 @@
     <category term="电视剧" scheme="https://maojun.xyz/blog/tags/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
     
     <category term="国产剧" scheme="https://maojun.xyz/blog/tags/%E5%9B%BD%E4%BA%A7%E5%89%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修复 Ubuntu 下 “门” 或 “复” 字显示错误</title>
-    <link href="https://maojun.xyz/blog/2023/09/%E4%BF%AE%E5%A4%8D%20Ubuntu%20%E4%B8%8B%E9%97%A8%E5%92%8C%E5%A4%8D%E5%AD%97%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF.html"/>
-    <id>https://maojun.xyz/blog/2023/09/%E4%BF%AE%E5%A4%8D%20Ubuntu%20%E4%B8%8B%E9%97%A8%E5%92%8C%E5%A4%8D%E5%AD%97%E6%98%BE%E7%A4%BA%E9%94%99%E8%AF%AF.html</id>
-    <published>2023-09-11T12:19:00.000Z</published>
-    <updated>2023-09-11T12:19:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;在使用 Ubuntu 系统时，当输入  “门”或“复”字时，显示的文字有些别扭。认为是 Linux</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/Ubuntu/"/>
-    
-    
-    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Ubuntu" scheme="https://maojun.xyz/blog/tags/Ubuntu/"/>
-    
-    <category term="字体" scheme="https://maojun.xyz/blog/tags/%E5%AD%97%E4%BD%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《我的家里空无一物》观后感</title>
-    <link href="https://maojun.xyz/blog/2023/09/%E3%80%8A%E6%88%91%E7%9A%84%E5%AE%B6%E9%87%8C%E7%A9%BA%E6%97%A0%E4%B8%80%E7%89%A9%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html"/>
-    <id>https://maojun.xyz/blog/2023/09/%E3%80%8A%E6%88%91%E7%9A%84%E5%AE%B6%E9%87%8C%E7%A9%BA%E6%97%A0%E4%B8%80%E7%89%A9%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F.html</id>
-    <published>2023-09-10T22:01:00.000Z</published>
-    <updated>2023-09-10T22:01:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;导演: &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="影视剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/"/>
-    
-    <category term="电视剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E8%A7%86%E5%89%A7/"/>
-    
-    <category term="日剧" scheme="https://maojun.xyz/blog/categories/%E5%BD%B1%E8%A7%86%E5%89%A7/%E7%94%B5%E8%A7%86%E5%89%A7/%E6%97%A5%E5%89%A7/"/>
-    
-    
-    <category term="影视剧" scheme="https://maojun.xyz/blog/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/"/>
-    
-    <category term="观后感" scheme="https://maojun.xyz/blog/tags/%E8%A7%82%E5%90%8E%E6%84%9F/"/>
-    
-    <category term="日剧" scheme="https://maojun.xyz/blog/tags/%E6%97%A5%E5%89%A7/"/>
     
   </entry>
   
