@@ -18,15 +18,15 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="菜单脚本根据输入指令来执行命令 编写一个脚本根据输入指令来执行命令。 当输入1或d时，输出系统时间。 当输入2时，列出文件列表。 当输入3时，打印当前登入用户。 当输入4时，打印当前目录。 当输入q时，退出菜单。 当输入指令时，提示错误信息Wrong input, try again!并继续。  123456789101112131415161718192021222324252627282930">
+    <meta name="description" content="输入数字并循环执行 提示用户输入数字，并打印出输入的数字。 当用户输入不是数字时提示报错信息。 当用户输入字母q时，退出脚本。  1234567891011121314151617181920#!&#x2F;bin&#x2F;bash# author: maojunxyz# version: 1.0# date: 2023-10-27while :do  read -p &quot;请输入数字，当输入q时退出!&amp;qu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="菜单脚本根据输入指令来执行命令">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html">
+<meta property="og:title" content="输入数字并循环执行">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html">
 <meta property="og:site_name" content="程序员毛俊">
-<meta property="og:description" content="菜单脚本根据输入指令来执行命令 编写一个脚本根据输入指令来执行命令。 当输入1或d时，输出系统时间。 当输入2时，列出文件列表。 当输入3时，打印当前登入用户。 当输入4时，打印当前目录。 当输入q时，退出菜单。 当输入指令时，提示错误信息Wrong input, try again!并继续。  123456789101112131415161718192021222324252627282930">
+<meta property="og:description" content="输入数字并循环执行 提示用户输入数字，并打印出输入的数字。 当用户输入不是数字时提示报错信息。 当用户输入字母q时，退出脚本。  1234567891011121314151617181920#!&#x2F;bin&#x2F;bash# author: maojunxyz# version: 1.0# date: 2023-10-27while :do  read -p &quot;请输入数字，当输入q时退出!&amp;qu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-26T15:05:00.000Z">
-<meta property="article:modified_time" content="2023-10-26T15:05:00.000Z">
+<meta property="article:published_time" content="2023-10-27T22:59:00.000Z">
+<meta property="article:modified_time" content="2023-10-27T22:59:00.000Z">
 <meta property="article:author" content="毛 俊">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Shell">
@@ -34,7 +34,7 @@
   
   
   
-  <title>菜单脚本根据输入指令来执行命令 - 程序员毛俊</title>
+  <title>输入数字并循环执行 - 程序员毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="菜单脚本根据输入指令来执行命令"></span>
+            <span id="subtitle" data-typed-text="输入数字并循环执行"></span>
           
         </div>
 
@@ -239,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-26 15:05" pubdate>
-          2023年10月26日 下午
+        <time datetime="2023-10-27 22:59" pubdate>
+          2023年10月27日 晚上
         </time>
       </span>
     
@@ -251,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          465 字
+          387 字
         
       </span>
     
@@ -299,22 +299,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">菜单脚本根据输入指令来执行命令</h1>
+            <h1 id="seo-header">输入数字并循环执行</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="菜单脚本根据输入指令来执行命令"><a href="#菜单脚本根据输入指令来执行命令" class="headerlink" title="菜单脚本根据输入指令来执行命令"></a>菜单脚本根据输入指令来执行命令</h2><ol>
-<li>编写一个脚本根据输入指令来执行命令。</li>
-<li>当输入<code>1</code>或<code>d</code>时，输出系统时间。</li>
-<li>当输入<code>2</code>时，列出文件列表。</li>
-<li>当输入<code>3</code>时，打印当前登入用户。</li>
-<li>当输入<code>4</code>时，打印当前目录。</li>
-<li>当输入<code>q</code>时，退出菜单。</li>
-<li>当输入指令时，提示错误信息<code>Wrong input, try again!</code>并继续。</li>
+                <h2 id="输入数字并循环执行"><a href="#输入数字并循环执行" class="headerlink" title="输入数字并循环执行"></a>输入数字并循环执行</h2><ol>
+<li>提示用户输入数字，并打印出输入的数字。</li>
+<li>当用户输入不是数字时提示报错信息。</li>
+<li>当用户输入字母<code>q</code>时，退出脚本。</li>
 </ol>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-26</span><br><br><span class="hljs-keyword">while</span> :<br><span class="hljs-keyword">do</span><br> <span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;please input a number 1-4: &quot;</span> n<br> <span class="hljs-keyword">case</span> <span class="hljs-variable">$n</span> <span class="hljs-keyword">in</span> <br>   1|d)<br>     <span class="hljs-built_in">date</span><br>     <span class="hljs-built_in">continue</span><br>     ;;<br>   2)  <br>     <span class="hljs-built_in">ls</span><br>     <span class="hljs-built_in">continue</span><br>     ;;<br>   3)  <br>     <span class="hljs-built_in">who</span><br>     <span class="hljs-built_in">continue</span><br>     ;;<br>   4)  <br>     <span class="hljs-built_in">pwd</span><br>     <span class="hljs-built_in">continue</span><br>     ;;<br>   q)  <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Exit&quot;</span><br>     <span class="hljs-built_in">exit</span> 1<br>     <span class="hljs-built_in">break</span><br>     ;;<br>   *)  <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Wrong input, try again!&quot;</span><br>     <span class="hljs-built_in">continue</span><br>     ;;<br> <span class="hljs-keyword">esac</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-27</span><br><br><span class="hljs-keyword">while</span> :<br><span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;请输入数字，当输入q时退出!&quot;</span> n<br>  num=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> |sed -r <span class="hljs-string">&#x27;s/[0-9]//g&#x27;</span> |  <span class="hljs-built_in">wc</span> -c)<br>  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> == <span class="hljs-string">&quot;q&quot;</span> ]<br>  <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">exit</span> 0<br>  <span class="hljs-keyword">fi</span><br>  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$num</span>&quot;</span> -ne 1 ]<br>  <span class="hljs-keyword">then</span> <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;输入的不是数字，请重试!&quot;</span><br>  <span class="hljs-keyword">else</span><br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;你输入的数字是：<span class="hljs-variable">$n</span>&quot;</span><br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
 
+<p>（本文完）</p>
 
                 
               </div>
@@ -369,8 +366,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>菜单脚本根据输入指令来执行命令</div>
-      <div>https://maojun.xyz/blog/2023/10/菜单脚本根据输入指令来执行命令.html</div>
+      <div>输入数字并循环执行</div>
+      <div>https://maojun.xyz/blog/2023/10/输入数字并循环执行.html</div>
     </div>
     <div class="license-meta">
       
@@ -382,7 +379,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月26日</div>
+          <div>2023年10月27日</div>
         </div>
       
       
@@ -426,18 +423,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html" title="输入数字并循环执行">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">输入数字并循环执行</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/10/%E6%9F%A5%E6%89%BE%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%955%E5%88%86%E9%92%9F%E5%86%85%E6%9C%89%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%87%E4%BB%B6.html" title="查找指定目录5分钟内有修改的文件">
-                        <span class="hidden-mobile">查找指定目录5分钟内有修改的文件</span>
+                      <a href="/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html" title="菜单脚本根据输入指令来执行命令">
+                        <span class="hidden-mobile">菜单脚本根据输入指令来执行命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

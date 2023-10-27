@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>输入数字并循环执行</title>
+    <link href="/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html"/>
+    <url>/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="输入数字并循环执行"><a href="#输入数字并循环执行" class="headerlink" title="输入数字并循环执行"></a>输入数字并循环执行</h2><ol><li>提示用户输入数字，并打印出输入的数字。</li><li>当用户输入不是数字时提示报错信息。</li><li>当用户输入字母<code>q</code>时，退出脚本。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-27</span><br><br><span class="hljs-keyword">while</span> :<br><span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;请输入数字，当输入q时退出!&quot;</span> n<br>  num=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> |sed -r <span class="hljs-string">&#x27;s/[0-9]//g&#x27;</span> |  <span class="hljs-built_in">wc</span> -c)<br>  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> == <span class="hljs-string">&quot;q&quot;</span> ]<br>  <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">exit</span> 0<br>  <span class="hljs-keyword">fi</span><br>  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$num</span>&quot;</span> -ne 1 ]<br>  <span class="hljs-keyword">then</span> <br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;输入的不是数字，请重试!&quot;</span><br>  <span class="hljs-keyword">else</span><br>     <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;你输入的数字是：<span class="hljs-variable">$n</span>&quot;</span><br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>菜单脚本根据输入指令来执行命令</title>
     <link href="/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html"/>
     <url>/blog/2023/10/%E8%8F%9C%E5%8D%95%E8%84%9A%E6%9C%AC%E6%A0%B9%E6%8D%AE%E8%BE%93%E5%85%A5%E6%8C%87%E4%BB%A4%E6%9D%A5%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.html</url>
