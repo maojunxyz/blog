@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>监控站点状态</title>
+    <link href="/blog/2023/10/%E7%9B%91%E6%8E%A7%E7%AB%99%E7%82%B9%E7%8A%B6%E6%80%81.html"/>
+    <url>/blog/2023/10/%E7%9B%91%E6%8E%A7%E7%AB%99%E7%82%B9%E7%8A%B6%E6%80%81.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="监控站点状态"><a href="#监控站点状态" class="headerlink" title="监控站点状态"></a>监控站点状态</h2><ol><li>写一个脚本监控网站的可用性，访问网站放回<code>2xx</code>，<code>3xx</code>状态码则代表可正常访问，其他状态码为不可正常访问。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-meta">#!/bin/sh</span><br><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-28</span><br><br>code=$(curl --connect-timeout 3 -I <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> 2&gt;/dev/null |grep  <span class="hljs-string">&#x27;HTTP&#x27;</span> |awk <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$code</span>&quot;</span> |grep -qE <span class="hljs-string">&#x27;^2[0-9][0-9]|3[0-9][0-9]&#x27;</span>;<span class="hljs-keyword">then</span><br>   <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>可正常访问&quot;</span><br><span class="hljs-keyword">else</span><br>   <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>不可正常访问&quot;</span><br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure><p>(本文完)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>输入数字并循环执行</title>
     <link href="/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html"/>
     <url>/blog/2023/10/%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E5%B9%B6%E5%BE%AA%E7%8E%AF%E6%89%A7%E8%A1%8C.html</url>
@@ -1002,9 +1031,9 @@
     
     <tags>
       
-      <tag>翻译</tag>
-      
       <tag>软件测试</tag>
+      
+      <tag>翻译</tag>
       
     </tags>
     
@@ -1031,9 +1060,9 @@
     
     <tags>
       
-      <tag>软件测试</tag>
-      
       <tag>测试用例</tag>
+      
+      <tag>软件测试</tag>
       
     </tags>
     
