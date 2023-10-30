@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>抽奖程序给人员分配唯一的数字</title>
+    <link href="/blog/2023/10/%E6%8A%BD%E5%A5%96%E7%A8%8B%E5%BA%8F%E7%BB%99%E4%BA%BA%E5%91%98%E5%88%86%E9%85%8D%E5%94%AF%E4%B8%80%E7%9A%84%E6%95%B0%E5%AD%97.html"/>
+    <url>/blog/2023/10/%E6%8A%BD%E5%A5%96%E7%A8%8B%E5%BA%8F%E7%BB%99%E4%BA%BA%E5%91%98%E5%88%86%E9%85%8D%E5%94%AF%E4%B8%80%E7%9A%84%E6%95%B0%E5%AD%97.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="抽奖程序给人员分配唯一的数字"><a href="#抽奖程序给人员分配唯一的数字" class="headerlink" title="抽奖程序给人员分配唯一的数字"></a>抽奖程序给人员分配唯一的数字</h2><ol><li>多人抽签游戏，给人员分配<code>1-99</code>的随机整数。</li><li>相同名字的如果之前分配过随机数，则和之前一致。</li><li>已经分配过的数字不能重复分配。</li><li>循环执行，直到<kbd>Ctrl-C</kbd>键终止运行。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-30</span><br><br>&lt;&lt;<span class="hljs-string">&#x27;COMMENT&#x27;</span><br>1. 多人抽签游戏，给人员分配1-99的随机整数。<br>2. 相同名字的如果之前分配过随机数，则和之前一致。<br>3. 已经分配过的数字不能重复分配。<br>4. 循环执行，直到&lt;kbd&gt;Ctrl-C&lt;/kbd&gt;键终止运行。<br>COMMENT<br><br><span class="hljs-comment"># 生成1-99的数字，并校验已生成的数字</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">create_number</span></span>()&#123;<br><span class="hljs-keyword">while</span> :<br><span class="hljs-keyword">do</span><br>  num=$((RANDOM%<span class="hljs-number">99</span>+<span class="hljs-number">1</span>))<br>  n=$(awk -F <span class="hljs-string">&#x27;:&#x27;</span> -v NUMBER=<span class="hljs-string">&quot;<span class="hljs-variable">$num</span>&quot;</span> <span class="hljs-string">&#x27;$2 == NUMBER&#x27;</span> /tmp/name.log | <span class="hljs-built_in">wc</span> -l)<br>  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> -gt 0 ];<span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">continue</span><br>  <span class="hljs-keyword">else</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$num</span>&quot;</span><br>    <span class="hljs-built_in">break</span><br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br>&#125;<br><br><br><span class="hljs-keyword">while</span> :<br><span class="hljs-keyword">do</span><br>  <span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;Please input a name:&quot;</span> name<br>  <span class="hljs-comment"># 若抽奖名单不存在，则根据名称生成数字并保存名单</span><br>  <span class="hljs-keyword">if</span> [ ! -f /tmp/name.log ];<span class="hljs-keyword">then</span><br>  num=$((RANDOM%<span class="hljs-number">99</span>+<span class="hljs-number">1</span>))<br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your number is: <span class="hljs-variable">$num</span>&quot;</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$name</span>:<span class="hljs-variable">$num</span>&quot;</span> &gt; /tmp/name.log<br>  <span class="hljs-keyword">else</span><br>    <span class="hljs-comment"># 抽奖名单已存在，判断名称是否存在，存在直接打印抽奖名字和数字;不存在则创建名单。</span><br>    n=$(awk -F <span class="hljs-string">&#x27;:&#x27;</span> -v NAME=<span class="hljs-string">&quot;<span class="hljs-variable">$name</span>&quot;</span> <span class="hljs-string">&#x27;$1 == NAME&#x27;</span> /tmp/name.log | <span class="hljs-built_in">wc</span> -l)<br>    <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$n</span>&quot;</span> -gt 0 ];<span class="hljs-keyword">then</span><br>      <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The name already exist.&quot;</span><br>      awk -F <span class="hljs-string">&#x27;:&#x27;</span> -v NAME=<span class="hljs-string">&quot;<span class="hljs-variable">$name</span>&quot;</span> <span class="hljs-string">&#x27;$1 == NAME&#x27;</span> /tmp/name.log<br>      <span class="hljs-built_in">continue</span><br>    <span class="hljs-keyword">else</span><br>      number=$(create_number)<br>    <span class="hljs-keyword">fi</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your number is: <span class="hljs-variable">$number</span>&quot;</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$name</span>:<span class="hljs-variable">$number</span>&quot;</span> &gt;&gt; /tmp/name.log<br>  <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>判断输入的日期是否符合要求</title>
     <link href="/blog/2023/10/%E5%88%A4%E6%96%AD%E8%BE%93%E5%85%A5%E7%9A%84%E6%97%A5%E6%9C%9F%E6%98%AF%E5%90%A6%E7%AC%A6%E5%90%88%E8%A6%81%E6%B1%82.html"/>
     <url>/blog/2023/10/%E5%88%A4%E6%96%AD%E8%BE%93%E5%85%A5%E7%9A%84%E6%97%A5%E6%9C%9F%E6%98%AF%E5%90%A6%E7%AC%A6%E5%90%88%E8%A6%81%E6%B1%82.html</url>
