@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-10-30T23:40:00.000Z</updated>
+  <updated>2023-10-31T16:02:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>检查进程和端口服务是否正常</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</id>
+    <published>2023-10-31T16:02:00.000Z</published>
+    <updated>2023-10-31T16:02:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;检查进程和端口服务是否正常&quot;&gt;&lt;a href=&quot;#检查进程和端口服务是否正常&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计文件的行数</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html</id>
+    <published>2023-10-31T14:17:00.000Z</published>
+    <updated>2023-10-31T14:17:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;统计文件的行数&quot;&gt;&lt;a href=&quot;#统计文件的行数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>抽奖程序给人员分配唯一的数字</title>
@@ -541,69 +599,6 @@
     <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
     
     <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 11 使用技巧</title>
-    <link href="https://maojun.xyz/blog/2023/09/32423.html"/>
-    <id>https://maojun.xyz/blog/2023/09/32423.html</id>
-    <published>2023-09-27T19:44:00.000Z</published>
-    <updated>2023-09-27T19:44:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;窗口与屏幕&quot;&gt;&lt;a href=&quot;#窗口与屏幕&quot; class=&quot;headerlink&quot; title=&quot;窗口与屏幕&quot;&gt;&lt;/a&gt;窗口与屏幕&lt;/h2&gt;&lt;p&gt;1、拖动窗口并轻轻晃动可以最小化其他窗口。&lt;/p&gt;
-&lt;p&gt;2、按 Win + D</summary>
-        
-      
-    
-    
-    
-    <category term="系统" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="Windows" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/"/>
-    
-    <category term="使用技巧" scheme="https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
-    
-    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jmeter安装和介绍</title>
-    <link href="https://maojun.xyz/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html"/>
-    <id>https://maojun.xyz/blog/2023/09/Jmeter%E5%AE%89%E8%A3%85%E5%92%8C%E4%BB%8B%E7%BB%8D.html</id>
-    <published>2023-09-24T21:56:00.000Z</published>
-    <updated>2023-09-24T21:56:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Apache JMeter是一个Apache项目，可以用作负载测试工具，用于分析和测量各种服务的性能，可用于 Web</summary>
-        
-      
-    
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试工具" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Jmeter" scheme="https://maojun.xyz/blog/tags/Jmeter/"/>
     
   </entry>
   

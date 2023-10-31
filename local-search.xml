@@ -4,6 +4,64 @@
   
   
   <entry>
+    <title>检查进程和端口服务是否正常</title>
+    <link href="/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
+    <url>/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="检查进程和端口服务是否正常"><a href="#检查进程和端口服务是否正常" class="headerlink" title="检查进程和端口服务是否正常"></a>检查进程和端口服务是否正常</h2><ol><li>检查进程服务是否存在</li><li>检查进程端口是否存在</li><li>当2者都存活时，判定服务正常。</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-10-31</span><br><br><span class="hljs-comment"># 定义一个函数，用于检查必需的工具是否已安装</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">check_tools</span></span>()&#123;<br>    <span class="hljs-keyword">if</span> ! <span class="hljs-built_in">which</span> pgrep &amp;&gt;/dev/null; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;没有安装pgrep命令&quot;</span><br>        <span class="hljs-built_in">exit</span> 1<br>    <span class="hljs-keyword">fi</span><br><br>    <span class="hljs-keyword">if</span> ! <span class="hljs-built_in">which</span> ss &amp;&gt;/dev/null; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;没有安装ss命令&quot;</span><br>        <span class="hljs-built_in">exit</span> 1<br>    <span class="hljs-keyword">fi</span><br>&#125;<br><br><span class="hljs-comment"># 定义一个函数，用于检查特定进程是否在运行</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">check_ps</span></span>()&#123;<br>    <span class="hljs-keyword">if</span> pgrep <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> &amp;&gt;/dev/null; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">return</span> 0  <span class="hljs-comment"># 进程存在，返回0表示真</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">return</span> 1  <span class="hljs-comment"># 进程不存在，返回1表示假</span><br>    <span class="hljs-keyword">fi</span><br>&#125;<br><br><span class="hljs-comment"># 定义一个函数，用于检查特定端口是否在监听</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">check_port</span></span>()&#123;<br>    port_num=$(ss -lnp | grep -c <span class="hljs-string">&quot;:<span class="hljs-variable">$1</span> &quot;</span>)<br>    <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$port_num</span>&quot;</span> -ne 0 ]; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">return</span> 0  <span class="hljs-comment"># 端口在监听，返回0表示真</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">return</span> 1  <span class="hljs-comment"># 端口不在监听，返回1表示假</span><br>    <span class="hljs-keyword">fi</span><br>&#125;<br><br><span class="hljs-comment"># 定义一个函数，用于检查特定服务（进程和端口）</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">check_srv</span></span>()&#123;<br>    check_ps <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> &amp;&amp; check_port <span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span><br>    <span class="hljs-keyword">if</span> check_ps <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> &amp;&amp; check_port <span class="hljs-string">&quot;<span class="hljs-variable">$2</span>&quot;</span>; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>服务正常&quot;</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>服务不正常&quot;</span><br>    <span class="hljs-keyword">fi</span><br>&#125;<br><br><span class="hljs-comment"># 调用函数检查必需工具是否已安装</span><br>check_tools<br><br><span class="hljs-comment"># 分别检查指定服务的状态</span><br>check_srv nginx 443<br>check_srv mysql 3306<br>check_srv redis 6379<br>check_srv java 8080<br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>统计文件的行数</title>
+    <link href="/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html"/>
+    <url>/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="统计文件的行数"><a href="#统计文件的行数" class="headerlink" title="统计文件的行数"></a>统计文件的行数</h2><ol><li>编写一个<code>shell</code>脚本以输出一个文本文件<code>nowcoder.txt</code>中的行数<br>示例:<br>假设<code>nowcoder.txt</code>内容如下：</li></ol><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> a = <span class="hljs-number">10</span>;<br>    <span class="hljs-type">int</span> b = <span class="hljs-number">100</span>;<br>    cout &lt;&lt; <span class="hljs-string">&quot;a + b:&quot;</span> &lt;&lt; a + b &lt;&lt; endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>你的脚本应当输出：<br>9</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 方法 1</span><br><span class="hljs-built_in">wc</span> -l nowcoder.txt | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span><br><span class="hljs-comment"># 方法 2-1</span><br><span class="hljs-built_in">cat</span> nowcoder.txt | <span class="hljs-built_in">wc</span> -l<br><span class="hljs-comment"># 方法 2-2</span><br><span class="hljs-built_in">wc</span> -l &lt; nowcoder.txt<br><br><span class="hljs-comment"># 方法 3-1</span><br><span class="hljs-built_in">cat</span> -n nowcoder.txt | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> | <span class="hljs-built_in">tail</span> -n 1<br><span class="hljs-comment"># 方法 3-2</span><br><span class="hljs-built_in">cat</span> -n nowcoder.txt | <span class="hljs-built_in">tail</span> -n 1 | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span><br><br><span class="hljs-comment"># 方法 4</span><br>i=0<br><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> p;<span class="hljs-keyword">do</span><br>  i=$((i + <span class="hljs-number">1</span>))<br><span class="hljs-keyword">done</span> &lt; nowcoder.txt<br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span><br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题库</strong></p><ul><li><a href="https://www.nowcoder.com/practice/205ccba30b264ae697a78f425f276779">统计文件的行数</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>抽奖程序给人员分配唯一的数字</title>
     <link href="/blog/2023/10/%E6%8A%BD%E5%A5%96%E7%A8%8B%E5%BA%8F%E7%BB%99%E4%BA%BA%E5%91%98%E5%88%86%E9%85%8D%E5%94%AF%E4%B8%80%E7%9A%84%E6%95%B0%E5%AD%97.html"/>
     <url>/blog/2023/10/%E6%8A%BD%E5%A5%96%E7%A8%8B%E5%BA%8F%E7%BB%99%E4%BA%BA%E5%91%98%E5%88%86%E9%85%8D%E5%94%AF%E4%B8%80%E7%9A%84%E6%95%B0%E5%AD%97.html</url>
