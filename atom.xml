@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-10-31T16:02:00.000Z</updated>
+  <updated>2023-11-01T22:31:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,173 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>监控网卡流量</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E7%9B%91%E6%8E%A7%E7%BD%91%E5%8D%A1%E6%B5%81%E9%87%8F.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E7%9B%91%E6%8E%A7%E7%BD%91%E5%8D%A1%E6%B5%81%E9%87%8F.html</id>
+    <published>2023-11-01T22:31:00.000Z</published>
+    <updated>2023-11-01T22:31:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;监控网卡流量&quot;&gt;&lt;a href=&quot;#监控网卡流量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二维数组中查找数字</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%95%B0%E5%AD%97.html</id>
+    <published>2023-11-01T20:56:00.000Z</published>
+    <updated>2023-11-01T20:56:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二维数组中查找数字&quot;&gt;&lt;a href=&quot;#二维数组中查找数字&quot; class=&quot;headerlink&quot; title=&quot;二维数组中查找数字&quot;&gt;&lt;/a&gt;二维数组中查找数字&lt;/h2&gt;&lt;p&gt;在一个 &lt;code&gt;n * m&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>替换空格</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC.html</id>
+    <published>2023-11-01T20:51:00.000Z</published>
+    <updated>2023-11-01T20:51:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;替换空格&quot;&gt;&lt;a href=&quot;#替换空格&quot; class=&quot;headerlink&quot; title=&quot;替换空格&quot;&gt;&lt;/a&gt;替换空格&lt;/h2&gt;&lt;p&gt;请实现一个函数，把字符串 &lt;code&gt;s&lt;/code&gt; 中的每个空格替换成”%20”。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两数之和</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C.html</id>
+    <published>2023-11-01T20:32:00.000Z</published>
+    <updated>2023-11-01T20:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;两数之和&quot;&gt;&lt;a href=&quot;#两数之和&quot; class=&quot;headerlink&quot; title=&quot;两数之和&quot;&gt;&lt;/a&gt;两数之和&lt;/h2&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt; 和一个整数目标值</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>找出数组中重复的数字</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97.html</id>
+    <published>2023-11-01T20:16:00.000Z</published>
+    <updated>2023-11-01T20:16:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;找出数组中重复的数字&quot;&gt;&lt;a href=&quot;#找出数组中重复的数字&quot; class=&quot;headerlink&quot; title=&quot;找出数组中重复的数字&quot;&gt;&lt;/a&gt;找出数组中重复的数字&lt;/h2&gt;&lt;p&gt;新建一个 &lt;code&gt;findRepeatNumber.js&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打印文件的最后5行</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E5%E8%A1%8C.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E6%96%87%E4%BB%B6%E7%9A%84%E6%9C%80%E5%90%8E5%E8%A1%8C.html</id>
+    <published>2023-11-01T17:37:00.000Z</published>
+    <updated>2023-11-01T17:37:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;打印文件的最后5行&quot;&gt;&lt;a href=&quot;#打印文件的最后5行&quot; class=&quot;headerlink&quot; title=&quot;打印文件的最后5行&quot;&gt;&lt;/a&gt;打印文件的最后5行&lt;/h2&gt;&lt;p&gt;查看日志的时候，经常会从文件的末尾往前查看，请你写一个bash</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>检查进程和端口服务是否正常</title>
@@ -421,184 +588,6 @@
     <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
     
     <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux判断磁盘分区读写是否正常</title>
-    <link href="https://maojun.xyz/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
-    <id>https://maojun.xyz/blog/2023/10/Linux%E5%88%A4%E6%96%AD%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E8%AF%BB%E5%86%99%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</id>
-    <published>2023-10-23T17:25:00.000Z</published>
-    <updated>2023-10-23T17:25:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Linux判断磁盘分区读写是否正常&quot;&gt;&lt;a href=&quot;#Linux判断磁盘分区读写是否正常&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-    <category term="每日练习" scheme="https://maojun.xyz/blog/tags/%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>冒泡排序算法</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.html</id>
-    <published>2023-10-23T12:56:00.000Z</published>
-    <updated>2023-10-23T12:56:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h2&gt;&lt;p&gt;冒泡排序（Bubble</summary>
-        
-      
-    
-    
-    
-    <category term="编程语言" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法" scheme="https://maojun.xyz/blog/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二分查找法</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E6%B3%95.html</id>
-    <published>2023-10-22T21:32:00.000Z</published>
-    <updated>2023-10-22T21:32:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Java实现&quot;&gt;&lt;a href=&quot;#Java实现&quot; class=&quot;headerlink&quot; title=&quot;Java实现&quot;&gt;&lt;/a&gt;Java实现&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="编程语言" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    <category term="算法" scheme="https://maojun.xyz/blog/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>垃圾回收器理论和实践</title>
-    <link href="https://maojun.xyz/blog/2023/10/Untitled.html"/>
-    <id>https://maojun.xyz/blog/2023/10/Untitled.html</id>
-    <published>2023-10-21T12:37:00.000Z</published>
-    <updated>2023-10-21T12:37:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;文件备份&quot;&gt;&lt;a href=&quot;#文件备份&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程语言" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    
-    <category term="Java" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/"/>
-    
-    
-    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
-    
-    <category term="JVM" scheme="https://maojun.xyz/blog/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux命令每日练习</title>
-    <link href="https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html"/>
-    <id>https://maojun.xyz/blog/2023/10/Linux%E5%91%BD%E4%BB%A4%E6%AF%8F%E6%97%A5%E7%BB%83%E4%B9%A0.html</id>
-    <published>2023-10-20T22:22:00.000Z</published>
-    <updated>2023-10-22T21:59:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;文件备份&quot;&gt;&lt;a href=&quot;#文件备份&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>接口测试工具Insomnia入门使用</title>
-    <link href="https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html"/>
-    <id>https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html</id>
-    <published>2023-09-27T22:22:00.000Z</published>
-    <updated>2023-09-27T22:22:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;打开官网的下载地址：&lt;a href=&quot;https://insomnia.rest/download&quot;&gt;Download -</summary>
-        
-      
-    
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试工具" scheme="https://maojun.xyz/blog/categories/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
     
   </entry>
   
