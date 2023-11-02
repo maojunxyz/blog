@@ -4,6 +4,91 @@
   
   
   <entry>
+    <title>解决Git在终端中文乱码的问题</title>
+    <link href="/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
+    <url>/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="解决Git在命令行中文显示乱码"><a href="#解决Git在命令行中文显示乱码" class="headerlink" title="解决Git在命令行中文显示乱码"></a>解决Git在命令行中文显示乱码</h2><p>将git配置文件 <code>core.quotepath</code>项设置为<code>false</code>。<code>quotepath</code>表示引用路径，加上<code>--global</code>表示全局配置:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global core.quotepath <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Git</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Redis大Key怎么处理</title>
+    <link href="/blog/2023/11/Redis%E5%A4%A7Key%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86.html"/>
+    <url>/blog/2023/11/Redis%E5%A4%A7Key%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="什么是大Key"><a href="#什么是大Key" class="headerlink" title="什么是大Key"></a>什么是大Key</h2><p>BigKey称为大Key，通常以Key对应Value的存储大小，或者Key对应Value的数量来进行综合判断。对于大Key也没有严格的定义区分，针对String与非String结构，给出如下定义：</p><ul><li>String：String类型的 Key 对应的 Value 超过 10KB</li><li>非String结构（Hash，Set，ZSet，List）：Value的数量达到10000个，或者Vaule的总大小为100KB</li><li>集群中Key的总数超过1亿</li></ul><h2 id="产生原因"><a href="#产生原因" class="headerlink" title="产生原因"></a>产生原因</h2><ol><li>数据结构设置不合理，例如集合中元素唯一时，应该使用Set替换List；</li><li>针对业务缺少预估性，没有预见Value动态增长；</li><li>Key没有设置过期时间，把缓存当成垃圾桶，一直再往里面扔，但是从不处理</li></ol><h2 id="存在危害"><a href="#存在危害" class="headerlink" title="存在危害"></a>存在危害</h2><ul><li>数据倾斜</li></ul><p>redis数据倾斜分为<strong>数据访问倾斜和数据量倾</strong>斜，会导致该Key所在的数据分片节点CPU使用率、带宽使用率升高，从而影响该分片上所有Key的处理。</p><p><strong>数据访问倾斜</strong>：某节点中key的QPS高于其他节点中的Key</p><p><strong>数据量倾斜</strong>：某节点中key的大小高于其他节点中的Key</p><ul><li>网络传输延迟</li></ul><p>当有大key时，单次操作时间延长，导致网络阻塞。</p><ul><li>慢查询</li></ul><p>严重影响 QPS 、TP99 等指标，对大Key进行的慢操作会导致后续的命令被阻塞，从而导致一系列慢查询。</p><ul><li>CPU压力</li></ul><p>内存中数据量过大，就会造成CPU负载过高。单个分片cpu占用率过高，其他分片无法拥有cpu资源，从而被影响。</p><ul><li>持久化备份</li></ul><p>大 key 对持久化也有些影响。fork 操作会拷贝父进程的页表项，如果过大，会占用更多页表，主线程阻塞拷贝需要一定的时间。</p><h2 id="检测大Key"><a href="#检测大Key" class="headerlink" title="检测大Key"></a>检测大Key</h2><ul><li><p>redis-cli –bigkeys</p><p>执行redis-cli的–bigkeys选项</p></li><li><p>redis-rdb-tools</p></li></ul><p>​<a href="https://github.com/sripathikrishnan/redis-rdb-tools">https://github.com/sripathikrishnan/redis-rdb-tools</a></p><h2 id="应对策略"><a href="#应对策略" class="headerlink" title="应对策略"></a>应对策略</h2><ul><li>设置过期时间，尽量过期时间分散，防止大Key同一时间过期</li><li>把大Key分割成小key来处理，比如存储为String类型的JSON，可以删除不使用的Filed；</li></ul><p>例如对象为{“userName”:”张三”,”ciyt”:”北京”}，如果只需要用到userName属性，那就定义新对象，只具有userName属性{“userName”:”张三”}，精简缓存中数据。</p><ul><li>搭建redist集群，把key分配到不同的hash slot槽所在的分片上</li><li>采用压缩算法，利用时间换空间，进行序列化与反序列化。同时也存在缓存数据识别性低的缺点</li><li>在业务上进行干预，设置阈值。比如用户购物车的商品数量，或者领券的数量，不能无限的增大；</li></ul><h2 id="删除大Key"><a href="#删除大Key" class="headerlink" title="删除大Key"></a>删除大Key</h2><h3 id="DEL命令"><a href="#DEL命令" class="headerlink" title="DEL命令"></a>DEL命令</h3><ul><li>redis &lt; 4.0 版本时，在主线程中同步删除，删除大Key会阻塞主线程。</li><li>4.0 版本 &lt; redis&lt; 6.0 版本：引入lazy-free，手动开启lazy-free时，有4个选项可以控制，分别对应不同场景下，是否开启异步释放内存机制：<ul><li>lazyfree-lazy-expire：key在过期删除时尝试异步释放内存</li><li>lazyfree-lazy-eviction：内存达到maxmemory并设置了淘汰策略时尝试异步释放内存</li><li>lazyfree-lazy-server-del：执行RENAME&#x2F;MOVE等命令或需要覆盖一个key时，删除旧key尝试异步释放内存</li><li>replica-lazy-flush：主从全量同步，从库清空数据库时异步释放内存</li></ul></li></ul><p>开启lazy-free后，Redis在释放一个key的内存时，首先会评估代价，如果释放内存的代价很小，那么就直接在主线程中操作了，没必要放到异步线程中执行</p><p>redis &gt;&#x3D; 6.0 版本：引入lazyfree-lazy-user-del，只要开启了，del直接可以异步删除key，不会阻塞主线程。</p><h3 id="SCAN命令"><a href="#SCAN命令" class="headerlink" title="SCAN命令"></a>SCAN命令</h3><p>SCAN命令可以帮助在不阻塞主线程的情况下逐步遍历大量的键，以及避免对数据库的阻塞。</p><h3 id="UNLINK命令"><a href="#UNLINK命令" class="headerlink" title="UNLINK命令"></a>UNLINK命令</h3><p>Redis 4.0 提供了 lazy delete (unlink命令) </p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>当Hash&#x2F;Set底层采用哈希表存储（非ziplist&#x2F;int编码存储）时，并且元素数量超过64个</li><li>当ZSet底层采用跳表存储（非ziplist编码存储）时，并且元素数量超过64个</li><li>当List链表节点数量超过64个（注意，不是元素数量，而是链表节点的数量，List的实现是在每个节点包含了若干个元素的数据，这些元素采用ziplist存储）</li><li>refcount &#x3D;&#x3D; 1 就是在没有引用这个Key时</li></ul><p>只有以上这些情况，在删除key释放内存时，才会真正放到异步线程中执行，其他情况一律还是在主线程操作。也就是说String（不管内存占用多大）、List（少量元素）、Set（int编码存储）、Hash&#x2F;ZSet（ziplist编码存储）这些情况下的key在释放内存时，依旧在主线程中操作。</p><p><strong>参考链接</strong></p><ul><li><a href="https://mp.weixin.qq.com/s/L9ozOPivbM1SjhoTfjHgaw">浅析Redis大Key</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程语言</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Redis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>输出 0 到 500 中 7 的倍数</title>
+    <link href="/blog/2023/11/%E8%BE%93%E5%87%BA%200%20%E5%88%B0%20500%20%E4%B8%AD%207%20%E7%9A%84%E5%80%8D%E6%95%B0.html"/>
+    <url>/blog/2023/11/%E8%BE%93%E5%87%BA%200%20%E5%88%B0%20500%20%E4%B8%AD%207%20%E7%9A%84%E5%80%8D%E6%95%B0.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="输出-0-到-500-中-7-的倍数"><a href="#输出-0-到-500-中-7-的倍数" class="headerlink" title="输出 0 到 500 中 7 的倍数"></a>输出 0 到 500 中 7 的倍数</h2><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-11-02</span><br><br><span class="hljs-comment"># 方法 1</span><br>start=0<br>end=500<br>step=7<br><span class="hljs-keyword">while</span> [ <span class="hljs-variable">$start</span> -lt <span class="hljs-variable">$end</span> ]; <span class="hljs-keyword">do</span><br>    <span class="hljs-keyword">if</span> !(( <span class="hljs-variable">$start</span> % <span class="hljs-variable">$step</span> )); <span class="hljs-keyword">then</span><br>         <span class="hljs-built_in">echo</span> <span class="hljs-variable">$start</span><br>         start=$(( start + <span class="hljs-number">1</span> ))<br>    <span class="hljs-keyword">else</span><br>         start=$(( start + <span class="hljs-number">1</span> ))<br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-comment"># 方法 2</span><br><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> &#123;0..500..7&#125;; <span class="hljs-keyword">do</span> <br>   <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;num&#125;</span>&quot;</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-comment"># 方法 3</span><br><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> &#123;0..500&#125;;<span class="hljs-keyword">do</span><br>   [[ <span class="hljs-string">&quot;((num%7))&quot;</span> -eq 0 ]] &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$&#123;num&#125;</span>&quot;</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题库</strong></p><ul><li><a href="https://www.nowcoder.com/practice/8b85768394304511b0eb887244e51872">输出 0 到 500 中 7 的倍数</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>监控网卡流量</title>
     <link href="/blog/2023/11/%E7%9B%91%E6%8E%A7%E7%BD%91%E5%8D%A1%E6%B5%81%E9%87%8F.html"/>
     <url>/blog/2023/11/%E7%9B%91%E6%8E%A7%E7%BD%91%E5%8D%A1%E6%B5%81%E9%87%8F.html</url>
