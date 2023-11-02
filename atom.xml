@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-11-02T20:48:00.000Z</updated>
+  <updated>2023-11-02T22:02:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有效括号序列</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7%E5%BA%8F%E5%88%97.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7%E5%BA%8F%E5%88%97.html</id>
+    <published>2023-11-02T22:02:00.000Z</published>
+    <updated>2023-11-02T22:02:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;有效括号序列&quot;&gt;&lt;a href=&quot;#有效括号序列&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>解决Git在终端中文乱码的问题</title>
@@ -542,35 +571,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;备份目录并创建软链接&quot;&gt;&lt;a href=&quot;#备份目录并创建软链接&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修改目录下的文件权限和属组</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E4%BF%AE%E6%94%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E5%92%8C%E5%B1%9E%E7%BB%84.html</id>
-    <published>2023-10-24T19:30:00.000Z</published>
-    <updated>2023-10-24T19:30:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;修改目录下的文件权限和属组&quot;&gt;&lt;a href=&quot;#修改目录下的文件权限和属组&quot; class=&quot;headerlink&quot; title=&quot;修改目录下的文件权限和属组&quot;&gt;&lt;/a&gt;修改目录下的文件权限和属组&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
         
       
     

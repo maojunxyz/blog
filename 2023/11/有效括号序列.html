@@ -18,22 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="解决Git在命令行中文显示乱码将git配置文件 core.quotepath项设置为false。quotepath表示引用路径，加上--global表示全局配置: 1git config --global core.quotepath false    （本文完）">
+    <meta name="description" content="有效括号序列给出一个仅包含字符’(‘,’)’,’{‘,’}’,’[‘和’]’,的字符串，判断给出的字符串是否是合法的括号序列括号必须以正确的顺序关闭，”()”和”()[]{}”都是合法的括号序列，但”(]”和”([)]”不合法。 数据范围：字符串长度 0≤n≤10000 要求：空间复杂度 O(n)，时间复杂度 O(n) 题解方法一： 12345678910111213141516171819202">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决Git在终端中文乱码的问题">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html">
+<meta property="og:title" content="有效括号序列">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/11/%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7%E5%BA%8F%E5%88%97.html">
 <meta property="og:site_name" content="程序员毛俊">
-<meta property="og:description" content="解决Git在命令行中文显示乱码将git配置文件 core.quotepath项设置为false。quotepath表示引用路径，加上--global表示全局配置: 1git config --global core.quotepath false    （本文完）">
+<meta property="og:description" content="有效括号序列给出一个仅包含字符’(‘,’)’,’{‘,’}’,’[‘和’]’,的字符串，判断给出的字符串是否是合法的括号序列括号必须以正确的顺序关闭，”()”和”()[]{}”都是合法的括号序列，但”(]”和”([)]”不合法。 数据范围：字符串长度 0≤n≤10000 要求：空间复杂度 O(n)，时间复杂度 O(n) 题解方法一： 12345678910111213141516171819202">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-02T20:48:00.000Z">
-<meta property="article:modified_time" content="2023-11-02T20:48:00.000Z">
+<meta property="article:published_time" content="2023-11-02T22:02:00.000Z">
+<meta property="article:modified_time" content="2023-11-02T22:02:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="数据结构和算法">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>解决Git在终端中文乱码的问题 - 程序员毛俊</title>
+  <title>有效括号序列 - 程序员毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="解决Git在终端中文乱码的问题"></span>
+            <span id="subtitle" data-typed-text="有效括号序列"></span>
           
         </div>
 
@@ -238,7 +239,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-02 20:48" pubdate>
+        <time datetime="2023-11-02 22:02" pubdate>
           2023年11月2日 晚上
         </time>
       </span>
@@ -250,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          122 字
+          1.8k 字
         
       </span>
     
@@ -261,7 +262,7 @@
         
         
         
-          2 分钟
+          15 分钟
         
       </span>
     
@@ -298,17 +299,25 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">解决Git在终端中文乱码的问题</h1>
+            <h1 id="seo-header">有效括号序列</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="解决Git在命令行中文显示乱码"><a href="#解决Git在命令行中文显示乱码" class="headerlink" title="解决Git在命令行中文显示乱码"></a>解决Git在命令行中文显示乱码</h2><p>将git配置文件 <code>core.quotepath</code>项设置为<code>false</code>。<code>quotepath</code>表示引用路径，加上<code>--global</code>表示全局配置:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global core.quotepath <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+                <h2 id="有效括号序列"><a href="#有效括号序列" class="headerlink" title="有效括号序列"></a>有效括号序列</h2><p>给出一个仅包含字符’(‘,’)’,’{‘,’}’,’[‘和’]’,的字符串，判断给出的字符串是否是合法的括号序列<br>括号必须以正确的顺序关闭，”()”和”()[]{}”都是合法的括号序列，但”(]”和”([)]”不合法。</p>
+<p>数据范围：字符串长度 0≤n≤10000</p>
+<p>要求：空间复杂度 <em>O</em>(<em>n</em>)，时间复杂度 <em>O</em>(<em>n</em>)</p>
+<h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><p>方法一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 创建一个字符类型的堆栈(Stack)，用于检查括号匹配</span><br>Stack&lt;Character&gt; stk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br><br><span class="hljs-comment">// 遍历输入字符串 s 中的每个字符</span><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>    <span class="hljs-comment">// 根据字符类型，执行不同的操作</span><br>    <span class="hljs-keyword">switch</span> (s.charAt(i)) &#123;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;(&#x27;</span>: <span class="hljs-comment">// 如果字符是左括号 &#x27;(&#x27;</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;[&#x27;</span>: <span class="hljs-comment">// 或者是左方括号 &#x27;[&#x27;</span><br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;&#123;&#x27;</span>: <span class="hljs-comment">// 或者是左大括号 &#x27;&#123;&#x27;</span><br>            <span class="hljs-comment">// 将该左括号入栈，表示待匹配</span><br>            stk.push(s.charAt(i));<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;)&#x27;</span>: <span class="hljs-comment">// 如果字符是右括号 &#x27;)&#x27;</span><br>            <span class="hljs-comment">// 检查堆栈是否为空，或者堆栈顶部的字符不是左括号 &#x27;(&#x27;</span><br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;(&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 括号不匹配，返回 false</span><br>            <span class="hljs-comment">// 从堆栈中弹出匹配的左括号</span><br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;]&#x27;</span>: <span class="hljs-comment">// 如果字符是右方括号 &#x27;]&#x27;</span><br>            <span class="hljs-comment">// 同样的检查和操作，匹配左方括号 &#x27;[&#x27;</span><br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;[&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;&#125;&#x27;</span>: <span class="hljs-comment">// 如果字符是右大括号 &#x27;&#125;&#x27;</span><br>            <span class="hljs-comment">// 同样的检查和操作，匹配左大括号 &#x27;&#123;&#x27;</span><br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;&#123;&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 如果所有字符都遍历完并且堆栈为空，表示括号匹配成功，返回 true，否则返回 false</span><br><span class="hljs-keyword">return</span> stk.empty();<br></code></pre></td></tr></table></figure>
 
+<p>方法二：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 使用HashMap存储括号的对应关系</span><br>Map&lt;Character, Character&gt; bracketPairs = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>bracketPairs.put(<span class="hljs-string">&#x27;)&#x27;</span>, <span class="hljs-string">&#x27;(&#x27;</span>);<br>bracketPairs.put(<span class="hljs-string">&#x27;]&#x27;</span>, <span class="hljs-string">&#x27;[&#x27;</span>);<br>bracketPairs.put(<span class="hljs-string">&#x27;&#125;&#x27;</span>, <span class="hljs-string">&#x27;&#123;&#x27;</span>);<br><br>Stack&lt;Character&gt; stk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>    <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> s.charAt(i);<br>    <span class="hljs-comment">// 如果字符是右括号</span><br>    <span class="hljs-keyword">if</span> (bracketPairs.containsKey(c)) &#123;<br>        <span class="hljs-type">char</span> <span class="hljs-variable">topElement</span> <span class="hljs-operator">=</span> stk.empty() ? <span class="hljs-string">&#x27;#&#x27;</span> : stk.pop();<br>        <span class="hljs-keyword">if</span> (topElement != bracketPairs.get(c)) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-comment">// 如果字符是左括号，直接入栈</span><br>        stk.push(c);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 最后只需检查堆栈是否为空即可</span><br><span class="hljs-keyword">return</span> stk.isEmpty();<br></code></pre></td></tr></table></figure>
 
-
-<p>（本文完）</p>
+<p>(本文完)</p>
+<p><strong>在线题库</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/37548e94a270412c8b9fb85643c8ccc2">有效括号序列</a></li>
+</ul>
 
                 
               </div>
@@ -332,7 +341,7 @@
   
     <span>></span>
     
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/Git/" class="category-chain-item">Git</a>
+  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构和算法</a>
   
   
 
@@ -349,7 +358,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/Git/" class="print-no-link">#Git</a>
+        <a href="/blog/tags/Java/" class="print-no-link">#Java</a>
+      
+        <a href="/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="print-no-link">#数据结构和算法</a>
       
     </div>
   
@@ -361,8 +372,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>解决Git在终端中文乱码的问题</div>
-      <div>https://maojun.xyz/blog/2023/11/解决Git在终端中文乱码的问题.html</div>
+      <div>有效括号序列</div>
+      <div>https://maojun.xyz/blog/2023/11/有效括号序列.html</div>
     </div>
     <div class="license-meta">
       
@@ -418,18 +429,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/11/%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7%E5%BA%8F%E5%88%97.html" title="有效括号序列">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">有效括号序列</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/11/Redis%E5%A4%A7Key%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86.html" title="Redis大Key怎么处理">
-                        <span class="hidden-mobile">Redis大Key怎么处理</span>
+                      <a href="/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html" title="解决Git在终端中文乱码的问题">
+                        <span class="hidden-mobile">解决Git在终端中文乱码的问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
