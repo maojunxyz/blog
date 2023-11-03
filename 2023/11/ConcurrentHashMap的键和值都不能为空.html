@@ -18,23 +18,25 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="统计文本中每行数字的个数1234567891011121314151617181920#!&#x2F;bin&#x2F;bash# author: maojunxyz# version: 1.0# date: 2023-11-03if [ $# -ne 1 ]; then  echo &quot;输入的参数个数只能是1&quot;   exit 1fisum&#x3D;0  while read -r line; do  #">
+    <meta name="description" content="ConcurrentHashMap的键和值都不能为空查看源码，在 put 方法里面，如果 key 或者 value 为空，则抛出空指针异常。 123456final V putVal(K key, V value, boolean onlyIfAbsent) &amp;#123;    if (key &#x3D;&#x3D; null || value &#x3D;&#x3D; null) throw new NullPointerExcep">
 <meta property="og:type" content="article">
-<meta property="og:title" content="统计文本中每行数字的个数">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/11/%E7%BB%9F%E8%AE%A1%E6%96%87%E6%9C%AC%E4%B8%AD%E6%AF%8F%E8%A1%8C%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%AA%E6%95%B0.html">
+<meta property="og:title" content="ConcurrentHashMap的键和值都不能为空">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html">
 <meta property="og:site_name" content="程序员毛俊">
-<meta property="og:description" content="统计文本中每行数字的个数1234567891011121314151617181920#!&#x2F;bin&#x2F;bash# author: maojunxyz# version: 1.0# date: 2023-11-03if [ $# -ne 1 ]; then  echo &quot;输入的参数个数只能是1&quot;   exit 1fisum&#x3D;0  while read -r line; do  #">
+<meta property="og:description" content="ConcurrentHashMap的键和值都不能为空查看源码，在 put 方法里面，如果 key 或者 value 为空，则抛出空指针异常。 123456final V putVal(K key, V value, boolean onlyIfAbsent) &amp;#123;    if (key &#x3D;&#x3D; null || value &#x3D;&#x3D; null) throw new NullPointerExcep">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-03T16:11:00.000Z">
-<meta property="article:modified_time" content="2023-11-03T16:11:00.000Z">
+<meta property="og:image" content="https://maojun.xyz/assets/image-20231103162609717.png">
+<meta property="article:published_time" content="2023-11-03T16:22:00.000Z">
+<meta property="article:modified_time" content="2023-11-03T16:22:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Shell">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="ConcurrentHashMap">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maojun.xyz/assets/image-20231103162609717.png">
   
   
   
-  <title>统计文本中每行数字的个数 - 程序员毛俊</title>
+  <title>ConcurrentHashMap的键和值都不能为空 - 程序员毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -228,7 +230,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="统计文本中每行数字的个数"></span>
+            <span id="subtitle" data-typed-text="ConcurrentHashMap的键和值都不能为空"></span>
           
         </div>
 
@@ -239,7 +241,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-03 16:11" pubdate>
+        <time datetime="2023-11-03 16:22" pubdate>
           2023年11月3日 下午
         </time>
       </span>
@@ -251,7 +253,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          347 字
+          1.6k 字
         
       </span>
     
@@ -262,7 +264,7 @@
         
         
         
-          3 分钟
+          13 分钟
         
       </span>
     
@@ -299,14 +301,28 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">统计文本中每行数字的个数</h1>
+            <h1 id="seo-header">ConcurrentHashMap的键和值都不能为空</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="统计文本中每行数字的个数"><a href="#统计文本中每行数字的个数" class="headerlink" title="统计文本中每行数字的个数"></a>统计文本中每行数字的个数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># author: maojunxyz</span><br><span class="hljs-comment"># version: 1.0</span><br><span class="hljs-comment"># date: 2023-11-03</span><br><br><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> -ne 1 ]; <span class="hljs-keyword">then</span><br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;输入的参数个数只能是1&quot;</span> <br>  <span class="hljs-built_in">exit</span> 1<br><span class="hljs-keyword">fi</span><br><br><span class="hljs-built_in">sum</span>=0  <br><br><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> -r line; <span class="hljs-keyword">do</span><br>  <span class="hljs-comment"># 使用sed命令将每行中的非数字字符替换为空格，然后使用wc -L统计字符数，将结果赋给变量num。</span><br>  num=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$line</span>&quot;</span> | sed <span class="hljs-string">&#x27;s/[^0-9]//g&#x27;</span> | <span class="hljs-built_in">wc</span> -L)<br>  <span class="hljs-built_in">sum</span>=$((sum + num)) <br><span class="hljs-keyword">done</span> &lt; <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> <br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;sum: <span class="hljs-variable">$sum</span>&quot;</span> <br></code></pre></td></tr></table></figure>
+                <h2 id="ConcurrentHashMap的键和值都不能为空"><a href="#ConcurrentHashMap的键和值都不能为空" class="headerlink" title="ConcurrentHashMap的键和值都不能为空"></a>ConcurrentHashMap的键和值都不能为空</h2><p>查看源码，在 put 方法里面，如果 key 或者 value 为空，则抛出空指针异常。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">final</span> V <span class="hljs-title function_">putVal</span><span class="hljs-params">(K key, V value, <span class="hljs-type">boolean</span> onlyIfAbsent)</span> &#123;<br>    <span class="hljs-keyword">if</span> (key == <span class="hljs-literal">null</span> || value == <span class="hljs-literal">null</span>) <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">NullPointerException</span>();<br>    <span class="hljs-type">int</span> <span class="hljs-variable">hash</span> <span class="hljs-operator">=</span> spread(key.hashCode());<br>    <span class="hljs-type">int</span> <span class="hljs-variable">binCount</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    ...<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>(本文完)</p>
+<p>这是为了避免在多线程环境下出现歧义问题。</p>
+<h3 id="key不能为null的原因"><a href="#key不能为null的原因" class="headerlink" title="key不能为null的原因"></a>key不能为null的原因</h3><p>线程 t1 调用 containsKey 方法判断 key 是否存在，假设当前这个 key 不存在，本来应该返回 false。</p>
+<p>但是在 T1 线程返回之前，正好有一个 T2 线程插入了这个 key，但是 value 为 null。</p>
+<p>这就导致原本 T1 线程返回的结果有可能是 true，有可能是 false，取决于 T1 和 T2 线程的执行顺序。</p>
+<p><img src="/blog/./../../../assets/image-20231103162609717.png" srcset="/blog/img/loading.gif" lazyload alt="image-20231103162609717"></p>
+<h3 id="value不能为null的原因"><a href="#value不能为null的原因" class="headerlink" title="value不能为null的原因"></a>value不能为null的原因</h3><p>到底是插入的 null值，还是集合中不存在才返回的 null值。这就产生了歧义问题。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p> ConcurrentHashMap 又是一个线程安全的集合，所以自然就不允许 key 或者 value 为 null。</p>
+<p>而 HashMap 中是允许存 null 的，因为它不需要考虑到线程安全性问题。</p>
+<p>ConcurrentHashMap 的作者 Doug Lea对于 ConcurrentHashMap 不允许插入 null 值的回答。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs text">The main reason that nulls aren&#x27;t allowed in ConcurrentMaps<br><br>(ConcurrentHashMaps, ConcurrentSkipListMaps) is that ambiguities that may<br>be just barely tolerable in non-concurrent maps can&#x27;t be accommodated. The<br>main one is that if map.get(key) returns null, you can&#x27;t detect whether the key<br>explicitly maps to null vs the key isn&#x27;t mapped.In a non-concurrent map, you<br>can check this via map.contains(key),but in a concurrent one, the map might<br>have changed between calls. <br><br>Further digressing: I personally think that allowingnulls in Maps (also Sets) is an<br>open invitation for programsto contain errors that remain undetected untilthey<br>break at just the wrong time. (Whether to allow nulls evenin non-concurrent<br>Maps/Sets is one of the few design issues surroundingCollections that Josh<br>Bloch and I have long disagreed about.)<br><br>It is very difficult to check for null keys and valuesin my entire application . Would it be easier to declare somewherestatic final Object NULL = new<br>Object();and replace all use of nulls in uses of maps with NULL?<br>																	-Dougv<br></code></pre></td></tr></table></figure>
+
+
+
+<p>（本文完）</p>
 
                 
               </div>
@@ -325,12 +341,12 @@
     
       <span class="category-chain">
         
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/" class="category-chain-item">编程</a>
+  <a href="/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" class="category-chain-item">编程语言</a>
   
   
     <span>></span>
     
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/Linux/" class="category-chain-item">Linux</a>
+  <a href="/blog/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -347,9 +363,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/blog/tags/Java/" class="print-no-link">#Java</a>
       
-        <a href="/blog/tags/Shell/" class="print-no-link">#Shell</a>
+        <a href="/blog/tags/ConcurrentHashMap/" class="print-no-link">#ConcurrentHashMap</a>
       
     </div>
   
@@ -361,8 +377,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>统计文本中每行数字的个数</div>
-      <div>https://maojun.xyz/blog/2023/11/统计文本中每行数字的个数.html</div>
+      <div>ConcurrentHashMap的键和值都不能为空</div>
+      <div>https://maojun.xyz/blog/2023/11/ConcurrentHashMap的键和值都不能为空.html</div>
     </div>
     <div class="license-meta">
       
@@ -418,18 +434,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html" title="ConcurrentHashMap的键和值都不能为空">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ConcurrentHashMap的键和值都不能为空</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/11/%E6%9C%89%E6%95%88%E6%8B%AC%E5%8F%B7%E5%BA%8F%E5%88%97.html" title="有效括号序列">
-                        <span class="hidden-mobile">有效括号序列</span>
+                      <a href="/blog/2023/11/%E7%BB%9F%E8%AE%A1%E6%96%87%E6%9C%AC%E4%B8%AD%E6%AF%8F%E8%A1%8C%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%AA%E6%95%B0.html" title="统计文本中每行数字的个数">
+                        <span class="hidden-mobile">统计文本中每行数字的个数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
