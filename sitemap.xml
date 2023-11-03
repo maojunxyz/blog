@@ -793,14 +793,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/tags/JVM/</loc>
+    <loc>https://maojun.xyz/blog/tags/JavaScript/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/tags/JavaScript/</loc>
+    <loc>https://maojun.xyz/blog/tags/JVM/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -975,20 +975,6 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2023-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/tags/Vifm/</loc>
-    <lastmod>2023-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/tags/Grep/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -1004,6 +990,20 @@
   
   <url>
     <loc>https://maojun.xyz/blog/tags/%E6%97%A5%E5%BF%97/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/Vifm/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1152,7 +1152,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1166,7 +1166,7 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/JavaScript/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1355,14 +1355,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%97%A5%E5%BF%97/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%97%A5%E5%BF%97/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
