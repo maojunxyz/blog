@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-11-02T22:02:00.000Z</updated>
+  <updated>2023-11-03T16:11:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计文本中每行数字的个数</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E7%BB%9F%E8%AE%A1%E6%96%87%E6%9C%AC%E4%B8%AD%E6%AF%8F%E8%A1%8C%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%AA%E6%95%B0.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E7%BB%9F%E8%AE%A1%E6%96%87%E6%9C%AC%E4%B8%AD%E6%AF%8F%E8%A1%8C%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%AA%E6%95%B0.html</id>
+    <published>2023-11-03T16:11:00.000Z</published>
+    <updated>2023-11-03T16:11:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;统计文本中每行数字的个数&quot;&gt;&lt;a href=&quot;#统计文本中每行数字的个数&quot; class=&quot;headerlink&quot; title=&quot;统计文本中每行数字的个数&quot;&gt;&lt;/a&gt;统计文本中每行数字的个数&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>有效括号序列</title>
@@ -542,35 +571,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;监控系统负载并定时记录状态信息&quot;&gt;&lt;a href=&quot;#监控系统负载并定时记录状态信息&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>备份目录并创建软链接</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%B9%B6%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5.html</id>
-    <published>2023-10-25T14:12:00.000Z</published>
-    <updated>2023-10-25T14:12:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;备份目录并创建软链接&quot;&gt;&lt;a href=&quot;#备份目录并创建软链接&quot; class=&quot;headerlink&quot;</summary>
         
       
     
