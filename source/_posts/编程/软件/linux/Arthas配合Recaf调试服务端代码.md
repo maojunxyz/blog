@@ -3,7 +3,7 @@ title: Arthas配合Recaf调试服务端代码
 date: 2023/03/10 00:00
 updated: 2023/09/24 21:56
 categories:
-- [软件测试, 测试工具]
+- [编程, 软件, Linux]
 tags:
 - 软件测试
 - 测试工具

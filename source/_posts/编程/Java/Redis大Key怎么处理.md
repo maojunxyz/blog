@@ -3,7 +3,7 @@ title: Redis大Key怎么处理
 date: 2023/11/02 20:18
 updated: 2023/11/02 20:18
 categories:
-- [编程语言, Java]
+- [编程, Java]
 tags:
 - Java
 - Redis

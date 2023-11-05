@@ -3,7 +3,7 @@ title: Jmeter安装和介绍
 date: 2023/09/24 21:56
 updated: 2023/09/24 21:56
 categories:
-- [软件测试, 测试工具]
+- [编程, 软件, Windows]
 tags:
 - 软件测试
 - 测试工具

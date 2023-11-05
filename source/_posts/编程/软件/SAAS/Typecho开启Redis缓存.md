@@ -3,7 +3,7 @@ title: Typecho 开启Redis缓存
 date: 2020/02/27 00:00
 updated: 2023/09/03 10:29
 categories:
-- [系统, 自托管, 博客]
+- [编程, 软件, SAAS]
 tags:
 - 博客平台
 - Typecho

@@ -3,7 +3,7 @@ title: CKA、CKAD、CKS、PCA认证考试总结
 date: 2023/08/20 18:44
 updated: 2023/08/20 18:44
 categories:
-- [系统, 自托管, 云原生]
+- [编程, 证书]
 tags:
 - 云原生
 - Kubernates

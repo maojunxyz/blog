@@ -3,7 +3,7 @@ title: 使用SSH本地端口转发调试远程环境
 date: 2023/11/04 09:40
 updated: 2023/11/04 09:40
 categories:
-- [编程语言, Java]
+- [编程, Java]
 tags:
 - Java
 - Debug

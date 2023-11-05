@@ -3,7 +3,7 @@ title: 使用GitHub Pages 部署 Hexo
 date: 2023/07/23 17:25
 updated: 2023/10/23 23:33
 categories:
-- [软件, Hexo]
+- [编程, 软件, SAAS]
 tags:
 - Hexo
 - GitHub

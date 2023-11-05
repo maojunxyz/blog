@@ -3,7 +3,7 @@ title: 接口测试工具Insomnia入门使用
 date: 2023/09/27 22:22
 updated: 2023/09/27 22:22
 categories:
-- [软件测试, 测试工具]
+- [编程, 软件, Windows]
 tags:
 - 软件测试
 - 测试工具
