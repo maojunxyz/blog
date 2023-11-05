@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>输出第5行的内容</title>
+    <link href="/blog/2023/11/%E8%BE%93%E5%87%BA%E7%AC%AC5%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9.html"/>
+    <url>/blog/2023/11/%E8%BE%93%E5%87%BA%E7%AC%AC5%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="输出第5行的内容"><a href="#输出第5行的内容" class="headerlink" title="输出第5行的内容"></a>输出第5行的内容</h2><p>编写一个bash脚本以输出一个文本文件nowcoder.txt中第5行的内容。</p><p>示例:<br>假设 nowcoder.txt 内容如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">welcome<br>to<br>nowcoder<br>this<br>is<br>shell<br>code<br></code></pre></td></tr></table></figure><p>你的脚本应当输出：<br>is。</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 方法 1</span><br>sed -n <span class="hljs-string">&#x27;5p&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 2 </span><br><span class="hljs-built_in">head</span> -n 5 nowcoder.txt | <span class="hljs-built_in">tail</span> -n 1<br><br><span class="hljs-comment"># 方法 3 </span><br>awk <span class="hljs-string">&#x27;&#123; if(NR==5) &#123;print($0)&#125; &#125;&#x27;</span> nowcoder.txt<br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题库</strong></p><ul><li><a href="https://www.nowcoder.com/practice/1d5978c6136d4252904757b4fa0c9296">输出第5行的内容</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Cookie、Session、Token的区别</title>
     <link href="/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
     <url>/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
