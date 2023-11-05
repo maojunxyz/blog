@@ -18,25 +18,23 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="">
   
-    <meta name="description" content="HTTPS的原理HTTPS（Hypertext Transfer Protocol Secure）是一种用于安全传输数据的通信协议，它基于HTTP协议，并通过加密和认证机制提供了数据保护和隐私保护。HTTPS的工作原理可以概括为以下几个步骤：  握手阶段（Handshake Phase）：  客户端向服务器发送一个加密连接请求，即HTTPS请求。 服务器会响应客户端的请求，并发送一个包含公钥、加密">
+    <meta name="description" content="SpringBoot可以直接运行Jar的原理Spring Boot的Jar包可以直接运行，主要是因为它内置了嵌入式的Servlet容器（例如Tomcat、Jetty或Undertow），并且使用了可执行的JAR文件格式，这使得应用程序可以作为独立的Java进程运行。 那么Spring Boot如何创建可执行的Jar文件以及如何启动应用程序：  Spring Boot Maven插件：spring-">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTPS的原理">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html">
+<meta property="og:title" content="SpringBoot可以直接运行Jar的原理">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html">
 <meta property="og:site_name" content="程序员毛俊">
-<meta property="og:description" content="HTTPS的原理HTTPS（Hypertext Transfer Protocol Secure）是一种用于安全传输数据的通信协议，它基于HTTP协议，并通过加密和认证机制提供了数据保护和隐私保护。HTTPS的工作原理可以概括为以下几个步骤：  握手阶段（Handshake Phase）：  客户端向服务器发送一个加密连接请求，即HTTPS请求。 服务器会响应客户端的请求，并发送一个包含公钥、加密">
+<meta property="og:description" content="SpringBoot可以直接运行Jar的原理Spring Boot的Jar包可以直接运行，主要是因为它内置了嵌入式的Servlet容器（例如Tomcat、Jetty或Undertow），并且使用了可执行的JAR文件格式，这使得应用程序可以作为独立的Java进程运行。 那么Spring Boot如何创建可执行的Jar文件以及如何启动应用程序：  Spring Boot Maven插件：spring-">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-20231104222418466.png">
-<meta property="article:published_time" content="2023-11-04T10:15:00.000Z">
-<meta property="article:modified_time" content="2023-11-04T10:15:00.000Z">
+<meta property="article:published_time" content="2023-11-05T13:26:00.000Z">
+<meta property="article:modified_time" content="2023-11-05T13:26:00.000Z">
 <meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="HTTP">
-<meta property="article:tag" content="HTTPS">
+<meta property="article:tag" content="SpringBoot">
+<meta property="article:tag" content="Jar">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://maojun.xyz/blog/assets/image-20231104222418466.png">
   
   
   
-  <title>HTTPS的原理 - 程序员毛俊</title>
+  <title>SpringBoot可以直接运行Jar的原理 - 程序员毛俊</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -230,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="HTTPS的原理"></span>
+            <span id="subtitle" data-typed-text="SpringBoot可以直接运行Jar的原理"></span>
           
         </div>
 
@@ -241,8 +239,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-04 10:15" pubdate>
-          2023年11月4日 上午
+        <time datetime="2023-11-05 13:26" pubdate>
+          2023年11月5日 下午
         </time>
       </span>
     
@@ -253,7 +251,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          831 字
+          631 字
         
       </span>
     
@@ -264,7 +262,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -301,44 +299,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">HTTPS的原理</h1>
+            <h1 id="seo-header">SpringBoot可以直接运行Jar的原理</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="HTTPS的原理"><a href="#HTTPS的原理" class="headerlink" title="HTTPS的原理"></a>HTTPS的原理</h2><p>HTTPS（Hypertext Transfer Protocol Secure）是一种用于安全传输数据的通信协议，它基于HTTP协议，并通过加密和认证机制提供了数据保护和隐私保护。HTTPS的工作原理可以概括为以下几个步骤：</p>
+                <h2 id="SpringBoot可以直接运行Jar的原理"><a href="#SpringBoot可以直接运行Jar的原理" class="headerlink" title="SpringBoot可以直接运行Jar的原理"></a>SpringBoot可以直接运行Jar的原理</h2><p>Spring Boot的Jar包可以直接运行，主要是因为它内置了嵌入式的Servlet容器（例如Tomcat、Jetty或Undertow），并且使用了可执行的JAR文件格式，这使得应用程序可以作为独立的Java进程运行。</p>
+<p>那么Spring Boot如何创建可执行的Jar文件以及如何启动应用程序：</p>
 <ol>
-<li><p>握手阶段（Handshake Phase）：</p>
-<ul>
-<li>客户端向服务器发送一个加密连接请求，即HTTPS请求。</li>
-<li>服务器会响应客户端的请求，并发送一个包含公钥、加密方法和证书的信息。</li>
-<li>客户端验证服务器的证书是否有效，通常是通过证书颁发机构（Certificate Authority，CA）的数字签名进行验证。</li>
-<li>客户端生成一个随机的对称密钥(随机码KEY），用于在通信中加密和解密数据，然后使用服务器的公钥对该密钥进行加密，将其发送给服务器。</li>
-</ul>
+<li><p>Spring Boot Maven插件：<code>spring-boot-maven-plugin</code>是用于将Spring Boot应用程序打包成可执行的Jar文件的插件。它允许你执行<code>mvn clean install</code> 或 <code>mvn package</code> 命令来创建一个包含应用程序代码和依赖项的Jar文件。</p>
 </li>
-<li><p>密钥交换阶段（Key Exchange Phase）：</p>
-<ul>
-<li>服务器使用自己的私钥解密客户端发送过来的加密的对称密钥。</li>
-<li>现在，客户端和服务器都拥有了相同的对称密钥，用于在通信中进行加密和解密操作。</li>
-</ul>
+<li><p>Fat Jar：生成的Jar文件通常被称为”Fat Jar”，因为它包含了应用程序的代码和所有依赖的Jar文件。这使得Jar文件可以独立运行，无需额外的类路径配置。</p>
 </li>
-<li><p>安全通信阶段（Secure Communication Phase）：</p>
-<ul>
-<li>客户端和服务器使用共享的对称密钥对数据进行加密和解密。这意味着数据在传输过程中会被加密，从而保护了数据的隐私和完整性。</li>
-</ul>
+<li><p>Manifest文件：在生成的Fat Jar中，通常包含一个特殊的Manifest文件，其中包含了应用程序的启动类信息。这是因为Java命令需要知道应用程序的入口点，而Manifest文件指定了启动类。</p>
+</li>
+<li><p>JarLauncher：Spring Boot的Fat Jar中通常包含了一个名为<code>JarLauncher</code>的类，它负责创建一个<code>LaunchedURLClassLoader</code>来加载应用程序的依赖Jar，然后以一个新线程启动应用程序的Main函数。这个过程使得应用程序可以在独立的Java进程中运行。</p>
 </li>
 </ol>
-<p>通过这些步骤，HTTPS实现了以下关键原理：</p>
-<ul>
-<li><p><strong>数据加密</strong>：HTTPS使用对称密钥加密来保护数据的机密性，只有具有正确密钥的双方才能解密和理解数据。这使得窃听者难以解密传输的数据。</p>
-</li>
-<li><p><strong>身份认证</strong>：服务器的证书由可信的证书颁发机构签发，这意味着客户端可以验证服务器的身份。这有助于防止中间人攻击，确保客户端正在与正确的服务器通信。</p>
-</li>
-<li><p><strong>数据完整性</strong>：HTTPS还提供了数据完整性，确保传输的数据在传输过程中没有被篡改。这是通过在数据上应用消息认证码（MAC）来实现的。</p>
-</li>
-</ul>
-<p>总之，HTTPS通过加密、认证和数据完整性保护了数据的隐私和安全，使得网站和应用程序能够安全地进行敏感信息的传输，如登录凭据、支付信息等。这使得用户能够信任网站，并减少了潜在的安全威胁。</p>
-<p><img src="/blog/./assets/image-20231104222418466.png" srcset="/blog/img/loading.gif" lazyload alt="HTTPS原理"></p>
 <p>（本文完）</p>
 
                 
@@ -363,7 +340,7 @@
   
     <span>></span>
     
-  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="category-chain-item">计算机网络</a>
+  <a href="/blog/categories/%E7%BC%96%E7%A8%8B/Java/" class="category-chain-item">Java</a>
   
   
 
@@ -380,9 +357,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/HTTP/" class="print-no-link">#HTTP</a>
+        <a href="/blog/tags/SpringBoot/" class="print-no-link">#SpringBoot</a>
       
-        <a href="/blog/tags/HTTPS/" class="print-no-link">#HTTPS</a>
+        <a href="/blog/tags/Jar/" class="print-no-link">#Jar</a>
       
     </div>
   
@@ -394,8 +371,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>HTTPS的原理</div>
-      <div>https://maojun.xyz/blog/2023/11/HTTPS的原理.html</div>
+      <div>SpringBoot可以直接运行Jar的原理</div>
+      <div>https://maojun.xyz/blog/2023/11/SpringBoot可以直接运行Jar的原理.html</div>
     </div>
     <div class="license-meta">
       
@@ -407,7 +384,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月4日</div>
+          <div>2023年11月5日</div>
         </div>
       
       
@@ -451,9 +428,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html" title="SpringBoot可以直接运行Jar的原理">
+                      <a href="/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html" title="Cookie、Session、Token的区别">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringBoot可以直接运行Jar的原理</span>
+                        <span class="hidden-mobile">Cookie、Session、Token的区别</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -461,8 +438,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2023/11/%E4%BD%BF%E7%94%A8SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%B0%83%E8%AF%95%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83.html" title="使用SSH本地端口转发调试远程环境">
-                        <span class="hidden-mobile">使用SSH本地端口转发调试远程环境</span>
+                      <a href="/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html" title="HTTPS的原理">
+                        <span class="hidden-mobile">HTTPS的原理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

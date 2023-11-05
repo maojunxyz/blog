@@ -4,6 +4,66 @@
   
   
   <entry>
+    <title>Cookie、Session、Token的区别</title>
+    <link href="/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <url>/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>Cookie、Session和Token是用于身份验证和用户状态管理的不同机制。它们在Web应用程序中的使用有一些关键区别：</p><ol><li><p>Cookie（HTTP Cookie）：</p><ul><li>Cookie是一种客户端存储数据的机制，通常是一个小的文本文件，Key和Value的字符串格式。</li><li>服务器可以通过HTTP响应的<code>Set-Cookie</code>头将Cookie发送给客户端浏览器，然后浏览器将Cookie保存并在后续请求中自动包含在<code>Cookie</code>头中。</li><li>Cookie通常用于跟踪用户会话、存储用户首选项和其他客户端相关的数据。</li><li>Cookie可以设置过期时间，可以是会话级别的（浏览器关闭后失效）或持久的（在指定过期日期之前有效）。</li><li>Cookie是与域名绑定的，无法跨域访问，但可以在一级域名和二级域名之间共享。同时，浏览器对每个域名下的Cookie数量有限制（单个Cookei大小4KB）。跨域数据共享通常需要使用其他机制，如CORS。这些规则和限制有助于确保用户隐私和安全。</li></ul></li><li><p>Session（会话）：</p><ul><li>会话是服务器端的机制，用于跟踪和管理用户状态。</li><li>会话通常使用Cookie或URL参数来维护一个唯一的会话标识符（Session ID），该标识符关联到服务器端存储的用户数据。</li><li>会话允许服务器存储和检索与特定用户相关的数据，以保持用户的身份认证状态和其他用户特定的信息。</li><li>会话数据通常存储在服务器内存、数据库或分布式缓存中，因此对于服务器来说是可控的。</li><li>Session和Cookie是协同工作的。Session存储在服务器端，但Session ID 存储在客户端的Cookie中，通过Session ID，服务器可以识别和恢复与特定用户相关的会话数据。</li></ul></li><li><p>Token（令牌）：</p><ul><li><p>令牌通常是一串长字符串，用于身份验证和授权。</p></li><li><p>令牌通常使用一种独立于会话状态的机制来实现，如JSON Web Tokens（JWT）。</p></li><li><p>令牌通常包含有关用户身份的信息，可以包括用户ID、权限、过期时间等。</p></li><li><p>令牌通常在客户端和服务器之间传递，并用于授权访问受保护的资源，如API端点。</p></li></ul></li></ol><h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><table><thead><tr><th></th><th align="center">Cookie</th><th align="center">Session</th><th align="center">Token</th></tr></thead><tbody><tr><td>数据存储</td><td align="center">客户端存储</td><td align="center">服务器端生成</td><td align="center">服务器端生成</td></tr><tr><td>认证授权</td><td align="center">保存用户数据</td><td align="center">跟踪用户状态和保存用户数据</td><td align="center">身份验证和授权</td></tr><tr><td>跨域支持</td><td align="center">不支持</td><td align="center">不支持</td><td align="center">支持</td></tr></tbody></table><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>计算机网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Cookie</tag>
+      
+      <tag>Session</tag>
+      
+      <tag>Token</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SpringBoot可以直接运行Jar的原理</title>
+    <link href="/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html"/>
+    <url>/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="SpringBoot可以直接运行Jar的原理"><a href="#SpringBoot可以直接运行Jar的原理" class="headerlink" title="SpringBoot可以直接运行Jar的原理"></a>SpringBoot可以直接运行Jar的原理</h2><p>Spring Boot的Jar包可以直接运行，主要是因为它内置了嵌入式的Servlet容器（例如Tomcat、Jetty或Undertow），并且使用了可执行的JAR文件格式，这使得应用程序可以作为独立的Java进程运行。</p><p>那么Spring Boot如何创建可执行的Jar文件以及如何启动应用程序：</p><ol><li><p>Spring Boot Maven插件：<code>spring-boot-maven-plugin</code>是用于将Spring Boot应用程序打包成可执行的Jar文件的插件。它允许你执行<code>mvn clean install</code> 或 <code>mvn package</code> 命令来创建一个包含应用程序代码和依赖项的Jar文件。</p></li><li><p>Fat Jar：生成的Jar文件通常被称为”Fat Jar”，因为它包含了应用程序的代码和所有依赖的Jar文件。这使得Jar文件可以独立运行，无需额外的类路径配置。</p></li><li><p>Manifest文件：在生成的Fat Jar中，通常包含一个特殊的Manifest文件，其中包含了应用程序的启动类信息。这是因为Java命令需要知道应用程序的入口点，而Manifest文件指定了启动类。</p></li><li><p>JarLauncher：Spring Boot的Fat Jar中通常包含了一个名为<code>JarLauncher</code>的类，它负责创建一个<code>LaunchedURLClassLoader</code>来加载应用程序的依赖Jar，然后以一个新线程启动应用程序的Main函数。这个过程使得应用程序可以在独立的Java进程中运行。</p></li></ol><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+      <tag>Jar</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>HTTPS的原理</title>
     <link href="/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html"/>
     <url>/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html</url>
