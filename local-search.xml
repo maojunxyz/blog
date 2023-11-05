@@ -42,7 +42,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>Java</category>
       
@@ -73,7 +73,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>Java</category>
       
@@ -187,7 +187,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>Java</category>
       
@@ -732,7 +732,7 @@
       
       <category>编程</category>
       
-      <category>数据结构</category>
+      <category>数据结构和算法</category>
       
     </categories>
     
@@ -761,7 +761,7 @@
       
       <category>编程</category>
       
-      <category>数据结构</category>
+      <category>数据结构和算法</category>
       
     </categories>
     
@@ -848,7 +848,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>数据结构和算法</category>
       
@@ -877,7 +877,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>数据结构和算法</category>
       
@@ -906,7 +906,7 @@
     
     <categories>
       
-      <category>编程语言</category>
+      <category>编程</category>
       
       <category>Java</category>
       
@@ -964,9 +964,11 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
-      <category>测试工具</category>
+      <category>软件</category>
+      
+      <category>Windows</category>
       
     </categories>
     
@@ -1026,9 +1028,11 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
-      <category>测试工具</category>
+      <category>软件</category>
+      
+      <category>Windows</category>
       
     </categories>
     
@@ -1057,9 +1061,9 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
-      <category>性能测试</category>
+      <category>软件测试</category>
       
     </categories>
     
@@ -1144,22 +1148,16 @@
     
     <categories>
       
-      <category>影视剧</category>
+      <category>生活</category>
       
       <category>电视剧</category>
-      
-      <category>国产剧</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>影视剧</tag>
-      
       <tag>观后感</tag>
-      
-      <tag>电视剧</tag>
       
       <tag>国产剧</tag>
       
@@ -1212,18 +1210,14 @@
     
     <categories>
       
-      <category>影视剧</category>
+      <category>生活</category>
       
       <category>电视剧</category>
-      
-      <category>日剧</category>
       
     </categories>
     
     
     <tags>
-      
-      <tag>影视剧</tag>
       
       <tag>观后感</tag>
       
@@ -1245,11 +1239,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
+      
+      <category>软件</category>
       
       <category>Linux</category>
-      
-      <category>日志</category>
       
     </categories>
     
@@ -1280,20 +1274,16 @@
     
     <categories>
       
-      <category>影视剧</category>
+      <category>生活</category>
       
       <category>电视剧</category>
-      
-      <category>美剧</category>
       
     </categories>
     
     
     <tags>
       
-      <tag>绝命毒师</tag>
-      
-      <tag>风骚律师</tag>
+      <tag>观后感</tag>
       
       <tag>美剧</tag>
       
@@ -1313,11 +1303,9 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
-      
-      <category>云原生</category>
+      <category>证书</category>
       
     </categories>
     
@@ -1474,9 +1462,11 @@
     
     <categories>
       
+      <category>编程</category>
+      
       <category>软件</category>
       
-      <category>Hexo</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -1503,9 +1493,11 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
-      <category>测试工具</category>
+      <category>软件</category>
+      
+      <category>Linux</category>
       
     </categories>
     
@@ -1536,7 +1528,7 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
       <category>翻译</category>
       
@@ -1544,8 +1536,6 @@
     
     
     <tags>
-      
-      <tag>翻译</tag>
       
       <tag>软件测试</tag>
       
@@ -1565,9 +1555,9 @@
     
     <categories>
       
-      <category>软件测试</category>
+      <category>编程</category>
       
-      <category>测试用例</category>
+      <category>软件测试</category>
       
     </categories>
     
@@ -1842,11 +1832,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>博客</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -1873,11 +1863,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>博客</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -1904,11 +1894,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>云原生</category>
+      <category>Linux</category>
       
     </categories>
     
@@ -1935,11 +1925,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>网盘</category>
+      <category>Linux</category>
       
     </categories>
     
@@ -1966,11 +1956,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>博客</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -1997,11 +1987,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>对象存储</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -2028,11 +2018,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>对象存储</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -2059,11 +2049,11 @@
     
     <categories>
       
-      <category>系统</category>
+      <category>编程</category>
       
-      <category>自托管</category>
+      <category>软件</category>
       
-      <category>博客</category>
+      <category>SAAS</category>
       
     </categories>
     
@@ -2090,7 +2080,7 @@
     
     <categories>
       
-      <category>影视剧</category>
+      <category>生活</category>
       
       <category>电影</category>
       
@@ -2098,8 +2088,6 @@
     
     
     <tags>
-      
-      <tag>影视剧</tag>
       
       <tag>电影</tag>
       
