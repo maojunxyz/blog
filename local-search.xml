@@ -1585,6 +1585,35 @@
   
   
   <entry>
+    <title>大型电商系统的搜索链路业务架构</title>
+    <link href="/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html"/>
+    <url>/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="大型电商系统的搜索链路业务架构"><a href="#大型电商系统的搜索链路业务架构" class="headerlink" title="大型电商系统的搜索链路业务架构"></a>大型电商系统的搜索链路业务架构</h2><pre><code class=" mermaid">graph关键词搜索--&gt;李宁冬动运鞋--敏感词、表情符过滤--&gt;搜索词重写--&gt;纠错--李宁冬季运动鞋--&gt;NLP处理--组装搜索造句--&gt;搜索引擎--&gt;是否有结果--&gt;YES--&gt;综合排序--&gt;返回结果是否有结果--&gt;NO--&gt;是否经过丢词处理--&gt;是--&gt;返回猜你喜欢是否经过丢词处理--&gt;否--&gt;搜索引擎纠错--&gt;类目预测--辅助排序--&gt;搜索引擎关键词搜索--&gt;经纬度--辅助排序--&gt;搜索引擎关键词搜索--&gt;用户特征获取--辅助排序--&gt;搜索引擎</code></pre><p>其中，在步骤<strong>NLP处理</strong>中，将搜索关键字转化处理类似的内容：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;brand&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;李宁&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;brandSynonyms&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;erke&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;category&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;鞋&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;categorySynoyms&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;鞋子&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;normalTerms&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><br>        <span class="hljs-punctuation">&#123;</span><br>            <span class="hljs-attr">&quot;term&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;秋季&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;termSynonyms&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;秋天&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;秋&quot;</span><span class="hljs-punctuation">]</span><br>        <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><span class="hljs-punctuation">&#123;</span><br>            <span class="hljs-attr">&quot;term&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;运动&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;termSynonyms&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">&quot;跑步&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;运动款&quot;</span><span class="hljs-punctuation">]</span><br>        <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure><p>在步骤<strong>综合排序</strong>中，根据以下算法项进行综合排序：</p><ul><li>文本相关性</li><li>品牌命中</li><li>类名命中</li><li>店铺评分</li><li>用户特征</li><li>类目预测</li><li>流量倾斜</li><li>距离</li><li>其他</li></ul><p>（本文完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>业务架构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>电商系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Vifm命令行文件管理器入门</title>
     <link href="/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html"/>
     <url>/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html</url>
