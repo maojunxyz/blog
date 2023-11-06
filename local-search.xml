@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>打印空行的行号</title>
+    <link href="/blog/2023/11/%E6%89%93%E5%8D%B0%E7%A9%BA%E8%A1%8C%E7%9A%84%E8%A1%8C%E5%8F%B7.html"/>
+    <url>/blog/2023/11/%E6%89%93%E5%8D%B0%E7%A9%BA%E8%A1%8C%E7%9A%84%E8%A1%8C%E5%8F%B7.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="打印空行的行号"><a href="#打印空行的行号" class="headerlink" title="打印空行的行号"></a>打印空行的行号</h2><p>编写一个shell脚本以输出一个文本文件nowcoder.txt中空行的行号（空行可能连续，从1开始输出）</p><p>示例:<br>假设 nowcoder.txt 内容如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cpp">a<br>b<br><br>c<br><br>d<br><br>e<br><br><br>f<br></code></pre></td></tr></table></figure><p>你的脚本应当输出：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-number">3</span><br><span class="hljs-number">5</span><br><span class="hljs-number">7</span><br><span class="hljs-number">9</span><br><span class="hljs-number">10</span><br></code></pre></td></tr></table></figure><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 方法 1</span><br>awk -n <span class="hljs-string">&#x27;/^$/ &#123;print NR&#125;&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 2</span><br>sed -n <span class="hljs-string">&#x27;/^$/=&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 3</span><br>i=1<br><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> line; <span class="hljs-keyword">do</span><br><span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$line</span> =~ ^$ ]]; <span class="hljs-keyword">then</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span><br><span class="hljs-keyword">fi</span><br>i=$((i+<span class="hljs-number">1</span>))<br><span class="hljs-keyword">done</span>&lt;<span class="hljs-variable">$1</span><br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题目</strong></p><ul><li><a href="https://www.nowcoder.com/practice/030fc368e42e44b8b1f8985a8d6ad255">打印空行的行号</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>输出第5行的内容</title>
     <link href="/blog/2023/11/%E8%BE%93%E5%87%BA%E7%AC%AC5%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9.html"/>
     <url>/blog/2023/11/%E8%BE%93%E5%87%BA%E7%AC%AC5%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9.html</url>
