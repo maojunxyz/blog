@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-11-06T22:39:00.000Z</updated>
+  <updated>2023-11-07T23:04:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>去掉文件的空行</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html</id>
+    <published>2023-11-07T23:04:00.000Z</published>
+    <updated>2023-11-07T23:04:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;去掉文件的空行&quot;&gt;&lt;a href=&quot;#去掉文件的空行&quot; class=&quot;headerlink&quot; title=&quot;去掉文件的空行&quot;&gt;&lt;/a&gt;去掉文件的空行&lt;/h2&gt;&lt;p&gt;写一个</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>打印空行的行号</title>
@@ -546,35 +575,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;检查进程和端口服务是否正常&quot;&gt;&lt;a href=&quot;#检查进程和端口服务是否正常&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>统计文件的行数</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E7%BB%9F%E8%AE%A1%E6%96%87%E4%BB%B6%E7%9A%84%E8%A1%8C%E6%95%B0.html</id>
-    <published>2023-10-31T14:17:00.000Z</published>
-    <updated>2023-10-31T14:17:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;统计文件的行数&quot;&gt;&lt;a href=&quot;#统计文件的行数&quot; class=&quot;headerlink&quot;</summary>
         
       
     

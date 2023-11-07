@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>去掉文件的空行</title>
+    <link href="/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html"/>
+    <url>/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="去掉文件的空行"><a href="#去掉文件的空行" class="headerlink" title="去掉文件的空行"></a>去掉文件的空行</h2><p>写一个 bash脚本以去掉一个文本文件nowcoder.txt中的空行<br>示例:<br>假设nowcoder.txt 内容如下：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cpp">abc<br><br><span class="hljs-number">567</span><br><br><br>aaa<br>bbb<br><br><br><br>ccc<br></code></pre></td></tr></table></figure><p>你的脚本应当输出：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">abc<br><span class="hljs-number">567</span><br>aaa<br>bbb<br>ccc<br></code></pre></td></tr></table></figure><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 方法 1</span><br>sed -n <span class="hljs-string">&#x27;/^$/!p&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法2</span><br>awk -n <span class="hljs-string">&#x27;&#123;if ($0 != &quot;&quot;) print $0&#125;&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 3</span><br>awk <span class="hljs-string">&#x27;!/^$/ &#123;print $0&#125;&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 4</span><br>grep -v <span class="hljs-string">&#x27;^$&#x27;</span> nowcoder.txt<br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题目</strong></p><ul><li><a href="https://www.nowcoder.com/practice/0372acd5725d40669640fd25e9fb7b0f">去掉文件的空行</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>打印空行的行号</title>
     <link href="/blog/2023/11/%E6%89%93%E5%8D%B0%E7%A9%BA%E8%A1%8C%E7%9A%84%E8%A1%8C%E5%8F%B7.html"/>
     <url>/blog/2023/11/%E6%89%93%E5%8D%B0%E7%A9%BA%E8%A1%8C%E7%9A%84%E8%A1%8C%E5%8F%B7.html</url>
