@@ -1,3 +1,4 @@
+https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E5%AD%97%E6%AF%8D%E6%95%B0%E5%B0%8F%E4%BA%8E8%E7%9A%84%E5%8D%95%E8%AF%8D.html
 https://maojun.xyz/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html
 https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E7%A9%BA%E8%A1%8C%E7%9A%84%E8%A1%8C%E5%8F%B7.html
 https://maojun.xyz/blog/2023/11/%E8%BE%93%E5%87%BA%E7%AC%AC5%E8%A1%8C%E7%9A%84%E5%86%85%E5%AE%B9.html
@@ -170,9 +171,6 @@ https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E7%BC%9
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E8%BD%AF%E4%BB%B6/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/
-https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/
-https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/
-https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%94%B5%E8%A7%86%E5%89%A7/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/SSH%E5%B7%A5%E5%85%B7/
@@ -180,12 +178,15 @@ https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/%E5%BF%AB%E6%8D%B7jm
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/Ubuntu/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E8%BD%AF%E4%BB%B6/SAAS/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/
-https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/
+https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/
+https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E8%BD%AF%E4%BB%B6/Linux/
-https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/
+https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/
+https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/
 https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/%E8%BD%AF%E4%BB%B6/Windows/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E7%BD%91%E7%9B%98/
+https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Linux/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E8%BD%AF%E4%BB%B6/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%B5%8F%E8%A7%88%E5%99%A8/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/
-https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/JSON/
+https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%94%B5%E8%A7%86%E5%89%A7/
 https://maojun.xyz/blog/categories/%E7%B3%BB%E7%BB%9F/Windows/%E8%BD%AF%E4%BB%B6/%E8%BE%93%E5%85%A5%E6%B3%95/

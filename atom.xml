@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2023-11-07T23:04:00.000Z</updated>
+  <updated>2023-11-08T23:24:00.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打印字母数小于8的单词</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E5%AD%97%E6%AF%8D%E6%95%B0%E5%B0%8F%E4%BA%8E8%E7%9A%84%E5%8D%95%E8%AF%8D.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%89%93%E5%8D%B0%E5%AD%97%E6%AF%8D%E6%95%B0%E5%B0%8F%E4%BA%8E8%E7%9A%84%E5%8D%95%E8%AF%8D.html</id>
+    <published>2023-11-08T23:24:00.000Z</published>
+    <updated>2023-11-08T23:24:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;打印字母数小于8的单词&quot;&gt;&lt;a href=&quot;#打印字母数小于8的单词&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+  </entry>
   
   <entry>
     <title>去掉文件的空行</title>
@@ -546,35 +575,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;打印文件的最后5行&quot;&gt;&lt;a href=&quot;#打印文件的最后5行&quot; class=&quot;headerlink&quot; title=&quot;打印文件的最后5行&quot;&gt;&lt;/a&gt;打印文件的最后5行&lt;/h2&gt;&lt;p&gt;查看日志的时候，经常会从文件的末尾往前查看，请你写一个bash</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E7%BC%96%E7%A8%8B/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
-    
-    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>检查进程和端口服务是否正常</title>
-    <link href="https://maojun.xyz/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html"/>
-    <id>https://maojun.xyz/blog/2023/10/%E6%A3%80%E6%9F%A5%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%AB%AF%E5%8F%A3%E6%9C%8D%E5%8A%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8.html</id>
-    <published>2023-10-31T16:02:00.000Z</published>
-    <updated>2023-10-31T16:02:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;检查进程和端口服务是否正常&quot;&gt;&lt;a href=&quot;#检查进程和端口服务是否正常&quot; class=&quot;headerlink&quot;</summary>
         
       
     

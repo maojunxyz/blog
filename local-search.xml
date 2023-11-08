@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>打印字母数小于8的单词</title>
+    <link href="/blog/2023/11/%E6%89%93%E5%8D%B0%E5%AD%97%E6%AF%8D%E6%95%B0%E5%B0%8F%E4%BA%8E8%E7%9A%84%E5%8D%95%E8%AF%8D.html"/>
+    <url>/blog/2023/11/%E6%89%93%E5%8D%B0%E5%AD%97%E6%AF%8D%E6%95%B0%E5%B0%8F%E4%BA%8E8%E7%9A%84%E5%8D%95%E8%AF%8D.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="打印字母数小于8的单词"><a href="#打印字母数小于8的单词" class="headerlink" title="打印字母数小于8的单词"></a>打印字母数小于8的单词</h2><p>写一个bash脚本以统计一个文本文件nowcoder.txt中字母数小于8的单词。<br>示例:<br>假设 nowcoder.txt 内容如下：</p><p>how they are implemented and applied in computer</p><p>你的脚本应当输出：<br>how<br>they<br>are</p><p>and</p><p>applied</p><p>in</p><p>说明:<br>不用担心你输出的空格以及换行的问题</p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 方法 1</span><br>awk -F <span class="hljs-string">&quot; &quot;</span> <span class="hljs-string">&#x27;&#123;for(i=1;i&lt;=NF;i++) &#123; if(length($i) &lt; 8) &#123; print($i) &#125;&#125;&#125;&#x27;</span> nowcoder.txt<br><br><span class="hljs-comment"># 方法 2</span><br>words=$(<span class="hljs-built_in">cat</span> nowcoder.txt)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-variable">$&#123;words[*]&#125;</span>; <span class="hljs-keyword">do</span><br>    <span class="hljs-keyword">if</span> [ <span class="hljs-variable">$&#123;#i&#125;</span> -lt 8 ]; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-variable">$&#123;i&#125;</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-comment"># 方法 3</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> $(<span class="hljs-built_in">cat</span> nowcoder.txt); <span class="hljs-keyword">do</span><br>    <span class="hljs-keyword">if</span> [ <span class="hljs-variable">$&#123;#i&#125;</span> -lt 8 ]; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-variable">$&#123;i&#125;</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure><p>(本文完)</p><p><strong>在线题目</strong></p><p><a href="https://www.nowcoder.com/practice/bd5b5d4b93a04226a81afbabf0be797d">https://www.nowcoder.com/practice/bd5b5d4b93a04226a81afbabf0be797d</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>编程</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>去掉文件的空行</title>
     <link href="/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html"/>
     <url>/blog/2023/11/%E5%8E%BB%E6%8E%89%E6%96%87%E4%BB%B6%E7%9A%84%E7%A9%BA%E8%A1%8C.html</url>
