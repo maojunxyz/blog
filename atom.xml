@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>毛俊的博客</title>
+  <icon>https://maojun.xyz/blog/icon.png</icon>
+  <subtitle>享受生活和工作所带来的乐趣。</subtitle>
+  <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
+  
+  <link href="https://maojun.xyz/blog/"/>
+  <updated>2024-03-27T06:42:21.000Z</updated>
+  <id>https://maojun.xyz/blog/</id>
+  
+  <author>
+    <name>毛 俊</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常用软件清单</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html</id>
+    <published>2024-03-27T06:42:21.000Z</published>
+    <updated>2024-03-27T06:42:21.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;名称&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;用途&lt;/th&gt;
+&lt;th&gt;支持平台(Win、Linux)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>COCA 20000词汇复习和练习</title>
+    <link href="https://maojun.xyz/blog/2024/03/COCA%2020000%E8%AF%8D%E6%B1%87%E5%A4%8D%E4%B9%A0%E5%92%8C%E7%BB%83%E4%B9%A0.html"/>
+    <id>https://maojun.xyz/blog/2024/03/COCA%2020000%E8%AF%8D%E6%B1%87%E5%A4%8D%E4%B9%A0%E5%92%8C%E7%BB%83%E4%B9%A0.html</id>
+    <published>2024-03-27T06:25:57.000Z</published>
+    <updated>2024-03-27T06:25:57.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;复习01&quot;&gt;&lt;a href=&quot;#复习01&quot; class=&quot;headerlink&quot; title=&quot;复习01&quot;&gt;&lt;/a&gt;复习01&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/blog/./assets/image-16770729768207360.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="英语" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="英语" scheme="https://maojun.xyz/blog/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+    <category term="词汇" scheme="https://maojun.xyz/blog/tags/%E8%AF%8D%E6%B1%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>健康食物清单</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E5%81%A5%E5%BA%B7%E9%A3%9F%E7%89%A9%E6%B8%85%E5%8D%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E5%81%A5%E5%BA%B7%E9%A3%9F%E7%89%A9%E6%B8%85%E5%8D%95.html</id>
+    <published>2024-03-25T20:00:00.000Z</published>
+    <updated>2024-03-25T20:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;膳食指南&quot;&gt;&lt;a href=&quot;#膳食指南&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="健康" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E5%81%A5%E5%BA%B7/"/>
+    
+    
+    <category term="食物" scheme="https://maojun.xyz/blog/tags/%E9%A3%9F%E7%89%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git客户端工具GitUi安装及使用</title>
+    <link href="https://maojun.xyz/blog/2024/03/Git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7GitUi%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2024/03/Git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7GitUi%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.html</id>
+    <published>2024-03-25T11:44:00.000Z</published>
+    <updated>2024-03-25T11:44:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;GitUi介绍&quot;&gt;&lt;a href=&quot;#GitUi介绍&quot; class=&quot;headerlink&quot; title=&quot;GitUi介绍&quot;&gt;&lt;/a&gt;GitUi介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;GitUI provides you with the comfort</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Git" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Git/"/>
+    
+    
+    <category term="Git" scheme="https://maojun.xyz/blog/tags/Git/"/>
+    
+    <category term="GitUi" scheme="https://maojun.xyz/blog/tags/GitUi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>技能证书合集</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E6%8A%80%E8%83%BD%E8%AF%81%E4%B9%A6%E5%90%88%E9%9B%86.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E6%8A%80%E8%83%BD%E8%AF%81%E4%B9%A6%E5%90%88%E9%9B%86.html</id>
+    <published>2024-03-22T10:00:00.000Z</published>
+    <updated>2024-03-22T10:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Kubernetes管理员&quot;&gt;&lt;a href=&quot;#Kubernetes管理员&quot; class=&quot;headerlink&quot; title=&quot;Kubernetes管理员&quot;&gt;&lt;/a&gt;Kubernetes管理员&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="考试" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%80%83%E8%AF%95/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Kubernates" scheme="https://maojun.xyz/blog/tags/Kubernates/"/>
+    
+    <category term="Prometheus" scheme="https://maojun.xyz/blog/tags/Prometheus/"/>
+    
+    <category term="Word" scheme="https://maojun.xyz/blog/tags/Word/"/>
+    
+    <category term="Excel" scheme="https://maojun.xyz/blog/tags/Excel/"/>
+    
+    <category term="PPT" scheme="https://maojun.xyz/blog/tags/PPT/"/>
+    
+    <category term="Metersphere" scheme="https://maojun.xyz/blog/tags/Metersphere/"/>
+    
+    <category term="Ansible" scheme="https://maojun.xyz/blog/tags/Ansible/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cookie、Session、Token的区别</title>
+    <link href="https://maojun.xyz/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <id>https://maojun.xyz/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html</id>
+    <published>2023-11-05T13:36:00.000Z</published>
+    <updated>2023-11-05T13:36:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;区别&quot;&gt;&lt;a href=&quot;#区别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="网络" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="Cookie" scheme="https://maojun.xyz/blog/tags/Cookie/"/>
+    
+    <category term="Session" scheme="https://maojun.xyz/blog/tags/Session/"/>
+    
+    <category term="Token" scheme="https://maojun.xyz/blog/tags/Token/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot可以直接运行Jar的原理</title>
+    <link href="https://maojun.xyz/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html"/>
+    <id>https://maojun.xyz/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html</id>
+    <published>2023-11-05T13:26:00.000Z</published>
+    <updated>2023-11-05T13:26:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SpringBoot可以直接运行Jar的原理&quot;&gt;&lt;a href=&quot;#SpringBoot可以直接运行Jar的原理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="服务框架" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/"/>
+    
+    
+    <category term="SpringBoot" scheme="https://maojun.xyz/blog/tags/SpringBoot/"/>
+    
+    <category term="Jar" scheme="https://maojun.xyz/blog/tags/Jar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTPS的原理</title>
+    <link href="https://maojun.xyz/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html"/>
+    <id>https://maojun.xyz/blog/2023/11/HTTPS%E7%9A%84%E5%8E%9F%E7%90%86.html</id>
+    <published>2023-11-04T10:15:00.000Z</published>
+    <updated>2023-11-04T10:15:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;HTTPS的原理&quot;&gt;&lt;a href=&quot;#HTTPS的原理&quot; class=&quot;headerlink&quot; title=&quot;HTTPS的原理&quot;&gt;&lt;/a&gt;HTTPS的原理&lt;/h2&gt;&lt;p&gt;HTTPS（Hypertext Transfer Protocol</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="网络" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="HTTP" scheme="https://maojun.xyz/blog/tags/HTTP/"/>
+    
+    <category term="HTTPS" scheme="https://maojun.xyz/blog/tags/HTTPS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用SSH本地端口转发调试远程环境</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E4%BD%BF%E7%94%A8SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%B0%83%E8%AF%95%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E4%BD%BF%E7%94%A8SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%B0%83%E8%AF%95%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83.html</id>
+    <published>2023-11-04T09:40:00.000Z</published>
+    <updated>2023-11-04T09:40:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;本地开发环境配置&quot;&gt;&lt;a href=&quot;#本地开发环境配置&quot; class=&quot;headerlink&quot; title=&quot;本地开发环境配置&quot;&gt;&lt;/a&gt;本地开发环境配置&lt;/h2&gt;&lt;p&gt;SSH</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Java/"/>
+    
+    
+    <category term="Debug" scheme="https://maojun.xyz/blog/tags/Debug/"/>
+    
+    <category term="SSH" scheme="https://maojun.xyz/blog/tags/SSH/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ConcurrentHashMap的键和值都不能为空</title>
+    <link href="https://maojun.xyz/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html"/>
+    <id>https://maojun.xyz/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html</id>
+    <published>2023-11-03T16:22:00.000Z</published>
+    <updated>2023-11-03T16:22:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ConcurrentHashMap的键和值都不能为空&quot;&gt;&lt;a href=&quot;#ConcurrentHashMap的键和值都不能为空&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="并发编程" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+    <category term="ConcurrentHashMap" scheme="https://maojun.xyz/blog/tags/ConcurrentHashMap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>栈</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E6%A0%88.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E6%A0%88.html</id>
+    <published>2023-11-02T22:02:00.000Z</published>
+    <updated>2023-11-04T17:45:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+    <category term="栈" scheme="https://maojun.xyz/blog/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Git在终端中文乱码的问题</title>
+    <link href="https://maojun.xyz/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
+    <id>https://maojun.xyz/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html</id>
+    <published>2023-11-02T20:48:00.000Z</published>
+    <updated>2023-11-02T20:48:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;解决Git在命令行中文显示乱码&quot;&gt;&lt;a href=&quot;#解决Git在命令行中文显示乱码&quot; class=&quot;headerlink&quot; title=&quot;解决Git在命令行中文显示乱码&quot;&gt;&lt;/a&gt;解决Git在命令行中文显示乱码&lt;/h2&gt;&lt;p&gt;将git配置文件</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Git" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Git/"/>
+    
+    
+    <category term="Git" scheme="https://maojun.xyz/blog/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis大Key怎么处理</title>
+    <link href="https://maojun.xyz/blog/2023/11/Redis%E5%A4%A7Key%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86.html"/>
+    <id>https://maojun.xyz/blog/2023/11/Redis%E5%A4%A7Key%E6%80%8E%E4%B9%88%E5%A4%84%E7%90%86.html</id>
+    <published>2023-11-02T20:18:00.000Z</published>
+    <updated>2023-11-02T20:18:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是大Key&quot;&gt;&lt;a href=&quot;#什么是大Key&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Redis" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://maojun.xyz/blog/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript经典算法题</title>
+    <link href="https://maojun.xyz/blog/2023/11/Javascript%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE.html"/>
+    <id>https://maojun.xyz/blog/2023/11/Javascript%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE.html</id>
+    <published>2023-11-01T20:32:00.000Z</published>
+    <updated>2023-11-01T20:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;两数之和&quot;&gt;&lt;a href=&quot;#两数之和&quot; class=&quot;headerlink&quot; title=&quot;两数之和&quot;&gt;&lt;/a&gt;两数之和&lt;/h2&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt; 和一个整数目标值</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于顺序存储（数组）实现List集合</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E5%9F%BA%E4%BA%8E%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E6%9D%A5%E5%AE%9E%E7%8E%B0%E7%BA%BF%E6%80%A7%E8%A1%A8.html</id>
+    <published>2023-10-24T18:00:00.000Z</published>
+    <updated>2023-10-24T18:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;场景&quot;&gt;&lt;a href=&quot;#场景&quot; class=&quot;headerlink&quot; title=&quot;场景&quot;&gt;&lt;/a&gt;场景&lt;/h2&gt;&lt;p&gt;使用顺序存储来实现线性表。&lt;/p&gt;
+&lt;h3 id=&quot;接口定义&quot;&gt;&lt;a href=&quot;#接口定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构入门</title>
+    <link href="https://maojun.xyz/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html"/>
+    <id>https://maojun.xyz/blog/2023/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</id>
+    <published>2023-10-24T14:52:00.000Z</published>
+    <updated>2023-10-24T14:52:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;逻辑结构&quot;&gt;&lt;a href=&quot;#逻辑结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="编程" scheme="https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux判断磁盘分区读写是否正常</title>
+    <link href="https://maojun.xyz/blog/2023/10/Linux%E6%93%8D%E4%BD%9C%E7%BB%83%E4%B9%A0%E9%A2%98%E7%9B%AE.html"/>
+    <id>https://maojun.xyz/blog/2023/10/Linux%E6%93%8D%E4%BD%9C%E7%BB%83%E4%B9%A0%E9%A2%98%E7%9B%AE.html</id>
+    <published>2023-10-23T17:25:00.000Z</published>
+    <updated>2023-10-23T17:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件备份&quot;&gt;&lt;a href=&quot;#文件备份&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://maojun.xyz/blog/tags/Linux/"/>
+    
+    <category term="Shell" scheme="https://maojun.xyz/blog/tags/Shell/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java经典算法题</title>
+    <link href="https://maojun.xyz/blog/2023/10/Java%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98.html"/>
+    <id>https://maojun.xyz/blog/2023/10/Java%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98.html</id>
+    <published>2023-10-22T21:32:00.000Z</published>
+    <updated>2023-10-22T21:32:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二分查找法&quot;&gt;&lt;a href=&quot;#二分查找法&quot; class=&quot;headerlink&quot; title=&quot;二分查找法&quot;&gt;&lt;/a&gt;二分查找法&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>接口测试工具Insomnia入门使用</title>
+    <link href="https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html</id>
+    <published>2023-09-27T22:22:00.000Z</published>
+    <updated>2023-09-27T22:22:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;打开官网的下载地址：&lt;a href=&quot;https://insomnia.rest/download&quot;&gt;Download -</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="操作演示" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/"/>
+    
+    
+    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
+    
+    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 11 使用技巧</title>
+    <link href="https://maojun.xyz/blog/2023/09/Windows%2011%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.html"/>
+    <id>https://maojun.xyz/blog/2023/09/Windows%2011%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.html</id>
+    <published>2023-09-27T19:44:00.000Z</published>
+    <updated>2023-09-27T19:44:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;窗口与屏幕&quot;&gt;&lt;a href=&quot;#窗口与屏幕&quot; class=&quot;headerlink&quot; title=&quot;窗口与屏幕&quot;&gt;&lt;/a&gt;窗口与屏幕&lt;/h2&gt;&lt;p&gt;1、拖动窗口并轻轻晃动可以最小化其他窗口。&lt;/p&gt;
+&lt;p&gt;2、按 Win + D</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    <category term="Windows" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Windows/"/>
+    
+    
+    <category term="操作系统" scheme="https://maojun.xyz/blog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
+    
+  </entry>
+  
+</feed>

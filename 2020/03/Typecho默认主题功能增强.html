@@ -1,0 +1,797 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="基础在Typecho默认主题优化[1]中对 Typecho 的主题进行了一些页面显示优化。在此基础上，增加一些配置让 Typecho 更加实用。 一言 Typecho 默认主题的右侧搜索框下有空白区，显示有点空白。增加一言功能，让页面每次刷新或打开新页面时都可以显示一言，增加页面的趣味性。一言可以采用网络接口的方式或者读取本地的方式。这里采用本地读取一言,方便后期维护。 在默认的主题下，编辑 fu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typecho 默认主题功能增强">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/03/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="基础在Typecho默认主题优化[1]中对 Typecho 的主题进行了一些页面显示优化。在此基础上，增加一些配置让 Typecho 更加实用。 一言 Typecho 默认主题的右侧搜索框下有空白区，显示有点空白。增加一言功能，让页面每次刷新或打开新页面时都可以显示一言，增加页面的趣味性。一言可以采用网络接口的方式或者读取本地的方式。这里采用本地读取一言,方便后期维护。 在默认的主题下，编辑 fu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-05T07:36:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="博客平台">
+<meta property="article:tag" content="Typecho">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Typecho 默认主题功能增强 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Typecho 默认主题功能增强"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-03-01 00:00" pubdate>
+          2020年3月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Typecho 默认主题功能增强</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年9月5日 早上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>在Typecho默认主题优化<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Typecho 默认主题优化 ](https://maojun.xyz/blog/2020/02/Typecho默认主题优化.html)">[1]</span></a></sup>中对 <code>Typecho</code> 的主题进行了一些页面显示优化。在此基础上，增加一些配置让 <code>Typecho</code> 更加实用。</p>
+<h2 id="一言"><a href="#一言" class="headerlink" title="一言"></a>一言</h2><p> <code>Typecho</code> 默认主题的右侧搜索框下有空白区，显示有点空白。增加<strong>一言</strong>功能，让页面每次刷新或打开新页面时都可以显示<strong>一言</strong>，增加页面的趣味性。<strong>一言</strong>可以采用网络接口的方式或者读取本地的方式。这里采用本地读取<strong>一言</strong>,方便后期维护。</p>
+<p>在默认的主题下，编辑 <code>function.php</code> 文件，追加以下内容:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment">*  每日一句</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">*/</span><br><br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">one_sentence</span>(<span class="hljs-params"></span>)</span>&#123;<br><br><span class="hljs-variable">$filename</span> = <span class="hljs-string">&#x27;data.dat&#x27;</span>;<br><span class="hljs-title function_ invoke__">header</span>(<span class="hljs-string">&#x27;Content-type: text/html; charset=utf-8&#x27;</span>);<br><br><span class="hljs-keyword">if</span>(!<span class="hljs-title function_ invoke__">file_exists</span>(<span class="hljs-variable">$filename</span>)) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-variable">$filename</span> . <span class="hljs-string">&#x27; 数据文件不存在&#x27;</span>);<br>&#125;<br><br><span class="hljs-variable">$data</span> = <span class="hljs-title function_ invoke__">file_get_contents</span>(<span class="hljs-variable">$filename</span>);<br><span class="hljs-variable">$data</span> = <span class="hljs-title function_ invoke__">explode</span>(PHP_EOL, <span class="hljs-variable">$data</span>);<br><span class="hljs-variable">$result</span> = <span class="hljs-variable">$data</span>[<span class="hljs-title function_ invoke__">array_rand</span>(<span class="hljs-variable">$data</span>)];<br><span class="hljs-variable">$result</span> = <span class="hljs-title function_ invoke__">str_replace</span>(<span class="hljs-keyword">array</span>(<span class="hljs-string">&quot;\r&quot;</span>,<span class="hljs-string">&quot;\n&quot;</span>,<span class="hljs-string">&quot;\r\n&quot;</span>), <span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-variable">$result</span>);<br><br><span class="hljs-keyword">echo</span> <span class="hljs-variable">$result</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>编辑 <code>header.php</code> 文件，找到以下内容所在的行：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;nav id=<span class="hljs-string">&quot;nav-menu&quot;</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">clearfix</span>&quot; <span class="hljs-title">role</span>=&quot;<span class="hljs-title">navigation</span>&quot;&gt;</span><br><span class="hljs-class">&lt;/<span class="hljs-title">nav</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>在 <code>&lt;/nav&gt;</code> 之前增加函数调用语句：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">kit</span>-<span class="hljs-title">hidden</span>-<span class="hljs-title">tb</span>&quot; <span class="hljs-title">style</span>=&quot;<span class="hljs-title">float</span>:<span class="hljs-title">right</span>&quot;&gt; &lt;?<span class="hljs-title">php</span> <span class="hljs-title">echo</span> <span class="hljs-title">one_sentence</span>();?&gt; &lt;/<span class="hljs-title">span</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>class</code>的样式是让<strong>一言</strong>在小屏幕不显示，宽屏时右对齐。</p>
+</blockquote>
+<p>在<strong>根目录</strong>添加 <code>data.dat</code> 文件,添加需要显示的<strong>一言</strong>内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><code class="hljs dat">往者不可谏，来着犹可追。——《论语·微子》<br>多行不义必自毙。——《左传》<br>敏而好学，不耻下问。——《论语·公冶长》<br>避其锐气，击其惰归。——《孙子兵法·军争》<br>十年树木，百年树人。——《管子·权修》<br>居安思危，思则有备，有备无患。——《左传》<br>天时不如地利，地利不如人和。——《孟子·公孙丑》<br>人谁无过？过而能改，善莫大焉。——《论语》<br>信言不美，美言不信。——老子<br>满招损，谦受益。——《尚书·大禹谟》<br>高岸为谷，深谷为陵。——《诗经·小雅》<br>天作孽，犹可违，自作孽，不可活。——《尚书》<br>言之无文，行而不远。——《左传》<br>三军可夺帅也，匹夫不可夺志也。——《论语·子罕》<br>天行健，君子以自强不息。——《周易·乾·象》<br>皮之不存，毛将焉附。——《左传》<br>路漫漫其修远兮，吾将上下而求索。——屈原《离骚》<br>长太息以掩涕兮，哀民生之多艰。——屈原《离骚》<br>人而无仪，不死何为。——《诗经·鄘风》<br>捐躯赴国难，视死忽如归。——曹植《白马篇》<br>天下之事常成于困约，而败于奢靡。——陆游<br>知之者不如好之者，好之者不如乐之者。——《论语·雍也》<br>志当存高远。——诸葛亮《诫外生书》<br>不去庆父，鲁难未已。——《左传》<br>老吾老，以及人之老；幼吾幼，以及人之幼。——《孟子·梁惠王下》<br>博学之，审问之，慎思之，明辨之，笃行之。——《中庸》<br>人非圣贤，孰能无过。——《训俗遗规》<br>亦余心之所善兮，虽九死其犹未悔。——《屈原·离骚》<br>若要功夫深，铁杵磨成针。——曹学《蜀中广记·上川南道彭山县》<br>少壮不努力，老大徒悲伤。——汉乐府古辞《长歌行》<br>穷则独善其身，达则兼济天下。——《孟子·尽心上》<br>仁者见仁，智者见智。——《易经·系辞上》<br>青，取之于蓝而青于蓝；冰，水为之而寒于水。——《荀子·劝学》<br>千羊之皮，不如一狐之腋。——《史记》<br>余将董道而不豫兮，固将重昏而终身。——《屈原·涉江》<br>高山仰止，景行行止。——《诗经·小雅·车辖》<br>锲而舍之，朽木不折；锲而不舍，金石可镂。——《荀子·劝学》<br>不傲才以骄人，不以宠而作威。——诸葛亮<br>尺有所短；寸有所长。物有所不足；智有所不明。——屈原《卜居》<br>言必信，行必果。——《论语·子路》<br>有志者事竟成。——《后汉书·耿列传》<br>其身正，不令而行；其身不正，虽令不从。——论语·子路<br>三人行，必有我师焉：择其善而从之，其不善者而改之。——《论语·述而》<br>非学无以广才，非志无以成学。——《三国·诸葛亮·诫子书》<br>绳锯木断，水滴石穿。——罗大经《鹤林玉露》<br>君子坦荡荡，小人长戚戚。——孔子<br>老当益壮，宁知白首之心；穷且益坚，不坠青云之志。——王勃<br>尺有所短，寸有所长。——《史记》<br>他山之石，可以攻玉。——《诗经·小雅·鹤鸣》<br>苟余心之端直兮，虽僻远其何伤？——《屈原·涉江》<br>人有不为也，而后可以有为。——《孟子·离娄下》<br>路漫漫其修远今，吾将上下而求索。——屈原<br>孔子登东山而小鲁，登泰山而小天下。——《孟子·尽心上》<br>积土而为山，积水而为海。——《荀子·儒效》<br>生于忧患，死于安乐。——《孟子·告子下》<br>知足不辱，知止不殆。——老子<br>桃李不言，下自成蹊。——《史记》<br>傲不可长，欲不可纵，乐不可极，志不可满。——魏徵<br>既来之，则安之。——《论语·季氏》<br>知己知彼，百战不殆。——《孙子兵法·谋攻》<br>真者，精诚之至也，不精不诚，不能动人。——《庄子·渔夫》<br>独学而无友，则孤陋而寡闻。——《礼记·杂记》<br>勿以恶小而为之，勿以善小而不为。惟贤惟德，能服于人。——刘备<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：一言的内容不要过长，不然页面显示效果不好。</p>
+</blockquote>
+<p>保存后刷新页面即可查看效果。</p>
+<h2 id="博客总访问"><a href="#博客总访问" class="headerlink" title="博客总访问"></a>博客总访问</h2><p>为了统计博客一共被访问了多少次，可以在页面底部增加统计功能。在默认主题目录下编辑 <code>function.php</code> 内容，追加以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">total_view</span>(<span class="hljs-params"></span>)</span><br><span class="hljs-function">        </span>&#123;<br>            <span class="hljs-variable">$db</span> = <span class="hljs-title class_">Typecho_Db</span>::<span class="hljs-title function_ invoke__">get</span>();<br>            <span class="hljs-variable">$row</span> = <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">fetchAll</span>(<span class="hljs-string">&#x27;SELECT SUM(VIEWS) FROM `typecho_contents`&#x27;</span>);<br>                <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">number_format</span>(<span class="hljs-variable">$row</span>[<span class="hljs-number">0</span>][<span class="hljs-string">&#x27;SUM(VIEWS)&#x27;</span>]);<br>        &#125;<br></code></pre></td></tr></table></figure>
+
+<p>然后编辑 <code>footer.php</code> 文件，在 <code>&lt;/footer&gt;</code> 标签前添加：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">_e</span>(<span class="hljs-string">&#x27;Total UV): &#x27;</span>); <span class="hljs-meta">?&gt;</span><span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">get_total_view</span>(<span class="hljs-variable">$this</span>); <span class="hljs-meta">?&gt;</span>.<br></code></pre></td></tr></table></figure>
+
+<p>保存后刷新页面即可查看效果。</p>
+<h2 id="文章更新时间："><a href="#文章更新时间：" class="headerlink" title="文章更新时间："></a>文章更新时间：</h2><p><code>Typecho </code>默认的文章页面只显示创建时间，而没有更新时间。不方便浏览者知晓页面内容是否有更新变化。同样在默认主题的目录下编辑 <code>post.php</code> 文件,在 <code>&lt;ul class=&quot;post-meta&quot;&gt;&lt;/ul&gt;</code> 下找到之前的<strong>时间</strong>文字并将其修改为<strong>发布时间</strong>，然后在下面增加一行代码显示<strong>更新时间</strong></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;li&gt;<span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">_e</span>(<span class="hljs-string">&#x27;更新时间: &#x27;</span>); <span class="hljs-meta">?&gt;</span><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">date</span>(<span class="hljs-string">&#x27;Y-m-d H:i:s&#x27;</span>, <span class="hljs-variable">$this</span>-&gt;modified);<span class="hljs-meta">?&gt;</span>&lt;/li&gt;<br></code></pre></td></tr></table></figure>
+
+<p>保存刷新页面查看。</p>
+<h2 id="归档页自定义模板"><a href="#归档页自定义模板" class="headerlink" title="归档页自定义模板"></a>归档页自定义模板</h2><p><code>Typecho </code>默认的归档页面是有主页显示效果类似的。里面包含了文章内容，为了更直接的查看文章归档，可以只保留标题和评论数显示。在默认主题目录下新建 <code>timeline.php</code>（保留原先的 <code>archive.php</code> )文件：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span> (!<span class="hljs-title function_ invoke__">defined</span>(<span class="hljs-string">&#x27;__TYPECHO_ROOT_DIR__&#x27;</span>)) <span class="hljs-keyword">exit</span>; <span class="hljs-meta">?&gt;</span><br><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * archive</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@package</span> custom</span><br><span class="hljs-comment"> */</span><br> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">need</span>(<span class="hljs-string">&#x27;header.php&#x27;</span>); <span class="hljs-meta">?&gt;</span><br><br>&lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">col</span>-<span class="hljs-title">mb</span>-12 <span class="hljs-title">col</span>-12&quot; <span class="hljs-title">id</span>=&quot;<span class="hljs-title">main</span>&quot; <span class="hljs-title">role</span>=&quot;<span class="hljs-title">main</span>&quot;&gt;</span><br><span class="hljs-class">    &lt;<span class="hljs-title">article</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>&quot; <span class="hljs-title">itemscope</span> <span class="hljs-title">itemtype</span>=&quot;<span class="hljs-title">http</span>://<span class="hljs-title">schema</span>.<span class="hljs-title">org</span>/<span class="hljs-title">BlogPosting</span>&quot;&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">h1</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">title</span>&quot; <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">name</span> <span class="hljs-title">headline</span>&quot;&gt;&lt;<span class="hljs-title">a</span> <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">url</span>&quot; <span class="hljs-title">href</span>=&quot;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">permalink</span>() ?</span><br><span class="hljs-class">&gt;&quot;&gt;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">title</span>() ?&gt;&lt;/<span class="hljs-title">a</span>&gt;&lt;/<span class="hljs-title">h1</span>&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> <span class="hljs-title">if</span>($<span class="hljs-title">this</span>-&gt;<span class="hljs-title">user</span>-&gt;<span class="hljs-title">hasLogin</span>()):?&gt;</span><br><span class="hljs-class">&lt;<span class="hljs-title">a</span> <span class="hljs-title">href</span>=&quot;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">options</span>-&gt;<span class="hljs-title">adminUrl</span>(); ?&gt;<span class="hljs-title">write</span>-<span class="hljs-title">page</span>.<span class="hljs-title">php</span>?<span class="hljs-title">cid</span>=&lt;?<span class="hljs-title">php</span> <span class="hljs-title">echo</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">cid</span>;?&gt;&quot; &gt;编辑&lt;/<span class="hljs-title">a</span>&gt;</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> <span class="hljs-title">endif</span>;?&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class"></span><br><span class="hljs-class">        &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">content</span>&quot; <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">articleBody</span>&quot;&gt;</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">widget</span>(&#x27;<span class="hljs-title">Widget_Contents_Post_Recent</span>&#x27;, &#x27;<span class="hljs-title">pageSize</span>=10000&#x27;)-&gt;<span class="hljs-title">to</span>($<span class="hljs-title">archives</span>);</span><br><span class="hljs-class">    $<span class="hljs-title">year</span>=0; $<span class="hljs-title">mon</span>=0; $<span class="hljs-title">i</span>=0; $<span class="hljs-title">j</span>=0;</span><br><span class="hljs-class">    $<span class="hljs-title">output</span> = &#x27;&lt;<span class="hljs-title">div</span> <span class="hljs-title">id</span>=&quot;<span class="hljs-title">archives</span>&quot;&gt;&#x27;;</span><br><span class="hljs-class">    <span class="hljs-title">while</span>($<span class="hljs-title">archives</span>-&gt;<span class="hljs-title">next</span>()):</span><br><span class="hljs-class">        $<span class="hljs-title">year_tmp</span> = <span class="hljs-title">date</span>(&#x27;<span class="hljs-title">Y</span>&#x27;,$<span class="hljs-title">archives</span>-&gt;<span class="hljs-title">created</span>);</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">widget</span>(&#x27;<span class="hljs-title">Widget_Contents_Post_Recent</span>&#x27;, &#x27;<span class="hljs-title">pageSize</span>=10000&#x27;)-&gt;<span class="hljs-title">to</span>($<span class="hljs-title">archives</span>);</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> <span class="hljs-title">if</span> (!<span class="hljs-title">defined</span>(&#x27;<span class="hljs-title">__TYPECHO_ROOT_DIR__</span>&#x27;)) <span class="hljs-title">exit</span>; ?&gt;</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span></span><br><span class="hljs-class">/**</span><br><span class="hljs-class"> * <span class="hljs-title">archive</span></span><br><span class="hljs-class"> *</span><br><span class="hljs-class"> * @<span class="hljs-title">package</span> <span class="hljs-title">custom</span></span><br><span class="hljs-class"> */</span><br><span class="hljs-class"> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">need</span>(&#x27;<span class="hljs-title">header</span>.<span class="hljs-title">php</span>&#x27;); ?&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class">&lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">col</span>-<span class="hljs-title">mb</span>-12 <span class="hljs-title">col</span>-12&quot; <span class="hljs-title">id</span>=&quot;<span class="hljs-title">main</span>&quot; <span class="hljs-title">role</span>=&quot;<span class="hljs-title">main</span>&quot;&gt;</span><br><span class="hljs-class">    &lt;<span class="hljs-title">article</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>&quot; <span class="hljs-title">itemscope</span> <span class="hljs-title">itemtype</span>=&quot;<span class="hljs-title">http</span>://<span class="hljs-title">schema</span>.<span class="hljs-title">org</span>/<span class="hljs-title">BlogPosting</span>&quot;&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">h1</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">title</span>&quot; <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">name</span> <span class="hljs-title">headline</span>&quot;&gt;&lt;<span class="hljs-title">a</span> <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">url</span>&quot; <span class="hljs-title">href</span>=&quot;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">permalink</span>() ?</span><br><span class="hljs-class">&gt;&quot;&gt;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">title</span>() ?&gt;&lt;/<span class="hljs-title">a</span>&gt;&lt;/<span class="hljs-title">h1</span>&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> <span class="hljs-title">if</span>($<span class="hljs-title">this</span>-&gt;<span class="hljs-title">user</span>-&gt;<span class="hljs-title">hasLogin</span>()):?&gt;</span><br><span class="hljs-class">&lt;<span class="hljs-title">a</span> <span class="hljs-title">href</span>=&quot;&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">options</span>-&gt;<span class="hljs-title">adminUrl</span>(); ?&gt;<span class="hljs-title">write</span>-<span class="hljs-title">page</span>.<span class="hljs-title">php</span>?<span class="hljs-title">cid</span>=&lt;?<span class="hljs-title">php</span> <span class="hljs-title">echo</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">cid</span>;?&gt;&quot; &gt;编辑&lt;/<span class="hljs-title">a</span>&gt;</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> <span class="hljs-title">endif</span>;?&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class"></span><br><span class="hljs-class">        &lt;<span class="hljs-title">div</span> <span class="hljs-title">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">content</span>&quot; <span class="hljs-title">itemprop</span>=&quot;<span class="hljs-title">articleBody</span>&quot;&gt;</span><br><span class="hljs-class">&lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">widget</span>(&#x27;<span class="hljs-title">Widget_Contents_Post_Recent</span>&#x27;, &#x27;<span class="hljs-title">pageSize</span>=10000&#x27;)-&gt;<span class="hljs-title">to</span>($<span class="hljs-title">archives</span>);</span><br><span class="hljs-class">    $<span class="hljs-title">year</span>=0; $<span class="hljs-title">mon</span>=0; $<span class="hljs-title">i</span>=0; $<span class="hljs-title">j</span>=0;</span><br><span class="hljs-class">    $<span class="hljs-title">output</span> = &#x27;&lt;<span class="hljs-title">div</span> <span class="hljs-title">id</span>=&quot;<span class="hljs-title">archives</span>&quot;&gt;&#x27;;</span><br><span class="hljs-class">    <span class="hljs-title">while</span>($<span class="hljs-title">archives</span>-&gt;<span class="hljs-title">next</span>()):</span><br><span class="hljs-class">        $<span class="hljs-title">year_tmp</span> = <span class="hljs-title">date</span>(&#x27;<span class="hljs-title">Y</span>&#x27;,$<span class="hljs-title">archives</span>-&gt;<span class="hljs-title">created</span>);</span><br><span class="hljs-class">        $<span class="hljs-title">mon_tmp</span> = <span class="hljs-title">date</span>(&#x27;<span class="hljs-title">m</span>&#x27;,$<span class="hljs-title">archives</span>-&gt;<span class="hljs-title">created</span>);</span><br><span class="hljs-class">        $<span class="hljs-title">y</span>=$<span class="hljs-title">year</span>; $<span class="hljs-title">m</span>=$<span class="hljs-title">mon</span>;</span><br><span class="hljs-class">        <span class="hljs-title">if</span> ($<span class="hljs-title">mon</span> != $<span class="hljs-title">mon_tmp</span> &amp;&amp; $<span class="hljs-title">mon</span> &gt; 0) $<span class="hljs-title">output</span> .= &#x27;&lt;/<span class="hljs-title">ul</span>&gt;&lt;/<span class="hljs-title">li</span>&gt;&#x27;;</span><br><span class="hljs-class">        <span class="hljs-title">if</span> ($<span class="hljs-title">year</span> != $<span class="hljs-title">year_tmp</span> &amp;&amp; $<span class="hljs-title">year</span> &gt; 0) $<span class="hljs-title">output</span> .= &#x27;&lt;/<span class="hljs-title">ul</span>&gt;&#x27;;</span><br><span class="hljs-class">        <span class="hljs-title">if</span> ($<span class="hljs-title">year</span> != $<span class="hljs-title">year_tmp</span>) </span>&#123;<br>            <span class="hljs-variable">$year</span> = <span class="hljs-variable">$year_tmp</span>;<br>            <span class="hljs-variable">$output</span> .= <span class="hljs-string">&#x27;&lt;h3&gt;&#x27;</span>. <span class="hljs-variable">$year</span> .<span class="hljs-string">&#x27; 年&lt;/h3&gt;&lt;ul&gt;&#x27;</span>;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-variable">$mon</span> != <span class="hljs-variable">$mon_tmp</span>) &#123;<br>            <span class="hljs-variable">$mon</span> = <span class="hljs-variable">$mon_tmp</span>;<br>            <span class="hljs-variable">$output</span> .= <span class="hljs-string">&#x27;&lt;li&gt;&lt;span&gt;&#x27;</span>. <span class="hljs-variable">$mon</span> .<span class="hljs-string">&#x27; 月&lt;/span&gt;&lt;ul&gt;&#x27;</span>;<br>        &#125;<br>        <span class="hljs-variable">$output</span> .= <span class="hljs-string">&#x27;&lt;li&gt;&#x27;</span>.<span class="hljs-title function_ invoke__">date</span>(<span class="hljs-string">&#x27;d日: &#x27;</span>,<span class="hljs-variable">$archives</span>-&gt;created).<span class="hljs-string">&#x27;&lt;a href=&quot;&#x27;</span>.<span class="hljs-variable">$archives</span>-&gt;permalink .<span class="hljs-string">&#x27;&quot;&gt;&#x27;</span>. <span class="hljs-variable">$archiv</span><br>es-&gt;title .<span class="hljs-string">&#x27;&lt;/a&gt; &lt;em&gt;(&#x27;</span>. <span class="hljs-variable">$archives</span>-&gt;commentsNum.<span class="hljs-string">&#x27;)&lt;/em&gt;&lt;/li&gt;&#x27;</span>;<br>    <span class="hljs-keyword">endwhile</span>;<br>    <span class="hljs-variable">$output</span> .= <span class="hljs-string">&#x27;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&#x27;</span>;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$output</span>;<br><span class="hljs-meta">?&gt;</span><br>        &lt;/div&gt;<br>    &lt;/article&gt;<br>&lt;/div&gt;&lt;!-- end <span class="hljs-comment">#main--&gt;</span><br><br><span class="hljs-meta">&lt;?php</span> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">need</span>(<span class="hljs-string">&#x27;sidebar.php&#x27;</span>); <span class="hljs-meta">?&gt;</span><br><span class="hljs-meta">&lt;?php</span> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">need</span>(<span class="hljs-string">&#x27;footer.php&#x27;</span>); <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>然后登入到 <code>Typecho</code> 的管理后台，新建<strong>独立页面</strong>,然后选择默认为 <strong>timeline</strong> ，保存后点击新建的页面名称查看效果。</p>
+<h2 id="分页标题"><a href="#分页标题" class="headerlink" title="分页标题"></a>分页标题</h2><p><code>Typecho </code>的文章分页标题默认都是一样的，为了更好的区分页面。可以在不同页面中显示不同的页面标题。编辑 <code>header.php</code> 文件，在 &lt;<code>title&gt;&lt;/title&gt;</code> 尾部添加以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">$this</span>-&gt;_currentPage&gt;<span class="hljs-number">1</span>) <span class="hljs-keyword">echo</span> <span class="hljs-string">&#x27; _ 第 &#x27;</span>.<span class="hljs-variable">$t</span><br>his-&gt;_currentPage.<span class="hljs-string">&#x27; 页 &#x27;</span>; <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>保存后刷新页面即可查看到效果。</p>
+<h2 id="浏览器标识"><a href="#浏览器标识" class="headerlink" title="浏览器标识"></a>浏览器标识</h2><p>可以给访问的用户添加浏览器标识，在默认主题目录下编辑 <code>function.php</code> 文件，追加以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/** 获取浏览器信息 */</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getBrowser</span>(<span class="hljs-params"><span class="hljs-variable">$agent</span></span>)</span><br><span class="hljs-function"></span>&#123; <span class="hljs-variable">$outputer</span> = <span class="hljs-literal">false</span>;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/MSIE\s([^\s|;]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; IE浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/FireFox\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 火狐浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Maxthon([\d]*)\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 傲游浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;#SE 2([a-zA-Z0-9.]+)#i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 搜狗浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;#360([a-zA-Z0-9.]+)#i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 360浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Edge([\d]*)\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Edge&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/EdgiOS([\d]*)\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Edge&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/UC/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; UC浏览器 &#x27;</span>;<br>    &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/OPR/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 欧朋浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/MicroMesseng/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 微信内嵌浏览器&#x27;</span>;<br>    &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/WeiBo/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 微博内嵌浏览器&#x27;</span>;<br>    &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/QQ/i&#x27;</span>, <span class="hljs-variable">$agent</span>)||<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/QQBrowser\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; QQ浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/MQBHD/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; QQ浏览器 &#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/BIDU/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 百度浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/LBBROWSER/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 猎豹浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/TheWorld/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 世界之窗浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/XiaoMi/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 小米浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/UBrowser/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; UC浏览器 &#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/mailapp/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; email内嵌浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/2345Explorer/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 2345浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Sleipnir/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 神马浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/YaBrowser/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Yandex浏览器&#x27;</span>;<br>    &#125;  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Opera[\s|\/]([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Opera浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/MZBrowser/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 魅族浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/VivoBrowser/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; vivo浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Quark/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 夸克浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/mixia/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 米侠浏览器&#x27;</span>;<br>    &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/fusion/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 客户端&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/CoolMarket/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 基安内置浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Thunder/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; 迅雷内置浏览器&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/Chrome([\d]*)\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Chrome &#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/safari\/([^\s]+)/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$outputer</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Safari&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>   <span class="hljs-keyword">return</span> <span class="hljs-variable">$outputer</span>;<br>&#125;<br><span class="hljs-comment">/** 获取操作系统信息 */</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getOs</span>(<span class="hljs-params"><span class="hljs-variable">$agent</span></span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-variable">$os</span> = <span class="hljs-literal">false</span>;<br><br>    <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/win/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 6.0/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows Vista&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 6.1/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows 7&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 6.2/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows 8&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 6.3/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows 8.1&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 5.1/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows XP&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/nt 10.0/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows 10&#x27;</span>;<br>        &#125; <span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Windows&#x27;</span>;<br>        &#125;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br><span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android 9/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android P&#x27;</span>;<br>    &#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android 8/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android O&#x27;</span>;<br>    &#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android 7/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android N&#x27;</span>;<br>    &#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android 6/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android M&#x27;</span>;<br>    &#125;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/android 5/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android L&#x27;</span>;<br>    &#125;<br><span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Android&#x27;</span>;<br>&#125;<br>    &#125;<br> <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/ubuntu/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Linux&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/linux/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; Linux&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/iPhone/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; iPhone&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/iPad/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; iPad&#x27;</span>;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/mac/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;&lt;i&gt;&lt;/i&gt; OSX&#x27;</span>;<br>    &#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-title function_ invoke__">preg_match</span>(<span class="hljs-string">&#x27;/cros/i&#x27;</span>, <span class="hljs-variable">$agent</span>)) &#123;<br>        <span class="hljs-variable">$os</span> = <span class="hljs-string">&#x27;chrome os&#x27;</span>;<br>    &#125;<span class="hljs-keyword">else</span> &#123;<br> <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>   <span class="hljs-keyword">return</span> <span class="hljs-variable">$os</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>然后在对应需要显示浏览器标识的地方输出以上函数即可。</p>
+<h2 id="默认后台地址"><a href="#默认后台地址" class="headerlink" title="默认后台地址"></a>默认后台地址</h2><p>默认的后台登入地址是域名后跟<code>/admin</code>，如果熟悉<code>Typecho</code>的用户就有可能尝试登入。为了安全可以将其修改为其他登入地址，进入网站的<strong>根目录</strong>，编辑 <strong>config.inc.php</strong> 文件，找到下面这行，将<code>/admin</code>修改成自己想要的后台登入地址。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/** 后台路径(相对路径) */</span><br><span class="hljs-title function_ invoke__">define</span>(<span class="hljs-string">&#x27;__TYPECHO_ADMIN_DIR__&#x27;</span>, <span class="hljs-string">&#x27;/admin/&#x27;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>保存后将<strong>根目录</strong>的 <strong>admin</strong> 文件夹重名名修改的地址。</p>
+<p>保存后刷新页面查看效果。</p>
+<h2 id="分页页数"><a href="#分页页数" class="headerlink" title="分页页数"></a>分页页数</h2><p><code>Typecho </code>的默认分页数量是 <code>5</code>，可以将其增加到 <code>10 </code>提高阅读体验。编辑默认主题目录下的 <code>functioin.php</code> 文件，追加以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 自定义分页数量</span><br><span class="hljs-comment">*/</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">themeInit</span>(<span class="hljs-params"><span class="hljs-variable">$archive</span></span>) </span>&#123;<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$archive</span>-&gt;<span class="hljs-title function_ invoke__">is</span>(<span class="hljs-string">&#x27;index&#x27;</span>)) &#123;<br>                <span class="hljs-variable">$archive</span>-&gt;parameter-&gt;pageSize = <span class="hljs-number">10</span>;<br>        &#125;<span class="hljs-keyword">elseif</span>(<span class="hljs-variable">$archive</span>-&gt;<span class="hljs-title function_ invoke__">is</span>(<span class="hljs-string">&#x27;archive&#x27;</span>))&#123;<br>                <span class="hljs-variable">$archive</span>-&gt;parameter-&gt;pageSize = <span class="hljs-number">10</span>;<br>        &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>保存后刷新即可。</p>
+<h2 id="文章自动摘要"><a href="#文章自动摘要" class="headerlink" title="文章自动摘要"></a>文章自动摘要</h2><p><code>Typecho</code> 的文章在主页默认是全文显示了，可以在后台编写文章时通过<strong>摘要分隔线</strong>功能划分显示的摘要部分，每次手动设置容易忘记。为了简单起见，可以在代码中设置自动摘要内容。在默认主题目录下编辑 <code>index.php</code> ，找到以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">content</span>(<span class="hljs-string">&#x27;阅读剩余部分&#x27;</span>); <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>将其内容替换为</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">excerpt</span>(<span class="hljs-number">200</span>, <span class="hljs-string">&#x27;...&#x27;</span>); <span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>上面的&#96;200&#96;&#96;数值可以自行修改，表示截取多少个字节作为摘要显示。</p>
+<h2 id="GitHub-star"><a href="#GitHub-star" class="headerlink" title="GitHub star"></a>GitHub star</h2><p>分享 GitHub 仓库时可以让其显示 <code>star</code> 的数量，只需要增加以下代码即可：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://ghbtns.com/github-btn.html?user=amplest&amp;repo=molerose-typecho-themes-dev&amp;type=star&amp;count=true&quot;</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">scrolling</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;170px&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;20px&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章回复可见"><a href="#文章回复可见" class="headerlink" title="文章回复可见"></a>文章回复可见</h2><p>文章正文设置回复可见。在默认主题目录下编辑 <code>post.php</code> 文件， 找到 <code>&lt;?php $this-&gt;content(&#39;&#39;); ?&gt;</code> ,将其替换为：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$db</span> = <span class="hljs-title class_">Typecho_Db</span>::<span class="hljs-title function_ invoke__">get</span>();<br><span class="hljs-variable">$sql</span> = <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">select</span>()-&gt;<span class="hljs-keyword">from</span>(<span class="hljs-string">&#x27;table.comments&#x27;</span>)<br>    -&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;cid = ?&#x27;</span>,<span class="hljs-variable">$this</span>-&gt;cid)<br>    -&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;mail = ?&#x27;</span>, <span class="hljs-variable">$this</span>-&gt;<span class="hljs-title function_ invoke__">remember</span>(<span class="hljs-string">&#x27;mail&#x27;</span>,<span class="hljs-literal">true</span>))<br>    -&gt;<span class="hljs-title function_ invoke__">limit</span>(<span class="hljs-number">1</span>);<br><span class="hljs-variable">$result</span> = <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">fetchAll</span>(<span class="hljs-variable">$sql</span>);<br><span class="hljs-keyword">if</span>(<span class="hljs-variable language_">$this</span>-&gt;user-&gt;<span class="hljs-title function_ invoke__">hasLogin</span>() || <span class="hljs-variable">$result</span>) &#123;<br>    <span class="hljs-variable">$content</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&quot;/\[hide\](.*?)\[\/hide\]/sm&quot;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;reply2view&quot;&gt;&lt;i class=&quot;icon-lock-open&quot;&gt;&lt;/i&gt;$1&lt;/div&gt;&#x27;</span>,<span class="hljs-variable">$this</span>-&gt;content);<br>&#125;<br><span class="hljs-keyword">else</span>&#123;<br>    <span class="hljs-variable">$content</span> = <span class="hljs-title function_ invoke__">preg_replace</span>(<span class="hljs-string">&quot;/\[hide\](.*?)\[\/hide\]/sm&quot;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;reply2view&quot;&gt;&lt;i class=&quot;icon-lock&quot;&gt;&lt;/i&gt;此处内容需要评论回复后方可阅读。&lt;/div&gt;&#x27;</span>,<span class="hljs-variable">$this</span>-&gt;content);<br>&#125;<br><span class="hljs-keyword">echo</span> <span class="hljs-variable">$content</span><br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>（本文完）</p>
+<p><strong>参考链接：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://web.archive.org/web/20201019231412/https://www.lanka.cn/Typecho-1_3284.html#comment-763">Typecho非插件实现内容回复可见功能</a></li>
+</ul>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://maojun.xyz/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">Typecho 默认主题优化 </a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/" class="category-chain-item">操作演示</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/" class="print-no-link">#博客平台</a>
+      
+        <a href="/blog/tags/Typecho/" class="print-no-link">#Typecho</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Typecho 默认主题功能增强</div>
+      <div>https://maojun.xyz/blog/2020/03/Typecho默认主题功能增强.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年3月1日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年9月5日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2020/03/%E9%80%9A%E8%BF%87%E8%B7%B3%E6%9D%BF%E6%9C%BA%E8%BF%9E%E6%8E%A5SSH%E6%9C%8D%E5%8A%A1%E5%99%A8.html" title="通过跳板机连接 SSH 服务器">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">通过跳板机连接 SSH 服务器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/02/Typecho%E5%BC%80%E5%90%AFRedis%E7%BC%93%E5%AD%98.html" title="Typecho 开启Redis缓存">
+                        <span class="hidden-mobile">Typecho 开启Redis缓存</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

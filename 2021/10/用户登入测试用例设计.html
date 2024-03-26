@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="划分维度软件测试根据维度划分为两大需求：  显式功能性需求 隐式功能性需求   显式功能性需求（Functional requirement）指的是软件本身需要实现的具体功能，对应的是隐式功能性需求(Non-functional requirement）  隐式功能性需求主要涉三大方面:  安全性 性能 兼容性  因此，设计测试用例的时候可以根据上述划分来设计。 显式功能性需求测试用例设计 输入已">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用户登入测试用例设计">
+<meta property="og:url" content="https://maojun.xyz/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="划分维度软件测试根据维度划分为两大需求：  显式功能性需求 隐式功能性需求   显式功能性需求（Functional requirement）指的是软件本身需要实现的具体功能，对应的是隐式功能性需求(Non-functional requirement）  隐式功能性需求主要涉三大方面:  安全性 性能 兼容性  因此，设计测试用例的时候可以根据上述划分来设计。 显式功能性需求测试用例设计 输入已">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-10T12:29:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="软件测试">
+<meta property="article:tag" content="测试用例">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>用户登入测试用例设计 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="用户登入测试用例设计"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-10-12 00:00" pubdate>
+          2021年10月12日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">用户登入测试用例设计</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年9月10日 中午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="划分维度"><a href="#划分维度" class="headerlink" title="划分维度"></a>划分维度</h2><p>软件测试根据维度划分为两大需求：</p>
+<ol>
+<li>显式功能性需求</li>
+<li>隐式功能性需求</li>
+</ol>
+<blockquote>
+<p>显式功能性需求（Functional requirement）指的是软件本身需要实现的具体功能，对应的是隐式功能性需求(Non-functional requirement）</p>
+</blockquote>
+<p>隐式功能性需求主要涉三大方面:</p>
+<ol>
+<li>安全性</li>
+<li>性能</li>
+<li>兼容性</li>
+</ol>
+<p>因此，设计测试用例的时候可以根据上述划分来设计。</p>
+<h2 id="显式功能性需求测试用例设计"><a href="#显式功能性需求测试用例设计" class="headerlink" title="显式功能性需求测试用例设计"></a>显式功能性需求测试用例设计</h2><ul>
+<li>输入已注册的用户名和正确的密码，验证是否登录成功</li>
+<li>输入已注册的用户名和不正确的密码，验证是否登录失败，并且提示信息正确</li>
+<li>输入未注册的用户名和任意密码，验证是否登录失败，并且提示信息正确</li>
+<li>用户名和密码两者都为空，验证是否登录失败，并且提示信息正确</li>
+<li>用户名和密码两者之一为空，验证是否登录失败，并且提示信息正确</li>
+<li>如果登录功能启用了验证码功能，在用户名和密码正确的前提下，输入正确的验证码，验证是否登录成功</li>
+<li>如果登录功能启用了验证码功能，在用户名和密码正确的前提下，输入错误的验证码，验证是否登录失败，并且提示信息正确</li>
+<li>用户名和密码是否大小写敏感</li>
+<li>页面上的密码框是否加密显示</li>
+<li>后台系统创建的用户第一次登录成功时，是否提示修改密码</li>
+<li>忘记用户名和忘记密码的功能是否可用</li>
+<li>前端页面是否根据设计要求限制用户名和密码长度</li>
+<li>如果登录功能需要验证码，点击验证码图片是否可以更换验证码，更换后的验证码是否可用</li>
+<li>刷新页面是否会刷新验证码</li>
+<li>如果验证码具有时效性，需要分别验证时效内和时效外验证码的有效性</li>
+<li>用户登录成功但是会话超时后，继续操作是否会重定向到用户登录界面</li>
+<li>不同级别的用户，比如管理员用户和普通用户，登录系统后的权限是否正确</li>
+<li>页面默认焦点是否定位在用户名的输入框中</li>
+<li>快捷键 Tab 和 Enter 等，是否可以正常使用</li>
+<li>网络延迟或者弱网或者切换网络或者断网时正常登录是否正常</li>
+<li>是否支持第三方登录</li>
+<li>用户名密码是否支持特殊字符和中文等</li>
+<li>登录用户限制，比如同时支持10个用户登录，同时9个或者11个用户登录是否正常或者提示信息正确</li>
+<li>未激活的用户是否可以登录</li>
+<li>被停用的用户是否可以登录</li>
+<li>登录的操作日志记录是否准确</li>
+<li>登录有实效性是否控制正确</li>
+<li>为空和输入空字符串时的校验是否一致</li>
+<li>使用中文键盘输入字母时和使用英文键盘输入字母时传给后端的字符长度是否一致</li>
+<li>输入账号密码时对键盘格式是否有要求比如数字键盘</li>
+<li>密码一栏是否需要设置明暗码切换按钮</li>
+<li>输入账号密码格式不规范时是否将按钮设置为不可点击</li>
+<li>输入栏是否设置快速删除按钮</li>
+<li>是否用到缓存</li>
+<li>用户名和密码是否对空格敏感</li>
+<li>密码是否有明文和暗文显示两种模式</li>
+<li>更改密码后是否还能用之前的密码登录</li>
+<li>一个用户是否具备多种登录方式(用户名，手机号，邮箱…)</li>
+</ul>
+<h2 id="隐式功能性需求测试用例设计（三大方面）"><a href="#隐式功能性需求测试用例设计（三大方面）" class="headerlink" title="隐式功能性需求测试用例设计（三大方面）"></a>隐式功能性需求测试用例设计（三大方面）</h2><h3 id="安全性测试用例设计"><a href="#安全性测试用例设计" class="headerlink" title="安全性测试用例设计"></a>安全性测试用例设计</h3><ul>
+<li>用户密码后台存储是否加密</li>
+<li>用户密码在网络传输过程中是否加密</li>
+<li>密码是否具有有效期，密码有效期到期后，是否提示需要修改密码</li>
+<li>不登录的情况下，在浏览器中直接输入登录后的 URL 地址，验证是否会重新定向到用户登录界面</li>
+<li>密码输入框是否不支持复制和粘贴</li>
+<li>密码输入框内输入的密码是否都可以在页面源码模式下被查看</li>
+<li>用户名和密码的输入框中分别输入典型的“SQL 注入攻击”字符串，验证系统的返回页面</li>
+<li>用户名和密码的输入框中分别输入典型的“XSS 跨站脚本攻击”字符串，验证系统行为是否被篡改</li>
+<li>连续多次登录失败情况下，系统是否会阻止后续的尝试以应对暴力破解</li>
+<li>同一用户在同一终端的多种浏览器上登录，验证登录功能的互斥性是否符合设计预期</li>
+<li>同一用户先后在多台终端的浏览器上登录，验证登录是否具有互斥性</li>
+<li>是否可以使用登录的API发送登录请求，并绕开验证码校验</li>
+<li>是否可以用抓包工具抓到的请求包直接登录</li>
+<li>截取到的token等信息，是否可以在其他终端上直接使用，绕开登录，token过期时间</li>
+<li>是否可记住密码，记住的密码保存是否加密</li>
+<li>记住密码是否有有效期，有有效期，过期之后是否会清空密码</li>
+<li>GDPR相关的测试，用户登录过程中log中是否有个人信息明文打印</li>
+<li>密码强弱性校验</li>
+<li>登录成功后的session时效设置</li>
+<li>安全性方面异地登录校验、更换设备登录校验、登录信息异常是否考虑账号冻结停用</li>
+</ul>
+<h3 id="性能压力测试用例设计"><a href="#性能压力测试用例设计" class="headerlink" title="性能压力测试用例设计"></a>性能压力测试用例设计</h3><ul>
+<li>单用户登录的响应时间是否小于 3 秒</li>
+<li>单用户登录时，后台请求数量是否过多</li>
+<li>高并发场景下用户登录的响应时间是否小于 5 秒</li>
+<li>高并发场景下服务端的监控指标是否符合预期</li>
+<li>高集合点并发场景下，是否存在资源死锁和不合理的资源等待</li>
+<li>长时间大量用户连续登录和登出，服务器端是否存在内存泄漏</li>
+</ul>
+<h3 id="兼容性测试用例设计"><a href="#兼容性测试用例设计" class="headerlink" title="兼容性测试用例设计"></a>兼容性测试用例设计</h3><ul>
+<li>不同浏览器下，验证登录页面的显示以及功能正确性；</li>
+<li>相同浏览器的不同版本下，验证登录页面的显示以及功能正确性；</li>
+<li>不同移动设备终端的不同浏览器下，验证登录页面的显示以及功能正确性；</li>
+<li>不同分辨率的界面下，验证登录页面的显示以及功能正确性。</li>
+</ul>
+<p>当然，除了上面罗列的测试用例外，还会存在一些遗漏的测试点没有覆盖到。大多数情况下，是不可能进行穷尽测试的。一般采用基于风险驱动的模式，有所侧重地选择测试范围和设计测试用例，以寻求缺陷风险和研发成本之间的平衡。</p>
+<blockquote>
+<p><strong>穷尽测试</strong>是指包含了软件输入值和前提条件所有可能组合的测试方法，完成穷尽测试的系统里应该不残留任何未知的软件缺陷。</p>
+</blockquote>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>每一个解决方案都是下一个问题的来源，要真正理解问题，那至少对自己的解决方案提出三个可能出错的地方。<br>                                                                             –《你的灯亮着吗》Donald C. Gaus</p>
+<p>（本文完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/" class="category-chain-item">工作</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84/" class="category-chain-item">业务架构</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="print-no-link">#软件测试</a>
+      
+        <a href="/blog/tags/%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/" class="print-no-link">#测试用例</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>用户登入测试用例设计</div>
+      <div>https://maojun.xyz/blog/2021/10/用户登入测试用例设计.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年10月12日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年9月10日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2021/10/%5B%E7%BF%BB%E8%AF%91%5DBug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html" title="Bug报告写作指南">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Bug报告写作指南</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html" title="大型电商系统的搜索链路业务架构">
+                        <span class="hidden-mobile">大型电商系统的搜索链路业务架构</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

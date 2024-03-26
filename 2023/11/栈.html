@@ -1,0 +1,924 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="栈栈这种数据结构，在计算机中有着广泛地运用，比如编程语言中函数的调用、操作系统中从用户态到内核态寄存器的保存、网络消息的处理等都会用到栈。 栈是先进后出（LIFO）顺序。 1234567891011Stack&lt;Character&gt; stack &#x3D; new Stack&lt;&gt;();t.push(&#x27;a&#x27;);t.push(&#x27;b&#x27;);&#x2F;&#x2F; 这里得">
+<meta property="og:type" content="article">
+<meta property="og:title" content="栈">
+<meta property="og:url" content="https://maojun.xyz/blog/2023/11/%E6%A0%88.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="栈栈这种数据结构，在计算机中有着广泛地运用，比如编程语言中函数的调用、操作系统中从用户态到内核态寄存器的保存、网络消息的处理等都会用到栈。 栈是先进后出（LIFO）顺序。 1234567891011Stack&lt;Character&gt; stack &#x3D; new Stack&lt;&gt;();t.push(&#x27;a&#x27;);t.push(&#x27;b&#x27;);&#x2F;&#x2F; 这里得">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/Cgp9HWA4jJaAMKH7ADCb3Og8L1Q358.gif">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/CioPOWA4jh2AHCJwACmFB7AcuZA768.gif">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/Cgp9HWA4kDOANTojAGASkY8p8QQ593.gif">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/Cgp9HWA4qkaALlpRAHsvPijzTIg101.gif">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/CioPOWA4q6qASB-UAADhj7uzOwg933.png">
+<meta property="article:published_time" content="2023-11-02T22:02:00.000Z">
+<meta property="article:modified_time" content="2023-11-04T17:45:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="栈">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maojun.xyz/blog/assets/Cgp9HWA4jJaAMKH7ADCb3Og8L1Q358.gif">
+  
+  
+  
+  <title>栈 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="栈"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-02 22:02" pubdate>
+          2023年11月2日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">栈</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年11月4日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>栈这种数据结构，在计算机中有着广泛地运用，比如编程语言中函数的调用、操作系统中从用户态到内核态寄存器的保存、网络消息的处理等都会用到栈。</p>
+<p>栈是先进后出（LIFO）顺序。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java">Stack&lt;Character&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br>t.push(<span class="hljs-string">&#x27;a&#x27;</span>);<br>t.push(<span class="hljs-string">&#x27;b&#x27;</span>);<br><span class="hljs-comment">// 这里得到栈顶元素&#x27;b&#x27;</span><br>t.peek(); <br><span class="hljs-comment">// 这里将栈顶元素&#x27;b&#x27;弹出</span><br>t.pop();  <br><span class="hljs-comment">// 此时栈顶元素为&#x27;a&#x27;</span><br>t.peek(); <br><span class="hljs-comment">// 这里将栈顶元素&#x27;a&#x27;弹出</span><br>t.pop();  <br></code></pre></td></tr></table></figure>
+
+<p>对应的代码动画演示：</p>
+<p><img src="/blog/./assets/Cgp9HWA4jJaAMKH7ADCb3Og8L1Q358.gif" srcset="/blog/img/loading.gif" lazyload alt="栈动画演示"></p>
+<h2 id="判断字符括号是否合法"><a href="#判断字符括号是否合法" class="headerlink" title="判断字符括号是否合法"></a>判断字符括号是否合法</h2><p>【题目】字符串中只有字符’(‘和’)’。合法字符串需要括号可以配对。比如：<br>输入：”()”<br>输出：true<br>解释：()，()()，(())是合法的。)(，()(，(()是非法的。<br>请你实现一个函数，来判断给定的字符串是否合法。<br>boolean isValid(String s);</p>
+<p>通过四步分析法：</p>
+<ol>
+<li><p>模拟：模拟题目的运行。</p>
+</li>
+<li><p>规律：尝试总结出题目的一般规律和特点。</p>
+</li>
+<li><p>匹配：找到符合这些特点的数据结构与算法。</p>
+</li>
+<li><p>边界：考虑特殊情况。</p>
+</li>
+</ol>
+<h3 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h3><p>首先我们以字符串 s &#x3D; “()()(())”，进行模拟，如下动图所示：</p>
+<p><img src="/blog/./assets/CioPOWA4jh2AHCJwACmFB7AcuZA768.gif" srcset="/blog/img/loading.gif" lazyload alt="括号匹配动画演示"></p>
+<h3 id="规律"><a href="#规律" class="headerlink" title="规律"></a>规律</h3><ul>
+<li>每个左括号’(‘或者右括号’)’都完成配对，才是合法的。</li>
+<li>配对可以通过消除法来消掉合法的括号，如果最后没有任何字符了，那么就是合法字符串。</li>
+<li>奇数长度的字符串总是非法的。</li>
+</ul>
+<h3 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h3><p>可以用栈来进行消除法的模拟。</p>
+<h3 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h3><p>找到问题匹配的算法或者数据结构之后，并不是马上写代码，而是要考虑一些边界问题，也就是一些特殊情况：</p>
+<ul>
+<li><p>字符串为空</p>
+</li>
+<li><p>字符串只有 1 个或者奇数个</p>
+</li>
+<li><p>字符串是”(((())))”嵌套很多层的是否可以处理</p>
+</li>
+</ul>
+<p><img src="/blog/./assets/Cgp9HWA4kDOANTojAGASkY8p8QQ593.gif" srcset="/blog/img/loading.gif" lazyload alt="栈模拟消除"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isValid</span><span class="hljs-params">(String s)</span> &#123;<br>    <span class="hljs-keyword">if</span> (s == <span class="hljs-literal">null</span> || s.length() == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-keyword">if</span> (s.length() % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    Stack&lt;Character&gt; t = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;Character&gt;();<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>        <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> s.charAt(i);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;(&#x27;</span>) &#123;<br>            <span class="hljs-comment">// 如果是&#x27;(&#x27;，那么压栈</span><br>            t.push(c);<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;)&#x27;</span>) &#123;<br>            <span class="hljs-comment">// 如果是&#x27;)&#x27;，那么就尝试弹栈</span><br>            <span class="hljs-keyword">if</span> (t.empty()) &#123;<br>                <span class="hljs-comment">// 如果弹栈失败，那么返回false</span><br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>            t.pop();<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> t.empty();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>每个字符只入栈一次，出栈一次，所以时间复杂度为 $O(N)$，而空间复杂度为 $O(N)$，因为最差情况下可能会把整个字符串都入栈。<br>我们还需要从两个角度进行深度思考：</p>
+<h4 id="深度，比如这种解法还可以怎么优化呢？"><a href="#深度，比如这种解法还可以怎么优化呢？" class="headerlink" title="深度，比如这种解法还可以怎么优化呢？"></a>深度，比如这种解法还可以怎么优化呢？</h4><p>栈中元素都相同时，实际上没有必要使用栈，只需要记录栈中元素个数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isValid2</span><span class="hljs-params">(String s)</span> &#123;<br>    <span class="hljs-keyword">if</span> (s == <span class="hljs-literal">null</span> || s.length() == <span class="hljs-number">0</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br>    <span class="hljs-keyword">if</span> (s.length() % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>    &#125;<br><br>    <span class="hljs-type">int</span> <span class="hljs-variable">leftBraceNumber</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>        <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> s.charAt(i);<br>        <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;(&#x27;</span>) &#123;<br>            ++leftBraceNumber;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&#x27;)&#x27;</span>) &#123;<br>            <span class="hljs-keyword">if</span> (leftBraceNumber &lt;= <span class="hljs-number">0</span>) &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            &#125;<br>            --leftBraceNumber;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> leftBraceNumber == <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="广度，比如这种解法具有普适性吗？"><a href="#广度，比如这种解法具有普适性吗？" class="headerlink" title="广度，比如这种解法具有普适性吗？"></a>广度，比如这种解法具有普适性吗？</h4><p>拓展：给出一个仅包含字符’(‘,’)’,’{‘,’}’,’[‘和’]’,的字符串，判断给出的字符串是否是合法的括号序列<br>括号必须以正确的顺序关闭，”()”和”()[]{}”都是合法的括号序列，但”(]”和”([)]”不合法。</p>
+<p>方法一：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java">Stack&lt;Character&gt; stk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>    <span class="hljs-comment">// 根据字符类型，执行不同的操作</span><br>    <span class="hljs-keyword">switch</span> (s.charAt(i)) &#123;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;(&#x27;</span>:<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;[&#x27;</span>:<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;&#123;&#x27;</span>:<br>            <span class="hljs-comment">// 将该左括号入栈，表示待匹配</span><br>            stk.push(s.charAt(i));<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;)&#x27;</span>:<br>            <span class="hljs-comment">// 检查堆栈是否为空，或者堆栈顶部的字符不是左括号 &#x27;(&#x27;</span><br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;(&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 括号不匹配，返回 false</span><br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;]&#x27;</span>:<br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;[&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>        <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;&#125;&#x27;</span>:<br>            <span class="hljs-keyword">if</span> (stk.empty() || stk.peek() != <span class="hljs-string">&#x27;&#123;&#x27;</span>)<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>            stk.pop();<br>            <span class="hljs-keyword">break</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 如果所有字符都遍历完并且堆栈为空，表示括号匹配成功，返回 true，否则返回 false</span><br><span class="hljs-keyword">return</span> stk.empty();<br></code></pre></td></tr></table></figure>
+
+<p>方法二：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// 使用HashMap存储括号的对应关系</span><br>Map&lt;Character, Character&gt; bracketPairs = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>bracketPairs.put(<span class="hljs-string">&#x27;)&#x27;</span>, <span class="hljs-string">&#x27;(&#x27;</span>);<br>bracketPairs.put(<span class="hljs-string">&#x27;]&#x27;</span>, <span class="hljs-string">&#x27;[&#x27;</span>);<br>bracketPairs.put(<span class="hljs-string">&#x27;&#125;&#x27;</span>, <span class="hljs-string">&#x27;&#123;&#x27;</span>);<br><br>Stack&lt;Character&gt; stk = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br><br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;<br>    <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> s.charAt(i);<br>    <span class="hljs-comment">// 如果字符是右括号</span><br>    <span class="hljs-keyword">if</span> (bracketPairs.containsKey(c)) &#123;<br>        <span class="hljs-type">char</span> <span class="hljs-variable">topElement</span> <span class="hljs-operator">=</span> stk.empty() ? <span class="hljs-string">&#x27;#&#x27;</span> : stk.pop();<br>        <span class="hljs-keyword">if</span> (topElement != bracketPairs.get(c)) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>        &#125;<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-comment">// 如果字符是左括号，直接入栈</span><br>        stk.push(c);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// 最后只需检查堆栈是否为空即可</span><br><span class="hljs-keyword">return</span> stk.isEmpty();<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="大鱼吃小鱼"><a href="#大鱼吃小鱼" class="headerlink" title="大鱼吃小鱼"></a>大鱼吃小鱼</h2><p>【题目】在水中有许多鱼，可以认为这些鱼停放在 x 轴上。再给定两个数组 Size，Dir，Size[i] 表示第 i 条鱼的大小，Dir[i] 表示鱼的方向 （0 表示向左游，1 表示向右游）。这两个数组分别表示鱼的大小和游动的方向，并且两个数组的长度相等。鱼的行为符合以下几个条件:</p>
+<p>所有的鱼都同时开始游动，每次按照鱼的方向，都游动一个单位距离；</p>
+<p>当方向相对时，大鱼会吃掉小鱼；</p>
+<p>鱼的大小都不一样。</p>
+<p>输入：Size &#x3D; [4, 2, 5, 3, 1], Dir &#x3D; [1, 1, 0, 0, 0]<br>输出：3<br>请完成以下接口来计算还剩下几条鱼？<br>int solution(int[] Size, int[] Dir);</p>
+<h3 id="模拟-1"><a href="#模拟-1" class="headerlink" title="模拟"></a>模拟</h3><p>Size &#x3D; [4, 3, 2, 1, 5], Dir &#x3D; [0, 1, 0, 0, 0]</p>
+<pre><code class=" mermaid">timeline
+    title  大鱼吃小鱼
+    初始 : [4, 3, 2, 1, 5]
+    第一次 : [4, 3, 1, 5]
+    第二次 : [4, 3, 5]
+    第三次 : [4, 5]
+</code></pre>
+
+
+
+<h3 id="规律-1"><a href="#规律-1" class="headerlink" title="规律"></a>规律</h3><p>通过模拟，可以发现如下规律:</p>
+<ul>
+<li><p>如果两条鱼相对而游时，那么较小的鱼会被吃掉；</p>
+</li>
+<li><p>其他情况没有鱼被吃掉。</p>
+</li>
+</ul>
+<h3 id="匹配-1"><a href="#匹配-1" class="headerlink" title="匹配"></a>匹配</h3><p>我们发现，活下来的鱼的行为就是一个栈。每当有新的鱼要进来的时候，就会与栈顶的鱼进行比较。那么我们匹配到的算法就是栈了。</p>
+<h3 id="边界-1"><a href="#边界-1" class="headerlink" title="边界"></a>边界</h3><ul>
+<li><p>所有的鱼都朝着一个方向游；</p>
+</li>
+<li><p>一条鱼吃掉了其他的所有鱼。</p>
+</li>
+</ul>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">solution</span><span class="hljs-params">(<span class="hljs-type">int</span>[] fishSize, <span class="hljs-type">int</span>[] fishDirection)</span> &#123;<br>    <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">fishNumber</span> <span class="hljs-operator">=</span> fishSize.length;<br>    <span class="hljs-keyword">if</span> (fishNumber &lt;= <span class="hljs-number">1</span>) &#123;<br>        <span class="hljs-keyword">return</span> fishNumber; <span class="hljs-comment">// 如果只有一个或没有鱼，直接返回鱼的数量，不需要模拟碰撞</span><br>    &#125;<br><br>    <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">left</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;  <span class="hljs-comment">// 定义常量来表示鱼的方向，0 表示向左游</span><br>    <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">right</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; <span class="hljs-comment">// 1 表示向右游</span><br><br>    Stack&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;(); <span class="hljs-comment">// 创建一个栈来模拟鱼的相遇和碰撞情况</span><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; fishNumber; i++) &#123;<br>        <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">curFishDirection</span> <span class="hljs-operator">=</span> fishDirection[i]; <span class="hljs-comment">// 获取当前鱼的方向</span><br>        <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">curFishSize</span> <span class="hljs-operator">=</span> fishSize[i]; <span class="hljs-comment">// 获取当前鱼的大小</span><br><br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">hasEat</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 标志当前鱼是否已经吃掉了其他鱼</span><br><br>        <span class="hljs-keyword">while</span> (!stack.empty() &amp;&amp; fishDirection[stack.peek()] == right &amp;&amp; curFishDirection == left) &#123;<br>            <span class="hljs-comment">// 如果栈不为空，栈顶鱼的方向是向右游，当前鱼的方向是向左游，它们可能相遇</span><br>            <span class="hljs-keyword">if</span> (fishSize[stack.peek()] &gt; curFishSize) &#123;<br>                hasEat = <span class="hljs-literal">true</span>; <span class="hljs-comment">// 如果栈顶鱼的大小大于当前鱼，当前鱼被吃掉</span><br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            stack.pop(); <span class="hljs-comment">// 否则栈顶鱼被吃掉，从栈中弹出</span><br>        &#125;<br>        <span class="hljs-keyword">if</span> (!hasEat) &#123;<br>            stack.push(i); <span class="hljs-comment">// 如果当前鱼没有被吃掉，将其加入栈中</span><br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> stack.size(); <span class="hljs-comment">// 返回栈中剩下的鱼的数量，它们是不会被吃掉的鱼</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="复杂度分析-1"><a href="#复杂度分析-1" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>每只鱼只入栈一次，出栈一次，所以时间复杂度 为 $O(N)$，而空间复杂度为 $O(N)$，因为最差情况下可能把所有的鱼都入栈。</p>
+<p><strong>在线题库</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://app.codility.com/programmers/lessons/7-stacks_and_queues/fish/start/">7-stacks_and_queues&#x2F;fish</a></li>
+</ul>
+<h2 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h2><p>单调栈就是指栈中的元素必须是按照升序排列的栈，或者是降序排列的栈。对于这两种排序方式的栈，升序排列的栈称为递增栈，降序排列的栈称为递减栈。</p>
+<h3 id="找出数组中右边比我小的元素"><a href="#找出数组中右边比我小的元素" class="headerlink" title="找出数组中右边比我小的元素"></a>找出数组中右边比我小的元素</h3><p>【题目】一个整数数组 A，找到每个元素：右边第一个比我小的下标位置，没有则用 -1 表示。<br>输入：[5, 2]<br>输出：[1, -1]<br>解释：因为元素 5 的右边离我最近且比我小的位置应该是 A[1]，最后一个元素 2 右边没有比 2 小的元素，所以应该输出 -1。<br>接口：int[] findRightSmall(int[] A);</p>
+<h3 id="模拟-2"><a href="#模拟-2" class="headerlink" title="模拟"></a>模拟</h3><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-string">[1, 2, 4, 9, 4, 0, 5]</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="规律-2"><a href="#规律-2" class="headerlink" title="规律"></a>规律</h3><ul>
+<li><p>小的数要与大的数配对</p>
+</li>
+<li><p>小的数会消除大的数</p>
+</li>
+</ul>
+<h3 id="匹配-2"><a href="#匹配-2" class="headerlink" title="匹配"></a>匹配</h3><p>单调栈</p>
+<p>图示：</p>
+<p><img src="/blog/./assets/Cgp9HWA4qkaALlpRAHsvPijzTIg101.gif" srcset="/blog/img/loading.gif" lazyload alt="递增栈动画演示"></p>
+<ol>
+<li>首先将 A[0] &#x3D; 1 的下标 0 入栈。</li>
+<li>将 A[1] &#x3D; 2 的下标 1 入栈。满足单调栈。</li>
+<li>将 A[2] &#x3D; 4 的下标 2 入栈。满足单调栈。</li>
+<li>将 A[3] &#x3D; 9 的下标 3 入栈。满足单调栈。</li>
+<li>将 A[4] &#x3D; 4 的下标 4 入栈时，不满足单调性，需要将 A[3] &#x3D; 9 从栈中弹出去。下标 4 将栈中下标 3 弹出栈，记录 A[3] 右边更小的是 index &#x3D; 4。</li>
+<li>将 A[5] &#x3D; 0 的下标 5 入栈时，不满足单调性，需要将 A[4] &#x3D; 4 从栈中弹出去。下标 5 将下标 4 弹出栈，记录 A[4] 右边更小的是 index &#x3D; 5。A[5] &#x3D; 0 会将栈中的下标 0, 1, 2 都弹出栈，因此也需要记录相应下标右边比其小的下标为 5，再将 A[5] &#x3D; 0 的下标 5 放入栈中。</li>
+<li>将 A[6] &#x3D; 5 的下标 6 放入栈中。满足单调性。</li>
+<li>此时，再也没有元素要入栈了，那么栈中的元素右边没有比其更小的元素。因此设置为 -1.</li>
+</ol>
+<p>代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span>[] findRightSmall(<span class="hljs-type">int</span>[] A) &#123;<br>    <span class="hljs-type">int</span>[] ans = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[A.length]; <span class="hljs-comment">// 创建一个数组来存储结果，初始值为0</span><br><br>    Stack&lt;Integer&gt; stack = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;(); <span class="hljs-comment">// 创建一个栈，用于跟踪元素的索引</span><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; A.length; i++) &#123;<br>        <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> A[i]; <span class="hljs-comment">// 获取当前数组元素的值</span><br>        <span class="hljs-keyword">while</span> (!stack.empty() &amp;&amp; A[stack.peek()] &gt; x) &#123;<br>            <span class="hljs-comment">// 当栈不为空且栈顶元素的值大于当前元素的值时，表示找到了右边第一个比当前元素小的元素</span><br>            ans[stack.peek()] = i; <span class="hljs-comment">// 更新结果数组，将栈顶元素对应的位置设置为当前索引 i</span><br>            stack.pop(); <span class="hljs-comment">// 弹出栈顶元素，因为它已经找到了右边第一个比它小的元素</span><br>        &#125;<br>        stack.push(i); <span class="hljs-comment">// 将当前索引 i 压入栈，以便后续比较</span><br>    &#125;<br><br>    <span class="hljs-keyword">while</span> (!stack.empty()) &#123;<br>        <span class="hljs-comment">// 处理剩下的栈中元素，它们没有右边比自己小的元素</span><br>        ans[stack.peek()] = -<span class="hljs-number">1</span>; <span class="hljs-comment">// 将结果数组中对应位置设置为 -1</span><br>        stack.pop(); <span class="hljs-comment">// 弹出栈顶元素</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> ans; <span class="hljs-comment">// 返回包含每个元素右边第一个比它小的元素索引的结果数组</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="复杂度分析-2"><a href="#复杂度分析-2" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>每个元素只入栈一次，出栈一次，所以时间复杂度为$O(N)$，而空间复杂度为$O(N)$，因为最差情况可能会把所有的元素都入栈。</p>
+<h2 id="字典序最小的-k-个数的子序列"><a href="#字典序最小的-k-个数的子序列" class="headerlink" title="字典序最小的 k 个数的子序列"></a>字典序最小的 k 个数的子序列</h2><h3 id="模拟-3"><a href="#模拟-3" class="headerlink" title="模拟"></a>模拟</h3><h3 id="规律-3"><a href="#规律-3" class="headerlink" title="规律"></a>规律</h3><h3 id="匹配-3"><a href="#匹配-3" class="headerlink" title="匹配"></a>匹配</h3><h3 id="边界-2"><a href="#边界-2" class="headerlink" title="边界"></a>边界</h3><ul>
+<li>假设数组右边有一个最小的数，这个最小的数会把左边的数全部都消掉，然后递增栈里面就只剩下这 1 个数了。这跟题意有点不符合，题意需要的是找到 k &#x3D; 2 个出来。<ul>
+<li>解决：当剩下的数字个数与栈中的元素刚好能凑够 k 个数时，就不能再消除了，代码如下 :rightLeftNumber + stack.size() &#x3D;&#x3D; k</li>
+</ul>
+</li>
+<li>如果数组是一个升序的数组，那么此时所有的元素都会被压栈。栈中的数目有可能远远超出 k 个。<ul>
+<li>解决：只需要把栈中的多出来的数字弹出来即可。</li>
+</ul>
+</li>
+</ul>
+<h2 id="栈总结"><a href="#栈总结" class="headerlink" title="栈总结"></a>栈总结</h2><p><img src="/blog/./assets/CioPOWA4q6qASB-UAADhj7uzOwg933.png" srcset="/blog/img/loading.gif" lazyload alt="栈zsj"></p>
+<p>(完)</p>
+<p><strong>在线题库</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.nowcoder.com/practice/37548e94a270412c8b9fb85643c8ccc2">有效括号序列</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构和算法</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/Java/" class="print-no-link">#Java</a>
+      
+        <a href="/blog/tags/%E6%A0%88/" class="print-no-link">#栈</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>栈</div>
+      <div>https://maojun.xyz/blog/2023/11/栈.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月2日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年11月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html" title="ConcurrentHashMap的键和值都不能为空">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ConcurrentHashMap的键和值都不能为空</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2023/11/%E8%A7%A3%E5%86%B3Git%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98.html" title="解决Git在终端中文乱码的问题">
+                        <span class="hidden-mobile">解决Git在终端中文乱码的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

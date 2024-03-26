@@ -1,0 +1,826 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="图床优化使用backblaze-B2搭建自己的图床[1]获取图片地址后，发现图片的链接难以记忆，并且不是自己的域名。 虽然可以通过域名的DNS服务并设置CNAME绑定二级域名到f000.backblazeb2.com,这样就可以通过自定义域名访问图片地址。比如img.maojun.xyz&#x2F;file&#x2F;test&#x2F;bar.png。但是又有一个问题，&#x2F;file&#x2F;test这个也是固定的，如果直接显示为img">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Cloudflare 服务优化图床">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="图床优化使用backblaze-B2搭建自己的图床[1]获取图片地址后，发现图片的链接难以记忆，并且不是自己的域名。 虽然可以通过域名的DNS服务并设置CNAME绑定二级域名到f000.backblazeb2.com,这样就可以通过自定义域名访问图片地址。比如img.maojun.xyz&#x2F;file&#x2F;test&#x2F;bar.png。但是又有一个问题，&#x2F;file&#x2F;test这个也是固定的，如果直接显示为img">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-22T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-26T13:46:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="对象存储">
+<meta property="article:tag" content="Cloudflare">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>使用 Cloudflare 服务优化图床 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="使用 Cloudflare 服务优化图床"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-02-22 00:00" pubdate>
+          2020年2月22日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">使用 Cloudflare 服务优化图床</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年8月26日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="图床优化"><a href="#图床优化" class="headerlink" title="图床优化"></a>图床优化</h2><p>使用backblaze-B2搭建自己的图床<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[使用 backblaze-B2 搭建自己的图床](https://maojun.xyz/blog/2020/02/21/使用backblaze-B2搭建自己的图床.html)">[1]</span></a></sup>获取图片地址后，发现图片的链接难以记忆，并且不是自己的域名。</p>
+<p>虽然可以通过域名的<code>DNS</code>服务并设置<code>CNAME</code>绑定二级域名到<code>f000.backblazeb2.com</code>,这样就可以通过自定义域名访问图片地址。比如<code>img.maojun.xyz/file/test/bar.png</code>。但是又有一个问题，<code>/file/test</code>这个也是固定的，如果直接显示为<code>img.maojun.xyz/bar.png</code>，这样就显得清爽多了。所以首先对图片的返回地址做下优化，可以将图床地址绑定成自己的域名。比如图片地址器地址是<strong>img.maojunxyz</strong>。 同时将默认图片地址后的路径<code>/file/bucketName/foo.png</code>优化缩短为<code>foo.png</code>，这样和图片前缀地址拼接上就是: <strong>img.maojun.xyz&#x2F;foo.png</strong>。</p>
+<h2 id="自定义图片地址"><a href="#自定义图片地址" class="headerlink" title="自定义图片地址"></a>自定义图片地址</h2><p>这里将使用<code>Cloudflare</code>作为<code>DNS</code>的服务商。因为<code>Cloudflare</code>提供了一系列对站长友好的工具，并且可以免费使用。比如<code>CDN</code>,<code>Worker</code>,网站信息统计等功能。当然这一步不是必须的,你可以维持你的<code>DNS</code>服务提供商,这不会对后续的操作有影响。只需根据下面的步骤作为参考并在<code>DNS</code>服务商处做相应的修改即可。</p>
+<p>下面以<code>Cloudflare</code>做为演示: 如果没有<code>Cloudflare</code>账号先注册并登入，<code>Cloudflare</code>的官网地址是Cloudflare<sup id="fnref:2" class="footnote-ref"><a href="#fn:2" rel="footnote"><span class="hint--top hint--rounded" aria-label="[Cloudflare - The Web Performance & Security Company | Cloudflare](https://cloudflare.com/)">[2]</span></a></sup>。</p>
+<p>使用<code>Cloudflare</code>的<code>DNS</code>解析服务，首先添加域名，点击按钮<strong>Add a Site</strong>,然后根据提示。将<code>DNS</code>地址修改成<code>Cloudflare</code>提供的地址即可完成绑定解析。</p>
+<p>绑定后然后点击自己的域名进入到控制台,点击菜单图标<strong>DNS</strong>，进入<code>DNS</code>控制面板。</p>
+<p>点击<strong>record</strong>按钮，在输入框中输入并绑定自己的图片域名到<code>b2</code>服务地址。 填写完成后，点击<strong>SAVE</strong>按钮保存设置。</p>
+<p>等待片刻就可以通过自定义图片域名+后缀访问图片地址了。 前后对比：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">https://f000.backblazeb2.com/file/bucketName/foo.png <span class="hljs-comment"># 老的图片链接</span><br>https://img.maojun.xyz/file/bucketName/foo.png <span class="hljs-comment"># 新的图片键接</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="配置页面规则"><a href="#配置页面规则" class="headerlink" title="配置页面规则"></a>配置页面规则</h2><p>在上面的链接中，访问<code>https://img.maojun.xyz/file/bucketName/foo.png</code>，当<code>bucketName</code>正确匹配我们自己创建的<code>buckets</code>时，可以正常访问到图片链接。 当<code>bucketName</code>是其他名称或者不是我们创建的<code>buckets</code>名称时，我们让其跳转到错误页面。</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//img</span>.maojun.xyz<span class="hljs-regexp">/file/</span>bucketName/foo.png <span class="hljs-comment"># 正确的，提供服务</span><br>https:<span class="hljs-regexp">//img</span>.maojun.xyz<span class="hljs-regexp">/file/</span>aaaaaaaa/foo.png  <span class="hljs-comment"># 不正确的，跳转到404页面</span><br></code></pre></td></tr></table></figure>
+
+<p>可以通过<code>Cloudflare</code>的<strong>Page ruler</strong>进行配置。点击域名下的控制面板，点击菜单<strong>Page ruler</strong>进入服务。 点击<strong>Create Page Ruler</strong>按钮，配置如下信息：</p>
+<table>
+<thead>
+<tr>
+<th align="left">URL</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://web.archive.org/web/20201019223844/https://img.maojun.xyz/file/imgxyz/">https://img.maojun.xyz/file/imgxyz/</a>*</td>
+<td align="left">Cache Level: Standard</td>
+</tr>
+<tr>
+<td align="left"><a target="_blank" rel="noopener" href="https://web.archive.org/web/20201019223844/https://img.maojun.xyz/file/*/">https://img.maojun.xyz/file/*&#x2F;</a>*</td>
+<td align="left">Forwarding URL (Status Code: 302 - Temporary Redirect, Url: <a target="_blank" rel="noopener" href="https://web.archive.org/web/20201019223844/https://maojun.xyz/404notfound">https://maojun.xyz/404notfound</a>)</td>
+</tr>
+</tbody></table>
+<p>上面的配置信息规则为：</p>
+<ul>
+<li>当访问<code>https://img.maojun.xyz/file/imgxyz/*</code>时，使用标准缓存。</li>
+<li>当访问<code>https://img.maojun.xyz/file/*/*</code>(即除了上面的规则外的地址如：<a target="_blank" rel="noopener" href="https://img.maojun.xyz/file/abc/">https://img.maojun.xyz/file/abc/</a>*) 就302掉转到指定的404页面。)</li>
+</ul>
+<blockquote>
+<p>注意上面的规则顺序不能错，如果第二条规则在上面则会拦截所有地址包括<code>https://img.maojun.xyz/file/imgxyz/*</code>。</p>
+</blockquote>
+<p>这样当访问的请求不是来自配置的页面放行规则时就会被<code>302</code>跳转到指定的页面。 </p>
+<h2 id="简化图片链接"><a href="#简化图片链接" class="headerlink" title="简化图片链接"></a>简化图片链接</h2><p>通过自定义域名绑定后，链接地址比之前要更加直观。但是后面的长路径依然存在，我们可以想办法把它去除，让最终的链接格式如下：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//img.maojun.xyz/foo.png</span><br></code></pre></td></tr></table></figure>
+
+<p>我们可以使用<code>Cloudflare</code>提供的<code>Workers</code>服务来重写图片的<code>URL</code>地址，让链接地址更加友好和简洁。<code>Workers</code>是一个边缘计算服务，允许你在<code>Cloudflare</code>全球网络中的边界服务器运行<code>JavaScript</code>代码。开发者可以部署<code>serverless</code>(轻服务) 的应用程序。</p>
+<p>免费版：</p>
+<ul>
+<li>每天<strong>10万</strong>次请求</li>
+<li><strong>30</strong>个<code>Workers</code>脚本</li>
+<li>运行在<strong>200</strong>个数据中心</li>
+<li>免费的<strong>workers.dev</strong>二级域名</li>
+<li>每次请求最大占用<code>CPU</code>运行时间为<strong>10ms</strong></li>
+<li>首次请求后最低延迟</li>
+</ul>
+<p>在<code>Cloudflare</code>的主界面，在右侧位置点击进入<strong>Workers</strong>服务。 点击<strong>Craate a Workers</strong>按钮创建一个新的<code>Workers</code>脚本。</p>
+<p>在<strong>Scripe</strong>代码框中清除原先代码并粘贴以下内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-meta">&#x27;use strict&#x27;</span>;<br><span class="hljs-keyword">const</span> b2Domain = <span class="hljs-string">&#x27;img.domain.com&#x27;</span>; <span class="hljs-comment">// configure this as per instructions above</span><br><span class="hljs-keyword">const</span> b2Bucket = <span class="hljs-string">&#x27;bucket-name&#x27;</span>; <span class="hljs-comment">// configure this as per instructions above</span><br><span class="hljs-keyword">const</span> b2UrlPath = <span class="hljs-string">`/file/<span class="hljs-subst">$&#123;b2Bucket&#125;</span>/`</span>;<br><span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;fetch&#x27;</span>, <span class="hljs-function"><span class="hljs-params">event</span> =&gt;</span> &#123;<br>    <span class="hljs-keyword">return</span> event.<span class="hljs-title function_">respondWith</span>(<span class="hljs-title function_">fileReq</span>(event));<br>&#125;);<br><br><span class="hljs-comment">// define the file extensions we wish to add basic access control headers to</span><br>0<span class="hljs-keyword">const</span> corsFileTypes = [<span class="hljs-string">&#x27;png&#x27;</span>, <span class="hljs-string">&#x27;jpg&#x27;</span>, <span class="hljs-string">&#x27;gif&#x27;</span>, <span class="hljs-string">&#x27;jpeg&#x27;</span>, <span class="hljs-string">&#x27;webp&#x27;</span>];<br><br><span class="hljs-comment">// backblaze returns some additional headers that are useful for debugging, but unnecessary in production. We can remove these to save some size</span><br><span class="hljs-keyword">const</span> removeHeaders = [<br>    <span class="hljs-string">&#x27;x-bz-content-sha1&#x27;</span>,<br>    <span class="hljs-string">&#x27;x-bz-file-id&#x27;</span>,<br>    <span class="hljs-string">&#x27;x-bz-file-name&#x27;</span>,<br>    <span class="hljs-string">&#x27;x-bz-info-src_last_modified_millis&#x27;</span>,<br>    <span class="hljs-string">&#x27;X-Bz-Upload-Timestamp&#x27;</span>,<br>    <span class="hljs-string">&#x27;Expires&#x27;</span><br>];<br><span class="hljs-keyword">const</span> expiration = <span class="hljs-number">31536000</span>; <span class="hljs-comment">// override browser cache for images - 1 year</span><br><br><span class="hljs-comment">// define a function we can re-use to fix headers</span><br><span class="hljs-keyword">const</span> fixHeaders = <span class="hljs-keyword">function</span>(<span class="hljs-params">url, status, headers</span>)&#123;<br>    <span class="hljs-keyword">let</span> newHdrs = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Headers</span>(headers);<br>    <span class="hljs-comment">// add basic cors headers for images</span><br>    <span class="hljs-keyword">if</span>(corsFileTypes.<span class="hljs-title function_">includes</span>(url.<span class="hljs-property">pathname</span>.<span class="hljs-title function_">split</span>(<span class="hljs-string">&#x27;.&#x27;</span>).<span class="hljs-title function_">pop</span>()))&#123;<br>        newHdrs.<span class="hljs-title function_">set</span>(<span class="hljs-string">&#x27;Access-Control-Allow-Origin&#x27;</span>, <span class="hljs-string">&#x27;*&#x27;</span>);<br>    &#125;<br>    <span class="hljs-comment">// override browser cache for files when 200</span><br>    <span class="hljs-keyword">if</span>(status === <span class="hljs-number">200</span>)&#123;<br>        newHdrs.<span class="hljs-title function_">set</span>(<span class="hljs-string">&#x27;Cache-Control&#x27;</span>, <span class="hljs-string">&quot;public, max-age=&quot;</span> + expiration);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-comment">// only cache other things for 5 minutes</span><br>        newHdrs.<span class="hljs-title function_">set</span>(<span class="hljs-string">&#x27;Cache-Control&#x27;</span>, <span class="hljs-string">&#x27;public, max-age=300&#x27;</span>);<br>    &#125;<br>    <span class="hljs-comment">// set ETag for efficient caching where possible</span><br>    <span class="hljs-keyword">const</span> <span class="hljs-title class_">ETag</span> = newHdrs.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;x-bz-content-sha1&#x27;</span>) || newHdrs.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;x-bz-info-src_last_modified_millis&#x27;</span>) || newHdrs.<span class="hljs-title function_">get</span>(<span class="hljs-string">&#x27;x-bz-file-id&#x27;</span>);<br>    <span class="hljs-keyword">if</span>(<span class="hljs-title class_">ETag</span>)&#123;<br>        newHdrs.<span class="hljs-title function_">set</span>(<span class="hljs-string">&#x27;ETag&#x27;</span>, <span class="hljs-title class_">ETag</span>);<br>    &#125;<br>    <span class="hljs-comment">// remove unnecessary headers</span><br>    removeHeaders.<span class="hljs-title function_">forEach</span>(<span class="hljs-function"><span class="hljs-params">header</span> =&gt;</span> &#123;<br>        newHdrs.<span class="hljs-title function_">delete</span>(header);<br>    &#125;);<br>    <span class="hljs-keyword">return</span> newHdrs;<br>&#125;;<br><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">fileReq</span>(<span class="hljs-params">event</span>)&#123;<br>    <span class="hljs-keyword">const</span> cache = caches.<span class="hljs-property">default</span>; <span class="hljs-comment">// Cloudflare edge caching</span><br>    <span class="hljs-keyword">const</span> url = <span class="hljs-keyword">new</span> <span class="hljs-title function_">URL</span>(event.<span class="hljs-property">request</span>.<span class="hljs-property">url</span>);<br>    <span class="hljs-keyword">if</span>(url.<span class="hljs-property">host</span> === b2Domain &amp;&amp; !url.<span class="hljs-property">pathname</span>.<span class="hljs-title function_">startsWith</span>(b2UrlPath))&#123;<br>        url.<span class="hljs-property">pathname</span> = b2UrlPath + url.<span class="hljs-property">pathname</span>;<br>    &#125;<br>    <span class="hljs-keyword">let</span> response = <span class="hljs-keyword">await</span> cache.<span class="hljs-title function_">match</span>(url); <span class="hljs-comment">// try to find match for this request in the edge cache</span><br>    <span class="hljs-keyword">if</span>(response)&#123;<br>        <span class="hljs-comment">// use cache found on Cloudflare edge. Set X-Worker-Cache header for helpful debug</span><br>        <span class="hljs-keyword">let</span> newHdrs = <span class="hljs-title function_">fixHeaders</span>(url, response.<span class="hljs-property">status</span>, response.<span class="hljs-property">headers</span>);<br>        newHdrs.<span class="hljs-title function_">set</span>(<span class="hljs-string">&#x27;X-Worker-Cache&#x27;</span>, <span class="hljs-string">&quot;true&quot;</span>);<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(response.<span class="hljs-property">body</span>, &#123;<br>            <span class="hljs-attr">status</span>: response.<span class="hljs-property">status</span>,<br>            <span class="hljs-attr">statusText</span>: response.<span class="hljs-property">statusText</span>,<br>            <span class="hljs-attr">headers</span>: newHdrs<br>        &#125;);<br>    &#125;<br>    <span class="hljs-comment">// no cache, fetch image, apply Cloudflare lossless compression</span><br>    response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(url, &#123;<span class="hljs-attr">cf</span>: &#123;<span class="hljs-attr">polish</span>: <span class="hljs-string">&quot;lossless&quot;</span>&#125;&#125;);<br>    <span class="hljs-keyword">let</span> newHdrs = <span class="hljs-title function_">fixHeaders</span>(url, response.<span class="hljs-property">status</span>, response.<span class="hljs-property">headers</span>);<br><br>  <span class="hljs-keyword">if</span>(response.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>)&#123;<br><br>    response = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(response.<span class="hljs-property">body</span>, &#123;<br>      <span class="hljs-attr">status</span>: response.<span class="hljs-property">status</span>,<br>      <span class="hljs-attr">statusText</span>: response.<span class="hljs-property">statusText</span>,<br>      <span class="hljs-attr">headers</span>: newHdrs<br>    &#125;);<br>  &#125;<span class="hljs-keyword">else</span>&#123;<br>    response = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Response</span>(<span class="hljs-string">&#x27;File not found!&#x27;</span>, &#123; <span class="hljs-attr">status</span>: <span class="hljs-number">404</span> &#125;)<br>  &#125;<br><br>    event.<span class="hljs-title function_">waitUntil</span>(cache.<span class="hljs-title function_">put</span>(url, response.<span class="hljs-title function_">clone</span>()));<br>    <span class="hljs-keyword">return</span> response;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>注意代码的第<code>2-3</code>行:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> b2Domain = <span class="hljs-string">&#x27;img.domain.com&#x27;</span>; <span class="hljs-comment">// configure this as per instructions above</span><br><span class="hljs-keyword">const</span> b2Bucket = <span class="hljs-string">&#x27;bucket-name&#x27;</span>; <span class="hljs-comment">// configure this as per instructions above</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>b2Domain:修改成自己图床的域名。</li>
+<li>b2Bucket，修改成自己的<code>bucket</code>名字。</li>
+</ul>
+<p>修改后点击按钮<strong>Save and Depoly</strong>保存。</p>
+<p>保存后还不能直接使用，我们需要配置下规则。</p>
+<p>进入域名下的控制面板。点击菜单<strong>Workers</strong>进入面板，然后点击<strong>Add route</strong>按钮。</p>
+<p>添加路由为之前配置的图片服务器地址，后面使用<code>*</code>匹配该域名下的所有所有内容。 并在<em>Worker</em>处选择刚才创建的<em>Workers</em>名称。 </p>
+<p>配置好少，稍等片刻生效。即可以通过最终的图片地址访问了:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">https:</span><span class="hljs-comment">//img.maojun.xyz/foo.png</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：配置<code>Workers</code>后上面配置的<code>Page ruler</code>规则会失效。配置了<code>Workers</code>规则会先走。</p>
+</blockquote>
+<h2 id="配置防盗链"><a href="#配置防盗链" class="headerlink" title="配置防盗链"></a>配置防盗链</h2><p>可以配置<code>Referer</code>来判断是否是自己的来自自己域名，如果不是则都拦截。 由于<code>Referer</code>是可以修改的，所以这只能简单的进行拦截。</p>
+<p>进入域名下的面板，点击菜单<strong>Firewall</strong>进入服务。点击**+ Create firewall rule**进入防火墙规则服务。 </p>
+<p>填写规则名称和规则匹配条件：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Field</th>
+<th align="left">Operator</th>
+<th align="left">Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Referer</td>
+<td align="left">does not contains</td>
+<td align="left">maojun.xyz</td>
+</tr>
+<tr>
+<td align="left">URI Full</td>
+<td align="left">contains</td>
+<td align="left">img.maojun.xyz</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>(not http.referer contains “maojun.xyz” and http.request.full_uri contains “img.maojun.xyz”)</p>
+</blockquote>
+<p>上面的规则是： 如果<code>URI</code>全路径中包含了<code>img.maojun.xyz</code>内容，<strong>同时</strong><code>Referer</code>不包含<code>maojun.xyz</code>则拦截。 由于这个图床我暂时只有一个域名即<code>maojun.xyz</code>在用，如果你有多个域名使用同一图床，可以在上面的规则中填加多个域名放行。</p>
+<p>配置完以上后，就可以通过优化后的图片地址<code>https://img.maojun.xyz/test.png</code>访问了。</p>
+<p>(本文完）</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://maojun.xyz/blog/2020/02/21/%E4%BD%BF%E7%94%A8backblaze-B2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.html">使用 backblaze-B2 搭建自己的图床</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://cloudflare.com/">Cloudflare - The Web Performance &amp; Security Company | Cloudflare</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/" class="category-chain-item">操作演示</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/" class="print-no-link">#对象存储</a>
+      
+        <a href="/blog/tags/Cloudflare/" class="print-no-link">#Cloudflare</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用 Cloudflare 服务优化图床</div>
+      <div>https://maojun.xyz/blog/2020/02/使用Cloudflare服务优化图床.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年2月22日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年8月26日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html" title="Typecho 默认主题优化">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Typecho 默认主题优化</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/02/%E4%BD%BF%E7%94%A8backblaze-B2%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9B%BE%E5%BA%8A.html" title="使用 backblaze-B2 搭建自己的图床">
+                        <span class="hidden-mobile">使用 backblaze-B2 搭建自己的图床</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

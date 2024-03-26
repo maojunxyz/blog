@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="前言此翻译参考了网络中现有的中文翻译，在此基础上做了些语义调整，同时在原先中文的基础上增加了部分新增的英文内容。 原文使用的是 Bugzilla 这个 Bug 追踪工具，你可以将其代替成你所使用的缺陷管理软件或系统。 为什么你要读这份指南简单地说，如果你报告 Bug 越有效, 工程师完全修复它的可能性就越大。这份 Bug 写作指南是针对新手在书写有效的 Bug 报告方面进行指导的常规指南，并非每个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bug报告写作指南">
+<meta property="og:url" content="https://maojun.xyz/blog/2021/10/[%E7%BF%BB%E8%AF%91]Bug%E6%8A%A5%E5%91%8A%E5%86%99%E4%BD%9C%E6%8C%87%E5%8D%97.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="前言此翻译参考了网络中现有的中文翻译，在此基础上做了些语义调整，同时在原先中文的基础上增加了部分新增的英文内容。 原文使用的是 Bugzilla 这个 Bug 追踪工具，你可以将其代替成你所使用的缺陷管理软件或系统。 为什么你要读这份指南简单地说，如果你报告 Bug 越有效, 工程师完全修复它的可能性就越大。这份 Bug 写作指南是针对新手在书写有效的 Bug 报告方面进行指导的常规指南，并非每个">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-15T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-10T12:23:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="软件测试">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Bug报告写作指南 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Bug报告写作指南"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-10-15 00:00" pubdate>
+          2021年10月15日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Bug报告写作指南</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年9月10日 中午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此翻译参考了网络中现有的中文翻译，在此基础上做了些语义调整，同时在原先中文的基础上增加了部分新增的英文内容。</p>
+<p>原文使用的是 Bugzilla 这个 Bug 追踪工具，你可以将其代替成你所使用的缺陷管理软件或系统。</p>
+<h2 id="为什么你要读这份指南"><a href="#为什么你要读这份指南" class="headerlink" title="为什么你要读这份指南"></a>为什么你要读这份指南</h2><p>简单地说，如果你报告 Bug 越有效, 工程师完全修复它的可能性就越大。<br>这份 Bug 写作指南是针对新手在书写有效的 Bug 报告方面进行指导的常规指南，并非每个建议都正好适用于你的软件项目。</p>
+<h2 id="如何写一份有用的-Bug-报告"><a href="#如何写一份有用的-Bug-报告" class="headerlink" title="如何写一份有用的 Bug 报告"></a>如何写一份有用的 Bug 报告</h2><p>有用的 Bug 报告是用于正确修复 Bug 的。因此一份有用的 Bug 报告通常的有两个特征：</p>
+<ol>
+<li><strong>可复现</strong>：如果工程师不能复现或最终证明这一 Bug 存在,工程师或许会将它标记为 “我这没问题（WORKSFORME）”或 ”无效反馈（INVALID ）“，并且继续进行下一个 Bug 的修复工作。任何你能提供的详尽描述将为工程师修复 Bug 提供帮助。</li>
+<li><strong>详细精确</strong>：如果工程师能越早隔离、定位问题，就越可能方便地修复。（如果程序员或测试人员不得不像破译密码一般去寻找跟踪分析 Bug，那么他们将花费比修复或测试问题更多的时间去诅咒 Bug 提交人。）</li>
+</ol>
+<p>让我们举一个例子：你正在测试的应用程序是一个网络浏览器，在访问 foo.com 网站时崩溃了，因此你想写一个 Bug 报告:</p>
+<ul>
+<li><strong>糟糕的 Bug 报告</strong>：“我的浏览器崩溃了。我正在访问 foo.com。我和比尔-盖茨打高尔夫，所以你最好解决这个问题，否则我就向他报告你。顺便说一下,你的 “返回 “图标看起来像一只被压扁的啮齿动物。丑陋极了。还有我的祖母的主页看上去外观也不正确，或者，它们全被搞乱了。祝好运。”</li>
+<li><strong>有用的 Bug 报告</strong>：“我每次进入<a target="_blank" rel="noopener" href="http://www.foo.com,在windows/">www.foo.com，在Windows</a> 2000系统上使用2002-02-25的版本时都会崩溃。我还重启了Linux，并使用2002-02-24的Linux版本再现了这个问题。我发现每次崩溃都发生在绘制这个页面位于上端的 Foo 横幅的时候。我分析了页面，发现除非你删除 ” border &#x3D;0″属性，否则下列图片链接将导致应用程序崩溃 ：<IMG SRC="http://www.foo.com/images/topics/topicfoos.gif" srcset="/blog/img/loading.gif" lazyload width="34" height="44" border="0" alt="News">”</li>
+</ul>
+<h2 id="如何在-Bugzilla-中输入你有用的-Bug-报告"><a href="#如何在-Bugzilla-中输入你有用的-Bug-报告" class="headerlink" title="如何在 Bugzilla 中输入你有用的 Bug 报告"></a>如何在 Bugzilla 中输入你有用的 Bug 报告</h2><p>在你输入你发现的 Bug 前，应使用 Bugzilla 查询页检查是否你发现的是已知并被报告的 Bug。（如果你发现的 Bug 同第 37 条已经知道的结果相同，你报告的话，就可能骚扰工程师，从而影响工程师修复 Bug 的效率。）</p>
+<p>下一步,确认你发现的 Bug 是在最新的版本中所发生的。（工程师更倾向于对那些他们正在编写的代码中的严重问题感兴趣，而不是对以前那些废弃代码中数以百计的 Bug 进行修复。）</p>
+<p>如果你已经在当前版本中发现了一个新的 Bug，请在 Bugzilla 中报告：</p>
+<ol>
+<li>从你的 Bugzilla 主页中,选择“Enter a new bug”。</li>
+<li>选择你发现 Bug 的产品。</li>
+<li>输入你的电子邮件地址、密码，然后按“Login”按钮。（如果你遗忘或还没有得到密码,让密码正文框空白，并且按 ” E-mail me a password “按钮，不久你将收到包含你的密码的电子邮件。）</li>
+</ol>
+<p>现在，填写那张出现的表格。以下说明表格中的所有含义：</p>
+<h3 id="你在哪儿发现了-Bug？"><a href="#你在哪儿发现了-Bug？" class="headerlink" title="你在哪儿发现了 Bug？"></a>你在哪儿发现了 Bug？</h3><ul>
+<li><strong>产品：在哪一个产品中你发现了 Bug？</strong><br>你在上一页已选择，所以你不能在这编辑</li>
+<li><strong>版本：在产品的哪一个版本中你找到了 Bug？</strong><br>（如果有的话）</li>
+<li><strong>产品单元：在产品的哪一个单元中存在 Bug？</strong><br>Bugzilla 在你输入一个 Bug 时，要求你必须选择一个产品单元。（如果你无法确定所列产品单元的意思，单击产品单元链接，那将链接到对每个产品单元的详细描述，这会帮助你作出最好选择。）</li>
+<li><strong>OS：在哪一个操作系统（OS）中你找到了这个 Bug？（例如 Linux、Windows 2000、Mac OS 9。）</strong><br>如果你知道这个 Bug 会发生在所有 OS 中，请选择“All”，否则请选择相应的你发现 Bug 的 OS，如果列表中没有出现你的 OS，请选择“Other”。</li>
+</ul>
+<h3 id="这个-Bug-有多重要？"><a href="#这个-Bug-有多重要？" class="headerlink" title="这个 Bug 有多重要？"></a>这个 Bug 有多重要？</h3><ul>
+<li><strong>严重性：这个 Bug 的破坏性有多大？</strong><br>这项值默认为“普通（normal）”。（要为一个特定的 Bug 界定最适当的严重性，单击严重性链接，你会看到每个严重程度的描述。）</li>
+</ul>
+<h3 id="谁将跟踪解决-Bug？"><a href="#谁将跟踪解决-Bug？" class="headerlink" title="谁将跟踪解决 Bug？"></a>谁将跟踪解决 Bug？</h3><ul>
+<li><strong>指定给：哪一个工程师将负责修复这个 Bug？</strong><br>在你提交 Bug 报告后，Bugzilla 将自动把 Bug 分配给默认工程师；填写正文框将允许你用手工方式把它分配给其他工程师。（要查看每个产品单元的默认工程师列表,请单击产品单元链接。）</li>
+<li><strong>Cc：还有哪些人将收到这个 Bug 修复更新的电子邮件?</strong><br>列出其他需要通过电子邮件收到这个 Bug 修复更新的人的完整的电子邮件地址。您可以输入任意多的电子邮件地址，用空格或逗号隔开，只要这些人有Bugzilla帐户。</li>
+</ul>
+<h3 id="关于这个Bug你还能告诉工程师什么？"><a href="#关于这个Bug你还能告诉工程师什么？" class="headerlink" title="关于这个Bug你还能告诉工程师什么？"></a>关于这个Bug你还能告诉工程师什么？</h3><ul>
+<li><strong>摘要：你如何用大约60个或更少的字符来描述这个错误？</strong><br>一个好的摘要应该能快速而独特地识别一个错误报告。否则，工程师无法通过摘要来有意义地识别你的bug，而且在浏览10页的bug列表时，往往不会注意到你的bug报告。</li>
+</ul>
+<p>一个有用的摘要可能是 “PCMCIA安装在Tosh Tecra 780DVD w&#x2F; 3c589C上失败”。”软件失败 “或 “安装问题 “将是不好的摘要的例子。</p>
+<ul>
+<li><strong>描述：</strong></li>
+</ul>
+<p>请在这个领域提供一个详细的问题报告。你的错误的接收者很可能希望得到以下信息：<br><strong>概括描述：</strong>更详细地扩展总结。<br>在NSGetFactory中拖动选择任何页面都会使Mac的构建崩溃<br><strong>Bug复现的步骤</strong>：最小化的、易于操作的、会触发错误的步骤。包括任何特殊的设置步骤。</p>
+<ol>
+<li>查看任何网页。(我使用了默认的样本页。 resource:&#x2F;res&#x2F;samples&#x2F;test0.html)</li>
+<li>拖动选择该页面。(具体来说，在按住鼠标按钮的同时，将鼠标指针从浏览器内容区域的任何一点向下拖动到浏览器内容区域的底部)</li>
+</ol>
+<p><strong>目前的结果</strong>：执行上述步骤后，应用程序做了什么。<br>该应用程序崩溃了。下面是MacsBug的堆栈爬行。<br><strong>期望的结果</strong>：如果不存在这个错误，应用程序应该做什么。</p>
+<p>窗口应向下滚动。滚动的内容应该被选中。<br>(或者，至少，应用程序不应该崩溃）。<br><strong>时间及硬件平台</strong>：第一次出现这个Bug的时间及硬件平台。<br>在Mac OS 9.0上构建2002-03-15<br><strong>其它环境及硬件平台</strong>：Bug是否出现在其他硬件平台或浏览器上。</p>
+<ul>
+<li>也出现在<br>Mozilla (2002-03-15 build on Windows NT 4.0)</li>
+<li>不出现在<br>Mozilla (2002-03-15 build on Red Hat Linux; feature not supported)<br>Internet Explorer 5.0 (在Windows NT 4.0上运行的版本)<br>Netscape Communicator 4.5 (在Mac OS 9.0上发布)</li>
+</ul>
+<p><strong>其它信息</strong>：任何其他调试信息。对应崩溃的错误：</p>
+<ul>
+<li><strong>Win32</strong>: 如果你收到华生医生的错误( Dr. Watson error), 请注意崩溃的类型，以及应用程序崩溃的模块。(例如：apprunner.exe中的访问违规)</li>
+<li><strong>Mac OS</strong>: 如果你运行的是MacsBug，请提供一个how和一个sc的结果:</li>
+</ul>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs maxima">*** MACSBUG STACK CRAWL OF CRASH (Mac OS)<br>Calling chain using A6/R1 links <br>Back chain  ISA  Caller <br><span class="hljs-number">00000000</span>    PPC  <span class="hljs-number">0BA85E74</span>   <br><span class="hljs-number">03AEFD80</span>    PPC  <span class="hljs-number">0B742248</span>   <br><span class="hljs-number">03AEFD30</span>    PPC  <span class="hljs-number">0B50FDDC</span>  NSGetFactory+<span class="hljs-number">027FC</span><br>PowerPC unmapped memory exception <span class="hljs-built_in">at</span> <span class="hljs-number">0B512BD0</span> NSGetFactory+<span class="hljs-number">055F0</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>你已经完成了一篇不错的bug报告！</p>
+<p>在确认你的输入无误后，请按“t提交（Commit）”按钮，现在你的Bug报告已经存入Bugzilla数据库。</p>
+<h2 id="关于写好-Bug-报告的更多信息"><a href="#关于写好-Bug-报告的更多信息" class="headerlink" title="关于写好 Bug 报告的更多信息"></a>关于写好 Bug 报告的更多信息</h2><ol>
+<li><strong>有用的Bug报告的一般提示</strong></li>
+</ol>
+<p><strong>使用一个明确的结构，这样你的错误报告就很容易被浏览。</strong>错误报告的用户通常需要立即访问您的错误的特定部分。如果您安装的Bugzilla支持Bugzilla帮助器，请使用它。</p>
+<p><strong>避免可爱，如果它需要清晰度</strong>。没有人会在凌晨3点时因为你那有趣的错误标题而发笑，因为他们不记得如何找到你的错误。</p>
+<p><strong>每个报告只有一个bug</strong>。完全不同的人通常会修复、验证和优先处理不同的bug。如果你在一份报告中混入了大量的bug，正确的人可能不会及时发现你的bug，或者根本不会发现。某些bug也比其他的更重要。当一个错误报告包含四个不同的问题时，不可能对其进行优先排序，这些问题的重要性各不相同。</p>
+<p><strong>没有一个错误是不值得报告的</strong>。除非你正在阅读源代码，否则你无法看到实际的软件错误，如空指针 – 你会看到它们的可见表现，如应用程序最终崩溃时的故障。严重的软件问题可以通过表面上微不足道的方式表现出来。无论如何要把它们归档。</p>
+<ol start="2">
+<li><strong>如何以及为什么要写好Bug总结？</strong></li>
+</ol>
+<p><strong>你想给错误接收者留下一个好的第一印象。</strong>就像《纽约时报》的标题引导读者从几十种选择中找到相关的文章一样，你的bug摘要是否会暗示你的bug报告值得从几十种或几百种选择中阅读？</p>
+<p>相反，像安装问题这样的模糊的bug摘要会迫使审查安装bug的人浪费时间打开你的bug来确定它是否重要。</p>
+<p><strong>你的bug经常会被它的摘要所搜索到</strong>。就像你用Google通过直觉搜索关键词来找到网页一样，其他人也会找到你的bug。描述性的bug摘要自然是富含关键词的，而且更容易找到。</p>
+<p>例如，如果你搜索 “列表”、”终端 “或 “路径”，你会发现一个题为 “将图标从列表视图拖到gnome终端（gnome-terminal）不会粘贴路径 “的错误。这些搜索关键词不会发现一个题为 “拖动图标不能粘贴 “的错误。</p>
+<p>问问自己，”有人会从这个摘要中理解我的错误吗？” 如果是这样，你已经写了一个很好的摘要。</p>
+<p><strong>不要写像这样的标题:</strong></p>
+<ol>
+<li>“无法安装” - 为什么无法安装？当你尝试安装时会发生什么？</li>
+<li>“严重的性能问题” - ……当你做什么的时候会出现这些问题？</li>
+<li>“返回按钮不生效” - 生效过吗？还是根本没有？</li>
+</ol>
+<p><strong>好的错误标题：</strong></p>
+<ol>
+<li>“如果存在Mozilla M18包，1.0升级安装失败” - 解释了问题和背景。</li>
+<li>“如果在Red Hat 6.2（RPM 3）系统上启动RPM 4安装程序会崩溃” - 解释了发生的情况和背景。</li>
+</ol>
+<p>（本文完）</p>
+<p><strong>参考链接</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://wallace.westminster.lib.co.us/bugzilla-custom/default-ticket-writing.html">Bug Writing Guidelines</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E7%BF%BB%E8%AF%91%E8%BD%AC%E8%BD%BD/" class="category-chain-item">翻译转载</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="print-no-link">#软件测试</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Bug报告写作指南</div>
+      <div>https://maojun.xyz/blog/2021/10/[翻译]Bug报告写作指南.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年10月15日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年9月10日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2023/03/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html" title="Arthas配合Recaf调试服务端代码">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Arthas配合Recaf调试服务端代码</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html" title="用户登入测试用例设计">
+                        <span class="hidden-mobile">用户登入测试用例设计</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

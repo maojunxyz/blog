@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="优化需求在博客迁移到Typecho[1]文章中，介绍了迁移到Typecho后做的一些配置。为了让默认主题发挥出更好的效果，在原基础上对其进一步优化。主要优化的内容有：  前置上下篇文章 文章页编辑功能 独立页编辑功能 文章页阅读次数 文章页加载时间  前置上下篇文章Typecho默认主题的上下篇文章是在评论输入框后面的。如果前置上下篇文章会和文章之间的关联性更强，方便用户点击查看。 编辑post.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typecho 默认主题优化">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="优化需求在博客迁移到Typecho[1]文章中，介绍了迁移到Typecho后做的一些配置。为了让默认主题发挥出更好的效果，在原基础上对其进一步优化。主要优化的内容有：  前置上下篇文章 文章页编辑功能 独立页编辑功能 文章页阅读次数 文章页加载时间  前置上下篇文章Typecho默认主题的上下篇文章是在评论输入框后面的。如果前置上下篇文章会和文章之间的关联性更强，方便用户点击查看。 编辑post.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-27T09:47:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="博客平台">
+<meta property="article:tag" content="Typecho">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Typecho 默认主题优化 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Typecho 默认主题优化"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-02-24 00:00" pubdate>
+          2020年2月24日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Typecho 默认主题优化</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2023年8月27日 上午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="优化需求"><a href="#优化需求" class="headerlink" title="优化需求"></a>优化需求</h2><p>在博客迁移到Typecho<sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="[博客迁移到 Typecho](https://maojun.xyz/blog/2020/02/博客迁移到Typecho.html)">[1]</span></a></sup>文章中，介绍了迁移到<code>Typecho</code>后做的一些配置。为了让默认主题发挥出更好的效果，在原基础上对其进一步优化。主要优化的内容有：</p>
+<ul>
+<li>前置上下篇文章</li>
+<li>文章页编辑功能</li>
+<li>独立页编辑功能</li>
+<li>文章页阅读次数</li>
+<li>文章页加载时间</li>
+</ul>
+<h2 id="前置上下篇文章"><a href="#前置上下篇文章" class="headerlink" title="前置上下篇文章"></a>前置上下篇文章</h2><p><code>Typecho</code>默认主题的上下篇文章是在评论输入框后面的。如果前置上下篇文章会和文章之间的关联性更强，方便用户点击查看。 编辑<code>post.php</code>文件，默认的代码顺序如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-variable language_">$this</span>-&gt;<span class="hljs-title function_ invoke__">need</span>(<span class="hljs-string">&#x27;comments.php&#x27;</span>); <span class="hljs-meta">?&gt;</span><br><br>   &lt;ul <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">near</span>&quot;&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">li</span>&gt;上一篇: &lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">thePrev</span>(&#x27;%<span class="hljs-title">s</span>&#x27;,&#x27;没有了&#x27;); ?&gt;&lt;/<span class="hljs-title">li</span>&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">li</span>&gt;下一篇: &lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">theNext</span>(&#x27;%<span class="hljs-title">s</span>&#x27;,&#x27;没有了&#x27;); ?&gt;&lt;/<span class="hljs-title">li</span>&gt;</span><br><span class="hljs-class">    &lt;/<span class="hljs-title">ul</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>将行尾部分的上下篇代码前置到评论前：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;ul <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">post</span>-<span class="hljs-title">near</span>&quot;&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">li</span>&gt;上一篇: &lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">thePrev</span>(&#x27;%<span class="hljs-title">s</span>&#x27;,&#x27;没有了&#x27;); ?&gt;&lt;/<span class="hljs-title">li</span>&gt;</span><br><span class="hljs-class">        &lt;<span class="hljs-title">li</span>&gt;下一篇: &lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">theNext</span>(&#x27;%<span class="hljs-title">s</span>&#x27;,&#x27;没有了&#x27;); ?&gt;&lt;/<span class="hljs-title">li</span>&gt;</span><br><span class="hljs-class">    &lt;/<span class="hljs-title">ul</span>&gt;</span><br><span class="hljs-class"></span><br><span class="hljs-class">    &lt;?<span class="hljs-title">php</span> $<span class="hljs-title">this</span>-&gt;<span class="hljs-title">need</span>(&#x27;<span class="hljs-title">comments</span>.<span class="hljs-title">php</span>&#x27;); ?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>保存退出刷新页面，即可查看到效果。</p>
+<h2 id="文章页编辑功能"><a href="#文章页编辑功能" class="headerlink" title="文章页编辑功能"></a>文章页编辑功能</h2><p><code>Typecho</code>的文章页面默认没有提供<strong>编辑</strong>的功能，需要登入到后台管理文章时才可以编辑。像 <code>WordPress</code> 之类的博客平台都有提供文章页面<strong>编辑</strong>功能。这个功能可以让有权限的用户快速的编辑文章。 在默认主题文件夹下编辑 <code>post.php</code> 文件，在带 <code>post-meta</code> 属性的 <code>ul</code> 标签下增加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">$this</span>-&gt;user-&gt;<span class="hljs-title function_ invoke__">hasLogin</span>()):<span class="hljs-meta">?&gt;</span><br>&lt;a href=<span class="hljs-string">&quot;&lt;?php <span class="hljs-subst">$this</span>-&gt;options-&gt;adminUrl(); ?&gt;write-post.php?cid=&lt;?php echo <span class="hljs-subst">$this</span>-&gt;cid;?&gt;&quot;</span>&gt;编辑&lt;/a&gt;<br><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endif</span>;<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="独立页编辑功能"><a href="#独立页编辑功能" class="headerlink" title="独立页编辑功能"></a>独立页编辑功能</h2><p>同文章页面设置，在默认主题文件夹下编辑 <code>page.php</code> 文件，在带 <code>post-content</code> 属性的 <code>div</code> 标签之前增加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>(<span class="hljs-variable language_">$this</span>-&gt;user-&gt;<span class="hljs-title function_ invoke__">hasLogin</span>()):<span class="hljs-meta">?&gt;</span><br>&lt;a href=<span class="hljs-string">&quot;&lt;?php <span class="hljs-subst">$this</span>-&gt;options-&gt;adminUrl(); ?&gt;write-page.php?cid=&lt;?php echo <span class="hljs-subst">$this</span>-&gt;cid;?&gt;&quot;</span> &gt;编辑&lt;/a&gt;<br><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">endif</span>;<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章页阅读次数"><a href="#文章页阅读次数" class="headerlink" title="文章页阅读次数"></a>文章页阅读次数</h2><p>在默认主题文件夹下编辑 <code>functions.php</code>，在行尾增加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 阅读次数统计</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">*/</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">get_post_view</span>(<span class="hljs-params"><span class="hljs-variable">$archive</span></span>)</span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-variable">$cid</span>    = <span class="hljs-variable">$archive</span>-&gt;cid;<br>    <span class="hljs-variable">$db</span>     = <span class="hljs-title class_">Typecho_Db</span>::<span class="hljs-title function_ invoke__">get</span>();<br>    <span class="hljs-variable">$prefix</span> = <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">getPrefix</span>();<br>    <span class="hljs-keyword">if</span> (!<span class="hljs-title function_ invoke__">array_key_exists</span>(<span class="hljs-string">&#x27;views&#x27;</span>, <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">fetchRow</span>(<span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">select</span>()-&gt;<span class="hljs-keyword">from</span>(<span class="hljs-string">&#x27;table.contents&#x27;</span>)))) &#123;<br>        <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">query</span>(<span class="hljs-string">&#x27;ALTER TABLE `&#x27;</span> . <span class="hljs-variable">$prefix</span> . <span class="hljs-string">&#x27;contents` ADD `views` INT(10) DEFAULT 0;&#x27;</span>);<br>        <span class="hljs-keyword">echo</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">return</span>;<br>    &#125;<br>    <span class="hljs-variable">$row</span> = <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">fetchRow</span>(<span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">select</span>(<span class="hljs-string">&#x27;views&#x27;</span>)-&gt;<span class="hljs-keyword">from</span>(<span class="hljs-string">&#x27;table.contents&#x27;</span>)-&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;cid = ?&#x27;</span>, <span class="hljs-variable">$cid</span>));<br>    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$archive</span>-&gt;<span class="hljs-title function_ invoke__">is</span>(<span class="hljs-string">&#x27;single&#x27;</span>)) &#123;<br> <span class="hljs-variable">$views</span> = <span class="hljs-title class_">Typecho_Cookie</span>::<span class="hljs-title function_ invoke__">get</span>(<span class="hljs-string">&#x27;extend_contents_views&#x27;</span>);<br>        <span class="hljs-keyword">if</span>(<span class="hljs-keyword">empty</span>(<span class="hljs-variable">$views</span>))&#123;<br>            <span class="hljs-variable">$views</span> = <span class="hljs-keyword">array</span>();<br>        &#125;<span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-variable">$views</span> = <span class="hljs-title function_ invoke__">explode</span>(<span class="hljs-string">&#x27;,&#x27;</span>, <span class="hljs-variable">$views</span>);<br>        &#125;<br><span class="hljs-keyword">if</span>(!<span class="hljs-title function_ invoke__">in_array</span>(<span class="hljs-variable">$cid</span>,<span class="hljs-variable">$views</span>))&#123;<br>       <span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">query</span>(<span class="hljs-variable">$db</span>-&gt;<span class="hljs-title function_ invoke__">update</span>(<span class="hljs-string">&#x27;table.contents&#x27;</span>)-&gt;<span class="hljs-title function_ invoke__">rows</span>(<span class="hljs-keyword">array</span>(<span class="hljs-string">&#x27;views&#x27;</span> =&gt; (<span class="hljs-keyword">int</span>) <span class="hljs-variable">$row</span>[<span class="hljs-string">&#x27;views&#x27;</span>] + <span class="hljs-number">1</span>))-&gt;<span class="hljs-title function_ invoke__">where</span>(<span class="hljs-string">&#x27;cid = ?&#x27;</span>, <span class="hljs-variable">$cid</span>));<br><span class="hljs-title function_ invoke__">array_push</span>(<span class="hljs-variable">$views</span>, <span class="hljs-variable">$cid</span>);<br>            <span class="hljs-variable">$views</span> = <span class="hljs-title function_ invoke__">implode</span>(<span class="hljs-string">&#x27;,&#x27;</span>, <span class="hljs-variable">$views</span>);<br>            <span class="hljs-title class_">Typecho_Cookie</span>::<span class="hljs-title function_ invoke__">set</span>(<span class="hljs-string">&#x27;extend_contents_views&#x27;</span>, <span class="hljs-variable">$views</span>); <span class="hljs-comment">//记录查看cookie</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">echo</span> <span class="hljs-variable">$row</span>[<span class="hljs-string">&#x27;views&#x27;</span>];<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在需要统计阅读量的页面，如<strong>文章查看页</strong>增加阅读量。可以在默认主题文件夹下编辑 <code>post.php</code> 文件，在带 <code>post-meta</code> 属性的 <code>ul</code> 标签下增加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;li&gt;<span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">_e</span>(<span class="hljs-string">&#x27;阅读量: &#x27;</span>); <span class="hljs-meta">?&gt;</span><span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">get_post_view</span>(<span class="hljs-variable">$this</span>); <span class="hljs-meta">?&gt;</span>&lt;/li&gt;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="文章页加载时间"><a href="#文章页加载时间" class="headerlink" title="文章页加载时间"></a>文章页加载时间</h2><p>同阅读次数统计，先在默认主题文件夹下编辑 <code>functions.php</code> ,在行尾添加以下内容：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 加载时间</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> bool</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timer_start</span>(<span class="hljs-params"></span>) </span>&#123;<br>        <span class="hljs-keyword">global</span> <span class="hljs-variable">$timestart</span>;<br>        <span class="hljs-variable">$mtime</span>     = <span class="hljs-title function_ invoke__">explode</span>( <span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-title function_ invoke__">microtime</span>() );<br>        <span class="hljs-variable">$timestart</span> = <span class="hljs-variable">$mtime</span>[<span class="hljs-number">1</span>] + <span class="hljs-variable">$mtime</span>[<span class="hljs-number">0</span>];<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>    &#125;<br>    <span class="hljs-title function_ invoke__">timer_start</span>();<br>    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">timer_stop</span>(<span class="hljs-params"> <span class="hljs-variable">$display</span> = <span class="hljs-number">0</span>, <span class="hljs-variable">$precision</span> = <span class="hljs-number">3</span> </span>) </span>&#123;<br>        <span class="hljs-keyword">global</span> <span class="hljs-variable">$timestart</span>, <span class="hljs-variable">$timeend</span>;<br>        <span class="hljs-variable">$mtime</span>     = <span class="hljs-title function_ invoke__">explode</span>( <span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-title function_ invoke__">microtime</span>() );<br>        <span class="hljs-variable">$timeend</span>   = <span class="hljs-variable">$mtime</span>[<span class="hljs-number">1</span>] + <span class="hljs-variable">$mtime</span>[<span class="hljs-number">0</span>];<br>        <span class="hljs-variable">$timetotal</span> = <span class="hljs-title function_ invoke__">number_format</span>( <span class="hljs-variable">$timeend</span> - <span class="hljs-variable">$timestart</span>, <span class="hljs-variable">$precision</span> );<br>        <span class="hljs-variable">$r</span>         = <span class="hljs-variable">$timetotal</span> &lt; <span class="hljs-number">1</span> ? <span class="hljs-variable">$timetotal</span> * <span class="hljs-number">1000</span> . <span class="hljs-string">&quot; ms&quot;</span> : <span class="hljs-variable">$timetotal</span> . <span class="hljs-string">&quot; s&quot;</span>;<br>        <span class="hljs-keyword">if</span> ( <span class="hljs-variable">$display</span> ) &#123;<br>            <span class="hljs-keyword">echo</span> <span class="hljs-variable">$r</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-variable">$r</span>;<br>    &#125;<br></code></pre></td></tr></table></figure>
+
+<p>然后在需要统计阅读次数的页面，比如<strong>文章查看页</strong>增加加载时间统计。可以在默认主题文件夹下编辑 <code>post.php</code> 文件，在带 <code>post-meta</code> 属性的<code>ul</code>标签下增加以下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php">&lt;li&gt;<span class="hljs-meta">&lt;?php</span> <span class="hljs-title function_ invoke__">_e</span>(<span class="hljs-string">&#x27;加载时间: &#x27;</span>); <span class="hljs-meta">?&gt;</span><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-title function_ invoke__">timer_stop</span>();<span class="hljs-meta">?&gt;</span> &lt;/li&gt;<br></code></pre></td></tr></table></figure>
+
+<p>在做好以上的配置后，我们就可以刷新页面查看效果了。在配置后备份自己的主题，方便以后重装使用。</p>
+<p>(完）</p>
+<section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://maojun.xyz/blog/2020/02/%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0Typecho.html">博客迁移到 Typecho</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/" class="category-chain-item">操作演示</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E5%8D%9A%E5%AE%A2%E5%B9%B3%E5%8F%B0/" class="print-no-link">#博客平台</a>
+      
+        <a href="/blog/tags/Typecho/" class="print-no-link">#Typecho</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Typecho 默认主题优化</div>
+      <div>https://maojun.xyz/blog/2020/02/Typecho默认主题优化.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年2月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年8月27日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2020/02/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAnextcloud%E7%BD%91%E7%9B%98.html" title="使用 docker 搭建 nextcloud 网盘">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用 docker 搭建 nextcloud 网盘</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/02/%E4%BD%BF%E7%94%A8Cloudflare%E6%9C%8D%E5%8A%A1%E4%BC%98%E5%8C%96%E5%9B%BE%E5%BA%8A.html" title="使用 Cloudflare 服务优化图床">
+                        <span class="hidden-mobile">使用 Cloudflare 服务优化图床</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

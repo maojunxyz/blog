@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="GitUi介绍 GitUI provides you with the comfort of a git GUI but right in your terminal.GitUI是一个Git GUI客户端，但是它直接在终端中运行。  特性 快速而直观的纯键盘操作控制提供了一个针对高效用户优化的流线型界面，所有操作都可以通过键盘快捷键高效完成，从而最大程度减少对鼠标或触控板的依赖。  基于上下文的帮">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git客户端工具GitUi安装及使用">
+<meta property="og:url" content="https://maojun.xyz/blog/2024/03/Git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7GitUi%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="GitUi介绍 GitUI provides you with the comfort of a git GUI but right in your terminal.GitUI是一个Git GUI客户端，但是它直接在终端中运行。  特性 快速而直观的纯键盘操作控制提供了一个针对高效用户优化的流线型界面，所有操作都可以通过键盘快捷键高效完成，从而最大程度减少对鼠标或触控板的依赖。  基于上下文的帮">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202869359616.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202914071552.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202949673984.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202733110272.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202668049408.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202776347648.png">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-16768202814080000.png">
+<meta property="article:published_time" content="2024-03-25T11:44:00.000Z">
+<meta property="article:modified_time" content="2024-03-25T11:44:00.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="GitUi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maojun.xyz/blog/assets/image-16768202869359616.png">
+  
+  
+  
+  <title>Git客户端工具GitUi安装及使用 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Git客户端工具GitUi安装及使用"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-25 11:44" pubdate>
+          2024年3月25日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Git客户端工具GitUi安装及使用</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="GitUi介绍"><a href="#GitUi介绍" class="headerlink" title="GitUi介绍"></a>GitUi介绍</h2><blockquote>
+<p>GitUI provides you with the comfort of a git GUI but right in your terminal.<br>GitUI是一个Git GUI客户端，但是它直接在终端中运行。</p>
+</blockquote>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li><p>快速而直观的纯键盘操作控制<br>提供了一个针对高效用户优化的流线型界面，所有操作都可以通过键盘快捷键高效完成，从而最大程度减少对鼠标或触控板的依赖。</p>
+</li>
+<li><p>基于上下文的帮助<br>无需记忆大量热键，应用会根据当前操作场景自动提供相关帮助信息。</p>
+</li>
+<li><p>查看、提交与修订变更<br>（包含钩子功能：pre-commit, commit-msg, post-commit, prepare-commit-msg）：能够查看工作区状态，提交版本更新，并在必要时修订已提交的变更，同时支持预提交和提交后的各种脚本钩子功能。</p>
+</li>
+<li><p>暂存、取消暂存、还原与重置文件、块和行<br>可以灵活管理暂存区，实现文件部分或全部内容的暂存、取消暂存，以及回滚到某个历史版本的状态。</p>
+</li>
+<li><p>储藏功能<br>（保存、弹出、应用、丢弃及检查）：支持临时存储工作区未提交的变化，并能在之后随时恢复或应用这些变化。</p>
+</li>
+<li><p>向远程仓库推送与从远程仓库拉取<br>进行版本同步操作，包括将本地分支的变更推送到远程仓库，以及从远程仓库获取最新的提交。</p>
+</li>
+<li><p>分支列表管理<br>（创建、重命名、删除、检出、处理远程分支）：提供全面的分支管理功能，包括新建、改名、删除分支，切换分支以及与远程分支的交互。</p>
+</li>
+<li><p>浏览与搜索提交日志、比较已提交的差异<br>允许用户查看项目的历史提交记录，搜索特定提交，并能可视化比较不同提交之间的差异。</p>
+</li>
+<li><p>响应式终端用户界面<br>界面设计为适应不同终端尺寸和分辨率，确保良好的用户体验。</p>
+</li>
+<li><p>异步 Git API 实现流畅控制<br>通过异步处理 Git 操作来提升应用性能，使得用户操作更加流畅无阻。</p>
+</li>
+<li><p>子模块支持<br>内置对 Git 子模块的支持，能够方便地管理和跟踪项目中的嵌套 Git 仓库。</p>
+</li>
+<li><p>GPG 提交签名<br>支持使用 GPG 对提交进行数字签名以保证提交者的身份验证和数据完整性，但同时也指出在某些情况下可能存在问题或限制。</p>
+</li>
+</ul>
+<h2 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h2><p>进入GitUi的下载地址，根据操作系统选择对应的安装包进行安装。<br><a target="_blank" rel="noopener" href="https://github.com/extrawurst/gitui/releases">GitUi下载</a></p>
+<p>以Windows为例：<br><img src="/blog/./assets/image-16768202869359616.png" srcset="/blog/img/loading.gif" lazyload alt="gitui制品包"></p>
+<p>下载gitui.msi文件，双击安装即可。安装完成后新建一个终端，进入一个Git仓库目录，在命令行中输入<code>gitui</code>打开GitUi界面。<br><img src="/blog/./assets/image-16768202914071552.png" srcset="/blog/img/loading.gif" lazyload alt="gitui界面"></p>
+<h3 id="GitUi常用快捷键"><a href="#GitUi常用快捷键" class="headerlink" title="GitUi常用快捷键"></a>GitUi常用快捷键</h3><p>GItUi默认的快捷键是基于键盘上下左右键的，可以通过<code>F1</code>键查看快捷键列表。你可以自定义快捷键，具体操作可以参考<a target="_blank" rel="noopener" href="https://github.com/extrawurst/gitui/blob/master/KEY_CONFIG.md">GitUi文档</a>。</p>
+<p>这里将GitUi快捷键修改为Vim风格为例：</p>
+<p>下载<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/extrawurst/gitui/master/vim_style_key_config.ron">vim_style_key_config.ron</a>文件修改名称为<code>key_bindings.ron</code>。</p>
+<p>打开资源管理器目录，在地址栏输入<code>%appdata%\gitui</code>，找到<code>key_bindings.ron</code>文件，将文件复制到<code>%appdata%\gitui</code>目录下。</p>
+<p><img src="/blog/./assets/image-16768202949673984.png" srcset="/blog/img/loading.gif" lazyload alt="key_bindings.ron"></p>
+<p>配置完成后，在GitUi中按<code>F1</code>键查看快捷键列表，可以看到快捷键已经修改为Vim风格。</p>
+<h3 id="编辑文件"><a href="#编辑文件" class="headerlink" title="编辑文件"></a>编辑文件</h3><p>在GitUi中，可以通过<code>I</code>键进入编辑模式，此时可以编辑文件。默认的编辑器为<code>vi</code>，但在Windows下，可能会出现<code>vi</code>命令无法使用的情况。</p>
+<p><img src="/blog/./assets/image-16768202733110272.png" srcset="/blog/img/loading.gif" lazyload alt="vi命令报错"></p>
+<p>需要手动指定编辑器。可以通过设置<code>GIT_EDITOR</code>、 <code>VISUAL</code>或 <code>EDITOR</code>环境变量的方式生效。</p>
+<p>设置临时环境变量:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">set</span> EDITOR=nvim<br></code></pre></td></tr></table></figure>
+
+<p>设置永久环境变量:</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">setx EDITOR nvim<br></code></pre></td></tr></table></figure>
+
+<p>设置完环境变量后，新建一个终端，进入一个Git仓库目录，在命令行中输入<code>gitui</code>打开GitUi界面。再次编辑文件，可以看到编辑器已经切换为<code>nvim</code>。</p>
+<h3 id="提交到暂存区"><a href="#提交到暂存区" class="headerlink" title="提交到暂存区"></a>提交到暂存区</h3><p>当修改了一个已经被Git追踪的文件，该文件处于”modified”（已修改）状态。如果想要将这些更改包含在下一次提交中，需要先将它们添加到暂存区域（也称为索引），此时文件就进入了”staged”状态。在GitUi中，可以通过<code>回车</code>键将选中的文件添加到暂存区，通过<code>a</code>键将所有文件文件添加到暂存区。对应的Git命令为<code>git add &lt;file&gt;</code>。</p>
+<p><img src="/blog/./assets/image-16768202668049408.png" srcset="/blog/img/loading.gif" lazyload alt="暂存区"></p>
+<h3 id="提交本地历史"><a href="#提交本地历史" class="headerlink" title="提交本地历史"></a>提交本地历史</h3><p>在GitUi中，可以通过<code>c</code>键提交本地历史，此时会弹出提交信息输入框，输入提交信息后，可以通过<code>ctrl+d</code>键提交，也可以通过<code>esc</code>键取消提交。对应的Git命令为<code>git commit -m &lt;message&gt;</code>。<br><img src="/blog/./assets/image-16768202776347648.png" srcset="/blog/img/loading.gif" lazyload alt="commit"></p>
+<h3 id="查看提交日志"><a href="#查看提交日志" class="headerlink" title="查看提交日志"></a>查看提交日志</h3><p>在GitUi中，可以通过数字<code>2</code>键查看提交日志，此时会切换到log栏，可以数据<code>1</code>键回到Status栏。对应的Git命令为<code>git log</code>。</p>
+<p><img src="/blog/./assets/image-16768202814080000.png" srcset="/blog/img/loading.gif" lazyload alt="Log"></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><p>在GitUi中，可以通过<code>p</code>键推送到远程仓库。对应的Git命令为<code>git push &lt;remote&gt; &lt;branch&gt;</code>。</p>
+<p>在推送的时候可能会遇到认证失败的问题，需要配置ssh代理。参考配置<a target="_blank" rel="noopener" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">Adding your SSH key to the ssh-agent</a>。</p>
+<p>步骤：</p>
+<ol>
+<li>打开命令行窗口，执行下面的命令生成ssh key。</li>
+</ol>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmd">ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>以管理员身份运行powershell,并执行下面的命令。</li>
+</ol>
+<figure class="highlight ps1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ps1"><span class="hljs-comment"># start the ssh-agent in the background</span><br><span class="hljs-built_in">Get-Service</span> <span class="hljs-literal">-Name</span> ssh<span class="hljs-literal">-agent</span> | <span class="hljs-built_in">Set-Service</span> <span class="hljs-literal">-StartupType</span> Manual<br><span class="hljs-built_in">Start-Service</span> ssh<span class="hljs-literal">-agent</span><br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>新建一个普通命令行窗口，并执行下面的命令。</li>
+</ol>
+<figure class="highlight ps1"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ps1">ssh<span class="hljs-literal">-add</span> c:/Users/YOU/.ssh/id_ed25519<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>新建一个命令行窗口，打开GitUi，通过<code>p</code>键推送到远程仓库。</li>
+</ol>
+<p>（完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/" class="category-chain-item">计算机</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Git/" class="category-chain-item">Git</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/Git/" class="print-no-link">#Git</a>
+      
+        <a href="/blog/tags/GitUi/" class="print-no-link">#GitUi</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Git客户端工具GitUi安装及使用</div>
+      <div>https://maojun.xyz/blog/2024/03/Git客户端工具GitUi安装及使用.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月25日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2024/03/%E5%81%A5%E5%BA%B7%E9%A3%9F%E7%89%A9%E6%B8%85%E5%8D%95.html" title="健康食物清单">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">健康食物清单</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2024/03/%E6%8A%80%E8%83%BD%E8%AF%81%E4%B9%A6%E5%90%88%E9%9B%86.html" title="技能证书合集">
+                        <span class="hidden-mobile">技能证书合集</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
