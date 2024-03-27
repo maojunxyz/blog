@@ -154,8 +154,8 @@ https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%B
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Java/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%BD%91%E7%BB%9C/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/
-https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%80%83%E8%AF%95/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Redis/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/Windows/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/
+https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E8%80%83%E8%AF%95/
 https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%8D%E5%8A%A1%E6%A1%86%E6%9E%B6/
