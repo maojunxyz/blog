@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2024-03-27T23:16:11.000Z</updated>
+  <updated>2024-03-27T23:26:56.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>极简生活可以尝试的实践</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%9A%84%E5%AE%9E%E8%B7%B5.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%9A%84%E5%AE%9E%E8%B7%B5.html</id>
+    <published>2024-03-27T23:26:56.000Z</published>
+    <updated>2024-03-27T23:26:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;拥有却不珍惜，才是最可惜的事情。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;生活篇&quot;&gt;&lt;a href=&quot;#生活篇&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+    <category term="极简生活" scheme="https://maojun.xyz/blog/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>《不持有的生活》读书摘录</title>
@@ -41,6 +71,8 @@
     
     
     <category term="读书笔记" scheme="https://maojun.xyz/blog/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="极简生活" scheme="https://maojun.xyz/blog/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -612,39 +644,6 @@
     <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
     
     <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>接口测试工具Insomnia入门使用</title>
-    <link href="https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html"/>
-    <id>https://maojun.xyz/blog/2023/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7Insomnia%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8.html</id>
-    <published>2023-09-27T22:22:00.000Z</published>
-    <updated>2023-09-27T22:22:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;打开官网的下载地址：&lt;a href=&quot;https://insomnia.rest/download&quot;&gt;Download -</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    <category term="操作演示" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/"/>
-    
-    
-    <category term="软件测试" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/"/>
-    
-    <category term="测试工具" scheme="https://maojun.xyz/blog/tags/%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="Insomnia" scheme="https://maojun.xyz/blog/tags/Insomnia/"/>
     
   </entry>
   
