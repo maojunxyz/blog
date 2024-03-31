@@ -60,6 +60,64 @@
   
   
   <entry>
+    <title>Google搜索技巧</title>
+    <link href="/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
+    <url>/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="四阶段的智能化人机交互"><a href="#四阶段的智能化人机交互" class="headerlink" title="四阶段的智能化人机交互"></a>四阶段的智能化人机交互</h2><p><strong>第一个阶段</strong>，使用倒排索引解决匹配的效率问题，使用文档模型解决基本的相关性，使搜索引擎变得可用、可扩展，代表比如 Infoseek 。这一阶段只保证了基本的文字相关性，搜索的真正效果是无法保证的。</p><p><strong>第二个阶段</strong>，使用超链模型，比如 Google 的 PageRank 算法和百度的超链分析技术。解决信息的权威性问题，使搜索质量有了质的飞跃。从这一阶段开始，搜索引擎快速普及与并进入商业化，为 Google 和百度这样的公司带来了丰厚的利润。</p><p><strong>第三个阶段</strong>，一方面使用更复杂的规则和机器学习排序模型，综合考虑了用户的行为特征，如商品评论、点赞、收藏、购买等，使得搜索引擎的结果再次提升一个档次，这些在电商等垂直搜索上表现的会更加明显；另一方面，基于各种先进的自然语言处理技术，充分挖掘用户搜索行为日志，对 query 进行分析改写以召回更多更好的结果。</p><p><strong>第四个阶段</strong>，从「有框」搜索时代步入更加人工智能的「无框」搜索时代。人机交互方式也将更多的是问答式的自然语言加语音的方式，而搜索引擎也更像一个智能机器人，理解人的自然语言问题，提供更加直接有效的知识和答案。这一阶段目前尚处于起步阶段，Google、Amazon 以及一些优秀的创业公司都在进行积极的探索。</p><h2 id="谷歌搜索技巧"><a href="#谷歌搜索技巧" class="headerlink" title="谷歌搜索技巧"></a>谷歌搜索技巧</h2><table><thead><tr><th>搜索指令</th><th>功能</th><th>示例</th></tr></thead><tbody><tr><td>@</td><td>搜索社交媒体</td><td>@twitter</td></tr><tr><td>$</td><td>搜索特定价格</td><td>camera $400</td></tr><tr><td>#</td><td>搜索 # 标签</td><td>#throwbackthursday</td></tr><tr><td>-</td><td>从搜索结果中排除特定字词</td><td>马云语录 - 女人</td></tr><tr><td>“”</td><td>搜索完全匹配的结果</td><td>“tallest building”</td></tr><tr><td>..</td><td>在某个数字范围内执行搜索</td><td>camera $50..$100</td></tr><tr><td>OR（大写）</td><td>组合搜索</td><td>marathon OR race</td></tr><tr><td>site:</td><td>搜索特定网站</td><td>site:chongbuluo.com</td></tr><tr><td>related:</td><td>搜索相关网站</td><td>related:time.com</td></tr><tr><td>info:</td><td>获取网站详情</td><td>info:giffox.com</td></tr><tr><td>cache:</td><td>查看网站的 Google 缓存版本</td><td>cache:google.com</td></tr><tr><td>\</td><td>效用等同于 OR</td><td>apple\google, apple OR google</td></tr><tr><td>*</td><td>泛搜索，表征未知部分，只适用于英文</td><td>* is the mother of success</td></tr><tr><td>《》</td><td>只查询图书、影视作品，只适用于中文</td><td>《钢铁是怎样炼成的》</td></tr><tr><td>def:</td><td>查询关键词的定义</td><td>def:diversity &#x2F; google def:</td></tr><tr><td>inurl</td><td>查找在 URL 地址里有搜索关键词的页面</td><td>inurl:download</td></tr><tr><td>intitle</td><td>查找在网页标题里有搜索关键词的页面</td><td>intitle:</td></tr><tr><td>filetype</td><td>查找特定文件格式的结果</td><td>机器学习 filetype:csv</td></tr><tr><td>link:</td><td>查看网站的反向链接</td><td>link:chongbuluo.com</td></tr><tr><td>AROUND</td><td>搜索包含给点单词之间最大分隔数的网页</td><td>华为 AROUND (5) 必然</td></tr></tbody></table><p>（完）</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul><li><a href="https://events.google.com/io/recap/">Recap - Google I&#x2F;O 2019</a></li><li><a href="https://youtu.be/BNHR6IQJGZs">How Search Works</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>计算机</category>
+      
+      <category>网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Google</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>GitHub搜索技巧</title>
+    <link href="/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
+    <url>/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="GitHub-搜索技巧"><a href="#GitHub-搜索技巧" class="headerlink" title="GitHub 搜索技巧"></a>GitHub 搜索技巧</h2><p>这里可以了解一些搜索语法，会对你的精准查询有所帮助。</p><h3 id="查询大于或小于另一个值的值"><a href="#查询大于或小于另一个值的值" class="headerlink" title="查询大于或小于另一个值的值"></a>查询大于或小于另一个值的值</h3><p>您可以使用 <code>&gt;</code>，<code>&gt;=</code>，<code>&lt;</code>，和 <code>&lt;=</code> 搜索是大于，大于或等于，小于和小于或等于另一个值的值。</p><table><thead><tr><th>匹配条件</th><th>举例</th></tr></thead><tbody><tr><td><code>&gt;</code> <em>n</em></td><td>cats<a href="https://github.com/search?utf8=%E2%9C%93&q=cats+stars:%3E1000&type=Repositories"> <strong>stars:&gt; 1000</strong></a> 匹配超过 1000 star 的包含 “cats” 关键字的仓库。</td></tr><tr><td><code>&gt;=</code> <em>n</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+topics:%3E=5&type=Repositories"><strong>cats topics:&gt; &#x3D; 5</strong></a> 匹配具有 5 个或更多主题的单词 “cats” 的存储库。</td></tr><tr><td><code>&lt;</code> <em>n</em></td><td>****<a href="https://github.com/search?utf8=%E2%9C%93&q=cats+size:%3C10000&type=Code"><strong>cats size:&lt;10000</strong></a> 匹配小于 10 KB 的文件中带有 “cats” 字样的代码。</td></tr><tr><td><code>&lt;=</code> <em>n</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+stars:%3C=50&type=Repositories"><strong>cats stars:&lt;&#x3D; 50</strong></a> 匹配具有 50 个或更少 star 的包含 “cats” 关键字的仓库。</td></tr></tbody></table><p>您还可以使用<a href="https://help.github.com/en/articles/understanding-the-search-syntax#query-for-values-between-a-range">范围查询</a>来搜索大于或等于，或小于或等于另一个值的值。</p><table><thead><tr><th>搜索语法</th><th>举例</th></tr></thead><tbody><tr><td><em>n</em> <code>..*</code></td><td>****<a href="https://github.com/search?utf8=%E2%9C%93&q=cats+stars:10..*&type=Repositories"><strong>cats stars:10 .. *</strong></a> 相当于 <code>stars:&gt;=10</code> 并匹配具有 10 个或更多星的 “猫” 一词的存储库。</td></tr><tr><td><code>*..</code> <em>n</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+stars:%22*..10%22&type=Repositories">cats <strong>stars:* .. 10</strong></a> 相当于 <code>stars:&lt;=10</code> 和匹配具有 10 个或更少恒星的单词 “cats” 的存储库。</td></tr></tbody></table><h3 id="查询范围之间的值"><a href="#查询范围之间的值" class="headerlink" title="查询范围之间的值"></a><a href="https://help.github.com/en/articles/understanding-the-search-syntax#query-for-values-between-a-range">查询范围之间的值</a></h3><p>您可以使用范围语法搜索范围内的值，其中第一个数字 <em>n</em> 是最低值，第二个数字是最高值。<em>n</em><code>..</code><em>n</em></p><table><thead><tr><th>询问</th><th>举例</th></tr></thead><tbody><tr><td><em>n</em> <code>..</code> <em>n</em></td><td>****<a href="https://github.com/search?utf8=%E2%9C%93&q=cats+stars:10..50&type=Repositories"><strong>cats stars:10..50</strong></a> 匹配存储库，单词 “cats”，有 10 到 50 颗星。</td></tr></tbody></table><h3 id="查询日期"><a href="#查询日期" class="headerlink" title="查询日期"></a><a href="https://help.github.com/en/articles/understanding-the-search-syntax#query-for-dates">查询日期</a></h3><p>您可以搜索日期，除另一个日期，或者那年秋天日期范围内较早或较晚的是，通过使用 <code>&gt;</code>，<code>&gt;=</code>，<code>&lt;</code>，<code>&lt;=</code>，和<a href="https://help.github.com/en/articles/understanding-the-search-syntax#query-for-values-between-a-range">范围查询</a>。日期格式必须遵循 ISO8601 标准，即 <code>YYYY-MM-DD</code>（年 - 月 - 日）。</p><table><thead><tr><th>询问</th><th>举例</th></tr></thead><tbody><tr><td><code>&gt;</code> <em>YYYY-MM-DD</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3E2016-04-29&type=Issues">cats <strong>created:&gt; 2016-04-29</strong></a> 匹配 2016 年 4 月 29 日之后创建的 “cats” 一词的问题。</td></tr><tr><td><code>&gt;=</code> <em>YYYY-MM-DD</em></td><td>****<a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3E=2017-04-01&type=Issues"><strong>cats created:&gt; &#x3D; 2017-04-01</strong></a> 匹配 2017 年 4 月 1 日或之后创建的 “cats” 一词的问题。</td></tr><tr><td><code>&lt;</code> <em>YYYY-MM-DD</em></td><td><a href="https://github.com/search?q=cats+pushed:%3C2012-07-05&type=Code&utf8=%E2%9C%93"><strong>cats pushed:&lt;2012-07-05</strong></a> 匹配代码与 2012 年 7 月 5 日之前推送到的存储库中的 “cats” 一词。</td></tr><tr><td><code>&lt;=</code> <em>YYYY-MM-DD</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3E=2017-04-01&type=Issues">cats <strong>created</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3C=2012-07-04&type=Issues">:<strong>&lt;&#x3D; 2012-07-04</strong></a> 与 2012 年 7 月 4 日或之前创建的 “cats” 一词相匹配。</td></tr><tr><td><em>YYYY-MM-DD .. YYYY-MM-DD</em></td><td><a href="https://github.com/search?q=cats+pushed:%3C2012-07-05&type=Code&utf8=%E2%9C%93"><strong>cats pushed</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+pushed:2016-04-30..2016-07-04&type=Repositories">:<strong>2016-04-30..2016-07-04</strong></a> 匹配 2016 年 4 月底到 7 月期间被推到 “cats” 字样的知识库。</td></tr><tr><td><em>YYYYYYYY-MM-DD</em><code>..*</code></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:2012-04-30..*&type=Issues"><strong>cats created</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:2012-04-30..*&type=Issues">:<strong>2012-04-30 .. *</strong></a> 匹配 2012 年 4 月 30 日之后创建的包含 “cats” 字样的问题。</td></tr><tr><td><code>*..</code><em>YYYYYYYY-MM-DD</em></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:2012-04-30..*&type=Issues"><strong>cats created</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:*..2012-07-04&type=Issues">:*** .. 2012-04-30**</a> 匹配 2012 年 7 月 4 日之前创建的包含 “cats” 字样的问题。</td></tr></tbody></table><p>您还可以 <code>THH:MM:SS+00:00</code> 在日期之后添加可选时间信息，以按小时，分钟和秒搜索。那是 <code>T</code>，然后是 <code>HH:MM:SS</code>（小时 - 分 - 秒）和 UTC 偏移（<code>+00:00</code>）。</p><table><thead><tr><th>询问</th><th>例</th></tr></thead><tbody><tr><td><code>YYYY - MM - DD T HH : MM : SS + 00 : 00</code></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3E=2017-04-01&type=Issues">cats <strong>created</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:2017-01-01T01:00:00+07:00..2017-03-01T15:30:15+07:00&type=Issues">:<strong>2017-01-01T01：00：00 + 07：00..2017-03-01T15：30：15 + 07:00</strong></a> **** 匹配 2017 年 1 月 1 日凌晨 1 点之间创建的问题，UTC 偏移量为 <code>07:00</code>3 月 1 日，2017 年下午 3 点，UTC 偏移量为 <code>07:00</code>。</td></tr><tr><td><code>YYYY - MM - DD T HH : MM : SS Z</code></td><td><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:%3E=2017-04-01&type=Issues">cats <strong>created</strong></a><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+created:2016-03-21T14:11:00Z..2016-04-07T20:45:00Z&type=Issues">:<strong>2016-03-21T14：11：00Z..2016-04-07T20：45：00Z</strong></a> 匹配 2016 年 3 月 21 日下午 2:11 和 2106 年 4 月 7 日晚上 8:45 之间创建的问题。</td></tr></tbody></table><h3 id="排除某些结果"><a href="#排除某些结果" class="headerlink" title="排除某些结果"></a><a href="https://help.github.com/en/articles/understanding-the-search-syntax#exclude-certain-results">排除某些结果</a></h3><p>您可以使用 <code>NOT</code> 语法排除包含特定单词的结果。该 <code>NOT</code> 操作只能用于字符串的关键词。它不适用于数字或日期。</p><table><thead><tr><th>询问</th><th>例子</th></tr></thead><tbody><tr><td><code>NOT</code></td><td><a href="https://github.com/search?q=hello+NOT+world&type=Repositories">hello NOT world</a> 匹配有 “hello” 这个词而没有 “world” 这个词的仓库。</td></tr></tbody></table><h3 id="对带有空格的查询使用引号"><a href="#对带有空格的查询使用引号" class="headerlink" title="对带有空格的查询使用引号"></a>对带有空格的查询使用引号</h3><p>如果您的搜索查询包含空格，则需要用引号括起来。例如：</p><ul><li><a href="https://github.com/search?utf8=%E2%9C%93&q=cats+NOT+%22hello+world%22&type=Repositories">cats NOT “hello world”</a> 匹配存储库的单词 “cats” 而不是 “hello world”。</li><li><a href="https://github.com/search?utf8=%E2%9C%93&q=build+label:%22bug+fix%22&type=Issues">构建标签：“bug fix”</a> 与 “build” 一词的问题相匹配，其标签为 “bug fix”。</li></ul><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>计算机</category>
+      
+      <category>网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GitHub</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>常用软件清单</title>
     <link href="/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html"/>
     <url>/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html</url>
@@ -1163,9 +1221,9 @@
     
     <tags>
       
-      <tag>Hexo</tag>
-      
       <tag>GitHub</tag>
+      
+      <tag>Hexo</tag>
       
     </tags>
     
