@@ -1,0 +1,1050 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="业务架构单体模式早期系统多以单体业务为主，逐个业务线各自扩张。 系统也多呈现为多个mvc独立运行状态。 以电商为例，可能按B2B，B2C，C2C不断扩张，每个业务一套系统，每个系统一个维护团队。  方案代理层设置不同的二级域名，如b2b.example.com，b2c.example.com，分发给不同的服务器。 特点 粒度较粗：纯以业务为导向，往往形成业务团队各自为战，新业务线出现时疯狂扩张。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="互联网架构发展与演变过程">
+<meta property="og:url" content="https://maojun.xyz/blog/2020/03/%E4%BA%92%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84%E5%8F%91%E5%B1%95%E4%B8%8E%E6%BC%94%E5%8F%98%E8%BF%87%E7%A8%8B.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="业务架构单体模式早期系统多以单体业务为主，逐个业务线各自扩张。 系统也多呈现为多个mvc独立运行状态。 以电商为例，可能按B2B，B2C，C2C不断扩张，每个业务一套系统，每个系统一个维护团队。  方案代理层设置不同的二级域名，如b2b.example.com，b2c.example.com，分发给不同的服务器。 特点 粒度较粗：纯以业务为导向，往往形成业务团队各自为战，新业务线出现时疯狂扩张。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-x2jg6ndr89044xfxdi.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-i13acsxt4j8xcf3p44.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-qzi0r0fhntuahdm0t0.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-6q3de494yufdlc5elq.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-nq7fsnebif12kfike3.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-mu04tw0appzyki4x4u.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-xz83il0ner45c12p9e.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-jnhbhe6x4vrgnqmnl6.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-c0v6c1qjdkf8e0h7fv.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-hcji5g9jyl56vsoqry.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-yht298c0fmknupdcuw.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-jnhbhe6x4vrgnqmnl6.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-1cfqlhsb488utrhf39.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-f1tb62rl5y72y1hntx.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-187yh63bfltv2irxqy.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-23zcrj50e3dlibkhle.PNG">
+<meta property="og:image" content="https://maojun.xyz/blog/assets/image-bf1c8izqnxc2o83yww.PNG">
+<meta property="article:published_time" content="2020-03-31T16:00:47.000Z">
+<meta property="article:modified_time" content="2020-03-31T16:00:47.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="业务架构">
+<meta property="article:tag" content="数据架构">
+<meta property="article:tag" content="应用架构">
+<meta property="article:tag" content="部署架构">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://maojun.xyz/blog/assets/image-x2jg6ndr89044xfxdi.PNG">
+  
+  
+  
+  <title>互联网架构发展与演变过程 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="互联网架构发展与演变过程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-03-31 16:00" pubdate>
+          2020年3月31日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          33 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">互联网架构发展与演变过程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="业务架构"><a href="#业务架构" class="headerlink" title="业务架构"></a>业务架构</h2><h3 id="单体模式"><a href="#单体模式" class="headerlink" title="单体模式"></a>单体模式</h3><p>早期系统多以单体业务为主，逐个业务线各自扩张。</p>
+<p>系统也多呈现为多个mvc独立运行状态。</p>
+<p>以电商为例，可能按B2B，B2C，C2C不断扩张，每个业务一套系统，每个系统一个维护团队。</p>
+<p><img src="/blog/./assets/image-x2jg6ndr89044xfxdi.PNG" srcset="/blog/img/loading.gif" lazyload alt="单体架构"></p>
+<h4 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h4><p>代理层设置不同的二级域名，如b2b.example.com，b2c.example.com，分发给不同的服务器。</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>粒度较粗：纯以业务为导向，往往形成业务团队各自为战，新业务线出现时疯狂扩张。</li>
+<li>重复开发：相同功能可能在不同业务的项目中被重复开发，比如短信发送、支付、财务统计。</li>
+</ul>
+<h3 id="中台战略"><a href="#中台战略" class="headerlink" title="中台战略"></a>中台战略</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>中台在 2015 由阿里提出，其实是阿里共享业务技术部的成型过程。</p>
+<p>中台是一种企业架构而不是单纯的技术层面，目前几乎各大电商都进行着中台化的建设。</p>
+<p>中台不是什么新奇东西，实际上是“共享“理念在业务、系统、组织架构上的一种落地与实施。</p>
+<p>关键词：共享、节约成本、协作。</p>
+<h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>单体业务模式带来很多问题：</p>
+<ul>
+<li><p>技术架构上：</p>
+<ul>
+<li><p>有些相同功能，各个团队重复建设和维护带来的重复投资。</p>
+</li>
+<li><p>业务系统间的集成和协作成本高昂。</p>
+</li>
+<li><p>不利于基础性业务的沉淀和持续发展。</p>
+</li>
+</ul>
+</li>
+<li><p>组织架构上：</p>
+<ul>
+<li>部门在单体模式下往往每个项目一个团队。团队跟随项目疯狂扩展，利用率低。</li>
+</ul>
+</li>
+<li><p>中台类比之下：</p>
+<ul>
+<li><p>中台模式下，基础业务也下沉到技术部门，甚至通过技术反推业务正向发展。</p>
+</li>
+<li><p>下层业务，变化不大的业务持续沉淀，接口像滚雪球一样越来越完善。</p>
+</li>
+<li><p>上层业务，跟业务模式和运营产品有关的系统变化迅速，对底层接口封装组合即可。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>以经典电商中台划分为例：</p>
+<p><img src="/blog/./assets/image-i13acsxt4j8xcf3p44.PNG" srcset="/blog/img/loading.gif" lazyload alt="中台架构"></p>
+<h5 id="业务中台"><a href="#业务中台" class="headerlink" title="业务中台"></a>业务中台</h5><p>业务中台基于公共服务的沉淀，需要积累一些基础的业务服务。</p>
+<p>这些服务在 B2B，B2C 等系统中都会具备，是相同的。</p>
+<ul>
+<li>商品中心：商品、类目、sku、spu</li>
+<li>交易中心：订单、状态流转、条目、支付</li>
+<li>营销中心：促销、优惠券、活动</li>
+<li>会员中心：账户、基本信息、收发货地址、商铺商家信息</li>
+<li>仓储中心：仓库、库存</li>
+<li>物流中心：发货信息、自主物流或外部物流对接</li>
+<li>…</li>
+</ul>
+<h5 id="技术中台"><a href="#技术中台" class="headerlink" title="技术中台"></a>技术中台</h5><p>与业务无关的基础沉淀，技术类内容可以在各个团队之间共享。</p>
+<ul>
+<li><p>基础架构：核心类库、公共框架、基础服务、服务治理框架</p>
+</li>
+<li><p>中间件：分布式缓存、分布式消息、数据存储（db，nosql）、分布式文件、分布式调度</p>
+</li>
+<li><p>自动化运维：监控中心、资源管理、配置中心、发布中心、日志平台</p>
+</li>
+<li><p>自动化测试：任务协同、基础测试、性能测试、接口测试、持续集成</p>
+</li>
+<li><p>运维中台，将开发层和系统层的内容分开</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+<h5 id="数据中台"><a href="#数据中台" class="headerlink" title="数据中台"></a>数据中台</h5><p>数据中台不是数据平台，也不是数据仓库，这三者是有区别的。</p>
+<p>举个例子：数据平台可以理解为数据库，数据仓库类比为报表。而数据中台更贴近上层业务，带着业务属性。同样以接口形式为其他上层各个业务线提供持续调用。</p>
+<ul>
+<li><p>数据抽取：从db，nosql，日志等各个来源提供抽取接口</p>
+</li>
+<li><p>数据接口：为上层业务提供需要的定制化业务数据接口</p>
+</li>
+<li><p>数据分析：行业分析与决策、数据驱动运营</p>
+</li>
+<li><p>人工智能：用户画像、商品推荐</p>
+</li>
+<li><p>可视化：数据大屏、信息展示、活动报表等</p>
+</li>
+<li><p>…</p>
+</li>
+</ul>
+<h5 id="服务接入层"><a href="#服务接入层" class="headerlink" title="服务接入层"></a>服务接入层</h5><p>即大中台，小前台的前台，电商中直面用户的B2B,B2C等各个业务线。</p>
+<ul>
+<li>现有的业务模式、流程等根据市场及时调整，变化非常快。</li>
+<li>新的业务线可以被快速实现，不需要再重复开发底层的中台业务，调取中台接口组装即可。</li>
+</ul>
+<h2 id="数据架构"><a href="#数据架构" class="headerlink" title="数据架构"></a>数据架构</h2><h3 id="单数据库"><a href="#单数据库" class="headerlink" title="单数据库"></a>单数据库</h3><p>早在2003-2004淘宝V1.0就使用mysql，V1.1换成oracle，直到 2007 数据库重新往mysql回迁。<br>这个阶段往往引发追逐商业大型db如oracle（淘宝v1.1 ， mysql→oracle）</p>
+<p><img src="/blog/./assets/image-qzi0r0fhntuahdm0t0.PNG" srcset="/blog/img/loading.gif" lazyload alt="单数据库"></p>
+<h4 id="方案-1"><a href="#方案-1" class="headerlink" title="方案"></a>方案</h4><p>java web项目直接通过jdbc，连接单一的数据库，读写扎堆在一块，单库上的机器io及cpu性能很快达到<br>上限</p>
+<ul>
+<li>数据库：mysql、oracle、sqlserver、db2等</li>
+<li>持久层框架：jdbc，hibernate，jpa，mybatis</li>
+</ul>
+<h3 id="主从读写"><a href="#主从读写" class="headerlink" title="主从读写"></a>主从读写</h3><p>淘宝从oracle换回mysql的历程中实现了主从库部署与读写分离。</p>
+<p><img src="/blog/./assets/image-6q3de494yufdlc5elq.PNG" srcset="/blog/img/loading.gif" lazyload alt="读写分离"></p>
+<h5 id="方案-2"><a href="#方案-2" class="headerlink" title="方案"></a>方案</h5><p>java web应用层连接多个数据库，数据库之间形成主从关系，主库上写，从库上读。读写压力被分散。</p>
+<ul>
+<li>数据库集群：一主多从、双主单写</li>
+<li>应用层开发：多数据源支持，spring multi datasource</li>
+<li>中间件：Sharding-JDBC，Mycat</li>
+</ul>
+<h5 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h5><ul>
+<li>数据延迟：从主库到从库之间数据需要经过网络传输，不可避免的有延迟。</li>
+<li>开发层面：需要开发框架具备多数据源的支持，以及自动化的数据源切换。</li>
+<li>单库瓶颈：业务越来越多，表数量越来越多。出现单个库几百张表的现象。</li>
+<li>数据局限：依然无法解决单表大数据的问题，比如订单积累达到亿级，即使在从库，关联查询依然奇慢无比。</li>
+</ul>
+<h3 id="分库分表"><a href="#分库分表" class="headerlink" title="分库分表"></a>分库分表</h3><p>2004-2007，淘宝V2.1，分库。</p>
+<p><img src="/blog/./assets/image-nq7fsnebif12kfike3.PNG" srcset="/blog/img/loading.gif" lazyload alt="分库分表"></p>
+<h5 id="方案-3"><a href="#方案-3" class="headerlink" title="方案"></a>方案</h5><p>主从库的写入依然是有一个统一的主库入口。随着业务量的提升，继续细粒度化拆分</p>
+<ul>
+<li><p>业务分库：订单库，产品库，活动库，会员库</p>
+</li>
+<li><p>横向分表：（拆记录） 3 个月内订单，半年内订单，更多订单</p>
+</li>
+<li><p>纵向分表：（拆字段）name、phone一张表，info、address一张表，俩表id一致</p>
+</li>
+</ul>
+<h5 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h5><ul>
+<li>分库<ul>
+<li>不同的数据库，所以无法使用数据库事务，而分布式事务的效果并不理想，多采用幂等和最终一致性方案。</li>
+</ul>
+</li>
+<li>分表<ul>
+<li>拆了再聚合是一对矛盾，例如按下单时间维度的分表，需要按用户排序统计变得异常困难。<br>中间件：Sharding-JDBC，Mycat，Atlas</li>
+</ul>
+</li>
+</ul>
+<h3 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h3><p>2006-2007，淘宝V2.2架构，分布式缓存Tair引入。</p>
+<p><img src="/blog/./assets/image-mu04tw0appzyki4x4u.PNG" srcset="/blog/img/loading.gif" lazyload alt="高速缓存"></p>
+<h5 id="方案-4"><a href="#方案-4" class="headerlink" title="方案"></a>方案</h5><p>数据库往往是系统的瓶颈，根据数据的冷热划分，热点数据如类目、商品基础信息放在缓存中，其他数据延迟加载</p>
+<ul>
+<li>ehcache：非分布式，简单，易维护，可用性一般</li>
+<li>memcache：性能可靠，纯内存，客户端需要自己实现，无持久化</li>
+<li>redis：性能可靠，纯内存，自带分片，集群，哨兵，支持持久化，几乎成为当前的标准方案</li>
+</ul>
+<h5 id="特点-3"><a href="#特点-3" class="headerlink" title="特点"></a>特点</h5><ul>
+<li><p>缓存策略</p>
+<ul>
+<li>冷热数据的存放，缓存与db的边界需要把控，重度依赖可能引发问题</li>
+</ul>
+</li>
+<li><p>缓存陷阱</p>
+<ul>
+<li>击穿（单一 key过期），穿透（不存在的 key），雪崩（多个 key 同时过期）</li>
+</ul>
+</li>
+<li><p>数据一致性</p>
+<ul>
+<li>缓存和 db 之间因为同一份数据保存了两份，自然带来了一致性问题</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据多样化存储"><a href="#数据多样化存储" class="headerlink" title="数据多样化存储"></a>数据多样化存储</h3><p>一个网站中，数据库和缓存只是一种基本的存储手段，除了这些，随着网站架构的发展其他各种形式的存储结构相继涌现：</p>
+<p><img src="/blog/./assets/image-xz83il0ner45c12p9e.PNG" srcset="/blog/img/loading.gif" lazyload alt="数据多样化存储"></p>
+<p>2006-2007，淘宝V2.2，分布式存储TFS，分布式缓存Tair，V3.0 加入 nosql Cassandra，搜索引擎<br>升级。<br>数据库全文检索 <em>→</em> 搜索引擎、本地上传 <em>+nfs→</em> 分布式文件系统的演进。</p>
+<h4 id="分布式文件"><a href="#分布式文件" class="headerlink" title="分布式文件"></a>分布式文件</h4><p>商品图片，上传的文件等</p>
+<ul>
+<li><p>hdfs：大数据下的分布式存储</p>
+</li>
+<li><p>fastdfs</p>
+</li>
+<li><p>cephFs</p>
+</li>
+</ul>
+<h4 id="nosql"><a href="#nosql" class="headerlink" title="nosql"></a>nosql</h4><ul>
+<li><p>redis</p>
+</li>
+<li><p>mongodb</p>
+</li>
+<li><p>hbase</p>
+</li>
+<li><p>tidb</p>
+</li>
+</ul>
+<h5 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h5><ul>
+<li>搜索引擎<ul>
+<li>lucene</li>
+<li>solr</li>
+<li>elasticsearch</li>
+</ul>
+</li>
+</ul>
+<h3 id="架构特点"><a href="#架构特点" class="headerlink" title="架构特点"></a>架构特点</h3><ul>
+<li>开发框架支持：存储的数据多样化，要求开发框架架构层面要提供多样化的支撑，并确保访问易用性</li>
+<li>数据运维：多种数据服务器对运维的要求提升，机器的数据维护与灾备工作量加大</li>
+<li>数据安全：多种数据存储的权限，授权与访问隔离需要注意</li>
+</ul>
+<h2 id="应用架构"><a href="#应用架构" class="headerlink" title="应用架构"></a>应用架构</h2><h3 id="单机调优"><a href="#单机调优" class="headerlink" title="单机调优"></a>单机调优</h3><p>早年间的项目大多采用mvc开发。</p>
+<p><img src="/blog/./assets/image-jnhbhe6x4vrgnqmnl6.PNG" srcset="/blog/img/loading.gif" lazyload alt="单体架构"></p>
+<h4 id="特点-4"><a href="#特点-4" class="headerlink" title="特点"></a>特点</h4><p>每个项目成一个mvc结构，部署在应用服务器上。（tomcat、jboss、websphere，weblogic）。<br>随着业务扩张，需求迭代，项目变得越来越大，一个war包动辄几百兆。<br>崇尚调优，jvm单节点调优甚至接近于强迫症的地步。</p>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><p>早年间的Apache+tomcat，后被nginx几乎一统江山。（前后端开发模式的演进： <em>mvc</em> 页面嵌套 <em>→</em> 接口<br>化）</p>
+<p><img src="/blog/./assets/image-c0v6c1qjdkf8e0h7fv.PNG" srcset="/blog/img/loading.gif" lazyload alt="动静分离"></p>
+<h4 id="方案-5"><a href="#方案-5" class="headerlink" title="方案"></a>方案</h4><p>静态响应：tomcat对静态文件响应一般，提取静态文件，直接由nginx响应<br>动态代理：后端api通过代理转发给tomcat应用机器</p>
+<h4 id="特点-5"><a href="#特点-5" class="headerlink" title="特点"></a>特点</h4><p>开发层面调整：项目结构要同步调整，由原来的一体化mvc转换为后端api+前端形式。<br>前后协调：前后端的分工变得更明确，互相并行开发，独立部署，但也带来了接口协调与约定等沟通问<br>题<br>跨域问题：后段与前端如果域名不同，可能存在跨域问题（head头，jsonp等手段可以解决）。</p>
+<h3 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h3><p>单纯的动静分离只解决了自己服务的项目结构，跨项目接口调用时，必须经过rest请求，不利于服务之<br>间的交互。</p>
+<p><img src="/blog/./assets/image-hcji5g9jyl56vsoqry.PNG" srcset="/blog/img/loading.gif" lazyload alt="分布式架构">淘宝V3.0，HSF出现，服务化导向，架构师忙于SOA和系统关系的梳理。</p>
+<h4 id="方案-6"><a href="#方案-6" class="headerlink" title="方案"></a>方案</h4><ul>
+<li>公共服务：重复开发的基础服务提取出来，形成服务中心，避免重复造轮子，降低成本，架构团队出现。</li>
+<li>独立性：各自服务独立部署升级，粒度更细，低耦合，高内聚。</li>
+<li>SOA理念诞生：服务治理的范畴，重在服务之间的拆分与统一接口。</li>
+</ul>
+<h4 id="技术手段"><a href="#技术手段" class="headerlink" title="技术手段"></a>技术手段</h4><ul>
+<li><p>异步化：</p>
+<ul>
+<li>rabbitmq </li>
+<li>rocketmq</li>
+<li>kafka</li>
+</ul>
+</li>
+<li><p>RPC：</p>
+<ul>
+<li>dubbo</li>
+</ul>
+</li>
+</ul>
+<h4 id="特点-6"><a href="#特点-6" class="headerlink" title="特点"></a>特点</h4><ul>
+<li><p>界限把控：服务的粒度、拆分和公共服务提炼需要架构师的全局把控。设计不好容易引发混乱。</p>
+</li>
+<li><p>部署升级：服务数量增多，人工部署变的不现实，必须借助自动化运维。</p>
+</li>
+<li><p>服务可用性：抽调的微服务因需要被多个上层业务共享，可用性等级变高，一旦down机就是灾难。</p>
+</li>
+<li><p>熔断和限流：做好服务熔断和限流，提防服务单点瓶颈造成整个系统瘫痪。短信提醒失败不要影响下单。</p>
+</li>
+</ul>
+<h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><p><img src="/blog/./assets/image-yht298c0fmknupdcuw.PNG" srcset="/blog/img/loading.gif" lazyload alt="微服务架构"></p>
+<h4 id="方案-7"><a href="#方案-7" class="headerlink" title="方案"></a>方案</h4><ul>
+<li>微服务是基于SOA思想，将系统粒度进一步细化而诞生的一种手段</li>
+<li>中台化得以实现，各个中心以及前端业务拆解为多个小的服务单元。</li>
+</ul>
+<h4 id="技术手段-1"><a href="#技术手段-1" class="headerlink" title="技术手段"></a>技术手段</h4><p>微服务经历了从1.0（cloud）到2.0的演化（service mesh），目前企业中主流的解决方案依然是cloud<br>全家桶springcloud。</p>
+<h4 id="特点-7"><a href="#特点-7" class="headerlink" title="特点"></a>特点</h4><p>-<br>  服务拆分：粒度并非越小越好。太小会带来部署维护等一系列成本的上升。</p>
+<ul>
+<li>接口约束：系统增多，各个服务接口的规范化日益重要，要求有统一的服务接口规范，推动企业消息总线的建设</li>
+<li>权限约束：接口不是任意想调就可以调的，做好权限控制，借助oauth2等手段，实现服务之间的权限认证。</li>
+</ul>
+<h2 id="部署架构"><a href="#部署架构" class="headerlink" title="部署架构"></a>部署架构</h2><h3 id="单机器"><a href="#单机器" class="headerlink" title="单机器"></a>单机器</h3><p>小型网站ALL IN ONE。</p>
+<p><img src="/blog/./assets/image-jnhbhe6x4vrgnqmnl6.PNG" srcset="/blog/img/loading.gif" lazyload alt="单体架构"></p>
+<h4 id="方案-8"><a href="#方案-8" class="headerlink" title="方案"></a>方案</h4><ul>
+<li>单台机器的性能很快达到上限，就是所说的资源不足了</li>
+<li>然后开始提升配置，推动高配机器的发展，成本高昂</li>
+</ul>
+<h4 id="特点-8"><a href="#特点-8" class="headerlink" title="特点"></a>特点</h4><ul>
+<li><p>部署简单：采用web包部署与发布，db等资源同台机器连接，简单易操作。</p>
+</li>
+<li><p>资源争夺：在业务发展的初始阶段尚可支撑，随着访问量的上升，单机性能很快会成为系统瓶颈。</p>
+</li>
+</ul>
+<h3 id="角色划分"><a href="#角色划分" class="headerlink" title="角色划分"></a>角色划分</h3><p>稍微大一点的系统，把数据库、缓存、消息等中间件剥离出去，单独机器来部署。</p>
+<p><img src="/blog/./assets/image-1cfqlhsb488utrhf39.PNG" srcset="/blog/img/loading.gif" lazyload alt="中间件分离"></p>
+<h4 id="方案-9"><a href="#方案-9" class="headerlink" title="方案"></a>方案</h4><ul>
+<li><p>多台机器：tomcat与mysql各自独占机器资源。</p>
+</li>
+<li><p>针对性扩容：tomcat应用机更注重cpu的运算和内存，mysql更注重io与磁盘性能，针对各自情况扩容。</p>
+</li>
+</ul>
+<h4 id="特点-9"><a href="#特点-9" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>数据维护：可以抽出单独的dba来维护数据库服务器。</li>
+<li>数据安全：需要跨机器访问数据库，链接密码需要注意防范泄漏。</li>
+</ul>
+<h3 id="应用集群"><a href="#应用集群" class="headerlink" title="应用集群"></a>应用集群</h3><p>2004-2005，淘宝V2.0，EJB为核心。V2.1架构下，引入spring框架走向轻量化和集群</p>
+<p><img src="/blog/./assets/image-f1tb62rl5y72y1hntx.PNG" srcset="/blog/img/loading.gif" lazyload alt="集群部署"></p>
+<h4 id="方案-10"><a href="#方案-10" class="headerlink" title="方案"></a>方案</h4><ul>
+<li><p>apache：早期负载均衡方案，性能一般</p>
+</li>
+<li><p>nginx： 7 层代理，性能强悍，配置简洁，当前不二之选</p>
+</li>
+<li><p>haproxy：性能同样可靠，可做 7 层或 4 层代理。</p>
+</li>
+<li><p>lvs： 4 层代理，性能最强，linux集成，配置麻烦</p>
+</li>
+<li><p>f5： 4 层，硬件负载，财大气粗的不二选择</p>
+</li>
+</ul>
+<h4 id="特点-10"><a href="#特点-10" class="headerlink" title="特点"></a>特点</h4><ul>
+<li><p>session保持：集群环境下，用户登陆需要分布式session做支撑。</p>
+</li>
+<li><p>分布式协同：分布式环境下对资源的加锁要超出线程锁的范畴，上升为分布式锁。</p>
+</li>
+<li><p>调度问题：调度程序不能多台部署，容易跑重复，除非使用分布式调度，如elastic-job。</p>
+</li>
+<li><p>机器状态管理：多台应用机的状态检测与替换需要做到及时性，一般niginx层做故障转移。</p>
+</li>
+<li><p>服务升级：滚动升级成为可能，灰度发布。</p>
+</li>
+<li><p>日志管理：日志文件分散在各个机器，促进集中式日志平台的产生。</p>
+</li>
+</ul>
+<h3 id="多层代理"><a href="#多层代理" class="headerlink" title="多层代理"></a>多层代理</h3><p><img src="/blog/./assets/image-187yh63bfltv2irxqy.PNG" srcset="/blog/img/loading.gif" lazyload alt="多层代理"></p>
+<h4 id="方案-11"><a href="#方案-11" class="headerlink" title="方案"></a>方案</h4><p>机器规模进一步加大，动静态均有多个nginx负载，入口统一交给lvs负载。多层代理形成。</p>
+<h4 id="特点-11"><a href="#特点-11" class="headerlink" title="特点"></a>特点</h4><p>机房受限：lvs依然是单一节点，即使keepalived做到高可用，流量仍然需要在唯一入口进入。</p>
+<h3 id="异地访问"><a href="#异地访问" class="headerlink" title="异地访问"></a>异地访问</h3><p>淘宝V2.1时代 ， 使用自己的TaobaoCDN。</p>
+<p>将相同的系统部署多份，分散到异地多个机房，或者电信、移动等多个网络中。</p>
+<p>不同地点，不同网络接入的用户，有了不同的访问入口和选择。</p>
+<p><img src="/blog/./assets/image-23zcrj50e3dlibkhle.PNG" srcset="/blog/img/loading.gif" lazyload alt="异地多活"></p>
+<h4 id="方案-12"><a href="#方案-12" class="headerlink" title="方案"></a>方案</h4><ul>
+<li><p>dns轮询：通过配置多个ip将服务部署到多个机房，通过dns的策略轮询调用，可以实现机房层面的扩容。</p>
+</li>
+<li><p>CDN：就近原则，使用户获得就近的机房访问相关资源，自己投资太大，购买他方需要付费。</p>
+</li>
+</ul>
+<h4 id="特点-12"><a href="#特点-12" class="headerlink" title="特点"></a>特点</h4><p>基本解决了机器部署的扩容问题，随着业务的发展，扩容与收缩变得困难，促进资源调度层面的技术发<br>展。</p>
+<h3 id="云平台"><a href="#云平台" class="headerlink" title="云平台"></a>云平台</h3><p>针对中台化的建设及微服务数量的飙升，部署和运维支撑同步进行着变革。面临微服务的快速部署，资源的弹性伸缩等挑战，容器化与云被推进。</p>
+<p>案例：成百上千的服务数量庞大、大促期间某些微服务的临时扩容。</p>
+<p><img src="/blog/./assets/image-bf1c8izqnxc2o83yww.PNG" srcset="/blog/img/loading.gif" lazyload alt="云平台"></p>
+<h4 id="方案-13"><a href="#方案-13" class="headerlink" title="方案"></a>方案</h4><ul>
+<li><p>虚拟化：vm方案，Openstack，Vmware，VirtualBox</p>
+</li>
+<li><p>容器化：docker</p>
+</li>
+<li><p>编排：swarm，k8s，k3s</p>
+</li>
+<li><p>云化：容器化解决了资源的快速伸缩，但仍需要企业自备大量机器资源。推动私有云到企业云进化。</p>
+</li>
+</ul>
+<h4 id="特点-13"><a href="#特点-13" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>资源预估：注意资源的回收，降低资源闲置和浪费，例如大促结束后要及时回收。</li>
+<li>运维要求：需要运维层面的高度支撑，门槛比较高。</li>
+<li>预估风险：云瘫痪的故障造成的损失不可估量。</li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/" class="category-chain-item">工作</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/%E6%9E%B6%E6%9E%84%E6%80%9D%E6%83%B3/" class="category-chain-item">架构思想</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84/" class="print-no-link">#业务架构</a>
+      
+        <a href="/blog/tags/%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84/" class="print-no-link">#数据架构</a>
+      
+        <a href="/blog/tags/%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84/" class="print-no-link">#应用架构</a>
+      
+        <a href="/blog/tags/%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84/" class="print-no-link">#部署架构</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>互联网架构发展与演变过程</div>
+      <div>https://maojun.xyz/blog/2020/03/互联网架构发展与演变过程.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年3月31日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html" title="大型电商系统的搜索链路业务架构">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">大型电商系统的搜索链路业务架构</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/03/vifm%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%85%A5%E9%97%A8.html" title="Vifm命令行文件管理器入门">
+                        <span class="hidden-mobile">Vifm命令行文件管理器入门</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
