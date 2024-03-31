@@ -1,0 +1,1682 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="ms-settings: URI 方案参考以下部分描述了用于打开“设置”应用的不同页面的各类 ms-settings URI：  帐户 应用 控制中心 Cortana 设备 轻松访问 附加信息 家庭组 游戏 混合现实 网络和 Internet 个性化设置 电话 隐私 搜索 Surface Hub 系统 时间和语言 更新和安全 用户帐户  帐户   “设置”页面 URI    访问工作单位或学校 m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows设置操作URI指令">
+<meta property="og:url" content="https://maojun.xyz/blog/2024/03/Windows%E8%AE%BE%E7%BD%AE%E6%93%8D%E4%BD%9CURI%E6%8C%87%E4%BB%A4.html">
+<meta property="og:site_name" content="毛俊的博客">
+<meta property="og:description" content="ms-settings: URI 方案参考以下部分描述了用于打开“设置”应用的不同页面的各类 ms-settings URI：  帐户 应用 控制中心 Cortana 设备 轻松访问 附加信息 家庭组 游戏 混合现实 网络和 Internet 个性化设置 电话 隐私 搜索 Surface Hub 系统 时间和语言 更新和安全 用户帐户  帐户   “设置”页面 URI    访问工作单位或学校 m">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-31T19:45:42.000Z">
+<meta property="article:modified_time" content="2024-03-31T19:45:42.000Z">
+<meta property="article:author" content="毛 俊">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Windows设置操作URI指令 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":6},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Windows设置操作URI指令"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-03-31 19:45" pubdate>
+          2024年3月31日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          23 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Windows设置操作URI指令</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="ms-settings-URI-方案参考"><a href="#ms-settings-URI-方案参考" class="headerlink" title="ms-settings: URI 方案参考"></a>ms-settings: URI 方案参考</h2><p>以下部分描述了用于打开“设置”应用的不同页面的各类 ms-settings URI：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#accounts">帐户</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#apps">应用</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#control-center">控制中心</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#cortana">Cortana</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#devices">设备</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#ease-of-access">轻松访问</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#extras">附加信息</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#family-group">家庭组</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#gaming">游戏</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#mixed-reality">混合现实</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#network-and-internet">网络和 Internet</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#personalization">个性化设置</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#phone">电话</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#privacy">隐私</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#search">搜索</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#surface-hub">Surface Hub</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#system">系统</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#time-and-language">时间和语言</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#update-and-security">更新和安全</a></li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app#user-accounts">用户帐户</a></li>
+</ul>
+<h3 id="帐户"><a href="#帐户" class="headerlink" title="帐户"></a>帐户</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">访问工作单位或学校</td>
+<td align="left">ms-settings:workplace</td>
+</tr>
+<tr>
+<td align="left">电子邮件和应用帐户</td>
+<td align="left">ms-settings:emailandaccounts</td>
+</tr>
+<tr>
+<td align="left">家人和其他人</td>
+<td align="left">ms-settings:otherusers</td>
+</tr>
+<tr>
+<td align="left">设置展台</td>
+<td align="left">ms-settings:assignedaccess</td>
+</tr>
+<tr>
+<td align="left">登录选项</td>
+<td align="left">ms-settings:signinoptions ms-settings:signinoptions-dynamiclock</td>
+</tr>
+<tr>
+<td align="left">同步你的设置</td>
+<td align="left">ms-settings:sync ms-settings:backup（已在 Windows 11 中弃用的备份页）</td>
+</tr>
+<tr>
+<td align="left">Windows Hello 设置</td>
+<td align="left">ms-settings:signinoptions-launchfaceenrollment ms-settings:signinoptions-launchfingerprintenrollment</td>
+</tr>
+<tr>
+<td align="left">你的信息</td>
+<td align="left">ms-settings:yourinfo</td>
+</tr>
+</tbody></table>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">应用和功能</td>
+<td align="left">ms-settings:appsfeatures</td>
+</tr>
+<tr>
+<td align="left">应用功能</td>
+<td align="left">ms-settings:appsfeatures-app（应用的重置、管理加载项和可下载内容等）  若要使用 URI 访问此页面，请使用 ms-settings:appsfeatures-app URI 并传递应用的“包系列名称”的可选参数。</td>
+</tr>
+<tr>
+<td align="left">网站应用</td>
+<td align="left">ms-settings:appsforwebsites</td>
+</tr>
+<tr>
+<td align="left">默认应用</td>
+<td align="left">ms-settings:defaultapps（<strong>在 Windows 11 版本 21H2（具有 2023-04 累积更新）或 22H2（具有 2023-04 累积更新）或更高版本中引入的行为。</strong>） 使用应用的 URI 转义名称以下列格式追加查询字符串参数，以直接启动该应用的默认设置页：  - registeredAppMachine&#x3D;&lt;应用的 URI 转义的每台计算机安装名&gt; - registeredAppUser&#x3D;&lt;应用的 URI 转义的每个用户安装名&gt; - registeredAUMID&#x3D;&lt;URI 转义的应用程序用户模型 ID&gt;  有关详细信息，请参阅<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-default-apps-settings">启动默认应用设置页</a>。</td>
+</tr>
+<tr>
+<td align="left">默认浏览器设置</td>
+<td align="left">ms-settings:defaultbrowsersettings（<strong>在 Windows 11 中弃用</strong>）</td>
+</tr>
+<tr>
+<td align="left">管理可选功能</td>
+<td align="left">ms-settings:optionalfeatures</td>
+</tr>
+<tr>
+<td align="left">脱机地图</td>
+<td align="left">ms-settings:maps ms-settings:maps-downloadmaps（下载地图）</td>
+</tr>
+<tr>
+<td align="left">启动应用</td>
+<td align="left">ms-settings:startupapps</td>
+</tr>
+<tr>
+<td align="left">视频播放</td>
+<td align="left">ms-settings:videoplayback</td>
+</tr>
+</tbody></table>
+<h3 id="控制中心"><a href="#控制中心" class="headerlink" title="控制中心"></a>控制中心</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">控制中心</td>
+<td align="left">ms-settings:controlcenter</td>
+</tr>
+</tbody></table>
+<h3 id="Cortana"><a href="#Cortana" class="headerlink" title="Cortana"></a>Cortana</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">跨越我的设备使用 Cortana</td>
+<td align="left">ms-settings:cortana-notifications</td>
+</tr>
+<tr>
+<td align="left">更多详细信息</td>
+<td align="left">ms-settings:cortana-moredetails</td>
+</tr>
+<tr>
+<td align="left">权限和历史记录</td>
+<td align="left">ms-settings:cortana-permissions</td>
+</tr>
+<tr>
+<td align="left">搜索 Windows</td>
+<td align="left">ms-settings:cortana-windowssearch</td>
+</tr>
+<tr>
+<td align="left">与 Cortana 交谈</td>
+<td align="left">ms-settings:cortana-language ms-settings:cortana ms-settings:cortana-talktocortana</td>
+</tr>
+</tbody></table>
+<p> 备注</p>
+<p>将电脑设置为 Cortana 当前不可用或 Cortana 已禁用的区域时，桌面上的此“设置”部分称为“搜索”。 在这种情况下，不会列出特定于 Cortana 的页面（“跨设备的 Cortana”和“与 Cortana 交谈”）。</p>
+<h3 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">自动播放</td>
+<td align="left">ms-settings:autoplay</td>
+</tr>
+<tr>
+<td align="left">Bluetooth</td>
+<td align="left">ms-settings:bluetooth</td>
+</tr>
+<tr>
+<td align="left">连接的设备数</td>
+<td align="left">ms-settings:connecteddevices</td>
+</tr>
+<tr>
+<td align="left">默认相机</td>
+<td align="left">ms-settings:camera（已在 Windows 10 版本 1809 及更高版本中弃用的行为）</td>
+</tr>
+<tr>
+<td align="left">相机设置</td>
+<td align="left">ms-settings:camera（已在 Windows 11 版本 22000 及更高版本中引入的行为）将查询字符串参数 <code>cameraId</code> 集追加到相机设备的 URI 转义符号链接名称，以直接启动该相机的设置。 有关详细信息，请参阅<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/audio-video-camera/launch-camera-settings">启动相机设置页</a>。</td>
+</tr>
+<tr>
+<td align="left">鼠标和触摸板</td>
+<td align="left">ms-settings:mousetouchpad（仅在具有触控板的设备上可用的触控板设置）</td>
+</tr>
+<tr>
+<td align="left">触控笔和 Windows Ink</td>
+<td align="left">ms-settings:pen</td>
+</tr>
+<tr>
+<td align="left">打印机和扫描仪</td>
+<td align="left">ms-settings:printers</td>
+</tr>
+<tr>
+<td align="left">触控</td>
+<td align="left">ms-settings:devices-touch</td>
+</tr>
+<tr>
+<td align="left">触摸板</td>
+<td align="left">ms-settings:devices-touchpad（仅当存在触控板硬件时才可用）</td>
+</tr>
+<tr>
+<td align="left">文本建议</td>
+<td align="left">ms-settings:devicestyping-hwkbtextsuggestions</td>
+</tr>
+<tr>
+<td align="left">Typing</td>
+<td align="left">ms-settings:typing</td>
+</tr>
+<tr>
+<td align="left">USB</td>
+<td align="left">ms-settings:usb</td>
+</tr>
+<tr>
+<td align="left">滚轮</td>
+<td align="left">ms-settings:wheel（仅当拨号配对时可用）</td>
+</tr>
+<tr>
+<td align="left">你的手机</td>
+<td align="left">ms-settings:mobile-devices</td>
+</tr>
+</tbody></table>
+<h3 id="轻松访问"><a href="#轻松访问" class="headerlink" title="轻松访问"></a>轻松访问</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">音频</td>
+<td align="left">ms-settings:easeofaccess-audio</td>
+</tr>
+<tr>
+<td align="left">隐藏式字幕</td>
+<td align="left">ms-settings:easeofaccess-closedcaptioning</td>
+</tr>
+<tr>
+<td align="left">颜色筛选器</td>
+<td align="left">ms-settings:easeofaccess-colorfilter ms-settings:easeofaccess-colorfilter-adaptivecolorlink ms-settings:easeofaccess-colorfilter-bluelightlink</td>
+</tr>
+<tr>
+<td align="left">显示</td>
+<td align="left">ms-settings:easeofaccess-display</td>
+</tr>
+<tr>
+<td align="left">眼球控制</td>
+<td align="left">ms-settings:easeofaccess-eyecontrol</td>
+</tr>
+<tr>
+<td align="left">字体</td>
+<td align="left">ms-settings:fonts</td>
+</tr>
+<tr>
+<td align="left">高对比度</td>
+<td align="left">ms-settings:easeofaccess-highcontrast</td>
+</tr>
+<tr>
+<td align="left">键盘</td>
+<td align="left">ms-settings:easeofaccess-keyboard</td>
+</tr>
+<tr>
+<td align="left">放大镜</td>
+<td align="left">ms-settings:easeofaccess-magnifier</td>
+</tr>
+<tr>
+<td align="left">鼠标</td>
+<td align="left">ms-settings:easeofaccess-mouse</td>
+</tr>
+<tr>
+<td align="left">鼠标指针和触控</td>
+<td align="left">ms-settings:easeofaccess-mousepointer</td>
+</tr>
+<tr>
+<td align="left">讲述人</td>
+<td align="left">ms-settings:easeofaccess-narrator ms-settings:easeofaccess-narrator-isautostartenabled</td>
+</tr>
+<tr>
+<td align="left">语音</td>
+<td align="left">ms-settings:easeofaccess-speechrecognition</td>
+</tr>
+<tr>
+<td align="left">文本光标</td>
+<td align="left">ms-settings:easeofaccess-cursor</td>
+</tr>
+<tr>
+<td align="left">视觉效果</td>
+<td align="left">ms-settings:easeofaccess-visualeffects</td>
+</tr>
+</tbody></table>
+<h3 id="附加信息"><a href="#附加信息" class="headerlink" title="附加信息"></a>附加信息</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">附加信息</td>
+<td align="left">ms-settings:extras（仅在通过某种方式（例如第三方）安装了“设置应用”后可用）</td>
+</tr>
+</tbody></table>
+<h3 id="家庭组"><a href="#家庭组" class="headerlink" title="家庭组"></a>家庭组</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">家庭组</td>
+<td align="left">ms-settings:family-group</td>
+</tr>
+</tbody></table>
+<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">游戏栏</td>
+<td align="left">ms-settings:gaming-gamebar</td>
+</tr>
+<tr>
+<td align="left">游戏 DVR</td>
+<td align="left">ms-settings:gaming-gamedvr</td>
+</tr>
+<tr>
+<td align="left">游戏模式</td>
+<td align="left">ms-settings:gaming-gamemode</td>
+</tr>
+<tr>
+<td align="left">全屏玩游戏</td>
+<td align="left">ms-settings:quietmomentsgame</td>
+</tr>
+<tr>
+<td align="left">TruePlay</td>
+<td align="left">ms-settings:gaming-trueplay（从 Windows 10 版本 1809（10.0，内部版本 17763）起，Windows 中会删除此功能）</td>
+</tr>
+</tbody></table>
+<h3 id="混合现实"><a href="#混合现实" class="headerlink" title="混合现实"></a>混合现实</h3><p>只有在已安装混合现实门户应用的情况下，这些设置才可用。</p>
+<table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">音频和语音</td>
+<td align="left">ms-settings:holographic-audio</td>
+</tr>
+<tr>
+<td align="left">环境</td>
+<td align="left">ms-settings:privacy-holographic-environment</td>
+</tr>
+<tr>
+<td align="left">头戴显示设备显示</td>
+<td align="left">ms-settings:holographic-headset</td>
+</tr>
+<tr>
+<td align="left">卸载</td>
+<td align="left">ms-settings:holographic-management</td>
+</tr>
+<tr>
+<td align="left">启动和桌面</td>
+<td align="left">ms-settings:holographic-startupandesktop</td>
+</tr>
+</tbody></table>
+<h3 id="网络和-Internet"><a href="#网络和-Internet" class="headerlink" title="网络和 Internet"></a>网络和 Internet</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">网络和 Internet</td>
+<td align="left">ms-settings:network-status</td>
+</tr>
+<tr>
+<td align="left">高级设置</td>
+<td align="left">ms-settings:network-advancedsettings</td>
+</tr>
+<tr>
+<td align="left">飞行模式</td>
+<td align="left">ms-settings:network-airplanemode ms-settings:proximity</td>
+</tr>
+<tr>
+<td align="left">手机网络和 SIM 卡</td>
+<td align="left">ms-settings:network-cellular</td>
+</tr>
+<tr>
+<td align="left">拨号</td>
+<td align="left">ms-settings:network-dialup</td>
+</tr>
+<tr>
+<td align="left">DirectAccess</td>
+<td align="left">ms-settings:network-directaccess（仅在启用 DirectAccess 时才可用）</td>
+</tr>
+<tr>
+<td align="left">以太网</td>
+<td align="left">ms-settings:network-ethernet</td>
+</tr>
+<tr>
+<td align="left">管理已知网络</td>
+<td align="left">ms-settings:network-wifisettings</td>
+</tr>
+<tr>
+<td align="left">移动热点</td>
+<td align="left">ms-settings:network-mobilehotspot</td>
+</tr>
+<tr>
+<td align="left">代理</td>
+<td align="left">ms-settings:network-proxy</td>
+</tr>
+<tr>
+<td align="left">VPN</td>
+<td align="left">ms-settings:network-vpn</td>
+</tr>
+<tr>
+<td align="left">WLAN</td>
+<td align="left">ms-settings:network-wifi（仅当设备具有 wifi 适配器时才可用）</td>
+</tr>
+<tr>
+<td align="left">Wi-Fi 预配</td>
+<td align="left">ms-settings:wifi-provisioning</td>
+</tr>
+</tbody></table>
+<h3 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">背景</td>
+<td align="left">ms-settings:personalization-background</td>
+</tr>
+<tr>
+<td align="left">选择哪些文件夹显示于“开始”屏幕</td>
+<td align="left">ms-settings:personalization-start-places</td>
+</tr>
+<tr>
+<td align="left">颜色</td>
+<td align="left">ms-settings:personalization-colors ms-settings:colors</td>
+</tr>
+<tr>
+<td align="left">概览</td>
+<td align="left">ms-settings:personalization-glance（已在 Windows 10 版本 1809 及更高版本中弃用）</td>
+</tr>
+<tr>
+<td align="left">锁屏界面</td>
+<td align="left">ms-settings:lockscreen</td>
+</tr>
+<tr>
+<td align="left">导航栏</td>
+<td align="left">ms-settings:personalization-navbar（已在 Windows 10 版本 1809 及更高版本中弃用）</td>
+</tr>
+<tr>
+<td align="left">个性化（类别）</td>
+<td align="left">ms-settings:personalization</td>
+</tr>
+<tr>
+<td align="left">开始</td>
+<td align="left">ms-settings:personalization-start</td>
+</tr>
+<tr>
+<td align="left">任务栏</td>
+<td align="left">ms-settings:taskbar</td>
+</tr>
+<tr>
+<td align="left">触摸键盘</td>
+<td align="left">ms-settings:personalization-touchkeyboard</td>
+</tr>
+<tr>
+<td align="left">主题</td>
+<td align="left">ms-settings:themes</td>
+</tr>
+</tbody></table>
+<h3 id="电话"><a href="#电话" class="headerlink" title="电话"></a>电话</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">你的手机</td>
+<td align="left">ms-settings:mobile-devices ms-settings:mobile-devices-addphone ms-settings:mobile-devices-addphone-direct（打开“你的手机”应用）</td>
+</tr>
+<tr>
+<td align="left">设备使用情况</td>
+<td align="left">ms-settings:deviceusage</td>
+</tr>
+</tbody></table>
+<h3 id="隐私"><a href="#隐私" class="headerlink" title="隐私"></a>隐私</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">附件应用</td>
+<td align="left">ms-settings:privacy-accessoryapps（已在 Windows 10 版本 1809 及更高版本中弃用）</td>
+</tr>
+<tr>
+<td align="left">帐户信息</td>
+<td align="left">ms-settings:privacy-accountinfo</td>
+</tr>
+<tr>
+<td align="left">活动历史记录</td>
+<td align="left">ms-settings:privacy-activityhistory</td>
+</tr>
+<tr>
+<td align="left">广告 ID</td>
+<td align="left">ms-settings:privacy-advertisingid（已在 Windows 10 版本 1809 及更高版本中弃用）</td>
+</tr>
+<tr>
+<td align="left">应用诊断</td>
+<td align="left">ms-settings:privacy-appdiagnostics</td>
+</tr>
+<tr>
+<td align="left">自动文件下载</td>
+<td align="left">ms-settings:privacy-automaticfiledownloads</td>
+</tr>
+<tr>
+<td align="left">后台应用</td>
+<td align="left">ms-settings:privacy-backgroundapps（已在 Windows 11 21H2 及更高版本中弃用）  <strong>注意：</strong>在 Windows 11 中，后台应用权限是单独访问的。 若要查看权限，请转到“应用”-&gt;“已安装的应用”，然后在新式应用中选择“…”，然后选择“高级选项”。 新式应用会显示高级页面，除非设置了组策略或设置了用户的全局切换值（Windows 10 中已弃用的设置），否则将显示“后台应用权限”部分。 若要使用 URI 访问此页面，请使用 <code>ms-settings:appsfeatures-app</code> URI 并传递应用的包系列名称的可选参数。</td>
+</tr>
+<tr>
+<td align="left">后台空间感知</td>
+<td align="left">ms-settings:privacy-backgroundspatialperception</td>
+</tr>
+<tr>
+<td align="left">日历</td>
+<td align="left">ms-settings:privacy-calendar</td>
+</tr>
+<tr>
+<td align="left">联络历史记录</td>
+<td align="left">ms-settings:privacy-callhistory</td>
+</tr>
+<tr>
+<td align="left">Camera</td>
+<td align="left">ms-settings:privacy-webcam</td>
+</tr>
+<tr>
+<td align="left">联系人</td>
+<td align="left">ms-settings:privacy-contacts</td>
+</tr>
+<tr>
+<td align="left">文档</td>
+<td align="left">ms-settings:privacy-documents</td>
+</tr>
+<tr>
+<td align="left">“下载”文件夹</td>
+<td align="left">ms-settings:privacy-downloadsfolder</td>
+</tr>
+<tr>
+<td align="left">电子邮件</td>
+<td align="left">ms-settings:privacy-email</td>
+</tr>
+<tr>
+<td align="left">眼动追踪仪</td>
+<td align="left">ms-settings:privacy-eyetracker（需要眼动跟踪器硬件）</td>
+</tr>
+<tr>
+<td align="left">反馈和诊断</td>
+<td align="left">ms-settings:privacy-feedback</td>
+</tr>
+<tr>
+<td align="left">文件系统</td>
+<td align="left">ms-settings:privacy-broadfilesystemaccess</td>
+</tr>
+<tr>
+<td align="left">常规</td>
+<td align="left">ms-settings:privacy 或 ms-settings:privacy-general</td>
+</tr>
+<tr>
+<td align="left">图形</td>
+<td align="left">ms-settings:privacy-graphicscaptureprogrammatic ms-settings:privacy-graphicscapturewithoutborder</td>
+</tr>
+<tr>
+<td align="left">墨迹书写和键入</td>
+<td align="left">ms-settings:privacy-speechtyping</td>
+</tr>
+<tr>
+<td align="left">位置</td>
+<td align="left">ms-settings:privacy-location</td>
+</tr>
+<tr>
+<td align="left">Messaging</td>
+<td align="left">ms-settings:privacy-messaging</td>
+</tr>
+<tr>
+<td align="left">Microphone</td>
+<td align="left">ms-settings:privacy-microphone</td>
+</tr>
+<tr>
+<td align="left">动态效果</td>
+<td align="left">ms-settings:privacy-motion</td>
+</tr>
+<tr>
+<td align="left">音乐库</td>
+<td align="left">ms-settings:privacy-musiclibrary</td>
+</tr>
+<tr>
+<td align="left">通知</td>
+<td align="left">ms-settings:privacy-notifications</td>
+</tr>
+<tr>
+<td align="left">其他设备</td>
+<td align="left">ms-settings:privacy-customdevices</td>
+</tr>
+<tr>
+<td align="left">电话联络</td>
+<td align="left">ms-settings:privacy-phonecalls</td>
+</tr>
+<tr>
+<td align="left">图片</td>
+<td align="left">ms-settings:privacy-pictures</td>
+</tr>
+<tr>
+<td align="left">无线电收发器</td>
+<td align="left">ms-settings:privacy-radios</td>
+</tr>
+<tr>
+<td align="left">语音</td>
+<td align="left">ms-settings:privacy-speech</td>
+</tr>
+<tr>
+<td align="left">任务</td>
+<td align="left">ms-settings:privacy-tasks</td>
+</tr>
+<tr>
+<td align="left">视频</td>
+<td align="left">ms-settings:privacy-videos</td>
+</tr>
+<tr>
+<td align="left">语音激活</td>
+<td align="left">ms-settings:privacy-voiceactivation</td>
+</tr>
+</tbody></table>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">搜索</td>
+<td align="left">ms-settings:search</td>
+</tr>
+<tr>
+<td align="left">搜索更多详细信息</td>
+<td align="left">ms-settings:search-moredetails</td>
+</tr>
+<tr>
+<td align="left">搜索权限</td>
+<td align="left">ms-settings:search-permissions</td>
+</tr>
+</tbody></table>
+<h3 id="Surface-Hub"><a href="#Surface-Hub" class="headerlink" title="Surface Hub"></a>Surface Hub</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">帐户</td>
+<td align="left">ms-settings:surfacehub-accounts</td>
+</tr>
+<tr>
+<td align="left">会话清理</td>
+<td align="left">ms-settings:surfacehub-sessioncleanup</td>
+</tr>
+<tr>
+<td align="left">团队会议</td>
+<td align="left">ms-settings:surfacehub-calling</td>
+</tr>
+<tr>
+<td align="left">设备管理团队</td>
+<td align="left">ms-settings:surfacehub-devicemanagenent</td>
+</tr>
+<tr>
+<td align="left">欢迎屏幕</td>
+<td align="left">ms-settings:surfacehub-welcome</td>
+</tr>
+</tbody></table>
+<h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">关于</td>
+<td align="left">ms-settings:about</td>
+</tr>
+<tr>
+<td align="left">高级显示设置</td>
+<td align="left">ms-settings:display-advanced（仅支持高级显示选项的设备可用）</td>
+</tr>
+<tr>
+<td align="left">应用音量和设备首选项</td>
+<td align="left">ms-settings:apps-volume（已在 Windows 10 版本 1903 中添加）</td>
+</tr>
+<tr>
+<td align="left">节电模式</td>
+<td align="left">ms-settings:batterysaver（仅具有电池的设备可用，例如平板电脑）</td>
+</tr>
+<tr>
+<td align="left">节电模式设置</td>
+<td align="left">ms-settings:batterysaver-settings（仅具有电池的设备可用，例如平板电脑）</td>
+</tr>
+<tr>
+<td align="left">电池使用</td>
+<td align="left">ms-settings:batterysaver-usagedetails（仅具有电池的设备可用，例如平板电脑）</td>
+</tr>
+<tr>
+<td align="left">剪贴板</td>
+<td align="left">ms-settings:clipboard</td>
+</tr>
+<tr>
+<td align="left">显示</td>
+<td align="left">ms-settings:display</td>
+</tr>
+<tr>
+<td align="left">默认保存位置</td>
+<td align="left">ms-settings:savelocations</td>
+</tr>
+<tr>
+<td align="left">显示</td>
+<td align="left">ms-settings:screenrotation</td>
+</tr>
+<tr>
+<td align="left">复制我的显示器</td>
+<td align="left">ms-settings:quietmomentspresentation</td>
+</tr>
+<tr>
+<td align="left">在这些小时内</td>
+<td align="left">ms-settings:quietmomentsscheduled</td>
+</tr>
+<tr>
+<td align="left">加密</td>
+<td align="left">ms-settings:deviceencryption</td>
+</tr>
+<tr>
+<td align="left">能源推荐</td>
+<td align="left">ms-settings:energyrecommendations（已在适用于 Windows 11 版本 22H2 内部版本 22624 的 2 月 Moment 更新中添加）</td>
+</tr>
+<tr>
+<td align="left">专注助手</td>
+<td align="left">ms-settings:quiethours</td>
+</tr>
+<tr>
+<td align="left">图形设置</td>
+<td align="left">ms-settings:display-advancedgraphics（仅支持高级图形选项的设备可用）</td>
+</tr>
+<tr>
+<td align="left">图形默认设置</td>
+<td align="left">ms-settings:display-advancedgraphics-default</td>
+</tr>
+<tr>
+<td align="left">多任务</td>
+<td align="left">ms-settings:multitasking ms-settings:multitasking-sgupdate</td>
+</tr>
+<tr>
+<td align="left">夜灯设置</td>
+<td align="left">ms-settings:nightlight</td>
+</tr>
+<tr>
+<td align="left">投影到此电脑</td>
+<td align="left">ms-settings:project</td>
+</tr>
+<tr>
+<td align="left">共享体验</td>
+<td align="left">ms-settings:crossdevice</td>
+</tr>
+<tr>
+<td align="left">平板模式</td>
+<td align="left">ms-settings:tabletmode（已在 Windows 11 中删除）</td>
+</tr>
+<tr>
+<td align="left">任务栏</td>
+<td align="left">ms-settings:taskbar</td>
+</tr>
+<tr>
+<td align="left">通知和操作</td>
+<td align="left">ms-settings:notifications</td>
+</tr>
+<tr>
+<td align="left">远程桌面</td>
+<td align="left">ms-settings:remotedesktop</td>
+</tr>
+<tr>
+<td align="left">电话</td>
+<td align="left">ms-settings:phone（已在 Windows 10 版本 1809 及更高版本中弃用）</td>
+</tr>
+<tr>
+<td align="left">电源和睡眠</td>
+<td align="left">ms-settings:powersleep</td>
+</tr>
+<tr>
+<td align="left">存在感测</td>
+<td align="left">ms-settings:presence（已在适用于 Windows 11 版本 22H2 内部版本 22624 的 5 月 Moment 更新中添加）</td>
+</tr>
+<tr>
+<td align="left">声音</td>
+<td align="left">ms-settings:sound</td>
+</tr>
+<tr>
+<td align="left">声音设备</td>
+<td align="left">ms-settings:sound-devices</td>
+</tr>
+<tr>
+<td align="left">存储</td>
+<td align="left">ms-settings:storagesense</td>
+</tr>
+<tr>
+<td align="left">存储感知</td>
+<td align="left">ms-settings:storagepolicies</td>
+</tr>
+<tr>
+<td align="left">有关存储的建议</td>
+<td align="left">ms-settings:storagerecommendations</td>
+</tr>
+<tr>
+<td align="left">磁盘和卷</td>
+<td align="left">ms-settings:disksandvolumes</td>
+</tr>
+</tbody></table>
+<h3 id="时间和语言"><a href="#时间和语言" class="headerlink" title="时间和语言"></a>时间和语言</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">日期和时间</td>
+<td align="left">ms-settings:dateandtime</td>
+</tr>
+<tr>
+<td align="left">日本 IME 设置</td>
+<td align="left">ms-settings:regionlanguage-jpnime（安装了 Microsoft Japan 输入法编辑器则可用）</td>
+</tr>
+<tr>
+<td align="left">区域</td>
+<td align="left">ms-settings:regionformatting</td>
+</tr>
+<tr>
+<td align="left">语言</td>
+<td align="left">ms-settings:keyboard ms-settings:keyboard-advanced ms-settings:regionlanguage ms-settings:regionlanguage-bpmfime ms-settings:regionlanguage-cangjieime ms-settings:regionlanguage-chsime-wubi-udp ms-settings:regionlanguage-quickime ms-settings:regionlanguage-korime</td>
+</tr>
+<tr>
+<td align="left">拼音 IME 设置</td>
+<td align="left">ms-settings:regionlanguage-chsime-pinyin（在安装了 Microsoft 拼音输入法编辑器的情况下可用） ms-settings:regionlanguage-chsime-pinyin-domainlexicon ms-settings:regionlanguage-chsime-pinyin-keyconfig ms-settings:regionlanguage-chsime-pinyin-udp</td>
+</tr>
+<tr>
+<td align="left">语音</td>
+<td align="left">ms-settings:speech</td>
+</tr>
+<tr>
+<td align="left">五笔 IME 设置</td>
+<td align="left">ms-settings:regionlanguage-chsime-wubi（安装了 Microsoft 五笔输入法编辑器则可用）</td>
+</tr>
+<tr>
+<td align="left">添加显示语言</td>
+<td align="left">ms-settings:regionlanguage-adddisplaylanguage</td>
+</tr>
+<tr>
+<td align="left">语言选项</td>
+<td align="left">ms-settings:regionlanguage-languageoptions</td>
+</tr>
+<tr>
+<td align="left">设置显示语言</td>
+<td align="left">ms-settings:regionlanguage-setdisplaylanguage</td>
+</tr>
+</tbody></table>
+<h3 id="更新和安全"><a href="#更新和安全" class="headerlink" title="更新和安全"></a>更新和安全</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">激活</td>
+<td align="left">ms-settings:activation</td>
+</tr>
+<tr>
+<td align="left">备份</td>
+<td align="left">ms-settings:backup（已在 Windows 11 中删除的页；打开同步）</td>
+</tr>
+<tr>
+<td align="left">传递优化</td>
+<td align="left">ms-settings:delivery-optimization ms-settings:delivery-optimization-activity ms-settings:delivery-optimization-advanced</td>
+</tr>
+<tr>
+<td align="left">查找我的设备</td>
+<td align="left">ms-settings:findmydevice</td>
+</tr>
+<tr>
+<td align="left">面向开发人员</td>
+<td align="left">ms-settings:developers</td>
+</tr>
+<tr>
+<td align="left">恢复</td>
+<td align="left">ms-settings:recovery</td>
+</tr>
+<tr>
+<td align="left">启动安全密钥注册</td>
+<td align="left">ms-settings:signinoptions-launchsecuritykeyenrollment</td>
+</tr>
+<tr>
+<td align="left">疑难解答</td>
+<td align="left">ms-settings:troubleshoot</td>
+</tr>
+<tr>
+<td align="left">Windows 安全性</td>
+<td align="left">ms-settings:windowsdefender</td>
+</tr>
+<tr>
+<td align="left">Windows 预览体验计划</td>
+<td align="left">ms-settings:windowsinsider（仅当用户在 WIP 中注册后才存在） ms-settings:windowsinsider-optin</td>
+</tr>
+<tr>
+<td align="left">Windows 更新</td>
+<td align="left">ms-settings:windowsupdate ms-settings:windowsupdate-action</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-活动小时数</td>
+<td align="left">ms-settings:windowsupdate-activehours</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-高级选项</td>
+<td align="left">ms-settings:windowsupdate-options</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-可选更新</td>
+<td align="left">ms-settings:windowsupdate-optionalupdates</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-重启选项</td>
+<td align="left">ms-settings:windowsupdate-restartoptions</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-按需查找器</td>
+<td align="left">ms-settings:windowsupdate-seekerondemand</td>
+</tr>
+<tr>
+<td align="left">Windows 更新-查看更新历史记录</td>
+<td align="left">ms-settings:windowsupdate-history</td>
+</tr>
+</tbody></table>
+<h3 id="用户帐户"><a href="#用户帐户" class="headerlink" title="用户帐户"></a>用户帐户</h3><table>
+<thead>
+<tr>
+<th align="left">“设置”页面</th>
+<th align="left">URI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">预配</td>
+<td align="left">ms-settings:workplace-provisioning（仅当企业部署了预配程序包时才可用）</td>
+</tr>
+<tr>
+<td align="left">修复令牌</td>
+<td align="left">ms-settings:workplace-repairtoken</td>
+</tr>
+<tr>
+<td align="left">预配</td>
+<td align="left">ms-settings:provisioning（仅当移动设备上企业部署了预配程序包时才可用）</td>
+</tr>
+<tr>
+<td align="left">Windows Anywhere</td>
+<td align="left">ms-settings:windowsanywhere（设备必须支持 Windows Anywhere）</td>
+</tr>
+</tbody></table>
+<p>(完)</p>
+<p><strong>参考</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/uwp/launch-resume/launch-settings-app">启动 Windows 设置应用</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E7%BF%BB%E8%AF%91%E8%BD%AC%E8%BD%BD/" class="category-chain-item">翻译转载</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E8%BD%AC%E8%BD%BD/" class="print-no-link">#转载</a>
+      
+        <a href="/blog/tags/Windows/" class="print-no-link">#Windows</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Windows设置操作URI指令</div>
+      <div>https://maojun.xyz/blog/2024/03/Windows设置操作URI指令.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年3月31日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2024/03/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%9A%84%E5%AE%9E%E8%B7%B5.html" title="极简生活可以尝试的实践">
+                        <span class="hidden-mobile">极简生活可以尝试的实践</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

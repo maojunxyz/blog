@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2024-03-27T23:26:56.000Z</updated>
+  <updated>2024-03-31T19:45:42.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows设置操作URI指令</title>
+    <link href="https://maojun.xyz/blog/2024/03/Windows%E8%AE%BE%E7%BD%AE%E6%93%8D%E4%BD%9CURI%E6%8C%87%E4%BB%A4.html"/>
+    <id>https://maojun.xyz/blog/2024/03/Windows%E8%AE%BE%E7%BD%AE%E6%93%8D%E4%BD%9CURI%E6%8C%87%E4%BB%A4.html</id>
+    <published>2024-03-31T19:45:42.000Z</published>
+    <updated>2024-03-31T19:45:42.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;ms-settings-URI-方案参考&quot;&gt;&lt;a href=&quot;#ms-settings-URI-方案参考&quot; class=&quot;headerlink&quot; title=&quot;ms-settings: URI 方案参考&quot;&gt;&lt;/a&gt;ms-settings: URI</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="翻译转载" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E7%BF%BB%E8%AF%91%E8%BD%AC%E8%BD%BD/"/>
+    
+    
+    <category term="转载" scheme="https://maojun.xyz/blog/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>极简生活可以尝试的实践</title>
@@ -117,7 +146,7 @@
     <link href="https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T11:57:45.000Z</published>
-    <updated>2024-03-31T08:21:49.672Z</updated>
+    <updated>2024-03-31T12:07:18.576Z</updated>
     
     
       
@@ -146,7 +175,7 @@
     <link href="https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T10:57:45.000Z</published>
-    <updated>2024-03-31T08:21:49.672Z</updated>
+    <updated>2024-03-31T12:07:18.576Z</updated>
     
     
       
@@ -608,37 +637,6 @@
     
     
     <category term="Redis" scheme="https://maojun.xyz/blog/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript经典算法题</title>
-    <link href="https://maojun.xyz/blog/2023/11/Javascript%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE.html"/>
-    <id>https://maojun.xyz/blog/2023/11/Javascript%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE.html</id>
-    <published>2023-11-01T20:32:00.000Z</published>
-    <updated>2023-11-01T20:32:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;两数之和&quot;&gt;&lt;a href=&quot;#两数之和&quot; class=&quot;headerlink&quot; title=&quot;两数之和&quot;&gt;&lt;/a&gt;两数之和&lt;/h2&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt; 和一个整数目标值</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-    
-    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="JavaScript" scheme="https://maojun.xyz/blog/tags/JavaScript/"/>
     
   </entry>
   
