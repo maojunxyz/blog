@@ -129,8 +129,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>网络</category>
       
     </categories>
@@ -157,8 +155,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>网络</category>
       
@@ -326,8 +322,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Git</category>
       
     </categories>
@@ -356,8 +350,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>考试</category>
       
@@ -400,8 +392,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>网络</category>
       
     </categories>
@@ -433,8 +423,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>服务框架</category>
       
     </categories>
@@ -463,8 +451,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>网络</category>
       
@@ -495,8 +481,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Java</category>
       
     </categories>
@@ -525,8 +509,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>并发编程</category>
       
@@ -557,8 +539,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>数据结构和算法</category>
       
     </categories>
@@ -588,8 +568,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Git</category>
       
     </categories>
@@ -617,8 +595,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Redis</category>
       
     </categories>
@@ -645,8 +621,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>数据结构和算法</category>
       
@@ -677,8 +651,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>数据结构和算法</category>
       
     </categories>
@@ -708,8 +680,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>数据结构和算法</category>
       
     </categories>
@@ -738,8 +708,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>Linux</category>
       
@@ -772,8 +740,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>数据结构和算法</category>
       
     </categories>
@@ -802,8 +768,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -836,8 +800,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Windows</category>
       
     </categories>
@@ -866,8 +828,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1047,8 +1007,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Linux</category>
       
     </categories>
@@ -1108,8 +1066,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1173,8 +1129,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>考试</category>
       
     </categories>
@@ -1206,8 +1160,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1236,8 +1188,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1299,8 +1249,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Linux</category>
       
     </categories>
@@ -1330,8 +1278,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1360,8 +1306,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1396,8 +1340,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>考试</category>
       
     </categories>
@@ -1426,8 +1368,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>考试</category>
       
@@ -1534,6 +1474,35 @@
   
   
   <entry>
+    <title>Dubbo简介与原理</title>
+    <link href="/blog/2020/04/Dubbo%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html"/>
+    <url>/blog/2020/04/Dubbo%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="Dubbo架构体系"><a href="#Dubbo架构体系" class="headerlink" title="Dubbo架构体系"></a>Dubbo架构体系</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Dubbo是一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring框架无缝集成。同时Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：</p><ol><li>面向接口的远程方法调用。</li><li>智能容错和负载均衡。</li><li>服务自动注册和发现。</li></ol><h3 id="运行架构"><a href="#运行架构" class="headerlink" title="运行架构"></a>运行架构</h3><p><img src="/blog/./assets/image-ofctlzky2dk2e8v8gaq4i6t.PNG" alt="image-ofctlzky2dk2e8v8gaq4i6t"></p><h4 id="节点角色"><a href="#节点角色" class="headerlink" title="节点角色"></a>节点角色</h4><table><thead><tr><th>节点</th><th>角色说明</th></tr></thead><tbody><tr><td>Provider</td><td>暴露服务的服务提供方</td></tr><tr><td>Consumer</td><td>调用远程服务的服务消费方</td></tr><tr><td>Registry</td><td>服务注册与发现的注册中心</td></tr><tr><td>Monitor</td><td>统计服务的调用次数和调用时间的监控中心</td></tr><tr><td>Container</td><td>服务运行容器</td></tr></tbody></table><h4 id="调用关系"><a href="#调用关系" class="headerlink" title="调用关系"></a>调用关系</h4><ol><li><p>服务容器负责启动，加载，运行服务提供者。</p></li><li><p>服务提供者在启动时，向注册中心注册自己提供的服务。</p></li><li><p>服务消费者在启动时，向注册中心订阅自己所需的服务。</p></li><li><p>注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者。</p></li><li><p>服务消费者，从提供者地址列表中，基于软负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用。</p></li><li><p>服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心</p></li></ol><blockquote><p>dubbo 的特点有连通性、健壮性、伸缩性、以及向未来架构的升级性。</p></blockquote><h3 id="整体设计"><a href="#整体设计" class="headerlink" title="整体设计"></a>整体设计</h3><p><img src="/blog/./assets/image-3gg2d8fkulhczchlfayf754.PNG" alt="Dubbo调用设计"></p><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><ul><li>图中左边淡蓝背景的为服务消费方使用的接口，右边淡绿色背景的为服务提供方使用的接口，位于中轴线上的为双方都用到的接口。</li><li>图中从下至上分为十层，各层均为单向依赖，右边的黑色箭头代表层之间的依赖关系，每一层都可以剥离上层被复用，其中，Service 和Config 层为 API，其它各层均为 SPI。</li><li>图中绿色小块的为扩展接口，蓝色小块为实现类，图中只显示用于关联各层的实现类。</li><li>图中蓝色虚线为初始化过程，即启动时组装链，红色实线为方法调用过程，即运行时调时链，紫色三角箭头为继承，可以把子类看作父类的同一个节点，线上的文字为调用的方法</li></ul><h4 id="各层说明"><a href="#各层说明" class="headerlink" title="各层说明"></a>各层说明</h4><ul><li><p>config 配置层</p><p>对外配置接口，以 ServiceConfig ,ReferenceConfig 为中心，可以直接初始化配置类，也可以通过spring 解析配置生成配置类。</p></li><li><p>proxy 服务代理层</p><p>服务接口透明代理，生成服务的客户端 Stub 和服务器端 Skeleton, 以 ServiceProxy 为中心，扩展接口为ProxyFactory。</p></li><li><p>registry 注册中心层</p><p>封装服务地址的注册与发现，以服务 URL 为中心，扩展接口为 RegistryFactory , Registry , RegistryService。</p></li><li><p>cluster 路由层</p><p>封装多个提供者的路由及负载均衡，并桥接注册中心，以 Invoker 为中心，扩展接口为 Cluster , Directory ,Router , LoadBalance。</p></li><li><p>monitor 监控层</p><p>RPC 调用次数和调用时间监控，以 Statistics 为中心，扩展接口为 MonitorFactory , Monitor , MonitorService。</p></li><li><p>protocol 远程调用层</p><p>封装 RPC 调用，以 Invocation , Result 为中心，扩展接口为 Protocol , Invoker , Exporter。</p></li><li><p>exchange 信息交换层</p><p>封装请求响应模式，同步转异步，以Request , Response 为中心，扩展接口为 Exchanger ,ExchangeChannel , ExchangeClient , ExchangeServer。</p></li><li><p>transport 网络传输层</p><p>抽象 mina 和 netty 为统一接口，以Message 为中心，扩展接口为 Channel , Transporter , Client ,Server , Codec。</p></li><li><p>serialize 数据序列化层</p><p>可复用的一些工具，扩展接口为Serialization , ObjectInput , ObjectOutput , ThreadPool。</p></li></ul><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><h4 id=""><a href="#" class="headerlink" title=""></a></h4><h4 id="源码拉取"><a href="#源码拉取" class="headerlink" title="源码拉取"></a>源码拉取</h4><p>通过以下命令获取最新的dubbo项目源码</p><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">1 </span>git clone https://github.<span class="hljs-keyword">com</span>/apache/dubbo.git dubbo<br></code></pre></td></tr></table></figure><p><img src="/blog/./assets/image-a0hfuid4bus35o8pjxxxcgd.PNG" alt="dubbo-2.7.2源码"></p><p>下载源码导入工程后，跳过测试并进行编译。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs java">[ERROR] Failed to execute goal<br>org.xolstice.maven.plugins:protobuf-maven-<br>plugin: <span class="hljs-number">0.</span> <span class="hljs-number">5.</span> <span class="hljs-number">1</span> :compile (<span class="hljs-keyword">default</span>) on project dubbo-<br>serialization-protobuf: Missing:<br>[ERROR] - ---------<br>[ERROR] <span class="hljs-number">1</span> ) com.google.protobuf:protoc:exe:windows-<br>x <span class="hljs-number">86</span> _ <span class="hljs-number">64</span> : <span class="hljs-number">3.</span> <span class="hljs-number">7.</span> <span class="hljs-number">1</span><br>[ERROR]<br>[ERROR] Try downloading the file manually from the<br>project website.<br>[ERROR]<br>[ERROR] Then, install it using the command:<br>[ERROR] mvn install:install-file -<br>DgroupId=com.google.protobuf - DartifactId=protoc -<br>Dversion= <span class="hljs-number">3.</span> <span class="hljs-number">7.</span> <span class="hljs-number">1</span> - Dclassifier=windows-x <span class="hljs-number">86</span> _ <span class="hljs-number">64</span> -<br>Dpackaging=exe - Dfile=/path/to/file<br>[ERROR]<br>[ERROR] Alternatively, <span class="hljs-keyword">if</span> you host your own<br>repository you can deploy the file there:<br>[ERROR] mvn deploy:deploy-file -<br>DgroupId=com.google.protobuf - DartifactId=protoc -<br>Dversion= <span class="hljs-number">3.</span> <span class="hljs-number">7.</span> <span class="hljs-number">1</span> - Dclassifier=windows-x <span class="hljs-number">86</span> _ <span class="hljs-number">64</span> -<br>Dpackaging=exe - Dfile=/path/to/file - Durl=[url] -<br>DrepositoryId=[id]<br>[ERROR]<br>[ERROR] Path to dependency:<br>[ERROR] <span class="hljs-number">1</span> ) org.apache.dubbo:dubbo-serialization-<br>protobuf:jar: <span class="hljs-number">2.</span> <span class="hljs-number">7.</span> <span class="hljs-number">8</span><br>[ERROR] <span class="hljs-number">2</span> ) com.google.protobuf:protoc:exe:windows-<br>x <span class="hljs-number">86</span> _ <span class="hljs-number">64</span> : <span class="hljs-number">3.</span> <span class="hljs-number">7.</span> <span class="hljs-number">1</span><br>[ERROR]<br>[ERROR] - ---------<br>[ERROR] <span class="hljs-number">1</span> required artifact is missing.<br>[ERROR]<br>[ERROR] <span class="hljs-keyword">for</span> artifact:<br>[ERROR] org.apache.dubbo:dubbo-serialization-<br>protobuf:jar: <span class="hljs-number">2.</span> <span class="hljs-number">7.</span> <span class="hljs-number">8</span><br>[ERROR]<br>[ERROR] from the specified remote repositories:<br>[ERROR] apache.snapshots<br>(https:<span class="hljs-comment">//repository.apache.org/snapshots,</span><br>releases=<span class="hljs-literal">false</span>, snapshots=<span class="hljs-literal">true</span>),<br>[ERROR] alimaven<br>(http:<span class="hljs-comment">//maven.aliyun.com/nexus/content/groups/public/,</span><br>releases=<span class="hljs-literal">true</span>, snapshots=<span class="hljs-literal">false</span>)<br></code></pre></td></tr></table></figure><p>根据报错解决问题：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">mvn install:install-file -DgroupId=com.google.protobuf-DartifactId=protoc -Dversion=<span class="hljs-number">3.7</span><span class="hljs-number">.1</span> -Dclassifier=windows-x86_64 -Dpackaging=exe -Dfile=C:\Users\maojun\test\protoc-<span class="hljs-number">3.7</span><span class="hljs-number">.1</span>-windows-x86_64.exe<br></code></pre></td></tr></table></figure><h4 id="源码结构"><a href="#源码结构" class="headerlink" title="源码结构"></a>源码结构</h4><p>dubbo源码各个模块的相关作用：</p><p>dd<img src="/blog/./assets/image-ivymjilkeodmg19pyqke383.PNG" alt="源码结构"></p><h5 id="-1"><a href="#-1" class="headerlink" title=""></a></h5><h4 id="模块说明"><a href="#模块说明" class="headerlink" title="模块说明"></a>模块说明</h4><ul><li><p>dubbo-common 公共逻辑模块</p><p>包括 Util 类和通用模型。</p></li><li><p>dubbo-remoting 远程通讯模块</p><p>相当于 Dubbo 协议的实现，如果RPC 用 RMI协议则不需要使用此包。</p></li><li><p>dubbo-rpc 远程调用模块</p><p>抽象各种协议，以及动态代理，只包含一对一的调用，不关心集群的管理。</p></li><li><p>dubbo-cluster 集群模块</p><p>将多个服务提供方伪装为一个提供方，包括：负载均衡, 容错，路由等，集群的地址列表可以是静态配置的，也可以是由注册中心下发。</p></li><li><p>dubbo-registry 注册中心模块</p><p>基于注册中心下发地址的集群方式，以及对各种注册中心的抽象。</p></li><li><p>dubbo-monitor 监控模块</p><p>统计服务调用次数，调用时间的，调用链跟踪的服务。</p></li><li><p>dubbo-config 配置模块</p><p>是 Dubbo 对外的 API，用户通过 Config 使用Dubbo，隐藏 Dubbo 所有细节。</p></li><li><p>dubbo-container 容器模块</p><p>是一个 Standlone 的容器，以简单的Main 加载 Spring 启动，因为服务通常不需要 Tomcat&#x2F;JBoss 等 Web容器的特性，没必要用 Web 容器去加载服务。</p></li></ul><h4 id="环境导入"><a href="#环境导入" class="headerlink" title="环境导入"></a>环境导入</h4><p>导入到IDEA中。</p><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ol><li>安装zookeeper</li><li>修改demo案例，配置zookeeper地址</li><li>启动服务提供者，启动服务消费者</li></ol><h4 id="管理控制台"><a href="#管理控制台" class="headerlink" title="管理控制台"></a>管理控制台</h4><ol><li><a href="https://github.com/apache/dubbo-admin">下载管理控制台</a></li><li>进入源码目录， 进行打包编译</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">mvn clean <span class="hljs-keyword">package</span> -Dmaven.test.skip=<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><p>构建成功提示：</p><p><img src="/blog/./assets/image-8d61uru53nes6o12oejf5xt.PNG" alt="构建完成"></p><ol start="3"><li>启动后台管理服务</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-number">1</span> mvn clean <span class="hljs-keyword">package</span> - Dmaven.test.skip=<span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><p><img src="/blog/./assets/image-exqvt54zjjlud8ngxir9jsl.PNG" alt="启动服务"></p><ol start="4"><li>管理后台</li></ol><p>地址： <a href="http://127.0.0.1:8080/">http://127.0.0.1:8080/</a></p><p>默认账户名和密码都为root，进入管控台， 可以看到所启动的服务端与消费端。</p><p><img src="/blog/./assets/image-rg710jvtsndtjaeusw132fp.PNG" alt="管控台"></p><h3 id="Dubbo实践"><a href="#Dubbo实践" class="headerlink" title="Dubbo实践"></a>Dubbo实践</h3><h4 id="与SpringBoot的整合"><a href="#与SpringBoot的整合" class="headerlink" title="与SpringBoot的整合"></a>与SpringBoot的整合</h4><p>基于Zookeeper实现Dubbo与Spring Boot的集成整合。</p><h5 id="项目POM依赖"><a href="#项目POM依赖" class="headerlink" title="项目POM依赖"></a>项目POM依赖</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dubbo-version</span>&gt;</span> 2. 7. 8 <span class="hljs-tag">&lt;/<span class="hljs-name">dubbo-version</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">spring-boot.version</span>&gt;</span> 2. 3. 0 .RELEASE&lt;/spring-<br>boot.version&gt;<br><span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependencyManagement</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Spring Boot - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;spring-boot-</span><br><span class="hljs-comment">dependencies&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;spring-boot.version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;type&gt;pom&lt;/type&gt;</span><br><span class="hljs-comment">&lt;scope&gt;import&lt;/scope&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- Apache Dubbo - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-dependencies-</span><br><span class="hljs-comment">bom&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;type&gt;pom&lt;/type&gt;</span><br><span class="hljs-comment">&lt;scope&gt;import&lt;/scope&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;exclusions&gt;</span><br><span class="hljs-comment">&lt;exclusion&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.springframework&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;spring&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/exclusion&gt;</span><br><span class="hljs-comment">&lt;exclusion&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;servlet-</span><br><span class="hljs-comment">api&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/exclusion&gt;</span><br><span class="hljs-comment">&lt;exclusion&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;log 4 j&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;log 4 j&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/exclusion&gt;</span><br><span class="hljs-comment">&lt;/exclusions&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;/dependencies&gt;</span><br><span class="hljs-comment">&lt;/dependencyManagement&gt;</span><br><span class="hljs-comment">&lt;dependencies&gt;</span><br><span class="hljs-comment">&lt;!-- Dubbo Spring Boot Starter - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-spring-boot-</span><br><span class="hljs-comment">starter&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- Dubbo核心组件 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!--Spring Boot 依赖 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;spring-boot-starter-</span><br><span class="hljs-comment">web&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;spring-boot.version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- Zookeeper客户端框架 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.curator&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;curator-framework&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt; 4. 0. 1 &lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- Zookeeper dependencies - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-dependencies-</span><br><span class="hljs-comment">zookeeper&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;type&gt;pom&lt;/type&gt;</span><br><span class="hljs-comment">&lt;exclusions&gt;</span><br><span class="hljs-comment">&lt;exclusion&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.slf 4 j&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;slf 4 j-log 4 j 12 &lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/exclusion&gt;</span><br><span class="hljs-comment">&lt;/exclusions&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;/dependencies&gt;</span><br></code></pre></td></tr></table></figure><p>Dubbo采用2.7.8版本， Spring Boot采用的是2.3.0.RELEASE版本。</p><p>如果依赖下载出现问题， 可以指定具体的仓库：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">repositories</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">repository</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>apache.snapshots.https<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Apache Development Snapshot<br>Repository<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>https://repository.apache.org/content/repositories/s<br>napshots<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">releases</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">enabled</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">enabled</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">releases</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">snapshots</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">enabled</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">enabled</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">snapshots</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">repository</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">repositories</span>&gt;</span><br></code></pre></td></tr></table></figure><h4 id="-2"><a href="#-2" class="headerlink" title=""></a></h4><h5 id="公用RPC接口工程"><a href="#公用RPC接口工程" class="headerlink" title="公用RPC接口工程"></a>公用RPC接口工程</h5><p>为便于客户端与服务端的RPC接口引用， 定义了一个订单服务接口， 用于测试验证。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">OrderService</span> &#123;<br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 获取订单详情</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> orderId</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br>String <span class="hljs-title function_">getOrder</span><span class="hljs-params">(Long orderId)</span>;<br>&#125;<br></code></pre></td></tr></table></figure><h5 id="生产者POM依赖"><a href="#生产者POM依赖" class="headerlink" title="生产者POM依赖"></a>生产者POM依赖</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Dubbo Spring Boot Starter - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-spring-boot-</span><br><span class="hljs-comment">starter&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- Dubbo 核心依赖 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- 公用RPC接口依赖 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;xyz.maojun&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-spring-</span><br><span class="hljs-comment">interface&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;project.version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;/dependencies&gt;</span><br></code></pre></td></tr></table></figure><h6 id="RPC服务接口"><a href="#RPC服务接口" class="headerlink" title="RPC服务接口"></a>RPC服务接口</h6><figure class="highlight wren"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs wren">@<span class="hljs-title class_">DubboService</span>(<span class="hljs-variable">version</span> <span class="hljs-operator">=</span><br><span class="hljs-string">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;</span>)<br><span class="hljs-variable">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderServiceImpl</span> <span class="hljs-variable">implements</span><br><span class="hljs-title class_">OrderService</span> &#123;<br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 服务端口</span><br><span class="hljs-comment">*/</span><br>@<span class="hljs-title class_">Value</span>(<span class="hljs-string">&quot;$&#123;server.port&#125;&quot;</span>)<br><span class="hljs-variable">private</span> <span class="hljs-title class_">String</span> <span class="hljs-variable">serverPort</span>;<br>@<span class="hljs-title class_">Value</span>(<span class="hljs-string">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;</span>)<br><span class="hljs-variable">private</span> <span class="hljs-title class_">String</span> <span class="hljs-variable">serviceVersion</span>;<br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 获取订单详情</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> orderId</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br><span class="hljs-variable">public</span> <span class="hljs-title class_">String</span> <span class="hljs-title function_">getOrder</span>(<span class="hljs-params">Long</span> <span class="hljs-params">orderId</span>) &#123;<br><span class="hljs-title class_">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;get order detail</span><br><span class="hljs-string">,orderId=&quot;</span><span class="hljs-operator">+</span><span class="hljs-variable">orderId</span> <span class="hljs-operator">+</span><span class="hljs-string">&quot;,serverPort=&quot;</span><span class="hljs-operator">+</span><span class="hljs-variable">serverPort</span><br><span class="hljs-operator">+</span><span class="hljs-string">&quot;,serviceVersion=&quot;</span><span class="hljs-operator">+</span><span class="hljs-variable">serviceVersion</span>;<br><span class="hljs-title class_">System</span>.<span class="hljs-property">out</span>.<span class="hljs-property">println</span>(<span class="hljs-variable">result</span>);<br><span class="hljs-keyword">return</span> <span class="hljs-variable">result</span>;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>通过DubboService注解， 声明为RPC服务，version可以标识具体的版本号， 消费端需匹配保持一致。</p><h6 id="工程配置"><a href="#工程配置" class="headerlink" title="工程配置"></a>工程配置</h6><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">server.port=</span> <span class="hljs-number">18081</span><br><span class="hljs-comment"># 应用程序名称</span><br><span class="hljs-string">spring.application.name=dubbo-spring-provider</span><br><span class="hljs-comment"># Dubbo服务扫描路径</span><br><span class="hljs-string">dubbo.scan.base-packages=xyz.maojun</span><br><span class="hljs-comment"># Dubbo 通讯协议</span><br><span class="hljs-string">dubbo.protocol.name=dubbo</span><br><span class="hljs-comment"># Dubbo服务提供的端口， 配置为- 1 ，代表为随机端口 默认</span><br><span class="hljs-number">20880</span><br><span class="hljs-string">dubbo.protocol.port=-</span> <span class="hljs-number">1</span><br><span class="hljs-comment">## Dubbo 注册器配置信息</span><br><span class="hljs-string">dubbo.registry.address=zookeeper://</span> <span class="hljs-attr">127. 0. 0. 1 :</span> <span class="hljs-number">2181</span><br><span class="hljs-string">dubbo.registry.file</span> <span class="hljs-string">=</span> <span class="hljs-string">$&#123;user.home&#125;/dubbo-</span><br><span class="hljs-string">cache/$&#123;spring.application.name&#125;/dubbo.cache</span><br><span class="hljs-string">dubbo.spring.provider.version</span> <span class="hljs-string">=</span> <span class="hljs-number">1</span><span class="hljs-string">.</span> <span class="hljs-number">0</span><span class="hljs-string">.</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure><h6 id="Spring-Boot启动程序"><a href="#Spring-Boot启动程序" class="headerlink" title="Spring Boot启动程序"></a>Spring Boot启动程序</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"># 服务端口<br><span class="hljs-meta">@SpringBootApplication</span><br><span class="hljs-meta">@ComponentScan(basePackages = &#123;&quot;xyz.maojun&quot;&#125;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DubboSpringProviderApplication</span> &#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>SpringApplication.run(DubboSpringProviderApplicatio<br>n.class, args);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h4 id="-3"><a href="#-3" class="headerlink" title=""></a></h4><h5 id="消费者POM依赖"><a href="#消费者POM依赖" class="headerlink" title="消费者POM依赖"></a>消费者POM依赖</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br><span class="hljs-comment">&lt;!-- Dubbo Spring Boot Starter - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;org.apache.dubbo&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-spring-boot-</span><br><span class="hljs-comment">starter&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;dubbo-version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;!-- 公用RPC接口依赖 - -&gt;</span><br><span class="hljs-comment">&lt;dependency&gt;</span><br><span class="hljs-comment">&lt;groupId&gt;xyz.maojun&lt;/groupId&gt;</span><br><span class="hljs-comment">&lt;artifactId&gt;dubbo-spring-</span><br><span class="hljs-comment">interface&lt;/artifactId&gt;</span><br><span class="hljs-comment">&lt;version&gt;$&#123;project.version&#125;&lt;/version&gt;</span><br><span class="hljs-comment">&lt;/dependency&gt;</span><br><span class="hljs-comment">&lt;/dependencies&gt;</span><br></code></pre></td></tr></table></figure><h6 id="消费端调用"><a href="#消费端调用" class="headerlink" title="消费端调用"></a>消费端调用</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Controller</span><br><span class="hljs-meta">@RequestMapping(&quot;/order&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderController</span> &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Logger</span> <span class="hljs-variable">logger</span> <span class="hljs-operator">=</span><br>LoggerFactory.getLogger(getClass());<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 订单服务接口</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@DubboReference(version =&quot;$&#123;dubbo.spring.provider.version&#125;&quot;)</span><br><span class="hljs-keyword">private</span> OrderService orderService;<br><br> <span class="hljs-comment">/**</span><br><span class="hljs-comment">* 获取订单详情接口</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> orderId</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@RequestMapping(&quot;/getOrder&quot;)</span><br><span class="hljs-meta">@ResponseBody</span><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">getOrder</span><span class="hljs-params">(Long orderId)</span> &#123;<br><span class="hljs-type">String</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">try</span> &#123;<br>result =<br>orderService.getOrder(orderId);<br>&#125;<span class="hljs-keyword">catch</span>(Exception e) &#123;<br>logger.error(e.getMessage(), e);<br>&#125;<br><span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure><h5 id="-4"><a href="#-4" class="headerlink" title=""></a></h5><h6 id="工程配置-1"><a href="#工程配置-1" class="headerlink" title="工程配置"></a>工程配置</h6><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment"># 服务端口</span><br><span class="hljs-attr">server.port</span>= <span class="hljs-string">18084</span><br><span class="hljs-comment">#服务名称</span><br><span class="hljs-attr">spring.application.name</span>=<span class="hljs-string">dubbo-spring-consumer</span><br><span class="hljs-comment">#服务版本号</span><br><span class="hljs-attr">dubbo.spring.provider.version</span> = <span class="hljs-string">1. 0. 0</span><br><span class="hljs-comment">#消费端注册器配置信息</span><br><span class="hljs-attr">dubbo.registry.address</span>=<span class="hljs-string">zookeeper:// 127. 0. 0. 1 : 2181</span><br><span class="hljs-attr">dubbo.registry.file</span> = <span class="hljs-string">$&#123;user.home&#125;/dubbo-</span><br><span class="hljs-attr">cache/$&#123;spring.application.name&#125;/dubbo.cache</span><br></code></pre></td></tr></table></figure><h6 id="Spring-Boot启动程序-1"><a href="#Spring-Boot启动程序-1" class="headerlink" title="Spring Boot启动程序"></a>Spring Boot启动程序</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@SpringBootApplication</span><br><span class="hljs-meta">@ComponentScan(basePackages = &#123;&quot;xyz.maojun&quot;&#125;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DubboSpringConsumerApplication</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        SpringApplication.run(DubboSpringConsumerApplicatio<br>n.class, args);<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h5 id="工程调用验证"><a href="#工程调用验证" class="headerlink" title="工程调用验证"></a>工程调用验证</h5><ol><li>启动ZK注册中心</li><li>启动服务端， 运行DubboSpringProviderApplication</li><li>启动消费端， 运行DubboSpringConsumerApplication</li><li>请求获取订单接口， 地址： <a href="http://127.0.0.1:18084/order/getOrder?orderId=1001">http://127.0.0.1:18084/order/getOrder?orderId=1001</a></li></ol><p>调用成功：</p><p><img src="/blog/./assets/image-udh8pihyio84whkpyqspo5b.PNG" alt="调用成功"></p><h3 id="Dubbo高阶配置"><a href="#Dubbo高阶配置" class="headerlink" title="Dubbo高阶配置"></a>Dubbo高阶配置</h3><h4 id="覆盖关系"><a href="#覆盖关系" class="headerlink" title="覆盖关系"></a>覆盖关系</h4><p>官方文档： <a href="https://dubbo.apache.org/zh/docsv2.7/user/configuration/">https://dubbo.apache.org/zh/docsv2.7/user/configuration/</a></p><ol><li><p>通过ProviderConfig配置全局超时（可通过yml配置覆盖）</p></li><li><p>在@DubboService注解上配置接口超时</p></li><li><p>在@DubboService注解上配置接口方法超时</p></li><li><p>在消费方进行配置，查看覆盖情况</p></li></ol><h4 id="覆盖规则"><a href="#覆盖规则" class="headerlink" title="覆盖规则"></a>覆盖规则</h4><p><img src="/blog/./assets/image-03ngyrfq45zdgvrrpsbwuty.PNG" alt="覆盖规则"></p><h4 id="配置规则"><a href="#配置规则" class="headerlink" title="配置规则"></a>配置规则</h4><ol><li>方法级优先;</li><li>接口级次之;</li><li>全局配置再次之。</li><li>如果级别一样，则消费者优先，生产者次之。</li></ol><h4 id="-5"><a href="#-5" class="headerlink" title=""></a></h4><h4 id="服务端超时"><a href="#服务端超时" class="headerlink" title="服务端超时"></a>服务端超时</h4><p>增加配置类：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">DubboCustomConfig</span> &#123;<br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 服务端</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@Bean</span><br><span class="hljs-keyword">public</span> ProviderConfig <span class="hljs-title function_">registryConfig</span><span class="hljs-params">()</span> &#123;<br><span class="hljs-type">ProviderConfig</span> <span class="hljs-variable">providerConfig</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span><br><span class="hljs-title class_">ProviderConfig</span>();<br><span class="hljs-comment">// 设定超时时间为 5 S</span><br>providerConfig.setTimeout( <span class="hljs-number">5000</span> );<br><span class="hljs-keyword">return</span> providerConfig;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>修改服务接口实现：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 获取订单详情</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> orderId</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">getOrder</span><span class="hljs-params">(Long orderId)</span> &#123;<br><span class="hljs-keyword">try</span> &#123;<br><span class="hljs-comment">// 休眠1.5秒</span><br>Thread.sleep(<span class="hljs-number">1500L</span>);<br>&#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>e.printStackTrace();<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Get Order Detail, Id: &quot;</span> + orderId +<br><span class="hljs-string">&quot;, serverPort: &quot;</span> + serverPort;<br>    &#125;<br></code></pre></td></tr></table></figure><p>客户端调用验证</p><p>请求地址： <a href="http://127.0.0.1:18084/order/getOrder?orderId=123">http://127.0.0.1:18084/order/getOrder?orderId=123</a></p><p> 服务端全局超时设为 2 秒（不触发超时）， 消费端设定超时时间为 1 秒（触发超时）。</p><p> 修改调用代码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 订单服务接口</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@DubboReference(version =</span><br><span class="hljs-meta">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;, timeout =</span><br><span class="hljs-meta">1000)</span><br><span class="hljs-keyword">private</span> OrderService orderService;<br></code></pre></td></tr></table></figure><p>调用结果， 触发超时：</p><p><img src="/blog/./assets/image-6deg835f0x11eo2w85t796f.PNG" alt="验证超时"></p><p>表明消费端配置优先。</p><p>服务端全局超时设定为1秒（触发超时）， 消费端去掉超时时间配置。触发超时， 表明服务提供方优先级次之。</p><p><img src="/blog/./assets/image-z8w65atrb412ff8vk8a9pcs.PNG" alt="验证超时"></p><h4 id="属性配置优先级"><a href="#属性配置优先级" class="headerlink" title="属性配置优先级"></a>属性配置优先级</h4><p>优先级规则</p><p><img src="/blog/./assets/image-w23jrl0ykmrf8wpqf7xv4ok.PNG" alt="优先级规则"></p><p>优先级从高到低：</p><ul><li>JVM -D 参数；</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">-Ddubbo.protocol.port=<span class="hljs-number">20881</span> <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure><ul><li>XML（application.yml&#x2F;application.properties）配置会重写dubbo.properties 中的配置。</li></ul><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">dubbo:</span><br><span class="hljs-attr">protocol:</span><br><span class="hljs-attr">name:</span> <span class="hljs-string">dubbo</span> <span class="hljs-comment"># 通讯协议</span><br><span class="hljs-comment">#port: 20880 # dubbo服务提供方的端口，该值</span><br><span class="hljs-string">是默认值</span><br><span class="hljs-attr">port:</span> <span class="hljs-number">20882</span><br></code></pre></td></tr></table></figure><ul><li>Properties默认配置（dubbo.properties），仅仅作用于以上两者没有配置时，一般配置全局公共配置。</li></ul><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-attr">dubbo.protocol.port</span>=<span class="hljs-string">20883</span><br></code></pre></td></tr></table></figure><h4 id="-6"><a href="#-6" class="headerlink" title=""></a></h4><h3 id="重试与容错处理机制"><a href="#重试与容错处理机制" class="headerlink" title="重试与容错处理机制"></a>重试与容错处理机制</h3><h4 id="容错机制"><a href="#容错机制" class="headerlink" title="容错机制"></a>容错机制</h4><ul><li>Failfast Cluster</li></ul><p>快速失败，只发起一次调用，失败立即报错。通常用于非幂等性的写操作，比如新增记录。</p><ul><li>Failsafe Cluster</li></ul><p>失败安全，出现异常时，直接忽略。通常用于写入审计日志等操作。</p><ul><li>Failback Cluster</li></ul><p>失败自动恢复，后台记录失败请求，定时重发。通常用于消息通知操作。</p><ul><li>Forking Cluster</li></ul><p>并行调用多个服务器，只要一个成功即返回。通常用于实时性要求较高的读操作，但需要浪费更多服务资源。可通过forks&#x3D;”2” 来设置最大并行数。</p><ul><li>Broadcast Cluster</li></ul><p>广播调用所有提供者，逐个调用，任意一台报错则报错。通常用于通知所有提供者更新缓存或日志等本地资源信息。</p><p>调整客户端重试次数,重试次数设定为3次。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 订单服务接口</span><br><span class="hljs-comment"> */</span><br> <span class="hljs-meta">@DubboReference(version =</span><br><span class="hljs-meta">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;,retries = 3)</span><br> <span class="hljs-keyword">private</span> OrderService orderService;<br></code></pre></td></tr></table></figure><p> 修改服务端超时时间模拟超时， 让客户端触发重试。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"> <span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 服务端全局配置</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"> */</span><br> <span class="hljs-meta">@Bean</span><br> <span class="hljs-keyword">public</span> ProviderConfig <span class="hljs-title function_">registryConfig</span><span class="hljs-params">()</span> &#123;<br> <span class="hljs-type">ProviderConfig</span> <span class="hljs-variable">providerConfig</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span><br><span class="hljs-title class_">ProviderConfig</span>();<br> providerConfig.setTimeout(<span class="hljs-number">1000</span>);<br> <span class="hljs-keyword">return</span> providerConfig;<br> &#125;<br></code></pre></td></tr></table></figure><p>客户端调用（单个服务）</p><p><a href="http://127.0.0.1:18084/order/getOrder?orderId=123">http://127.0.0.1:18084/order/getOrder?orderId=123</a></p><p>查看服务端控制台，可以看到触发重试机制，加上第一次的调用和3次重试， 共4次。</p><p><img src="/blog/./assets/image-k7kwuhcckwpijc5yalcee86.PNG" alt="超时重试"></p><p>允许多个实例运行， 开启多个服务，再次访问。</p><p><img src="/blog/./assets/image-4ueexpcob5sw60ixk4z137o.PNG" alt="集群重试"></p><p>第一个服务实例，访问两次， 其他每个服务访问一次。</p><h3 id="多版本控制"><a href="#多版本控制" class="headerlink" title="多版本控制"></a>多版本控制</h3><p>启动三个服务端。第一个服务端版本为1.0.0， 第二、三个服务端版本分别为：2.0.0 和3.0.0<br>主要是修改application.properties配置：</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment">#服务版本号</span><br><span class="hljs-attr">dubbo.spring.provider.version</span> = <span class="hljs-string">2.0.0</span><br></code></pre></td></tr></table></figure><p>启动三个服务提供者，通过 -Ddubbo.spring.provider.version &#x3D;2.0.0 -Dserver.port&#x3D;18082 来启动三个相关的端口不能重复。</p><p> 消费端指定版本号。同样修改application.properties配置：</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs properties"><span class="hljs-comment">#服务版本号</span><br><span class="hljs-attr">dubbo.spring.provider.version</span> = <span class="hljs-string">2.0.0</span><br></code></pre></td></tr></table></figure><p>仍然通过 -Ddubbo.spring.provider.version &#x3D; 2.0.0 来调用不同版本的服务测试时，注释掉超时的代码</p><p>仍是采用超时配置， 通过重试测试验证测试验证结果,请求只会访问至版本号为2.0.0的服务节点上面。</p><h3 id="本地存根调用"><a href="#本地存根调用" class="headerlink" title="本地存根调用"></a>本地存根调用</h3><p><img src="/blog/./assets/image-bydm1ddiojjppwtu69hzuy0.PNG" alt="实现流程"></p><p>把 Stub 暴露给用户，Stub 可以决定要不要去调 Proxy。</p><p> 客户端存根实现，增加service接口。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">OrderServiceStub</span> <span class="hljs-keyword">implements</span><br><span class="hljs-title class_">OrderService</span> &#123;<br><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> OrderService orderService;<br><span class="hljs-comment">// 构造函数传入真正的远程代理对象</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">OrderServiceStub</span><span class="hljs-params">(OrderService</span><br><span class="hljs-params">orderService)</span>&#123;<br><span class="hljs-built_in">this</span>.orderService = orderService;<br>    &#125;<br><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 获取订单详情</span><br><span class="hljs-comment">* <span class="hljs-doctag">@param</span> orderId</span><br><span class="hljs-comment">* <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">getOrder</span><span class="hljs-params">(Long orderId)</span>&#123;<br><span class="hljs-comment">// 在客户端执行, 预先验证参数是否合法，等等</span><br><span class="hljs-keyword">try</span> &#123;<br><span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span> != orderId) &#123;<br><span class="hljs-keyword">return</span><br>orderService.getOrder(orderId);<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;参数校验错误！&quot;</span>;<br>&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br><span class="hljs-comment">//容错处理</span><br><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;出现错误：&quot;</span> + e.getMessage();<br>&#125;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>修改客户端调用配置</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment">* 订单服务接口</span><br><span class="hljs-comment">*/</span><br><span class="hljs-meta">@DubboReference(version =</span><br><span class="hljs-meta">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;,retries = 3, stub</span><br><span class="hljs-meta">=</span><br><span class="hljs-meta">&quot;com.itheima.dubbo.spring.consumer.service.OrderServ</span><br><span class="hljs-meta">iceStub&quot;)</span><br><span class="hljs-keyword">private</span> OrderService orderService;<br></code></pre></td></tr></table></figure><p>stub要配置存根接口的完整路径。</p><p>访问不带参数的地址： <a href="http://127.0.0.1:18084/order/getOrder">http://127.0.0.1:18084/order/getOrder</a></p><p><img src="/blog/./assets/image-efmckq9g1rrri3d9y2yapql.PNG" alt="存根调用"></p><p>会进入存根接口的处理逻辑， 提示校验异常。</p><h3 id="负载均衡机制"><a href="#负载均衡机制" class="headerlink" title="负载均衡机制"></a>负载均衡机制</h3><p>默认负载策略</p><p>Dubbo默认采用的是随机负载策略。</p><p>开启三个服务节点，通过消费端访问验证： <a href="http://127.0.0.1:18084/order/getOrder?orderId=123">http://127.0.0.1:18084/order/getOrder?orderId=123</a></p><p>通过控制后台日志输出， 可以看到每个服务节点呈现不规则的调用。</p><p>Dubbo 支持的负载均衡策略，可用参看源码： AbstractLoadBalance</p><ul><li>Random LoadBalance：默认</li></ul><p>随机，按权重设置随机概率。</p><p>在一个截面上碰撞的概率高，但调用量越大分布越均匀，而且按概率使用权重后也比较均匀，有利于动态调整提供者权重。</p><ul><li>RoundRobin LoadBalance</li></ul><p>加权轮询负载均衡，按公约后的权重设置轮询比率。存在慢的提供者累积请求的问题，比如：第二台机器很慢，但没挂，当请求调到第二台时就卡在那，久而久之，所有请求都卡在调到第二台上。</p><ul><li>LeastActive LoadBalance</li></ul><p>最少活跃调用数，相同活跃数的随机，活跃数指调用前后计数差。活跃数其实就是在当前这个服务调用者中当前这个时刻 某个invoker（某个服务提供者的某个接口）某个方法的调用并发数，在调用之前+1 调用之后-1的一个计数器，如果出现多个活跃数相等invoker的时候使用随机算法来选取一个</p><ul><li>ConsistentHash LoadBalance</li></ul><p>一致性 Hash，相同参数的请求总是发到同一提供者。当某一台提供者挂时，原本发往该提供者的请求，基于虚拟节点，平摊到其它提供者，不会引起剧烈变动。</p><blockquote><p>一致性Hash负载均衡涉及到两个主要的配置参数为</p><p><strong>hash.arguments</strong> 与<strong>hash.nodes</strong>。</p><ol><li><strong>hash.arguments</strong> ： 当进行调用时候根据调用方法的哪几个参数生成key，并根据key来通过一致性hash算法来选择调用结点。</li><li><strong>hash.nodes</strong>： 为结点的副本数</li></ol></blockquote><ul><li>ShortestResponseLoadBalance</li></ul><p>最短响应时间负载均衡<br>从多个服务提供者中选择出调用成功的且响应时间最短的服务提供者，由于满足这样条件的服务提供者有可能有多个。所以当选择出多个服务提供者后要根据他们的权重做分析，如果权重一样，则随机。</p><p>源码实现：</p><p>org.apache.dubbo.rpc.cluster.loadbalance.AbstractLoadBalance</p><p> Dubbo提供了四种实现：</p><p><img src="/blog/./assets/image-wog3j8ay7sm7xrsj6smyk16.PNG" alt="四种实现"></p><p>四种配置方式：</p><p>优先级从下至上：</p><ul><li>服务端的服务级别</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dubbo:service interface=<span class="hljs-string">&quot;...&quot;</span><br>loadbalance=<span class="hljs-string">&quot;roundrobin&quot;</span> /&gt;<br></code></pre></td></tr></table></figure><ul><li>客户端的服务级别</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dubbo:reference interface=<span class="hljs-string">&quot;...&quot;</span><br>loadbalance=<span class="hljs-string">&quot;roundrobin&quot;</span> /&gt;<br></code></pre></td></tr></table></figure><blockquote><p>注意：服务提供者配置后最终也只是同步到消费者端。故一般在消费端配置</p></blockquote><ul><li>服务端方法级别</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dubbo:service interface=<span class="hljs-string">&quot;...&quot;</span>&gt;<br>&lt;dubbo:method name=<span class="hljs-string">&quot;...&quot;</span><br>loadbalance=<span class="hljs-string">&quot;roundrobin&quot;</span>/&gt;<br>&lt;/dubbo:service&gt;<br></code></pre></td></tr></table></figure><ul><li>客户端方法级别</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dubbo:reference interface=<span class="hljs-string">&quot;...&quot;</span>&gt;<br> &lt;dubbo:method name=<span class="hljs-string">&quot;...&quot;</span><br>loadbalance=<span class="hljs-string">&quot;roundrobin&quot;</span>/&gt;<br> &lt;/dubbo:reference&gt;<br></code></pre></td></tr></table></figure><p>调用验证</p><p>修改客户端的负载策略， 改为轮询策略：</p><blockquote><p>注意很多配置都有三个级别，针对方法的，针对接口的，全局的。</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@DubboReference(version =</span><br><span class="hljs-meta">&quot;$&#123;dubbo.spring.provider.version&#125;&quot;,retries = 3,</span><br><span class="hljs-meta">2 loadbalance = &quot;roundrobin&quot;,</span><br><span class="hljs-meta">3 stub =</span><br><span class="hljs-meta">&quot;xyz.maojun.dubbo.spring.consumer.service.OrderServiceStub&quot;)</span><br></code></pre></td></tr></table></figure><p>开启三个服务节点， 进行访问验证： <a href="http://127.0.0.1:18084/order/g">http://127.0.0.1:18084/order/g</a></p><p>etOrder?orderId&#x3D;123</p><p>会依次轮询进行调用。</p><p> 注意：测试时将服务提供者的版本号都调成一致（1.0.0），超时配置注</p><p>释掉！</p><p>动态权重调整验证</p><p>管理后台地址： <a href="http://127.0.0.1:8080/#">http://127.0.0.1:8080/#</a></p><p>通过管理后台修改服务的权重配置：</p><p><img src="/blog/./assets/image-uge7f3cfqhp7omwtdzrau8r.PNG" alt="管理后台配置权重"></p><p>将两台节点的权重降低至20：</p><p><img src="/blog/./assets/image-0nainutsgxbd1b21ysg0tcm.PNG" alt="权重规则"></p><p>调整后可以看到权重配置已经生效：</p><p><img src="/blog/./assets/image-xu4fu6stfeanc3e0eynsydb.PNG" alt="查看权重"></p><p>通过消费者接口访问， 会发现第一台权重较大的节点， 访问次数会明显增多。</p><h3 id="服务降级运用"><a href="#服务降级运用" class="headerlink" title="服务降级运用"></a>服务降级运用</h3><p>服务动态禁用</p><p>启动单个服务节点，进入Dubbo Admin， 创建动态配置规则：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">configVersion:</span> <span class="hljs-string">v2.7</span><br><span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">configs:</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">side:</span> <span class="hljs-string">provider</span><br><span class="hljs-attr">addresses:</span><br><span class="hljs-bullet">-</span> <span class="hljs-string">&#x27;0.0.0.0:20880&#x27;</span><br><span class="hljs-attr">parameters:</span><br><span class="hljs-attr">timeout:</span> <span class="hljs-number">3000</span><br><span class="hljs-attr">disabled:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><p>将disabled属性设为true， 服务禁用， 可以错误提示</p><p><img src="/blog/./assets/image-ap7lali9xsuwd8v8iayp9ns.PNG" alt="服务禁用"></p><p>将disabled属性改为false，则恢复正常访问。</p><p><img src="/blog/./assets/image-mu14jewsnvpux223sq7hgxm.PNG" alt="服务启用"></p><p> 服务降级，配置规则。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">RegistryFactory</span> <span class="hljs-variable">registryFactory</span> <span class="hljs-operator">=</span>ExtensionLoader.getExtensionLoader(RegistryFactory.class).getAdaptiveExtension();<br><span class="hljs-type">Registry</span> <span class="hljs-variable">registry</span> <span class="hljs-operator">=</span>registryFactory.getRegistry(URL.valueOf(<span class="hljs-string">&quot;zookeeper://10.20.153.10:2181&quot;</span>));<br>registry.register(URL.valueOf(<span class="hljs-string">&quot;override://0.0.0.0/com.foo.BarService?category=configurators&amp;dynamic=false&amp;application=foo&amp;mock=force:return+null&quot;</span>));<br></code></pre></td></tr></table></figure><p>mock&#x3D;force:return+null 表示消费方对该服务的方法调用都直接返回 null 值，不发起远程调用。用来屏蔽不重要服务不可用时对调用方的影响。</p><p>还可以改为 mock&#x3D;fail:return+null 表示消费方对该服务的方法调用在失败后，再返回 null值，不抛异常。用来容忍不重要服务不稳定时对调用方的影响。</p><p>降级测试（force方式）进入Dubbo Admin进行配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">configVersion:</span> <span class="hljs-string">v2.7</span><br><span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">configs:</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">side:</span> <span class="hljs-string">consumer</span><br><span class="hljs-attr">addresses:</span><br><span class="hljs-bullet">-</span> <span class="hljs-number">0.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><br><span class="hljs-attr">parameters:</span><br><span class="hljs-attr">timeout:</span> <span class="hljs-number">3000</span><br><span class="hljs-attr">mock:</span> <span class="hljs-string">&#x27;force:return null&#x27;</span><br></code></pre></td></tr></table></figure><p>客户端调用， 会直接屏蔽， 并且服务端控制台不会有任何调用记录：</p><p><img src="/blog/./assets/image-rxl2doctkav830fp84p54ai.PNG" alt="返回null"></p><p>降级测试（fail方式）进入Dubbo Admin配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">configVersion:</span> <span class="hljs-string">v2.7</span><br><span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span><br><span class="hljs-attr">configs:</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">side:</span> <span class="hljs-string">consumer</span><br><span class="hljs-attr">addresses:</span><br><span class="hljs-bullet">-</span> <span class="hljs-number">0.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><br><span class="hljs-attr">parameters:</span><br><span class="hljs-attr">timeout:</span> <span class="hljs-number">1000</span><br><span class="hljs-attr">mock:</span> <span class="hljs-string">&#x27;fail:return null&#x27;</span><br></code></pre></td></tr></table></figure><p>这里为了触发调用异常， 超时时间缩短为1秒。</p><p>注意这里的超时时间可能不会起作用，最终的超时时间还是得看项目中配置，故在服务提供方将线程休眠时间延长，造成调用超时。客户端调用， 会出现降级显示为空,同时服务端会有调用记录显示（请求会进入服务端，但由于超时， 调用是失败）：</p><p><img src="/blog/./assets/image-i59ctmpgtl1warig85mwupa.PNG" alt="调用失败"></p><h3 id="并发与连接控制"><a href="#并发与连接控制" class="headerlink" title="并发与连接控制"></a>并发与连接控制</h3><p>实际运用， 会碰到高并发与峰值场景， Dubbo是可以做到并发与连接数控制。可使用jmeter进行测试。</p><p><strong>并发数控制</strong></p><ol><li><p>服务端控制</p><p>服务级别</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:service</span> <span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span> <span class="hljs-attr">executes</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure><p>服务器端并发执行（或占用线程池线程数）不能超过 10 个。</p><p>方法级别</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:service</span></span><br><span class="hljs-tag"><span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span>&gt;</span><br> <span class="hljs-tag">&lt;<span class="hljs-name">dubbo:method</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sayHello&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">executes</span>=<span class="hljs-string">&quot;3&quot;</span> /&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">dubbo:service</span>&gt;</span><br></code></pre></td></tr></table></figure><p>限制具体的方法，服务器端并发执行（或占用线程池线程数）</p><p>不能超过3 个。</p></li><li><p>客户端控制</p></li></ol><p>调用的服务控制</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:reference</span></span><br><span class="hljs-tag"><span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span> <span class="hljs-attr">actives</span>=<span class="hljs-string">&quot;10&quot;</span></span><br><span class="hljs-tag">/&gt;</span><br></code></pre></td></tr></table></figure><p>每客户端并发执行（或占用连接的请求数）不能超过 10 个。</p><p>调用的服务方法控制</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:reference</span></span><br><span class="hljs-tag"><span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span>&gt;</span><br>2 <span class="hljs-tag">&lt;<span class="hljs-name">dubbo:method</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sayHello&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">actives</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span><br>3 <span class="hljs-tag">&lt;/<span class="hljs-name">dubbo:service</span>&gt;</span><br></code></pre></td></tr></table></figure><blockquote><p>注意：dubbo:reference比dubbo:service优先。</p></blockquote><ol start="3"><li>客户端负载配置</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:reference</span> <span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">loadbalance</span>=<span class="hljs-string">&quot;leastactive&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure><p>负载策略为最小连接数时， Loadbalance 会调用并发数最小的Provider。</p><p>连接数控制</p><ol><li>服务端连接控制</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:provider</span> <span class="hljs-attr">protocol</span>=<span class="hljs-string">&quot;dubbo&quot;</span> <span class="hljs-attr">accepts</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure><p>限制服务器端接受的连接不能超过 10 个</p><ol start="2"><li>客户端连接控制</li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dubbo:reference</span> <span class="hljs-attr">interface</span>=<span class="hljs-string">&quot;com.foo.BarService&quot;</span></span><br><span class="hljs-tag"><span class="hljs-attr">connections</span>=<span class="hljs-string">&quot;10&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure><p>限制客户端服务使用连接不能超过 10 个</p><blockquote><p>注意：如果 dubbo:service 和 dubbo:reference 都配了 connections，dubbo:reference 优先。</p></blockquote><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Dubbo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Spring</tag>
+      
+      <tag>Dubbo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ZooKeeper简介与原理</title>
     <link href="/blog/2020/03/ZooKeeper%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html"/>
     <url>/blog/2020/03/ZooKeeper%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html</url>
@@ -1544,8 +1513,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>ZooKeeper</category>
       
@@ -1611,8 +1578,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1644,8 +1609,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1674,8 +1637,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>Linux</category>
       
@@ -1706,8 +1667,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Linux</category>
       
     </categories>
@@ -1736,8 +1695,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1768,8 +1725,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>Linux</category>
       
     </categories>
@@ -1798,8 +1753,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>Linux</category>
       
@@ -1830,8 +1783,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1860,8 +1811,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1892,8 +1841,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1922,8 +1869,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -1954,8 +1899,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -1984,8 +1927,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -2016,8 +1957,6 @@
       
       <category>学习</category>
       
-      <category>计算机</category>
-      
       <category>操作演示</category>
       
     </categories>
@@ -2046,8 +1985,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>操作演示</category>
       
@@ -2135,8 +2072,6 @@
     <categories>
       
       <category>学习</category>
-      
-      <category>计算机</category>
       
       <category>并发编程</category>
       
