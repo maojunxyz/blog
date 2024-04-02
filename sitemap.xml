@@ -614,6 +614,33 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/2020/04/Ribbon%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html</loc>
+    
+    <lastmod>2020-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/2020/04/OpenFeign%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html</loc>
+    
+    <lastmod>2020-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/2020/04/Consul%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html</loc>
+    
+    <lastmod>2020-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/2020/04/Dubbo%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html</loc>
     
     <lastmod>2020-04-01</lastmod>
@@ -666,6 +693,20 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/Consul/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://maojun.xyz/blog/tags/Spring/</loc>
@@ -773,7 +814,21 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/tags/OpenFeign/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/tags/Redis/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/Ribbon/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -844,34 +899,6 @@
   
   <url>
     <loc>https://maojun.xyz/blog/tags/%E5%8F%AF%E8%A7%81%E6%80%A7/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/tags/JavaScript/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://maojun.xyz/blog/tags/%E6%A0%88/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1018,13 +1045,6 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/tags/Insomnia/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/tags/Grep/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1046,6 +1066,13 @@
   </url>
   
   <url>
+    <loc>https://maojun.xyz/blog/tags/Insomnia/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://maojun.xyz/blog/tags/%E7%BD%91%E9%A1%B5%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1061,6 +1088,34 @@
   
   <url>
     <loc>https://maojun.xyz/blog/tags/docker/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/JavaScript/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/tags/%E6%A0%88/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1384,14 +1439,21 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Java/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Git/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Dubbo/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Consul/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Java/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1405,7 +1467,14 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Git/</loc>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Dubbo/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/OpenFeign/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1413,6 +1482,13 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Redis/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Ribbon/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1440,13 +1516,6 @@
   </url>
   
   <url>
-    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -1455,6 +1524,13 @@
   
   <url>
     <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
