@@ -1008,11 +1008,11 @@
     
     <tags>
       
+      <tag>性能测试</tag>
+      
       <tag>软件测试</tag>
       
       <tag>负载测试</tag>
-      
-      <tag>性能测试</tag>
       
       <tag>压力测试</tag>
       
@@ -1470,6 +1470,37 @@
   
   
   <entry>
+    <title>Gatling性能测试工具简介和入门</title>
+    <link href="/blog/2022/03/Gatling%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html"/>
+    <url>/blog/2022/03/Gatling%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>Gatling</strong>是一款基于<strong>Scala</strong>开发的高性能服务器端性能测试工具。具备以下特点:</p><ul><li>支持Akka Actors和Async IO；</li><li>支持实时生成html动态轻量级报表；</li><li>支持DSL脚本；</li><li>支持插件的开发和使用；</li><li>支持脚本的录制和导入；</li><li>社区版开源免费，可以二次开发。</li></ul><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a href="https://gatling.io/products">下载地址</a></p><p><img src="/blog/./assets/image-20240405174953012.png" alt="开源版下载"></p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol><li><p>解压下载的工具包后进入根目录</p><p><img src="/blog/./assets/image-v0zxc0uvyf9nptxyonz8drm.PNG" alt="目录结构"></p></li></ol><ul><li><p>bin目录</p><p>启动脚本及基本配置 gatling.bat（或gatling.sh），通过执行它来开启压测；</p></li><li><p>conf目录</p><p>些配置项，包括一些目录的配置，基础协议的配置</p></li><li><p>lib目录</p><p>依赖的第三方jar包，自己开发的插件或压测脚本依赖的第三方jar也可以放入该目录下</p></li><li><p>results目录</p><p>每次压测的执行结果包括结果记录和生成的html报表</p></li><li><p>user-files目录</p><p>有两个目录，resources和simulations，resources目录下存放压测参数化数据文件和脚本中用到的其他配置文件；simulations目录下存放脚本源码，当simulations目录下存在脚本源码时，每次启动压测都会先进行脚本编译，编译后的脚本会存放到target&#x2F;test-classes目录下</p></li></ul><ol start="2"><li>运行脚本</li></ol><ul><li>Windows下执行bin\gatling.bat</li><li>Linux下执行bin&#x2F;gatling.sh</li></ul><p>工具会先对user-files&#x2F;simulations下的脚本进行编译，然后展示target&#x2F;test-classes下的所有已经编译的脚本。</p><p><img src="/blog/./assets/image-nank3fhc9se38fugqp64lic.PNG" alt="压测脚本列表"></p><ol start="3"><li>选择一个脚本编号，然后回车，输入压测描述，再次回车开始发压</li></ol><p><img src="/blog/./assets/image-53a9vt9djmvyb665uk4g7pj.PNG" alt="选择脚本执行"></p><p>压测结束后，会在控制台会展示压测结果信息。</p><p><img src="/blog/./assets/image-ztumab65rcjy32htve2m7xz.PNG" alt="压测结果"></p><ul><li>包括请求总数（成功&#x2F;失败）</li><li>最小响应时间（成功&#x2F;失败）</li><li>最大响应时间（成功&#x2F;失败）</li><li>平均响应时间（成功&#x2F;失败）</li><li>标准差（成功&#x2F;失败）</li><li>响应时间TP50（成功&#x2F;失败）</li><li>响应时间TP75（成功&#x2F;失败）</li><li>响应时间TP90（成功&#x2F;失败）</li><li>响应时间TP99（成功&#x2F;失败）</li><li>QPS （成功&#x2F;失败）</li><li>响应时间分布（800ms-1200ms）</li></ul><p>同时在控制台中也会显示生成的html报表地址。</p><h2 id="压测报告"><a href="#压测报告" class="headerlink" title="压测报告"></a>压测报告</h2><ul><li>压测概览（包括响应时间的大体分布、成功&#x2F;失败占比、QPS、响应时间等）</li></ul><p><img src="/blog/./assets/image-u41kqaxn6wp5mcheifh9vdv.PNG" alt="压测概览"></p><ul><li><p>活跃用户数（描述在时间轴上每一秒的实际并发用户数）</p><p><img src="/blog/./assets/image-c61i4i2onrjfttx34e6pbcm.PNG" alt="活跃用户数"></p></li><li><p>响应时间详细分布（描述每个响应时间的请求数）</p><p><img src="/blog/./assets/image-31h00mqopcm39zsrd7fn01q.PNG" alt="相应时间分布"></p></li><li><p>响应时间百分位数（响应时间在时间轴上的各个百分位数）</p><p><img src="/blog/./assets/image-y0nlx9kc1tjmnxs7ql9t5ge.PNG" alt="相应时间百分比"></p></li><li><p>每秒请求数（每秒发送请求在时间轴上的个数）</p><p><img src="/blog/./assets/image-5duojboh0e04pmw3a4yaw7r.PNG" alt="每秒请求数"></p></li><li><p>每秒响应数（每秒收到响应在时间轴上的个数）</p><p><img src="/blog/./assets/image-25xe0ohek4uiizqxcy8z3c8.PNG" alt="每秒响应数"></p></li><li><p>RPS的响应时间分布（展示了每个RPS下的响应时间分布）</p><p><img src="/blog/./assets/image-z43yepcf23yktkgnfdmqyoo.PNG" alt="RPS响应时间分布"></p></li></ul><p>（完）</p><p><strong>参考</strong></p><p><a href="https://help.aliyun.com/zh/pts/interpretation-of-concurrent-users-and-rps-and-tps">并发用户、RPS、TPS的解读</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Gatling</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>软件</tag>
+      
+      <tag>Gatling</tag>
+      
+      <tag>性能测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>红帽RHCE学习总结</title>
     <link href="/blog/2022/02/%E7%BA%A2%E5%B8%BDRHCE%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.html"/>
     <url>/blog/2022/02/%E7%BA%A2%E5%B8%BDRHCE%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.html</url>
@@ -1813,9 +1844,9 @@
     
     <tags>
       
-      <tag>Linux</tag>
-      
       <tag>软件</tag>
+      
+      <tag>Linux</tag>
       
       <tag>Vifm</tag>
       
