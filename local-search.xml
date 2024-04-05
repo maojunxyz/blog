@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>MPV播放器默认快捷键</title>
+    <link href="/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html"/>
+    <url>/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="键盘控制"><a href="#键盘控制" class="headerlink" title="键盘控制"></a>键盘控制</h2><table><thead><tr><th>快捷键</th><th>功能</th><th>配置项</th></tr></thead><tbody><tr><td>← →</td><td>前进&#x2F;后退5秒，加shift变为移动1秒</td><td><code>--hr-seek</code></td></tr><tr><td>↑↓</td><td>前进&#x2F;后退60秒，加shift变为5秒</td><td><code>--hr-seek</code></td></tr><tr><td>Ctrl+← &#x2F;→</td><td>切换字幕</td><td>sub-seek</td></tr><tr><td>Ctrl+Shift+← &#x2F;→</td><td>调整字幕延迟</td><td></td></tr><tr><td>[ 和 ]</td><td>减少&#x2F;增加当前播放速度的10%</td><td></td></tr><tr><td>{ 和 }</td><td>减半&#x2F;加倍播放速度</td><td></td></tr><tr><td>&lt; 和 &gt;</td><td>在播放列表中后退&#x2F;前进</td><td></td></tr><tr><td>p或空格</td><td>暂停&#x2F;播放</td><td></td></tr><tr><td>,&#x2F;.</td><td>前&#x2F;后逐帧播放，点一下移动一帧</td><td></td></tr><tr><td><kbd>q</kbd></td><td>退出</td><td></td></tr><tr><td><kbd>Q</kbd></td><td>退出，但保存当前播放位置</td><td></td></tr><tr><td>&#x2F; 和* ， 9和0</td><td>减少&#x2F;增加音量</td><td></td></tr><tr><td>m</td><td>静音</td><td></td></tr><tr><td>-</td><td>循环视频轨</td><td></td></tr><tr><td>#</td><td>循环音轨</td><td></td></tr><tr><td>f</td><td>全屏切换</td><td>–fs</td></tr><tr><td>ESC</td><td>退出全屏</td><td></td></tr><tr><td><kbd>Shift</kbd>+<kbd>t</kbd></td><td>置顶&#x2F;取消置顶</td><td></td></tr><tr><td>w 和 W</td><td>减少&#x2F;增加平移和扫描范围。目前 <code>e</code> 键与 <code>W</code> 键的作用相同但不赞成使用</td><td></td></tr><tr><td>o (或 P)</td><td>按住显示进度条</td><td></td></tr><tr><td>v</td><td>显示或隐藏字幕</td><td></td></tr><tr><td>j&#x2F;J</td><td>切换字幕</td><td></td></tr><tr><td>z 和 Z</td><td>调节字幕延迟0.1秒</td><td></td></tr><tr><td>l</td><td>设置ab循环点</td><td>ab-loop</td></tr><tr><td>L</td><td>切换无限循环</td><td></td></tr><tr><td>Ctrl + 和 Ctrl -</td><td>调节音轨延迟0.1秒</td><td></td></tr><tr><td>u</td><td>去除字幕样式</td><td>–sub-ass-override</td></tr><tr><td>V</td><td>切换字幕的VSFilter长宽比兼容模式</td><td>–sub-ass-vsfilter-aspect-compat</td></tr><tr><td>r 和 R</td><td>调整字幕位置</td><td></td></tr><tr><td>s</td><td>截屏</td><td></td></tr><tr><td>S</td><td>截屏（不截字幕）</td><td></td></tr><tr><td>Ctrl+s</td><td>截屏（包含界面）</td><td></td></tr><tr><td>PGUP PGDWN</td><td>切换章节</td><td>–chapter-seek-threshold</td></tr><tr><td>Shift+PGUP&#x2F;PGDWN</td><td>后退&#x2F;前进10分钟</td><td></td></tr><tr><td>d</td><td>激活&#x2F;注销去隔行扫描器</td><td></td></tr><tr><td>A</td><td>循环长宽比覆盖</td><td></td></tr><tr><td>Ctrl h</td><td>切换硬件加速</td><td></td></tr><tr><td>Alt+↑↓← →</td><td>视频位置调整</td><td></td></tr><tr><td>Alt + 和 Alt -</td><td>缩放视频</td><td></td></tr><tr><td>Alt+BACKSPACE</td><td>重置视频位置和缩放</td><td></td></tr><tr><td>F8</td><td>显示播放列表</td><td></td></tr><tr><td>F9</td><td>显示视音频stream列表</td><td></td></tr><tr><td>i 和 I</td><td>显示几秒&#x2F;切换 详细状态信息显示（1,2,3翻页）</td><td></td></tr><tr><td>Del</td><td>调节OSC显示方式（进度条之类的）</td><td></td></tr><tr><td>1 和 2</td><td>对比度调节</td><td></td></tr><tr><td>3 和 4</td><td>明亮度调节</td><td></td></tr><tr><td>5 和 6</td><td>调整伽马Adjust gamma</td><td></td></tr><tr><td>7 和 8</td><td>调节饱和度</td><td></td></tr><tr><td>Alt+0</td><td>50%原视频大小</td><td></td></tr><tr><td>Alt+1</td><td>原视频大小</td><td></td></tr><tr><td>Alt+2</td><td>2倍原视频大小</td><td></td></tr></tbody></table><h2 id="鼠标控制"><a href="#鼠标控制" class="headerlink" title="鼠标控制"></a>鼠标控制</h2><table><thead><tr><th>鼠标操作</th><th>功能</th></tr></thead><tbody><tr><td>左键双击</td><td>切换全屏的开&#x2F;关</td></tr><tr><td>右键</td><td>切换暂停的开&#x2F;关</td></tr><tr><td>前进&#x2F;后退键</td><td>跳至播放列表中的下&#x2F;上一个条目</td></tr><tr><td>滚轮向上&#x2F;下</td><td>减少&#x2F;增加音量</td></tr><tr><td>滚轮向左&#x2F;右</td><td>向前&#x2F;向后跳转10秒</td></tr></tbody></table><p><img src="/blog/./assets/v2-672e28d79cc4d140187d84c25a79aeae_1440w.png" alt="MPV默认快捷键表"></p><p>（完）</p><p><strong>参考</strong></p><ul><li><a href="https://mpv.io/manual/master/#keyboard-control">keyboard-control</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>操作演示</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MPV</tag>
+      
+      <tag>快捷键</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Markdown导出带大纲目录的Html</title>
     <link href="/blog/2024/04/Markdown%E5%AF%BC%E5%87%BA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9B%AE%E5%BD%95%E7%9A%84Html.html"/>
     <url>/blog/2024/04/Markdown%E5%AF%BC%E5%87%BA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9B%AE%E5%BD%95%E7%9A%84Html.html</url>

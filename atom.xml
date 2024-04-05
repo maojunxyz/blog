@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2024-04-04T23:15:31.000Z</updated>
+  <updated>2024-04-05T17:12:50.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MPV播放器默认快捷键</title>
+    <link href="https://maojun.xyz/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html"/>
+    <id>https://maojun.xyz/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html</id>
+    <published>2024-04-05T17:12:50.000Z</published>
+    <updated>2024-04-05T17:12:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;键盘控制&quot;&gt;&lt;a href=&quot;#键盘控制&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="操作演示" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/"/>
+    
+    
+    <category term="MPV" scheme="https://maojun.xyz/blog/tags/MPV/"/>
+    
+    <category term="快捷键" scheme="https://maojun.xyz/blog/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown导出带大纲目录的Html</title>
@@ -177,7 +206,7 @@
     <link href="https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T11:57:45.000Z</published>
-    <updated>2024-04-04T15:16:09.151Z</updated>
+    <updated>2024-04-05T09:23:25.363Z</updated>
     
     
       
@@ -204,7 +233,7 @@
     <link href="https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T10:57:45.000Z</published>
-    <updated>2024-04-04T15:16:09.151Z</updated>
+    <updated>2024-04-05T09:23:25.363Z</updated>
     
     
       
@@ -590,35 +619,6 @@
     <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
     
     <category term="ConcurrentHashMap" scheme="https://maojun.xyz/blog/tags/ConcurrentHashMap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>栈</title>
-    <link href="https://maojun.xyz/blog/2023/11/%E6%A0%88.html"/>
-    <id>https://maojun.xyz/blog/2023/11/%E6%A0%88.html</id>
-    <published>2023-11-02T22:02:00.000Z</published>
-    <updated>2023-11-04T17:45:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数据结构和算法" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
-    
-    <category term="栈" scheme="https://maojun.xyz/blog/tags/%E6%A0%88/"/>
     
   </entry>
   
