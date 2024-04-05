@@ -19,19 +19,6 @@
   <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
   
     <meta name="description" content="区别Cookie、Session和Token是用于身份验证和用户状态管理的不同机制。它们在Web应用程序中的使用有一些关键区别：  Cookie（HTTP Cookie）：  Cookie是一种客户端存储数据的机制，通常是一个小的文本文件，Key和Value的字符串格式。 服务器可以通过HTTP响应的Set-Cookie头将Cookie发送给客户端浏览器，然后浏览器将Cookie保存并在后续请求中">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Cookie、Session、Token的区别">
-<meta property="og:url" content="https://maojun.xyz/blog/2023/11/Cookie%E3%80%81Session%E3%80%81Token%E7%9A%84%E5%8C%BA%E5%88%AB.html">
-<meta property="og:site_name" content="毛俊的博客">
-<meta property="og:description" content="区别Cookie、Session和Token是用于身份验证和用户状态管理的不同机制。它们在Web应用程序中的使用有一些关键区别：  Cookie（HTTP Cookie）：  Cookie是一种客户端存储数据的机制，通常是一个小的文本文件，Key和Value的字符串格式。 服务器可以通过HTTP响应的Set-Cookie头将Cookie发送给客户端浏览器，然后浏览器将Cookie保存并在后续请求中">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-05T13:36:00.000Z">
-<meta property="article:modified_time" content="2023-11-05T13:36:00.000Z">
-<meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="Cookie">
-<meta property="article:tag" content="Session">
-<meta property="article:tag" content="Token">
-<meta name="twitter:card" content="summary_large_image">
   
   
   
@@ -77,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;

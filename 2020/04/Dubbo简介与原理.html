@@ -19,43 +19,6 @@
   <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
   
     <meta name="description" content="Dubbo架构体系概述Dubbo是一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring框架无缝集成。同时Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：  面向接口的远程方法调用。 智能容错和负载均衡。 服务自动注册和发现。  运行架构 节点角色   节点 角色说明    Provider 暴露服务的服务提供方">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Dubbo简介与原理">
-<meta property="og:url" content="https://maojun.xyz/blog/2020/04/Dubbo%E7%AE%80%E4%BB%8B%E4%B8%8E%E5%8E%9F%E7%90%86.html">
-<meta property="og:site_name" content="毛俊的博客">
-<meta property="og:description" content="Dubbo架构体系概述Dubbo是一个高性能优秀的服务框架，使得应用可通过高性能的 RPC 实现服务的输出和输入功能，可以和 Spring框架无缝集成。同时Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了三大核心能力：  面向接口的远程方法调用。 智能容错和负载均衡。 服务自动注册和发现。  运行架构 节点角色   节点 角色说明    Provider 暴露服务的服务提供方">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-ofctlzky2dk2e8v8gaq4i6t.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-3gg2d8fkulhczchlfayf754.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-a0hfuid4bus35o8pjxxxcgd.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-ivymjilkeodmg19pyqke383.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-8d61uru53nes6o12oejf5xt.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-exqvt54zjjlud8ngxir9jsl.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-rg710jvtsndtjaeusw132fp.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-udh8pihyio84whkpyqspo5b.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-03ngyrfq45zdgvrrpsbwuty.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-6deg835f0x11eo2w85t796f.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-z8w65atrb412ff8vk8a9pcs.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-w23jrl0ykmrf8wpqf7xv4ok.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-k7kwuhcckwpijc5yalcee86.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-4ueexpcob5sw60ixk4z137o.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-bydm1ddiojjppwtu69hzuy0.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-efmckq9g1rrri3d9y2yapql.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-wog3j8ay7sm7xrsj6smyk16.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-uge7f3cfqhp7omwtdzrau8r.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-0nainutsgxbd1b21ysg0tcm.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-xu4fu6stfeanc3e0eynsydb.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-ap7lali9xsuwd8v8iayp9ns.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-mu14jewsnvpux223sq7hgxm.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-rxl2doctkav830fp84p54ai.PNG">
-<meta property="og:image" content="https://maojun.xyz/blog/assets/image-i59ctmpgtl1warig85mwupa.PNG">
-<meta property="article:published_time" content="2020-04-01T23:02:50.000Z">
-<meta property="article:modified_time" content="2020-04-01T23:02:50.000Z">
-<meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="Spring">
-<meta property="article:tag" content="Dubbo">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://maojun.xyz/blog/assets/image-ofctlzky2dk2e8v8gaq4i6t.PNG">
   
   
   
@@ -101,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;

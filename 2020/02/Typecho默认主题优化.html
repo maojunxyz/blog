@@ -19,18 +19,6 @@
   <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
   
     <meta name="description" content="优化需求在博客迁移到Typecho[1]文章中，介绍了迁移到Typecho后做的一些配置。为了让默认主题发挥出更好的效果，在原基础上对其进一步优化。主要优化的内容有：  前置上下篇文章 文章页编辑功能 独立页编辑功能 文章页阅读次数 文章页加载时间  前置上下篇文章Typecho默认主题的上下篇文章是在评论输入框后面的。如果前置上下篇文章会和文章之间的关联性更强，方便用户点击查看。 编辑post.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Typecho 默认主题优化">
-<meta property="og:url" content="https://maojun.xyz/blog/2020/02/Typecho%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96.html">
-<meta property="og:site_name" content="毛俊的博客">
-<meta property="og:description" content="优化需求在博客迁移到Typecho[1]文章中，介绍了迁移到Typecho后做的一些配置。为了让默认主题发挥出更好的效果，在原基础上对其进一步优化。主要优化的内容有：  前置上下篇文章 文章页编辑功能 独立页编辑功能 文章页阅读次数 文章页加载时间  前置上下篇文章Typecho默认主题的上下篇文章是在评论输入框后面的。如果前置上下篇文章会和文章之间的关联性更强，方便用户点击查看。 编辑post.">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-24T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-27T09:47:00.000Z">
-<meta property="article:author" content="毛 俊">
-<meta property="article:tag" content="博客平台">
-<meta property="article:tag" content="Typecho">
-<meta name="twitter:card" content="summary_large_image">
   
   
   
@@ -76,7 +64,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
