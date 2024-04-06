@@ -18,11 +18,11 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
   
-    <meta name="description" content="简介Gatling是一款基于Scala开发的高性能服务器端性能测试工具。具备以下特点:  支持Akka Actors和Async IO； 支持实时生成html动态轻量级报表； 支持DSL脚本； 支持插件的开发和使用； 支持脚本的录制和导入； 社区版开源免费，可以二次开发。  下载下载地址  使用 解压下载的工具包后进入根目录     bin目录 启动脚本及基本配置 gatling.bat（或gat">
+    <meta name="description" content="开放模型开放模型中我们可以主动的控制用户的到达率。  开放模型的好处  了解每阶段用户真实的请求量，与并发的不可控的情况下，这种场景会更加偏向于真实。  每个请求链或者请求都是一个新的连接，复用较少，会发现以前一些因为连接数不够而为发现的问题。  请求持续注入，当系统已经达到性能瓶颈时，不会与并发一样减少请求量，而是会以设置的请求量持续注入。    开放模型的坏处  每个虚拟用户都有自己的连接。如">
   
   
   
-  <title>Gatling性能测试工具简介和入门 - 毛俊的博客</title>
+  <title>Gatling压测模型和使用参数介绍 - 毛俊的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Gatling性能测试工具简介和入门"></span>
+            <span id="subtitle" data-typed-text="Gatling压测模型和使用参数介绍"></span>
           
         </div>
 
@@ -231,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-28 17:51" pubdate>
-          2022年3月28日 下午
+        <time datetime="2022-03-29 14:33" pubdate>
+          2022年3月29日 下午
         </time>
       </span>
     
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          701 字
+          908 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          6 分钟
+          8 分钟
         
       </span>
     
@@ -304,100 +304,97 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Gatling性能测试工具简介和入门</h1>
+            <h1 id="seo-header">Gatling压测模型和使用参数介绍</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p><strong>Gatling</strong>是一款基于<strong>Scala</strong>开发的高性能服务器端性能测试工具。具备以下特点:</p>
+                <h2 id="开放模型"><a href="#开放模型" class="headerlink" title="开放模型"></a>开放模型</h2><p>开放模型中我们可以主动的控制用户的到达率。</p>
 <ul>
-<li>支持Akka Actors和Async IO；</li>
-<li>支持实时生成html动态轻量级报表；</li>
-<li>支持DSL脚本；</li>
-<li>支持插件的开发和使用；</li>
-<li>支持脚本的录制和导入；</li>
-<li>社区版开源免费，可以二次开发。</li>
-</ul>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p><a target="_blank" rel="noopener" href="https://gatling.io/products">下载地址</a></p>
-<p><img src="/blog/./assets/image-20240405174953012.png" srcset="/blog/img/loading.gif" lazyload alt="开源版下载"></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
-<li><p>解压下载的工具包后进入根目录</p>
-<p><img src="/blog/./assets/image-v0zxc0uvyf9nptxyonz8drm.PNG" srcset="/blog/img/loading.gif" lazyload alt="目录结构"></p>
-</li>
-</ol>
+<li><p>开放模型的好处</p>
 <ul>
-<li><p>bin目录</p>
-<p>启动脚本及基本配置 gatling.bat（或gatling.sh），通过执行它来开启压测；</p>
+<li><p>了解每阶段用户真实的请求量，与并发的不可控的情况下，这种场景会更加偏向于真实。</p>
 </li>
-<li><p>conf目录</p>
-<p>些配置项，包括一些目录的配置，基础协议的配置</p>
+<li><p>每个请求链或者请求都是一个新的连接，复用较少，会发现以前一些因为连接数不够而为发现的问题。</p>
 </li>
-<li><p>lib目录</p>
-<p>依赖的第三方jar包，自己开发的插件或压测脚本依赖的第三方jar也可以放入该目录下</p>
-</li>
-<li><p>results目录</p>
-<p>每次压测的执行结果包括结果记录和生成的html报表</p>
-</li>
-<li><p>user-files目录</p>
-<p>有两个目录，resources和simulations，resources目录下存放压测参数化数据文件和脚本中用到的其他配置文件；simulations目录下存放脚本源码，当simulations目录下存在脚本源码时，每次启动压测都会先进行脚本编译，编译后的脚本会存放到target&#x2F;test-classes目录下</p>
+<li><p>请求持续注入，当系统已经达到性能瓶颈时，不会与并发一样减少请求量，而是会以设置的请求量持续注入。</p>
 </li>
 </ul>
-<ol start="2">
-<li>运行脚本</li>
-</ol>
+</li>
+<li><p>开放模型的坏处</p>
 <ul>
-<li>Windows下执行bin\gatling.bat</li>
-<li>Linux下执行bin&#x2F;gatling.sh</li>
+<li>每个虚拟用户都有自己的连接。如果生命周期短，用户创造率很高，那么将不得不打开和关闭大量连接。</li>
+<li>与服务端连接数较多，当服务端处理过慢出现堆积的时候，会导致压测脚本崩溃。</li>
 </ul>
-<p>工具会先对user-files&#x2F;simulations下的脚本进行编译，然后展示target&#x2F;test-classes下的所有已经编译的脚本。</p>
-<p><img src="/blog/./assets/image-nank3fhc9se38fugqp64lic.PNG" srcset="/blog/img/loading.gif" lazyload alt="压测脚本列表"></p>
-<ol start="3">
-<li>选择一个脚本编号，然后回车，输入压测描述，再次回车开始发压</li>
-</ol>
-<p><img src="/blog/./assets/image-53a9vt9djmvyb665uk4g7pj.PNG" srcset="/blog/img/loading.gif" lazyload alt="选择脚本执行"></p>
-<p>压测结束后，会在控制台会展示压测结果信息。</p>
-<p><img src="/blog/./assets/image-ztumab65rcjy32htve2m7xz.PNG" srcset="/blog/img/loading.gif" lazyload alt="压测结果"></p>
+</li>
+</ul>
+<h3 id="一次性注入"><a href="#一次性注入" class="headerlink" title="一次性注入"></a>一次性注入</h3><p>设置了一次性注入的用户数</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">atOnceUsers(<span class="hljs-number">4</span>)<br></code></pre></td></tr></table></figure>
+
+
+
+<p><img src="/blog/./assets/image-jltwc0202rcaywr0t5k09ty.PNG" srcset="/blog/img/loading.gif" lazyload alt="一次性注入"></p>
+<h3 id="在指定时间内线性增长用户数到指定数量"><a href="#在指定时间内线性增长用户数到指定数量" class="headerlink" title="在指定时间内线性增长用户数到指定数量"></a>在指定时间内线性增长用户数到指定数量</h3><p>设置了总的用户数，然后设置一个分配总用户数的时间，每秒的用户数是一样的。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">rampUsers(<span class="hljs-number">4</span>).during(<span class="hljs-number">4.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-utx4scd6kgalt0aotyw4qu6.PNG" srcset="/blog/img/loading.gif" lazyload alt="线性增长用户"></p>
+<h3 id="恒定速率"><a href="#恒定速率" class="headerlink" title="恒定速率"></a>恒定速率</h3><h3 id="每秒固定用户数"><a href="#每秒固定用户数" class="headerlink" title="每秒固定用户数"></a>每秒固定用户数</h3><p>持续指定时间，设置了每秒注入的用户数，然后设置一个持续的时间，每秒的用户数是一样的。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">constantUsersPerSec(<span class="hljs-number">4</span>).during(<span class="hljs-number">4.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-i7fydusv68ke7gn5fx5xb6e.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒固定用户数恒定速率"></p>
+<h3 id="每秒用户数从指定值提升到指定值"><a href="#每秒用户数从指定值提升到指定值" class="headerlink" title="每秒用户数从指定值提升到指定值"></a>每秒用户数从指定值提升到指定值</h3><p>持续指定时间，每秒的用户数会增加。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">rampUsersPerSec(<span class="hljs-number">1</span>).to(<span class="hljs-number">4</span>).during(<span class="hljs-number">4.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-hxxs1z8f26jxksyf1c76jm9.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒用户数线性增长恒定速率"></p>
+<h3 id="随机速率"><a href="#随机速率" class="headerlink" title="随机速率"></a>随机速率</h3><h3 id="每秒固定用户数-1"><a href="#每秒固定用户数-1" class="headerlink" title="每秒固定用户数"></a>每秒固定用户数</h3><p>持续指定时间（每秒的用户数是一样的，但因为是在毫秒级别随机，所有用户数曲线会有波动）。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">constantUsersPerSec(<span class="hljs-number">4</span>).during(<span class="hljs-number">4.</span>seconds).randomized<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-3uv3bwpp4xipfl72jaa9k9q.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒固定用户数随机速率"></p>
+<h3 id="每秒用户数从指定值提升到指定值-1"><a href="#每秒用户数从指定值提升到指定值-1" class="headerlink" title="每秒用户数从指定值提升到指定值"></a>每秒用户数从指定值提升到指定值</h3><p>持续指定时间(每秒的用户数会线性增加到一个指定值，又因为毫秒级别的随机导致曲线会存在波动）。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">rampUsersPerSec(<span class="hljs-number">1</span>).to(<span class="hljs-number">4</span>).during(<span class="hljs-number">4.</span>seconds).randomized<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-64npwyakojlzdgo8tyl3mkt.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒用户数线性增长随机速率"></p>
+<h3 id="阶跃函数"><a href="#阶跃函数" class="headerlink" title="阶跃函数"></a>阶跃函数</h3><p>在指定时间内，以阶跃函数的方式逐步增加用户到指定数量（即每秒递增）（先增长，后衰减）</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">heavisideUsers(<span class="hljs-number">12</span>).during(<span class="hljs-number">5.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-2lut99xqkt5wofihbjjao0z.PNG" srcset="/blog/img/loading.gif" lazyload alt="阶跃函数"></p>
+<h3 id="开放模型负载"><a href="#开放模型负载" class="headerlink" title="开放模型负载"></a>开放模型负载</h3><p>从指定每秒用户数开始，每持续指定时间，在指定时间段内增加指定每秒用户数，如此循环增长指定次数（阶梯增加用户数）</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scala">incrementUsersPerSec(<span class="hljs-number">50</span>)<br>.times(<span class="hljs-number">10</span>)<br>.eachLevelLasting(<span class="hljs-number">120.</span>seconds)<br>.separatedByRampsLasting(<span class="hljs-number">5.</span>seconds)<br>.startingFrom(<span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-z66h6rbwz535ucw90hd906n.PNG" srcset="/blog/img/loading.gif" lazyload alt="开放负载模型"></p>
+<h2 id="封闭模型"><a href="#封闭模型" class="headerlink" title="封闭模型"></a>封闭模型</h2><p>封闭模型可控制并发用户数，保持一定的连接数并复用，减少因为建立连接所导致的问题，满负荷运行时，新用户只有在另一个用户退出后才能有效地进入系统。</p>
 <ul>
-<li>包括请求总数（成功&#x2F;失败）</li>
-<li>最小响应时间（成功&#x2F;失败）</li>
-<li>最大响应时间（成功&#x2F;失败）</li>
-<li>平均响应时间（成功&#x2F;失败）</li>
-<li>标准差（成功&#x2F;失败）</li>
-<li>响应时间TP50（成功&#x2F;失败）</li>
-<li>响应时间TP75（成功&#x2F;失败）</li>
-<li>响应时间TP90（成功&#x2F;失败）</li>
-<li>响应时间TP99（成功&#x2F;失败）</li>
-<li>QPS （成功&#x2F;失败）</li>
-<li>响应时间分布（800ms-1200ms）</li>
-</ul>
-<p>同时在控制台中也会显示生成的html报表地址。</p>
-<h2 id="压测报告"><a href="#压测报告" class="headerlink" title="压测报告"></a>压测报告</h2><ul>
-<li>压测概览（包括响应时间的大体分布、成功&#x2F;失败占比、QPS、响应时间等）</li>
-</ul>
-<p><img src="/blog/./assets/image-u41kqaxn6wp5mcheifh9vdv.PNG" srcset="/blog/img/loading.gif" lazyload alt="压测概览"></p>
+<li><p>封闭模型的好处</p>
 <ul>
-<li><p>活跃用户数（描述在时间轴上每一秒的实际并发用户数）</p>
-<p><img src="/blog/./assets/image-c61i4i2onrjfttx34e6pbcm.PNG" srcset="/blog/img/loading.gif" lazyload alt="活跃用户数"></p>
-</li>
-<li><p>响应时间详细分布（描述每个响应时间的请求数）</p>
-<p><img src="/blog/./assets/image-31h00mqopcm39zsrd7fn01q.PNG" srcset="/blog/img/loading.gif" lazyload alt="相应时间分布"></p>
-</li>
-<li><p>响应时间百分位数（响应时间在时间轴上的各个百分位数）</p>
-<p><img src="/blog/./assets/image-y0nlx9kc1tjmnxs7ql9t5ge.PNG" srcset="/blog/img/loading.gif" lazyload alt="相应时间百分比"></p>
-</li>
-<li><p>每秒请求数（每秒发送请求在时间轴上的个数）</p>
-<p><img src="/blog/./assets/image-5duojboh0e04pmw3a4yaw7r.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒请求数"></p>
-</li>
-<li><p>每秒响应数（每秒收到响应在时间轴上的个数）</p>
-<p><img src="/blog/./assets/image-25xe0ohek4uiizqxcy8z3c8.PNG" srcset="/blog/img/loading.gif" lazyload alt="每秒响应数"></p>
-</li>
-<li><p>RPS的响应时间分布（展示了每个RPS下的响应时间分布）</p>
-<p><img src="/blog/./assets/image-z43yepcf23yktkgnfdmqyoo.PNG" srcset="/blog/img/loading.gif" lazyload alt="RPS响应时间分布"></p>
+<li><p>可以快速了解到系统的极限值在哪里。</p>
+<ul>
+<li>线程复用，不会每秒打开或者关闭连接导致系统资源出现问题。</li>
+</ul>
 </li>
 </ul>
+</li>
+<li><p>封闭模型的坏处</p>
+<ul>
+<li><p>无法复现因为连接数导致的问题。</p>
+</li>
+<li><p>无法模拟真实用户的场景。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="固定并发用户数"><a href="#固定并发用户数" class="headerlink" title="固定并发用户数"></a>固定并发用户数</h3><p>指定时间内，固定并发用户数。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">constantConcurrentUsers(<span class="hljs-number">1000</span>).during(<span class="hljs-number">30.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-bk5edfnhwkszeuageh9ghpk.PNG" srcset="/blog/img/loading.gif" lazyload alt="固定并发用户数"></p>
+<h3 id="并发用户数从指定值增加到指定值"><a href="#并发用户数从指定值增加到指定值" class="headerlink" title="并发用户数从指定值增加到指定值"></a>并发用户数从指定值增加到指定值</h3><p>指定时间内，并发用户数从指定值增加到指定值。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scala">rampConcurrentUsers(<span class="hljs-number">10</span>).to(<span class="hljs-number">50</span>).during(<span class="hljs-number">10.</span>seconds)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-2onh0p8s99r3y2dphddqa40.PNG" srcset="/blog/img/loading.gif" lazyload alt="线性增长固定并发数"></p>
+<h3 id="封闭模型负载"><a href="#封闭模型负载" class="headerlink" title="封闭模型负载"></a>封闭模型负载</h3><p>从指定并发开始，每持续指定时间，在指定时间段内增加指定并发数，如此循环增长指定次数。</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs scala">incrementConcurrentUsers(<span class="hljs-number">100</span>)<br>.times(<span class="hljs-number">10</span>)<br>.eachLevelLasting(<span class="hljs-number">120.</span>seconds)<br>.separatedByRampsLasting(<span class="hljs-number">5.</span>seconds)<br>.startingFrom(<span class="hljs-number">100</span>)<br></code></pre></td></tr></table></figure>
+
+<p><img src="/blog/./assets/image-hk0wpk5yeowrdr97uyje1cs.PNG" srcset="/blog/img/loading.gif" lazyload alt="封闭负载模型"></p>
 <p>（完）</p>
-<p><strong>参考</strong></p>
-<p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/pts/interpretation-of-concurrent-users-and-rps-and-tps">并发用户、RPS、TPS的解读</a></p>
 
                 
               </div>
@@ -454,8 +451,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Gatling性能测试工具简介和入门</div>
-      <div>https://maojun.xyz/blog/2022/03/Gatling性能测试简介和入门.html</div>
+      <div>Gatling压测模型和使用参数介绍</div>
+      <div>https://maojun.xyz/blog/2022/03/Gatling压测模型和使用参数介绍.html</div>
     </div>
     <div class="license-meta">
       
@@ -467,7 +464,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月28日</div>
+          <div>2022年3月29日</div>
         </div>
       
       
@@ -511,9 +508,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2022/03/Gatling%E5%8E%8B%E6%B5%8B%E6%A8%A1%E5%9E%8B%E5%92%8C%E4%BD%BF%E7%94%A8%E5%8F%82%E6%95%B0%E4%BB%8B%E7%BB%8D.html" title="Gatling压测模型和使用参数介绍">
+                      <a href="/blog/2023/03/Arthas%E9%85%8D%E5%90%88Recaf%E8%B0%83%E8%AF%95%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81.html" title="Arthas配合Recaf调试服务端代码">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Gatling压测模型和使用参数介绍</span>
+                        <span class="hidden-mobile">Arthas配合Recaf调试服务端代码</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -521,8 +518,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2022/02/%E7%BA%A2%E5%B8%BDRHCE%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.html" title="红帽RHCE学习总结">
-                        <span class="hidden-mobile">红帽RHCE学习总结</span>
+                      <a href="/blog/2022/03/Gatling%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html" title="Gatling性能测试工具简介和入门">
+                        <span class="hidden-mobile">Gatling性能测试工具简介和入门</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
