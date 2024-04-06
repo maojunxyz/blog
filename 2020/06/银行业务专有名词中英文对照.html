@@ -1,0 +1,2122 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="银行业务专有名称   英文 中文    acquiring company 收购公司   bad loan 呆帐   chart of cash flow 现金流量表   clearly-established ownership 产权清晰   debt to equity 债转股   diversity of equities 股权多元化   economy of scale 规模经济   em">
+  
+  
+  
+  <title>银行业务专有名词中英文对照 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="银行业务专有名词中英文对照"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-06-18 13:56" pubdate>
+          2020年6月18日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">银行业务专有名词中英文对照</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="银行业务专有名称"><a href="#银行业务专有名称" class="headerlink" title="银行业务专有名称"></a>银行业务专有名称</h2><table>
+<thead>
+<tr>
+<th>英文</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>acquiring company</td>
+<td>收购公司</td>
+</tr>
+<tr>
+<td>bad loan</td>
+<td>呆帐</td>
+</tr>
+<tr>
+<td>chart of cash flow</td>
+<td>现金流量表</td>
+</tr>
+<tr>
+<td>clearly-established ownership</td>
+<td>产权清晰</td>
+</tr>
+<tr>
+<td>debt to equity</td>
+<td>债转股</td>
+</tr>
+<tr>
+<td>diversity of equities</td>
+<td>股权多元化</td>
+</tr>
+<tr>
+<td>economy of scale</td>
+<td>规模经济</td>
+</tr>
+<tr>
+<td>emerging economies</td>
+<td>新兴经济</td>
+</tr>
+<tr>
+<td>exchange-rate regime</td>
+<td>汇率机制</td>
+</tr>
+<tr>
+<td>fund and financing</td>
+<td>筹资融资</td>
+</tr>
+<tr>
+<td>global financial architecture</td>
+<td>全球金融体系</td>
+</tr>
+<tr>
+<td>global integration, globality</td>
+<td>全球一体化，全球化</td>
+</tr>
+<tr>
+<td>go public</td>
+<td>上市</td>
+</tr>
+<tr>
+<td>growth spurt</td>
+<td>（经济的）急剧增长</td>
+</tr>
+<tr>
+<td>have one’s ‘two commas</td>
+<td>百万富翁</td>
+</tr>
+<tr>
+<td>hedge against</td>
+<td>套期保值</td>
+</tr>
+<tr>
+<td>housing mortgage</td>
+<td>住房按揭</td>
+</tr>
+<tr>
+<td>holdings</td>
+<td>控股，所持股份</td>
+</tr>
+<tr>
+<td>holding company</td>
+<td>控股公司</td>
+</tr>
+<tr>
+<td>initial offerings</td>
+<td>原始股</td>
+</tr>
+<tr>
+<td>initial public offerings</td>
+<td>首次公募</td>
+</tr>
+<tr>
+<td>innovative business</td>
+<td>创新企业</td>
+</tr>
+<tr>
+<td>intellectual capital</td>
+<td>智力资本</td>
+</tr>
+<tr>
+<td>inter-bank lending</td>
+<td>拆借</td>
+</tr>
+<tr>
+<td>internet customer</td>
+<td>网上客户</td>
+</tr>
+<tr>
+<td>investment payoff period</td>
+<td>投资回收期</td>
+</tr>
+<tr>
+<td>joint-stock</td>
+<td>参股</td>
+</tr>
+<tr>
+<td>mall rat</td>
+<td>爱逛商店的年轻人</td>
+</tr>
+<tr>
+<td>means of production</td>
+<td>生产要素</td>
+</tr>
+<tr>
+<td>(the)medical cost social pool for major diseases</td>
+<td>大病医疗费用社会统筹</td>
+</tr>
+<tr>
+<td>mergers and acquisitions</td>
+<td>并购</td>
+</tr>
+<tr>
+<td>mobile-phone banking</td>
+<td>移动电话银行业</td>
+</tr>
+<tr>
+<td>moods</td>
+<td>人气</td>
+</tr>
+<tr>
+<td>net potato</td>
+<td>网虫</td>
+</tr>
+<tr>
+<td>non-store seling</td>
+<td>直销</td>
+</tr>
+<tr>
+<td>offering</td>
+<td>新股</td>
+</tr>
+<tr>
+<td>online-banking</td>
+<td>网上银行业</td>
+</tr>
+<tr>
+<td>online-finance</td>
+<td>在线金融</td>
+</tr>
+<tr>
+<td>online client</td>
+<td>（银行的）网上客户</td>
+</tr>
+<tr>
+<td>paper profit</td>
+<td>帐面收益</td>
+</tr>
+<tr>
+<td>physical assets</td>
+<td>有形资产</td>
+</tr>
+<tr>
+<td>project fund system</td>
+<td>项目资本金制度</td>
+</tr>
+<tr>
+<td>pyramid sale</td>
+<td>传销</td>
+</tr>
+<tr>
+<td>recapitalize</td>
+<td>资产重组</td>
+</tr>
+<tr>
+<td>regional corrency blocks</td>
+<td>地区货币集团</td>
+</tr>
+<tr>
+<td>regulate</td>
+<td>调控</td>
+</tr>
+<tr>
+<td>sell off</td>
+<td>变现</td>
+</tr>
+<tr>
+<td>share(stock) option</td>
+<td>期权，股票认购权</td>
+</tr>
+<tr>
+<td>smart card</td>
+<td>智能卡</td>
+</tr>
+<tr>
+<td>slash prices</td>
+<td>杀价</td>
+</tr>
+<tr>
+<td>spare capacity</td>
+<td>闲置的生产能力</td>
+</tr>
+<tr>
+<td>strong growth</td>
+<td>强劲的增长势头</td>
+</tr>
+<tr>
+<td>switch trade</td>
+<td>转手贸易</td>
+</tr>
+<tr>
+<td>take…public</td>
+<td>上市</td>
+</tr>
+<tr>
+<td>tap the idle assets</td>
+<td>盘活存量资产</td>
+</tr>
+<tr>
+<td>transaction</td>
+<td>（银行的）交易</td>
+</tr>
+<tr>
+<td>transfer payment from the exchequer</td>
+<td>财政转移支付</td>
+</tr>
+<tr>
+<td>venture-capital</td>
+<td>风险资本</td>
+</tr>
+<tr>
+<td>virtual bank</td>
+<td>虚拟银行</td>
+</tr>
+<tr>
+<td>wire transfer</td>
+<td>电子转帐</td>
+</tr>
+<tr>
+<td>account number</td>
+<td>帐目编号</td>
+</tr>
+<tr>
+<td>depositor</td>
+<td>存户</td>
+</tr>
+<tr>
+<td>pay-in slip</td>
+<td>存款单</td>
+</tr>
+<tr>
+<td>a deposit form</td>
+<td>存款单</td>
+</tr>
+<tr>
+<td>a banding machine</td>
+<td>自动存取机</td>
+</tr>
+<tr>
+<td>to deposit</td>
+<td>存款</td>
+</tr>
+<tr>
+<td>deposit receipt</td>
+<td>存款收据</td>
+</tr>
+<tr>
+<td>private deposits</td>
+<td>私人存款</td>
+</tr>
+<tr>
+<td>certificate of deposit</td>
+<td>存单</td>
+</tr>
+<tr>
+<td>deposit book, passbook</td>
+<td>存折</td>
+</tr>
+<tr>
+<td>credit card</td>
+<td>信用卡</td>
+</tr>
+<tr>
+<td>principal</td>
+<td>本金</td>
+</tr>
+<tr>
+<td>overdraft, overdraw</td>
+<td>透支</td>
+</tr>
+<tr>
+<td>to counter sign</td>
+<td>双签</td>
+</tr>
+<tr>
+<td>to endorse</td>
+<td>背书</td>
+</tr>
+<tr>
+<td>endorser</td>
+<td>背书人</td>
+</tr>
+<tr>
+<td>to cash</td>
+<td>兑现</td>
+</tr>
+<tr>
+<td>to honor a cheque</td>
+<td>兑付</td>
+</tr>
+<tr>
+<td>to dishonor a cheque</td>
+<td>拒付</td>
+</tr>
+<tr>
+<td>to suspend payment</td>
+<td>止付</td>
+</tr>
+<tr>
+<td>cheque,check</td>
+<td>支票</td>
+</tr>
+<tr>
+<td>cheque book</td>
+<td>支票本</td>
+</tr>
+<tr>
+<td>order cheque</td>
+<td>记名支票</td>
+</tr>
+<tr>
+<td>bearer cheque</td>
+<td>不记名支票</td>
+</tr>
+<tr>
+<td>blank cheque</td>
+<td>空白支票</td>
+</tr>
+<tr>
+<td>rubber cheque</td>
+<td>空头支票</td>
+</tr>
+<tr>
+<td>cheque stub, counterfoil</td>
+<td>票根</td>
+</tr>
+<tr>
+<td>cash cheque</td>
+<td>现金支票</td>
+</tr>
+<tr>
+<td>traveler’s cheque</td>
+<td>旅行支票</td>
+</tr>
+<tr>
+<td>cheque for transfer</td>
+<td>转帐支票</td>
+</tr>
+<tr>
+<td>outstanding cheque</td>
+<td>未付支票</td>
+</tr>
+<tr>
+<td>canceled cheque</td>
+<td>已付支票</td>
+</tr>
+<tr>
+<td>forged cheque</td>
+<td>伪支票</td>
+</tr>
+<tr>
+<td>Bandar’s note</td>
+<td>庄票，银票</td>
+</tr>
+<tr>
+<td>banker</td>
+<td>银行家</td>
+</tr>
+<tr>
+<td>president</td>
+<td>行长</td>
+</tr>
+<tr>
+<td>savings bank</td>
+<td>储蓄银行</td>
+</tr>
+<tr>
+<td>Chase Bank</td>
+<td>大通银行</td>
+</tr>
+<tr>
+<td>National City Bank of New York</td>
+<td>花旗银行</td>
+</tr>
+<tr>
+<td>Hongkong Shanghai Banking Corporation</td>
+<td>汇丰银行</td>
+</tr>
+<tr>
+<td>Chartered Bank of India, Australia and China</td>
+<td>麦加利银行</td>
+</tr>
+<tr>
+<td>Banque de I’IndoChine</td>
+<td>东方汇理银行</td>
+</tr>
+<tr>
+<td>central bank, national bank, banker’s bank</td>
+<td>中央银行</td>
+</tr>
+<tr>
+<td>bank of issue, bank of circulation</td>
+<td>发行币银行</td>
+</tr>
+<tr>
+<td>commercial bank</td>
+<td>商业银行，储蓄信贷银行</td>
+</tr>
+<tr>
+<td>member bank, credit bank</td>
+<td>储蓄信贷银行</td>
+</tr>
+<tr>
+<td>discount bank</td>
+<td>贴现银行</td>
+</tr>
+<tr>
+<td>exchange bank</td>
+<td>汇兑银行</td>
+</tr>
+<tr>
+<td>requesting bank</td>
+<td>委托开证银行</td>
+</tr>
+<tr>
+<td>issuing bank, opening bank</td>
+<td>开证银行</td>
+</tr>
+<tr>
+<td>advising bank, notifying bank</td>
+<td>通知银行</td>
+</tr>
+<tr>
+<td>negotiation bank</td>
+<td>议付银行</td>
+</tr>
+<tr>
+<td>confirming bank</td>
+<td>保兑银行</td>
+</tr>
+<tr>
+<td>paying bank</td>
+<td>付款银行</td>
+</tr>
+<tr>
+<td>associate banker of collection</td>
+<td>代收银行</td>
+</tr>
+<tr>
+<td>consigned banker of collection</td>
+<td>委托银行</td>
+</tr>
+<tr>
+<td>clearing bank</td>
+<td>清算银行</td>
+</tr>
+<tr>
+<td>local bank</td>
+<td>本地银行</td>
+</tr>
+<tr>
+<td>domestic bank</td>
+<td>国内银行</td>
+</tr>
+<tr>
+<td>overseas bank</td>
+<td>国外银行</td>
+</tr>
+<tr>
+<td>unincorporated bank</td>
+<td>钱庄</td>
+</tr>
+<tr>
+<td>branch bank</td>
+<td>银行分行</td>
+</tr>
+<tr>
+<td>trustee savings bank</td>
+<td>信托储蓄银行</td>
+</tr>
+<tr>
+<td>trust company</td>
+<td>信托公司</td>
+</tr>
+<tr>
+<td>financial trust</td>
+<td>金融信托公司</td>
+</tr>
+<tr>
+<td>unit trust</td>
+<td>信托投资公司</td>
+</tr>
+<tr>
+<td>trust institution</td>
+<td>银行的信托部</td>
+</tr>
+<tr>
+<td>credit department</td>
+<td>银行的信用部</td>
+</tr>
+<tr>
+<td>commercial credit company(discount company)</td>
+<td>商业信贷公司（贴现公司）</td>
+</tr>
+<tr>
+<td>neighborhood savings bank, bank of deposit</td>
+<td>街道储蓄所</td>
+</tr>
+<tr>
+<td>credit union</td>
+<td>合作银行</td>
+</tr>
+<tr>
+<td>credit bureau</td>
+<td>商业兴信所</td>
+</tr>
+<tr>
+<td>self-service bank</td>
+<td>无人银行</td>
+</tr>
+<tr>
+<td>land bank</td>
+<td>土地银行</td>
+</tr>
+<tr>
+<td>construction bank</td>
+<td>建设银行</td>
+</tr>
+<tr>
+<td>industrial and commercial bank</td>
+<td>工商银行</td>
+</tr>
+<tr>
+<td>bank of communications</td>
+<td>交通银行</td>
+</tr>
+<tr>
+<td>mutual savings bank</td>
+<td>互助储蓄银行</td>
+</tr>
+<tr>
+<td>post office savings bank</td>
+<td>邮局储蓄银行</td>
+</tr>
+<tr>
+<td>mortgage bank, building society</td>
+<td>抵押银行</td>
+</tr>
+<tr>
+<td>industrial bank</td>
+<td>实业银行</td>
+</tr>
+<tr>
+<td>home loan bank</td>
+<td>家宅贷款银行</td>
+</tr>
+<tr>
+<td>reserve bank</td>
+<td>准备银行</td>
+</tr>
+<tr>
+<td>chartered bank</td>
+<td>特许银行</td>
+</tr>
+<tr>
+<td>corresponding bank</td>
+<td>往来银行</td>
+</tr>
+<tr>
+<td>merchant bank, accepting bank</td>
+<td>承兑银行</td>
+</tr>
+<tr>
+<td>investment bank</td>
+<td>投资银行</td>
+</tr>
+<tr>
+<td>import and export bank (EXIMBANK)</td>
+<td>进出口银行</td>
+</tr>
+<tr>
+<td>joint venture bank</td>
+<td>合资银行</td>
+</tr>
+<tr>
+<td>money shop, native bank</td>
+<td>钱庄</td>
+</tr>
+<tr>
+<td>credit cooperatives</td>
+<td>信用社</td>
+</tr>
+<tr>
+<td>clearing house</td>
+<td>票据交换所</td>
+</tr>
+<tr>
+<td>public accounting</td>
+<td>公共会计</td>
+</tr>
+<tr>
+<td>business accounting</td>
+<td>商业会计</td>
+</tr>
+<tr>
+<td>cost accounting</td>
+<td>成本会计</td>
+</tr>
+<tr>
+<td>depreciation accounting</td>
+<td>折旧会计</td>
+</tr>
+<tr>
+<td>computerized accounting</td>
+<td>电脑化会计</td>
+</tr>
+<tr>
+<td>general ledger</td>
+<td>总帐</td>
+</tr>
+<tr>
+<td>subsidiary ledger</td>
+<td>分户帐</td>
+</tr>
+<tr>
+<td>cash book</td>
+<td>现金出纳帐</td>
+</tr>
+<tr>
+<td>cash account</td>
+<td>现金帐</td>
+</tr>
+<tr>
+<td>journal, day-book</td>
+<td>日记帐，流水帐</td>
+</tr>
+<tr>
+<td>bad debts</td>
+<td>坏帐</td>
+</tr>
+<tr>
+<td>investment</td>
+<td>投资</td>
+</tr>
+<tr>
+<td>surplus</td>
+<td>结余</td>
+</tr>
+<tr>
+<td>idle capital</td>
+<td>游资</td>
+</tr>
+<tr>
+<td>economic cycle</td>
+<td>经济周期</td>
+</tr>
+<tr>
+<td>economic boom</td>
+<td>经济繁荣</td>
+</tr>
+<tr>
+<td>economic recession</td>
+<td>经济衰退</td>
+</tr>
+<tr>
+<td>economic depression</td>
+<td>经济萧条</td>
+</tr>
+<tr>
+<td>economic crisis</td>
+<td>经济危机</td>
+</tr>
+<tr>
+<td>economic recovery</td>
+<td>经济复苏</td>
+</tr>
+<tr>
+<td>inflation</td>
+<td>通货膨胀</td>
+</tr>
+<tr>
+<td>deflation</td>
+<td>通货收缩</td>
+</tr>
+<tr>
+<td>devaluation</td>
+<td>货币贬值</td>
+</tr>
+<tr>
+<td>revaluation</td>
+<td>货币增值</td>
+</tr>
+<tr>
+<td>international balance of payment</td>
+<td>国际收支</td>
+</tr>
+<tr>
+<td>favourable balance</td>
+<td>顺差</td>
+</tr>
+<tr>
+<td>adverse balance</td>
+<td>逆差</td>
+</tr>
+<tr>
+<td>hard currency</td>
+<td>硬通货</td>
+</tr>
+<tr>
+<td>soft currency</td>
+<td>软通货</td>
+</tr>
+<tr>
+<td>international monetary system</td>
+<td>国际货币制度</td>
+</tr>
+<tr>
+<td>the purchasing power of money</td>
+<td>货币购买力</td>
+</tr>
+<tr>
+<td>money in circulation</td>
+<td>货币流通量</td>
+</tr>
+<tr>
+<td>note issue</td>
+<td>纸币发行量</td>
+</tr>
+<tr>
+<td>national budget</td>
+<td>国家预算</td>
+</tr>
+<tr>
+<td>national gross product</td>
+<td>国民生产总值</td>
+</tr>
+<tr>
+<td>public bond</td>
+<td>公债</td>
+</tr>
+<tr>
+<td>stock, share</td>
+<td>股票</td>
+</tr>
+<tr>
+<td>debenture</td>
+<td>债券</td>
+</tr>
+<tr>
+<td>treasury bill</td>
+<td>国库券</td>
+</tr>
+<tr>
+<td>debt chain</td>
+<td>债务链</td>
+</tr>
+<tr>
+<td>direct exchange</td>
+<td>直接（对角）套汇</td>
+</tr>
+<tr>
+<td>indirect exchange</td>
+<td>间接（三角）套汇</td>
+</tr>
+<tr>
+<td>cross rate, arbitrage rate</td>
+<td>套汇汇率</td>
+</tr>
+<tr>
+<td>foreign currency (exchange) reserve</td>
+<td>外汇储备</td>
+</tr>
+<tr>
+<td>foreign exchange fluctuation</td>
+<td>外汇波动</td>
+</tr>
+<tr>
+<td>foreign exchange crisis</td>
+<td>外汇危机</td>
+</tr>
+<tr>
+<td>discount</td>
+<td>贴现</td>
+</tr>
+<tr>
+<td>discount rate, bank rate</td>
+<td>贴现率</td>
+</tr>
+<tr>
+<td>gold reserve</td>
+<td>黄金储备</td>
+</tr>
+<tr>
+<td>money (financial) market</td>
+<td>金融市场</td>
+</tr>
+<tr>
+<td>stock exchange</td>
+<td>股票交易所</td>
+</tr>
+<tr>
+<td>broker</td>
+<td>经纪人</td>
+</tr>
+<tr>
+<td>commission</td>
+<td>佣金</td>
+</tr>
+<tr>
+<td>bookkeeping</td>
+<td>簿记</td>
+</tr>
+<tr>
+<td>bookkeeper</td>
+<td>簿记员</td>
+</tr>
+<tr>
+<td>an application form</td>
+<td>申请单</td>
+</tr>
+<tr>
+<td>bank statement</td>
+<td>对帐单</td>
+</tr>
+<tr>
+<td>letter of credit</td>
+<td>信用证</td>
+</tr>
+<tr>
+<td>strong room, vault</td>
+<td>保险库</td>
+</tr>
+<tr>
+<td>equitable tax system</td>
+<td>等价税则</td>
+</tr>
+<tr>
+<td>specimen signature</td>
+<td>签字式样</td>
+</tr>
+<tr>
+<td>banking hours, business hours</td>
+<td>营业时间</td>
+</tr>
+<tr>
+<td>Cash business</td>
+<td>现金业务</td>
+</tr>
+<tr>
+<td>transfer business</td>
+<td>转账业务</td>
+</tr>
+<tr>
+<td>currency exchange business</td>
+<td>汇兑业务</td>
+</tr>
+<tr>
+<td>commission receivables</td>
+<td>委托收款</td>
+</tr>
+<tr>
+<td>loans</td>
+<td>发放贷款</td>
+</tr>
+<tr>
+<td>loan recovery</td>
+<td>贷款收回</td>
+</tr>
+<tr>
+<td>loan extension</td>
+<td>贷款展期</td>
+</tr>
+<tr>
+<td>apply for bank drafts</td>
+<td>办理银行汇票</td>
+</tr>
+<tr>
+<td>interest</td>
+<td>收息</td>
+</tr>
+<tr>
+<td>collection</td>
+<td>托收</td>
+</tr>
+<tr>
+<td>account number</td>
+<td>帐目编号</td>
+</tr>
+<tr>
+<td>depositor</td>
+<td>存户</td>
+</tr>
+<tr>
+<td>pay-in slip</td>
+<td>存款单</td>
+</tr>
+<tr>
+<td>a deposit form</td>
+<td>存款单</td>
+</tr>
+<tr>
+<td>a banding machine</td>
+<td>自动存取机</td>
+</tr>
+<tr>
+<td>to deposit</td>
+<td>存款</td>
+</tr>
+<tr>
+<td>deposit receipt</td>
+<td>存款收据</td>
+</tr>
+<tr>
+<td>private deposits</td>
+<td>私人存款</td>
+</tr>
+<tr>
+<td>certificate of deposit</td>
+<td>存单</td>
+</tr>
+<tr>
+<td>deposit book, passbook</td>
+<td>存折</td>
+</tr>
+<tr>
+<td>credit card</td>
+<td>信用卡</td>
+</tr>
+<tr>
+<td>principal</td>
+<td>本金</td>
+</tr>
+<tr>
+<td>overdraft, overdraw</td>
+<td>透支</td>
+</tr>
+<tr>
+<td>to counter sign</td>
+<td>双签</td>
+</tr>
+<tr>
+<td>to endorse</td>
+<td>背书</td>
+</tr>
+<tr>
+<td>endorser</td>
+<td>背书人</td>
+</tr>
+<tr>
+<td>to cash</td>
+<td>兑现</td>
+</tr>
+<tr>
+<td>to honor a cheque</td>
+<td>兑付</td>
+</tr>
+<tr>
+<td>to dishonor a cheque</td>
+<td>拒付</td>
+</tr>
+<tr>
+<td>to suspend payment</td>
+<td>止付</td>
+</tr>
+<tr>
+<td>cheque,check</td>
+<td>支票</td>
+</tr>
+<tr>
+<td>cheque book</td>
+<td>支票本</td>
+</tr>
+<tr>
+<td>order cheque</td>
+<td>记名支票</td>
+</tr>
+<tr>
+<td>bearer cheque</td>
+<td>不记名支票</td>
+</tr>
+<tr>
+<td>crossed cheque</td>
+<td>横线支票</td>
+</tr>
+<tr>
+<td>blank cheque</td>
+<td>空白支票</td>
+</tr>
+<tr>
+<td>rubber cheque</td>
+<td>空头支票</td>
+</tr>
+<tr>
+<td>cheque stub, counterfoil</td>
+<td>票根</td>
+</tr>
+<tr>
+<td>cash cheque</td>
+<td>现金支票</td>
+</tr>
+<tr>
+<td>traveler’s cheque</td>
+<td>旅行支票</td>
+</tr>
+<tr>
+<td>cheque for transfer</td>
+<td>转帐支票</td>
+</tr>
+<tr>
+<td>outstanding cheque</td>
+<td>未付支票</td>
+</tr>
+<tr>
+<td>canceled cheque</td>
+<td>已付支票</td>
+</tr>
+<tr>
+<td>forged cheque</td>
+<td>伪支票</td>
+</tr>
+<tr>
+<td>Bandar’s note</td>
+<td>庄票，银票</td>
+</tr>
+<tr>
+<td>banker</td>
+<td>银行家</td>
+</tr>
+<tr>
+<td>president</td>
+<td>行长</td>
+</tr>
+<tr>
+<td>savings bank</td>
+<td>储蓄银行</td>
+</tr>
+<tr>
+<td>Chase Bank</td>
+<td>大通银行</td>
+</tr>
+<tr>
+<td>National City Bank of New York</td>
+<td>花旗银行</td>
+</tr>
+<tr>
+<td>Hongkong Shanghai Banking Corporation</td>
+<td>汇丰银行</td>
+</tr>
+<tr>
+<td>Chartered Bank of India, Australiaand China</td>
+<td>麦加利银行</td>
+</tr>
+<tr>
+<td>Banque de I’IndoChine</td>
+<td>东方汇理银行</td>
+</tr>
+<tr>
+<td>central bank, national bank, banker’s bank</td>
+<td>中央银行</td>
+</tr>
+<tr>
+<td>bank of issue, bank of circulation</td>
+<td>发行币银行</td>
+</tr>
+<tr>
+<td>commercial bank</td>
+<td>商业银行，储蓄信贷银行</td>
+</tr>
+<tr>
+<td>member bank, credit bank</td>
+<td>储蓄信贷银行</td>
+</tr>
+<tr>
+<td>discount bank</td>
+<td>贴现银行</td>
+</tr>
+<tr>
+<td>exchange bank</td>
+<td>汇兑银行</td>
+</tr>
+<tr>
+<td>requesting bank</td>
+<td>委托开证银行</td>
+</tr>
+<tr>
+<td>issuing bank, opening bank</td>
+<td>开证银行</td>
+</tr>
+<tr>
+<td>advising bank, notifying bank</td>
+<td>通知银行</td>
+</tr>
+<tr>
+<td>negotiation bank</td>
+<td>议付银行</td>
+</tr>
+<tr>
+<td>confirming bank</td>
+<td>保兑银行</td>
+</tr>
+<tr>
+<td>paying bank</td>
+<td>付款银行</td>
+</tr>
+<tr>
+<td>associate banker of collection</td>
+<td>代收银行</td>
+</tr>
+<tr>
+<td>consigned banker of collection</td>
+<td>委托银行</td>
+</tr>
+<tr>
+<td>clearing bank</td>
+<td>清算银行</td>
+</tr>
+<tr>
+<td>local bank</td>
+<td>本地银行</td>
+</tr>
+<tr>
+<td>domestic bank</td>
+<td>国内银行</td>
+</tr>
+<tr>
+<td>overseas bank</td>
+<td>国外银行</td>
+</tr>
+<tr>
+<td>unincorporated bank</td>
+<td>钱庄</td>
+</tr>
+<tr>
+<td>branch bank</td>
+<td>银行分行</td>
+</tr>
+<tr>
+<td>trustee savings bank</td>
+<td>信托储蓄银行</td>
+</tr>
+<tr>
+<td>trust company</td>
+<td>信托公司</td>
+</tr>
+<tr>
+<td>financial trust</td>
+<td>金融信托公司</td>
+</tr>
+<tr>
+<td>unit trust</td>
+<td>信托投资公司</td>
+</tr>
+<tr>
+<td>trust institution</td>
+<td>银行的信托部</td>
+</tr>
+<tr>
+<td>credit department</td>
+<td>银行的信用部</td>
+</tr>
+<tr>
+<td>commercial credit company(discountcompany)</td>
+<td>商业信贷公司（贴现公司）</td>
+</tr>
+<tr>
+<td>neighborhood savings bank, bank of deposit</td>
+<td>街道储蓄所</td>
+</tr>
+<tr>
+<td>credit union</td>
+<td>合作银行</td>
+</tr>
+<tr>
+<td>credit bureau</td>
+<td>商业兴信所</td>
+</tr>
+<tr>
+<td>self-service bank</td>
+<td>无人银行</td>
+</tr>
+<tr>
+<td>land bank</td>
+<td>土地银行</td>
+</tr>
+<tr>
+<td>construction bank</td>
+<td>建设银行</td>
+</tr>
+<tr>
+<td>industrial and commercial bank</td>
+<td>工商银行</td>
+</tr>
+<tr>
+<td>bank of communications</td>
+<td>交通银行</td>
+</tr>
+<tr>
+<td>mutual savings bank</td>
+<td>互助储蓄银行</td>
+</tr>
+<tr>
+<td>post office savings bank</td>
+<td>邮局储蓄银行</td>
+</tr>
+<tr>
+<td>mortgage bank, building society</td>
+<td>抵押银行</td>
+</tr>
+<tr>
+<td>industrial bank</td>
+<td>实业银行</td>
+</tr>
+<tr>
+<td>home loan bank</td>
+<td>家宅贷款银行</td>
+</tr>
+<tr>
+<td>reserve bank</td>
+<td>准备银行</td>
+</tr>
+<tr>
+<td>chartered bank</td>
+<td>特许银行</td>
+</tr>
+<tr>
+<td>corresponding bank</td>
+<td>往来银行</td>
+</tr>
+<tr>
+<td>merchant bank, accepting bank</td>
+<td>承兑银行</td>
+</tr>
+<tr>
+<td>investment bank</td>
+<td>投资银行</td>
+</tr>
+<tr>
+<td>import and export bank (EXIMBANK)</td>
+<td>进出口银行</td>
+</tr>
+<tr>
+<td>joint venture bank</td>
+<td>合资银行</td>
+</tr>
+<tr>
+<td>money shop, native bank</td>
+<td>钱庄</td>
+</tr>
+<tr>
+<td>credit cooperatives</td>
+<td>信用社</td>
+</tr>
+<tr>
+<td>clearing house</td>
+<td>票据交换所</td>
+</tr>
+<tr>
+<td>public accounting</td>
+<td>公共会计</td>
+</tr>
+<tr>
+<td>business accounting</td>
+<td>商业会计</td>
+</tr>
+<tr>
+<td>cost accounting</td>
+<td>成本会计</td>
+</tr>
+<tr>
+<td>depreciation accounting</td>
+<td>折旧会计</td>
+</tr>
+<tr>
+<td>computerized accounting</td>
+<td>电脑化会计</td>
+</tr>
+<tr>
+<td>general ledger</td>
+<td>总帐</td>
+</tr>
+<tr>
+<td>subsidiary ledger</td>
+<td>分户帐</td>
+</tr>
+<tr>
+<td>cash book</td>
+<td>现金出纳帐</td>
+</tr>
+<tr>
+<td>cash account</td>
+<td>现金帐</td>
+</tr>
+<tr>
+<td>journal, day-book</td>
+<td>日记帐，流水帐</td>
+</tr>
+<tr>
+<td>bad debts</td>
+<td>坏帐</td>
+</tr>
+<tr>
+<td>investment</td>
+<td>投资</td>
+</tr>
+<tr>
+<td>surplus</td>
+<td>结余</td>
+</tr>
+<tr>
+<td>idle capital</td>
+<td>游资</td>
+</tr>
+<tr>
+<td>economic cycle</td>
+<td>经济周期</td>
+</tr>
+<tr>
+<td>economic boom</td>
+<td>经济繁荣</td>
+</tr>
+<tr>
+<td>economic recession</td>
+<td>经济衰退</td>
+</tr>
+<tr>
+<td>economic depression</td>
+<td>经济萧条</td>
+</tr>
+<tr>
+<td>economic crisis</td>
+<td>经济危机</td>
+</tr>
+<tr>
+<td>economic recovery</td>
+<td>经济复苏</td>
+</tr>
+<tr>
+<td>inflation</td>
+<td>通货膨胀</td>
+</tr>
+<tr>
+<td>deflation</td>
+<td>通货收缩</td>
+</tr>
+<tr>
+<td>devaluation</td>
+<td>货币贬值</td>
+</tr>
+<tr>
+<td>revaluation</td>
+<td>货币增值</td>
+</tr>
+<tr>
+<td>international balance of payment</td>
+<td>国际收支</td>
+</tr>
+<tr>
+<td>favourable balance</td>
+<td>顺差</td>
+</tr>
+<tr>
+<td>adverse balance</td>
+<td>逆差</td>
+</tr>
+<tr>
+<td>hard currency</td>
+<td>硬通货</td>
+</tr>
+<tr>
+<td>soft currency</td>
+<td>软通货</td>
+</tr>
+<tr>
+<td>international monetary system</td>
+<td>国际货币制度</td>
+</tr>
+<tr>
+<td>the purchasing power of money</td>
+<td>货币购买力</td>
+</tr>
+<tr>
+<td>money in circulation</td>
+<td>货币流通量</td>
+</tr>
+<tr>
+<td>note issue</td>
+<td>纸币发行量</td>
+</tr>
+<tr>
+<td>national budget</td>
+<td>国家预算</td>
+</tr>
+<tr>
+<td>national gross product</td>
+<td>国民生产总值</td>
+</tr>
+<tr>
+<td>public bond</td>
+<td>公债</td>
+</tr>
+<tr>
+<td>stock, share</td>
+<td>股票</td>
+</tr>
+<tr>
+<td>debenture</td>
+<td>债券</td>
+</tr>
+<tr>
+<td>treasury bill</td>
+<td>国库券</td>
+</tr>
+</tbody></table>
+<p>（完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E8%8B%B1%E8%AF%AD/" class="category-chain-item">英语</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E8%8B%B1%E8%AF%AD/" class="print-no-link">#英语</a>
+      
+        <a href="/blog/tags/%E4%B8%93%E6%9C%89%E5%90%8D%E8%AF%8D/" class="print-no-link">#专有名词</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>银行业务专有名词中英文对照</div>
+      <div>https://maojun.xyz/blog/2020/06/银行业务专有名词中英文对照.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年6月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html" title="大型电商系统的搜索链路业务架构">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">大型电商系统的搜索链路业务架构</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2020/04/Ribbon%E7%AE%80%E4%BB%8B%E5%92%8C%E5%85%A5%E9%97%A8.html" title="Ribbon简介和入门">
+                        <span class="hidden-mobile">Ribbon简介和入门</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
