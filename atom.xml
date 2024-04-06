@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2024-04-05T17:12:50.000Z</updated>
+  <updated>2019-11-04T17:20:07.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringMVC参数绑定的方式</title>
+    <link href="https://maojun.xyz/blog/2029/11/SpringMVC%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A%E7%9A%84%E6%96%B9%E5%BC%8F.html"/>
+    <id>https://maojun.xyz/blog/2029/11/SpringMVC%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A%E7%9A%84%E6%96%B9%E5%BC%8F.html</id>
+    <published>2029-11-04T17:20:07.000Z</published>
+    <updated>2019-11-04T17:20:07.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;名称匹配接收参数&quot;&gt;&lt;a href=&quot;#名称匹配接收参数&quot; class=&quot;headerlink&quot; title=&quot;名称匹配接收参数&quot;&gt;&lt;/a&gt;名称匹配接收参数&lt;/h2&gt;&lt;p&gt;入参和接收参数名称一致。&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/Java/"/>
+    
+    
+    <category term="SpringMVC" scheme="https://maojun.xyz/blog/tags/SpringMVC/"/>
+    
+    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>MPV播放器默认快捷键</title>
@@ -206,7 +236,7 @@
     <link href="https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T11:57:45.000Z</published>
-    <updated>2024-04-06T07:52:05.431Z</updated>
+    <updated>2024-04-06T09:45:37.357Z</updated>
     
     
       
@@ -233,7 +263,7 @@
     <link href="https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
     <id>https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
     <published>2024-03-27T10:57:45.000Z</published>
-    <updated>2024-04-06T07:52:05.431Z</updated>
+    <updated>2024-04-06T09:45:37.357Z</updated>
     
     
       
@@ -590,35 +620,6 @@
     <category term="Debug" scheme="https://maojun.xyz/blog/tags/Debug/"/>
     
     <category term="SSH" scheme="https://maojun.xyz/blog/tags/SSH/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ConcurrentHashMap的键和值都不能为空</title>
-    <link href="https://maojun.xyz/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html"/>
-    <id>https://maojun.xyz/blog/2023/11/ConcurrentHashMap%E7%9A%84%E9%94%AE%E5%92%8C%E5%80%BC%E9%83%BD%E4%B8%8D%E8%83%BD%E4%B8%BA%E7%A9%BA.html</id>
-    <published>2023-11-03T16:22:00.000Z</published>
-    <updated>2023-11-03T16:22:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ConcurrentHashMap的键和值都不能为空&quot;&gt;&lt;a href=&quot;#ConcurrentHashMap的键和值都不能为空&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="并发编程" scheme="https://maojun.xyz/blog/categories/%E5%AD%A6%E4%B9%A0/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="Java" scheme="https://maojun.xyz/blog/tags/Java/"/>
-    
-    <category term="ConcurrentHashMap" scheme="https://maojun.xyz/blog/tags/ConcurrentHashMap/"/>
     
   </entry>
   

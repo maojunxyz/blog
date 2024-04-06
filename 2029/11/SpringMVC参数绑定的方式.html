@@ -1,0 +1,758 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="名称匹配接收参数入参和接收参数名称一致。 123456789101112131415161718192021222324252627@Controller@RequestMapping(&amp;quot;/param&amp;quot;)public class TestParamController &amp;#123;    private static final Logger logger = LoggerFa">
+  
+  
+  
+  <title>SpringMVC参数绑定的方式 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="SpringMVC参数绑定的方式"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2029-11-04 17:20" pubdate>
+          2029年11月4日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">SpringMVC参数绑定的方式</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2019年11月4日 下午
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="名称匹配接收参数"><a href="#名称匹配接收参数" class="headerlink" title="名称匹配接收参数"></a>名称匹配接收参数</h2><p>入参和接收参数名称一致。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Controller</span><br><span class="hljs-meta">@RequestMapping(&quot;/param&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestParamController</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Logger</span> <span class="hljs-variable">logger</span> <span class="hljs-operator">=</span> LoggerFactory.getLogger(TestParamController.class);<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 请求参数名和Controller方法的参数一致</span><br><span class="hljs-comment">     * produces 设置返回参数的编码格式可以设置返回数据的类型以及编码，可以是json或者xml</span><br><span class="hljs-comment">     * &#123;</span><br><span class="hljs-comment">     *     <span class="hljs-doctag">@RequestMapping</span>(value=&quot;/xxx&quot;,produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><span class="hljs-comment">     *      或</span><br><span class="hljs-comment">     *     <span class="hljs-doctag">@RequestMapping</span>(value=&quot;/xxx&quot;,produces = &#123;&quot;application/xml;charset=UTF-8&quot;&#125;)</span><br><span class="hljs-comment">     *      或</span><br><span class="hljs-comment">     *     <span class="hljs-doctag">@RequestMapping</span>(value=&quot;/xxx&quot;,produces = &quot;&#123;text/html;charset=utf-8&#125;&quot;)</span><br><span class="hljs-comment">     * &#125;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> name 用户名</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> pwd 密码</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     *</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@RequestMapping(value = &quot;/add&quot;, method = RequestMethod.GET, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br>    <span class="hljs-meta">@ResponseBody</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUser</span><span class="hljs-params">(String name, String pwd)</span>&#123;<br>        logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd);<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl http://localhost:8080/sty/param/add.action?name=张三&amp;pwd=123456<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="对象属性名称匹配接收参数"><a href="#对象属性名称匹配接收参数" class="headerlink" title="对象属性名称匹配接收参数"></a>对象属性名称匹配接收参数</h2><p>Java实体类定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Data</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> &#123;<br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> String pwd;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>入参和接收对象的参数一致。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Controller</span><br><span class="hljs-meta">@RequestMapping(&quot;/param&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestParamController</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">Logger</span> <span class="hljs-variable">logger</span> <span class="hljs-operator">=</span> LoggerFactory.getLogger(TestParamController.class);<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 请求参数名和Controller方法的参数一致</span><br><span class="hljs-comment">     * produces 设置返回参数的编码格式可以设置返回数据的类型以及编码，可以是json或者xml</span><br><span class="hljs-comment">     * &#125;</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> user 用户信息</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     *</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@RequestMapping(value = &quot;/addByObject&quot;, method = RequestMethod.GET, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br>    <span class="hljs-meta">@ResponseBody</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUserByObject</span><span class="hljs-params">(User user)</span>&#123;<br>        logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd());<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl http://localhost:8080/sty/param/addByObject.action?name=张三&amp;pwd=123456<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="重命名接收参数"><a href="#重命名接收参数" class="headerlink" title="重命名接收参数"></a>重命名接收参数</h2><p>当请求参数名与方法参数名不一致时。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 自定义方法参数名-当请求参数名与方法参数名不一致时</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> u_name 用户名</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> u_pwd 密码</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RequestMapping(value = &quot;/addByDifName&quot;, method = RequestMethod.GET, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><span class="hljs-meta">@ResponseBody</span><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUserByDifName</span><span class="hljs-params">(<span class="hljs-meta">@RequestParam(&quot;name&quot;)</span> String u_name, <span class="hljs-meta">@RequestParam(&quot;pwd&quot;)</span>String u_pwd)</span>&#123;<br>    logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + u_name + <span class="hljs-string">&quot;,pwd:&quot;</span> + u_pwd);<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + u_name + <span class="hljs-string">&quot;,pwd:&quot;</span> + u_pwd;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl http://localhost:8080/sty/param/addUserByDifName.action?name=张三&amp;pwd=123456<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="HttpServletRequest接收参数"><a href="#HttpServletRequest接收参数" class="headerlink" title="HttpServletRequest接收参数"></a>HttpServletRequest接收参数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * 通过HttpServletRequest接收</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> request</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-meta">@RequestMapping(value = &quot;/addByHttpServletRequest&quot;, method = RequestMethod.GET, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><br><span class="hljs-meta">@ResponseBody</span><br><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUserByHttpServletRequest</span><span class="hljs-params">(HttpServletRequest request)</span>&#123;<br><br>    <span class="hljs-type">String</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> request.getParameter(<span class="hljs-string">&quot;name&quot;</span>);<br><br>    <span class="hljs-type">String</span> <span class="hljs-variable">pwd</span> <span class="hljs-operator">=</span> request.getParameter(<span class="hljs-string">&quot;pwd&quot;</span>);<br><br>    logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl http://localhost:8080/sty/param/addByHttpServletRequest.action?name=张三&amp;pwd=123456<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="PathVariable接收路径中的参数"><a href="#PathVariable接收路径中的参数" class="headerlink" title="@PathVariable接收路径中的参数"></a>@PathVariable接收路径中的参数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * 通过<span class="hljs-doctag">@PathVariable</span>获取路径中的参数 </span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> name 用户名</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> pwd 密码</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-meta">@RequestMapping(value = &quot;/add/&#123;name&#125;/&#123;pwd&#125;&quot;, method = RequestMethod.GET, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><br><span class="hljs-meta">@ResponseBody</span><br><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUserByPathVariable</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> String name, <span class="hljs-meta">@PathVariable</span> String pwd)</span>&#123;<br><br>    logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd);<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + name + <span class="hljs-string">&quot;,pwd:&quot;</span> + pwd;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl http://localhost:8080/sty/param/add/zhangsan/123456.action<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="RequestBody接收对象"><a href="#RequestBody接收对象" class="headerlink" title="@RequestBody接收对象"></a>@RequestBody接收对象</h2><h3 id="接收JSON对象"><a href="#接收JSON对象" class="headerlink" title="接收JSON对象"></a>接收JSON对象</h3><p>需要依赖jackson-databind.jar，并设置json格式的支持。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * RequestBody-JSON 对象方式</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> user</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-meta">@RequestMapping(value = &quot;/addByObjectJSON&quot;, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><br><span class="hljs-meta">@ResponseBody</span><br><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUserByObjectJSON</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> User user)</span>&#123;<br><br>    logger.debug(<span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd());<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl --request POST \<br>  --url http://localhost:8080/sty/param/addByObjectJSON.action \<br>  --header &#x27;content-type: application/json&#x27; \<br>  --data &#x27;&#123;<br>  &quot;name&quot;: &quot;zhangsan&quot;,<br>  &quot;pwd&quot;: &quot;123456&quot;<br>&#125;&#x27;<br></code></pre></td></tr></table></figure>
+
+<h3 id="接收JSON数组"><a href="#接收JSON数组" class="headerlink" title="接收JSON数组"></a>接收JSON数组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * RequestBody-JSON List对象方式</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> users</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RequestMapping(value = &quot;/addByListJSON&quot;, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><span class="hljs-meta">@ResponseBody</span><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUsersByListJSON</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> List&lt;User&gt; users)</span>&#123;<br>    <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(<span class="hljs-string">&quot;&#123;&quot;</span>);<br>    <span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span> != users)&#123;<br>        <span class="hljs-keyword">for</span>(User user : users)&#123;<br>            sb.append(<span class="hljs-string">&quot;&#123;&quot;</span> + <span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd() + <span class="hljs-string">&quot;&#125;&quot;</span>);<br>        &#125;<br>    &#125;<br>    sb.append(<span class="hljs-string">&quot;&#125;&quot;</span>);<br>    logger.debug(sb.toString());<br>    <span class="hljs-keyword">return</span> sb.toString();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl --request POST \<br>  --url http://localhost:8080/sty/param/addByObjectJSON.action \<br>  --header &#x27;content-type: application/json&#x27; \<br>  --data &#x27;[<br>  &#123;<br>    &quot;name&quot;: &quot;zhangsan&quot;,<br>    &quot;pwd&quot;: &quot;123456&quot;<br>  &#125;,<br>  &#123;<br>    &quot;name&quot;: &quot;lisi&quot;,<br>    &quot;pwd&quot;: &quot;654321&quot;<br>  &#125;<br>]&#x27;<br></code></pre></td></tr></table></figure>
+
+<h3 id="接收Map对象"><a href="#接收Map对象" class="headerlink" title="接收Map对象"></a>接收Map对象</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * RequestBody-JSON Map对象方式</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> users</span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment"></span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-meta">@RequestMapping(value = &quot;/addByMapJSON&quot;, produces = &#123;&quot;application/json;charset=UTF-8&quot;&#125;)</span><br><br><span class="hljs-meta">@ResponseBody</span><br><br><span class="hljs-keyword">public</span> String <span class="hljs-title function_">addUsersByMapJSON</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> Map&lt;String, User&gt; users)</span>&#123;<br><br>    <span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>(<span class="hljs-string">&quot;&#123;&quot;</span>);<br><br>    <span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span> != users)&#123;<br><br>        <span class="hljs-type">Iterator</span> <span class="hljs-variable">it</span> <span class="hljs-operator">=</span> users.keySet().iterator();<br><br>        <span class="hljs-keyword">while</span>(it.hasNext())&#123;<br><br>            <span class="hljs-type">User</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> users.get(it.next());<br><br>            sb.append(<span class="hljs-string">&quot;&#123;&quot;</span> + <span class="hljs-string">&quot;name:&quot;</span> + user.getName() + <span class="hljs-string">&quot;,pwd:&quot;</span> + user.getPwd() + <span class="hljs-string">&quot;&#125;&quot;</span>);<br><br>        &#125;<br><br>    &#125;<br><br>    sb.append(<span class="hljs-string">&quot;&#125;&quot;</span>);<br><br>    logger.debug(sb.toString());<br><br>    <span class="hljs-keyword">return</span> sb.toString();<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>请求方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs curl">curl --request POST \<br>  --url http://localhost:8080/sty/param/addByObjectJSON.action \<br>  --header &#x27;content-type: application/json&#x27; \<br>  --data &#x27;[<br>  &#123;<br>    &quot;name&quot;: &quot;zhangsan&quot;,<br>    &quot;pwd&quot;: &quot;123456&quot;<br>  &#125;,<br>  &#123;<br>    &quot;name&quot;: &quot;lisi&quot;,<br>    &quot;pwd&quot;: &quot;654321&quot;<br>  &#125;<br>]&#x27;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>（完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/Java/" class="category-chain-item">Java</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/SpringMVC/" class="print-no-link">#SpringMVC</a>
+      
+        <a href="/blog/tags/Java/" class="print-no-link">#Java</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>SpringMVC参数绑定的方式</div>
+      <div>https://maojun.xyz/blog/2029/11/SpringMVC参数绑定的方式.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2029年11月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2019年11月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html" title="MPV播放器默认快捷键">
+                        <span class="hidden-mobile">MPV播放器默认快捷键</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
