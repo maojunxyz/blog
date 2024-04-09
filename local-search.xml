@@ -1702,6 +1702,35 @@
   
   
   <entry>
+    <title>使用update-alternatives管理多个可执行文件版本</title>
+    <link href="/blog/2021/04/update-alternatives%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E7%89%88%E6%9C%AC.html"/>
+    <url>/blog/2021/04/update-alternatives%E7%AE%A1%E7%90%86%E5%A4%9A%E4%B8%AA%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E7%89%88%E6%9C%AC.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="管理Java版本"><a href="#管理Java版本" class="headerlink" title="管理Java版本"></a>管理Java版本</h2><p>要使用 <code>update-alternatives</code> 添加 Java，需要先确保已经安装了多个 Java 版本，并且这些版本位于不同的路径下。</p><p><code>update-alternatives</code> 允许你设置一个默认的 Java 版本，并在多个版本之间切换。</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>确保多个 Java 版本安装在不同的路径下。使用update-alternatives添加 Java 版本。</p><figure class="highlight n1ql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs n1ql">sudo <span class="hljs-keyword">update</span>-alternatives --install /usr/bin/java java &lt;<span class="hljs-keyword">path</span>-<span class="hljs-keyword">to</span>-java-version&gt; &lt;priority&gt;<br></code></pre></td></tr></table></figure><blockquote><p>备注:</p><p><code>/usr/bin/java</code> 是通用的 Java 命令路径。</p><p><code>java</code> 是这个命令的替代名称。</p><p><code>&lt;path-to-java-version&gt;</code> Java 版本的完整路径，例如 <code>/usr/lib/jvm/java-11-openjdk-amd64/bin/java</code>。</p><p><code>&lt;priority&gt;</code> 是一个数字，表示这个版本的优先级。数字越大，优先级越高。</p></blockquote><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>要设置某个版本为默认版本，可以使用以下命令：</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">sudo <span class="hljs-keyword">update</span><span class="hljs-operator">-</span>alternatives <span class="hljs-comment">--config java</span><br></code></pre></td></tr></table></figure><p>这会列出所有已注册的 Java 版本，并让你选择一个作为默认。</p><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>可以使用以下命令来验证当前的默认 Java 版本：</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">java -<span class="hljs-built_in">version</span><br></code></pre></td></tr></table></figure><p>这将显示当前默认 Java 版本的详细信息。</p><blockquote><p>注意，每次添加或删除 Java 版本时，都应该使用 <code>update-alternatives</code> 来更新系统配置。</p></blockquote><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Linux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>cgroup简介和在容器里的使用</title>
     <link href="/blog/2021/03/cgroup%E7%AE%80%E4%BB%8B%E5%92%8C%E5%9C%A8%E5%AE%B9%E5%99%A8%E9%87%8C%E7%9A%84%E4%BD%BF%E7%94%A8.html"/>
     <url>/blog/2021/03/cgroup%E7%AE%80%E4%BB%8B%E5%92%8C%E5%9C%A8%E5%AE%B9%E5%99%A8%E9%87%8C%E7%9A%84%E4%BD%BF%E7%94%A8.html</url>
