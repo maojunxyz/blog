@@ -18,11 +18,11 @@
   <meta name="author" content="毛 俊">
   <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
   
-    <meta name="description" content="键盘控制   快捷键 功能 配置项    ← → 前进&amp;#x2F;后退5秒，加shift变为移动1秒 --hr-seek   ↑↓ 前进&amp;#x2F;后退60秒，加shift变为5秒 --hr-seek   Ctrl+← &amp;#x2F;→ 切换字幕 sub-seek   Ctrl+Shift+← &amp;#x2F;→ 调整字幕延迟    [ 和 ] 减少&amp;#x2F;增加当前播放速度的10%    { 和 }">
+    <meta name="description" content="Docker和虚拟机区别Docker 是轻量级的沙盒，在其中运行的只是应用，虚拟机里面还有额外的系统。 Docker 安全Docker 利用了 Linux 内核中很多安全特性来保证不同容器之间的隔离，并且通过签名机制来对镜像进行验证。大量生产环境的部署证明，Docker 虽然隔离性无法与虚拟机相比，但仍然具有极高的安全性。 Docker清理后台容器可以使用docker rm $sudo( dock">
   
   
   
-  <title>MPV播放器默认快捷键 - 毛俊的博客</title>
+  <title>Docker介绍和使用 - 毛俊的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -220,7 +220,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MPV播放器默认快捷键"></span>
+            <span id="subtitle" data-typed-text="Docker介绍和使用"></span>
           
         </div>
 
@@ -231,8 +231,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-05 17:12" pubdate>
-          2024年4月5日 下午
+        <time datetime="2023-10-11 07:19" pubdate>
+          2023年10月11日 早上
         </time>
       </span>
     
@@ -243,7 +243,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          554 字
+          1.8k 字
         
       </span>
     
@@ -254,7 +254,7 @@
         
         
         
-          5 分钟
+          16 分钟
         
       </span>
     
@@ -304,309 +304,68 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MPV播放器默认快捷键</h1>
+            <h1 id="seo-header">Docker介绍和使用</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="键盘控制"><a href="#键盘控制" class="headerlink" title="键盘控制"></a>键盘控制</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>功能</th>
-<th>配置项</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>← →</td>
-<td>前进&#x2F;后退5秒，加shift变为移动1秒</td>
-<td><code>--hr-seek</code></td>
-</tr>
-<tr>
-<td>↑↓</td>
-<td>前进&#x2F;后退60秒，加shift变为5秒</td>
-<td><code>--hr-seek</code></td>
-</tr>
-<tr>
-<td>Ctrl+← &#x2F;→</td>
-<td>切换字幕</td>
-<td>sub-seek</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+← &#x2F;→</td>
-<td>调整字幕延迟</td>
-<td></td>
-</tr>
-<tr>
-<td>[ 和 ]</td>
-<td>减少&#x2F;增加当前播放速度的10%</td>
-<td></td>
-</tr>
-<tr>
-<td>{ 和 }</td>
-<td>减半&#x2F;加倍播放速度</td>
-<td></td>
-</tr>
-<tr>
-<td>&lt; 和 &gt;</td>
-<td>在播放列表中后退&#x2F;前进</td>
-<td></td>
-</tr>
-<tr>
-<td>p或空格</td>
-<td>暂停&#x2F;播放</td>
-<td></td>
-</tr>
-<tr>
-<td>,&#x2F;.</td>
-<td>前&#x2F;后逐帧播放，点一下移动一帧</td>
-<td></td>
-</tr>
-<tr>
-<td><kbd>q</kbd></td>
-<td>退出</td>
-<td></td>
-</tr>
-<tr>
-<td><kbd>Q</kbd></td>
-<td>退出，但保存当前播放位置</td>
-<td></td>
-</tr>
-<tr>
-<td>&#x2F; 和* ， 9和0</td>
-<td>减少&#x2F;增加音量</td>
-<td></td>
-</tr>
-<tr>
-<td>m</td>
-<td>静音</td>
-<td></td>
-</tr>
-<tr>
-<td>-</td>
-<td>循环视频轨</td>
-<td></td>
-</tr>
-<tr>
-<td>#</td>
-<td>循环音轨</td>
-<td></td>
-</tr>
-<tr>
-<td>f</td>
-<td>全屏切换</td>
-<td>–fs</td>
-</tr>
-<tr>
-<td>ESC</td>
-<td>退出全屏</td>
-<td></td>
-</tr>
-<tr>
-<td><kbd>Shift</kbd>+<kbd>t</kbd></td>
-<td>置顶&#x2F;取消置顶</td>
-<td></td>
-</tr>
-<tr>
-<td>w 和 W</td>
-<td>减少&#x2F;增加平移和扫描范围。目前 <code>e</code> 键与 <code>W</code> 键的作用相同但不赞成使用</td>
-<td></td>
-</tr>
-<tr>
-<td>o (或 P)</td>
-<td>按住显示进度条</td>
-<td></td>
-</tr>
-<tr>
-<td>v</td>
-<td>显示或隐藏字幕</td>
-<td></td>
-</tr>
-<tr>
-<td>j&#x2F;J</td>
-<td>切换字幕</td>
-<td></td>
-</tr>
-<tr>
-<td>z 和 Z</td>
-<td>调节字幕延迟0.1秒</td>
-<td></td>
-</tr>
-<tr>
-<td>l</td>
-<td>设置ab循环点</td>
-<td>ab-loop</td>
-</tr>
-<tr>
-<td>L</td>
-<td>切换无限循环</td>
-<td></td>
-</tr>
-<tr>
-<td>Ctrl + 和 Ctrl -</td>
-<td>调节音轨延迟0.1秒</td>
-<td></td>
-</tr>
-<tr>
-<td>u</td>
-<td>去除字幕样式</td>
-<td>–sub-ass-override</td>
-</tr>
-<tr>
-<td>V</td>
-<td>切换字幕的VSFilter长宽比兼容模式</td>
-<td>–sub-ass-vsfilter-aspect-compat</td>
-</tr>
-<tr>
-<td>r 和 R</td>
-<td>调整字幕位置</td>
-<td></td>
-</tr>
-<tr>
-<td>s</td>
-<td>截屏</td>
-<td></td>
-</tr>
-<tr>
-<td>S</td>
-<td>截屏（不截字幕）</td>
-<td></td>
-</tr>
-<tr>
-<td>Ctrl+s</td>
-<td>截屏（包含界面）</td>
-<td></td>
-</tr>
-<tr>
-<td>PGUP PGDWN</td>
-<td>切换章节</td>
-<td>–chapter-seek-threshold</td>
-</tr>
-<tr>
-<td>Shift+PGUP&#x2F;PGDWN</td>
-<td>后退&#x2F;前进10分钟</td>
-<td></td>
-</tr>
-<tr>
-<td>d</td>
-<td>激活&#x2F;注销去隔行扫描器</td>
-<td></td>
-</tr>
-<tr>
-<td>A</td>
-<td>循环长宽比覆盖</td>
-<td></td>
-</tr>
-<tr>
-<td>Ctrl h</td>
-<td>切换硬件加速</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt+↑↓← →</td>
-<td>视频位置调整</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt + 和 Alt -</td>
-<td>缩放视频</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt+BACKSPACE</td>
-<td>重置视频位置和缩放</td>
-<td></td>
-</tr>
-<tr>
-<td>F8</td>
-<td>显示播放列表</td>
-<td></td>
-</tr>
-<tr>
-<td>F9</td>
-<td>显示视音频stream列表</td>
-<td></td>
-</tr>
-<tr>
-<td>i 和 I</td>
-<td>显示几秒&#x2F;切换 详细状态信息显示（1,2,3翻页）</td>
-<td></td>
-</tr>
-<tr>
-<td>Del</td>
-<td>调节OSC显示方式（进度条之类的）</td>
-<td></td>
-</tr>
-<tr>
-<td>1 和 2</td>
-<td>对比度调节</td>
-<td></td>
-</tr>
-<tr>
-<td>3 和 4</td>
-<td>明亮度调节</td>
-<td></td>
-</tr>
-<tr>
-<td>5 和 6</td>
-<td>调整伽马Adjust gamma</td>
-<td></td>
-</tr>
-<tr>
-<td>7 和 8</td>
-<td>调节饱和度</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt+0</td>
-<td>50%原视频大小</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt+1</td>
-<td>原视频大小</td>
-<td></td>
-</tr>
-<tr>
-<td>Alt+2</td>
-<td>2倍原视频大小</td>
-<td></td>
-</tr>
-</tbody></table>
-<h2 id="鼠标控制"><a href="#鼠标控制" class="headerlink" title="鼠标控制"></a>鼠标控制</h2><table>
-<thead>
-<tr>
-<th>鼠标操作</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>左键双击</td>
-<td>切换全屏的开&#x2F;关</td>
-</tr>
-<tr>
-<td>右键</td>
-<td>切换暂停的开&#x2F;关</td>
-</tr>
-<tr>
-<td>前进&#x2F;后退键</td>
-<td>跳至播放列表中的下&#x2F;上一个条目</td>
-</tr>
-<tr>
-<td>滚轮向上&#x2F;下</td>
-<td>减少&#x2F;增加音量</td>
-</tr>
-<tr>
-<td>滚轮向左&#x2F;右</td>
-<td>向前&#x2F;向后跳转10秒</td>
-</tr>
-</tbody></table>
-<p><img src="/blog/./assets/v2-672e28d79cc4d140187d84c25a79aeae_1440w.png" srcset="/blog/img/loading.gif" lazyload alt="MPV默认快捷键表"></p>
-<p>（完）</p>
-<p><strong>参考</strong></p>
+                <h2 id="Docker和虚拟机区别"><a href="#Docker和虚拟机区别" class="headerlink" title="Docker和虚拟机区别"></a>Docker和虚拟机区别</h2><p>Docker 是轻量级的沙盒，在其中运行的只是应用，虚拟机里面还有额外的系统。</p>
+<h2 id="Docker-安全"><a href="#Docker-安全" class="headerlink" title="Docker 安全"></a>Docker 安全</h2><p>Docker 利用了 Linux 内核中很多安全特性来保证不同容器之间的隔离，并且通过签名机制来对镜像进行验证。大量生产环境的部署证明，Docker 虽然隔离性无法与虚拟机相比，但仍然具有极高的安全性。</p>
+<h2 id="Docker清理后台容器"><a href="#Docker清理后台容器" class="headerlink" title="Docker清理后台容器"></a>Docker清理后台容器</h2><p>可以使用docker rm $sudo( docker ps -a -q) 命令。</p>
+<h2 id="Docker查看镜像支持的环境变量？"><a href="#Docker查看镜像支持的环境变量？" class="headerlink" title="Docker查看镜像支持的环境变量？"></a>Docker查看镜像支持的环境变量？</h2><p>可以使用 docker run IMAGE env 命令。</p>
+<h2 id="Docker提示：exec-format-error"><a href="#Docker提示：exec-format-error" class="headerlink" title="Docker提示：exec format error"></a>Docker提示：exec format error</h2><p>检查启动命令是否有可执行权限，进入容器手工运行脚本进行排查。</p>
+<h2 id="Docker本地的镜像文件都存放在哪里？"><a href="#Docker本地的镜像文件都存放在哪里？" class="headerlink" title="Docker本地的镜像文件都存放在哪里？"></a>Docker本地的镜像文件都存放在哪里？</h2><p>与 Docker 相关的本地资源都存放在&#x2F;var&#x2F;lib&#x2F;docker&#x2F;目录下，其中 container 目录存放容器信息，graph 目录存放镜像信息，aufs 目录下存放具体的内容文件。</p>
+<h2 id="Docker退出一个镜像的-bash，而不终止它？"><a href="#Docker退出一个镜像的-bash，而不终止它？" class="headerlink" title="Docker退出一个镜像的 bash，而不终止它？"></a>Docker退出一个镜像的 bash，而不终止它？</h2><p>按 Ctrl-p Ctrl-q。</p>
+<h2 id="Docker退出容器时候自动删除"><a href="#Docker退出容器时候自动删除" class="headerlink" title="Docker退出容器时候自动删除?"></a>Docker退出容器时候自动删除?</h2><p>使用 –rm 选项，例如  docker run –rm -it ubuntu</p>
+<h2 id="Docker快速查看本地的镜像和容器？"><a href="#Docker快速查看本地的镜像和容器？" class="headerlink" title="Docker快速查看本地的镜像和容器？"></a>Docker快速查看本地的镜像和容器？</h2><p>可以通过 docker images 来快速查看本地镜像；通过 docker ps -a 快速查看本地容器。</p>
+<h2 id="镜像相关"><a href="#镜像相关" class="headerlink" title="镜像相关"></a>镜像相关</h2><h3 id="批量清理临时镜像文件"><a href="#批量清理临时镜像文件" class="headerlink" title="批量清理临时镜像文件"></a>批量清理临时镜像文件</h3><p>可以使用 sudo docker rmi $(sudo docker images -q -f danging&#x3D;true)命令</p>
+<h3 id="如何查看镜像支持的环境变量"><a href="#如何查看镜像支持的环境变量" class="headerlink" title="如何查看镜像支持的环境变量"></a>如何查看镜像支持的环境变量</h3><p>使用 sudo docker run IMAGE env</p>
+<h3 id="本地的镜像文件都存放在哪里"><a href="#本地的镜像文件都存放在哪里" class="headerlink" title="本地的镜像文件都存放在哪里"></a>本地的镜像文件都存放在哪里</h3><p>Docker 相关的本地资源存放在&#x2F;var&#x2F;lib&#x2F;docker&#x2F;目录下，其中 container 目录存放容器信息，graph 目录存放镜像信息，aufs 目录下存放具体的镜像底层文件。</p>
+<h3 id="构建-Docker-镜像应该遵循的原则"><a href="#构建-Docker-镜像应该遵循的原则" class="headerlink" title="构建 Docker 镜像应该遵循的原则"></a>构建 Docker 镜像应该遵循的原则</h3><p>整体原则上，尽量保持镜像功能的明确和内容的精简，要点包括：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://mpv.io/manual/master/#keyboard-control">keyboard-control</a></li>
+<li>尽量选取满足需求但较小的基础系统镜像，比如选择 debian:wheezy 镜像，仅有86MB 大小</li>
+<li>清理编译生成文件、安装包的缓存等临时文件</li>
+<li>安装各个软件时候要指定准确的版本号，并避免引入不需要的依赖</li>
+<li>从安全的角度考虑，应用尽量使用系统的库和依赖</li>
+<li>使用 Dockerfile 创建镜像时候要添加.dockerignore 文件或使用干净的工作目录</li>
 </ul>
+<h2 id="容器相关"><a href="#容器相关" class="headerlink" title="容器相关"></a>容器相关</h2><h3 id="容器退出后，数据持久化问题"><a href="#容器退出后，数据持久化问题" class="headerlink" title="容器退出后，数据持久化问题"></a>容器退出后，数据持久化问题</h3><p>容器退出后会处于终止（exited）状态，此时可以通过 docker ps -a 查看，其中数据不会丢失，还可以通过 docker start 来启动，只有删除容器才会清除数据。</p>
+<h3 id="如何停止所有正在运行的容器？"><a href="#如何停止所有正在运行的容器？" class="headerlink" title="如何停止所有正在运行的容器？"></a>如何停止所有正在运行的容器？</h3><p>使用 docker kill $(sudo docker ps -q)</p>
+<h3 id="如何清理批量后台停止的容器？"><a href="#如何清理批量后台停止的容器？" class="headerlink" title="如何清理批量后台停止的容器？"></a>如何清理批量后台停止的容器？</h3><p>使用 docker rm $（sudo docker ps -a -q）</p>
+<h3 id="如何临时退出一个正在交互的容器的终端，而不终止它"><a href="#如何临时退出一个正在交互的容器的终端，而不终止它" class="headerlink" title="如何临时退出一个正在交互的容器的终端，而不终止它"></a>如何临时退出一个正在交互的容器的终端，而不终止它</h3><p>按 Ctrl+p，后按 Ctrl+q，如果按 Ctrl+c 会使容器内的应用进程终止，进而会使容器终止。</p>
+<h3 id="容器应用查看日志信息"><a href="#容器应用查看日志信息" class="headerlink" title="容器应用查看日志信息"></a>容器应用查看日志信息</h3><p>使用 docker logs，后面跟容器的名称或者 ID 信息</p>
+<h3 id="系统报错-Error-No-public-port-‘80’-published-for-…，是什么意思？"><a href="#系统报错-Error-No-public-port-‘80’-published-for-…，是什么意思？" class="headerlink" title="系统报错 Error: No public port ‘80’ published for …，是什么意思？"></a>系统报错 Error: No public port ‘80’ published for …，是什么意思？</h3><p>创建镜像时 Dockerfile 要指定正确的 EXPOSE 的端口，容器启动时指定PublishAllport&#x3D;true</p>
+<h3 id="一个容器中可以同时运行多个应用进程吗"><a href="#一个容器中可以同时运行多个应用进程吗" class="headerlink" title="一个容器中可以同时运行多个应用进程吗"></a>一个容器中可以同时运行多个应用进程吗</h3><p>可以但不推荐在同一个容器内运行多个应用进程，如果有类似需求，可以通过额外的进程管理机制，比如 supervisord 来管理所运行的进程</p>
+<h3 id="如何控制容器占用系统资源（CPU，内存）的份额"><a href="#如何控制容器占用系统资源（CPU，内存）的份额" class="headerlink" title="如何控制容器占用系统资源（CPU，内存）的份额"></a>如何控制容器占用系统资源（CPU，内存）的份额</h3><p>在使用 docker create 命令创建容器或使用 docker run 创建并运行容器的时候，可以使用-c|–cpu-shares[&#x3D;0]参数来调整同期使用 CPU 的权重，使用-m|–memory参数来调整容器使用内存的大小。</p>
+<h2 id="仓库相关"><a href="#仓库相关" class="headerlink" title="仓库相关"></a>仓库相关</h2><h3 id="仓库（Repository）、注册服务器（Registry）、注册索引（Index）关系？"><a href="#仓库（Repository）、注册服务器（Registry）、注册索引（Index）关系？" class="headerlink" title="仓库（Repository）、注册服务器（Registry）、注册索引（Index）关系？"></a>仓库（Repository）、注册服务器（Registry）、注册索引（Index）关系？</h3><ul>
+<li>仓库是存放一组关联镜像的集合，比如同一个应用的不同版本的镜像;</li>
+<li>注册服务器是存放实际的镜像的地方，注册索引则负责维护用户的账号，权限，搜索，标签等管理；</li>
+<li>注册服务器利用注册索引来实现认证等管理。</li>
+</ul>
+<h3 id="从非官方仓库下载镜像的时候提示“Error：Invaild-registry-endpoint"><a href="#从非官方仓库下载镜像的时候提示“Error：Invaild-registry-endpoint" class="headerlink" title="从非官方仓库下载镜像的时候提示“Error：Invaild registry endpoint"></a>从非官方仓库下载镜像的时候提示“Error：Invaild registry endpoint</h3><p>Docker 自 1.3.0 版本往后以来，加强了对镜像安全性的验证，需要手动添加对非官方仓库的信任。</p>
+<p>DOCKER_OPTS&#x3D;”–insecure-registry dl.dockerpool.com:5000”</p>
+<p>重启 docker 服务</p>
+<h2 id="配置相关"><a href="#配置相关" class="headerlink" title="配置相关"></a>配置相关</h2><h3 id="Docker-的配置文件放在那里。如何修改配置？"><a href="#Docker-的配置文件放在那里。如何修改配置？" class="headerlink" title="Docker 的配置文件放在那里。如何修改配置？"></a>Docker 的配置文件放在那里。如何修改配置？</h3><p>Ubuntu 系统下 Docker 的配置文件是&#x2F;etc&#x2F;default&#x2F;docker，CentOS 系统配置文件存放在&#x2F;etc&#x2F;sysconfig&#x2F;docker</p>
+<h3 id="如何更改-Docker-的默认存储设置？"><a href="#如何更改-Docker-的默认存储设置？" class="headerlink" title="如何更改 Docker 的默认存储设置？"></a>如何更改 Docker 的默认存储设置？</h3><p>Docker 的默认存放位置是&#x2F;var&#x2F;lib&#x2F;docker,如果希望将 Docker 的本地文件存储到其他分区，可以使用 Linux 软连接的方式来做。</p>
+<h2 id="Docker-与虚拟化"><a href="#Docker-与虚拟化" class="headerlink" title="Docker 与虚拟化"></a>Docker 与虚拟化</h2><h3 id="Docker-与-LXC（Linux-Container）有何不同"><a href="#Docker-与-LXC（Linux-Container）有何不同" class="headerlink" title="Docker 与 LXC（Linux Container）有何不同"></a>Docker 与 LXC（Linux Container）有何不同</h3><p>LXC 利用 Linux 上相关技术实现容器，Docker 则在如下的几个方面进行了改进：</p>
+<ul>
+<li>移植性：通过抽象容器配置，容器可以实现一个平台移植到另一个平台；</li>
+<li>镜像系统：基于 AUFS 的镜像系统为容器的分发带来了很多的便利，同时共同的镜像层只需要存储一份，实现高效率的存储；</li>
+<li>版本管理：类似于 GIT 的版本管理理念，用户可以更方面的创建、管理镜像文件；</li>
+<li>仓库系统：仓库系统大大降低了镜像的分发和管理的成本；</li>
+<li>周边工具：各种现有的工具（配置管理、云平台）对 Docker 的支持，以及基于Docker 的 Pass、CI 等系统，让 Docker 的应用更加方便和多样化。</li>
+</ul>
+<h3 id="Docker-与-Vagrant-区别"><a href="#Docker-与-Vagrant-区别" class="headerlink" title="Docker 与 Vagrant 区别"></a>Docker 与 Vagrant 区别</h3><ul>
+<li>Vagrant 类似于 Boot2Docker（一款运行 Docker 的最小内核），是一套虚拟机的管理环境，Vagrant 可以在多种系统上和虚拟机软件中运行，可以在 Windows。Mac等非 Linux 平台上为 Docker 支持，自身具有较好的包装性和移植性。</li>
+<li>原生 Docker 自身只能运行在 Linux 平台上，但启动和运行的性能都比虚拟机要快，往往更适合快速开发和部署应用的场景。</li>
+</ul>
+<h3 id="开发环境中-Docker-与-Vagrant-如何选择"><a href="#开发环境中-Docker-与-Vagrant-如何选择" class="headerlink" title="开发环境中 Docker 与 Vagrant 如何选择"></a>开发环境中 Docker 与 Vagrant 如何选择</h3><p>Docker 不是虚拟机，而是进程隔离，对于资源的消耗很少，单一开发环境下Vagrant 是虚拟机上的封装，虚拟机本身会消耗资源。</p>
+<h3 id="如何将一台宿主机的-docker-环境迁移到另外一台宿主机"><a href="#如何将一台宿主机的-docker-环境迁移到另外一台宿主机" class="headerlink" title="如何将一台宿主机的 docker 环境迁移到另外一台宿主机"></a>如何将一台宿主机的 docker 环境迁移到另外一台宿主机</h3><p>停止 Docker 服务，将整个 docker 存储文件复制到另外一台宿主机上，然后调整另外一台宿主机的配置即可</p>
+<h3 id="Docker-容器创建后，删除了-var-run-netns-目录下的网络名字空间文件，如何手动恢复"><a href="#Docker-容器创建后，删除了-var-run-netns-目录下的网络名字空间文件，如何手动恢复" class="headerlink" title="Docker 容器创建后，删除了&#x2F;var&#x2F;run&#x2F;netns 目录下的网络名字空间文件，如何手动恢复"></a>Docker 容器创建后，删除了&#x2F;var&#x2F;run&#x2F;netns 目录下的网络名字空间文件，如何手动恢复</h3><p>查看容器进程 ID，比如 1234</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker inspect --format=<span class="hljs-string">&#x27;&#123;&#123;. State.pid&#125;&#125;&#x27;</span> <span class="hljs-variable">$container_id</span> 1234 <br></code></pre></td></tr></table></figure>
+
+<p>到 proc 目录下，把对应的网络名字空间文件链接到&#x2F;var&#x2F;run&#x2F;netns,然后通过正常的系统命令查看操作容器的名字空间。</p>
+<p>（完）</p>
 
                 
               </div>
@@ -630,7 +389,7 @@
   
     <span>></span>
     
-  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E6%BC%94%E7%A4%BA/" class="category-chain-item">操作演示</a>
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/Docker/" class="category-chain-item">Docker</a>
   
   
 
@@ -647,9 +406,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/blog/tags/MPV/" class="print-no-link">#MPV</a>
-      
-        <a href="/blog/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="print-no-link">#快捷键</a>
+        <a href="/blog/tags/Docker/" class="print-no-link">#Docker</a>
       
     </div>
   
@@ -661,8 +418,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MPV播放器默认快捷键</div>
-      <div>https://maojun.xyz/blog/2024/04/MPV播放器默认快捷键.html</div>
+      <div>Docker介绍和使用</div>
+      <div>https://maojun.xyz/blog/2023/10/Docker介绍和使用.html</div>
     </div>
     <div class="license-meta">
       
@@ -674,7 +431,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月5日</div>
+          <div>2023年10月11日</div>
         </div>
       
       
@@ -718,9 +475,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html" title="">
+                      <a href="/blog/2023/10/Java%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95%E9%A2%98.html" title="Java经典算法题">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">Java经典算法题</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -728,8 +485,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/2024/04/Markdown%E5%AF%BC%E5%87%BA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9B%AE%E5%BD%95%E7%9A%84Html.html" title="Markdown导出带大纲目录的Html">
-                        <span class="hidden-mobile">Markdown导出带大纲目录的Html</span>
+                      <a href="/blog/2023/10/%E5%80%BC%E5%BE%97%E4%B8%80%E5%90%AC%E7%9A%84%E9%9F%B3%E4%B9%90.html" title="值得一听的音乐">
+                        <span class="hidden-mobile">值得一听的音乐</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
