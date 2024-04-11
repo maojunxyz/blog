@@ -1,0 +1,796 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="成就哪怕是休息的时候，无所事事都会让我非常难以忍受完成一项任务，会推动我朝下一个目标努力 应用：要可以衡量自己的工作时间、工作总量以及取得的业绩共同努力工作会使我感到亲密对自己的奖励：不是让自己休息，而是制定更高的目标  行动一旦做出决定，就必须行动采取行动，检验结果，继而学习和进步 应用：需要别人知道我能干的鼓励领导一个陷入惰性，光说不干的团队适合讨论如何率先创新和改进  适应不讨厌突如其来的">
+  
+  
+  
+  <title>管理者的品质 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="管理者的品质"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-05-23 22:09" pubdate>
+          2021年5月23日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          46 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">管理者的品质</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <ol>
+<li><p>成就<br>哪怕是休息的时候，无所事事都会让我非常难以忍受<br>完成一项任务，会推动我朝下一个目标努力</p>
+<p>应用：<br>要可以衡量自己的工作时间、工作总量以及取得的业绩<br>共同努力工作会使我感到亲密<br>对自己的奖励：不是让自己休息，而是制定更高的目标</p>
+</li>
+<li><p>行动<br>一旦做出决定，就必须行动<br>采取行动，检验结果，继而学习和进步</p>
+<p>应用：<br>需要别人知道我能干的鼓励<br>领导一个陷入惰性，光说不干的团队<br>适合讨论如何率先创新和改进</p>
+</li>
+<li><p>适应<br>不讨厌突如其来的变化和曲折<br>认为未来是在现有的选择上发展起来的<br>甚至喜欢变化</p>
+<p>应用：<br>适合短兵相接，不适合打持久战<br>觉得计划工作极其乏味</p>
+</li>
+<li><p>分析<br>擅长预先识别结构与规律<br>寻找问题的原因</p>
+<p>应用：<br>要用逻辑证明决策的依据<br>对自己的推理能力表示认可和赞赏，为自己严谨的思维感到自豪<br>更加相信有数据的信息<br>善于在数据中发现规律<br>准确完成任务比按时完成更重要，应经常核对进度</p>
+</li>
+<li><p>信仰<br>  经常关注家庭、乐于助人、甚至追求灵性<br>  珍视责任和伦理<br>  金钱和名利并不完全代表成功，可以排除诱惑朝既定的目标努力<br>  恒定性让我很容易获得别人的信赖<br>  必须从事与价值观相符的工作，自己的工作必须有意义</p>
+</li>
+</ol>
+<p>  应用：<br>  把自己笃信的价值与公司的价值相结合<br>  更看重提升服务质量，而不是多赚钱</p>
+<ol start="6">
+<li>统率<br>  一旦形成观点，就必须与人分享<br>  一旦确立目标，就要用它来统一众人的思想，并不害怕对立<br>  直言不讳，喜欢开诚布公</li>
+</ol>
+<p>  应用：<br>  善于打通障碍或说服别人<br>  思想不会随大流<br>  不喜欢别人管头管脚，放手让他领导和决策<br>  如果拉帮结派、冒犯同事，要抓住证据，当头棒喝。并视情况让他将功补过<br>  不要威胁他<br>  固执己见有助于提高效率，但是要避免咄咄逼人和出口伤人</p>
+<ol start="7">
+<li><p>沟通<br>  喜欢解释、描述、主持、演讲和写作<br>  喜欢故事化地捕捉别人的注意力<br>  应用：<br>  鼓励他搜集公司内部的传奇和趣事<br>  喜欢讲述自己的生活经历<br>  要安排他参加一流演讲大师的高级班培训，对于初级班会很快厌倦</p>
+</li>
+<li><p>竞争<br>  参加比赛不是为了取乐，而是为了取胜</p>
+</li>
+</ol>
+<p>  应用：<br>  只有获胜的人，才会从公开成绩中获得激励，其他人会感觉是羞辱<br>  管理他的最好方法，就是找一个能力更强的竞争者<br>  达到目标就是胜利，未达目标就是失败<br>  安排竞赛，喜欢跟水平相似的人竞争，对低能力者不感兴趣<br>  采用竞争式的语言</p>
+<ol start="9">
+<li>关联<br>  深信凡事发生必有原因，笃信人类大同<br>  你知道自己有自己的优势，但不是无所不知，所以会自信而谦卑，你感到与别人有关联，<br>  是因为别人具有你不具备的智慧</li>
+</ol>
+<p>  应用：<br>  善于向不同的人说明他们相互依赖，会成为公司的团队建设能手<br>  乐于帮助公司重新定义和构思使命，乐于成为大事业的一部分<br>  与他分享文章、作品和经验，彼此增加关注点</p>
+<ol start="10">
+<li><p>回顾<br>在过去中寻找答案，是为了了解现在，使蓝图重现，重回初衷</p>
+<p>应用：<br>在行动之前需要了解背景<br>在介绍他认识新同事的时候，要先告知新同事的个人背景，再谈正事<br>每次开会都要做阶段性的工作与学习回顾<br>喜欢通过案例思考能够对公司文化起作用</p>
+</li>
+<li><p>统筹<br>喜欢管理变数，并将其形成最佳的组合<br>总在寻找最佳配置<br>形势越是变化无常，就越能让你出神入化</p>
+<p>应用：<br>喜欢负责，善于打造最佳团队<br>足智多谋，可以干困难的工作<br>靠相互信任的关系打造团队，拒绝他认为不诚实的人与敷衍了事的人</p>
+</li>
+<li><p>审慎<br>喜欢提前计划，以防不测<br>谨慎地选择朋友，并避而不谈私事<br>讨厌变数，希望计划十全十美</p>
+<p>应用：<br>不要让他干当机立断的事，靠直觉决策会让他不安<br>让他加入好冲动的团队，会让团队深思熟虑<br>尊重他的隐私，如果他与你刻意保持距离，你也不必往心里去<br>天生善于预见危险<br>不擅长迎来送往或者拉关系<br>在交友方面是有选择的，要确定周围的人可以信赖</p>
+</li>
+<li><p>伯乐<br>能善于发现别人的潜能<br>与别人交往的目的是帮助他们成功<br>能够搜寻别人进步的蛛丝马迹，别人的进入如同燃料，给予你力量和满足</p>
+<p>应用：<br>出面表扬表现优秀的同事<br>善于培养担当重任的人才<br>用伯乐的才干，用于帮助强者取得成功，而不是帮助陷入困境的弱者，对于陷入困境的<br>人，最大的帮助就是让他另辟蹊径<br>增强他催人奋进的自我意识：他们靠自己永远不会打破记录，你的鼓励和信心使他们奋起</p>
+</li>
+<li><p>纪律<br>建立常规、制定时间表，把长期任务分解为短期目标，然后锲而不舍地贯彻实施<br>不一定整洁有序，但是要求精确，从而建立控制感、渴求预测<br>必须了解，不是每个人都像你一样渴求预测，他们有自己的解决之道，以避免冲突</p>
+<p>应用：<br>给他机会处理混乱的局面，天生受不了无序和混乱<br>脏乱差的地方会待不下去，从而惹恼他<br>一定要告知任务期限，喜欢提前完成<br>不要随意改变计划和工作重点，他们讨厌意外<br>他需要分清轻重缓急<br>对于制定计划和安排工作是他的强项，可以让同事在这方面咨询他<br>鼓励他针对不同的环境，建立不同的常规，他善于为提高效率建立常规</p>
+</li>
+<li><p>体谅<br>理解别人的选择，即使不认同、不怜悯，但是明白他们为什么要这么做<br>能听到无声的提问和需求<br>帮助别人用合适的语言来表达情感，帮助他们倾诉情感生活<br>能够让别人愿意倾诉、能把握别人的情感需求、善于换位思考</p>
+<p>应用：<br>帮助你了解公司中某些人的想法，对别人的情绪非常敏感<br>在开始某项工作前，了解他及其他员工的情感因素，因为他认为这也是一个环节<br>他如果哭，应该给予关注，切忌反应过度，他感受别人的喜怒哀乐甚至超过当事人<br>让他知道自己的体谅是一种才干，用于帮助别人<br>问他的本能意见，而不是逻辑决策，他说不清为什么对，但又常常是对的。问：你从骨子<br>里觉得我们应该做什么？<br>容易受别人的情绪感染，所以要安排他和积极乐观的人共事，和消极的人共事会让他意志<br>消沉<br>如果员工或顾客对一项措施不解，可以让他感知他们的疑问所在</p>
+</li>
+<li><p>公平<br>无论社会地位如何，要平等地对待他人<br>对依靠：背景、关系和贿赂上位的行为深恶痛绝<br>不喜欢自己和别人滥用职权<br>同情弱者，论功行赏</p>
+<p>应用：<br>在分析数据时，擅长使用群体数据，而非个人特点<br>在需要公平地执行规章时，可以让他帮忙辅助解释<br>不愿意参加头脑风暴和长期规划，喜欢完成任务</p>
+</li>
+<li><p>专注<br>需要一个明确的目的地，否则会对工作和生活一筹莫展<br>每年、每月、每周都在制定目标<br>本能地判断某些活动是否有助于你达成目标，无助于此的便被放弃<br>会确保每个人目不斜视，不因为“有趣”而偏离了方向<br>善于寻找最佳路径提高效率</p>
+<p>应用：<br>喜欢定期讨论目标，并讨论实现目标取得的阶段性进步<br>对别人的情感不敏感，在实现目标的过程中，会毫不顾忌别人的情感<br>不喜欢变动无常的场面，用“新的目标”“新的标准”来定义变化会更好<br>一旦加入有严格期限的项目，就会倾注全力，直到完成<br>漫无边际的会议会使他厌烦</p>
+</li>
+<li><p>前瞻<br>喜欢想象未来<br>对未来的憧憬会让你精力倍增，同时振奋别人<br>人们往往期待你描述未来的种种遐想<br>人们将拥抱你带来的希望<br>善于把未来描述地惟妙惟肖</p>
+<p>应用：<br>请他描述自己的愿景<br>给他时间去思考、描述和规划未来需要的产品和服务<br>对于未来的远见，需要一些材料辅助<br>可以让他描述公司 3 年后的发展前景<br>在做变革时，请他像员工们描述未来的美好前景</p>
+</li>
+<li><p>和谐<br>寻求共识，因为觉得冲突和摩擦有害无益，所以尽量避免<br>有人总想把自己的想法强加于人，这在你看来难以置信，因为比起固执己见，寻求共识和<br>支持才会使效率大增<br>只要别人的基本价值与你相符，可以修改自己的目标以求与别人保持一致</p>
+<p>应用：<br>尽量使他远离冲突<br>确定你在哪方面赞同他的意见，与他定期回顾这些一致意见，并安排具有“和谐”主题的员<br>工和他共事<br>如果他知道别人在支持他，就会效率更高、更专注，并且更有创造性<br>不要浪费时间同他讨论有争议的问题，他不喜欢单纯的辩论，反而可以集中讨论可以采取<br>行动的实际问题<br>不要指望他对你提出不同意见，即使你的想法是馊主意，为了保持和谐，他也会对你的想<br>法点头称是<br>当别人争执不休时，他能使他们言归于好，虽未能解决争端，却可以让大家求同存异，而<br>这些共识会成为再度合作的出发点<br>他希望对自己的行动建立信心，所以应当帮他争取权威人士和专家的支持</p>
+</li>
+<li><p>包容<br>以“扩大圈子”为人生准则<br>希望拉人入伙，使他们感到自己是团队成员<br>不愿目睹有人站在圈外，你请他们进来，给他们温暖<br>从不妄加评判他人<br>评判可能伤及他人的感情，不到万不得已何必这样做呢<br>之所以具有包容心，不是因为你认为应当尊重差异，而是确信我们在本质上相同，一样重<br>要<br>愿意邀请别人来家里玩，很喜欢新人</p>
+<p>应用：<br>热衷于使每个人都感到自己是团队的一员，使他编写新员工入门课，会乐于思考如何欢迎<br>新成员<br>天生善于判断谁受到冷遇<br>举办集体活动时，请他动员每个人参加<br>不喜欢针对少数人的高档产品和服务，参与为大众市场提供产品和服务</p>
+</li>
+<li><p>个别<br>对每个人的与众不同之处兴趣盎然<br>不能容忍一概而论或者简单归类<br>不喜欢抹杀个人特点，关注个人差异，关注每个人的风格、动机、思维方法和交际方式<br>能为朋友选择恰到好处的生日礼品<br>能够因人施教<br>有助于建立高效团队，寻找完美无缺的团队结构<br>团队的优势在于每个人都做自己擅长的事</p>
+<p>应用：<br>加入职务选拔委员会，能准确判断每个候选人的优势和弱点<br>根据每个人的优势和弱点来安排工作，帮助公司提高效率<br>能帮助你从员工的角度想问题<br>天生善于区别对待每个员工</p>
+</li>
+<li><p>搜集<br>充满好奇，爱攒东西<br>积攒信息、事实、语录等，或搜集有形的瓷娃娃、老照片</p>
+<p>应用：<br>具有天生的好奇心，喜欢从研究中获得知识<br>可担任有大量研究任务的工作<br>可充分利用互联网，在网上查找所需信息</p>
+</li>
+<li><p>思维<br>喜欢思考，喜欢思想活动<br>喜欢独处，因为这样能沉思冥想<br>可能努力解决一个问题，或酝酿一个创意，或了解另一个人的感受</p>
+<p>应用：<br>思考使他精力充沛，要多加利用<br>随时向他的思想挑战，不要犹豫，他会感到受到重视<br>鼓励他找出整块时间来思考，思考使他思路清晰，自信心更强<br>他喜欢自省和自我发现，可同他详细讨论他的优势<br>让他与“行动”主题突出的人合作，后者会推动他将想法和主意付诸行动</p>
+</li>
+<li><p>学习<br>你热爱学习，不论什么题目，学习过程而不是内容或结果，最使你兴奋<br>如果不学习新东西，就会坐立不安</p>
+<p>应用：<br>分配他做需要在瞬息万变的环境中不落伍的工作<br>他无论担任什么工作，都急于了解新情况，学习新技能<br>帮助他记录学习的进步，并祝贺他取得的每个进步<br>安排他主持内部讨论或演讲，施教于人是最好的学习方式<br>为他争取继续教育补贴</p>
+</li>
+<li><p>完美<br>你的标准是优秀而不是平均<br>发现优势后，你感到必须培育它，改进它，将它发挥直到炉火纯青<br>你避开力图修理你，使你样样精通的人，你不想终生哀叹自己的欠缺</p>
+<p>应用：<br>他喜欢琢磨如何将正常的业绩最大化，对把破东西修好不感兴趣<br>别让他担任需要不断解决问题的工作<br>过多关注他的弱点会使他沮丧<br>尽量帮助他开辟一条事业之路，使他在本职岗位上出类拔萃<br>他乐于思考每个岗位上杰出表现的员工，天生对佳绩好奇</p>
+</li>
+<li><p>积极<br>你慷慨赞人，笑容可掬，不失时机地捕捉亮点<br>乐观豁达，人们喜欢和你相处<br>你内心深处确信：活着无比美好，工作充满乐趣，无论遇到什么挫折，都不应失去幽默感</p>
+<p>应用：<br>能为工作场所注入戏剧和动力<br>与怨天尤人者在一起会很快耗尽他的活力<br>他喜欢赞美，配合“伯乐”才干，能成为一名优秀的教练<br>配合“统率”才干，能在销售上出类拔萃</p>
+</li>
+<li><p>交往<br>你能从保持米有交往中获得无穷乐趣<br>一旦与人结识，你就会有意深化关系<br>你深知别人可能利用你，但你甘愿接受这种风险，对你来说唯有真诚的关系才有价值<br>检验关系十分真诚的唯一方式便是完全信任别人</p>
+<p>应用：<br>对他明说，你很在乎他<br>他喜欢与同事建立亲密关系，这需要时间，不要让他担任需要他频繁离开同事和顾客的工<br>作<br>放心将秘密告诉他，他为人忠诚，珍视信任<br>将其与你希望留住的骨干建立真正的信任关系，他能用良好的人际关系增进优秀人才对公<br>司的忠诚<br>配合“专注”“统筹”“自信”主题，具有管理的潜能<br>宽宏大量是他的优势，提醒他予以关注</p>
+</li>
+<li><p>责任<br>你一旦作出承诺，无论大小，你从感情上就觉得有义务将其完全落实<br>如果因为某种原因承诺不能兑现，你会自动寻找其他途径给对方以补偿<br>你不作出补偿，就会寝食难安</p>
+<p>应用：<br>做人准则是履行诺言，与做不到这一点的人共事会让他痛苦难言<br>他以自身的高质量为豪，不要强迫他不顾质量而赶工，他会反抗<br>同他讨论工作时，先谈质量<br>他做事积极主动，不需要监督就能完成分配给他的工作<br>让他担任需要严格遵守道德规范的工作，他不会让你失望<br>要注意，他可能宁愿自己做事，而不愿为别人的工作负责，因而不愿担任管理工作。</p>
+</li>
+<li><p>排难<br>你热衷于排忧解难<br>其他人遇到新困难往往一筹莫展，而你却干劲倍增<br>判断故障，排除问题，起死回生，使你其乐无穷（救“活”的对象如：机器、人或公司）</p>
+<p>应用：<br>当你希望识别公司内部的问题时，请他发表意见<br>派他去为最佳客户解决问题<br>他解决一个问题后，切记赞扬他取得的成绩<br>了解他希望如何改进，在他遇到棘手问题时，给他支持，问题悬而未决，他就会产生失败<br>感</p>
+</li>
+<li><p>自信<br>在你的心灵最深处，你对自己的优势充满信心<br>你深知自己是个有能力的人，并对自己的判断充满信心<br>你知道没有人能为你作决定，别人能够引导，能够建议，但只有你才有权作结论，下决<br>心，去行动</p>
+<p>应用：<br>让他担任有充分的自主决策空间的工作<br>让他担任需要坚持不懈才能成功的工作<br>对他说：由你做主，把这件事办成了<br>帮他认识到，他的决定和行动的确有效<br>他或许以为他能做到与自身优势无关的事，他需要清醒的反馈来补充他的直觉<br>配合“前瞻”“专注”“追求”或“统筹”等优势主题，就可能具备担任公司负责人的潜力</p>
+</li>
+<li><p>追求<br>你希望在别人的眼中非同凡响<br>你希望自己获得真正意义上的认可，希望自己的意见受到重视<br>你希望出人头地，希望出名<br>你尤其希望别人了解和赞赏你的独特优势<br>你希望与可信赖和专业化的成功人士交往，如果他们不是这样，你就会推动他们朝此努<br>力，直到成功，否则你就会弃他们而去<br>你天性独立，在工作中希望获得充分的自由，按你自己的方式做事的自由</p>
+<p>应用：<br>切记，他需要独立，不要过多管束他<br>切记，他有贡献，要及时表扬，这是他的动力，给他活动空间，但切勿不管不问，他应得<br>的表扬要全部给他<br>给他机会亮相，让大家都知道他，他喜欢成为公众关注的焦点<br>他喜欢与高手为伍<br>鼓励他表扬团队中其他取得优异成绩的人，他喜欢让其他人有成就感<br>当他想出类拔萃时，帮助他分析为了实现这些理想而必须增强的自身优势，切勿要求他降<br>低标准<br>他非常重视他人的看法，如果别人不给他应得的褒奖，他的自尊心就会受到伤害</p>
+</li>
+<li><p>战略<br>你能在复杂事物中识别其中的规律，尝试不同的解决方案<br>你能够清晰判断潜在的障碍，看清各条路径的走向，并进行筛选<br>对未来具有预见性</p>
+<p>应用：<br>让他为公司打头阵，他善于解决和预见问题，这种能力非常宝贵<br>让他参与公司规划，问他：如果发生这种情况，我们该怎么办<br>在征求他的意见之前，务必给他足够的时间思考，他需要考虑几种方案<br>派他参加战略计划研讨会<br>他往往善于用语言表达观点和思想</p>
+</li>
+<li><p>取悦<br>酷爱结识新人并赢得好感<br>不怕见生人，喜欢主动与生人攀谈<br>一旦关系建立，你就高高兴兴地把它搁置一边</p>
+<p>应用：<br>让他担任每天都能见到新人的工作，与陌生人见面使他兴奋<br>派他代表公司与外界打交道，他能使人感到宾至如归<br>帮助他建立系统来记人名<br>除非他具备“体谅”和“交往”优势，别指望他会喜欢与客户建立密切关系的工作<br>担任社区内的亲善使者，代表公司参加社区的俱乐部和集会</p>
+</li>
+</ol>
+<p>（完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/%E7%AE%A1%E7%90%86%E5%AD%A6/" class="category-chain-item">管理学</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E7%AE%A1%E7%90%86%E5%AD%A6/" class="print-no-link">#管理学</a>
+      
+        <a href="/blog/tags/%E9%A2%86%E5%AF%BC%E5%8A%9B/" class="print-no-link">#领导力</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>管理者的品质</div>
+      <div>https://maojun.xyz/blog/2021/05/管理者的品质.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年5月23日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2021/10/%E7%94%A8%E6%88%B7%E7%99%BB%E5%85%A5%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B%E8%AE%BE%E8%AE%A1.html" title="用户登入测试用例设计">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">用户登入测试用例设计</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2021/05/%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%A4%E8%AF%86.html" title="管理的基本认识">
+                        <span class="hidden-mobile">管理的基本认识</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
