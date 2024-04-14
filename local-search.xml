@@ -4,6 +4,66 @@
   
   
   <entry>
+    <title>Vue3项目搭建的4种方式</title>
+    <link href="/blog/2024/04/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E7%9A%844%E7%A7%8D%E6%96%B9%E5%BC%8F.html"/>
+    <url>/blog/2024/04/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E7%9A%844%E7%A7%8D%E6%96%B9%E5%BC%8F.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h2><ul><li>官方文档：<a href="https://vuejs.org/">https://vuejs.org</a></li><li>地址：<a href="https://github.com/vuejs">https://github.com/vuejs</a></li></ul><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li><p>渐进式框架</p><p>能够自动追踪依赖的模板表达式和计算属性，提供 MVVM 数据绑定和一个可组合的组件系统，具有简单、灵活的 API，使读者更加容易理解，能够更快上手。</p></li><li><p>双向数据绑定</p><p>声明式渲染是数据双向绑定的主要体现，同样也是 Vue.js 的核心，它允许采用简洁的模板语法将数据声明式渲染整合进 DOM。</p></li><li><p>指令</p><p>Vue.js 与页面进行交互，主要就是通过内置指令来完成的，指令的作用是当其表达式的值改变时相应地将某些行为应用到 DOM 上。</p></li><li><p>组件化</p><p>组件可以扩展 HTML 元素，封装可重用的代码。</p></li><li><p>Vue 路由管理</p><p>Vue-Router 是 Vue 全家桶中的路由管理插件，与 Vue.js 深度集成，用于构建单页面应用。Vue 单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来，传统的页面是通过超链接实现页面的切换和跳转的。</p></li><li><p>Vue 状态管理</p><p>Vuex 是 Vue 全家桶中的状态管理插件，与 Vue.js 深度集成，用于管理应用的状态。</p></li><li><p>Vue 脚手架</p><p>Vue-Cli 是 Vue 全家桶中的脚手架工具，给 Vue 应用提供了开箱即用的功能，让开发者能够快速创建、开发、构建一个完整的 Vue 项目。</p></li></ul><h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><p>网页是由 DOM 组合的视图结构，再加上 CSS 样式的修饰，使用 JavaScript 接受用户的交互请求，并通过事件机制来响应用户交互操作而形成的。</p><p><code>Jquery</code>是一个经典的DOM操作库。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;!<span class="hljs-variable constant_">DOCTYPE</span> html&gt;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>jquery Dom测试<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-comment">&lt;!-- 引入 jquery 框架 --&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span></span><br><span class="language-xml">      hello world</span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">      $(<span class="hljs-string">&quot;#root&quot;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) &#123;</span></span><br><span class="language-javascript"><span class="language-xml">        event.<span class="hljs-property">target</span>.<span class="hljs-property">innerText</span> = <span class="hljs-string">&quot;hello DOM&quot;</span>;</span></span><br><span class="language-javascript"><span class="language-xml">      &#125;);</span></span><br><span class="language-javascript"><span class="language-xml">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure><h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Vue MVVM测试<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- 引入 Vue.js 框架 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;handleClick&quot;</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">      <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">createApp</span>(&#123;</span><br><span class="language-javascript">        <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">          <span class="hljs-keyword">return</span> &#123;</span><br><span class="language-javascript">            <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;hello world&quot;</span>,</span><br><span class="language-javascript">          &#125;;</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript">        <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">          <span class="hljs-title function_">handleClick</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-variable language_">this</span>.<span class="hljs-property">msg</span> = <span class="hljs-string">&quot;hello MVVM&quot;</span>;</span><br><span class="language-javascript">          &#125;,</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript">      &#125;).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#root&quot;</span>);</span><br><span class="language-javascript">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><h3 id="通过CDN引入"><a href="#通过CDN引入" class="headerlink" title="通过CDN引入"></a>通过CDN引入</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script src=<span class="hljs-string">&quot;https://unpkg.com/vue@3.0.11/dist/vue.global.js&quot;</span>&gt;&lt;/script&gt;<br></code></pre></td></tr></table></figure><p>你可以使用官方提供的资源包（这里以 3.0.11 版本为例）：</p><ul><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.global.js">https://unpkg.com/vue@3.0.11/dist/vue.global.js</a></p><p>浏览器环境中的全量 Vue.js 代码。</p></li><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js">https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js</a></p><p>浏览器环境中的全量并且压缩过后的 Vue.js 代码。</p></li><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.js</a></p><p>浏览器环境中的不带编译功能的 Vue.js 代码。</p></li><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.prod.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.prod.js</a></p><p>浏览器环境中的不带编译功能并且压缩过后的 Vue.js 代码。</p></li><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.esm-browser.js">https://unpkg.com/vue@3.0.11/dist/vue.esm-browser.js</a></p><p><code>EsModule</code> 规范的 Vue.js 全量代码，直接在浏览器通过 <code>ES modules</code> 方式引入（<code>&lt;script type=&quot;module&quot;&gt;</code>）。</p></li><li><p><a href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.esm-browser.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.esm-browser.js</a></p><p><code>EsModule</code> 规范的不带编译功能 Vue.js 代码，直接在浏览器通过 <code>ES modules</code> 方式引入（<code>&lt;script type=&quot;module&quot;&gt;</code>）。</p></li></ul><p>带 <code>runtime</code> 跟不带 <code>runtime</code> 的资源包，比如：vue.runtime.global.js 跟 vue.global.js：</p><ul><li>vue.runtime.global.js：除了编译 template 功能以外的 Vue 代码。</li><li>vue.global.js：包含了编译 template 功能完整的 Vue 代码。</li></ul><p>如果你的项目需要用到编译 template 属性的功能，比如：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title function_">createApp</span>(&#123;<br>  <span class="hljs-attr">template</span>: <span class="hljs-string">&quot;&lt;app&gt;&lt;/app&gt;&quot;</span>,<br>&#125;);<br></code></pre></td></tr></table></figure><p>Vue 最后是需要将 template 编译成 <code>render</code> 方法进行渲染的，所以你就需要用到 Vue 的编译功能，因此就需要引入带有编译功能的 Vue 代码（vue.global.js）。</p><p><code>prod</code> 和 <code>prod</code> 后缀的资源包</p><p>比如：<code>vue.global.js</code> 跟 <code>vue.global.prod.js</code>。</p><p>带 <code>prod</code> 的意思就是 “是否经过压缩混淆过后的代码”，<code>prod</code> 的全称是 <code>production</code>，也就是生产环境的意思。</p><blockquote><p>当项目处在开发阶段的时候，用没有 <code>prod</code> 后缀的代码，当项目需要发布上线的时候，用带 <code>prod</code> 后缀的代码。</p></blockquote><p>CDN引入示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;!doctype html&gt;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Vue use CDN<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-comment">&lt;!-- 引入 全量 Vue.js 代码 --&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/vue@3.0.11/dist/vue.global.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">      <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">createApp</span>(&#123;</span></span><br><span class="language-javascript"><span class="language-xml">        <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;</span></span><br><span class="language-javascript"><span class="language-xml">          <span class="hljs-keyword">return</span> &#123;</span></span><br><span class="language-javascript"><span class="language-xml">            <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;hello CDN&quot;</span>,</span></span><br><span class="language-javascript"><span class="language-xml">          &#125;;</span></span><br><span class="language-javascript"><span class="language-xml">        &#125;,</span></span><br><span class="language-javascript"><span class="language-xml">      &#125;).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#root&quot;</span>);</span></span><br><span class="language-javascript"><span class="language-xml">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure><h3 id="通过NPM安装"><a href="#通过NPM安装" class="headerlink" title="通过NPM安装"></a>通过NPM安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs npm"># 创建工程目录<br>mkdir ./vue-npm-demo <br># 进入目录并初始化npm项目<br>cd vue-npm-demo &amp;&amp; npm init -y<br># 安装webpack依赖<br>npm install -D webpack@4.46.0 webpack-cli@4.10 webpack-dev-server@3.11.2 vue-loader@16.1.2 @vue/compiler-sfc@3.0.11 html-webpack-plugin@3.2.0<br># 安装vue<br>npm install vue@3.0.11<br># 创建webpack配置文件<br>touch ./webpack.config.js<br></code></pre></td></tr></table></figure><p>添加<code>webpack.config.js</code>内容：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);<br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <span class="hljs-attr">target</span>: <span class="hljs-string">&quot;web&quot;</span>,<br>  <span class="hljs-attr">module</span>: &#123;<br>    <span class="hljs-attr">rules</span>: [<br>      &#123;<br>        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.vue$/</span>,<br>        <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;vue-loader&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>  <span class="hljs-attr">plugins</span>: [<br>    <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;vue-loader&quot;</span>).<span class="hljs-property">VueLoaderPlugin</span>)(),<br>    <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>))(&#123;<br>      <span class="hljs-attr">template</span>: path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&quot;./public/index.html&quot;</span>), <span class="hljs-comment">// 指定模版文件</span><br>    &#125;),<br>  ],<br>  <span class="hljs-attr">devServer</span>: &#123;<br>    <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>    <span class="hljs-attr">disableHostCheck</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">contentBase</span>: path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&quot;./public&quot;</span>), <span class="hljs-comment">// 设置一个 express 静态目录</span><br>    <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>,<br>    <span class="hljs-attr">hot</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">sockPort</span>: <span class="hljs-string">&quot;location&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><p>配置完Webpack后，创建webpack的入口文件。</p><p>在 <code>vue-npm-demo</code> 工程目录下创建一个 <code>src</code> 目录，并且在 <code>src</code> 目录下创建一个 <code>index.js</code> 文件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> ./src &amp;&amp; <span class="hljs-built_in">touch</span> ./src/index.js<br></code></pre></td></tr></table></figure><p>将以下内容写入到 <code>vue-npm-demo/src/index.js</code> 文件：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-comment">// 引入 App.vue 组件</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App.vue&quot;</span>;<br><span class="hljs-comment">// 渲染 app</span><br><span class="hljs-title function_">createApp</span>(<span class="hljs-title class_">App</span>).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#app&quot;</span>);<br></code></pre></td></tr></table></figure><p>然后创建一个 <code>App.vue</code> 组件。</p><p>在 <code>vue-npm-demo/src</code> 目录下创建一个 <code>App.vue</code> 文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;div&gt;&#123;&#123; msg &#125;&#125;&lt;/div&gt;<br>&lt;/template&gt;<br>&lt;script&gt;<br>export default &#123;<br>  setup() &#123;<br>    return &#123;<br>      msg: &quot;hello world&quot;,<br>    &#125;;<br>  &#125;,<br>&#125;;<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure><p>为了能让项目跑起来，我们还需要创建应用的入口文件 <code>index.html</code>。</p><p>我们在 <code>vue-npm-demo</code> 目录下创建一个 <code>public</code> 目录，并且在 <code>vue-npm-demo/public</code> 目录下创建一个 <code>index.html</code> 文件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> ./public &amp;&amp; <span class="hljs-built_in">touch</span> ./public/index.html<br></code></pre></td></tr></table></figure><p>将以下内容写入到 <code>vue-npm-demo/public/index.html</code> 文件：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!doctype <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>your browser should support javascript!<span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- html-webpack-plugin 将自动引入入口文件 --&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p>在 <code>vue-npm-demo</code> 工程目录下执行以下命令开启 <code>webpack</code> 服务：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> NODE_OPTIONS=--openssl-legacy-provider<br><span class="hljs-comment"># 开启 webpack 服务</span><br>npx webpack serve --mode=development <br></code></pre></td></tr></table></figure><p> <code>Webpack</code> 搭建的 <code>Vue</code> 项目就搞定了。</p><h3 id="通过Vue-cli安装"><a href="#通过Vue-cli安装" class="headerlink" title="通过Vue-cli安装"></a>通过Vue-cli安装</h3><p>执行以下命令安装</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g @vue/cli@4.5.12 &amp;&amp; vue create vue-cli-demo<br><span class="hljs-comment"># 安装完根据提示选择(选择：Vue3和npm)</span><br></code></pre></td></tr></table></figure><p>在<code>vue-cli-demo</code> 工程目录下创建一个 <code>vue.config.js</code> 文件：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">touch</span> ./vue-cli-demo/vue.config.js<br></code></pre></td></tr></table></figure><p>将以下内容写入到 <code>vue-cli-demo/vue.config.js</code> 文件：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <span class="hljs-attr">configureWebpack</span>: &#123;<br>    <span class="hljs-attr">devServer</span>: &#123;<br>      <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>      <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>, <br>      <span class="hljs-attr">disableHostCheck</span>: <span class="hljs-literal">true</span>, <br>    &#125;,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure><p>进入到 <code>vue-cli-demo</code> 工程目录，并且在 <code>vue-cli-demo</code> 目录下执行以下命令启动项目：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> NODE_OPTIONS=--openssl-legacy-provider <br><span class="hljs-built_in">cd</span> vue-cli-demo &amp;&amp; npm run serve<br></code></pre></td></tr></table></figure><p> <code>Vue-Cli</code> 脚手架项目就搭建完了。 </p><h3 id="通过Vite安装"><a href="#通过Vite安装" class="headerlink" title="通过Vite安装"></a>通过Vite安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm init vite vue-vite-demo<br><span class="hljs-comment"># 在后续的选择中选择Vue项目和JavaScript</span><br></code></pre></td></tr></table></figure><p>进入到 <code>vue-vite-demo</code> 项目目录并执行 <code>npm</code> 初始化：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cd</span> vue-vite-demo &amp;&amp; npm install<br></code></pre></td></tr></table></figure><p>修改 <code>vue-vite-demo</code> 目录下的 <code>vite.config.js</code> 文件：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; defineConfig &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vite&quot;</span>;<br><span class="hljs-keyword">import</span> vue <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@vitejs/plugin-vue&quot;</span>;<br><br><span class="hljs-comment">// https://vitejs.dev/config/</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>(&#123;<br>  <span class="hljs-attr">plugins</span>: [<span class="hljs-title function_">vue</span>()],<br>  <span class="hljs-attr">server</span>: &#123;<br>    <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>, <br>    <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>, <br>  &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure><p>执行命令启动项目：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm run dev<br></code></pre></td></tr></table></figure><p>这样就完成了通过Vite搭建项目。</p><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Vue</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vue</tag>
+      
+      <tag>Vite</tag>
+      
+      <tag>NPM</tag>
+      
+      <tag>Webpack</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CodeReview关注的重点内容</title>
+    <link href="/blog/2024/04/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html"/>
+    <url>/blog/2024/04/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>搜索文档Ctrl + P<br>搜索文档（其他窗格）Ctrl + Shift + P<br>转到文档表Ctrl + Alt + O<br>快速添加Ctrl +’<br>显示键盘快捷键Ctrl + Alt + Shift + H<br>切换侧栏Alt + S<br>添加文档Alt + N<br>添加今天的文档Alt + D<br>向前导航Alt + 右<br>向后导航Alt + 左<br>打开知识库切换器Ctrl + Shift + Alt + O<br>操作系统：快速添加笔记到目前笔记下 Ctrl + Alt + Shift +’ Desktop<br>操作系统：专注于RemNote（从别的软件切换到RN） Ctrl + Alt + R Desktop </p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight wren"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs wren">标签 <span class="hljs-string">&quot;##&quot;</span><br>双向链接 <span class="hljs-string">&quot;&#123;&#123;&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\r</span>ef&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br><span class="hljs-title class_">Emoji</span>表情 <span class="hljs-string">&quot;%%&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\e</span>moji&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br>日期 <span class="hljs-string">&quot;!!&quot;</span> 或者 <span class="hljs-string">&quot;\date&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>别名 <span class="hljs-string">&quot;<span class="hljs-char escape_">\a</span>lias&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span> 或者 <span class="hljs-string">&quot;alt&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;A&quot;</span><br>按照字母排序 <span class="hljs-string">&quot;\sort&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>创建<span class="hljs-variable">TO</span><span class="hljs-operator">-</span><span class="hljs-variable">DO</span> <span class="hljs-string">&quot;<span class="hljs-char escape_">\t</span>odo&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br></code></pre></td></tr></table></figure><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Remnote</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Remnote</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Kubernetes及其生态介绍和使用</title>
     <link href="/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html"/>
     <url>/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
@@ -476,15 +536,15 @@
       
       <tag>Linux</tag>
       
-      <tag>Kubernates</tag>
-      
-      <tag>Prometheus</tag>
-      
       <tag>Word</tag>
       
       <tag>Excel</tag>
       
       <tag>PPT</tag>
+      
+      <tag>Kubernates</tag>
+      
+      <tag>Prometheus</tag>
       
       <tag>Metersphere</tag>
       
@@ -555,6 +615,35 @@
   
   
   <entry>
+    <title>Vim修改Dos文件格式为Unix</title>
+    <link href="/blog/2023/11/Vim%E4%BF%AE%E6%94%B9Dos%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%B8%BAUnix.html"/>
+    <url>/blog/2023/11/Vim%E4%BF%AE%E6%94%B9Dos%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%B8%BAUnix.html</url>
+    
+    <content type="html"><![CDATA[<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vim"># 查看当前文本的文件格式<br>:<span class="hljs-keyword">set</span> ff<br># 修改为unix的文本格式<br>:<span class="hljs-keyword">set</span> ff=unix<br># 修改为dos的文本格式<br>:<span class="hljs-keyword">set</span> ff=dos<br></code></pre></td></tr></table></figure><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Vim</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Vim</tag>
+      
+      <tag>Nvim</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SpringBoot可以直接运行Jar的原理</title>
     <link href="/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html"/>
     <url>/blog/2023/11/SpringBoot%E5%8F%AF%E4%BB%A5%E7%9B%B4%E6%8E%A5%E8%BF%90%E8%A1%8CJar%E7%9A%84%E5%8E%9F%E7%90%86.html</url>
@@ -613,6 +702,93 @@
   
   
   <entry>
+    <title>网络编程</title>
+    <link href="/blog/2023/11/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html"/>
+    <url>/blog/2023/11/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h2><p> TCP&#x2F;IP 的应用层对应了 OSI 的应用层、表示层和会话层；TCP&#x2F;IP 的网络接口层对应了 OSI 的数据链路层和物理层。</p><p><img src="/blog/./assets/image-20240414174116891.png" alt="协议模型"></p><p>摄像头推送视频流到流媒体服务器（基于TCP传输），理论传输速度是3M&#x2F;S，实际测试发现是2M&#x2F;S</p><blockquote><p>网卡，交换机，应用程序，都可能是瓶颈</p></blockquote><p>用vagarant+virtualbox，完美搞定Linux虚拟机环境</p><p><strong>无论是客户端，还是服务器端，它们运行的单位都是进程（process），而不是机器</strong>。</p><p>一个连接可以通过客户端 - 服务器端的 IP 和端口唯一确定，这叫做套接字对</p><p>TCP，又被叫做字节流套接字（Stream Socket），注意我们这里先引入套接字 socket，套接字 socket 在后面几讲中将被反复提起，因为它实际上是网络编程的核心概念。当然，UDP 也有一个类似的叫法, 数据报套接字（Datagram Socket），一般分别以“SOCK_STREAM”与“SOCK_DGRAM”分别来表示 TCP 和 UDP 套接字。</p><p>网络编程核心逻辑：</p><p><img src="/blog/./assets/image-20240414180739038.png" alt="核心逻辑"></p><h3 id="更好地理解-socket：一个更直观的解释"><a href="#更好地理解-socket：一个更直观的解释" class="headerlink" title="更好地理解 socket：一个更直观的解释"></a>更好地理解 socket：一个更直观的解释</h3><p>你可以把整个 TCP 的网络交互和数据传输想象成打电话，顺着这个思路想象，socket 就好像是我们手里的电话机，connect 就好比拿着电话机拨号，而服务器端的 bind 就好比是去电信公司开户，将电话号码和我们家里的电话机绑定，这样别人就可以用这个号码找到你，listen 就好似人们在家里听到了响铃，accept 就好比是被叫的一方拿起电话开始应答。至此，三次握手就完成了，连接建立完毕。</p><p>接下来，拨打电话的人开始说话：“你好。”这时就进入了 write，接收电话的人听到的过程可以想象成 read（听到并读出数据），并且开始应答，双方就进入了 read&#x2F;write 的数据传输过程。</p><p>最后，拨打电话的人完成了此次交流，挂上电话，对应的操作可以理解为 close，接听电话的人知道对方已挂机，也挂上电话，也是一次 close。</p><p>在整个电话交流过程中，电话是我们可以和外面通信的设备，对应到网络编程的世界里，socket 也是我们可以和外界进行网络通信的途径。</p><p>（本文完）</p><p>汇报工作说结果<br>请示工作说方案<br>总结工作说流程<br>布置工作说标准</p><p>1、Java基础技术体系、JVM内存分配、垃圾回收、类装载机制、性能优化、反射机制、多线程、网络编程、常用数据结构和相关算法。<br>2、对面向对象的软件开发思想有清晰的认识、熟悉掌握常用的设计模式。<br>3、熟练掌握目前流行开源框架（spring／springmvc／ibatis）， 并且对其核心思想、实现原理有一定认知。</p><p>4、熟悉Oracle、MySQL等数据库开发与设计以及缓存系统Redis或 Memcached的设计和研发。<br>5、熟悉底层中间件、分布式技术（包括缓存、消息系统、热部署）、消息中间件：ActiveMQ、RabbitMQ、工作流中间 件：JBPM。<br>6、精通shell编程，熟练应用awk、sed、grep、strace、 tcudump、gdb等常用命令。</p><p>7、有大型分布式、高并发、高负载（大数据量）、高可用性系统设计开发经验。<br>8、对配置管理和敏捷研发模式有所了解（svn，git）。<br>9、熟悉常见的一些解决方案及其原理：单点登录、分布式缓存、SOA、全文检索、消息中间件，负载均衡、连接池、流计算等。<br>10、能大概知道市面上主流技术的特点及业务瓶颈。</p><p>11、大数据，非关系型数据库；数据整理，数据分析，数据挖掘<br>12、云计算，微服务框架（SpringBoot，SpringCloud）<br>13、数据安全和网络安全及加密</p><p>七要素：<br>形象气质<br>声音素质<br>情商<br>沟通力<br>演讲力<br>领导力<br>说服力（销售技能）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HTTP</tag>
+      
+      <tag>HTTPS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Docker安装Mysql</title>
+    <link href="/blog/2023/11/Docker%E5%AE%89%E8%A3%85Mysql.html"/>
+    <url>/blog/2023/11/Docker%E5%AE%89%E8%A3%85Mysql.html</url>
+    
+    <content type="html"><![CDATA[<p>mysql官方DockerHub地址：<a href="https://hub.docker.com/_/mysql">https://hub.docker.com/_/mysql</a></p><p>可选的环境变量：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh">MYSQL_ROOT_PASSWORD<br>MYSQL_DATABASE<br>MYSQL_USER, MYSQL_PASSWORD<br>MYSQL_ALLOW_EMPTY_PASSWORD<br>MYSQL_RANDOM_ROOT_PASSWORD<br>MYSQL_ONETIME_PASSWORD<br>MYSQL_INITDB_SKIP_TZINFO<br></code></pre></td></tr></table></figure><p>创建一个环境变量配置文件，<code>vim env_file</code>，添加以下内容：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">MYSQL_ROOT_PASSWORD</span>=root<br><span class="hljs-attr">MYSQL_DATABASE</span>=hello_world<br><span class="hljs-attr">MYSQL_USER</span>=foo<br><span class="hljs-attr">MYSQL_PASSWORD</span>=bar<br></code></pre></td></tr></table></figure><p>创建一个docker运行脚本，<code>vim docker_run.sh</code>,添加以下内容:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">docker run --name=mysql -d -p 3306:3306 --env_file=./env_file mysql<br></code></pre></td></tr></table></figure><p>编写完脚本运行:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">sh docekr_run.sh<br></code></pre></td></tr></table></figure><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Docker</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Docker</tag>
+      
+      <tag>Mysql</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java本地锁在分布式下存在的问题</title>
+    <link href="/blog/2023/11/Java%E6%9C%AC%E5%9C%B0%E9%94%81%E5%9C%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.html"/>
+    <url>/blog/2023/11/Java%E6%9C%AC%E5%9C%B0%E9%94%81%E5%9C%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.html</url>
+    
+    <content type="html"><![CDATA[<h3 id="本地锁的问题"><a href="#本地锁的问题" class="headerlink" title="本地锁的问题"></a>本地锁的问题</h3><p> 现象:本地锁在多节点下失效(集群分布式) </p><p> 原因:本地锁它只能锁住本地JVM进程中的多个线程，对于多个JVM进程的不同线程间是锁不住的 </p><p>怎么办？ </p><p>我们需要一种分布式锁，期望能在分布式环境下提供锁服务，并且达到本地锁的效果:不仅能锁住同一jvm进程下的不同线程，更要能锁住不同vm进程下的不同线程 </p><p>为什么需要分布式锁: </p><ol><li>为了效率:防止不同节点之间做相同的事情，浪费资源 (定时任务) </li><li>为了安全:有些事情在同一时间只允许一个线程去做</li></ol><p>分布式锁的特点: </p><ol><li>互斥性:不仅要在同一jvm进程下的不同线程间互斥， 更要在不同jvm进程下的不同线程间互斥 </li><li>锁超时:支持锁的自动释放，防止死锁 </li><li>正确，高效，高可用:解铃还须系铃人(加锁和解锁必须是同一个线程)，加锁和解锁操作一定要高效，提供锁的服务要具备容错性 </li><li>可重入:如果一个线程拿到了锁之后继续去获取锁还能获取到，我们称锁是可重入的方法的递归调用) </li><li>阻塞&#x2F;非阻塞:如果获取不到直接返回视为非阻塞的，如果获取不到会等待锁的释放直到获取锁或者等待超时，视为阻塞的</li><li>公平&#x2F;非公平:按照请求的顺序获取锁视为公平的</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Java</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Debug</tag>
+      
+      <tag>SSH</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>使用SSH本地端口转发调试远程环境</title>
     <link href="/blog/2023/11/%E4%BD%BF%E7%94%A8SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%B0%83%E8%AF%95%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83.html"/>
     <url>/blog/2023/11/%E4%BD%BF%E7%94%A8SSH%E6%9C%AC%E5%9C%B0%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E8%B0%83%E8%AF%95%E8%BF%9C%E7%A8%8B%E7%8E%AF%E5%A2%83.html</url>
@@ -634,6 +810,35 @@
       <tag>Debug</tag>
       
       <tag>SSH</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Maven问题定位及解决</title>
+    <link href="/blog/2023/11/Maven%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D%E5%8F%8A%E8%A7%A3%E5%86%B3.html"/>
+    <url>/blog/2023/11/Maven%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D%E5%8F%8A%E8%A7%A3%E5%86%B3.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="Since-Maven-3-8-1-http-repositories-are-blocked"><a href="#Since-Maven-3-8-1-http-repositories-are-blocked" class="headerlink" title="Since Maven 3.8.1 http repositories are blocked"></a>Since Maven 3.8.1 http repositories are blocked</h2><p>在使用Idea时，已经默认带了Maven插件，所以无需单独安装Maven即能使用。</p><p>进入Idea的Maven插件目录：</p><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">C:</span>\Program Files\JetBrains\IntelliJ IDEA Community Edition <span class="hljs-number">2023.1</span>\plugins\maven\<span class="hljs-keyword">lib</span>\maven3\conf<br></code></pre></td></tr></table></figure><p>编辑setting.xml文件，并注释以下内容：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs xml"> <span class="hljs-comment">&lt;!-- </span><br><span class="hljs-comment">  &lt;mirror&gt;</span><br><span class="hljs-comment">    &lt;id&gt;maven-default-http-blocker&lt;/id&gt;</span><br><span class="hljs-comment">    &lt;mirrorOf&gt;external:http:*&lt;/mirrorOf&gt;</span><br><span class="hljs-comment">    &lt;name&gt;Pseudo repository to mirror external repositories initially using HTTP.&lt;/name&gt;</span><br><span class="hljs-comment">    &lt;url&gt;http://0.0.0.0/&lt;/url&gt;</span><br><span class="hljs-comment">    &lt;blocked&gt;true&lt;/blocked&gt;</span><br><span class="hljs-comment">  &lt;/mirror&gt;</span><br><span class="hljs-comment">--&gt;</span><br></code></pre></td></tr></table></figure><p>保存后，在Idea刷新并下载Maven依赖不再报错。</p><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Maven</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>Maven</tag>
       
     </tags>
     
@@ -982,11 +1187,38 @@
   
   
   <entry>
+    <title>学习资源推荐</title>
+    <link href="/blog/2023/10/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90.html"/>
+    <url>/blog/2023/10/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="网络类"><a href="#网络类" class="headerlink" title="网络类"></a>网络类</h2><ul><li><a href="https://speed.cloudflare.com/">https://speed.cloudflare.com/</a></li></ul><blockquote><p>测速</p></blockquote><ul><li><a href="https://chat.openai.com/">https://chat.openai.com/</a></li></ul><blockquote><p>chatgpt</p></blockquote><ul><li><a href="https://filezilla-project.org/prodownload.php">https://filezilla-project.org/prodownload.php</a></li></ul><blockquote><p>FileZilla Pro下载地址</p></blockquote><h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><ul><li><a href="https://excalidraw.com/">https://excalidraw.com/</a></li></ul><blockquote><p>手绘白板</p></blockquote><ul><li><a href="https://hashcat.net/hashcat/">https://hashcat.net/hashcat/</a></li></ul><blockquote><p>密码碰撞破解</p></blockquote><ul><li><a href="https://workout.lol/">https://workout.lol/</a></li></ul><blockquote><p>健身计划和演示</p></blockquote><ul><li><a href="https://scorpionfree98.github.io/fetch_address_detail/Geocoder.html">https://scorpionfree98.github.io/fetch_address_detail/Geocoder.html</a></li></ul><blockquote><p>根据地址获取街道信息</p></blockquote><h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><ul><li><a href="https://crontab.guru/">https://crontab.guru/</a></li></ul><blockquote><p>crontab表达式</p></blockquote><h2 id="博客论坛"><a href="#博客论坛" class="headerlink" title="博客论坛"></a>博客论坛</h2><ul><li><a href="https://insights.thoughtworks.cn/">https://insights.thoughtworks.cn/</a></li></ul><blockquote><p>洞见</p></blockquote><h2 id="学习资源列表"><a href="#学习资源列表" class="headerlink" title="学习资源列表"></a>学习资源列表</h2><ul><li><a href="https://learn.lianglianglee.com/">https://learn.lianglianglee.com/</a></li></ul><blockquote><p>极客时间资源整合</p></blockquote><h2 id="考证清单"><a href="#考证清单" class="headerlink" title="考证清单"></a>考证清单</h2><ul><li><a href="https://www.miiteec.org.cn/plus/list.php?tid=247">https://www.miiteec.org.cn/plus/list.php?tid=247</a></li></ul><blockquote><p>工信和信息化人才培养证书</p></blockquote><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>清单</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>值得一读的书单</title>
     <link href="/blog/2023/10/%E5%80%BC%E5%BE%97%E4%B8%80%E8%AF%BB%E7%9A%84%E4%B9%A6%E5%8D%95.html"/>
     <url>/blog/2023/10/%E5%80%BC%E5%BE%97%E4%B8%80%E8%AF%BB%E7%9A%84%E4%B9%A6%E5%8D%95.html</url>
     
-    <content type="html"><![CDATA[<h2 id="思维成长"><a href="#思维成长" class="headerlink" title="思维成长"></a>思维成长</h2><ul><li>失控</li><li>思考快与慢</li><li>终身成长</li><li>高效能人士的思维方式</li><li>高效能人士的七个习惯</li><li>从为什么开始</li><li>赋能</li><li>敏捷革命</li><li>创建敏捷团队</li><li>高绩效教练</li><li>结构化研讨</li><li>团队协作的五大障碍</li><li>拥抱变革</li><li>管理者的意识进化</li><li>你的灯亮着吗</li><li>探索需求-设计前的质量</li><li>麦肯锡教我的思考武器</li><li>咨询的奥秘</li><li>系统思维</li><li>金字塔原理</li></ul><h2 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h2><ul><li>敏捷软件开发</li><li>软件开发本质论</li><li>Scrum敏捷软件开发</li><li>用户故事与敏捷方法</li><li>敏捷估计与规划</li><li>Scrum精髓</li><li>敏捷回顾</li><li>敏捷整洁之道</li><li>代码整洁之道</li><li>解析极限编程</li><li>测试驱动开发</li><li>持续集成</li><li>重构</li><li>持续交付</li><li>人月神话</li><li>凤凰项目</li></ul><h2 id="心理类"><a href="#心理类" class="headerlink" title="心理类"></a>心理类</h2><ul><li><p>伯恩斯新情绪疗法</p></li><li><p>被讨厌的勇气</p></li><li><p>治疗好了我的精神内耗</p></li><li><p>存在主义心理治疗</p></li><li><p>蛤蟆先生去看心理医生</p></li><li><p>原生家庭–如何修补自己的性格缺陷</p></li><li><p>贫困的本质</p></li><li><p>了不起的我</p></li><li><p>少有人走的路</p></li><li><p>拥抱你的抑郁情绪</p></li><li><p>为何爱会伤人</p></li><li><p>非暴力沟通</p></li><li><p>当下的力量</p></li><li><p>《幸福的勇气》</p></li><li><p>《 5%的改变》</p></li><li><p>生命的重建</p></li><li><p>自卑与超越</p></li><li><p>《人性的优点》</p></li><li><p>《人性的弱点》</p></li><li><p>《以幽默的方式过一生》</p></li><li><p>《人生的智慧》叔本华</p></li><li><p>《身份的焦虑》阿兰·德波顿</p></li><li><p>《社会性动物》埃利奥特·阿伦森</p></li><li><p>《亲密关系》罗兰·米勒</p></li><li><p>《等待我的离去》</p></li><li><p>阿德勒：个体心理学</p></li><li><p>《活出生命的意义》</p></li><li><p>《法的医疗》</p></li><li><p>《身体从未忘记》</p></li><li><p>《你经历了什么》</p></li><li><p>《如何吵架》</p></li><li><p>《也许你该找个人聊聊》</p></li></ul><p>（完）</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="思维成长"><a href="#思维成长" class="headerlink" title="思维成长"></a>思维成长</h2><ul><li><p>失控</p></li><li><p>思考快与慢</p></li><li><p>终身成长</p></li><li><p>高效能人士的思维方式</p></li><li><p>高效能人士的七个习惯</p></li><li><p>从为什么开始</p></li><li><p>赋能</p></li><li><p>敏捷革命</p></li><li><p>创建敏捷团队</p></li><li><p>高绩效教练</p></li><li><p>结构化研讨</p></li><li><p>团队协作的五大障碍</p></li><li><p>拥抱变革</p></li><li><p>管理者的意识进化</p></li><li><p>你的灯亮着吗</p></li><li><p>探索需求-设计前的质量</p></li><li><p>麦肯锡教我的思考武器</p></li><li><p>咨询的奥秘</p></li><li><p>系统思维</p></li><li><p>金字塔原理</p></li><li><p>《思维导图》 —陈国钦</p></li></ul><p>思维导图法就是一种生活的心法及技法，陈国钦著的《思维导图（提升你的职场核心竞争力）》是其任跨国企业副总经理、HP亚洲经理人等的经验浓缩。通过学习后，工作效率提升很快，不论在消化大量信息、团队沟通、演讲或学习上都能快速抓到重点，并为公司带来百亿业绩。本书对思维能力的锻炼帮助很大，让你在提前面试中侃侃而谈，脱颖而出。</p><ul><li>《疯狂的简洁》—肯·西格尔</li></ul><p>这本书关注的是创意和流程。它不仅关注如何创造最好的作品，如何为它争得发展空间，也关注如何高效运作以获得更圆满的结果。作者曾担任宝马、IBM、NeXT和苹果公司的创意总监，与史蒂夫·乔布斯共事17年，参与了苹果“不同凡想”广告的制作、iMac的命名等苹果历史。</p><ul><li>《从0到1》—彼得·蒂尔、布莱克·马斯特斯</li></ul><p>《从0到1》无疑是最近最棒的创业思维书! 硅谷创投教父、PayPal创始人彼得·蒂尔、布莱克·马斯特斯写了这本人人都能看懂的资本、创业专著!在这里你会明白：从0到1，就是创新;从1到N，是不断的模仿。创新：不是从1到N，而是从0到1。</p><ul><li>《异类》—马尔科姆·格拉德威尔</li></ul><p>了解成功的真正奥秘，以及人们成功的方式。马尔科姆·格拉德威尔揭示了10,000小时定律。书中提到努力和运气（家庭出身、出生地、甚至出生日期）在成功的公式当中都是划等号的。</p><ul><li>《引爆点》—马尔科姆·格拉德威尔</li></ul><p>马尔科姆·格拉德威尔向我们揭示了当一个趋势或者一个想法到达了神奇的“引爆点”以后，会像火山一样喷发出来。</p><ul><li>《从优秀到卓越》—吉姆·柯林斯</li></ul><p>作者用了长达5年的时间去研究优秀的公司和卓越的公司的差别。这本书能教会你从长远的角度运营公司而不是给公司寻找偏方。</p><ul><li>《习惯的力量》—查尔斯·都希格</li></ul><p>通过学习习惯养成的科学原理，可以改掉你的一些坏习惯。书中同样讲到了公司是如何使用习惯来销售产品的故事。</p><ul><li>《管理学》 —罗宾斯</li></ul><p>世界上最畅销的管理学教科书，自出版以来，持续畅销数十年，受到世界各地管理学界师生和企业界管理者的普遍好评。作者罗宾斯博士是世界上管理学与组织行为学领域最畅销教科书的作者，他的书被1000多所美国高校选用，并被译为16种文字在世界各地广泛使用。</p><ul><li>《每周工作4小时》—蒂姆·费里斯</li></ul><p>通过更少地工作挣更多的钱这一新奇的想法，不论你是不是企业家，你都应该读读这本书。</p><ul><li>《复合效应》—达伦·海迪</li></ul><p>这本书是引领卓越人生的指南，里面的公式值得一用。</p><ul><li>《80&#x2F;20法则》—理查德·科赫</li></ul><p>这本书提到集中20%的努力到关键的任务上，能够产生80%的结果。</p><ul><li>《商业的本质》—杰克·韦尔奇</li></ul><p>这是“全球第一CEO”杰克·韦尔奇继管理圣经《赢》之后，潜心十年的封笔之作，是对过去十几年商业变革的反思和总结。他指出，科技革命给市场带来了巨大变化和诸多杂音，但作为管理者，不能迷失商业中最核心的东西。在如今的新商业环境下，要想“赢”，就必须遵从商业的规则，回归商业的本质。</p><ul><li>《大败局》—吴晓波</li></ul><p>本书被评为“影响中国商业界的20本图书”之一，是关于中国企业失败的MBA式教案！吴晓波通过对近百位影响中国企业发展的重要人物的专访，探寻中国企业“中国式失败”的基因。</p><ul><li>《精益创业:新创企业的成长思维》—埃里克・莱斯</li></ul><p>《精益创业》是创业管理领域的重磅之作，也绝对有潜质经受时间的考验，成为创业管理的经典图书。这本书被誉为市面上最为正确描写硅谷的书籍，它提供了不同于传统管理理论的、针对新创公司或大企业新创业务的科学管理模式。</p><ul><li>《终极问题：创造好利润，促进真成长》—赖克哈尔德</li></ul><p>本书是写给那些希望摆脱公司两难困境、真正获取利润，并实现企业成长的企业领导的。是一本阐述客户关系和利润增长之间关系的书，本书透彻地阐述了良性利润和不良利润之间的区别，它将改变我们衡量企业成功与否的看法。</p><ul><li>《在家就能读MBA》—乔希·考夫曼</li></ul><p>这本书包含了创业需要知道的大部分知识（或许还有更多），书中全部都是干货，语言通俗易懂。</p><h2 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h2><ul><li>敏捷软件开发</li><li>软件开发本质论</li><li>Scrum敏捷软件开发</li><li>用户故事与敏捷方法</li><li>敏捷估计与规划</li><li>Scrum精髓</li><li>敏捷回顾</li><li>敏捷整洁之道</li><li>代码整洁之道</li><li>解析极限编程</li><li>测试驱动开发</li><li>持续集成</li><li>重构</li><li>持续交付</li><li>人月神话</li><li>凤凰项目</li></ul><h2 id="心理类"><a href="#心理类" class="headerlink" title="心理类"></a>心理类</h2><ul><li><p>伯恩斯新情绪疗法</p></li><li><p>被讨厌的勇气</p></li><li><p>治疗好了我的精神内耗</p></li><li><p>存在主义心理治疗</p></li><li><p>蛤蟆先生去看心理医生</p></li><li><p>原生家庭–如何修补自己的性格缺陷</p></li><li><p>贫困的本质</p></li><li><p>了不起的我</p></li><li><p>少有人走的路</p></li><li><p>拥抱你的抑郁情绪</p></li><li><p>为何爱会伤人</p></li><li><p>非暴力沟通</p></li><li><p>当下的力量</p></li><li><p>《幸福的勇气》</p></li><li><p>《 5%的改变》</p></li><li><p>生命的重建</p></li><li><p>自卑与超越</p></li><li><p>《人性的优点》</p></li><li><p>《人性的弱点》</p></li><li><p>《以幽默的方式过一生》</p></li><li><p>《人生的智慧》叔本华</p></li><li><p>《身份的焦虑》阿兰·德波顿</p></li><li><p>《社会性动物》埃利奥特·阿伦森</p></li><li><p>《亲密关系》罗兰·米勒</p></li><li><p>《等待我的离去》</p></li><li><p>阿德勒：个体心理学</p></li><li><p>《活出生命的意义》</p></li><li><p>《法的医疗》</p></li><li><p>《身体从未忘记》</p></li><li><p>《你经历了什么》</p></li><li><p>《如何吵架》</p></li><li><p>《也许你该找个人聊聊》</p></li></ul><p>（完）</p>]]></content>
     
     
     <categories>
@@ -1044,7 +1276,7 @@
     <link href="/blog/2023/09/Windows%2011%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.html"/>
     <url>/blog/2023/09/Windows%2011%20%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.html</url>
     
-    <content type="html"><![CDATA[<h2 id="窗口与屏幕"><a href="#窗口与屏幕" class="headerlink" title="窗口与屏幕"></a>窗口与屏幕</h2><ul><li><p>拖动窗口并轻轻晃动可以最小化其他窗口。</p></li><li><p>按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。</p></li><li><p>按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。</p></li><li><p>按 Win + L 锁定计算机。</p></li><li><p>按 Win + P 可以快速切换多屏显示方式。</p></li><li><p>按 Alt + Esc 将当前活动窗口移动到最后面。</p></li><li><p>按 Alt + 空格键 可以打开窗口系统菜单，再按 M 可以移动窗口。</p></li><li><p>按 Ctrl + W 或 ALT + F4，或 ALT + 空格 + C 都可以快速关闭窗口。</p></li><li><p>在弹出的错误对话框上按 Ctrl + C 可以复制内容。</p></li><li><p>连续按 Win + → 或 ← 窗口可以切换屏幕左、屏幕右、屏幕中间。</p></li><li><p>连续按 Win + ↑ 或 ↓ 当前窗口可以切换最大化、屏幕中间、最小化状态。</p></li><li><p>按 Win + 数字键可以切换到任务栏的第 n 个程序。</p></li></ul><h2 id="控制台-命令行程序"><a href="#控制台-命令行程序" class="headerlink" title="控制台 &#x2F; 命令行程序"></a>控制台 &#x2F; 命令行程序</h2><ul><li><p>Windows 10 &#x2F; 11 系统控制台程序可按 Alt + Enter 切换全屏。</p></li><li><p>在命令行窗口可以按 tab 键自动完成输入，按 F7 可以显示历史记录</p></li><li><p>在资源管理器地址栏直接输入 cmd 回车，可在当前目录打开命令行。</p></li></ul><h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>按 Win 弹出开始菜单后直接打字可打开搜索窗口（ 或按 Win + S ），这里也可以输入系统能搜索到的程序文件名。支持在注册表路径下添加的应用程序文件名。</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure><ul><li>按 Ctrl + Shift + Esc 可直接打开任务管理器。</li><li>按 Win + V 可以查看剪贴板历史</li><li>按 Win + Pause 可查看系统属性。</li></ul><h3 id="重启进入bios"><a href="#重启进入bios" class="headerlink" title="重启进入bios"></a>重启进入bios</h3><ol><li>以管理员身份打开“命令提示符”。</li><li>键入：shutdown &#x2F;r &#x2F;fw，然后按 Enter 键。</li><li>系统将在一分钟后自动重新启动至 BIOS。</li></ol><h3 id="常用命令和含义"><a href="#常用命令和含义" class="headerlink" title="常用命令和含义"></a>常用命令和含义</h3><table><thead><tr><th>命令</th><th>含义</th></tr></thead><tbody><tr><td>cmd</td><td>打开命令行</td></tr><tr><td>calc</td><td>计算器</td></tr><tr><td>control</td><td>控制面板</td></tr><tr><td>drivers</td><td>打开C:\Windows\System32\drivers目录</td></tr><tr><td>shell:Downloads</td><td>打开下载目录</td></tr></tbody></table><h2 id="资源管理器"><a href="#资源管理器" class="headerlink" title="资源管理器"></a>资源管理器</h2><ul><li><p>按 Win + E 打开文件资源管理器。</p></li><li><p>资源管理器(或网页浏览器) 按 Ctrl + L 或 Alt+ D 或 F4&#x2F;F6 可快速切换到地址栏。</p></li><li><p>在资源管理器按住 Shift 键点右键可以显示隐藏菜单项，例如：“复制为路径”。注意这样复制的路径首尾是带双引号的，所以桌面软件开发者要注意自动去除这类双引号。<br>系统文件对话框里可以直接粘贴这种带双引号的路径。另外在系统文件对话框里 —— 选中文件然后按 Ctrl + C 也可以直接复制带双引号的完整路径。</p></li><li><p>资源管理器右键点选一个或多个图片，可在弹出菜单中直接旋转图片。</p></li><li><p>连续重命名文件：在资源管理器按 F2 命名文件，修改名称后不要按回车 —— 直接按 tab 键可以跳到下一个文件并切换到重命名输入。</p></li><li><p>按住 Ctrl 拖动文件 —— 复制文件，按住 Shift 拖动文件 —— 移动文件，按住 Alt 拖动文件 —— 创建快捷方式。</p></li><li><p>在资源管理器地址栏（按 Win + R 打开运行对话框也可以）可输入系统目录环境变量回车可直接打开对应目录，例如输入 %temp% 可以打开临时目录，输入 %localappdata% 可以打开 AppData 目录。</p></li></ul><h2 id="图像、截屏、录屏"><a href="#图像、截屏、录屏" class="headerlink" title="图像、截屏、录屏"></a>图像、截屏、录屏</h2><ul><li><p>按 Win + Shift + S 可以打开系统自带截图工具。系统自带截图有一个好处，截图时不会导致右键菜单关闭。其他截图工具对右键菜单截图不太方便。</p></li><li><p>按 Win + G 可以打开系统自带录屏工具。</p></li></ul><h2 id="文本-输入法"><a href="#文本-输入法" class="headerlink" title="文本 &#x2F; 输入法"></a>文本 &#x2F; 输入法</h2><ul><li><p>按 Win + . 可打开系统自带表情符号面板。</p></li><li><p>Ctrl + C &#x2F; Ctrl + Insert 都可以复制。</p></li><li><p>Ctrl + V &#x2F; Shift + Insert 都可以粘贴。</p></li><li><p>Ctrl + Z &#x2F; Alt + Backspace 都可以撤消。</p></li><li><p>大多数输入法都支持的常用快键键：</p><ul><li>「Shift」切换中&#x2F;英输入；</li><li>「Ctrl + . 」切换中&#x2F;英标点；</li><li>「Shift + 空格 」切换全&#x2F;半角；</li></ul></li></ul><p>（完）</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="实用技巧"><a href="#实用技巧" class="headerlink" title="实用技巧"></a>实用技巧</h2><ul><li><p>按 Win + E 打开文件资源管理器。</p></li><li><p>资源管理器(或网页浏览器) 按 Ctrl + L 或 Alt+ D 或 F4&#x2F;F6 可快速切换到地址栏。</p></li><li><p>在资源管理器按住 Shift 键点右键可以显示隐藏菜单项，例如：“复制文件地址”。</p></li></ul><blockquote><p>注意：复制的路径首尾是带双引号的。</p></blockquote><ul><li><p>资源管理器右键点选一个或多个图片，可在弹出菜单中直接旋转图片。</p></li><li><p>连续重命名文件：在资源管理器按 F2 命名文件，修改名称后不要按回车 —— 直接按 tab 键可以跳到下一个文件并切换到重命名输入。</p></li><li><p>按住 Ctrl 拖动文件 —— 复制文件，按住 Shift 拖动文件 —— 移动文件，按住 Alt 拖动文件 —— 创建快捷方式。</p></li><li><p>在资源管理器地址栏（按 Win + R 打开运行对话框也可以）可输入系统目录环境变量回车可直接打开对应目录，例如输入 %temp% 可以打开临时目录，输入 %localappdata% 可以打开 AppData 目录。</p></li><li><p>按 Win + D 最小化所有程序并返回桌面，再按一次 Win + D 又可以回到原来的窗口。</p></li><li><p>按 Alt + F4 关闭窗口，在桌面窗口按 Alt + F4 会弹出关机对话框。</p></li><li><p>按 Win + L 锁定计算机。</p></li><li><p>按 Win + P 可以快速切换多屏显示方式。</p></li><li><p>按 Alt + Esc 将当前活动窗口移动到最后面。</p></li><li><p>按 Ctrl + W 或 ALT + F4快速关闭窗口。</p></li><li><p>在弹出的错误对话框上按 Ctrl + C 可以复制内容。</p></li><li><p>连续按 Win + → 或 ← 窗口可以切换屏幕左、屏幕右、屏幕中间。</p></li><li><p>连续按 Win + ↑ 或 ↓ 当前窗口可以切换最大化、屏幕中间、最小化状态。</p></li><li><p>按 Win + 数字键可以切换到任务栏的第 n 个程序。</p></li><li><p>Windows 10 &#x2F; 11 系统控制台程序可按 Alt + Enter 切换全屏。</p></li><li><p>在命令行窗口可以按 tab 键自动完成输入，按 F7 可以显示历史记录</p></li><li><p>在资源管理器地址栏直接输入 cmd 回车，可在当前目录打开命令行。</p></li><li><p>按 Win + Shift + S 可以打开系统自带截图工具。</p></li><li><p>按 Win + G 可以打开系统自带录屏工具。</p></li><li><p>按 Win + . 可打开系统自带表情符号面板。</p></li><li><p>Ctrl + C &#x2F; Ctrl + Insert 都可以复制。</p></li><li><p>Ctrl + V &#x2F; Shift + Insert 都可以粘贴。</p></li><li><p>Ctrl + Z &#x2F; Alt + Backspace 都可以撤消。</p></li><li><p>大多数输入法都支持的常用快键键：</p><ul><li>「Shift」切换中&#x2F;英输入；</li><li>「Ctrl + . 」切换中&#x2F;英标点；</li><li>「Shift + 空格 」切换全&#x2F;半角；</li></ul></li></ul><h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>按 Win 弹出开始菜单后直接打字可打开搜索窗口（ 或按 Win + S ），这里也可以输入系统能搜索到的程序文件名。支持在注册表路径下添加的应用程序文件名。</p><figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths<br></code></pre></td></tr></table></figure><ul><li>按 Ctrl + Shift + Esc 可直接打开任务管理器。</li><li>按 Win + V 可以查看剪贴板历史</li><li>按 Win + Pause 可查看系统属性。</li></ul><h3 id="重启进入bios"><a href="#重启进入bios" class="headerlink" title="重启进入bios"></a>重启进入bios</h3><ol><li>以管理员身份打开“命令提示符”。</li><li>键入：shutdown &#x2F;r &#x2F;fw，然后按 Enter 键。</li><li>系统将在一分钟后自动重新启动至 BIOS。</li></ol><h3 id="常用命令和含义"><a href="#常用命令和含义" class="headerlink" title="常用命令和含义"></a>常用命令和含义</h3><table><thead><tr><th>命令</th><th>含义</th></tr></thead><tbody><tr><td>cmd</td><td>打开命令行</td></tr><tr><td>calc</td><td>计算器</td></tr><tr><td>control</td><td>控制面板</td></tr><tr><td>drivers</td><td>打开C:\Windows\System32\drivers目录</td></tr><tr><td>shell:Downloads</td><td>打开下载目录</td></tr></tbody></table><p>（完）</p>]]></content>
     
     
     <categories>
@@ -1385,11 +1617,11 @@
     
     <tags>
       
-      <tag>云原生</tag>
-      
       <tag>Kubernates</tag>
       
       <tag>Prometheus</tag>
+      
+      <tag>云原生</tag>
       
     </tags>
     
@@ -1537,6 +1769,60 @@
       <tag>GitHub</tag>
       
       <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CKA学习笔记</title>
+    <link href="/blog/2023/05/CKA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"/>
+    <url>/blog/2023/05/CKA%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="CKA学习笔记"><a href="#CKA学习笔记" class="headerlink" title="CKA学习笔记"></a>CKA学习笔记</h1><p>CKA学习记录</p><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>容器和虚拟机的区别，容器本身是一个APP，虚拟机是一个完整的系统。</p><h3 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h3><p>runtime，运行时。</p><table><thead><tr><th><strong>高级别Runtime</strong></th><th><strong>低级别Runtime</strong></th></tr></thead><tbody><tr><td><strong>docker</strong></td><td><strong>runc</strong></td></tr><tr><td><strong>containerd</strong></td><td>lxc</td></tr><tr><td>cri-o</td><td>gvisor</td></tr><tr><td>rkt</td><td>kata</td></tr><tr><td>podman</td><td>…</td></tr><tr><td>…</td><td></td></tr></tbody></table><blockquote><p>一般而言，高级别的Runtime会去调用低级别的Runtime，docker和containerd底层调用的是runc。</p></blockquote><p>低级别运行时只能管理容器，高级别运行时不仅可以管理容器，还可以管理镜像。无论是高级别还是低级别运行时，所使用的镜像是一样的。</p><h3 id="容器架构"><a href="#容器架构" class="headerlink" title="容器架构"></a>容器架构</h3><p>docker是客户端工具，dockerd是服务端工具。docker默认连接的是本机dockerd，可以通过-H指定远程的dockerd服务。</p><p>containerd是服务端，上层的客户端有ctr,crictl,<strong>nerdctl</strong>，不同的客户端之间是通过命名空间相互隔离的，所以不同客户端创建的容器是隔离看不见的。</p><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>创建2个虚拟机，在里面分别安装docker和containerd。</p><blockquote><p>使用containerd运行时是因为K8S的新版本中不再作为运行时了，但是docekr依旧可以用来打包和构建。</p></blockquote><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 关闭屏幕保护</span><br>setterm -black 0<br><span class="hljs-comment"># 配置yum源</span><br><span class="hljs-built_in">rm</span> -rf /etc/yum.repos.d/* ; wget ftp://ftp.rhce.cc/k8s/* -P /etc/yum.repos.d/<br><span class="hljs-comment"># 安装docker</span><br>yum install -y docker-ce<br><span class="hljs-comment"># 启动docker并设置开机启动</span><br>systemctl <span class="hljs-built_in">enable</span> docker --now<br><span class="hljs-comment"># 安装containerd和客户端工具</span><br>yum install -y containerd.io cri-tools <br><span class="hljs-comment"># 启动containerd并设置开机启动</span><br>systemctl <span class="hljs-built_in">enable</span> containerd --now<br></code></pre></td></tr></table></figure><h3 id="查看docker运行时"><a href="#查看docker运行时" class="headerlink" title="查看docker运行时"></a>查看docker运行时</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看运行时</span><br>docker info |grep -i runtime<br> Runtimes: io.containerd.runc.v2 runc<br> Default Runtime: runc<br></code></pre></td></tr></table></figure><h3 id="docker配置"><a href="#docker配置" class="headerlink" title="docker配置"></a>docker配置</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cat</span> &gt; /etc/docker/daemon.json &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string">&#123; &quot;registry-mirrors&quot;: [&quot;https://frz7i079.mirror.aliyuncs.com&quot;]</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string">EOF</span><br>systemctl restart docker<br></code></pre></td></tr></table></figure><h3 id="查看containerd运行时"><a href="#查看containerd运行时" class="headerlink" title="查看containerd运行时"></a>查看containerd运行时</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># crictl连接运行时</span><br>crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock<br><span class="hljs-comment"># 查看运行时</span><br>crictl info |grep -i runtime<br>        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;RuntimeReady&quot;</span>,<br>      <span class="hljs-string">&quot;defaultRuntimeName&quot;</span>: <span class="hljs-string">&quot;runc&quot;</span>,<br></code></pre></td></tr></table></figure><h3 id="containerd配置"><a href="#containerd配置" class="headerlink" title="containerd配置"></a>containerd配置</h3><p>需要先配置客户端连接的运行时，</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看当前的配置</span><br>containerd config dump<br><span class="hljs-comment"># 导出containerd默认配置并覆盖当前的配置文件</span><br>containerd config default &gt; /etc/containerd/config.toml<br><span class="hljs-comment"># 设置加速服务,搜索mirrors并在底下加入2行，完整配置如下</span><br>[plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.registry.mirrors]<br>  [plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.registry.mirrors.<span class="hljs-string">&quot;docker.io&quot;</span>]  <br>    endpoint = [<span class="hljs-string">&quot;https://frz7i079.mirror.aliyuncs.com&quot;</span>]<br><span class="hljs-comment"># 搜索sandbox，修改这行内容为</span><br>sandbox_image = <span class="hljs-string">&quot;registry.aliyuncs.com/google_containers/pause:3.7&quot;</span><br><span class="hljs-comment"># 搜索SystemdCgroup并修改为true,同时删除上面几行，最终效果如下</span><br> [plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.containerd.runtimes.runc.options]<br>            SystemdCgroup = <span class="hljs-literal">true</span><br><span class="hljs-comment"># 修改完重启containerd</span><br>systemctl restart containerd<br></code></pre></td></tr></table></figure><h4 id="安装nerdctl客户端"><a href="#安装nerdctl客户端" class="headerlink" title="安装nerdctl客户端"></a>安装nerdctl客户端</h4><p>crictl用起来和docker命令兼容不是很好，比较好用的是nerdctl且命令也兼容docker，所以可以单独安装nerdctl搭配containerd。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 下载后并解压</span><br>tar -zxvf nerdctl-0.23.0-linux-amd64.tar.gz -C /usr/bin/<br><span class="hljs-comment">#　安装网络插件</span><br><span class="hljs-built_in">mkdir</span> -p /opt/cni/bin/<br>tar -zxvf cni-plugins-linux-amd64-v1.1.1.tgz -C /opt/cni/bin/<br></code></pre></td></tr></table></figure><p>由于nerdctl和crictl使用的是不同的命名空间，所以是相互隔离，为了兼容crictl创建的容器，可以将nerdctl的命名空间修改为和crictl一样。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 创建配置目录</span><br><span class="hljs-built_in">mkdir</span> /etc/nerdctl/<br><span class="hljs-comment"># 添加配置信息</span><br><span class="hljs-built_in">cat</span> &gt; /etc/nerdctl/nerdctl.toml &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string">debug = false</span><br><span class="hljs-string">debug_full = false</span><br><span class="hljs-string">address = &quot;unix:///var/run/containerd/containerd.sock&quot;</span><br><span class="hljs-string"># 修改namespace为k8s.io,默认是default</span><br><span class="hljs-string">namespace = &quot;k8s.io&quot;</span><br><span class="hljs-string">#snapshotter = &quot;stargz&quot;</span><br><span class="hljs-string">cgroup_manager = &quot;systemd&quot;</span><br><span class="hljs-string">#hosts_dir = [&quot;/etc/containerd/certs.d&quot;,&quot;/etc/nerdctl/certs.d&quot;]</span><br><span class="hljs-string">insecure_registry = false</span><br><span class="hljs-string">EOF</span><br><br><span class="hljs-comment"># 启用linger</span><br>loginctl show-user root | grep Linger<br>loginctl enable-linger root<br></code></pre></td></tr></table></figure><h4 id="配置nerdctl加速"><a href="#配置nerdctl加速" class="headerlink" title="配置nerdctl加速"></a>配置nerdctl加速</h4><p>nerdctl并不会使用container的配置文件，而是有其自己的配置文件。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> -p /etc/containerd/certs.d/docker.io<br><span class="hljs-built_in">cat</span> &gt; /etc/containerd/certs.d/docker.io/hosts.toml &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string"># server = &quot;https://docker.io&quot;</span><br><span class="hljs-string">[host.&quot;https://frz7i079.mirror.aliyuncs.com&quot;]</span><br><span class="hljs-string">capabilities = [&quot;pull&quot;,&quot;resolve&quot;]</span><br><span class="hljs-string">override_path = true</span><br><span class="hljs-string">EOF</span><br></code></pre></td></tr></table></figure><h4 id="nerdctl命令自动补齐"><a href="#nerdctl命令自动补齐" class="headerlink" title="nerdctl命令自动补齐"></a>nerdctl命令自动补齐</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 编辑~/.bashrc文件并添加以下内容</span><br><span class="hljs-built_in">source</span> &lt;(nerdctl completion bash)<br></code></pre></td></tr></table></figure><h2 id="容器里运行的是什么"><a href="#容器里运行的是什么" class="headerlink" title="容器里运行的是什么"></a>容器里运行的是什么</h2><p>默认运行的是CMD指定的内容，可以通用<code>nerdctl history</code>查看镜像中指定的CMD命令。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">nerdctl <span class="hljs-built_in">history</span> hello-world<br>SNAPSHOT                                                                   CREATED          CREATED BY                                       SIZE        COMMENT<br>&lt;missing&gt;                                                                  17 months ago    /bin/sh -c <span class="hljs-comment">#(nop)  CMD [&quot;/hello&quot;]                0.0 B       </span><br>sha256:e07ee1baac5fae6a26f30cabfe54a36d3402f96afda318fe0a96cec4ca393359    17 months ago    /bin/sh -c <span class="hljs-comment">#(nop) COPY file:50563a97010fd7ce…    16.0 KiB    </span><br></code></pre></td></tr></table></figure><p>hello-world运行默认运行的就是<code>/hello</code>命令。</p><h2 id="容器的生命周期"><a href="#容器的生命周期" class="headerlink" title="容器的生命周期"></a>容器的生命周期</h2><p>容器里面的运行进程结束了，容器生命周期也结束了。默认进程运行的是CMD中制定的命令。</p><p>-t 模拟终端 -i 交互界面，如果默认CMD是bash,这样bash就有个依附窗口，不会自动结束容器了。</p><p>以下是合并的内容，还需要手动处理<br>容器<br>容器和虚拟机的区别：image-20230107193134952</p><p>要想运行容器，我们必须先安装软件runtime，也就是运行时。<br>image-20230107192916772</p><p>无论使用上图的哪一个runtime，他们最终使用的镜像是一致的。</p><p>OCI是一个镜像结构，和容器状态标准。</p><p>在1.24的时候就不使用docker使用runtime了，可以选择containerd.</p><p>但是并不是说docker就被淘汰了，无法继续使用了，而是可以在构建镜像，搭建仓库时用。</p><p>image-20230107194018096</p><p>docker是客户端，服务端模式，客户端可以连接到远程的机器上。</p><p>containerd是一个执行引擎，可以连接不通的客户端服务，最好用的是nerdctl，nerdctl，crictl,ctr之间创建的容器是通过namespace(命名空间）隔离的互相看不到。</p><p>虚拟机创建<br>从temp虚机克隆出两台虚机：</p><p>vm71-docker<br>vm72-container<br>账号密码都是root redhat<br>然后使用命令分别设置：</p><p>.&#x2F;set.sh 71</p><p>.&#x2F;set.sh 72</p><p>关闭屏保：setterm -blank 0</p><p>docekr安装<br>略</p><p>continerd安装<br>默认是crictl</p><p>默认已经有配置文件了，但是不全。 可以生成比较全的默认配置：</p><p>containerd config dufault &gt; &#x2F;etc&#x2F;containerd&#x2F;config.toml</p><p>查看当前的配置命令：</p><p>containerd config dufault</p><p>crictl命令<br>crictl images 查看镜像</p><p>crictl info 查看信息</p><p>默认使用的namespace:k8s.io</p><p>nerdctl<br>命令基本都是兼容docker的，非常好用。</p><p>但是netl和crictl默认使用的命名空间 是不同的。</p><p>默认使用的default</p><p>如果是K8s创建的容器，使用nerdctl排错时需要先切换成k8s的命令空间，否则看不到。</p><p>不同的命名空间 中镜像和容器都是隔离的，namespace的作用就是资源隔离。</p><p>镜像<br>一个镜像打了多个tag,都是用的一个image id，只有最后一个同imageid的镜像后，镜像文件才会从服务器中删除。</p><p>容器<br>容器里是一定要运行一个进程的。</p><p>如果创建容器的时候指定容器里运行的是什么的话，则容器里运行的是镜像里CMD所指定的。</p><p>使用docker history查看镜像所打的CMD命令</p><p>cka22-12-containerd-2镜像管理.vep 待学</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技巧</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>工作中的注意事项</title>
+    <link href="/blog/2023/04/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html"/>
+    <url>/blog/2023/04/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="离职"><a href="#离职" class="headerlink" title="离职"></a>离职</h2><p>离职后应提醒公司给社保减员，避免找到下家后由于上家公司社保没做减员操作，社保交不上的问题。</p><p>到了关账日，只能隔月份补交，社保的话医疗和工伤没法补，公积金只能补金额不能补月份。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技巧</tag>
       
     </tags>
     
@@ -1756,6 +2042,33 @@
   
   
   <entry>
+    <title>团队建设</title>
+    <link href="/blog/2021/09/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE.html"/>
+    <url>/blog/2021/09/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="团队拓扑"><a href="#团队拓扑" class="headerlink" title="团队拓扑"></a>团队拓扑</h2><p><img src="/blog/./assets/image-16795113742435328.JPG" alt="团队拓扑"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>管理学</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>管理学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>管理者的品质</title>
     <link href="/blog/2021/05/%E7%AE%A1%E7%90%86%E8%80%85%E7%9A%84%E5%93%81%E8%B4%A8.html"/>
     <url>/blog/2021/05/%E7%AE%A1%E7%90%86%E8%80%85%E7%9A%84%E5%93%81%E8%B4%A8.html</url>
@@ -1870,6 +2183,33 @@
   
   
   <entry>
+    <title>大脑训练</title>
+    <link href="/blog/2021/03/%E5%A4%A7%E8%84%91%E8%AE%AD%E7%BB%83.html"/>
+    <url>/blog/2021/03/%E5%A4%A7%E8%84%91%E8%AE%AD%E7%BB%83.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="大脑“快乐激素”"><a href="#大脑“快乐激素”" class="headerlink" title="大脑“快乐激素”"></a>大脑“快乐激素”</h2><h3 id="多巴胺（Dopamine）–“奖赏”激素"><a href="#多巴胺（Dopamine）–“奖赏”激素" class="headerlink" title="多巴胺（Dopamine）–“奖赏”激素"></a>多巴胺（Dopamine）–“奖赏”激素</h3><ul><li>尝试新事物</li><li>听音乐</li><li>完成一系列小任务</li><li>冥想</li><li>适当补充铁＆维生素B</li><li>进食少量甜食</li></ul><h3 id="血清素（Serotonin）–情绪“稳定剂”"><a href="#血清素（Serotonin）–情绪“稳定剂”" class="headerlink" title="血清素（Serotonin）–情绪“稳定剂”"></a>血清素（Serotonin）–情绪“稳定剂”</h3><ul><li>晒太阳</li><li>体育运动</li><li>冥想</li><li>健康饮食</li><li>适当补充维生素D</li><li>进行感恩练习</li></ul><h3 id="催产素（Oxytocin）—“爱情荷尔蒙”"><a href="#催产素（Oxytocin）—“爱情荷尔蒙”" class="headerlink" title="催产素（Oxytocin）—“爱情荷尔蒙”"></a>催产素（Oxytocin）—“爱情荷尔蒙”</h3><ul><li>给别人一个热情的拥抱</li><li>与朋友相处</li><li>听音乐</li><li>参加社会活动如志愿活动</li><li>对他人表达赞赏</li><li>和小动物玩耍</li></ul><h3 id="内啡肽（Endorphins）–天然“止痛药”"><a href="#内啡肽（Endorphins）–天然“止痛药”" class="headerlink" title="内啡肽（Endorphins）–天然“止痛药”"></a>内啡肽（Endorphins）–天然“止痛药”</h3><ul><li>进行中等强度的运动</li><li>练习瑜伽或冥想</li><li>听音乐，绘画</li><li>笑一笑</li><li>食用少量黑巧克力</li><li>适量食用辛辣食物</li></ul><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>健康</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>食物</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>cgroup简介和在容器里的使用</title>
     <link href="/blog/2021/03/cgroup%E7%AE%80%E4%BB%8B%E5%92%8C%E5%9C%A8%E5%AE%B9%E5%99%A8%E9%87%8C%E7%9A%84%E4%BD%BF%E7%94%A8.html"/>
     <url>/blog/2021/03/cgroup%E7%AE%80%E4%BB%8B%E5%92%8C%E5%9C%A8%E5%AE%B9%E5%99%A8%E9%87%8C%E7%9A%84%E4%BD%BF%E7%94%A8.html</url>
@@ -1953,6 +2293,35 @@
   
   
   <entry>
+    <title>分布式系统下保障请求的执行顺序</title>
+    <link href="/blog/2020/11/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BF%9D%E9%9A%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.html"/>
+    <url>/blog/2020/11/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BF%9D%E9%9A%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E6%89%A7%E8%A1%8C%E9%A1%BA%E5%BA%8F.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前端保障"><a href="#前端保障" class="headerlink" title="前端保障"></a>前端保障</h2><ul><li>防抖</li><li>节流</li></ul><h2 id="后端保障"><a href="#后端保障" class="headerlink" title="后端保障"></a>后端保障</h2><ul><li>分布式锁<ul><li>redis的分布式锁</li><li>zookeeper的分布式锁</li></ul></li><li>dubbo 的一致性 hash 负载均衡策略</li></ul><p>（相同类型的数据Mod到同一个机器上），然后在使用内存队(例如：redis队列)<br>业务保证幂等性</p><ul><li>缓存控制</li></ul><p>redis插入set,下次支付前先判断是否存在。</p><h2 id="数据库保障"><a href="#数据库保障" class="headerlink" title="数据库保障"></a>数据库保障</h2><ul><li>数据库的乐观锁</li></ul><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工作</category>
+      
+      <category>业务架构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>电商系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>大型电商系统的搜索链路业务架构</title>
     <link href="/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html"/>
     <url>/blog/2020/11/%E5%A4%A7%E5%9E%8B%E7%94%B5%E5%95%86%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%90%9C%E7%B4%A2%E9%93%BE%E8%B7%AF%E4%B8%9A%E5%8A%A1%E6%9E%B6%E6%9E%84.html</url>
@@ -1965,6 +2334,35 @@
       <category>工作</category>
       
       <category>业务架构</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+      <tag>电商系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>衡量软件测试效率的方法和实践</title>
+    <link href="/blog/2020/11/%E8%A1%A1%E9%87%8F%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%9E%E8%B7%B5.html"/>
+    <url>/blog/2020/11/%E8%A1%A1%E9%87%8F%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%95%88%E7%8E%87%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%AE%9E%E8%B7%B5.html</url>
+    
+    <content type="html"><![CDATA[<ul><li>测试设计中工作效率：文档产出率、用例产出率。</li><li>测试设计中工作质量：需求覆盖率、文档质量、文档有效率、用例有效率、评审问题数。</li><li>测试执行中工作效率：执行效率、进度偏离度、缺陷发现率。</li><li>测试执行中工作质量：缺陷数、有效缺陷数&#x2F;率、严重缺陷率、模块缺陷率、遗漏缺陷率、BUG发现的时间点、缺陷定位和可读性。</li></ul><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>工作</category>
+      
+      <category>编程思想</category>
       
     </categories>
     
@@ -2032,6 +2430,62 @@
       <tag>英语</tag>
       
       <tag>专有名词</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>DDD</title>
+    <link href="/blog/2020/05/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1.html"/>
+    <url>/blog/2020/05/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1.html</url>
+    
+    <content type="html"><![CDATA[<p>DDD：领域驱动设计（Domain Drive Design）<br>    它关注的是Service层的设计，着重于业务的实现,将分析和设计结合起来，不再使他们处于分裂的状态，这对于我们正确完整的实现客户的需求，以及建立一个具有业务伸缩性的模型<br>    域驱动设计（DDD）是一种将实现与不断发展的模型联系在一起的开发方法。将项目的重点放在核心领域（知识领域），背后的逻辑上，并迫使技术和非技术方面之间进行协作以改进模型</p><p>ddd的作用<br>    统一思想<br>    明确分工<br>    反映变化<br>    边界分离</p><p>ddd的概念<br>    值对象<br>    聚合<br>    聚合根<br>    领域服务<br>    领域事件<br>    实体</p><p>ddd的4种模式<br>    失血模型<br>    贫血模型<br>    胀血模型<br>    充血模型<br>对于ddd而言，失血和胀血都不合适。失血太轻没有聚合， 胀血那是初学者才这样写代码  .</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技巧</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Apollo简介及入门</title>
+    <link href="/blog/2020/04/Apollo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%A5%E9%97%A8.html"/>
+    <url>/blog/2020/04/Apollo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%A5%E9%97%A8.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。</p><p>服务端基于Spring Boot和Spring Cloud开发，打包后可以直接运行，不需要额外安装Tomcat等应用容器。</p><p>Java客户端不依赖任何框架，能够运行于所有Java运行时环境，同时对Spring&#x2F;Spring Boot环境也有较好的支持。</p><h3 id="核心功能"><a href="#核心功能" class="headerlink" title="核心功能"></a>核心功能</h3><h4 id="统一管理不同环境、不同集群配置："><a href="#统一管理不同环境、不同集群配置：" class="headerlink" title="统一管理不同环境、不同集群配置："></a>统一管理不同环境、不同集群配置：</h4><ul><li>Apollo提供了一个统一界面集中式管理不同环境（environment）、不同集群（cluster）、不同命名空间（namespace）的配置。</li><li>同一份代码部署在不同的集群，可以有不同的配置，比如zk的地址等</li><li>通过命名空间（namespace）可以很方便的支持多个不同应用共享同一份配置，同时还允许应用对共</li><li>享的配置进行覆盖</li><li>配置界面支持多语言（中文，English）</li></ul><h4 id="热发布"><a href="#热发布" class="headerlink" title="热发布"></a>热发布</h4><p>用户在Apollo修改完配置并发布后，客户端能实时（1秒）接收到最新的配置，并通知到应用程序。</p><h4 id="版本发布管理"><a href="#版本发布管理" class="headerlink" title="版本发布管理"></a>版本发布管理</h4><p>所有的配置发布都有版本概念，从而可以方便的支持配置的回滚。</p><h4 id="灰度发布"><a href="#灰度发布" class="headerlink" title="灰度发布"></a>灰度发布</h4><p>支持配置的灰度发布，比如点了发布后，只对部分应用实例生效，等观察一段时间没问题后再推给所有应用实例。</p><h4 id="权限管理、发布审核、操作审计"><a href="#权限管理、发布审核、操作审计" class="headerlink" title="权限管理、发布审核、操作审计"></a>权限管理、发布审核、操作审计</h4><ol><li>应用和配置的管理都有完善的权限管理机制，对配置的管理还分为了编辑和发布两个环节，从而减少人为的错误。</li><li>所有的操作都有审计日志，可以方便的追踪问题。</li></ol><h4 id="客户端配置信息监控"><a href="#客户端配置信息监控" class="headerlink" title="客户端配置信息监控"></a>客户端配置信息监控</h4><p>可以方便的看到配置在被哪些实例使用</p><h4 id="提供Java和-Net原生客户端"><a href="#提供Java和-Net原生客户端" class="headerlink" title="提供Java和.Net原生客户端"></a>提供Java和.Net原生客户端</h4><ul><li>提供了Java和.Net的原生客户端，方便应用集成</li><li>支持Spring Placeholder，Annotation和Spring Boot的ConfigurationProperties，方便应用使用（需要Spring 3.1.1+）</li><li>同时提供了Http接口，非Java和.Net应用也可以方便的使用</li></ul><h4 id="提供开放平台API"><a href="#提供开放平台API" class="headerlink" title="提供开放平台API"></a>提供开放平台API</h4><ul><li>Apollo自身提供了比较完善的统一配置管理界面，支持多环境、多数据中心配置管理、权限、流程治理等特性。</li><li>不过Apollo出于通用性考虑，对配置的修改不会做过多限制，只要符合基本的格式就能够保存。</li><li>在我们的调研中发现，对于有些使用方，它们的配置可能会有比较复杂的格式，如xml, json，需要对格式做校验。</li><li>还有一些使用方如DAL，不仅有特定的格式，而且对输入的值也需要进行校验后方可保存，如检查数据库、用户名和密码是否匹配。</li><li>对于这类应用，Apollo支持应用方通过开放接口在Apollo进行配置的修改和发布，并且具备完善的授权和权限控制</li></ul><h4 id="部署简单"><a href="#部署简单" class="headerlink" title="部署简单"></a>部署简单</h4><ul><li>配置中心作为基础服务，可用性要求非常高，这就要求Apollo对外部依赖尽可能地少</li><li>目前唯一的外部依赖是MySQL，所以部署非常简单，只要安装好Java和MySQL就可以让Apollo跑起来</li><li>Apollo还提供了打包脚本，一键就可以生成所有需要的安装包，并且支持自定义运行时参数</li></ul><h2 id="单机部署"><a href="#单机部署" class="headerlink" title="单机部署"></a>单机部署</h2><h3 id="单机版架构"><a href="#单机版架构" class="headerlink" title="单机版架构"></a>单机版架构</h3><p><img src="/blog/./assets/image-yjbmwqvh0q1vgque6igzb2d.PNG" alt="单机版架构"></p><ul><li>Apollo Config Service:提供配置的读取、推送等功能，服务对象是 Apollo 客户端。</li><li>Apollo Admin Service:提供配置的修改、发布等功能，服务对象是Apollo Portal。</li><li>Apollo Portal:Apollo 的管理界面，进行不同项目的配置（项目配置、权限配置等），服务对象是开发者和开放平台API。</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Apollo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Apollo</tag>
+      
+      <tag>配置中心</tag>
       
     </tags>
     
@@ -2325,6 +2779,8 @@
     
     <tags>
       
+      <tag>Mysql</tag>
+      
       <tag>Dubbo</tag>
       
       <tag>Linux</tag>
@@ -2332,8 +2788,6 @@
       <tag>JDK</tag>
       
       <tag>Zookeeper</tag>
-      
-      <tag>Mysql</tag>
       
       <tag>Redis</tag>
       
@@ -2402,6 +2856,33 @@
       <tag>Linux</tag>
       
       <tag>Shell</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PowerShell入门和使用</title>
+    <link href="/blog/2020/03/PowerShell%E5%85%A5%E9%97%A8%E5%92%8C%E4%BD%BF%E7%94%A8.html"/>
+    <url>/blog/2020/03/PowerShell%E5%85%A5%E9%97%A8%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
+    
+    <content type="html"><![CDATA[<p><img src="/blog/./assets/Powershell_00.png" alt="Powershell_00"></p><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>PowerShell</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PowerShell</tag>
       
     </tags>
     
@@ -2750,6 +3231,33 @@
       <tag>SpringMVC</tag>
       
       <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>mysql</title>
+    <link href="/blog/2019/03/mysql.html"/>
+    <url>/blog/2019/03/mysql.html</url>
+    
+    <content type="html"><![CDATA[<p>三大范式<br>    1NF： 每列字段的原子性的，不可再拆分（比如省市区）<br>    2NF：满足1NF,表中的字段必须完全依赖于全部主键而非部分主键。<br>    3NF：满足2NF,非主键外的所有字段必须互不依赖</p><p>但是开发中一般会进行字段冗余。减少表关联，降低开发难度。</p><p>乐观锁和悲观锁</p><p>mysql服务层结构<br>    查询解析器<br>    查询优化器<br>    缓存</p><p>myql的索引<br>    innodb:<br>    myisam</p><p>mysql性能优化<br>注意：不设置优化器最大容量的话，可能会导致优化器返回的结果不全。</p><p>mysql为什么快<br>    mysql底层数据结构b+tree<br>    查到的节点数据是放到内存中的，这个速度是非常快的。</p><p>为什么不用b树，把b树的度设置的越大来降低树的高度<br>    因为内存和硬盘的数据交换有个存储位，称为页，1页的大小为4k.一次交互只能是页的整数倍，页根据机器是有上限的。<br>    mysql底层将一个数据节点的大小默认设置为4页，也就是16k<br>    加入一次只能读1页，也就是16k.<br>    度不是无上限的。</p><p>对比其他数据结构<br>    二叉数（速度慢，单节点只有2个分叉）<br>    红黑数（平衡二叉数）<br>    hash<br>    B-Tree<br>    B+Tree(B-Tree变种)</p><p>InnoDB表必须有主键，并且推荐使用整型的自增主键<br>    满足MySQL的索引数据结构B+树的特性，必须要有索引作为主键<br>    整型占有的磁盘空间或内存空间相比字符串更少<br>    整型比较比字符串比较更快速，字符串比较是先转换为ASCII码，然后再比较的。<br>    B+树本质是多路多叉树<br>    磁盘写数据快满了，是分配一页4k的数据，自增在写磁盘的时候容易分配到同一个磁盘扇区，范围查找更快</p><p>非主键索引叶子节点存储的是主键值<br>    节省内存（一致性和节省存储空间）</p><p>myisam（非聚集）索引<br>    表级锁<br>    不支持事务<br>    全文类型索引<br>    不支持外键<br>    叶子节点保存是数据指针（内存地址）<br>    MyISAM索引文件和数据文件是分离的<br>    主键和非主键索引之间，叶子节点保存的数据没有区别。<br>    叶字节点数据保存的是数据指针，所以还多一次查找数据的步骤。<br>    磁盘文件<br>        表结构文件→test_myisam_frm<br>        数据结构文件↔test_myisam_MYD<br>        索引文件↔test_myisam_MYI</p><p>innodb(聚集)索引<br>    行级锁<br>    支持事务<br>    不支持全文索引<br>    支持外键<br>    叶子节点保存是数据本身而不是数据指针。<br>    主键保存的是完整的数据和主键索引<br>    叶子节点保存的是主键值。避免数据重复和方便维护更新。<br>    表数据文件本身就是按B+Tree组织的一个索引结构文件(ibd文件合并了索引和数据)<br>    聚集索引-叶节点包含了完整的数据记录<br>    数据文件本身就是索引文件(索引和数据保存在同一文件）</p><p>mysql单表行上限<br>    myisam<br>    InnoDB引擎</p><p>数据库性能<br>    单机<br>    集群<br>update可以用索引<br>insert无法用索引的<br>join应该用小表驱动大表，不要超过3张表以上的join,join的操作不能用做跨库的join</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>生活</category>
+      
+      <category>经验</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技巧</tag>
       
     </tags>
     

@@ -1,0 +1,833 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="Vue介绍 官方文档：https://vuejs.org 地址：https://github.com/vuejs  特性 渐进式框架 能够自动追踪依赖的模板表达式和计算属性，提供 MVVM 数据绑定和一个可组合的组件系统，具有简单、灵活的 API，使读者更加容易理解，能够更快上手。  双向数据绑定 声明式渲染是数据双向绑定的主要体现，同样也是 Vue.js 的核心，它允许采用简洁的模板语法将数据声">
+  
+  
+  
+  <title>Vue3项目搭建的4种方式 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Vue3项目搭建的4种方式"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-14 22:26" pubdate>
+          2024年4月14日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          18 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Vue3项目搭建的4种方式</h1>
+            
+              <p id="updated-time" class="note note-info" style="">
+                
+                  
+                    本文最后更新于 2024年4月14日 晚上
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Vue介绍"><a href="#Vue介绍" class="headerlink" title="Vue介绍"></a>Vue介绍</h2><ul>
+<li>官方文档：<a target="_blank" rel="noopener" href="https://vuejs.org/">https://vuejs.org</a></li>
+<li>地址：<a target="_blank" rel="noopener" href="https://github.com/vuejs">https://github.com/vuejs</a></li>
+</ul>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul>
+<li><p>渐进式框架</p>
+<p>能够自动追踪依赖的模板表达式和计算属性，提供 MVVM 数据绑定和一个可组合的组件系统，具有简单、灵活的 API，使读者更加容易理解，能够更快上手。</p>
+</li>
+<li><p>双向数据绑定</p>
+<p>声明式渲染是数据双向绑定的主要体现，同样也是 Vue.js 的核心，它允许采用简洁的模板语法将数据声明式渲染整合进 DOM。</p>
+</li>
+<li><p>指令</p>
+<p>Vue.js 与页面进行交互，主要就是通过内置指令来完成的，指令的作用是当其表达式的值改变时相应地将某些行为应用到 DOM 上。</p>
+</li>
+<li><p>组件化</p>
+<p>组件可以扩展 HTML 元素，封装可重用的代码。</p>
+</li>
+<li><p>Vue 路由管理</p>
+<p>Vue-Router 是 Vue 全家桶中的路由管理插件，与 Vue.js 深度集成，用于构建单页面应用。Vue 单页面应用是基于路由和组件的，路由用于设定访问路径，并将路径和组件映射起来，传统的页面是通过超链接实现页面的切换和跳转的。</p>
+</li>
+<li><p>Vue 状态管理</p>
+<p>Vuex 是 Vue 全家桶中的状态管理插件，与 Vue.js 深度集成，用于管理应用的状态。</p>
+</li>
+<li><p>Vue 脚手架</p>
+<p>Vue-Cli 是 Vue 全家桶中的脚手架工具，给 Vue 应用提供了开箱即用的功能，让开发者能够快速创建、开发、构建一个完整的 Vue 项目。</p>
+</li>
+</ul>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><p>网页是由 DOM 组合的视图结构，再加上 CSS 样式的修饰，使用 JavaScript 接受用户的交互请求，并通过事件机制来响应用户交互操作而形成的。</p>
+<p><code>Jquery</code>是一个经典的DOM操作库。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;!<span class="hljs-variable constant_">DOCTYPE</span> html&gt;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>jquery Dom测试<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-comment">&lt;!-- 引入 jquery 框架 --&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://code.jquery.com/jquery-3.6.0.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span></span><br><span class="language-xml">      hello world</span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">      $(<span class="hljs-string">&quot;#root&quot;</span>).<span class="hljs-title function_">on</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) &#123;</span></span><br><span class="language-javascript"><span class="language-xml">        event.<span class="hljs-property">target</span>.<span class="hljs-property">innerText</span> = <span class="hljs-string">&quot;hello DOM&quot;</span>;</span></span><br><span class="language-javascript"><span class="language-xml">      &#125;);</span></span><br><span class="language-javascript"><span class="language-xml">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Vue MVVM测试<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- 引入 Vue.js 框架 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;handleClick&quot;</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span><br><span class="language-javascript">      <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">createApp</span>(&#123;</span><br><span class="language-javascript">        <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">          <span class="hljs-keyword">return</span> &#123;</span><br><span class="language-javascript">            <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;hello world&quot;</span>,</span><br><span class="language-javascript">          &#125;;</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript">        <span class="hljs-attr">methods</span>: &#123;</span><br><span class="language-javascript">          <span class="hljs-title function_">handleClick</span>(<span class="hljs-params"></span>) &#123;</span><br><span class="language-javascript">            <span class="hljs-variable language_">this</span>.<span class="hljs-property">msg</span> = <span class="hljs-string">&quot;hello MVVM&quot;</span>;</span><br><span class="language-javascript">          &#125;,</span><br><span class="language-javascript">        &#125;,</span><br><span class="language-javascript">      &#125;).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#root&quot;</span>);</span><br><span class="language-javascript">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><h3 id="通过CDN引入"><a href="#通过CDN引入" class="headerlink" title="通过CDN引入"></a>通过CDN引入</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;script src=<span class="hljs-string">&quot;https://unpkg.com/vue@3.0.11/dist/vue.global.js&quot;</span>&gt;&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+
+<p>你可以使用官方提供的资源包（这里以 3.0.11 版本为例）：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.global.js">https://unpkg.com/vue@3.0.11/dist/vue.global.js</a></p>
+<p>浏览器环境中的全量 Vue.js 代码。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js">https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js</a></p>
+<p>浏览器环境中的全量并且压缩过后的 Vue.js 代码。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.js</a></p>
+<p>浏览器环境中的不带编译功能的 Vue.js 代码。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.prod.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.global.prod.js</a></p>
+<p>浏览器环境中的不带编译功能并且压缩过后的 Vue.js 代码。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.esm-browser.js">https://unpkg.com/vue@3.0.11/dist/vue.esm-browser.js</a></p>
+<p><code>EsModule</code> 规范的 Vue.js 全量代码，直接在浏览器通过 <code>ES modules</code> 方式引入（<code>&lt;script type=&quot;module&quot;&gt;</code>）。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://unpkg.com/vue@3.0.11/dist/vue.runtime.esm-browser.js">https://unpkg.com/vue@3.0.11/dist/vue.runtime.esm-browser.js</a></p>
+<p><code>EsModule</code> 规范的不带编译功能 Vue.js 代码，直接在浏览器通过 <code>ES modules</code> 方式引入（<code>&lt;script type=&quot;module&quot;&gt;</code>）。</p>
+</li>
+</ul>
+<p>带 <code>runtime</code> 跟不带 <code>runtime</code> 的资源包，比如：vue.runtime.global.js 跟 vue.global.js：</p>
+<ul>
+<li>vue.runtime.global.js：除了编译 template 功能以外的 Vue 代码。</li>
+<li>vue.global.js：包含了编译 template 功能完整的 Vue 代码。</li>
+</ul>
+<p>如果你的项目需要用到编译 template 属性的功能，比如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-title function_">createApp</span>(&#123;<br>  <span class="hljs-attr">template</span>: <span class="hljs-string">&quot;&lt;app&gt;&lt;/app&gt;&quot;</span>,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>Vue 最后是需要将 template 编译成 <code>render</code> 方法进行渲染的，所以你就需要用到 Vue 的编译功能，因此就需要引入带有编译功能的 Vue 代码（vue.global.js）。</p>
+<p><code>prod</code> 和 <code>prod</code> 后缀的资源包</p>
+<p>比如：<code>vue.global.js</code> 跟 <code>vue.global.prod.js</code>。</p>
+<p>带 <code>prod</code> 的意思就是 “是否经过压缩混淆过后的代码”，<code>prod</code> 的全称是 <code>production</code>，也就是生产环境的意思。</p>
+<blockquote>
+<p>当项目处在开发阶段的时候，用没有 <code>prod</code> 后缀的代码，当项目需要发布上线的时候，用带 <code>prod</code> 后缀的代码。</p>
+</blockquote>
+<p>CDN引入示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js">&lt;!doctype html&gt;<br><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span> /&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Vue use CDN<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-comment">&lt;!-- 引入 全量 Vue.js 代码 --&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://unpkg.com/vue@3.0.11/dist/vue.global.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="language-javascript"><span class="language-xml">      <span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">createApp</span>(&#123;</span></span><br><span class="language-javascript"><span class="language-xml">        <span class="hljs-title function_">data</span>(<span class="hljs-params"></span>) &#123;</span></span><br><span class="language-javascript"><span class="language-xml">          <span class="hljs-keyword">return</span> &#123;</span></span><br><span class="language-javascript"><span class="language-xml">            <span class="hljs-attr">msg</span>: <span class="hljs-string">&quot;hello CDN&quot;</span>,</span></span><br><span class="language-javascript"><span class="language-xml">          &#125;;</span></span><br><span class="language-javascript"><span class="language-xml">        &#125;,</span></span><br><span class="language-javascript"><span class="language-xml">      &#125;).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#root&quot;</span>);</span></span><br><span class="language-javascript"><span class="language-xml">    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="通过NPM安装"><a href="#通过NPM安装" class="headerlink" title="通过NPM安装"></a>通过NPM安装</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs npm"># 创建工程目录<br>mkdir ./vue-npm-demo <br># 进入目录并初始化npm项目<br>cd vue-npm-demo &amp;&amp; npm init -y<br># 安装webpack依赖<br>npm install -D webpack@4.46.0 webpack-cli@4.10 webpack-dev-server@3.11.2 vue-loader@16.1.2 @vue/compiler-sfc@3.0.11 html-webpack-plugin@3.2.0<br># 安装vue<br>npm install vue@3.0.11<br># 创建webpack配置文件<br>touch ./webpack.config.js<br></code></pre></td></tr></table></figure>
+
+<p>添加<code>webpack.config.js</code>内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>);<br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <span class="hljs-attr">target</span>: <span class="hljs-string">&quot;web&quot;</span>,<br>  <span class="hljs-attr">module</span>: &#123;<br>    <span class="hljs-attr">rules</span>: [<br>      &#123;<br>        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.vue$/</span>,<br>        <span class="hljs-attr">loader</span>: <span class="hljs-string">&quot;vue-loader&quot;</span>,<br>      &#125;,<br>    ],<br>  &#125;,<br>  <span class="hljs-attr">plugins</span>: [<br>    <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;vue-loader&quot;</span>).<span class="hljs-property">VueLoaderPlugin</span>)(),<br>    <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;html-webpack-plugin&quot;</span>))(&#123;<br>      <span class="hljs-attr">template</span>: path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&quot;./public/index.html&quot;</span>), <span class="hljs-comment">// 指定模版文件</span><br>    &#125;),<br>  ],<br>  <span class="hljs-attr">devServer</span>: &#123;<br>    <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>    <span class="hljs-attr">disableHostCheck</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">contentBase</span>: path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&quot;./public&quot;</span>), <span class="hljs-comment">// 设置一个 express 静态目录</span><br>    <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>,<br>    <span class="hljs-attr">hot</span>: <span class="hljs-literal">true</span>,<br>    <span class="hljs-attr">sockPort</span>: <span class="hljs-string">&quot;location&quot;</span>,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>配置完Webpack后，创建webpack的入口文件。</p>
+<p>在 <code>vue-npm-demo</code> 工程目录下创建一个 <code>src</code> 目录，并且在 <code>src</code> 目录下创建一个 <code>index.js</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> ./src &amp;&amp; <span class="hljs-built_in">touch</span> ./src/index.js<br></code></pre></td></tr></table></figure>
+
+<p>将以下内容写入到 <code>vue-npm-demo/src/index.js</code> 文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; createApp &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vue&quot;</span>;<br><span class="hljs-comment">// 引入 App.vue 组件</span><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;./App.vue&quot;</span>;<br><span class="hljs-comment">// 渲染 app</span><br><span class="hljs-title function_">createApp</span>(<span class="hljs-title class_">App</span>).<span class="hljs-title function_">mount</span>(<span class="hljs-string">&quot;#app&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>然后创建一个 <code>App.vue</code> 组件。</p>
+<p>在 <code>vue-npm-demo/src</code> 目录下创建一个 <code>App.vue</code> 文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs vue">&lt;template&gt;<br>  &lt;div&gt;&#123;&#123; msg &#125;&#125;&lt;/div&gt;<br>&lt;/template&gt;<br>&lt;script&gt;<br>export default &#123;<br>  setup() &#123;<br>    return &#123;<br>      msg: &quot;hello world&quot;,<br>    &#125;;<br>  &#125;,<br>&#125;;<br>&lt;/script&gt;<br></code></pre></td></tr></table></figure>
+
+<p>为了能让项目跑起来，我们还需要创建应用的入口文件 <code>index.html</code>。</p>
+<p>我们在 <code>vue-npm-demo</code> 目录下创建一个 <code>public</code> 目录，并且在 <code>vue-npm-demo/public</code> 目录下创建一个 <code>index.html</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> ./public &amp;&amp; <span class="hljs-built_in">touch</span> ./public/index.html<br></code></pre></td></tr></table></figure>
+
+<p>将以下内容写入到 <code>vue-npm-demo/public/index.html</code> 文件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!doctype <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span> /&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">noscript</span>&gt;</span>your browser should support javascript!<span class="hljs-tag">&lt;/<span class="hljs-name">noscript</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- html-webpack-plugin 将自动引入入口文件 --&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>在 <code>vue-npm-demo</code> 工程目录下执行以下命令开启 <code>webpack</code> 服务：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> NODE_OPTIONS=--openssl-legacy-provider<br><span class="hljs-comment"># 开启 webpack 服务</span><br>npx webpack serve --mode=development <br></code></pre></td></tr></table></figure>
+
+<p> <code>Webpack</code> 搭建的 <code>Vue</code> 项目就搞定了。</p>
+<h3 id="通过Vue-cli安装"><a href="#通过Vue-cli安装" class="headerlink" title="通过Vue-cli安装"></a>通过Vue-cli安装</h3><p>执行以下命令安装</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm install -g @vue/cli@4.5.12 &amp;&amp; vue create vue-cli-demo<br><span class="hljs-comment"># 安装完根据提示选择(选择：Vue3和npm)</span><br></code></pre></td></tr></table></figure>
+
+<p>在<code>vue-cli-demo</code> 工程目录下创建一个 <code>vue.config.js</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">touch</span> ./vue-cli-demo/vue.config.js<br></code></pre></td></tr></table></figure>
+
+<p>将以下内容写入到 <code>vue-cli-demo/vue.config.js</code> 文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = &#123;<br>  <span class="hljs-attr">configureWebpack</span>: &#123;<br>    <span class="hljs-attr">devServer</span>: &#123;<br>      <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>,<br>      <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>, <br>      <span class="hljs-attr">disableHostCheck</span>: <span class="hljs-literal">true</span>, <br>    &#125;,<br>  &#125;,<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<p>进入到 <code>vue-cli-demo</code> 工程目录，并且在 <code>vue-cli-demo</code> 目录下执行以下命令启动项目：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> NODE_OPTIONS=--openssl-legacy-provider <br><span class="hljs-built_in">cd</span> vue-cli-demo &amp;&amp; npm run serve<br></code></pre></td></tr></table></figure>
+
+<p> <code>Vue-Cli</code> 脚手架项目就搭建完了。 </p>
+<h3 id="通过Vite安装"><a href="#通过Vite安装" class="headerlink" title="通过Vite安装"></a>通过Vite安装</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm init vite vue-vite-demo<br><span class="hljs-comment"># 在后续的选择中选择Vue项目和JavaScript</span><br></code></pre></td></tr></table></figure>
+
+<p>进入到 <code>vue-vite-demo</code> 项目目录并执行 <code>npm</code> 初始化：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cd</span> vue-vite-demo &amp;&amp; npm install<br></code></pre></td></tr></table></figure>
+
+<p>修改 <code>vue-vite-demo</code> 目录下的 <code>vite.config.js</code> 文件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> &#123; defineConfig &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;vite&quot;</span>;<br><span class="hljs-keyword">import</span> vue <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@vitejs/plugin-vue&quot;</span>;<br><br><span class="hljs-comment">// https://vitejs.dev/config/</span><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>(&#123;<br>  <span class="hljs-attr">plugins</span>: [<span class="hljs-title function_">vue</span>()],<br>  <span class="hljs-attr">server</span>: &#123;<br>    <span class="hljs-attr">host</span>: <span class="hljs-string">&quot;0.0.0.0&quot;</span>, <br>    <span class="hljs-attr">port</span>: <span class="hljs-number">8080</span>, <br>  &#125;,<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>执行命令启动项目：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">npm run dev<br></code></pre></td></tr></table></figure>
+
+<p>这样就完成了通过Vite搭建项目。</p>
+<p>（完）</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/Vue/" class="category-chain-item">Vue</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/Vue/" class="print-no-link">#Vue</a>
+      
+        <a href="/blog/tags/Vite/" class="print-no-link">#Vite</a>
+      
+        <a href="/blog/tags/NPM/" class="print-no-link">#NPM</a>
+      
+        <a href="/blog/tags/Webpack/" class="print-no-link">#Webpack</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Vue3项目搭建的4种方式</div>
+      <div>https://maojun.xyz/blog/2024/04/Vue3项目搭建的4种方式.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月14日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年4月14日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2024/04/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html" title="CodeReview关注的重点内容">
+                        <span class="hidden-mobile">CodeReview关注的重点内容</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

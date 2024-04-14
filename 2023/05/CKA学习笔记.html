@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="CKA学习笔记CKA学习记录 容器容器和虚拟机的区别，容器本身是一个APP，虚拟机是一个完整的系统。 容器管理runtime，运行时。    高级别Runtime 低级别Runtime    docker runc   containerd lxc   cri-o gvisor   rkt kata   podman …   …     一般而言，高级别的Runtime会去调用低级别的Runtim">
+  
+  
+  
+  <title>CKA学习笔记 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CKA学习笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-05-01 17:41" pubdate>
+          2023年5月1日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.6k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          14 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CKA学习笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="CKA学习笔记"><a href="#CKA学习笔记" class="headerlink" title="CKA学习笔记"></a>CKA学习笔记</h1><p>CKA学习记录</p>
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>容器和虚拟机的区别，容器本身是一个APP，虚拟机是一个完整的系统。</p>
+<h3 id="容器管理"><a href="#容器管理" class="headerlink" title="容器管理"></a>容器管理</h3><p>runtime，运行时。</p>
+<table>
+<thead>
+<tr>
+<th><strong>高级别Runtime</strong></th>
+<th><strong>低级别Runtime</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>docker</strong></td>
+<td><strong>runc</strong></td>
+</tr>
+<tr>
+<td><strong>containerd</strong></td>
+<td>lxc</td>
+</tr>
+<tr>
+<td>cri-o</td>
+<td>gvisor</td>
+</tr>
+<tr>
+<td>rkt</td>
+<td>kata</td>
+</tr>
+<tr>
+<td>podman</td>
+<td>…</td>
+</tr>
+<tr>
+<td>…</td>
+<td></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>一般而言，高级别的Runtime会去调用低级别的Runtime，docker和containerd底层调用的是runc。</p>
+</blockquote>
+<p>低级别运行时只能管理容器，高级别运行时不仅可以管理容器，还可以管理镜像。无论是高级别还是低级别运行时，所使用的镜像是一样的。</p>
+<h3 id="容器架构"><a href="#容器架构" class="headerlink" title="容器架构"></a>容器架构</h3><p>docker是客户端工具，dockerd是服务端工具。docker默认连接的是本机dockerd，可以通过-H指定远程的dockerd服务。</p>
+<p>containerd是服务端，上层的客户端有ctr,crictl,<strong>nerdctl</strong>，不同的客户端之间是通过命名空间相互隔离的，所以不同客户端创建的容器是隔离看不见的。</p>
+<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>创建2个虚拟机，在里面分别安装docker和containerd。</p>
+<blockquote>
+<p>使用containerd运行时是因为K8S的新版本中不再作为运行时了，但是docekr依旧可以用来打包和构建。</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 关闭屏幕保护</span><br>setterm -black 0<br><span class="hljs-comment"># 配置yum源</span><br><span class="hljs-built_in">rm</span> -rf /etc/yum.repos.d/* ; wget ftp://ftp.rhce.cc/k8s/* -P /etc/yum.repos.d/<br><span class="hljs-comment"># 安装docker</span><br>yum install -y docker-ce<br><span class="hljs-comment"># 启动docker并设置开机启动</span><br>systemctl <span class="hljs-built_in">enable</span> docker --now<br><span class="hljs-comment"># 安装containerd和客户端工具</span><br>yum install -y containerd.io cri-tools <br><span class="hljs-comment"># 启动containerd并设置开机启动</span><br>systemctl <span class="hljs-built_in">enable</span> containerd --now<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看docker运行时"><a href="#查看docker运行时" class="headerlink" title="查看docker运行时"></a>查看docker运行时</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看运行时</span><br>docker info |grep -i runtime<br> Runtimes: io.containerd.runc.v2 runc<br> Default Runtime: runc<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="docker配置"><a href="#docker配置" class="headerlink" title="docker配置"></a>docker配置</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">cat</span> &gt; /etc/docker/daemon.json &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string">&#123; &quot;registry-mirrors&quot;: [&quot;https://frz7i079.mirror.aliyuncs.com&quot;]</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string">EOF</span><br>systemctl restart docker<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="查看containerd运行时"><a href="#查看containerd运行时" class="headerlink" title="查看containerd运行时"></a>查看containerd运行时</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># crictl连接运行时</span><br>crictl config runtime-endpoint unix:///var/run/containerd/containerd.sock<br><span class="hljs-comment"># 查看运行时</span><br>crictl info |grep -i runtime<br>        <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;RuntimeReady&quot;</span>,<br>      <span class="hljs-string">&quot;defaultRuntimeName&quot;</span>: <span class="hljs-string">&quot;runc&quot;</span>,<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="containerd配置"><a href="#containerd配置" class="headerlink" title="containerd配置"></a>containerd配置</h3><p>需要先配置客户端连接的运行时，</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 查看当前的配置</span><br>containerd config dump<br><span class="hljs-comment"># 导出containerd默认配置并覆盖当前的配置文件</span><br>containerd config default &gt; /etc/containerd/config.toml<br><span class="hljs-comment"># 设置加速服务,搜索mirrors并在底下加入2行，完整配置如下</span><br>[plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.registry.mirrors]<br>  [plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.registry.mirrors.<span class="hljs-string">&quot;docker.io&quot;</span>]  <br>    endpoint = [<span class="hljs-string">&quot;https://frz7i079.mirror.aliyuncs.com&quot;</span>]<br><span class="hljs-comment"># 搜索sandbox，修改这行内容为</span><br>sandbox_image = <span class="hljs-string">&quot;registry.aliyuncs.com/google_containers/pause:3.7&quot;</span><br><span class="hljs-comment"># 搜索SystemdCgroup并修改为true,同时删除上面几行，最终效果如下</span><br> [plugins.<span class="hljs-string">&quot;io.containerd.grpc.v1.cri&quot;</span>.containerd.runtimes.runc.options]<br>            SystemdCgroup = <span class="hljs-literal">true</span><br><span class="hljs-comment"># 修改完重启containerd</span><br>systemctl restart containerd<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="安装nerdctl客户端"><a href="#安装nerdctl客户端" class="headerlink" title="安装nerdctl客户端"></a>安装nerdctl客户端</h4><p>crictl用起来和docker命令兼容不是很好，比较好用的是nerdctl且命令也兼容docker，所以可以单独安装nerdctl搭配containerd。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 下载后并解压</span><br>tar -zxvf nerdctl-0.23.0-linux-amd64.tar.gz -C /usr/bin/<br><span class="hljs-comment">#　安装网络插件</span><br><span class="hljs-built_in">mkdir</span> -p /opt/cni/bin/<br>tar -zxvf cni-plugins-linux-amd64-v1.1.1.tgz -C /opt/cni/bin/<br></code></pre></td></tr></table></figure>
+
+<p>由于nerdctl和crictl使用的是不同的命名空间，所以是相互隔离，为了兼容crictl创建的容器，可以将nerdctl的命名空间修改为和crictl一样。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 创建配置目录</span><br><span class="hljs-built_in">mkdir</span> /etc/nerdctl/<br><span class="hljs-comment"># 添加配置信息</span><br><span class="hljs-built_in">cat</span> &gt; /etc/nerdctl/nerdctl.toml &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string">debug = false</span><br><span class="hljs-string">debug_full = false</span><br><span class="hljs-string">address = &quot;unix:///var/run/containerd/containerd.sock&quot;</span><br><span class="hljs-string"># 修改namespace为k8s.io,默认是default</span><br><span class="hljs-string">namespace = &quot;k8s.io&quot;</span><br><span class="hljs-string">#snapshotter = &quot;stargz&quot;</span><br><span class="hljs-string">cgroup_manager = &quot;systemd&quot;</span><br><span class="hljs-string">#hosts_dir = [&quot;/etc/containerd/certs.d&quot;,&quot;/etc/nerdctl/certs.d&quot;]</span><br><span class="hljs-string">insecure_registry = false</span><br><span class="hljs-string">EOF</span><br><br><span class="hljs-comment"># 启用linger</span><br>loginctl show-user root | grep Linger<br>loginctl enable-linger root<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="配置nerdctl加速"><a href="#配置nerdctl加速" class="headerlink" title="配置nerdctl加速"></a>配置nerdctl加速</h4><p>nerdctl并不会使用container的配置文件，而是有其自己的配置文件。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-built_in">mkdir</span> -p /etc/containerd/certs.d/docker.io<br><span class="hljs-built_in">cat</span> &gt; /etc/containerd/certs.d/docker.io/hosts.toml &lt;&lt;<span class="hljs-string">EOF</span><br><span class="hljs-string"># server = &quot;https://docker.io&quot;</span><br><span class="hljs-string">[host.&quot;https://frz7i079.mirror.aliyuncs.com&quot;]</span><br><span class="hljs-string">	capabilities = [&quot;pull&quot;,&quot;resolve&quot;]</span><br><span class="hljs-string">override_path = true</span><br><span class="hljs-string">EOF</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="nerdctl命令自动补齐"><a href="#nerdctl命令自动补齐" class="headerlink" title="nerdctl命令自动补齐"></a>nerdctl命令自动补齐</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 编辑~/.bashrc文件并添加以下内容</span><br><span class="hljs-built_in">source</span> &lt;(nerdctl completion bash)<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="容器里运行的是什么"><a href="#容器里运行的是什么" class="headerlink" title="容器里运行的是什么"></a>容器里运行的是什么</h2><p>默认运行的是CMD指定的内容，可以通用<code>nerdctl history</code>查看镜像中指定的CMD命令。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sh">nerdctl <span class="hljs-built_in">history</span> hello-world<br>SNAPSHOT                                                                   CREATED          CREATED BY                                       SIZE        COMMENT<br>&lt;missing&gt;                                                                  17 months ago    /bin/sh -c <span class="hljs-comment">#(nop)  CMD [&quot;/hello&quot;]                0.0 B       </span><br>sha256:e07ee1baac5fae6a26f30cabfe54a36d3402f96afda318fe0a96cec4ca393359    17 months ago    /bin/sh -c <span class="hljs-comment">#(nop) COPY file:50563a97010fd7ce…    16.0 KiB    </span><br></code></pre></td></tr></table></figure>
+
+<p>hello-world运行默认运行的就是<code>/hello</code>命令。</p>
+<h2 id="容器的生命周期"><a href="#容器的生命周期" class="headerlink" title="容器的生命周期"></a>容器的生命周期</h2><p>容器里面的运行进程结束了，容器生命周期也结束了。默认进程运行的是CMD中制定的命令。</p>
+<p>-t 模拟终端 -i 交互界面，如果默认CMD是bash,这样bash就有个依附窗口，不会自动结束容器了。</p>
+<p>以下是合并的内容，还需要手动处理<br>容器<br>容器和虚拟机的区别：image-20230107193134952</p>
+<p>要想运行容器，我们必须先安装软件runtime，也就是运行时。<br>image-20230107192916772</p>
+<p>无论使用上图的哪一个runtime，他们最终使用的镜像是一致的。</p>
+<p>OCI是一个镜像结构，和容器状态标准。</p>
+<p>在1.24的时候就不使用docker使用runtime了，可以选择containerd.</p>
+<p>但是并不是说docker就被淘汰了，无法继续使用了，而是可以在构建镜像，搭建仓库时用。</p>
+<p>image-20230107194018096</p>
+<p>docker是客户端，服务端模式，客户端可以连接到远程的机器上。</p>
+<p>containerd是一个执行引擎，可以连接不通的客户端服务，最好用的是nerdctl，nerdctl，crictl,ctr之间创建的容器是通过namespace(命名空间）隔离的互相看不到。</p>
+<p>虚拟机创建<br>从temp虚机克隆出两台虚机：</p>
+<p>vm71-docker<br>vm72-container<br>账号密码都是root redhat<br>然后使用命令分别设置：</p>
+<p>.&#x2F;set.sh 71</p>
+<p>.&#x2F;set.sh 72</p>
+<p>关闭屏保：setterm -blank 0</p>
+<p>docekr安装<br>略</p>
+<p>continerd安装<br>默认是crictl</p>
+<p>默认已经有配置文件了，但是不全。 可以生成比较全的默认配置：</p>
+<p>containerd config dufault &gt; &#x2F;etc&#x2F;containerd&#x2F;config.toml</p>
+<p>查看当前的配置命令：</p>
+<p>containerd config dufault</p>
+<p>crictl命令<br>crictl images 查看镜像</p>
+<p>crictl info 查看信息</p>
+<p>默认使用的namespace:k8s.io</p>
+<p>nerdctl<br>命令基本都是兼容docker的，非常好用。</p>
+<p>但是netl和crictl默认使用的命名空间 是不同的。</p>
+<p>默认使用的default</p>
+<p>如果是K8s创建的容器，使用nerdctl排错时需要先切换成k8s的命令空间，否则看不到。</p>
+<p>不同的命名空间 中镜像和容器都是隔离的，namespace的作用就是资源隔离。</p>
+<p>镜像<br>一个镜像打了多个tag,都是用的一个image id，只有最后一个同imageid的镜像后，镜像文件才会从服务器中删除。</p>
+<p>容器<br>容器里是一定要运行一个进程的。</p>
+<p>如果创建容器的时候指定容器里运行的是什么的话，则容器里运行的是镜像里CMD所指定的。</p>
+<p>使用docker history查看镜像所打的CMD命令</p>
+<p>cka22-12-containerd-2镜像管理.vep 待学</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E7%94%9F%E6%B4%BB/" class="category-chain-item">生活</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/" class="category-chain-item">经验</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/%E6%8A%80%E5%B7%A7/" class="print-no-link">#技巧</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CKA学习笔记</div>
+      <div>https://maojun.xyz/blog/2023/05/CKA学习笔记.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年5月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2023/07/%E4%BD%BF%E7%94%A8GitHub%20Pages%20%E9%83%A8%E7%BD%B2%20Hexo.html" title="使用GitHub Pages 部署 Hexo">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用GitHub Pages 部署 Hexo</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2023/04/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" title="工作中的注意事项">
+                        <span class="hidden-mobile">工作中的注意事项</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
