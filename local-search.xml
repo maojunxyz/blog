@@ -37,33 +37,6 @@
   
   
   <entry>
-    <title>CodeReview关注的重点内容</title>
-    <link href="/blog/2024/04/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html"/>
-    <url>/blog/2024/04/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html</url>
-    
-    <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>搜索文档Ctrl + P<br>搜索文档（其他窗格）Ctrl + Shift + P<br>转到文档表Ctrl + Alt + O<br>快速添加Ctrl +’<br>显示键盘快捷键Ctrl + Alt + Shift + H<br>切换侧栏Alt + S<br>添加文档Alt + N<br>添加今天的文档Alt + D<br>向前导航Alt + 右<br>向后导航Alt + 左<br>打开知识库切换器Ctrl + Shift + Alt + O<br>操作系统：快速添加笔记到目前笔记下 Ctrl + Alt + Shift +’ Desktop<br>操作系统：专注于RemNote（从别的软件切换到RN） Ctrl + Alt + R Desktop </p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight wren"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs wren">标签 <span class="hljs-string">&quot;##&quot;</span><br>双向链接 <span class="hljs-string">&quot;&#123;&#123;&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\r</span>ef&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br><span class="hljs-title class_">Emoji</span>表情 <span class="hljs-string">&quot;%%&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\e</span>moji&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br>日期 <span class="hljs-string">&quot;!!&quot;</span> 或者 <span class="hljs-string">&quot;\date&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>别名 <span class="hljs-string">&quot;<span class="hljs-char escape_">\a</span>lias&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span> 或者 <span class="hljs-string">&quot;alt&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;A&quot;</span><br>按照字母排序 <span class="hljs-string">&quot;\sort&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>创建<span class="hljs-variable">TO</span><span class="hljs-operator">-</span><span class="hljs-variable">DO</span> <span class="hljs-string">&quot;<span class="hljs-char escape_">\t</span>odo&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br></code></pre></td></tr></table></figure><p>（完）</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>学习</category>
-      
-      <category>Remnote</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Remnote</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Kubernetes及其生态介绍和使用</title>
     <link href="/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html"/>
     <url>/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html</url>
@@ -536,15 +509,15 @@
       
       <tag>Linux</tag>
       
+      <tag>Kubernates</tag>
+      
+      <tag>Prometheus</tag>
+      
       <tag>Word</tag>
       
       <tag>Excel</tag>
       
       <tag>PPT</tag>
-      
-      <tag>Kubernates</tag>
-      
-      <tag>Prometheus</tag>
       
       <tag>Metersphere</tag>
       
@@ -723,6 +696,33 @@
       <tag>HTTP</tag>
       
       <tag>HTTPS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Remnote常用快捷键和指令</title>
+    <link href="/blog/2023/11/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html"/>
+    <url>/blog/2023/11/Remnote%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%92%8C%E6%8C%87%E4%BB%A4.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>搜索文档Ctrl + P<br>搜索文档（其他窗格）Ctrl + Shift + P<br>转到文档表Ctrl + Alt + O<br>快速添加Ctrl +’<br>显示键盘快捷键Ctrl + Alt + Shift + H<br>切换侧栏Alt + S<br>添加文档Alt + N<br>添加今天的文档Alt + D<br>向前导航Alt + 右<br>向后导航Alt + 左<br>打开知识库切换器Ctrl + Shift + Alt + O<br>操作系统：快速添加笔记到目前笔记下 Ctrl + Alt + Shift +’ Desktop<br>操作系统：专注于RemNote（从别的软件切换到RN） Ctrl + Alt + R Desktop </p><h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><figure class="highlight wren"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs wren">标签 <span class="hljs-string">&quot;##&quot;</span><br>双向链接 <span class="hljs-string">&quot;&#123;&#123;&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\r</span>ef&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br><span class="hljs-title class_">Emoji</span>表情 <span class="hljs-string">&quot;%%&quot;</span> 或者 <span class="hljs-string">&quot;<span class="hljs-char escape_">\e</span>moji&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br>日期 <span class="hljs-string">&quot;!!&quot;</span> 或者 <span class="hljs-string">&quot;\date&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>别名 <span class="hljs-string">&quot;<span class="hljs-char escape_">\a</span>lias&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span> 或者 <span class="hljs-string">&quot;alt&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;A&quot;</span><br>按照字母排序 <span class="hljs-string">&quot;\sort&quot;</span><span class="hljs-operator">+</span><span class="hljs-string">&quot;Enter&quot;</span><br>创建<span class="hljs-variable">TO</span><span class="hljs-operator">-</span><span class="hljs-variable">DO</span> <span class="hljs-string">&quot;<span class="hljs-char escape_">\t</span>odo&quot;</span> <span class="hljs-operator">+</span> <span class="hljs-string">&quot;Enter&quot;</span><br></code></pre></td></tr></table></figure><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Remnote</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Remnote</tag>
       
     </tags>
     
@@ -1617,11 +1617,11 @@
     
     <tags>
       
+      <tag>云原生</tag>
+      
       <tag>Kubernates</tag>
       
       <tag>Prometheus</tag>
-      
-      <tag>云原生</tag>
       
     </tags>
     
