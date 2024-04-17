@@ -1317,11 +1317,11 @@
     
     <tags>
       
+      <tag>Jmeter</tag>
+      
       <tag>软件测试</tag>
       
       <tag>测试工具</tag>
-      
-      <tag>Jmeter</tag>
       
     </tags>
     
@@ -1856,6 +1856,37 @@
       <tag>Arthas</tag>
       
       <tag>Recaf</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Gatling和Jmeter的区别</title>
+    <link href="/blog/2022/03/Gatling%E5%92%8CJmeter%E7%9A%84%E5%8C%BA%E5%88%AB.html"/>
+    <url>/blog/2022/03/Gatling%E5%92%8CJmeter%E7%9A%84%E5%8C%BA%E5%88%AB.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h2><p> JMeter 和 Gatling 的比较：</p><table><thead><tr><th>比较项</th><th>Jmeter</th><th>Gatling（开源版）</th></tr></thead><tbody><tr><td>UI界面</td><td>支持</td><td>不支持</td></tr><tr><td>无代码测试</td><td>执行jmx</td><td>需要具备 Scala语言的技能</td></tr><tr><td>脚本更改</td><td>通过 JMeter UI更改</td><td>通过编辑器更改gatling脚本</td></tr><tr><td>分布式测试</td><td>支持</td><td>支持</td></tr><tr><td>应用程序类型</td><td>支持多类型程序，可插件扩展</td><td>支持少类型程序，可代码扩展</td></tr><tr><td>CI&#x2F;CD 支持</td><td>支持</td><td>支持</td></tr><tr><td>定制报告</td><td>可以自定义报告。</td><td>无法自定义报告</td></tr><tr><td>版本控制</td><td>不适合Git&#x2F;SVN源代码管理</td><td>适合Git&#x2F;SVN源代码管理</td></tr><tr><td>实时测试运行监控</td><td>可以进行实时测试运行监控</td><td>无法进行实时测试运行监视</td></tr><tr><td>插件</td><td>有大量的<a href="https://www.blazemeter.com/blog/top-ten-jmeter-plugins">JMeter插件</a>可用。</td><td>数量较少<a href="https://gatling.io/docs/gatling/reference/current/extensions/">gatling插件 </a></td></tr><tr><td>从 HAR 文件生成测试计划</td><td>JMeter 无法从本机（<a href="https://converter.blazemeter.com/"> 第三方支持</a>）的 HAR 文件生成测试计划。</td><td>gatling 录制 （<a href="https://gatling.io/docs/gatling/reference/current/http/recorder/">链接</a>） 可以从 HAR 文件生成负载测试脚本。</td></tr><tr><td>脚本组件化</td><td>不适合</td><td>scala语言支持</td></tr><tr><td>第三方脚本录制</td><td>支持第三方插件录制 <a href="https://chrome.google.com/webstore/detail/blazemeter-the-continuous/mbopgmdnpcbohhpnfglgohlbhfongabi">浏览器插件</a>.</td><td>自身支持录制</td></tr></tbody></table><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>Jmeter的脚本要依赖与Jmerter Ui去编辑和修改。</li><li>Gatling可以通过编辑器直接修改源码。</li><li>同样都依赖与Java环境。</li><li>Gatling压测代码可以使用GIT&#x2F;SVN进行版本管理。</li></ul><p>（完）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习</category>
+      
+      <category>Gatling</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Gatling</tag>
+      
+      <tag>性能测试</tag>
+      
+      <tag>Jmeter</tag>
       
     </tags>
     
