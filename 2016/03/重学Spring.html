@@ -1,0 +1,886 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="Spring简介轻量级的开源的J2EE框架。它是一个容器框架，用来装javabean（java对象)。Spring是一个轻量级的控制反转（IoC)和面向切面（AOP）的容器框架  从大小与开销两方面而言Spring都是轻量级的。 通过控制反转(IoC)的技术达到松耦合的目的 提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的  开发  包含并管理应用对象(Bean)的">
+  
+  
+  
+  <title>重学Spring - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="重学Spring"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2016-03-02 14:32" pubdate>
+          2016年3月2日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          41 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">重学Spring</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h2><p>轻量级的开源的J2EE框架。它是一个容器框架，用来装javabean（java对象)。<br>Spring是一个轻量级的控制反转（IoC)和面向切面（AOP）的容器框架</p>
+<ul>
+<li>从大小与开销两方面而言Spring都是轻量级的。</li>
+<li>通过控制反转(IoC)的技术达到松耦合的目的</li>
+<li>提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务进行内聚性的</li>
+</ul>
+<p>开发</p>
+<ul>
+<li>包含并管理应用对象(Bean)的配置和生命周期，这个意义上是一个容器。</li>
+<li>将简单的组件配置、组合成为复杂的应用，这个意义上是一个框架。</li>
+</ul>
+<h2 id="如何实现一个IOC容器"><a href="#如何实现一个IOC容器" class="headerlink" title="如何实现一个IOC容器"></a>如何实现一个IOC容器</h2><ol>
+<li>配置文件配置包扫描路径</li>
+<li>递归包扫描获取.class文件</li>
+<li>反射、确定需要交给IOC管理的类</li>
+<li>对需要注入的类进行依赖注入</li>
+</ol>
+<ul>
+<li>配置文件中指定需要扫描的包路径</li>
+<li>定义一些注解，分别表示访问控制层、业务服务层、数据持久层、依赖注入注解、获取配置文件注解</li>
+<li>从配置文件中获取需要扫描的包路径，获取到当前路径下的文件信息及文件夹信息，我们将当前路径下所有以.class结尾的文件添加到一个Set集合中进行存储</li>
+<li>遍历这个set集合，获取在类上有指定注解的类，并将其交给IOC容器，定义一个安全的Map用来存储这些对象</li>
+<li>遍历这个IOC容器，获取到每一个类的实例，判断里面是有有依赖其他的类的实例，然后进行递归注入</li>
+</ul>
+<h2 id="AOP的理解"><a href="#AOP的理解" class="headerlink" title="AOP的理解"></a>AOP的理解</h2><p>系统是由许多不同的组件所组成的，每一个组件各负责一块特定功能。除了实现自身核心功能之外，这<br>些组件还经常承担着额外的职责。例如日志、事务管理和安全这样的核心服务经常融入到自身具有核心<br>业务逻辑的组件中去。这些系统服务经常被称为横切关注点，因为它们会跨越系统的多个组件。<br>当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。也就是说，OOP允许你定义从<br>上到下的关系，但并不适合定义从左到右的关系。例如日志功能。<br>日志代码往往水平地散布在所有对象层次中，而与它所散布到的对象的核心功能毫无关系。<br>在OOP设计中，它导致了大量代码的重复，而不利于各个模块的重用。<br>AOP：将程序中的交叉业务逻辑（比如安全，日志，事务等），封装成一个切面，然后注入到目标对象<br>（具体业务逻辑）中去。AOP可以对某个对象或某些对象的功能进行增强，比如对象中的方法进行增<br>强，可以在执行某个方法之前额外的做一些事情，在某个方法执行之后额外的做一些事情</p>
+<h2 id="对IOC的理解"><a href="#对IOC的理解" class="headerlink" title="对IOC的理解"></a>对IOC的理解</h2><p>容器概念、控制反转、依赖注入</p>
+<h3 id="IOC容器"><a href="#IOC容器" class="headerlink" title="IOC容器"></a>IOC容器</h3><p>实际上就是个map（key，value），里面存的是各种对象（在xml里配置的bean节点、<br>@repository、@service、@controller、@component），在项目启动的时候会读取配置文件里面的<br>bean节点，根据全限定类名使用反射创建对象放到map里、扫描到打上上述注解的类还是通过反射创<br>建对象放到map里。</p>
+<p>这个时候map里就有各种对象了，接下来我们在代码里需要用到里面的对象时，再通过DI注入<br>（autowired、resource等注解，xml里bean节点内的ref属性，项目启动的时候会读取xml节点ref属性<br>根据id注入，也会扫描这些注解，根据类型或id注入；id就是对象名）。</p>
+<h3 id="控制反转"><a href="#控制反转" class="headerlink" title="控制反转"></a>控制反转</h3><p>没有引入IOC容器之前，对象A依赖于对象B，那么对象A在初始化或者运行到某一点的时候，自己必须<br>主动去创建对象B或者使用已经创建的对象B。无论是创建还是使用对象B，控制权都在自己手上。<br>引入IOC容器之后，对象A与对象B之间失去了直接联系，当对象A运行到需要对象B的时候，IOC容器会<br>主动创建一个对象B注入到对象A需要的地方。<br>通过前后的对比，不难看出来：对象A获得依赖对象B的过程,由主动行为变为了被动行为，控制权颠倒<br>过来了，这就是“控制反转”这个名称的由来。<br>全部对象的控制权全部上缴给“第三方”IOC容器，所以，IOC容器成了整个系统的关键核心，它起到了一<br>种类似“粘合剂”的作用，把系统中的所有对象粘合在一起发挥作用，如果没有这个“粘合剂”，对象与对<br>象之间会彼此失去联系，这就是有人把IOC容器比喻成“粘合剂”的由来。</p>
+<h3 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h3><p>“获得依赖对象的过程被反转了”。控制被反转之后，获得依赖对象的过程由自身管理变为了由IOC容器<br>主动注入。依赖注入是实现IOC的方法，就是由IOC容器在运行期间，动态地将某种依赖关系注入到对<br>象之中。</p>
+<h2 id="BeanFactory和ApplicationContext区别"><a href="#BeanFactory和ApplicationContext区别" class="headerlink" title="BeanFactory和ApplicationContext区别"></a>BeanFactory和ApplicationContext区别</h2><p>ApplicationContext是BeanFactory的子接口<br>ApplicationContext提供了更完整的功能：</p>
+<ol>
+<li>继承MessageSource，因此支持国际化。</li>
+<li>统一的资源文件访问方式。</li>
+<li>提供在监听器中注册bean的事件。</li>
+<li>同时加载多个配置文件。</li>
+<li>载入多个（有继承关系）上下文 ，使得每一个上下文都专注于一个特定的层次，比如应用的web层。</li>
+</ol>
+<ul>
+<li>BeanFactroy采用的是延迟加载形式来注入Bean的，即只有在使用到某个Bean时(调用getBean())，才对该Bean进行加载实例化。这样，我们就不能发现一些存在的Spring的配置问题。如果Bean的某一个属性没有注入，BeanFacotry加载后，直至第一次使用调用getBean方法才会抛出异常。</li>
+<li>ApplicationContext，它是在容器启动时，一次性创建了所有的Bean。这样，在容器启动时，我们就可以发现Spring中存在的配置错误，这样有利于检查所依赖属性是否注入。ApplicationContext启动后预载入所有的单实例Bean，通过预载入单实例bean ,确保当你需要的时候，你就不用等待，因为它们已经创建好了。</li>
+<li>相对于基本的BeanFactory，ApplicationContext 唯一的不足是占用内存空间。当应用程序配置Bean较多时，程序启动较慢。</li>
+<li>BeanFactory通常以编程的方式被创建，ApplicationContext还能以声明的方式创建，如使用ContextLoader。</li>
+<li>BeanFactory和ApplicationContext都支持BeanPostProcessor、BeanFactoryPostProcessor的使用，但两者之间的区别是：BeanFactory需要手动注册，而ApplicationContext则是自动注册。</li>
+</ul>
+<h2 id="Spring-Bean的生命周期"><a href="#Spring-Bean的生命周期" class="headerlink" title="Spring Bean的生命周期"></a>Spring Bean的生命周期</h2><ol>
+<li>解析类得到BeanDefinition</li>
+<li>如果有多个构造方法，则要推断构造方法</li>
+<li>确定好构造方法后，进行实例化得到一个对象</li>
+<li>对对象中的加了@Autowired注解的属性进行属性填充</li>
+<li>回调Aware方法，比如BeanNameAware，BeanFactoryAware</li>
+<li>调用BeanPostProcessor的初始化前的方法</li>
+<li>调用初始化方法</li>
+<li>调用BeanPostProcessor的初始化后的方法，在这里会进行AOP</li>
+<li>如果当前创建的bean是单例的则会把bean放入单例池</li>
+<li>使用bean</li>
+<li>Spring容器关闭时调用DisposableBean中destory()方法</li>
+</ol>
+<h2 id="Spring支持的几种bean的作用域"><a href="#Spring支持的几种bean的作用域" class="headerlink" title="Spring支持的几种bean的作用域"></a>Spring支持的几种bean的作用域</h2><ul>
+<li>singleton：默认，每个容器中只有一个bean的实例，单例的模式由BeanFactory自身来维护。该对象的生命周期是与Spring IOC容器一致的（但在第一次被注入时才会创建）。</li>
+<li>prototype：为每一个bean请求提供一个实例。在每次注入时都会创建一个新的对象</li>
+<li>request：bean被定义为在每个HTTP请求中创建一个单例对象，也就是说在单个请求中都会复用这一个单例对象。</li>
+<li>session：与request范围类似，确保每个session中有一个bean的实例，在session过期后，bean会随之失效。</li>
+<li>application：bean被定义为在ServletContext的生命周期中复用一个单例对象。</li>
+<li>websocket：bean被定义为在websocket的生命周期中复用一个单例对象。</li>
+<li>global-session：全局作用域，global-session和Portlet应用相关。当你的应用部署在Portlet容器中工作时，它包含很多portlet。如果你想要声明让所有的portlet共用全局的存储变量的话，那么这全局变量需要存储在global-session中。全局作用域与Servlet中的session作用域效果相同。</li>
+</ul>
+<h2 id="Spring单例Bean是线程安全的么"><a href="#Spring单例Bean是线程安全的么" class="headerlink" title="Spring单例Bean是线程安全的么"></a>Spring单例Bean是线程安全的么</h2><p>Spring中的Bean默认是单例模式的，框架并没有对bean进行多线程的封装处理。</p>
+<p>如果Bean是有状态的 那就需要开发人员自己来进行线程安全的保证，最简单的办法就是改变bean的作<br>用域 把 “singleton”改为’‘protopyte’ 这样每次请求Bean就相当于是 new Bean() 这样就可以保证线程的<br>安全了。</p>
+<ul>
+<li>有状态就是有数据存储功能</li>
+<li>无状态就是不会保存数据。</li>
+</ul>
+<p>controller、service和dao层本身并不是线程安全的，只是如果只是调用里面的方法，而且多线程调用一个实例的方法，会在内存中复制变量，这是自己的线程的工作内存，是安全的。</p>
+<p>Dao会操作数据库Connection，Connection是带有状态的，比如说数据库事务，Spring的事务管理器<br>使用Threadlocal为不同线程维护了一套独立的connection副本，保证线程之间不会互相影响（</p>
+<p>不要在bean中声明任何有状态的实例变量或类变量，如果必须如此，那么就使用ThreadLocal把变量变<br>为线程私有的，如果bean的实例变量或类变量需要在多个线程之间共享，那么就只能使synchronized、lock、CAS等这些实现线程同步的方法了。</p>
+<h2 id="Spring-框架中都用到了哪些设计模式"><a href="#Spring-框架中都用到了哪些设计模式" class="headerlink" title="Spring 框架中都用到了哪些设计模式"></a>Spring 框架中都用到了哪些设计模式</h2><p>简单工厂：由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类。</p>
+<blockquote>
+<p>Spring中的BeanFactory就是简单工厂模式的体现，根据传入一个唯一的标识来获得Bean对象，但是否是</p>
+<p>在传入参数后创建还是传入参数前创建这个要根据具体情况来定</p>
+</blockquote>
+<p>工厂方法</p>
+<blockquote>
+<p>实现了FactoryBean接口的bean是一类叫做factory的bean。其特点是，spring会在使用getBean()调</p>
+<p>用获得该bean时，会自动调用该bean的getObject()方法，所以返回的不是factory这个bean，而是这个</p>
+<p>bean.getOjbect()方法的返回值</p>
+</blockquote>
+<p>单例模式：保证一个类仅有一个实例，并提供一个访问它的全局访问点</p>
+<blockquote>
+<p>spring对单例的实现： spring中的单例模式完成了后半句话，即提供了全局的访问点BeanFactory。但没</p>
+<p>有从构造器级别去控制单例，这是因为spring管理的是任意的java对象。</p>
+</blockquote>
+<p>适配器模式</p>
+<blockquote>
+<p>Spring定义了一个适配接口，使得每一种Controller有一种对应的适配器实现类，让适配器代替</p>
+<p>controller执行相应的方法。这样在扩展Controller时，只需要增加一个适配器类就完成了SpringMVC</p>
+<p>的扩展了</p>
+</blockquote>
+<p>装饰器模式：动态地给一个对象添加一些额外的职责。就增加功能来说，Decorator模式相比生成子类<br>更为灵活。</p>
+<blockquote>
+<p>Spring中用到的包装器模式在类名上有两种表现：一种是类名中含有Wrapper，另一种是类名中含有</p>
+<p>Decorator</p>
+</blockquote>
+<p>动态代理</p>
+<blockquote>
+<p>切面在应用运行的时刻被织入。一般情况下，在织入切面时，AOP容器会为目标对象创建动态的创建一个代理对象。SpringAOP就是以这种方式织入切面的。</p>
+<p>织入：把切面应用到目标对象并创建新的代理对象的过程。</p>
+</blockquote>
+<p>观察者模式</p>
+<blockquote>
+<p>spring的事件驱动模型使用的是 观察者模式 ，Spring中Observer模式常用的地方是listener的实现。</p>
+</blockquote>
+<p>策略模式</p>
+<blockquote>
+<p>Spring框架的资源访问Resource接口。该接口提供了更强的资源访问能力，Spring 框架本身大量使用了</p>
+<p>Resource 接口来访问底层资源。</p>
+</blockquote>
+<p>模板方法：父类定义了骨架（调用哪些方法及顺序），某些特定方法由子类实现。<br>最大的好处：代码复用，减少重复代码。除了子类要实现的特定方法，其他方法及方法调用顺序都在父<br>类中预先写好了。</p>
+<blockquote>
+<p>refresh方法</p>
+</blockquote>
+<h2 id="Spring事务的实现方式和原理以及隔离级别"><a href="#Spring事务的实现方式和原理以及隔离级别" class="headerlink" title="Spring事务的实现方式和原理以及隔离级别"></a>Spring事务的实现方式和原理以及隔离级别</h2><p>在使用Spring框架时，可以有两种使用事务的方式，一种是编程式的，一种是申明式的，<br>@Transactional注解就是申明式的。</p>
+<p>首先，事务这个概念是数据库层面的，Spring只是基于数据库中的事务进行了扩展，以及提供了一些能<br>让程序员更加方便操作事务的方式。</p>
+<p>比如我们可以通过在某个方法上增加@Transactional注解，就可以开启事务，这个方法中所有的sql都<br>会在一个事务中执行，统一成功或失败。</p>
+<p>在一个方法上加了@Transactional注解后，Spring会基于这个类生成一个代理对象，会将这个代理对象<br>作为bean，当在使用这个代理对象的方法时，如果这个方法上存在@Transactional注解，那么代理逻<br>辑会先把事务的自动提交设置为false，然后再去执行原本的业务逻辑方法，如果执行业务逻辑方法没有<br>出现异常，那么代理逻辑中就会将事务进行提交，如果执行业务逻辑方法出现了异常，那么则会将事务<br>进行回滚。</p>
+<p>当然，针对哪些异常回滚事务是可以配置的，可以利用@Transactional注解中的rollbackFor属性进行<br>配置，默认情况下会对RuntimeException和Error进行回滚。</p>
+<p>spring事务隔离级别就是数据库的隔离级别：外加一个默认级别</p>
+<ul>
+<li>read uncommitted（未提交读）</li>
+<li>read committed（提交读、不可重复读）</li>
+<li>repeatable read（可重复读）</li>
+<li>serializable（可串行化）</li>
+</ul>
+<p>数据库的配置隔离级和Spring配置的隔离级别同步，如何数据库支持以Spring配置的为准，如果spring设置的隔离级别数据库不支持，效果取决于数据库。</p>
+<h2 id="spring事务传播机制"><a href="#spring事务传播机制" class="headerlink" title="spring事务传播机制"></a>spring事务传播机制</h2><p>多个事务方法相互调用时,事务如何在这些方法间传播。</p>
+<blockquote>
+<p>方法A是一个事务的方法，方法A执行过程中调用了方法B，那么方法B有无事务以及方法B对事务的要求不同都会对方法A的事务具体执行造成影响，同时方法A的事务对方法B的事务执行也有影响，这种影响具体是什么就由两个方法所定义的事务传播类型所决定。</p>
+</blockquote>
+<ul>
+<li>REQUIRED(Spring默认的事务传播类型)：如果当前没有事务，则自己新建一个事务，如果当前存在事务，则加入这个事务</li>
+<li>SUPPORTS：当前存在事务，则加入当前事务，如果当前没有事务，就以非事务方法执行</li>
+<li>MANDATORY：当前存在事务，则加入当前事务，如果当前事务不存在，则抛出异常。</li>
+<li>REQUIRES_NEW：创建一个新事务，如果存在当前事务，则挂起该事务。</li>
+<li>NOT_SUPPORTED：以非事务方式执行,如果当前存在事务，则挂起当前事务</li>
+<li>NEVER：不使用事务，如果当前事务存在，则抛出异常</li>
+<li>NESTED：如果当前事务存在，则在嵌套事务中执行，否则REQUIRED的操作一样（开启一个事务）</li>
+</ul>
+<h3 id="NESTED和REQUIRES-NEW的区别"><a href="#NESTED和REQUIRES-NEW的区别" class="headerlink" title="NESTED和REQUIRES_NEW的区别"></a>NESTED和REQUIRES_NEW的区别</h3><p>REQUIRES_NEW是新建一个事务并且新开启的这个事务与原有事务无关，而NESTED则是当前存在事务时（我</p>
+<p>们把当前事务称之为父事务）会开启一个嵌套事务（称之为一个子事务）。 在NESTED情况下父事务回滚时，</p>
+<p>子事务也会回滚，而在REQUIRES_NEW情况下，原有事务回滚，不会影响新开启的事务。</p>
+<h3 id="NESTED和REQUIRED的区别"><a href="#NESTED和REQUIRED的区别" class="headerlink" title="NESTED和REQUIRED的区别"></a>NESTED和REQUIRED的区别</h3><p>REQUIRED情况下，调用方存在事务时，则被调用方和调用方使用同一事务，那么被调用方出现异常时，由于</p>
+<p>共用一个事务，所以无论调用方是否catch其异常，事务都会回滚 。而在NESTED情况下，被调用方发生异常</p>
+<p>时，调用方可以catch其异常，这样只有子事务回滚，父事务不受影响</p>
+<h2 id="spring事务什么时候会失效"><a href="#spring事务什么时候会失效" class="headerlink" title="spring事务什么时候会失效"></a>spring事务什么时候会失效</h2><p>spring事务的原理是AOP，进行了切面增强，那么失效的根本原因是这个AOP不起作用了。</p>
+<ul>
+<li><p>发生自调用，类里面使用this调用本类的方法（this通常省略），此时这个this对象不是代理类，而是UserService对象本身！</p>
+<blockquote>
+<p>解决方法，让this变成UserService的代理类即可！</p>
+</blockquote>
+</li>
+<li><p>方法不是public的</p>
+<p>@Transactional 只能用于 public 的方法上，否则事务不会失效，如果要用在非 public 方法上，可<br>以开启 AspectJ 代理模式。</p>
+</li>
+<li><p>数据库不支持事务</p>
+</li>
+<li><p>没有被spring管理</p>
+</li>
+<li><p>异常被吃掉，事务不会回滚(或者抛出的异常没有被定义，默认为RuntimeException)</p>
+</li>
+</ul>
+<h2 id="bean的自动装配"><a href="#bean的自动装配" class="headerlink" title="bean的自动装配"></a>bean的自动装配</h2><p>开启自动装配，只需要在xml配置文件中定义“autowire”属性</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cutomer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Customer&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;&quot;</span> /&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>autowire属性有五种装配的方式：</p>
+<ul>
+<li><p>no – 缺省情况下，自动配置是通过“ref”属性手动设定。</p>
+<p>手动装配：以value或ref的方式明确指定属性值都是手动装配。需要通过‘ref’属性来连接bean。</p>
+</li>
+<li><p>byName-根据bean的属性名称进行自动装配。</p>
+</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml">Cutomer的属性名称是person，Spring会将bean id为person的bean通过setter方法进行自动装配。<br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cutomer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Cutomer&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;byName&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;person&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Person&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>byType-根据bean的类型进行自动装配。</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml">Cutomer的属性person的类型为Person，Spirng会将Person类型通过setter方法进行自动装配。<br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cutomer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Cutomer&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;byType&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;person&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Person&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>constructor-类似byType，不过是应用于构造器的参数。如果一个bean与构造器参数的类型形同，则进行自动装配，否则导致异常。</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml">Cutomer构造函数的参数person的类型为Person，Spirng会将Person类型通过构造方法进行自动装<br>配。<br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;cutomer&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Cutomer&quot;</span> <span class="hljs-attr">autowire</span>=<span class="hljs-string">&quot;construtor&quot;</span>/&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">bean</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;person&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;com.xxx.xxx.Person&quot;</span>/&gt;</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>autodetect-如果有默认的构造器，则通过constructor方式进行自动装配，否则使用byType方式进行自动装配。</li>
+</ul>
+<p>如果有默认的构造器，则通过constructor方式进行自动装配，否则使用byType方式进行自动装配。</p>
+<p>@Autowired自动装配bean，可以在字段、setter方法、构造函数上使用。</p>
+<p>(完)</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/Spring/" class="category-chain-item">Spring</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/Spring/" class="print-no-link">#Spring</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>重学Spring</div>
+      <div>https://maojun.xyz/blog/2016/03/重学Spring.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2016年3月2日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2016/03/%E9%87%8D%E5%AD%A6SpringBoot.html" title="重学SpringBoot">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">重学SpringBoot</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2015/10/%E9%87%8D%E5%AD%A6JavaSE.html" title="重学JavaSE">
+                        <span class="hidden-mobile">重学JavaSE</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
