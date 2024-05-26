@@ -320,6 +320,216 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/blog/2021/02/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html" target="_self">
+          JVM内存模型
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/blog/2021/02/JVM%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html" target="_self">
+        <div>
+          JVM 内存结构 每个线程都只能访问自己的线程栈。 每个线程都不能访问（看不见）其他线程的局部变量。 所有原生类型的局部变量都存储在线程栈中，因此对其他线程是不可见的。 线程可以将一个原生变量值的副本传给另一个线程，但不能共享原生局部变量本身。 堆内存中包含了 Java 代码中创建的所有对象，不管是哪个线程创建的。 其中也涵盖了包装类型（例如 Byte，Integer，Long 等）。 不管是创建
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-03 12:07" pubdate>
+              2021-02-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/JVM/" class="category-chain-item">JVM</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/blog/tags/JVM/">#JVM</a>
+            
+              <a href="/blog/tags/Java/">#Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/blog/2021/02/JVM%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8.html" target="_self">
+          JVM类加载器
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/blog/2021/02/JVM%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8.html" target="_self">
+        <div>
+          类的生命周期 加载（Loading）：找 Class 文件 验证（Verification）：验证格式、依赖 准备（Preparation）：静态字段、方法表 解析（Resolution）：符号解析为引用 初始化（Initialization）：构造器、静态变量赋值、静态代码块 使用（Using） 卸载（Unloading）   类的加载时机 当虚拟机启动时，初始化用户指定的主类，就是启动执行的
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-02 11:07" pubdate>
+              2021-02-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/JVM/" class="category-chain-item">JVM</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/blog/tags/JVM/">#JVM</a>
+            
+              <a href="/blog/tags/Java/">#Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/blog/2021/01/JVM%E5%AD%97%E8%8A%82%E7%A0%81%E5%9F%BA%E7%A1%80.html" target="_self">
+          JVM字节码基础
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/blog/2021/01/JVM%E5%AD%97%E8%8A%82%E7%A0%81%E5%9F%BA%E7%A1%80.html" target="_self">
+        <div>
+          编程语言类型 面向过程、面向对象、面向函数 静态类型、动态类型 编译执行、解释执行 有虚拟机、无虚拟机 有 GC、无 GC   Java 是一种面向对象、静态类型、编译执行，有 VM&#x2F;GC 和运行时、跨平台的高级语言。     字节码、类加载器、虚拟机关系 Java字节码Java bytecode 由单字节（byte）的指令组成，理论上最多支持 256 个操作码（opcode）。 实际上
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-07 20:06" pubdate>
+              2021-01-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/JVM/" class="category-chain-item">JVM</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/blog/tags/JVM/">#JVM</a>
+            
+              <a href="/blog/tags/Java/">#Java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/blog/2020/12/Redis%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93.html" target="_self">
           Redis知识总结
         </a>
@@ -732,217 +942,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2020/05/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1.html" target="_self">
-          DDD
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2020/05/DDD%E9%A2%86%E5%9F%9F%E9%A9%B1%E5%8A%A8%E8%AE%BE%E8%AE%A1.html" target="_self">
-        <div>
-          DDD：领域驱动设计（Domain Drive Design）    它关注的是Service层的设计，着重于业务的实现,将分析和设计结合起来，不再使他们处于分裂的状态，这对于我们正确完整的实现客户的需求，以及建立一个具有业务伸缩性的模型    域驱动设计（DDD）是一种将实现与不断发展的模型联系在一起的开发方法。将项目的重点放在核心领域（知识领域），背后的逻辑上，并迫使技术和非技术方面之间进行协
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-05-27 17:41" pubdate>
-              2020-05-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/%E7%94%9F%E6%B4%BB/" class="category-chain-item">生活</a>
-  
-  
-    <span>></span>
-    
-  <a href="/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/" class="category-chain-item">经验</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/%E6%8A%80%E5%B7%A7/">#技巧</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2020/04/Apollo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%A5%E9%97%A8.html" target="_self">
-          Apollo简介及入门
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2020/04/Apollo%E7%AE%80%E4%BB%8B%E5%8F%8A%E5%85%A5%E9%97%A8.html" target="_self">
-        <div>
-          简介Apollo（阿波罗）是携程框架部门研发的分布式配置中心，能够集中化管理应用不同环境、不同集群的配置，配置修改后能够实时推送到应用端，并且具备规范的权限、流程治理等特性，适用于微服务配置管理场景。 服务端基于Spring Boot和Spring Cloud开发，打包后可以直接运行，不需要额外安装Tomcat等应用容器。 Java客户端不依赖任何框架，能够运行于所有Java运行时环境，同时对Sp
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-04-13 20:51" pubdate>
-              2020-04-13
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
-  
-  
-    <span>></span>
-    
-  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/Apollo/" class="category-chain-item">Apollo</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/Apollo/">#Apollo</a>
-            
-              <a href="/blog/tags/%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/">#配置中心</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/blog/2020/04/CodeReview%E9%9C%80%E5%85%B3%E6%B3%A8%E7%9A%84%E9%97%AE%E9%A2%98%E7%82%B9.html" target="_self">
-          CodeReview需关注的问题点
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/blog/2020/04/CodeReview%E9%9C%80%E5%85%B3%E6%B3%A8%E7%9A%84%E9%97%AE%E9%A2%98%E7%82%B9.html" target="_self">
-        <div>
-          常见代码问题 空值 防御式编程，判空处理，有胜于无  未捕获潜在的异常 API返回做判断；切忌默默吞掉异常；防御式编程  低性能 批量调用接口或访问DB;处理超时；降维多重循环；复用大对象  影响范围过大 谨慎修改公共函数、基础函数、基类等；充分测试；评估影响范围  单测间题 重要业务逻辑必有单测；单测全部通过；代码BUG或变更单测覆盖；增加异常单测  与原有业务逐辑不兼容 充分理解已有逻辑及设计
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-04-08 23:29" pubdate>
-              2020-04-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/" class="category-chain-item">工作</a>
-  
-  
-    <span>></span>
-    
-  <a href="/blog/categories/%E5%B7%A5%E4%BD%9C/%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3/" class="category-chain-item">编程思想</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/blog/tags/Remnote/">#Remnote</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/blog/page/18/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/17/#board">17</a><a class="page-number" href="/blog/page/18/#board">18</a><span class="page-number current">19</span><a class="page-number" href="/blog/page/20/#board">20</a><a class="page-number" href="/blog/page/21/#board">21</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/23/#board">23</a><a class="extend next" rel="next" href="/blog/page/20/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/blog/page/18/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/17/#board">17</a><a class="page-number" href="/blog/page/18/#board">18</a><span class="page-number current">19</span><a class="page-number" href="/blog/page/20/#board">20</a><a class="page-number" href="/blog/page/21/#board">21</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/24/#board">24</a><a class="extend next" rel="next" href="/blog/page/20/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 

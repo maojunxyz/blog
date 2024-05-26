@@ -1,0 +1,2129 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="JVM指令助记符 变量到操作数栈： 1iload,iload_&amp;lt;n&amp;gt;,lload,lload_&amp;lt;n&amp;gt;,fload,fload_&amp;lt;n&amp;gt;,dload,dload_&amp;lt;n&amp;gt;,aload,aload_&amp;lt;n&amp;gt;  操作数栈到变量： 1istore,istore_&amp;lt;n&amp;gt;,lstore,lstore_&amp;lt;n&amp;gt;,fstore,fstor">
+  
+  
+  
+  <title>JVM指令集 - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="JVM指令集"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2018-02-01 21:05" pubdate>
+          2018年2月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          426 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">JVM指令集</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="JVM指令助记符"><a href="#JVM指令助记符" class="headerlink" title="JVM指令助记符"></a>JVM指令助记符</h2><ol>
+<li><p>变量到操作数栈：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml">iload,iload_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,lload,lload_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,fload,fload_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,dload,dload_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,aload,aload_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>操作数栈到变量：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml">istore,istore_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,lstore,lstore_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,fstore,fstore_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,dstore,dstor_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span>,astore,astore_<span class="hljs-tag">&lt;<span class="hljs-name">n</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>常数到操作数栈：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml">bipush,sipush,ldc,ldc_w,ldc2_w,aconst_null,iconst_ml,iconst_<span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>,lconst_<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>,fconst_<span class="hljs-tag">&lt;<span class="hljs-name">f</span>&gt;</span>,dconst_<span class="hljs-tag">&lt;<span class="hljs-name">d</span>&gt;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>加：iadd,ladd,fadd,dadd</p>
+</li>
+<li><p>减：isub,lsub,fsub,dsub</p>
+</li>
+<li><p>乘：imul,lmul,fmul,dmul</p>
+</li>
+<li><p>除：idiv,ldiv,fdiv,ddiv</p>
+</li>
+<li><p>余数：irem,lrem,frem,drem</p>
+</li>
+<li><p>取负：ineg,lneg,fneg,dneg</p>
+</li>
+<li><p>移位：ishl,lshr,iushr,lshl,lshr,lushr</p>
+</li>
+<li><p>按位或：ior,lor</p>
+</li>
+<li><p>按位与：iand,land</p>
+</li>
+<li><p>按位异或：ixor,lxor</p>
+</li>
+<li><p>类型转换：i2l,i2f,i2d,l2f,l2d,f2d(放宽数值转换)<br>    i2b,i2c,i2s,l2i,f2i,f2l,d2i,d2l,d2f(缩窄数值转换)</p>
+</li>
+<li><p>创建类实便：new</p>
+</li>
+<li><p>创建新数组：newarray,anewarray,multianwarray</p>
+</li>
+<li><p>访问类的域和类实例域：getfield,putfield,getstatic,putstatic</p>
+</li>
+<li><p>把数据装载到操作数栈：baload,caload,saload,iaload,laload,faload,daload,aaload</p>
+</li>
+<li><p>从操作数栈存存储到数组：bastore,castore,sastore,iastore,lastore,fastore,dastore,aastore</p>
+</li>
+<li><p>获取数组长度：arraylength</p>
+</li>
+<li><p>检相类实例或数组属性：instanceof,checkcast</p>
+</li>
+<li><p>操作数栈管理：pop,pop2,dup,dup2,dup_xl,dup2_xl,dup_x2,dup2_x2,swap</p>
+</li>
+<li><p>有条件转移：ifeq,iflt,ifle,ifne,ifgt,ifge,ifnull,ifnonnull,if_icmpeq,if_icmpene,<br>if_icmplt,if_icmpgt,if_icmple,if_icmpge,if_acmpeq,if_acmpne,<br>lcmp,fcmpl fcmpg,dcmpl,dcmpg</p>
+</li>
+<li><p>复合条件转移：tableswitch,lookupswitch</p>
+</li>
+<li><p>无条件转移：goto,goto_w,jsr,jsr_w,ret</p>
+</li>
+<li><p>调度对象的实便方法：invokevirtual</p>
+</li>
+<li><p>调用由接口实现的方法：invokeinterface</p>
+</li>
+<li><p>调用需要特殊处理的实例方法：invokespecial</p>
+</li>
+<li><p>调用命名类中的静态方法：invokestatic</p>
+</li>
+<li><p>方法返回：ireturn,lreturn,freturn,dreturn,areturn,return</p>
+</li>
+<li><p>异常：athrow</p>
+</li>
+<li><p>finally关键字的实现使用：jsr,jsr_w,ret</p>
+</li>
+</ol>
+<h2 id="JVM字节码指令集"><a href="#JVM字节码指令集" class="headerlink" title="JVM字节码指令集"></a>JVM字节码指令集</h2><table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>十六进制</th>
+<th>指令集</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0x00</td>
+<td>nop</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>0x01</td>
+<td>aconst_null</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>0x02</td>
+<td>iconst_m1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>0x03</td>
+<td>iconst_0</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>0x04</td>
+<td>iconst_1</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>0x05</td>
+<td>iconst_2</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>0x06</td>
+<td>iconst_3</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>0x07</td>
+<td>iconst_4</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>0x08</td>
+<td>iconst_5</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>0x09</td>
+<td>lconst_0</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>0x0a</td>
+<td>lconst_1</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>0x0b</td>
+<td>fconst_0</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>0x0c</td>
+<td>fconst_1</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>0x0d</td>
+<td>fconst_2</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>0x0e</td>
+<td>dconst_0</td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>0x0f</td>
+<td>dconst_1</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>0x10</td>
+<td>bipush</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>0x11</td>
+<td>sipush</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>0x12</td>
+<td>ldc</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>0x13</td>
+<td>ldc_w</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>0x14</td>
+<td>ldc2_w</td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>0x15</td>
+<td>iload</td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>0x16</td>
+<td>lload</td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>0x17</td>
+<td>fload</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>0x18</td>
+<td>dload</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>0x19</td>
+<td>aload</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>0x1a</td>
+<td>iload_0</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>0x1b</td>
+<td>iload_1</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>0x1c</td>
+<td>iload_2</td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>0x1d</td>
+<td>iload_3</td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>0x1e</td>
+<td>lload_0</td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td>0x1f</td>
+<td>lload_1</td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td>0x20</td>
+<td>lload_2</td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>0x21</td>
+<td>lload_3</td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>0x22</td>
+<td>fload_0</td>
+<td></td>
+</tr>
+<tr>
+<td>35</td>
+<td>0x23</td>
+<td>fload_1</td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td>0x24</td>
+<td>fload_2</td>
+<td></td>
+</tr>
+<tr>
+<td>37</td>
+<td>0x25</td>
+<td>fload_3</td>
+<td></td>
+</tr>
+<tr>
+<td>38</td>
+<td>0x26</td>
+<td>dload_0</td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td>0x27</td>
+<td>dload_1</td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td>0x28</td>
+<td>dload_2</td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td>0x29</td>
+<td>dload_3</td>
+<td></td>
+</tr>
+<tr>
+<td>42</td>
+<td>0x2a</td>
+<td>aload_0</td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>0x2b</td>
+<td>aload_1</td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td>0x2c</td>
+<td>aload_2</td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>0x2d</td>
+<td>aload_3</td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td>0x2e</td>
+<td>iaload</td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td>0x2f</td>
+<td>laload</td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td>0x30</td>
+<td>faload</td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td>0x31</td>
+<td>daload</td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td>0x32</td>
+<td>aaload</td>
+<td></td>
+</tr>
+<tr>
+<td>51</td>
+<td>0x33</td>
+<td>baload</td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>0x34</td>
+<td>caload</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>0x35</td>
+<td>saload</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td>0x36</td>
+<td>istore</td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>0x37</td>
+<td>lstore</td>
+<td></td>
+</tr>
+<tr>
+<td>56</td>
+<td>0x38</td>
+<td>fstore</td>
+<td></td>
+</tr>
+<tr>
+<td>57</td>
+<td>0x39</td>
+<td>dstore</td>
+<td></td>
+</tr>
+<tr>
+<td>58</td>
+<td>0x3a</td>
+<td>astore</td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>0x3b</td>
+<td>istore_0</td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>0x3c</td>
+<td>istore_1</td>
+<td></td>
+</tr>
+<tr>
+<td>61</td>
+<td>0x3d</td>
+<td>istore_2</td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td>0x3e</td>
+<td>istore_3</td>
+<td></td>
+</tr>
+<tr>
+<td>63</td>
+<td>0x3f</td>
+<td>lstore_0</td>
+<td></td>
+</tr>
+<tr>
+<td>64</td>
+<td>0x40</td>
+<td>lstore_1</td>
+<td></td>
+</tr>
+<tr>
+<td>65</td>
+<td>0x41</td>
+<td>lstore_2</td>
+<td></td>
+</tr>
+<tr>
+<td>66</td>
+<td>0x42</td>
+<td>lstore_3</td>
+<td></td>
+</tr>
+<tr>
+<td>67</td>
+<td>0x43</td>
+<td>fstore_0</td>
+<td></td>
+</tr>
+<tr>
+<td>68</td>
+<td>0x44</td>
+<td>fstore_1</td>
+<td></td>
+</tr>
+<tr>
+<td>69</td>
+<td>0x45</td>
+<td>fstore_2</td>
+<td></td>
+</tr>
+<tr>
+<td>70</td>
+<td>0x46</td>
+<td>fstore_3</td>
+<td></td>
+</tr>
+<tr>
+<td>71</td>
+<td>0x47</td>
+<td>dstore_0</td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td>0x48</td>
+<td>dstore_1</td>
+<td></td>
+</tr>
+<tr>
+<td>73</td>
+<td>0x49</td>
+<td>dstore_2</td>
+<td></td>
+</tr>
+<tr>
+<td>74</td>
+<td>0x4a</td>
+<td>dstore_3</td>
+<td></td>
+</tr>
+<tr>
+<td>75</td>
+<td>0x4b</td>
+<td>astore_0</td>
+<td></td>
+</tr>
+<tr>
+<td>76</td>
+<td>0x4c</td>
+<td>astore_1</td>
+<td></td>
+</tr>
+<tr>
+<td>77</td>
+<td>0x4d</td>
+<td>astore_2</td>
+<td></td>
+</tr>
+<tr>
+<td>78</td>
+<td>0x4e</td>
+<td>astore_3</td>
+<td></td>
+</tr>
+<tr>
+<td>79</td>
+<td>0x4f</td>
+<td>iastore</td>
+<td></td>
+</tr>
+<tr>
+<td>80</td>
+<td>0x50</td>
+<td>lastore</td>
+<td></td>
+</tr>
+<tr>
+<td>81</td>
+<td>0x51</td>
+<td>fastore</td>
+<td></td>
+</tr>
+<tr>
+<td>82</td>
+<td>0x52</td>
+<td>dastore</td>
+<td></td>
+</tr>
+<tr>
+<td>83</td>
+<td>0x53</td>
+<td>aastore</td>
+<td></td>
+</tr>
+<tr>
+<td>84</td>
+<td>0x54</td>
+<td>bastore</td>
+<td></td>
+</tr>
+<tr>
+<td>85</td>
+<td>0x55</td>
+<td>castore</td>
+<td></td>
+</tr>
+<tr>
+<td>86</td>
+<td>0x56</td>
+<td>sastore</td>
+<td></td>
+</tr>
+<tr>
+<td>87</td>
+<td>0x57</td>
+<td>pop</td>
+<td></td>
+</tr>
+<tr>
+<td>88</td>
+<td>0x58</td>
+<td>pop2</td>
+<td></td>
+</tr>
+<tr>
+<td>89</td>
+<td>0x59</td>
+<td>dup</td>
+<td></td>
+</tr>
+<tr>
+<td>90</td>
+<td>0x5a</td>
+<td>dup_x1</td>
+<td></td>
+</tr>
+<tr>
+<td>91</td>
+<td>0x5b</td>
+<td>dup_x2</td>
+<td></td>
+</tr>
+<tr>
+<td>92</td>
+<td>0x5c</td>
+<td>dup2</td>
+<td></td>
+</tr>
+<tr>
+<td>93</td>
+<td>0x5d</td>
+<td>dup2_x1</td>
+<td></td>
+</tr>
+<tr>
+<td>94</td>
+<td>0x5e</td>
+<td>dup2_x2</td>
+<td></td>
+</tr>
+<tr>
+<td>95</td>
+<td>0x5f</td>
+<td>swap</td>
+<td></td>
+</tr>
+<tr>
+<td>96</td>
+<td>0x60</td>
+<td>iadd</td>
+<td></td>
+</tr>
+<tr>
+<td>97</td>
+<td>0x61</td>
+<td>ladd</td>
+<td></td>
+</tr>
+<tr>
+<td>98</td>
+<td>0x62</td>
+<td>fadd</td>
+<td></td>
+</tr>
+<tr>
+<td>99</td>
+<td>0x63</td>
+<td>dadd</td>
+<td></td>
+</tr>
+<tr>
+<td>100</td>
+<td>0x64</td>
+<td>isub</td>
+<td></td>
+</tr>
+<tr>
+<td>101</td>
+<td>0x65</td>
+<td>lsub</td>
+<td></td>
+</tr>
+<tr>
+<td>102</td>
+<td>0x66</td>
+<td>fsub</td>
+<td></td>
+</tr>
+<tr>
+<td>103</td>
+<td>0x67</td>
+<td>dsub</td>
+<td></td>
+</tr>
+<tr>
+<td>104</td>
+<td>0x68</td>
+<td>imul</td>
+<td></td>
+</tr>
+<tr>
+<td>105</td>
+<td>0x69</td>
+<td>lmul</td>
+<td></td>
+</tr>
+<tr>
+<td>106</td>
+<td>0x6a</td>
+<td>fmul</td>
+<td></td>
+</tr>
+<tr>
+<td>107</td>
+<td>0x6b</td>
+<td>dmul</td>
+<td></td>
+</tr>
+<tr>
+<td>108</td>
+<td>0x6c</td>
+<td>idiv</td>
+<td></td>
+</tr>
+<tr>
+<td>109</td>
+<td>0x6d</td>
+<td>ldiv</td>
+<td></td>
+</tr>
+<tr>
+<td>110</td>
+<td>0x6e</td>
+<td>fdiv</td>
+<td></td>
+</tr>
+<tr>
+<td>111</td>
+<td>0x6f</td>
+<td>ddiv</td>
+<td></td>
+</tr>
+<tr>
+<td>112</td>
+<td>0x70</td>
+<td>irem</td>
+<td></td>
+</tr>
+<tr>
+<td>113</td>
+<td>0x71</td>
+<td>lrem</td>
+<td></td>
+</tr>
+<tr>
+<td>114</td>
+<td>0x72</td>
+<td>frem</td>
+<td></td>
+</tr>
+<tr>
+<td>115</td>
+<td>0x73</td>
+<td>drem</td>
+<td></td>
+</tr>
+<tr>
+<td>116</td>
+<td>0x74</td>
+<td>ineg</td>
+<td></td>
+</tr>
+<tr>
+<td>117</td>
+<td>0x75</td>
+<td>lneg</td>
+<td></td>
+</tr>
+<tr>
+<td>118</td>
+<td>0x76</td>
+<td>fneg</td>
+<td></td>
+</tr>
+<tr>
+<td>119</td>
+<td>0x77</td>
+<td>dneg</td>
+<td></td>
+</tr>
+<tr>
+<td>120</td>
+<td>0x78</td>
+<td>ishl</td>
+<td></td>
+</tr>
+<tr>
+<td>121</td>
+<td>0x79</td>
+<td>lshl</td>
+<td></td>
+</tr>
+<tr>
+<td>122</td>
+<td>0x7a</td>
+<td>ishr</td>
+<td></td>
+</tr>
+<tr>
+<td>123</td>
+<td>0x7b</td>
+<td>lshr</td>
+<td></td>
+</tr>
+<tr>
+<td>124</td>
+<td>0x7c</td>
+<td>iushr</td>
+<td></td>
+</tr>
+<tr>
+<td>125</td>
+<td>0x7d</td>
+<td>lushr</td>
+<td></td>
+</tr>
+<tr>
+<td>126</td>
+<td>0x7e</td>
+<td>iand</td>
+<td></td>
+</tr>
+<tr>
+<td>127</td>
+<td>0x7f</td>
+<td>land</td>
+<td></td>
+</tr>
+<tr>
+<td>128</td>
+<td>0x80</td>
+<td>ior</td>
+<td></td>
+</tr>
+<tr>
+<td>129</td>
+<td>0x81</td>
+<td>lor</td>
+<td></td>
+</tr>
+<tr>
+<td>130</td>
+<td>0x82</td>
+<td>ixor</td>
+<td></td>
+</tr>
+<tr>
+<td>131</td>
+<td>0x83</td>
+<td>lxor</td>
+<td></td>
+</tr>
+<tr>
+<td>132</td>
+<td>0x84</td>
+<td>iinc</td>
+<td></td>
+</tr>
+<tr>
+<td>133</td>
+<td>0x85</td>
+<td>i2l</td>
+<td></td>
+</tr>
+<tr>
+<td>134</td>
+<td>0x86</td>
+<td>i2f</td>
+<td></td>
+</tr>
+<tr>
+<td>135</td>
+<td>0x87</td>
+<td>i2d</td>
+<td></td>
+</tr>
+<tr>
+<td>136</td>
+<td>0x88</td>
+<td>l2i</td>
+<td></td>
+</tr>
+<tr>
+<td>137</td>
+<td>0x89</td>
+<td>l2f</td>
+<td></td>
+</tr>
+<tr>
+<td>138</td>
+<td>0x8a</td>
+<td>l2d</td>
+<td></td>
+</tr>
+<tr>
+<td>139</td>
+<td>0x8b</td>
+<td>f2i</td>
+<td></td>
+</tr>
+<tr>
+<td>140</td>
+<td>0x8c</td>
+<td>f2l</td>
+<td></td>
+</tr>
+<tr>
+<td>141</td>
+<td>0x8d</td>
+<td>f2d</td>
+<td></td>
+</tr>
+<tr>
+<td>142</td>
+<td>0x8e</td>
+<td>d2i</td>
+<td></td>
+</tr>
+<tr>
+<td>143</td>
+<td>0x8f</td>
+<td>d2l</td>
+<td></td>
+</tr>
+<tr>
+<td>144</td>
+<td>0x90</td>
+<td>d2f</td>
+<td></td>
+</tr>
+<tr>
+<td>145</td>
+<td>0x91</td>
+<td>i2b</td>
+<td></td>
+</tr>
+<tr>
+<td>146</td>
+<td>0x92</td>
+<td>i2c</td>
+<td></td>
+</tr>
+<tr>
+<td>147</td>
+<td>0x93</td>
+<td>i2s</td>
+<td></td>
+</tr>
+<tr>
+<td>148</td>
+<td>0x94</td>
+<td>lcmp</td>
+<td></td>
+</tr>
+<tr>
+<td>149</td>
+<td>0x95</td>
+<td>fcmpl</td>
+<td></td>
+</tr>
+<tr>
+<td>150</td>
+<td>0x96</td>
+<td>fcmpg</td>
+<td></td>
+</tr>
+<tr>
+<td>151</td>
+<td>0x97</td>
+<td>dcmpl</td>
+<td></td>
+</tr>
+<tr>
+<td>152</td>
+<td>0x98</td>
+<td>dcmpg</td>
+<td></td>
+</tr>
+<tr>
+<td>153</td>
+<td>0x99</td>
+<td>ifeq</td>
+<td></td>
+</tr>
+<tr>
+<td>154</td>
+<td>0x9a</td>
+<td>ifne</td>
+<td></td>
+</tr>
+<tr>
+<td>155</td>
+<td>0x9b</td>
+<td>iflt</td>
+<td></td>
+</tr>
+<tr>
+<td>156</td>
+<td>0x9c</td>
+<td>ifge</td>
+<td></td>
+</tr>
+<tr>
+<td>157</td>
+<td>0x9d</td>
+<td>ifgt</td>
+<td></td>
+</tr>
+<tr>
+<td>158</td>
+<td>0x9e</td>
+<td>ifle</td>
+<td></td>
+</tr>
+<tr>
+<td>159</td>
+<td>0x9f</td>
+<td>if_icmpeq</td>
+<td></td>
+</tr>
+<tr>
+<td>160</td>
+<td>0xa0</td>
+<td>if_icmpne</td>
+<td></td>
+</tr>
+<tr>
+<td>161</td>
+<td>0xa1</td>
+<td>if_icmplt</td>
+<td></td>
+</tr>
+<tr>
+<td>162</td>
+<td>0xa2</td>
+<td>if_icmpge</td>
+<td></td>
+</tr>
+<tr>
+<td>163</td>
+<td>0xa3</td>
+<td>if_icmpgt</td>
+<td></td>
+</tr>
+<tr>
+<td>164</td>
+<td>0xa4</td>
+<td>if_icmple</td>
+<td></td>
+</tr>
+<tr>
+<td>165</td>
+<td>0xa5</td>
+<td>if_acmpeq</td>
+<td></td>
+</tr>
+<tr>
+<td>166</td>
+<td>0xa6</td>
+<td>if_acmpne</td>
+<td></td>
+</tr>
+<tr>
+<td>167</td>
+<td>0xa7</td>
+<td>goto</td>
+<td></td>
+</tr>
+<tr>
+<td>168</td>
+<td>0xa8</td>
+<td>jsr</td>
+<td></td>
+</tr>
+<tr>
+<td>169</td>
+<td>0xa9</td>
+<td>ret</td>
+<td></td>
+</tr>
+<tr>
+<td>170</td>
+<td>0xaa</td>
+<td>tableswitch</td>
+<td></td>
+</tr>
+<tr>
+<td>171</td>
+<td>0xab</td>
+<td>lookupswitch</td>
+<td></td>
+</tr>
+<tr>
+<td>172</td>
+<td>0xac</td>
+<td>ireturn</td>
+<td></td>
+</tr>
+<tr>
+<td>173</td>
+<td>0xad</td>
+<td>lreturn</td>
+<td></td>
+</tr>
+<tr>
+<td>174</td>
+<td>0xae</td>
+<td>freturn</td>
+<td></td>
+</tr>
+<tr>
+<td>175</td>
+<td>0xaf</td>
+<td>dreturn</td>
+<td></td>
+</tr>
+<tr>
+<td>176</td>
+<td>0xb0</td>
+<td>areturn</td>
+<td></td>
+</tr>
+<tr>
+<td>177</td>
+<td>0xb1</td>
+<td>return</td>
+<td></td>
+</tr>
+<tr>
+<td>178</td>
+<td>0xb2</td>
+<td>getstatic</td>
+<td></td>
+</tr>
+<tr>
+<td>179</td>
+<td>0xb3</td>
+<td>putstatic</td>
+<td></td>
+</tr>
+<tr>
+<td>180</td>
+<td>0xb4</td>
+<td>getfield</td>
+<td></td>
+</tr>
+<tr>
+<td>181</td>
+<td>0xb5</td>
+<td>putfield</td>
+<td></td>
+</tr>
+<tr>
+<td>182</td>
+<td>0xb6</td>
+<td>invokevirtual</td>
+<td></td>
+</tr>
+<tr>
+<td>183</td>
+<td>0xb7</td>
+<td>invokespecial</td>
+<td></td>
+</tr>
+<tr>
+<td>184</td>
+<td>0xb8</td>
+<td>invokestatic</td>
+<td></td>
+</tr>
+<tr>
+<td>185</td>
+<td>0xb9</td>
+<td>invokeinte***ce</td>
+<td></td>
+</tr>
+<tr>
+<td>187</td>
+<td>0xbb</td>
+<td>new</td>
+<td></td>
+</tr>
+<tr>
+<td>188</td>
+<td>0xbc</td>
+<td>newarray</td>
+<td></td>
+</tr>
+<tr>
+<td>189</td>
+<td>0xbd</td>
+<td>anewarray</td>
+<td></td>
+</tr>
+<tr>
+<td>190</td>
+<td>0xbe</td>
+<td>arraylength</td>
+<td></td>
+</tr>
+<tr>
+<td>191</td>
+<td>0xbf</td>
+<td>athrow</td>
+<td></td>
+</tr>
+<tr>
+<td>192</td>
+<td>0xc0</td>
+<td>checkcast</td>
+<td></td>
+</tr>
+<tr>
+<td>193</td>
+<td>0xc1</td>
+<td>instanceof</td>
+<td></td>
+</tr>
+<tr>
+<td>194</td>
+<td>0xc2</td>
+<td>monitorenter</td>
+<td></td>
+</tr>
+<tr>
+<td>195</td>
+<td>0xc3</td>
+<td>monitorexit</td>
+<td></td>
+</tr>
+<tr>
+<td>196</td>
+<td>0xc4</td>
+<td>wide</td>
+<td></td>
+</tr>
+<tr>
+<td>197</td>
+<td>0xc5</td>
+<td>multianewarray</td>
+<td></td>
+</tr>
+<tr>
+<td>198</td>
+<td>0xc6</td>
+<td>ifnull</td>
+<td></td>
+</tr>
+<tr>
+<td>199</td>
+<td>0xc7</td>
+<td>ifnonnull</td>
+<td></td>
+</tr>
+<tr>
+<td>200</td>
+<td>0xc8</td>
+<td>goto_w</td>
+<td></td>
+</tr>
+<tr>
+<td>201</td>
+<td>0xc9</td>
+<td>jsr_w</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="JVM快速操作码"><a href="#JVM快速操作码" class="headerlink" title="JVM快速操作码"></a>JVM快速操作码</h2><table>
+<thead>
+<tr>
+<th>203</th>
+<th>0xcb</th>
+<th>ldc_quick</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>204</td>
+<td>0xcc</td>
+<td>ldc_w_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>205</td>
+<td>0xcd</td>
+<td>ldc2_w_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>206</td>
+<td>0xce</td>
+<td>getfield_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>207</td>
+<td>0xcf</td>
+<td>putfield_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>208</td>
+<td>0xd0</td>
+<td>getfield2_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>209</td>
+<td>0xd1</td>
+<td>putfield2_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>210</td>
+<td>0xd2</td>
+<td>getstatic_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>211</td>
+<td>0xd3</td>
+<td>putstatic_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>212</td>
+<td>0xd4</td>
+<td>getstatic2_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>213</td>
+<td>0xd5</td>
+<td>putstatic2_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>214</td>
+<td>0xd6</td>
+<td>invokevirtual_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>215</td>
+<td>0xd7</td>
+<td>invokenonvirtual_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>216</td>
+<td>0xd8</td>
+<td>invokesuper_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>217</td>
+<td>0xd9</td>
+<td>invokestatic_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>218</td>
+<td>0xda</td>
+<td>invokeinte***ce_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>219</td>
+<td>0xdb</td>
+<td>invokevirtualobject_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>221</td>
+<td>0xdd</td>
+<td>new_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>222</td>
+<td>0xde</td>
+<td>anewarray_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>223</td>
+<td>0xdf</td>
+<td>multianewarray_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>224</td>
+<td>0xe0</td>
+<td>checkcast_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>225</td>
+<td>0xe1</td>
+<td>instanceof_quick</td>
+<td></td>
+</tr>
+<tr>
+<td>226</td>
+<td>0xe2</td>
+<td>invokevirtual_quick_w</td>
+<td></td>
+</tr>
+<tr>
+<td>227</td>
+<td>0xe3</td>
+<td>getfield_quick_w</td>
+<td></td>
+</tr>
+<tr>
+<td>228</td>
+<td>0xe4</td>
+<td>putfield_quick_w</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>(完)</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/" class="category-chain-item">学习</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E5%AD%A6%E4%B9%A0/JVM/" class="category-chain-item">JVM</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/JVM/" class="print-no-link">#JVM</a>
+      
+        <a href="/blog/tags/Java/" class="print-no-link">#Java</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>JVM指令集</div>
+      <div>https://maojun.xyz/blog/2018/02/JVM指令集.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2018年2月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2018/10/%E5%8C%97%E4%BA%AC%E9%98%B3%E5%8F%B0%E5%B1%B1%E6%B8%B8%E8%AE%B0.html" title="北京阳台山游记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">北京阳台山游记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2017/11/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E4%B8%8B%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98.html" title="并发编程下存在的问题">
+                        <span class="hidden-mobile">并发编程下存在的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
