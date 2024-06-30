@@ -1,0 +1,10 @@
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1500px;
+}
+
+
+.post-content, post-custom {
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+}
