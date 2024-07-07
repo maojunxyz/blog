@@ -6,7 +6,7 @@
   <link href="https://maojun.xyz/blog/atom.xml" rel="self"/>
   
   <link href="https://maojun.xyz/blog/"/>
-  <updated>2024-07-06T12:04:09.000Z</updated>
+  <updated>2024-07-07T17:53:05.000Z</updated>
   <id>https://maojun.xyz/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shell中的错误重定向和标准重定向</title>
+    <link href="https://maojun.xyz/blog/2024/07/Shell%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E6%A0%87%E5%87%86%E9%87%8D%E5%AE%9A%E5%90%91.html"/>
+    <id>https://maojun.xyz/blog/2024/07/Shell%E4%B8%AD%E7%9A%84%E9%94%99%E8%AF%AF%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E6%A0%87%E5%87%86%E9%87%8D%E5%AE%9A%E5%90%91.html</id>
+    <published>2024-07-07T17:53:00.000Z</published>
+    <updated>2024-07-07T17:53:05.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;错误重定向和标准重定向&quot;&gt;&lt;a href=&quot;#错误重定向和标准重定向&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="Bash" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/Bash/"/>
+    
+    
+    <category term="Bash" scheme="https://maojun.xyz/blog/tags/Bash/"/>
+    
+  </entry>
   
   <entry>
     <title>离线编译并安装 Python 3.7</title>
@@ -613,39 +640,6 @@
 &lt;ul&gt;
 &lt;li&gt;[ˈherɪtɪdʒ]  [ˈhɛrɪtɪdʒ] &lt;/li&gt;
 &lt;li&gt;n.[“遗产”,”继承物”,”传统”,”文化遗产”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
-    
-    
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coca 20000 英语词汇(18)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part018_3401-3600.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part018_3401-3600.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;3401 indication &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˌɪndɪˈkeɪʃn]  [ˌɪndɪˈkeʃən] &lt;/li&gt;
-&lt;li&gt;n.[“指示”,”象征”,”表明”,”标示”]   &lt;/li&gt;
 &lt;li&gt;&lt;a</summary>
         
       
