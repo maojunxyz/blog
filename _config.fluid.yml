@@ -727,7 +727,7 @@ about:
   banner_img: /assets/about.jpg
   banner_img_height: 40
   banner_mask_alpha: 0.3
-  avatar: /assets/unname.png
+  avatar: /assets/unname.jpg
   name: "毛俊"
   intro: "Knowledge is power."
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
