@@ -1,0 +1,1889 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/blog/assets/favicon.ico">
+  <link rel="icon" href="/blog/assets/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="毛 俊">
+  <meta name="keywords" content="博客,技术,生活,Java,架构,研发,测试,Python,前端,数据库,运维,设计">
+  
+    <meta name="description" content="2401 interpretation   [ɪnˌtɜ:prɪˈteɪʃn]  [ɪnˌtɜ:rprɪˈteɪʃn]  n.[“解释，说明”,”翻译”,”表演，演绎”,”理解”]    人人词典 柯林斯 朗文  2402 breakfast   [ˈbrekfəst]  [ˈbrekfəst]  n.[“早餐，早饭”,”早餐食物”]  vi.[“吃早餐”]  vt.[“供给…早餐”]    人人">
+  
+  
+  
+  <title>Coca 20000 英语词汇(13) - 毛俊的博客</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/blog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/blog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/blog/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/blog/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maojun.xyz","root":"/blog/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"¶"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":3},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-EEHN1VS01B"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/blog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/blog/js/utils.js" ></script>
+  <script  src="/blog/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-EEHN1VS01B", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-EEHN1VS01B');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/blog/atom.xml" title="毛俊的博客" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/blog/">
+      <strong>毛俊的博客</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/blog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/blog/assets/banner.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Coca 20000 英语词汇(13)"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2017-09-22 22:22" pubdate>
+          2017年9月22日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          68 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Coca 20000 英语词汇(13)</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>2401 interpretation </p>
+<ul>
+<li>[ɪnˌtɜ:prɪˈteɪʃn]  [ɪnˌtɜ:rprɪˈteɪʃn] </li>
+<li>n.[“解释，说明”,”翻译”,”表演，演绎”,”理解”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=interpretation">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/interpretation">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/interpretation">朗文</a></li>
+</ul>
+<p>2402 breakfast </p>
+<ul>
+<li>[ˈbrekfəst]  [ˈbrekfəst] </li>
+<li>n.[“早餐，早饭”,”早餐食物”]  vi.[“吃早餐”]  vt.[“供给…早餐”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=breakfast">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/breakfast">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/breakfast">朗文</a></li>
+</ul>
+<p>2403 stop </p>
+<ul>
+<li>[stɒp]  [stɑ:p] </li>
+<li>vi.[“停止”,”中断”,”逗留”,”（使）停止工作”]  vt.[“塞住”,”堵塞”,”阻挠”,”止付”]  n.[“停止”,”（管风琴的）音栓”,”停车站”,”（管风琴的）音管”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=stop">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/stop">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/stop">朗文</a></li>
+</ul>
+<p>2404 strongly </p>
+<ul>
+<li>[strɒŋlɪ]  [ˈstrɔŋlɪ] </li>
+<li>adv.[“强烈地”,”坚强地”,”坚固地”,”强有力地”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=strongly">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/strongly">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/strongly">朗文</a></li>
+</ul>
+<p>2405 engineering </p>
+<ul>
+<li>[ˌendʒɪˈnɪərɪŋ]  [ˌendʒɪˈnɪrɪŋ] </li>
+<li>n.[“工程（学）， 工程师行业”,”操纵，管理”,”土木工程，工事”,”开车技术”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=engineering">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/engineering">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/engineering">朗文</a></li>
+</ul>
+<p>2406 luck </p>
+<ul>
+<li>[lʌk]  [lʌk] </li>
+<li>n.[“运气”,”好运”,”机遇”,”命运”]  vi.[“交好运，走运”,”侥幸成功”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=luck">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/luck">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/luck">朗文</a></li>
+</ul>
+<p>2407 so-called </p>
+<ul>
+<li>[səʊ kɔ:ld]  [ˈsoˈkɔld] </li>
+<li>adj.[“所谓的，号称的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=so-called">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/so-called">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/so-called">朗文</a></li>
+</ul>
+<p>2408 constant </p>
+<ul>
+<li>[ˈkɒnstənt]  [ˈkɑ:nstənt] </li>
+<li>adj.[“不断的，持续的”,”永恒的，始终如一的”,”坚定”,”忠实的”]  n.[“[数]常数，常量”,”不变的事物”,”永恒值”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=constant">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/constant">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/constant">朗文</a></li>
+</ul>
+<p>2409 race </p>
+<ul>
+<li>[reɪs]  [res] </li>
+<li>n.[“赛跑”,”竞争”,”人种”,”民族”]  v.[“参加比赛”,”使比赛”,”快速移动”,”剧烈跳动”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=race">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/race">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/race">朗文</a></li>
+</ul>
+<p>2410 clinic </p>
+<ul>
+<li>[ˈklɪnɪk]  [ˈklɪnɪk] </li>
+<li>n.[“诊所，门诊部”,”特殊病例分析”,”临床讲授”,”临床实习课”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=clinic">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/clinic">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/clinic">朗文</a></li>
+</ul>
+<p>2411 veteran </p>
+<ul>
+<li>[ˈvetərən]  [ˈvɛtərən] </li>
+<li>n.[“经验丰富的人，老兵”,”退伍军人”]  adj.[“有作战经验的”,”老兵的”,”[美国英语]退伍军人的”,”老练的，资深的，经验丰富的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=veteran">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/veteran">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/veteran">朗文</a></li>
+</ul>
+<p>2412 smell </p>
+<ul>
+<li>[smel]  [smɛl] </li>
+<li>n.[“嗅觉”,”气味”,”臭味”,”发出臭气的人[东西]”]  vt.&amp; vi.&amp; link-v.[“嗅，闻”,”闻出，发觉，查出”,”发出…的气味”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=smell">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/smell">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/smell">朗文</a></li>
+</ul>
+<p>2413 tablespoon </p>
+<ul>
+<li>[ˈteɪblspu:n]  [ˈtebəlˌspun] </li>
+<li>n.[“大汤匙，大调羹”,”一大汤匙的量”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=tablespoon">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/tablespoon">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/tablespoon">朗文</a></li>
+</ul>
+<p>2414 capable </p>
+<ul>
+<li>[ˈkeɪpəbl]  [ˈkepəbəl] </li>
+<li>adj.[“能干的”,”有才能的”,”有才华的”,”能胜任的”]  n.[“有才能的，能干的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=capable">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/capable">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/capable">朗文</a></li>
+</ul>
+<p>2415 nervous </p>
+<ul>
+<li>[ˈnɜ:vəs]  [ˈnɜ:rvəs] </li>
+<li>adj.[“焦虑的”,”紧张不安的”,”神经质的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=nervous">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/nervous">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/nervous">朗文</a></li>
+</ul>
+<p>2416 tourist </p>
+<ul>
+<li>[ˈtʊərɪst]  [ˈtʊrɪst] </li>
+<li>n.[“旅行者，观光客”,”〈美〉冬季到南部做工的流动工人”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=tourist">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/tourist">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/tourist">朗文</a></li>
+</ul>
+<p>2417 light </p>
+<ul>
+<li>[laɪt]  [laɪt] </li>
+<li>n.[“光”,”发光体”,”电灯”,”点火器”]  adj.[“轻的”,”明亮的”,”浅色的”,”少量的”]  v.[“点燃”,”照亮”,”用光指引”]  adv.[“轻地，轻装地”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=light">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/light">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/light">朗文</a></li>
+</ul>
+<p>2418 toss </p>
+<ul>
+<li>[tɒs]  [tɔ:s] </li>
+<li>vt.&amp; vi.[“（轻轻或漫不经心地）扔”,”（使）摇荡”,”摇匀”,”（为…）掷硬币决定”]  n.[“掷硬币决定”,”向上甩头”,”猛仰头（尤指表示恼怒或不耐烦）”,”（尤指比赛或游戏中）投掷”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=toss">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/toss">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/toss">朗文</a></li>
+</ul>
+<p>2419 crucial </p>
+<ul>
+<li>[ˈkru:ʃl]  [ˈkruʃəl] </li>
+<li>adj.[“关键性的，极其显要的”,”决定性的”,”十字形的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=crucial">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/crucial">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/crucial">朗文</a></li>
+</ul>
+<p>2420 bury </p>
+<ul>
+<li>[ˈberi]  [ˈbɛri] </li>
+<li>vt.[“埋葬，葬”,”为…举行葬礼”,”隐藏，埋藏，遮盖，掩蔽”,”专心致志于，埋头于，沉溺于”]  n.[“布里”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=bury">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/bury">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/bury">朗文</a></li>
+</ul>
+<p>2421 pray </p>
+<ul>
+<li>[preɪ]  [pre] </li>
+<li>vt.[“祈祷，祷告”,”请求，恳求”,”央求”]  vi.[“祈祷”,”请”,”恳求”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pray">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pray">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pray">朗文</a></li>
+</ul>
+<p>2422 tomato </p>
+<ul>
+<li>[təˈmɑ:təʊ]  [təˈmeɪtoʊ] </li>
+<li>n.[“番茄，西红柿”,”[俚语] 美女”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=tomato">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/tomato">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/tomato">朗文</a></li>
+</ul>
+<p>2423 exception </p>
+<ul>
+<li>[ɪkˈsepʃn]  [ɪkˈsɛpʃən] </li>
+<li>n.[“例外，除外”,”反对，批评”,”[法律]异议，反对”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=exception">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/exception">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/exception">朗文</a></li>
+</ul>
+<p>2424 butter </p>
+<ul>
+<li>[ˈbʌtə(r)]  [ˈbʌtɚ] </li>
+<li>n.[“黄油”,”黄油状的食品”,”奉承话”,”焊膏”]  vt.[“抹黄油于…上”,”用黄油煎食物”,”讨好”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=butter">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/butter">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/butter">朗文</a></li>
+</ul>
+<p>2425 deficit </p>
+<ul>
+<li>[ˈdefɪsɪt]  [ˈdɛfɪsɪt] </li>
+<li>n.[“不足额”,”赤字”,”亏空”,”亏损”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=deficit">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/deficit">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/deficit">朗文</a></li>
+</ul>
+<p>2426 bathroom </p>
+<ul>
+<li>[ˈbɑ:θru:m]  [ˈbæθru:m] </li>
+<li>n.[“浴室”,”盥洗室”,”（带抽水马桶的）厕所”,”卫生间”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=bathroom">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/bathroom">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/bathroom">朗文</a></li>
+</ul>
+<p>2427 objective </p>
+<ul>
+<li>[əbˈdʒektɪv]  [əbˈdʒɛktɪv] </li>
+<li>adj.[“客观的，实体的”,”目标的”,”[语]宾格的”,”[医]他觉的”]  n.[“目标，任务”,”[光]物镜”,”[语]宾语，宾格”,”[事]出击目标”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=objective">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/objective">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/objective">朗文</a></li>
+</ul>
+<p>2428 block </p>
+<ul>
+<li>[blɒk]  [blɑ:k] </li>
+<li>n.[“块”,”街区”,”&lt;英&gt;大楼，大厦”,”障碍物，阻碍”]  vt.[“阻止”,”阻塞”,”限制”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=block">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/block">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/block">朗文</a></li>
+</ul>
+<p>2429 electronic </p>
+<ul>
+<li>[ɪˌlekˈtrɒnɪk]  [ɪˌlekˈtrɑ:nɪk] </li>
+<li>adj.[“电子的”,”电子操纵的”,”用电子设备生产的”,”用电子设备完成的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=electronic">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/electronic">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/electronic">朗文</a></li>
+</ul>
+<p>2430 ally </p>
+<ul>
+<li>[ˈælaɪ]  [‘ælaɪ] </li>
+<li>n.[“同盟国，同盟者”,”助手，支持者”,”协约国”,”联盟”]  vt.&amp;vi.[“（使）联盟，（使）同盟”,”（使）结盟，（使）联姻”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=ally">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/ally">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/ally">朗文</a></li>
+</ul>
+<p>2431 journey </p>
+<ul>
+<li>[ˈdʒɜ:ni]  [ˈdʒɜ:rni] </li>
+<li>n.[“旅行，旅程行期”,”历程，过程”]  vi.[“旅行，出游”]  vt.[“在…旅行或旅行到过…”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=journey">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/journey">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/journey">朗文</a></li>
+</ul>
+<p>2432 reputation </p>
+<ul>
+<li>[ˌrepjuˈteɪʃn]  [ˌrɛpjəˈteʃən] </li>
+<li>n.[“名气，名声”,”好名声”,”信誉，声望”,”荣誉，名望”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=reputation">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/reputation">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/reputation">朗文</a></li>
+</ul>
+<p>2433 mixture </p>
+<ul>
+<li>[ˈmɪkstʃə(r)]  [ˈmɪkstʃɚ] </li>
+<li>n.[“混合，混杂”,”混杂的事物[人群]”,”混合（状态）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=mixture">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/mixture">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/mixture">朗文</a></li>
+</ul>
+<p>2434 surely </p>
+<ul>
+<li>[ˈʃʊəli]  [ˈʃʊrli] </li>
+<li>adv.[“无疑”,”一定，确实”,”（回答）当然，好”,”保管”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=surely">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/surely">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/surely">朗文</a></li>
+</ul>
+<p>2435 tower </p>
+<ul>
+<li>[ˈtaʊə(r)]  [ˈtaʊɚ] </li>
+<li>n.[“塔，楼塔”,”要害地”,”〈罕〉（负伤鸟的）笔直向上飞”,”〈美〉铁路信号所”]  vi.[“远远高于，远远超过”,”高耸，超越”]  na.[““Towers“的变体”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=tower">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/tower">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/tower">朗文</a></li>
+</ul>
+<p>2436 smoke </p>
+<ul>
+<li>[sməʊk]  [smoʊk] </li>
+<li>n.[“烟”,”吸烟”]  vi.[“冒烟”,”抽烟”,”快速”]  vt.[“用烟熏制”,”吸（烟），抽”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=smoke">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/smoke">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/smoke">朗文</a></li>
+</ul>
+<p>2437 confront </p>
+<ul>
+<li>[kənˈfrʌnt]  [kənˈfrʌnt] </li>
+<li>vt.[“面对”,”使面对面，使对质”,”碰到，遇到”,”比较”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=confront">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/confront">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/confront">朗文</a></li>
+</ul>
+<p>2438 pure </p>
+<ul>
+<li>[pjʊə(r)]  [pjʊr] </li>
+<li>adj.[“纯的”,”单纯的”,”纯真的”,”干净的”]  prep.[“清晰的，纯正的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pure">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pure">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pure">朗文</a></li>
+</ul>
+<p>2439 glance </p>
+<ul>
+<li>[glɑ:ns]  [glæns] </li>
+<li>vi.[“一瞥”,”闪微光”,”掠过，擦过”,”随便提到，简略地触及”]  n.[“浏览”,”闪光”,”歪斜，一掠”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=glance">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/glance">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/glance">朗文</a></li>
+</ul>
+<p>2440 dimension </p>
+<ul>
+<li>[daɪˈmenʃn]  [dɪˈmɛnʃən, daɪ-] </li>
+<li>n.[“尺寸”,”[复]面积，范围”,”[物]量纲”,”[数]次元，度，维”]  adj.[“（石料，木材）切成特定尺寸的”]  vt.[“把…刨成（或削成）所需尺寸”,”标出尺寸”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=dimension">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/dimension">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/dimension">朗文</a></li>
+</ul>
+<p>2441 toy </p>
+<ul>
+<li>[tɔɪ]  [tɔɪ] </li>
+<li>n.[“玩具，玩物”,”小装饰品”,”无实用价值的东西”]  vi.[“玩弄”,”不认真地考虑”]  adj.[“玩具的”,”作玩具的”,”个头很小的”,”小体型品种的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=toy">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/toy">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/toy">朗文</a></li>
+</ul>
+<p>2442 prisoner </p>
+<ul>
+<li>[ˈprɪznə(r)]  [ˈprɪzənɚ, ˈprɪznɚ] </li>
+<li>n.[“囚犯”,”犯人”,”俘虏”,”刑事被告”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=prisoner">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/prisoner">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/prisoner">朗文</a></li>
+</ul>
+<p>2443 fellow </p>
+<ul>
+<li>[ˈfeləʊ]  [ˈfeloʊ] </li>
+<li>n.[“同伴”,”男子”,”（大学的）研究员”,”（某些学院或大学的）董事”]  adj.[“同伴的”,”同事的”,”同类的”,”同情况的”]  vt.[“使…与另一个对等”,”使…与另一个匹敌”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=fellow">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/fellow">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/fellow">朗文</a></li>
+</ul>
+<p>2444 smooth </p>
+<ul>
+<li>[smu:ð]  [smuð] </li>
+<li>adj.[“光滑的”,”流畅的”,”柔软的”,”温和的，安详的”]  vt.[“使平滑”,”排除，消除”,”安抚，平息”,”使优雅”]  vi.[“变平和，变缓和”]  n.[“平地，平面”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=smooth">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/smooth">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/smooth">朗文</a></li>
+</ul>
+<p>2445 nearby </p>
+<ul>
+<li>[ˌnɪəˈbaɪ]  [ˌnɪrˈbaɪ] </li>
+<li>adj.[“在附近的，位于附近的”]  adv.[“附近地，不远地”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=nearby">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/nearby">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/nearby">朗文</a></li>
+</ul>
+<p>2446 peer </p>
+<ul>
+<li>[pɪə(r)]  [pɪr] </li>
+<li>vi.[“凝视”,”盯着看”,”隐退，若隐若现”,”同等，比得上”]  n.[“同辈，同等的人”,”贵族”,”同伴，伙伴”]  adj.[“贵族的”,”（年龄、地位等）同等的”,”相匹敌的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=peer">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/peer">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/peer">朗文</a></li>
+</ul>
+<p>2447 designer </p>
+<ul>
+<li>[dɪˈzaɪnə(r)]  [dɪˈzaɪnə] </li>
+<li>n.[“设计师”,”设计者”,”构思者”]  adj.[“由专门设计师设计的”,”标有设计师名字的”,”时尚的”,”时髦的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=designer">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/designer">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/designer">朗文</a></li>
+</ul>
+<p>2448 personnel </p>
+<ul>
+<li>[ˌpɜ:səˈnel]  [ˌpɜ:rsəˈnel] </li>
+<li>n.[“全体员工”,”（与复数动词连用）人员，员工”,”人事部门”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=personnel">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/personnel">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/personnel">朗文</a></li>
+</ul>
+<p>2449 shape </p>
+<ul>
+<li>[ʃeɪp]  [ʃep] </li>
+<li>n.[“形状”,”模型”,”状态”,”身材”]  vt.[“塑造”,”使符合”,”体现”]  vi.[“使成形”,”形成”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=shape">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/shape">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/shape">朗文</a></li>
+</ul>
+<p>2450 educator </p>
+<ul>
+<li>[ˈedʒukeɪtə(r)]  [ˈɛdʒəˌketɚ] </li>
+<li>n.[“（尤指作为一种职业的）教育工作者，教员，教师”,”教育学家，教育家”,”教学管理者”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=educator">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/educator">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/educator">朗文</a></li>
+</ul>
+<p>2451 relative </p>
+<ul>
+<li>[ˈrelətɪv]  [ˈrɛlətɪv] </li>
+<li>adj.[“相关的”,”相对的”,”相互有关的”,”比较而言的”]  n.[“亲属，亲戚”,”相关物”,”亲缘植物（或动物）”,”[语法学]关系词”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=relative">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/relative">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/relative">朗文</a></li>
+</ul>
+<p>2452 immigration </p>
+<ul>
+<li>[ˌɪmɪˈgreɪʃn]  [ˌɪmɪˈɡreɪʃn] </li>
+<li>n.[“移居”,”移民人数”,”移民局检查站”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=immigration">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/immigration">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/immigration">朗文</a></li>
+</ul>
+<p>2453 belt </p>
+<ul>
+<li>[belt]  [bɛlt] </li>
+<li>n.[“腰带”,”区域”,”传送带”,”带状物”]  vt.[“环绕，包围”,”用带做记号”,”用力打”,”绕着系上带子”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=belt">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/belt">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/belt">朗文</a></li>
+</ul>
+<p>2454 teaspoon </p>
+<ul>
+<li>[ˈti:spu:n]  [ˈtiˌspun] </li>
+<li>n.[“茶匙”,”一茶匙的量”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=teaspoon">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/teaspoon">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/teaspoon">朗文</a></li>
+</ul>
+<p>2455 birthday </p>
+<ul>
+<li>[ˈbɜ:θdeɪ]  [ˈbɜ:rθdeɪ] </li>
+<li>n.[“生日”,”诞辰”,”成立纪念日”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=birthday">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/birthday">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/birthday">朗文</a></li>
+</ul>
+<p>2456 implication </p>
+<ul>
+<li>[ˌɪmplɪˈkeɪʃn]  [ˌɪmplɪˈkeʃən] </li>
+<li>n.[“含义”,”含蓄，含意，言外之意”,”卷入，牵连，牵涉，纠缠”,”[逻辑学]蕴涵，蕴含”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=implication">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/implication">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/implication">朗文</a></li>
+</ul>
+<p>2457 perfectly </p>
+<ul>
+<li>[ˈpɜ:fɪktli]  [ˈpɜ:rfɪktli] </li>
+<li>adv.[“完美地”,”理想地”,”完全地”,”无瑕疵地”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=perfectly">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/perfectly">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/perfectly">朗文</a></li>
+</ul>
+<p>2458 coast </p>
+<ul>
+<li>[kəʊst]  [koʊst] </li>
+<li>n.[“海岸”,”滑坡”]  vi.[“（汽车或自行车）（尤指不用动力向山坡下）滑行”,”（做事）不出力”,”不费力地取得成功”,”（不用多少动力）快速平稳地移动”]  vt.[“沿海岸航行”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=coast">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/coast">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/coast">朗文</a></li>
+</ul>
+<p>2459 supporter </p>
+<ul>
+<li>[səˈpɔ:tə(r)]  [səˈpɔ:rtə(r)] </li>
+<li>n.[“支持者，拥护者”,”支持物”,”赡养者，抚养者”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=supporter">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/supporter">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/supporter">朗文</a></li>
+</ul>
+<p>2460 accompany </p>
+<ul>
+<li>[əˈkʌmpəni]  [əˈkʌmpəni, əˈkʌmpni] </li>
+<li>vt.[“陪伴，陪同”,”附加，补充”,”与…共存”,”为…伴奏”]  vi.[“伴奏”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=accompany">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/accompany">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/accompany">朗文</a></li>
+</ul>
+<p>2461 silver </p>
+<ul>
+<li>[ˈsɪlvə(r)]  [ˈsɪlvɚ] </li>
+<li>n.[“银”,”银币”,”银制品”,”银色”]  adj.[“银制的”,”像银的”,”银色的”,”银白色的”]  vt.[“（在某物上）镀银”,”使具有银色光泽，使变成银色”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=silver">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/silver">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/silver">朗文</a></li>
+</ul>
+<p>2462 teenager </p>
+<ul>
+<li>[ˈti:neɪdʒə(r)]  [ˈtinˌedʒɚ] </li>
+<li>n.[“十几岁的青少年”,”十三岁到十九岁的少年”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=teenager">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/teenager">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/teenager">朗文</a></li>
+</ul>
+<p>2463 recognition </p>
+<ul>
+<li>[ˌrekəgˈnɪʃn]  [ˌrɛkəɡˈnɪʃən] </li>
+<li>n.[“认识，识别”,”承认，认可”,”褒奖”,”酬劳”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=recognition">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/recognition">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/recognition">朗文</a></li>
+</ul>
+<p>2464 retirement </p>
+<ul>
+<li>[rɪˈtaɪəmənt]  [rɪˈtaɪərmənt] </li>
+<li>n.[“退休，退职”,”引退，隐居”,”退隐处”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=retirement">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/retirement">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/retirement">朗文</a></li>
+</ul>
+<p>2465 flag </p>
+<ul>
+<li>[flæg]  [flæɡ] </li>
+<li>n.[“旗”,”旗帜”,”信号旗”,”菖蒲”]  vt.[“标示”]  vi.[“疲乏，变弱，热情衰减”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=flag">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/flag">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/flag">朗文</a></li>
+</ul>
+<p>2466 recovery </p>
+<ul>
+<li>[rɪˈkʌvəri]  [rɪˈkʌvəri] </li>
+<li>n.[“恢复，复原”,”重获”,”痊愈”,”矫正”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=recovery">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/recovery">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/recovery">朗文</a></li>
+</ul>
+<p>2467 whisper </p>
+<ul>
+<li>[ˈwɪspə(r)]  [ˈhwɪspɚ,ˈwɪs-] </li>
+<li>vt.[“低声说”,”私语”,”密谈，密谋坏事”,”私下说”]  vi.[“沙沙地响”,”耳语”,”密谈”]  n.[“低语，耳语”,”飒飒声”,”[医]嗫音”,”传闻”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=whisper">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/whisper">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/whisper">朗文</a></li>
+</ul>
+<p>2468 watch </p>
+<ul>
+<li>[wɒtʃ]  [wɑ:tʃ] </li>
+<li>vt.[“注视，注意”,”看守，监视”,”守候（机会等）”,”密切注意”]  n.[“表”,”值夜，值班”,”看守，监视”,”值班人员”]  vi.[“观看”,”注视”,”守候”,”看守”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=watch">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/watch">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/watch">朗文</a></li>
+</ul>
+<p>2469 gentleman </p>
+<ul>
+<li>[ˈdʒentlmən]  [ˈdʒɛntlmən] </li>
+<li>n.[“先生”,”绅士”,”有身份地位的人”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=gentleman">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/gentleman">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/gentleman">朗文</a></li>
+</ul>
+<p>2470 corn </p>
+<ul>
+<li>[kɔ:n]  [kɔ:rn] </li>
+<li>n.[“&lt;英&gt;谷物”,”&lt;美&gt;玉米”,”鸡眼”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=corn">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/corn">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/corn">朗文</a></li>
+</ul>
+<p>2471 moon </p>
+<ul>
+<li>[mu:n]  [mun] </li>
+<li>n.[“月亮，月球”,”卫星”,”月状物，新月状物”]  vi.[“闲逛”,”出神”,”[俚语] 露出屁股以戏弄”]  vt.[“虚度”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=moon">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/moon">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/moon">朗文</a></li>
+</ul>
+<p>2472 inner </p>
+<ul>
+<li>[ˈɪnə(r)]  [ˈɪnɚ] </li>
+<li>adj.[“内部的，内心的”,”精神的”,”秘密的”]  n.[“内部，里面”,”射中接近靶心部分的一发”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=inner">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/inner">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/inner">朗文</a></li>
+</ul>
+<p>2473 junior </p>
+<ul>
+<li>[ˈdʒu:niə(r)]  [ˈdʒunjɚ] </li>
+<li>adj.[“较年幼的，较年小的”,”三年级的，低年级的”,”资历较浅的”,”后进的”]  n.[“年少者，青少年”,”晚辈”,”三年级生”,”职位较低者”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=junior">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/junior">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/junior">朗文</a></li>
+</ul>
+<p>2474 rather </p>
+<ul>
+<li>[ˈrɑ:ðə(r)]  [ˈræðər] </li>
+<li>adv.[“稍微，有点”,”相当，颇”,”宁愿”,”相反地”]  int.[“当然啦，怎么不”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=rather">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/rather">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/rather">朗文</a></li>
+</ul>
+<p>2475 throat </p>
+<ul>
+<li>[θrəʊt]  [θroʊt] </li>
+<li>n.[“咽喉”,”颈前部”,”[植物学]管颈”]  vt.[“用沙哑的声音或嗓音发音”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=throat">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/throat">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/throat">朗文</a></li>
+</ul>
+<p>2476 salary </p>
+<ul>
+<li>[ˈsæləri]  [ˈsæləri, ˈsælri] </li>
+<li>n.[“薪水，薪金，薪俸”]  vt.[“给…加薪”,”给…薪水”,”发…薪水”,”付…薪水”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=salary">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/salary">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/salary">朗文</a></li>
+</ul>
+<p>2477 swing </p>
+<ul>
+<li>[swɪŋ]  [swɪŋ] </li>
+<li>vt.&amp; vi.[“（使）摇摆”,”（使）摇荡”]  n.[“摇摆，摆动”,”摆程，振幅”,”秋千”,”音律”]  vt.[“使旋转”,”使做曲线运动”,”挥舞”,”悬吊”]  vi.[“悬摆”,”迅速打击”,”侧转，转弯”,”轻快摇摆地走”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=swing">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/swing">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/swing">朗文</a></li>
+</ul>
+<p>2478 observer </p>
+<ul>
+<li>[əbˈzɜ:və(r)]  [əbˈzɜ:rvə(r)] </li>
+<li>n.[“遵守者，观察者”,”观察团”,”观察员”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=observer">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/observer">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/observer">朗文</a></li>
+</ul>
+<p>2479 due </p>
+<ul>
+<li>[dju:]  [du:] </li>
+<li>adj.[“由于”,”适当的”,”预定”,”到期”]  n.[“应有的权利”,”应得到的东西”,”应缴款”]  adv.[“正向”,”正对着”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=due">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/due">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/due">朗文</a></li>
+</ul>
+<p>2480 straight </p>
+<ul>
+<li>[streɪt]  [stret] </li>
+<li>adj.[“直的”,”连续的”,”直率的”,”整齐的”]  adv.[“直地”,”直接地”,”坦率地”,”立即”]  n.[“直线”,”直线部分”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=straight">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/straight">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/straight">朗文</a></li>
+</ul>
+<p>2481 publication </p>
+<ul>
+<li>[ˌpʌblɪˈkeɪʃn]  [ˌpʌblɪˈkeʃən] </li>
+<li>n.[“出版”,”出版物”,”公布”,”发表”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=publication">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/publication">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/publication">朗文</a></li>
+</ul>
+<p>2482 pretty </p>
+<ul>
+<li>[ˈprɪti]  [ˈprɪti] </li>
+<li>adj.[“漂亮的”,”机灵的，聪明的”]  adv.[“相当，颇”]  n.[“漂亮的人（或东西）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pretty">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pretty">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pretty">朗文</a></li>
+</ul>
+<p>2483 crop </p>
+<ul>
+<li>[krɒp]  [krɑ:p] </li>
+<li>n.[“农作物”,”产量”,”庄稼”,”平头”]  vt.[“种植”,”收割”,”修剪”,”剪短”]  vi.[“收成”,”收获”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=crop">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/crop">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/crop">朗文</a></li>
+</ul>
+<p>2484 dig </p>
+<ul>
+<li>[dɪg]  [dɪɡ] </li>
+<li>vt.[“（如用铲、锨或推土机等）挖掘”,”探究，发掘”,”刺，戳”,”喜欢，欣赏”]  vi.[“挖掘，松土”,”整理”,”〈俚〉已理解”]  n.[“一拳，一推”,”挖苦，讽刺”,”考古发掘”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=dig">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/dig">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/dig">朗文</a></li>
+</ul>
+<p>2485 strike </p>
+<ul>
+<li>[straɪk]  [straɪk] </li>
+<li>vt.[“罢（工、课等）”,”撞”,”攻击”,”来到”]  vi.[“罢工”,”打击”,”朝某一方向前进”]  n.[“攻击”,”罢工[课，市]”,”发现”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=strike">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/strike">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/strike">朗文</a></li>
+</ul>
+<p>2486 permanent </p>
+<ul>
+<li>[ˈpɜ:mənənt]  [ˈpɜ:rmənənt] </li>
+<li>adj.[“永久（性）的，永恒的，不变的，耐久的，持久的，经久的”,”稳定的”,”常务的，常设的”]  n.[“电烫发，烫发”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=permanent">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/permanent">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/permanent">朗文</a></li>
+</ul>
+<p>2487 plant </p>
+<ul>
+<li>[plɑ:nt]  [plænt] </li>
+<li>n.[“植物，草木”,”设备”,”工厂”,”庄稼”]  vt.[“种植”,”安，插”,”建设，布置”,”移民于”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=plant">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/plant">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/plant">朗文</a></li>
+</ul>
+<p>2488 phenomenon </p>
+<ul>
+<li>[fəˈnɒmɪnən]  [fəˈnɑ:mɪnən] </li>
+<li>n.[“现象，事件”,”奇迹”,”非凡的人”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=phenomenon">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/phenomenon">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/phenomenon">朗文</a></li>
+</ul>
+<p>2489 anxiety </p>
+<ul>
+<li>[æŋˈzaɪəti]  [æŋˈzaɪɪti] </li>
+<li>n.[“焦虑，忧虑”,”切望，渴望”,”令人焦虑的事”,”挂念”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=anxiety">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/anxiety">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/anxiety">朗文</a></li>
+</ul>
+<p>2490 unlike </p>
+<ul>
+<li>[ˌʌnˈlaɪk]  [ʌnˈlaɪk] </li>
+<li>prep.[“（表示属性）与…不同”,”不像”]  adj.[“不同的”,”相异的”,”不相似的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=unlike">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/unlike">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/unlike">朗文</a></li>
+</ul>
+<p>2491 wet </p>
+<ul>
+<li>[wet]  [wɛt] </li>
+<li>adj.[“湿的”,”下雨的”,”懦弱的”,”（儿童）尿湿尿布的”]  n.[“湿地”,”液体”,”窝囊废”,”雨天”]  vt.[“使潮湿”,”把…弄湿”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=wet">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/wet">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/wet">朗文</a></li>
+</ul>
+<p>2492 literally </p>
+<ul>
+<li>[ˈlɪtərəli]  [ˈlɪtərəli] </li>
+<li>adv.[“逐字地”,”照字面地”,”确实地，真正地”,”[口语]差不多，简直（用于加强语意）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=literally">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/literally">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/literally">朗文</a></li>
+</ul>
+<p>2493 resist </p>
+<ul>
+<li>[rɪˈzɪst]  [rɪˈzɪst] </li>
+<li>v.[“抵抗，抗拒”,”忍耐”,”反对，抵制”]  n.[“防染剂”,”防腐剂”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=resist">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/resist">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/resist">朗文</a></li>
+</ul>
+<p>2494 convention </p>
+<ul>
+<li>[kənˈvenʃn]  [kənˈvɛnʃən] </li>
+<li>n.[“会议”,”全体与会者”,”国际公约”,”惯例，习俗，规矩”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=convention">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/convention">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/convention">朗文</a></li>
+</ul>
+<p>2495 embrace </p>
+<ul>
+<li>[ɪmˈbreɪs]  [ɛmˈbres] </li>
+<li>vt.&amp; vi.[“拥抱”]  vt.[“包括”,”包含”,”接受”,”信奉”]  n.[“拥抱，怀抱”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=embrace">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/embrace">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/embrace">朗文</a></li>
+</ul>
+<p>2496 supply </p>
+<ul>
+<li>[səˈplaɪ]  [səˈplaɪ] </li>
+<li>vt.[“供给”,”补充”,”弥补（缺陷、损失等）”,”向…提供（物资等）”]  n.[“供给物”,”储备物质”,”粮食”]  vi.[“暂代他人职务”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=supply">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/supply">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/supply">朗文</a></li>
+</ul>
+<p>2497 assist </p>
+<ul>
+<li>[əˈsɪst]  [əˈsɪst] </li>
+<li>n.[“帮助”,”援助”,”机器助手”,”辅助装置”]  vt.[“帮助”,”援助”,”帮助某人做某事”,”搀扶（某人）上下车”]  vi.[“援助”,”出席”,”参加”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=assist">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/assist">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/assist">朗文</a></li>
+</ul>
+<p>2498 exhibition </p>
+<ul>
+<li>[ˌeksɪˈbɪʃn]  [ˌɛksəˈbɪʃən] </li>
+<li>n.[“陈列，展览”,”展览品，陈列品”,”表明”,”[法]（证据等的）提出”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=exhibition">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/exhibition">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/exhibition">朗文</a></li>
+</ul>
+<p>2499 construct </p>
+<ul>
+<li>[kənˈstrʌkt]  [kənˈstrʌkt] </li>
+<li>vt.[“修建，建造”,”构成”,”创立”,”[数]作图”]  n.[“结构（物）”,”构想”,”概念”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=construct">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/construct">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/construct">朗文</a></li>
+</ul>
+<p>2500 viewer </p>
+<ul>
+<li>[ˈvju:ə(r)]  [ˈvjuɚ] </li>
+<li>n.[“电视观众”,”观看者，观察者”,”阅读器”,”看片机（把幻灯片等放大观看的装置）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=viewer">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/viewer">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/viewer">朗文</a></li>
+</ul>
+<p>2501 pan </p>
+<ul>
+<li>[pæn]  [pæn] </li>
+<li>n.[“平底锅”,”盘状的器皿”,”淘盘子，金盘，秤盘”]  vt.[“淘金”,”在浅锅中烹调（食物）”,”[非正式用语]严厉的批评”]  vi.[“淘金”,”在淘洗中收获金子”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pan">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pan">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pan">朗文</a></li>
+</ul>
+<p>2502 consultant </p>
+<ul>
+<li>[kənˈsʌltənt]  [kənˈsʌltənt] </li>
+<li>n.[“（受人咨询的）顾问”,”会诊医生，（顾问）医生”,”求教者，（与人）商议者，征求意见者，查阅者，咨询者”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=consultant">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/consultant">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/consultant">朗文</a></li>
+</ul>
+<p>2503 soon </p>
+<ul>
+<li>[su:n]  [sun] </li>
+<li>adv.[“立刻，马上”,”一会儿，不久”,”快”,”宁愿”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=soon">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/soon">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/soon">朗文</a></li>
+</ul>
+<p>2504 line </p>
+<ul>
+<li>[laɪn]  [laɪn] </li>
+<li>n.[“线条”,”排”,”行列”,”界线”]  vt.[“排队”,”用线标出”,”沿…排列成行”,”给…安衬里”]  vi.[“形成一层”,”排队”,”击出平直球”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=line">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/line">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/line">朗文</a></li>
+</ul>
+<p>2505 administrator </p>
+<ul>
+<li>[ədˈmɪnɪstreɪtə(r)]  [ædˈmɪnɪˌstretɚ] </li>
+<li>n.[“管理者”,”有管理（或行政）才能的人”,”[法]（由遗嘱检验法庭指定的）遗产管理人”,”地产管理人”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=administrator">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/administrator">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/administrator">朗文</a></li>
+</ul>
+<p>2506 date </p>
+<ul>
+<li>[deɪt]  [det] </li>
+<li>n.[“日期，日子”,”约会”,”时代，年代”,”（北非和西亚常见的海枣树的）海枣”]  vt.[“过时”,”使…显老”,”显示出…时代（或年龄）”,”鉴定…的年代”]  vt.&amp; vi.[“与人约会，相约”]  vi.[“属于某一特定时期”,”从某时起计算日期”,”记载日期”,”注有（或注明）日期”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=date">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/date">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/date">朗文</a></li>
+</ul>
+<p>2507 occasionally </p>
+<ul>
+<li>[əˈkeɪʒnəli]  [əˈkeɪʒnəli] </li>
+<li>adv.[“偶尔”,”偶然”,”有时候”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=occasionally">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/occasionally">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/occasionally">朗文</a></li>
+</ul>
+<p>2508 mayor </p>
+<ul>
+<li>[meə(r)]  [ˈmeɪər] </li>
+<li>n.[“市长”,”镇长”,”（英格兰、威尔士和北爱尔兰由议员选举产生的）镇长”,”（民选的）市长”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=mayor">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/mayor">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/mayor">朗文</a></li>
+</ul>
+<p>2509 consideration </p>
+<ul>
+<li>[kənˌsɪdəˈreɪʃn]  [kənˌsɪdəˈreʃən] </li>
+<li>n.[“考虑，考察”,”照顾，关心”,”报酬”,”尊敬”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=consideration">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/consideration">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/consideration">朗文</a></li>
+</ul>
+<p>2510 CEO </p>
+<ul>
+<li>[ˌsi: i: ˈəʊ]  [ˈoʊ] </li>
+<li>abbr.[“Chief Executive Officer 执行总裁”,”首席执行官”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=CEO">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/CEO">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/CEO">朗文</a></li>
+</ul>
+<p>2511 secure </p>
+<ul>
+<li>[sɪˈkjʊə(r)]  [səˈkjʊr] </li>
+<li>adj.[“安全的”,”牢固的”,”有把握的”,”安心的”]  vt.[“保护”,”（使）获得”,”使安全”,”担保”]  vi.[“获得安全，变得安全”,”安全，保险”,”承保，担保”,”[航海学]停止工作”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=secure">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/secure">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/secure">朗文</a></li>
+</ul>
+<p>2512 pink </p>
+<ul>
+<li>[pɪŋk]  [pɪŋk] </li>
+<li>adj.[“粉红色的”,”淡红色的”,”略带左翼政治观点的”,”与同性恋者有关的”]  n.[“粉红色”,”典范”,”香石竹”,”顶点，极度”]  vt.[“刺、扎”,”打出小孔图案”,”戳”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pink">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pink">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pink">朗文</a></li>
+</ul>
+<p>2513 smoke </p>
+<ul>
+<li>[sməʊk]  [smoʊk] </li>
+<li>n.[“烟”,”吸烟”]  vi.[“冒烟”,”抽烟”,”快速”]  vt.[“用烟熏制”,”吸（烟），抽”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=smoke">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/smoke">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/smoke">朗文</a></li>
+</ul>
+<p>2514 estimate </p>
+<ul>
+<li>[ˈestɪmət]  [ˈɛstəˌmet] </li>
+<li>n.[“估计，预测”,”报价，预算书”,”评价，判断”]  vt.[“估计，估算”,”评价，评论”,”估量，估价”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=estimate">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/estimate">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/estimate">朗文</a></li>
+</ul>
+<p>2515 buck </p>
+<ul>
+<li>[bʌk]  [bʌk] </li>
+<li>n.[“（美）钱，元”,”雄鹿”,”花花公子”]  vt.&amp; vi.[“（马等）猛然弓背跃起”,”抵制”,”猛然震荡”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=buck">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/buck">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/buck">朗文</a></li>
+</ul>
+<p>2516 historic </p>
+<ul>
+<li>[hɪˈstɒrɪk]  [hɪˈstɔ:rɪk] </li>
+<li>adj.[“在历史上重要的，有历史影响的”,”历史的，历史上的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=historic">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/historic">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/historic">朗文</a></li>
+</ul>
+<p>2517 poem </p>
+<ul>
+<li>[ˈpəʊɪm]  [ˈpoʊəm] </li>
+<li>n.[“诗”,”韵文”,”诗一样的作品”,”富有诗意的东西”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=poem">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/poem">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/poem">朗文</a></li>
+</ul>
+<p>2518 grandmother </p>
+<ul>
+<li>[ˈgrænmʌðə(r)]  [ˈɡrændˌmʌðɚ, ˈɡræn-] </li>
+<li>n.[“（外）祖母”,”老奶奶”,”女祖先”]  vt.[“当…的祖母”]  vi.[“当祖母”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=grandmother">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/grandmother">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/grandmother">朗文</a></li>
+</ul>
+<p>2519 bind </p>
+<ul>
+<li>[baɪnd]  [baɪnd] </li>
+<li>vt.[“约束”,”装订”,”捆绑”,”（用长布条）缠绕”]  vt.&amp; vi.[“（使）结合”]  n.[“窘境，困境”,”捆绑”,”植物的藤蔓”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=bind">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/bind">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/bind">朗文</a></li>
+</ul>
+<p>2520 fifth </p>
+<ul>
+<li>[fɪfθ]  [fɪfθ] </li>
+<li>num.[“第五”]  n.[“五分之一”,”第五音，五度音程”,”&lt;美&gt;五分之一加仑（瓶）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=fifth">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/fifth">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/fifth">朗文</a></li>
+</ul>
+<p>2521 constantly </p>
+<ul>
+<li>[ˈkɒnstəntli]  [ˈkɑ:nstəntli] </li>
+<li>adv.[“不断地，时常地”,”时刻”,”常川”,”历来”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=constantly">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/constantly">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/constantly">朗文</a></li>
+</ul>
+<p>2522 enterprise </p>
+<ul>
+<li>[ˈentəpraɪz]  [ˈentərpraɪz] </li>
+<li>n.[“企（事）业单位”,”事业，计划”,”事业心，进取心”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=enterprise">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/enterprise">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/enterprise">朗文</a></li>
+</ul>
+<p>2523 favor </p>
+<ul>
+<li>[‘feɪvə]  [ˈfevɚ] </li>
+<li>n.[“好感”,”宠爱”,”关切”,”欢心”]  vt.[“支持”,”赞成”,”照顾”,”促成”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=favor">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/favor">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/favor">朗文</a></li>
+</ul>
+<p>2524 testing </p>
+<ul>
+<li>[ˈtestɪŋ]  [] </li>
+<li>n.[“测试”]  adj.[“与试验有关的，试验的”,”棘手的”]  v.[“测验(test的现在分词)”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=testing">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/testing">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/testing">朗文</a></li>
+</ul>
+<p>2525 stomach </p>
+<ul>
+<li>[ˈstʌmək]  [ˈstʌmək] </li>
+<li>n.[“胃”,”腹部”,”食欲”,”欲望”]  vt.[“容忍”,”吃…吃得津津有味”,”〈古〉对…发怒”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=stomach">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/stomach">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/stomach">朗文</a></li>
+</ul>
+<p>2526 apparent </p>
+<ul>
+<li>[əˈpærənt]  [əˈpærənt, əˈpɛr-] </li>
+<li>adj.[“易看见的，可看见的”,”显然的，明明白白的”,”貌似的，表面的”,”显见”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=apparent">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/apparent">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/apparent">朗文</a></li>
+</ul>
+<p>2527 weigh </p>
+<ul>
+<li>[weɪ]  [weɪ] </li>
+<li>vt.[“称…的重量”,”权衡，考虑”,”用手掂估”,”使吃重”]  vi.[“具有重要性”,”重量为”,”起锚”,”成为…的重荷”]  n.[“权衡”,”称重量”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=weigh">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/weigh">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/weigh">朗文</a></li>
+</ul>
+<p>2528 install </p>
+<ul>
+<li>[ɪnˈstɔ:l]  [ɪnˈstɔl] </li>
+<li>vt.[“安装”,”安顿，安置”,”任命”,”使…正式就职”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=install">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/install">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/install">朗文</a></li>
+</ul>
+<p>2529 sensitive </p>
+<ul>
+<li>[ˈsensətɪv]  [ˈsɛnsɪtɪv] </li>
+<li>adj.[“敏感的”,”感觉的”,”[仪]灵敏的”,”易受影响的”]  n.[“敏感的人”,”有灵异能力的人”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=sensitive">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/sensitive">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/sensitive">朗文</a></li>
+</ul>
+<p>2530 suggestion </p>
+<ul>
+<li>[səˈdʒestʃən]  [səɡˈdʒɛstʃən, səˈdʒɛs-] </li>
+<li>n.[“建议，意见，暗示”,”联想，启发”,”微量”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=suggestion">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/suggestion">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/suggestion">朗文</a></li>
+</ul>
+<p>2531 mail </p>
+<ul>
+<li>[meɪl]  [mel] </li>
+<li>n.[“邮件，邮政”,”邮政（制度）”,”邮务员，邮递员”,”〈古〉袋，旅行包”]  vt.[“邮寄”,”给…穿盔甲”]  vi.[“投邮”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=mail">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/mail">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/mail">朗文</a></li>
+</ul>
+<p>2532 recipe </p>
+<ul>
+<li>[ˈresəpi]  [ˈresəpi] </li>
+<li>n.[“食谱”,”处方”,”秘诀”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=recipe">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/recipe">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/recipe">朗文</a></li>
+</ul>
+<p>2533 reasonable </p>
+<ul>
+<li>[ˈri:znəbl]  [ˈrizənəbəl] </li>
+<li>adj.[“合理的，公道的”,”明白道理的”,”适当的”,”有理性的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=reasonable">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/reasonable">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/reasonable">朗文</a></li>
+</ul>
+<p>2534 preparation </p>
+<ul>
+<li>[ˌprepəˈreɪʃn]  [ˌprɛpəˈreʃən] </li>
+<li>n.[“准备，预备”,”准备工作”,”配制品”,”制剂”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=preparation">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/preparation">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/preparation">朗文</a></li>
+</ul>
+<p>2535 wooden </p>
+<ul>
+<li>[ˈwʊdn]  [ˈwʊdn] </li>
+<li>adj.[“木制的”,”木头的”,”僵硬的”,”呆板的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=wooden">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/wooden">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/wooden">朗文</a></li>
+</ul>
+<p>2536 elementary </p>
+<ul>
+<li>[ˌelɪˈmentri]  [ˌɛləˈmɛntəri, -tri] </li>
+<li>adj.[“基本的”,”初级的”,”[化]元素的”,”初等”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=elementary">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/elementary">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/elementary">朗文</a></li>
+</ul>
+<p>2537 concert </p>
+<ul>
+<li>[ˈkɒnsət]  [ˈkɑ:nsərt] </li>
+<li>n.[“音乐会”,”一致，和谐”]  vt.[“通过双方协议来计划或安排”,”调整，解决”]  vi.[“协调一致行动”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=concert">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/concert">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/concert">朗文</a></li>
+</ul>
+<p>2538 aggressive </p>
+<ul>
+<li>[əˈgresɪv]  [əˈɡrɛsɪv] </li>
+<li>adj.[“侵略的，侵犯的，攻势的”,”（美）有进取心的，积极行动的”,”有进取心的，有闯劲的”,”好争斗的，借故生端的，爱打架的，要打架的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=aggressive">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/aggressive">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/aggressive">朗文</a></li>
+</ul>
+<p>2539 FALSE </p>
+<ul>
+<li>[fɔ:ls]  [fɔ:ls] </li>
+<li>adj.[“虚伪的”,”不正的，非法的”,”假造的，摹造的”,”临时的”]  adv.[“欺诈地”,”叛卖地”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=FALSE">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/FALSE">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/FALSE">朗文</a></li>
+</ul>
+<p>2540 intention </p>
+<ul>
+<li>[ɪnˈtenʃn]  [ɪnˈtɛnʃən] </li>
+<li>n.[“意图，目的”,”意向”,”意义，意旨”,”[医]愈合”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=intention">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/intention">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/intention">朗文</a></li>
+</ul>
+<p>2541 channel </p>
+<ul>
+<li>[ˈtʃænl]  [ˈtʃænəl] </li>
+<li>n.[“频道，波道”,”渠道”,”途径”,”海峡”]  vt.[“引导，开导”,”形成河道”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=channel">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/channel">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/channel">朗文</a></li>
+</ul>
+<p>2542 extreme </p>
+<ul>
+<li>[ɪkˈstri:m]  [ɪkˈstrim] </li>
+<li>adj.[“极端的，过激的”,”极限的，非常的”,”末端的”,”（政治上）急进的”]  n.[“极端”,”困境”,”[数]极限值”,”[常用复数]在两末端的事物”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=extreme">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/extreme">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/extreme">朗文</a></li>
+</ul>
+<p>2543 tube </p>
+<ul>
+<li>[tju:b]  [tu:b] </li>
+<li>n.[“管，管状物”,”电子管”,”地铁”,”电视机”]  vt.[“把…装管”,”把…弄成管状”,”用管输送”]  vi.[“乘地铁”,”不及格”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=tube">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/tube">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/tube">朗文</a></li>
+</ul>
+<p>2544 drawing </p>
+<ul>
+<li>[ˈdrɔ:ɪŋ]  [ˈdrɔɪŋ] </li>
+<li>n.[“绘画”,”制图”,”图画”,”图样”]  v.[“绘画(draw的现在分词)”,”拖”,”拉”,”拔出”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=drawing">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/drawing">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/drawing">朗文</a></li>
+</ul>
+<p>2545 protein </p>
+<ul>
+<li>[ˈprəʊti:n]  [ˈproʊti:n] </li>
+<li>n.[“[化]朊，蛋白（质）”]  adj.[“蛋白质的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=protein">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/protein">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/protein">朗文</a></li>
+</ul>
+<p>2546 quit </p>
+<ul>
+<li>[kwɪt]  [kwɪt] </li>
+<li>vt.[“离开”,”放弃，抛弃”,”停止，中断”,”偿清”]  vi.[“停止”,”放弃斗争”,”辞职”]  adj.[“自由的”,”摆脱了责任或义务的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=quit">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/quit">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/quit">朗文</a></li>
+</ul>
+<p>2547 absence </p>
+<ul>
+<li>[ˈæbsəns]  [ˈæbsəns] </li>
+<li>n.[“缺席，缺勤”,”缺乏，缺少，无”,”心不在焉，不注意”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=absence">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/absence">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/absence">朗文</a></li>
+</ul>
+<p>2548 roll </p>
+<ul>
+<li>[rəʊl]  [roʊl] </li>
+<li>vt.[“辗”,”使（眼球等）左右转动”,”（使）原地转圈”,”滚动”]  vi.[“左右摇晃”,”翻滚”,”开始移动，启动”]  n.[“名册”,”滚翻”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=roll">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/roll">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/roll">朗文</a></li>
+</ul>
+<p>2549 Latin </p>
+<ul>
+<li>[ˈlætɪn]  [ˈlætn] </li>
+<li>n.[“拉丁文”,”拉丁语，拉丁文学”,”拉丁美洲人”,”拉丁姆人”]  adj.[“拉丁的，拉丁语的”,”古罗马的”,”拉丁姆的”,”拉丁美洲的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=Latin">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/Latin">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/Latin">朗文</a></li>
+</ul>
+<p>2550 rapidly </p>
+<ul>
+<li>[‘ræpɪdlɪ]  [ˈræpɪdlɪ] </li>
+<li>adv.[“很快地，迅速地”,”立即”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=rapidly">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/rapidly">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/rapidly">朗文</a></li>
+</ul>
+<p>2551 jail </p>
+<ul>
+<li>[dʒeɪl]  [dʒel] </li>
+<li>n.[“监狱”,”拘留所”]  vt.[“监禁”,”拘留”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=jail">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/jail">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/jail">朗文</a></li>
+</ul>
+<p>2552 comment </p>
+<ul>
+<li>[ˈkɒment]  [ˈkɑ:ment] </li>
+<li>n.[“评论”,”注释”,”意见”,”说明”]  vt.&amp; vi.[“评论，谈论”]  vt.[“表达意见”,”解释，注释”]  vi.[“作注释”,”作注解”,”作解释”,”作评语”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=comment">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/comment">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/comment">朗文</a></li>
+</ul>
+<p>2553 diversity </p>
+<ul>
+<li>[daɪˈvɜ:səti]  [daɪˈvɜ:rsəti] </li>
+<li>n.[“多样化，（人在种族、民族、宗教等方面的）多样性”,”差异”,”分歧”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=diversity">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/diversity">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/diversity">朗文</a></li>
+</ul>
+<p>2554 honest </p>
+<ul>
+<li>[ˈɒnɪst]  [ˈɑ:nɪst] </li>
+<li>adj.[“诚实的”,”坦诚的”,”老实的”,”辛勤挣得的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=honest">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/honest">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/honest">朗文</a></li>
+</ul>
+<p>2555 Palestinian </p>
+<ul>
+<li>[]  [] </li>
+<li>adj.[“巴勒斯坦的”]  n.[“巴勒斯坦人[居民]”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=Palestinian">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/Palestinian">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/Palestinian">朗文</a></li>
+</ul>
+<p>2556 pace </p>
+<ul>
+<li>[peɪs]  [peɪs] </li>
+<li>n.[“一步”,”长度单位”,”步幅，步调”,”快步”]  vt.[“踱步，走来走去”,”步测”,”调整步调”,”训练马溜蹄”]  vi.[“踱”,”溜蹄”]  prep.[“蒙…恩准，怀着对…的敬意”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pace">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pace">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pace">朗文</a></li>
+</ul>
+<p>2557 employment </p>
+<ul>
+<li>[ɪmˈplɔɪmənt]  [ɛmˈplɔɪmənt] </li>
+<li>n.[“雇用”,”使用”,”职业”,”有益的活动”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=employment">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/employment">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/employment">朗文</a></li>
+</ul>
+<p>2558 speaker </p>
+<ul>
+<li>[ˈspi:kə(r)]  [ˈspikɚ] </li>
+<li>n.[“说话者”,”演讲者，发言人”,”讲某种语言的人”,”扬声器”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=speaker">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/speaker">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/speaker">朗文</a></li>
+</ul>
+<p>2559 impression </p>
+<ul>
+<li>[ɪmˈpreʃn]  [ɪmˈprɛʃən] </li>
+<li>n.[“印象，感觉”,”影响，效果”,”盖印，印记”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=impression">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/impression">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/impression">朗文</a></li>
+</ul>
+<p>2560 essay </p>
+<ul>
+<li>[ˈeseɪ]  [ˈɛsˌe, ɛˈse] </li>
+<li>n.[“散文”,”随笔，杂记文”,”尝试，企图”,”试验”]  vt.[“尝试”,”试验”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=essay">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/essay">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/essay">朗文</a></li>
+</ul>
+<p>2561 respondent </p>
+<ul>
+<li>[rɪˈspɒndənt]  [rɪˈspɑ:ndənt] </li>
+<li>n.[“回答者”,”[法]（特指离婚诉讼的）被告”,”[生]反应，反射”]  adj.[“应答的”,”有反应的”,”[法]被告的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=respondent">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/respondent">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/respondent">朗文</a></li>
+</ul>
+<p>2562 giant </p>
+<ul>
+<li>[ˈdʒaɪənt]  [ˈdʒaɪənt] </li>
+<li>n.[“巨人，大汉”,”巨兽，巨物”,”卓越人物”]  adj.[“特大的，巨大的”,”伟大的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=giant">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/giant">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/giant">朗文</a></li>
+</ul>
+<p>2563 cake </p>
+<ul>
+<li>[keɪk]  [keɪk] </li>
+<li>n.[“蛋糕”,”糕饼”,”块状物”,”沉积物”]  vt.&amp; vi.[“（使）结块”,”（使）胶”,”涂厚厚的一层”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=cake">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/cake">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/cake">朗文</a></li>
+</ul>
+<p>2564 historian </p>
+<ul>
+<li>[hɪˈstɔ:riən]  [hɪˈstɔriən] </li>
+<li>n.[“历史学家，史学工作者”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=historian">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/historian">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/historian">朗文</a></li>
+</ul>
+<p>2565 negotiate </p>
+<ul>
+<li>[nɪˈgəʊʃieɪt]  [nɪˈgoʊʃieɪt] </li>
+<li>vi.[“谈判，协商，交涉”]  vt.[“谈判达成”,”成功越过”,”议价出售”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=negotiate">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/negotiate">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/negotiate">朗文</a></li>
+</ul>
+<p>2566 restore </p>
+<ul>
+<li>[rɪˈstɔ:(r)]  [rɪˈstɔr, -ˈstor] </li>
+<li>vt.[“归还”,”交还”,”使恢复”,”修复”]  vt.&amp; vi.[“恢复（某种情况或感受）”,”使复原”,”使复位”,”使复职”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=restore">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/restore">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/restore">朗文</a></li>
+</ul>
+<p>2567 substantial </p>
+<ul>
+<li>[səbˈstænʃl]  [səbˈstænʃəl] </li>
+<li>adj.[“大量的”,”结实的，牢固的”,”重大的”]  n.[“本质”,”重要材料”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=substantial">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/substantial">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/substantial">朗文</a></li>
+</ul>
+<p>2568 pop </p>
+<ul>
+<li>[pɒp]  [pɑ:p] </li>
+<li>vi.[“（意外地、突然地）出现”,”突然出现”,”发出爆裂声”,”（突然地）行动”]  vt.[“（突然地）伸出”,”（突然地）提出问题”,”（把准备好的东西）突然拿出来”,”敲击”]  n.[“流行音乐”,”汽水”,”（尤用作称呼）爸”,”（迅速打上的）记号”]  adj.[“流行音乐的”,”通俗风格的”,”通俗的”,”现代的”]  adv.[“爆炸；砰地”]  abbr.[“邮局协议(post office protocol)”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pop">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pop">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pop">朗文</a></li>
+</ul>
+<p>2569 particular </p>
+<ul>
+<li>[pəˈtɪkjələ(r)]  [pərˈtɪkjələ(r)] </li>
+<li>adj.[“特别的”,”详细的”,”独有的”,”挑剔的”]  n.[“特色，特点”,”（可分类，列举的）项目”,”详细情节，细情，细目”,”某一事项”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=particular">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/particular">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/particular">朗文</a></li>
+</ul>
+<p>2570 specialist </p>
+<ul>
+<li>[ˈspeʃəlɪst]  [ˈspɛʃəlɪst] </li>
+<li>n.[“专家”,”行家”,”专科医生”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=specialist">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/specialist">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/specialist">朗文</a></li>
+</ul>
+<p>2571 origin </p>
+<ul>
+<li>[ˈɒrɪdʒɪn]  [ˈɔ:rɪdʒɪn] </li>
+<li>n.[“起源，根源”,”出身”,”[数]原点，起点”,”[解]（筋，神经的）起端”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=origin">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/origin">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/origin">朗文</a></li>
+</ul>
+<p>2572 approval </p>
+<ul>
+<li>[əˈpru:vl]  [əˈpruvəl] </li>
+<li>n.[“同意”,”批准”,”赞成”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=approval">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/approval">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/approval">朗文</a></li>
+</ul>
+<p>2573 mine </p>
+<ul>
+<li>[maɪn]  [maɪn] </li>
+<li>pron.[“(I的所有格)我的（东西）”]  n.[“矿”,”矿井”,”地雷”,”水雷”]  vt.&amp; vi.[“在…中开采，开采”]  vt.[“在…中[下]布雷”,”以地雷[水雷]炸毁”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=mine">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/mine">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/mine">朗文</a></li>
+</ul>
+<p>2574 quietly </p>
+<ul>
+<li>[‘kwaɪətlɪ]  [ˈkwaɪətlɪ] </li>
+<li>adv.[“平静地”,”静止地”,”轻声地”,”在暗中”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=quietly">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/quietly">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/quietly">朗文</a></li>
+</ul>
+<p>2575 advise </p>
+<ul>
+<li>[ədˈvaɪz]  [ædˈvaɪz] </li>
+<li>vt.[“（商业）通知，报告”,”提议，建议”]  vi.[“接受劝告，商量”,”建议，提供意见”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=advise">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/advise">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/advise">朗文</a></li>
+</ul>
+<p>2576 conventional </p>
+<ul>
+<li>[kənˈvenʃənl]  [kənˈvɛnʃənəl] </li>
+<li>adj.[“传统的”,”习用的，平常的”,”依照惯例的”,”约定的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=conventional">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/conventional">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/conventional">朗文</a></li>
+</ul>
+<p>2577 drop </p>
+<ul>
+<li>[drɒp]  [drɑ:p] </li>
+<li>vt.&amp; vi.[“（使）落下”,”投下”,”（使）降低”,”减少”]  vt.[“放弃”,”停止”,”（故意）降下”,”垂下（眼睛）”]  n.[“滴”,”空投”,”降落”,”少量”]  vi.[“（水或其他液体）滴”,”结束”,”（因受伤或死等）倒下”,”退出”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=drop">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/drop">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/drop">朗文</a></li>
+</ul>
+<p>2578 count </p>
+<ul>
+<li>[kaʊnt]  [kaʊnt] </li>
+<li>n.[“总数”,”数数”,”罪状”,”论点”]  v.[“数数”,”计算总数”,”把…算入”,”重要”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=count">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/count">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/count">朗文</a></li>
+</ul>
+<p>2579 depth </p>
+<ul>
+<li>[depθ]  [dɛpθ] </li>
+<li>n.[“深度”,”深处，深海”,”深奥，奥妙”,”进深”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=depth">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/depth">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/depth">朗文</a></li>
+</ul>
+<p>2580 wealth </p>
+<ul>
+<li>[welθ]  [wɛlθ] </li>
+<li>n.[“财产，财富”,”富豪（阶级）”,”丰富，大量”,”繁荣”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=wealth">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/wealth">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/wealth">朗文</a></li>
+</ul>
+<p>2581 disability </p>
+<ul>
+<li>[ˌdɪsəˈbɪləti]  [ˌdɪsəˈbɪlɪti] </li>
+<li>n.[“无力，无能”,”残疾”,”[法]无能力，无资格”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=disability">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/disability">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/disability">朗文</a></li>
+</ul>
+<p>2582 shell </p>
+<ul>
+<li>[ʃel]  [ʃɛl] </li>
+<li>n.[“（贝、卵、坚果等的）壳”,”外壳”,”炮弹”,”（人的）表面性格”]  vt.[“去壳，脱落”,”炮击”]  vi.[“剥皮”,”炮轰”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=shell">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/shell">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/shell">朗文</a></li>
+</ul>
+<p>2583 general </p>
+<ul>
+<li>[ˈdʒenrəl]  [ˈdʒɛnərəl] </li>
+<li>adj.[“大致的”,”综合的”,”总的，全体的”,”普遍的”]  n.[“上将”,”一般”,”一般原则”,”常规”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=general">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/general">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/general">朗文</a></li>
+</ul>
+<p>2584 criticize </p>
+<ul>
+<li>[ˈkrɪtɪsaɪz]  [ˈkrɪtɪˌsaɪz] </li>
+<li>vt.&amp; vi.[“分析，评估”,”批评”,”挑剔”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=criticize">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/criticize">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/criticize">朗文</a></li>
+</ul>
+<p>2585 fast </p>
+<ul>
+<li>[fɑ:st]  [fæst] </li>
+<li>adj.[“快的”,”走得快”,”感光快的”,”紧的”]  adv.[“（比准确的时间或宣布的时间）快”,”迅速地”,”紧紧地”,”彻底地”]  vi.[“禁食，（尤指）斋戒”]  n.[“禁食期，斋戒期”,”断食，节食”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=fast">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/fast">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/fast">朗文</a></li>
+</ul>
+<p>2586 professional </p>
+<ul>
+<li>[prəˈfeʃənl]  [prəˈfɛʃənəl] </li>
+<li>adj.[“专业的”,”专业性的”,”职业的”]  n.[“专业人士”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=professional">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/professional">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/professional">朗文</a></li>
+</ul>
+<p>2587 effectively </p>
+<ul>
+<li>[ɪˈfektɪvli]  [ɪˈfɛktɪvli] </li>
+<li>adv.[“有效地”,”实际上，事实上”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=effectively">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/effectively">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/effectively">朗文</a></li>
+</ul>
+<p>2588 biological </p>
+<ul>
+<li>[ˌbaɪəˈlɒdʒɪkl]  [ˌbaɪəˈlɑ:dʒɪkl] </li>
+<li>adj.[“生物学的”,”生物的”,”与生物学相关的”,”有血亲关系的”]  n.[“[药]生物制品，生物制剂”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=biological">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/biological">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/biological">朗文</a></li>
+</ul>
+<p>2589 pack </p>
+<ul>
+<li>[pæk]  [pæk] </li>
+<li>n.[“一群”,”包裹”,”（纸牌的）一副”,”一组”]  vt.&amp; vi.[“（把…）打包”,”塞进”,”拥进”,”（使）聚集成团”]  vt.[“挑选”,”压紧”,”携带”,”拧紧”]  vi.[“包装”,”紧挤在一起”,”便于折叠收藏的”,”匆忙离去（有时与 off 连用）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=pack">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/pack">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/pack">朗文</a></li>
+</ul>
+<p>2590 onion </p>
+<ul>
+<li>[ˈʌnjən]  [ˈʌnjən] </li>
+<li>n.[“洋葱（头）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=onion">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/onion">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/onion">朗文</a></li>
+</ul>
+<p>2591 deputy </p>
+<ul>
+<li>[ˈdepjuti]  [ˈdɛpjəti] </li>
+<li>n.[“副手”,”代理人”,”代表”]  adj.[“副的”,”代理的”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=deputy">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/deputy">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/deputy">朗文</a></li>
+</ul>
+<p>2592 flat </p>
+<ul>
+<li>[flæt]  [flæt] </li>
+<li>adj.[“平的”,”单调的”,”不景气的”,”干脆的”]  adv.[“（尤指贴着另一表面）平直地”,”断然地”,”水平地”,”直接地，完全地”]  n.[“平地”,”公寓”,”平面”]  vt.[“使变平”,”[音乐]使（音调）下降，尤指降半音”]  vi.[“逐渐变平”,”[音乐]以降调唱（或奏）”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=flat">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/flat">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/flat">朗文</a></li>
+</ul>
+<p>2593 brand </p>
+<ul>
+<li>[brænd]  [brænd] </li>
+<li>n.[“[商]商标，牌子”,”烙印”,”〈比喻〉污名，耻辱”,”燃烧着的木头”]  vt.[“污辱”,”铭刻于”,”加商标于”,”打烙印于”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=brand">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/brand">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/brand">朗文</a></li>
+</ul>
+<p>2594 assure </p>
+<ul>
+<li>[əˈʃʊə(r)]  [əˈʃʊr] </li>
+<li>vt.[“向…保证”,”使…确信”,”&lt;英&gt;给…保险”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=assure">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/assure">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/assure">朗文</a></li>
+</ul>
+<p>2595 mad </p>
+<ul>
+<li>[mæd]  [mæd] </li>
+<li>adj.[“疯狂的”,”猛烈的”,”着迷的”,”〔口语〕愤怒的，生气的”]  vt.[“使疯狂”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=mad">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/mad">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/mad">朗文</a></li>
+</ul>
+<p>2596 award </p>
+<ul>
+<li>[əˈwɔ:d]  [əˈwɔ:rd] </li>
+<li>vt.[“授予，奖给，判给”,”判归，判定”]  n.[“奖品”,”（仲裁人、公断人的）裁定”,”（法院、法官的）判决”,”裁定书”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=award">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/award">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/award">朗文</a></li>
+</ul>
+<p>2597 criteria </p>
+<ul>
+<li>[kraɪ’tɪərɪə]  [kraɪˈtɪrɪə] </li>
+<li>n.[“（批评、判断等的）标准，准则( criterion的名词复数 )”,”(criterion的复数)”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=criteria">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/criteria">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/criteria">朗文</a></li>
+</ul>
+<p>2598 dealer </p>
+<ul>
+<li>[ˈdi:lə(r)]  [ˈdilɚ] </li>
+<li>n.[“商人”,”发牌人，庄家”,”以某种方式待人的人”,”经销商”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=dealer">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/dealer">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/dealer">朗文</a></li>
+</ul>
+<p>2599 via </p>
+<ul>
+<li>[ˈvaɪə]  [ˈvaɪə, ˈviə] </li>
+<li>prep.[“经过”,”通过，凭借”,”取道”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=via">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/via">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/via">朗文</a></li>
+</ul>
+<p>2600 alternative </p>
+<ul>
+<li>[ɔ:lˈtɜ:nətɪv]  [ɔ:lˈtɜ:rnətɪv] </li>
+<li>adj.[“替代的”,”备选的”,”其他的”,”另类的”]  n.[“可供选择的事物”]   </li>
+<li><a target="_blank" rel="noopener" href="https://www.91dict.com/words?w=alternative">人人词典</a> <a target="_blank" rel="noopener" href="https://www.collinsdictionary.com/zh/dictionary/english/alternative">柯林斯</a> <a target="_blank" rel="noopener" href="https://www.ldoceonline.com/dictionary/alternative">朗文</a></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/blog/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+    <span>></span>
+    
+  <a href="/blog/categories/%E6%8A%80%E6%9C%AF/English/" class="category-chain-item">English</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/blog/tags/English/" class="print-no-link">#English</a>
+      
+        <a href="/blog/tags/Coca-20000/" class="print-no-link">#Coca 20000</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Coca 20000 英语词汇(13)</div>
+      <div>https://maojun.xyz/blog/2017/09/part013_2401-2600.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>毛 俊</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2017年9月22日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="ND - 禁止演绎">
+                    <i class="iconfont icon-nd"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/2017/09/part012_2201-2400.html" title="Coca 20000 英语词汇(12)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Coca 20000 英语词汇(12)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/2017/09/part014_2601-2800.html" title="Coca 20000 英语词汇(14)">
+                        <span class="hidden-mobile">Coca 20000 英语词汇(14)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://nav.maojun.xyz/" target="_blank" rel="nofollow noopener" <i class="iconfont icon-th-large"><span>网址导航</span></a> <a href="https://maojun.xyz/blog/atom.xml" target="_blank" rel="nofollow noopener"><i class="iconfont icon-rss"></i><span>RSS</span></a> <i class="iconfont icon-copyright"></i> <a href="https://maojun.xyz" target="_blank" rel="nofollow noopener"><span>maojun.xyz ❤ </span></a> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo </span></a><span>& </span>  <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/blog/js/events.js" ></script>
+<script  src="/blog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/blog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/blog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/blog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

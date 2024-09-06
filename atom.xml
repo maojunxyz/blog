@@ -102,22 +102,19 @@
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(1)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part001_1-200.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part001_1-200.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Vue3项目搭建的4种方式</title>
+    <link href="https://maojun.xyz/blog/2024/04/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E7%9A%844%E7%A7%8D%E6%96%B9%E5%BC%8F.html"/>
+    <id>https://maojun.xyz/blog/2024/04/Vue3%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA%E7%9A%844%E7%A7%8D%E6%96%B9%E5%BC%8F.html</id>
+    <published>2024-04-14T22:26:48.000Z</published>
+    <updated>2024-04-14T22:26:54.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1 the &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ðə]  [ðə] &lt;/li&gt;
-&lt;li&gt;art.[“指已提到的人（物）”,”指说话人与听者已知的人（物）”,”用于独一无二的事物前”,”与形容词最高级和序数词连用”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;Vue介绍&quot;&gt;&lt;a href=&quot;#Vue介绍&quot; class=&quot;headerlink&quot; title=&quot;Vue介绍&quot;&gt;&lt;/a&gt;Vue介绍&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;官方文档：&lt;a</summary>
         
       
     
@@ -125,32 +122,32 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="Vue" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/Vue/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="Vue" scheme="https://maojun.xyz/blog/tags/Vue/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="Vite" scheme="https://maojun.xyz/blog/tags/Vite/"/>
+    
+    <category term="NPM" scheme="https://maojun.xyz/blog/tags/NPM/"/>
+    
+    <category term="Webpack" scheme="https://maojun.xyz/blog/tags/Webpack/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(2)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part002_201-400.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part002_201-400.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Kubernetes及其生态介绍和使用</title>
+    <link href="https://maojun.xyz/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2024/04/Kubernetes%E5%8F%8A%E5%85%B6%E7%94%9F%E6%80%81%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8.html</id>
+    <published>2024-04-11T06:23:20.000Z</published>
+    <updated>2024-04-11T06:23:20.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;201 government &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈgʌvənmənt]  [ˈgʌvərnmənt] &lt;/li&gt;
-&lt;li&gt;n.[“政府”,”政体”,”治理的形式”,”管辖，治理”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;Kubernetes简介&quot;&gt;&lt;a href=&quot;#Kubernetes简介&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -158,31 +155,28 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="Kubernetes" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/Kubernetes/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="Docker" scheme="https://maojun.xyz/blog/tags/Docker/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="Kubernetes" scheme="https://maojun.xyz/blog/tags/Kubernetes/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(3)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part003_401-600.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part003_401-600.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>MPV播放器默认快捷键</title>
+    <link href="https://maojun.xyz/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html"/>
+    <id>https://maojun.xyz/blog/2024/04/MPV%E6%92%AD%E6%94%BE%E5%99%A8%E9%BB%98%E8%AE%A4%E5%BF%AB%E6%8D%B7%E9%94%AE.html</id>
+    <published>2024-04-05T17:12:50.000Z</published>
+    <updated>2024-04-05T17:12:50.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;401 wait &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[weɪt]  [wet] &lt;/li&gt;
-&lt;li&gt;vt.&amp;amp; vi.[“等候”,”等待”,”（尤指长期地）希望”,”盼望”]  vi.[“准备妥”,”在手边”,”可得到”,”可使用”]  vt.[“推迟，搁置，延缓”]  </summary>
+    <summary type="html">&lt;h2 id=&quot;键盘控制&quot;&gt;&lt;a href=&quot;#键盘控制&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -190,32 +184,28 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="示例" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E7%A4%BA%E4%BE%8B/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="MPV" scheme="https://maojun.xyz/blog/tags/MPV/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="快捷键" scheme="https://maojun.xyz/blog/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(4)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part004_601-800.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part004_601-800.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Markdown导出带大纲目录的Html</title>
+    <link href="https://maojun.xyz/blog/2024/04/Markdown%E5%AF%BC%E5%87%BA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9B%AE%E5%BD%95%E7%9A%84Html.html"/>
+    <id>https://maojun.xyz/blog/2024/04/Markdown%E5%AF%BC%E5%87%BA%E5%B8%A6%E5%A4%A7%E7%BA%B2%E7%9B%AE%E5%BD%95%E7%9A%84Html.html</id>
+    <published>2024-04-04T22:40:25.000Z</published>
+    <updated>2024-04-04T23:15:31.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;601 choose &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[tʃu:z]  [tʃuz] &lt;/li&gt;
-&lt;li&gt;vt.[“挑选”,”认为…比其它更可取”,”决定或选定”]  vi.[“选择”,”进行挑选”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;Typora导出HTML&quot;&gt;&lt;a href=&quot;#Typora导出HTML&quot; class=&quot;headerlink&quot; title=&quot;Typora导出HTML&quot;&gt;&lt;/a&gt;Typora导出HTML&lt;/h2&gt;&lt;h3 id=&quot;原生侧边栏导出&quot;&gt;&lt;a</summary>
         
       
     
@@ -223,31 +213,30 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="示例" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E7%A4%BA%E4%BE%8B/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="Markdown" scheme="https://maojun.xyz/blog/tags/Markdown/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="Typora" scheme="https://maojun.xyz/blog/tags/Typora/"/>
+    
+    <category term="Html" scheme="https://maojun.xyz/blog/tags/Html/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(5)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part005_801-1000.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part005_801-1000.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Windows设置操作URI指令</title>
+    <link href="https://maojun.xyz/blog/2024/03/Windows%E8%AE%BE%E7%BD%AE%E6%93%8D%E4%BD%9CURI%E6%8C%87%E4%BB%A4.html"/>
+    <id>https://maojun.xyz/blog/2024/03/Windows%E8%AE%BE%E7%BD%AE%E6%93%8D%E4%BD%9CURI%E6%8C%87%E4%BB%A4.html</id>
+    <published>2024-03-31T19:45:42.000Z</published>
+    <updated>2024-03-31T19:45:42.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;801 deal &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[di:l]  [dil] &lt;/li&gt;
-&lt;li&gt;vt.[“[牌戏]分”,”分配”,”经营”,”施予”]  n.[“（一笔）交易”,”许多”,”待遇”,”发牌”] </summary>
+    <summary type="html">&lt;h2 id=&quot;ms-settings-URI-方案参考&quot;&gt;&lt;a href=&quot;#ms-settings-URI-方案参考&quot; class=&quot;headerlink&quot; title=&quot;ms-settings: URI 方案参考&quot;&gt;&lt;/a&gt;ms-settings: URI</summary>
         
       
     
@@ -255,130 +244,125 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="翻译转载" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E7%BF%BB%E8%AF%91%E8%BD%AC%E8%BD%BD/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="Windows" scheme="https://maojun.xyz/blog/tags/Windows/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="转载" scheme="https://maojun.xyz/blog/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(6)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part006_1001-1200.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part006_1001-1200.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>极简生活可以尝试的实践</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%9A%84%E5%AE%9E%E8%B7%B5.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB%E5%8F%AF%E4%BB%A5%E5%B0%9D%E8%AF%95%E7%9A%84%E5%AE%9E%E8%B7%B5.html</id>
+    <published>2024-03-27T23:26:56.000Z</published>
+    <updated>2024-03-27T23:26:56.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1001 method &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈmeθəd]  [ˈmɛθəd] &lt;/li&gt;
-&lt;li&gt;n.[“方法”,”条理”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;拥有却不珍惜，才是最可惜的事情。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/./assets/d26213f37ab4422ecd5f0bfd049e2a23.jpg&quot; alt=&quot;我是单身&quot;&gt;&lt;/p&gt;
+&lt;h2</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="极简生活" scheme="https://maojun.xyz/blog/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(7)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part007_1201-1400.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part007_1201-1400.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>《不持有的生活》读书摘录</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E3%80%8A%E4%B8%8D%E6%8C%81%E6%9C%89%E7%9A%84%E7%94%9F%E6%B4%BB%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%91%98%E5%BD%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E3%80%8A%E4%B8%8D%E6%8C%81%E6%9C%89%E7%9A%84%E7%94%9F%E6%B4%BB%E3%80%8B%E8%AF%BB%E4%B9%A6%E6%91%98%E5%BD%95.html</id>
+    <published>2024-03-27T23:16:11.000Z</published>
+    <updated>2024-03-27T23:16:11.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1201 insurance &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ɪnˈʃʊərəns]  [ɪnˈʃʊrəns] &lt;/li&gt;
-&lt;li&gt;n.[“保险，保险业”,”保险费”,”预防措施”]  adj.[“[体]巩固球队领先局面，使对手不能因增加一分而成平局的”]  </summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/4086725/&quot;&gt;《不持有的生活》&lt;/a&gt;&lt;br&gt;作者: 金子由纪子&lt;br&gt;出版社: 山东人民出版社&lt;br&gt;译者: 燕子&lt;br&gt;出版年:</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="读书笔记" scheme="https://maojun.xyz/blog/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="极简生活" scheme="https://maojun.xyz/blog/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(8)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part008_1401-1600.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part008_1401-1600.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>艾宾浩斯遗忘曲线复习计划表</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF%E5%A4%8D%E4%B9%A0%E8%AE%A1%E5%88%92%E8%A1%A8.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E8%89%BE%E5%AE%BE%E6%B5%A9%E6%96%AF%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF%E5%A4%8D%E4%B9%A0%E8%AE%A1%E5%88%92%E8%A1%A8.html</id>
+    <published>2024-03-27T12:05:39.000Z</published>
+    <updated>2024-03-27T12:05:39.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1401 threaten &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈθretn]  [ˈθrɛtn] &lt;/li&gt;
-&lt;li&gt;vt.&amp;amp; vi.[“预示（某事）”,”恐吓”,”危及”,”预示凶兆”]  vi.[“似将发生”,”威胁”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;&lt;/th&gt;
+&lt;th</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="复习" scheme="https://maojun.xyz/blog/tags/%E5%A4%8D%E4%B9%A0/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="计划表" scheme="https://maojun.xyz/blog/tags/%E8%AE%A1%E5%88%92%E8%A1%A8/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(10)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part010_1801-2000.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part010_1801-2000.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Google搜索技巧</title>
+    <link href="https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
+    <id>https://maojun.xyz/blog/2024/03/Google%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
+    <published>2024-03-27T11:57:45.000Z</published>
+    <updated>2024-09-06T15:34:52.702Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1801 percentage &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[pəˈsentɪdʒ]  [pərˈsentɪdʒ] &lt;/li&gt;
-&lt;li&gt;n.[“百分比，百分率”,”比例，部分”,”[数]百分法”,”[商]手续费”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;四阶段的智能化人机交互&quot;&gt;&lt;a href=&quot;#四阶段的智能化人机交互&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -386,32 +370,26 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="网络" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="Google" scheme="https://maojun.xyz/blog/tags/Google/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(11)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part011_2001-2200.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part011_2001-2200.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>GitHub搜索技巧</title>
+    <link href="https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html"/>
+    <id>https://maojun.xyz/blog/2024/03/GitHub%E6%90%9C%E7%B4%A2%E6%8A%80%E5%B7%A7.html</id>
+    <published>2024-03-27T10:57:45.000Z</published>
+    <updated>2024-09-06T15:34:52.702Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2001 merely &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈmɪəli]  [ˈmɪrli] &lt;/li&gt;
-&lt;li&gt;adv.[“仅仅，只不过”,”只是”,”纯粹”,”全然”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;GitHub-搜索技巧&quot;&gt;&lt;a href=&quot;#GitHub-搜索技巧&quot; class=&quot;headerlink&quot; title=&quot;GitHub 搜索技巧&quot;&gt;&lt;/a&gt;GitHub</summary>
         
       
     
@@ -419,98 +397,91 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="网络" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="GitHub" scheme="https://maojun.xyz/blog/tags/GitHub/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(9)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part009_1601-1800.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part009_1601-1800.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>运动类影视剧集清单</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E8%BF%90%E5%8A%A8%E7%B1%BB%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86%E6%B8%85%E5%8D%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E8%BF%90%E5%8A%A8%E7%B1%BB%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86%E6%B8%85%E5%8D%95.html</id>
+    <published>2024-03-27T06:42:21.000Z</published>
+    <updated>2024-03-27T06:42:21.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1601 planet &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈplænɪt]  [ˈplænɪt] &lt;/li&gt;
-&lt;li&gt;n.[“[天]行星”,”[占星]（左右人命运的）星相”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;动漫&quot;&gt;&lt;a href=&quot;#动漫&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="娱乐" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E5%A8%B1%E4%B9%90/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="清单" scheme="https://maojun.xyz/blog/tags/%E6%B8%85%E5%8D%95/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="运动" scheme="https://maojun.xyz/blog/tags/%E8%BF%90%E5%8A%A8/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(12)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part012_2201-2400.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part012_2201-2400.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>常用软件清单</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95.html</id>
+    <published>2024-03-27T06:42:21.000Z</published>
+    <updated>2024-03-27T06:42:21.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2201 abandon &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[əˈbændən]  [əˈbændən] &lt;/li&gt;
-&lt;li&gt;vt.[“放弃，抛弃”,”离弃，丢弃”,”使屈从”,”停止进行，终止”]  n.[“放任，放纵”,”完全屈从于压制”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;名称&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;用途&lt;/th&gt;
+&lt;th&gt;支持平台(Win、Linux)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="经验" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E7%BB%8F%E9%AA%8C/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="软件" scheme="https://maojun.xyz/blog/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(13)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part013_2401-2600.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part013_2401-2600.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>COCA 20000词根词汇练习</title>
+    <link href="https://maojun.xyz/blog/2024/03/COCA%2020000%E8%AF%8D%E6%B1%87%E5%A4%8D%E4%B9%A0%E5%92%8C%E7%BB%83%E4%B9%A0.html"/>
+    <id>https://maojun.xyz/blog/2024/03/COCA%2020000%E8%AF%8D%E6%B1%87%E5%A4%8D%E4%B9%A0%E5%92%8C%E7%BB%83%E4%B9%A0.html</id>
+    <published>2024-03-27T06:25:57.000Z</published>
+    <updated>2024-03-27T06:25:57.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2401 interpretation &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ɪnˌtɜ:prɪˈteɪʃn]  [ɪnˌtɜ:rprɪˈteɪʃn] &lt;/li&gt;
-&lt;li&gt;n.[“解释，说明”,”翻译”,”表演，演绎”,”理解”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;cess、ceed、cede、gress、gred、grad&quot;&gt;&lt;a href=&quot;#cess、ceed、cede、gress、gred、grad&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -518,129 +489,111 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="英语" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/%E8%8B%B1%E8%AF%AD/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="英语" scheme="https://maojun.xyz/blog/tags/%E8%8B%B1%E8%AF%AD/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="词汇" scheme="https://maojun.xyz/blog/tags/%E8%AF%8D%E6%B1%87/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(14)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part014_2601-2800.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part014_2601-2800.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>少吃或不吃的食物</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E5%B0%91%E5%90%83%E6%88%96%E4%B8%8D%E5%90%83%E7%9A%84%E9%A3%9F%E7%89%A9.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E5%B0%91%E5%90%83%E6%88%96%E4%B8%8D%E5%90%83%E7%9A%84%E9%A3%9F%E7%89%A9.html</id>
+    <published>2024-03-26T10:11:00.000Z</published>
+    <updated>2024-03-26T10:11:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2601 utility &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ju:ˈtɪləti]  [juˈtɪləti] &lt;/li&gt;
-&lt;li&gt;n.[“功用，效用”,”有用的物体或器械”,”公用事业公司”,”公用事业”] </summary>
+    <summary type="html">&lt;p&gt;以下食物并不是完全禁止摄入，而是要减少摄入量和摄入次数。&lt;/p&gt;
+&lt;h2 id=&quot;含酒精类&quot;&gt;&lt;a href=&quot;#含酒精类&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="健康" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E5%81%A5%E5%BA%B7/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="食物" scheme="https://maojun.xyz/blog/tags/%E9%A3%9F%E7%89%A9/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(15)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part015_2801-3000.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part015_2801-3000.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>美军两分钟睡眠法</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E7%BE%8E%E5%86%9B%E4%B8%A4%E5%88%86%E9%92%9F%E7%9D%A1%E7%9C%A0%E6%B3%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E7%BE%8E%E5%86%9B%E4%B8%A4%E5%88%86%E9%92%9F%E7%9D%A1%E7%9C%A0%E6%B3%95.html</id>
+    <published>2024-03-26T10:11:00.000Z</published>
+    <updated>2024-03-26T10:11:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2801 pause &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[pɔ:z]  [pɔz] &lt;/li&gt;
-&lt;li&gt;n.[“暂时的停顿”,”犹豫”,”（诗中）节奏的停顿”,”[乐]延长号”]  vi.[“暂停，中止”,”逗留，停滞”,”（按暂停键）暂停放音”,”犹豫”]  </summary>
+    <summary type="html">&lt;h2 id=&quot;睡眠周期&quot;&gt;&lt;a href=&quot;#睡眠周期&quot; class=&quot;headerlink&quot; title=&quot;睡眠周期&quot;&gt;&lt;/a&gt;睡眠周期&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="健康" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E5%81%A5%E5%BA%B7/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="睡眠" scheme="https://maojun.xyz/blog/tags/%E7%9D%A1%E7%9C%A0/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(16)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part016_3001-3200.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part016_3001-3200.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>健康食物清单</title>
+    <link href="https://maojun.xyz/blog/2024/03/%E5%81%A5%E5%BA%B7%E9%A3%9F%E7%89%A9%E6%B8%85%E5%8D%95.html"/>
+    <id>https://maojun.xyz/blog/2024/03/%E5%81%A5%E5%BA%B7%E9%A3%9F%E7%89%A9%E6%B8%85%E5%8D%95.html</id>
+    <published>2024-03-25T20:00:00.000Z</published>
+    <updated>2024-03-25T20:00:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;3001 chapter &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈtʃæptə(r)]  [ˈtʃæptɚ] &lt;/li&gt;
-&lt;li&gt;n.[“章，回”,”（俱乐部、协会等的）分会”,”人生或历史上的重要时期”]  vt.[“把…分成章节”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;膳食指南&quot;&gt;&lt;a href=&quot;#膳食指南&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    <category term="生活" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="健康" scheme="https://maojun.xyz/blog/categories/%E7%94%9F%E6%B4%BB/%E5%81%A5%E5%BA%B7/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
-    
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="食物" scheme="https://maojun.xyz/blog/tags/%E9%A3%9F%E7%89%A9/"/>
     
   </entry>
   
   <entry>
-    <title>Coca 20000 英语词汇(17)</title>
-    <link href="https://maojun.xyz/blog/2024/04/part017_3201-3400.html"/>
-    <id>https://maojun.xyz/blog/2024/04/part017_3201-3400.html</id>
-    <published>2024-04-21T22:22:59.000Z</published>
-    <updated>2024-04-21T22:22:59.000Z</updated>
+    <title>Git客户端工具GitUi安装及使用</title>
+    <link href="https://maojun.xyz/blog/2024/03/Git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7GitUi%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.html"/>
+    <id>https://maojun.xyz/blog/2024/03/Git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7GitUi%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8.html</id>
+    <published>2024-03-25T11:44:00.000Z</published>
+    <updated>2024-03-25T11:44:00.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;3201 heritage &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[ˈherɪtɪdʒ]  [ˈhɛrɪtɪdʒ] &lt;/li&gt;
-&lt;li&gt;n.[“遗产”,”继承物”,”传统”,”文化遗产”]   &lt;/li&gt;
-&lt;li&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;GitUi介绍&quot;&gt;&lt;a href=&quot;#GitUi介绍&quot; class=&quot;headerlink&quot; title=&quot;GitUi介绍&quot;&gt;&lt;/a&gt;GitUi介绍&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;GitUI provides you with the comfort</summary>
         
       
     
@@ -648,12 +601,12 @@
     
     <category term="技术" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="English" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/English/"/>
+    <category term="Git" scheme="https://maojun.xyz/blog/categories/%E6%8A%80%E6%9C%AF/Git/"/>
     
     
-    <category term="English" scheme="https://maojun.xyz/blog/tags/English/"/>
+    <category term="Git" scheme="https://maojun.xyz/blog/tags/Git/"/>
     
-    <category term="Coca 20000" scheme="https://maojun.xyz/blog/tags/Coca-20000/"/>
+    <category term="GitUi" scheme="https://maojun.xyz/blog/tags/GitUi/"/>
     
   </entry>
   
